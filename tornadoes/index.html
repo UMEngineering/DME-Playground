@@ -1,0 +1,584 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Tornadoes</title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="A Season of Twisters" />
+  <meta property="og:url" content="http://engin.umich.edu/newscenter/dme/tornadoes" />
+  <meta property="og:description" content="2011 went down as one of the four most deadly U.S. tornado seasons on record. Looking like an early contender for the top three, 2012 is already cutting a swath of destruction from Texas to Michigan. But there are ways to address the looming threat…" />
+  <meta property="og:image" content="http://www.engin.umich.edu/newscenter/multimedia-stories/a-season-of-twisters/@@download/image/tornado150.jpg" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tornado.css">
+  <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header>
+
+  </header>
+  <section id="one">
+   <div class="main">
+		<h1 id="twisters">A season of twisters</h1>
+        <div class="byline">By Matt Nixon</div>
+        <div class="subtitle">
+        	<p>2011 went down as one of the four most deadly U.S. tornado seasons on record. Looking like an early contender for the top three, 2012 is already cutting a swath of destruction from Texas to Michigan. But there are ways to address the looming threat…</p>   
+        </div>
+   </div>
+   <a href="#two" class="nav-button">Next page</a>
+  </section>
+  <div class="sticky" id="navbar">
+  	<ul id="nav">
+        <li class="home"><a href=""><img src="img/mighigan_engineering.png" alt="Michigan Engineering" /></a></li>
+        <li><a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience Gallery</a></li>
+    </ul>
+  </div>
+  
+  <section id="two">
+  <div id="red">
+  </div>
+  	<div class="main">
+		<h2 id="brewing" src="img/brewing.png">Brewing storms</h2>
+        <div id="caption">
+        	<p class="panel1">1. To form, tornadoes first require a moist layer of air</p>
+            <p class="hide panel2">2. Secondarily, there must be a perturbation in the upper atmosphere</p>
+            <p class="hide panel3">3. A third component in tornado formation is wind shear (when two air masses with differing direction and speed meet)</p>
+            <p class="hide panel4">4. To trigger the funnel cloud, the storm must hit a cold front or dry line</p>
+            <p class="hide panel5">5. A tornado is born</p>
+        </div>
+        <div id="slider" class="loading">
+        	<img class="panel1" src="img/two/1.png" style="display: block;">
+            <img class="hide panel2" src="img/two/2.png" style="display: block;">
+            <img class="hide panel3" src="img/two/3.png" style="display: block;">
+            <img class="hide panel4" src="img/two/4.png" style="display: block;">
+            <img class="hide panel5" src="img/two/5.png" style="display: block;">
+        </div>
+        <div class="sliderArrows">
+        	<a href="#" class="left">Last slide</a>
+            <a href="#" class="right">Next slide</a>
+        </div>
+    </div>
+    <a href="#one" class="pre-nav-button">Back</a>
+    <a href="#three" class="nav-button">Next page</a>
+  </section>
+  <section id="three">
+  <div class="twister" id="tone"></div>
+  <!--div class="twister" id="ttwo"></div>
+  <div class="twister" id="tthree"></div>
+  <div class="twister" id="tfour"></div>
+  <div class="twister" id="tfive"></div>
+  <div class="twister" id="tsix"></div>
+  <div class="twister" id="tseven"></div>
+  <div class="twister" id="teight"></div>
+  <div class="twister" id="tnine"></div>
+  <div class="twister" id="tten"></div>
+  <div class="twister" id="televen"></div>
+  <div class="twister" id="ttwelve"></div>
+  <div class="twister" id="tthirteen"></div>
+  <div class="twister" id="tfourteen"></div>
+  <div class="twister" id="tfifteen"></div>
+  <div class="twister" id="tsixteen"></div>
+  <div class="twister" id="tseventeen"></div-->
+  	<div class="main">
+    	<div id="tornadoes">
+        
+        </div>
+		<h2 id="seventeenintwo">17 tornadoes in 2 days</h2>
+        <div id="showTornadoes"><a href="#"><img src="img/showtornadoes.png" alt="Show tornadoes" /></a></div>
+        <div class="subtitle">
+            <p>In Dallas-Fort Worth, Texas between January 9 and January 11, 2012, multiple tornadoes touched down in the area. It begs the question, why so early?<p>
+            <p>Frank Marsik, an Associate Research Scientist and Lecturer within Michigan Engineering's Department of Atmospheric, Oceanic and Space Sciences (AOSS) states, "This past winter, two large-scale phenomena (La Nina and Arctic Oscillation) combined in a way that kept arctic air well north of the U.S.-Canadian border resulting in a very mild winter for much of the United States."</p>
+            <p>He continues, "In fact, the Cooperative Weather Observation Station here at AOSS reported the warmest March on record for the site (dating back to 1880). The ability for warm and humid conditions to move so far northward so early in the season has contributed to our early thunderstorm and severe weather activity."</p>
+        </div>
+        
+    </div>
+    <a href="#two" class="pre-nav-button">Back</a>
+    <a href="#four" class="nav-button">Next page</a>
+  </section>
+  <section id="four">
+  <div id="green">
+  </div>
+   <div class="main">
+   <h2 id="anearlystart">An early start</h2>
+	<!--img id="photo_one" src="img/photo1.png"/-->
+    <iframe id="dexter" width="560" height="315" src="http://www.youtube.com/embed/fEJT6jEEqAg?wmode=0" frameborder="0" allowfullscreen></iframe>
+    <span id="altruda">Courtesy of Matt Altruda</span>
+    <div class="subtitle">
+    	<img src="img/dexterannarbor.png" />
+        
+        <p>An illustrative, dramatic example of his point hit close to the U-M Ann Arbor campus on March 15, 2012. A violent storm system composed of wind, rain and hail (combined with unseasonably warm weather) generated a tornado that touched down in southeast Michigan. Up to 50 houses were damaged when the twister tore through the town of Dexter. Fortunately, in spite of the excessive property damage, no lives were lost.</p>
+    </div>
+   </div>
+   <a href="#three" class="pre-nav-button">Back</a>
+   <a href="#five" class="nav-button">Next page</a>
+  </section>
+  <section id="five">
+   <div class="main">
+  	<div id="whitebg_1">
+    	<img id="wb1" src="img/whiteblock.png" />
+        <img id="wb2" src="img/whiteblock.png" />
+        <!--img src="img/psampson.png" /-->
+        <iframe id="samson" width="640" height="360" src="http://www.youtube.com/embed/Se931XqMAjo?wmode=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+	<div class="subtitle">
+    	<p>On the day following that Dexter storm, Michigan Engineering's Arthur F. Thurnau Professor Perry Samson, (AOSS) remarked in his Extreme Weather class that, "Let's put this in perspective here… We have storms occurring here in Michigan in March, normally I am discussing ice storms, or dense fog, or other more wintery types of meteorological phenomena. So this is an unusual event, to have these many storms this far north at this time of the year."</p>
+    </div>
+   </div>
+   <a href="#four" class="pre-nav-button">Back</a>
+   <a href="#six" class="nav-button">Next page</a>
+  </section>
+  <section id="six">
+   <div class="main">
+		<h2 id="trendspotting">Trend Spotting</h2>
+        <p class="first">"One of the difficulties in discussing trends in tornado occurrences is the fact that the statistics are somewhat skewed," poignantly puts Marsik. "Decades ago, tornadoes were only reported when spotted by the human eye.</p>
+        <p>Today's Doppler radars are able to detect tornadoes remotely, allowing for the detection of tornadoes where populations are sparse."</p>
+        <img id="graph" src="img/graph.png" />
+        <span class="graphcaption">Courtesy of NOAA</span>
+   </div>
+   <a href="#five" class="pre-nav-button">Back</a>
+   <a href="#seven" class="nav-button">Next page</a>
+  </section>
+  <section id="seven">
+   <div class="main">
+    <h2 id="texastwisters">Texas Twisters</h2>
+    <div class="subtitle">
+        <p>With the rise of social media and the proliferation of video recording devices, it isn't too hard to imagine that people are reporting storms more frequently and capturing more dramatic imagery to share.</p>
+    </div>
+	<div id="whitebg_2">
+    	<img id="wb3" src="img/whiteblock2.png" />
+        <img id="wb4" src="img/whiteblock2.png" />
+        <!--img src="img/storm.png" /-->
+        <iframe id="texas" width="640" height="360" src="http://www.youtube.com/embed/NTjR91JC850?wmode=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+	
+   </div>
+   <a href="#six" class="pre-nav-button">Back</a>
+   <a href="#eight" class="nav-button">Next page</a>
+  </section>
+  <section id="eight">
+   <div class="main">
+   	<h2 id="impact">Impact</h2>
+	<div id="brown">
+    	<p>Many lives have been lost. Billions of dollars in property has been destroyed and echoing what Marsik and Samson said about this strange year, the federal government released preliminary findings for 2012 -- and it's been a very active year. Again, according to the National Oceanic and Atmospheric Administration (NOAA):</p>
+        <p>"Warmer-than-average conditions across the eastern U.S. also created an environment favorable for severe thunderstorms and tornadoes. According to NOAA's Storm Prediction Center, there were 223 preliminary tornado reports during March, a month that averages 80 tornadoes annually. The majority of the tornadoes occurred during the March 2nd-3rd outbreak across the Ohio Valley and Southeast, which caused 40 fatalities. Total losses from this event are estimated to exceed $1.5 billion, making this the first event of 2012 to exceed $1 billion in damages and losses."</p> 
+    </div>
+   </div>
+   <a href="#seven" class="pre-nav-button">Back</a>
+   <a href="#nine" class="nav-button">Next page</a>
+  </section>
+  <section id="nine">
+   <div class="main">
+   	<h2 id="eyeinthesky">Eye in the Sky</h2>
+	<div class="subtitle">
+    	<p>But the true/official key to monitoring the stormy weather is the velocity tracking Doppler radar. Doppler radar is so accurate, researches can predict, within a fairly precise and reasonable range, exactly where tornadoes will manifest. Subsequently, we know a lot more about them and can keep our eye on the storms, like roaming monsters, as they're tracked across the countryside.</p> 
+    </div>
+   </div>
+   <a href="#eight" class="pre-nav-button">Back</a>
+   <a href="#ten" class="nav-button">Next page</a>
+  </section>
+  
+  <section id="ten">
+   <div class="main">
+   	<div class="subtitle">
+        <div class="panels">
+            <p>"Doppler radar technology can detect large-scale rotation within thunderstorms before smaller-scale tornado formation occurs. The data from these technologies allows the NWS to improve the lead times with which they can issue severe weather watches and warnings, allowing the public to take appropriate actions," says Marsik.</p> 
+            <p>"The March 15 Dexter tornado," Marsik continues, "is one example of a tornado warning that was able to be issued based upon Doppler radar prior to the actual touchdown of the tornado. That five to ten minute lead-time was crucial to saving lives."</p>
+            <p><iframe id="marsik" width="640" height="360" src="http://www.youtube.com/embed/UDSB1D4yZ6U?wmode=0" frameborder="0" allowfullscreen></iframe></p>
+        </div>
+       	<div class="sliderArrows">
+        	<a class="left" href="#">Last slide</a>
+            <a class="right" href="#">Next slide</a>
+        </div>
+    </div>
+   </div>
+   <a href="#nine" class="pre-nav-button">Back</a>
+   <a href="#eleven" class="nav-button">Next page</a>
+  </section>
+  
+  <section id="eleven">
+   <div class="main">
+   <h2 id="dopplereffect">The doppler effect</h2>
+	<!--img id="iphone" src="img/iphone_purp.png"/-->
+    <div class="subtitle">
+    	<p>When the question "What can be done?" was posed to Samson, he was of the same sentiment. However, he did mention the concept of "mini-Doppler."</p>
+        <p>He mused, "Yeah, you could take small Doppler devices and attach them to cell phone towers. It would be so accurate, that theoretically, you could develop some sort of opt-in system based on text messages or even direct phone calls. You could have a warning come through, if say, a tornado was headed straight at your house."</p>
+    </div>
+   </div>
+   <a href="#ten" class="pre-nav-button">Back</a>
+   <a href="#footer" class="nav-button">Sharing</a>
+  </section>
+  
+  <div id="footer">
+	<div class="main">
+    	<div id="breadcrumbs"><a href="http://engin.umich.edu">Michigan Engineering</a> > <a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience</a> > A season of twisters</div>
+        <div id="share" data-url="http://www.engin.umich.edu/newscenter/dme/tornadoes" data-text="Share this" data-title="share"></div>
+        <div id="credits">
+        	<p class="most_important">Ben Collins, Website Designer and Developer<p>
+        	<p>Mira Lancaster, Senior Graphic Designer</p>
+            <p>Dan Kim, Executive Director</p>
+        </p>
+    </div>    
+  </div>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script type='text/javascript' src='js/queryLoader.js'></script>
+  <!-- scripts concatenated and minified via build script -->
+  <script src="js/plugins.js"></script>
+  <script type="text/javascript" src="js/jarallax.js"></script>
+  <script type="text/javascript" src="js/jquery.transform.js"></script>  
+  <script src="js/jquery.transform.js"></script>
+	<script src="js/jquery.transform.attributes.js"></script>
+    <script src="js/jquery.transform.animate.js"></script>
+    <script src="js/jquery.angle.js"></script>
+    <script src="js/jquery.matrix.js"></script>
+    <script src="js/jquery.matrix.calculations.js"></script>
+    <script src="js/jquery.matrix.functions.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollorama.js"></script> 
+  <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.scrolldeck.js"></script>
+  <script type="text/javascript" src="js/jquery.parallax-1.1.js"></script>
+  <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+  
+  <script src="js/share/jquery.sharrre-1.3.2.min.js"></script>
+  
+  <script src="js/script.js"></script>
+  <!-- end scripts -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+   <style type="text/css">
+	#share {
+		float:left;
+		margin: 60px 0 0 0px;
+	}
+	.sharrre .button {
+		float:left;
+		width:60px;
+	}
+	</style>
+    <script>
+	  $(document).ready(function(){
+		
+		
+		var image, i=0;
+		$('#share').sharrre({
+		  share: {
+			googlePlus: true,
+			facebook: true,
+			twitter: true,
+			digg: true,
+			stumbleupon: true,
+			pinterest: true
+		  },
+		  buttons: {
+			googlePlus: {size: 'tall'},
+			facebook: {layout: 'box_count'},
+			twitter: {count: 'vertical'},
+			digg: {type: 'DiggMedium'},
+			delicious: {size: 'tall'},
+			stumbleupon: {layout: '5'},
+			linkedin: {counter: 'top'},
+			pinterest: {media: 'http://www.engin.umich.edu/newscenter/multimedia-stories/a-season-of-twisters/@@download/image/tornado150.jpg', description: $('#shareme').data('text'), layout: 'vertical'}
+		  },
+		  enableHover: false,
+		  enableCounter: false,
+		  enableTracking: true
+		});
+	  });
+	</script>    
+  
+  <script type="text/javascript">
+	var deviceIphone = "iphone";
+	var deviceIpod = "ipod";
+	var deviceIpad = "ipad";
+	 
+	//Initialize our user agent string to lower case.
+	var uagent = navigator.userAgent.toLowerCase();
+	 
+	// Detects if the current device is an iPhone.
+	function DetectIphone() {
+		return (uagent.search(deviceIphone) > -1)
+	}
+	 
+	// Detects if the current device is an iPad.
+	function DetectIpad() {
+		return (uagent.search(deviceIpad) > -1)
+	}
+	 
+	// Detects if the current device is an iPod Touch.
+	function DetectIpod() {
+		return (uagent.search(deviceIpod) > -1)
+	}
+	 
+	// Detects if the current device is an iPhone or iPod Touch.
+	function DetectIphoneOrIpod() {
+		if (DetectIphone())
+			return true;
+		else if (DetectIpod())
+			return true;
+		else if (DetectIpad())
+			return true;
+		else
+			return false;
+	}
+	</script>
+  
+  <script>
+
+	
+	
+
+  	$(document).ready(function() {
+	//console.log("Iphone:", DetectIphoneOrIpod());
+	var num=1;
+	
+	
+	var jarallax = new Jarallax()
+	jarallax.addAnimation('#one .subtitle, #one #twisters', [{progress:'0%', opacity:'1'}, {progress:'6%', opacity:'0'}]);
+	jarallax.addAnimation('#one #twisters', [{progress:'0%', top:'0px'}, {progress:'6%', top:'100px'}]);						
+	jarallax.addAnimation('#two #brewing', [{progress:'4%', opacity:'0'}, {progress:'9.0260853%', opacity:'1'}]);
+	jarallax.addAnimation('#two #brewing', [{progress:'4%', top: '0px', left: '-100px'}, {progress:'9.0260853%', top:'25px', left: '10px;'}]);						
+	jarallax.addAnimation('#three .main', [{progress:'15%', opacity:'0'}, {progress:'17.823889%', opacity:'1'}]);
+	jarallax.addAnimation('#three #seventeenintwo', [{progress:'15%', right:'-100px'}, {progress:'17.823889%', right:'10px'}]);
+		
+	
+	$("body").click(function(){/*console.log("Jar: ", jarallax.progress);*/})					
+	
+	$("#showTornadoes a").click(function(e){
+		e.preventDefault();
+		//console.log(this.innerHTML);
+		if (this.innerHTML == '<img src="img/showtornadoes.png" alt="Show tornadoes">') {this.innerHTML = '<img src="img/hidetornadoes.png" alt="Show tornadoes">';}
+		else if (this.innerHTML == '<img src="img/hidetornadoes.png" alt="Show tornadoes">') {this.innerHTML = '<img src="img/showtornadoes.png" alt="Show tornadoes">';}
+		
+		if ($("div.twister").css("opacity") == "1") $("div.twister").css({"opacity":"0"});
+		else if ($("div.twister").css("opacity") == "0") $("div.twister").css({"opacity":"1"});
+	});
+	
+	
+	
+	function showPanel(num) {
+		var panel = $(".panel"+num);
+		//console.log("Panel",panel);
+		panel.toggleClass("hide");
+		
+		if (num>2) {
+			
+		}
+		if (num<4) {
+			
+		}
+		
+	}
+	
+	var tenpanel = $("#ten .panels");
+
+	$("#ten .sliderArrows a.right").click(function(e){
+		e.preventDefault();
+		//console.log(tenpanel.css("left").replace("px","") );
+		if (tenpanel.css("left").replace("px","") >= -640) { 
+			$("#ten .sliderArrows a.left").css({"background-image":"url(img/tenlast.png)","cursor":"pointer"}); 
+			tenpanel.animate({left: '-=640'}, 300, 'easeOutExpo', function(){}); 
+		}
+		if (tenpanel.css("left").replace("px","") == -640) {
+			$("#ten .sliderArrows a.right").css({"background-image":"url(img/tennext2.png)","cursor":"default"});	
+		}
+	});
+
+	$("#ten .sliderArrows a.left").click(function(e){
+		e.preventDefault();
+		//console.log(tenpanel.css("left").replace("px","") );
+		if (tenpanel.css("left").replace("px","") < 0) {
+			$("#ten .sliderArrows a.right").css({"background-image":"url(img/tennext.png)","cursor":"pointer"}); 
+			tenpanel.animate({left: '+=640'}, 300, 'easeOutExpo', function(){}); 
+		}
+		if (tenpanel.css("left").replace("px","") == -640) {
+			$("#ten .sliderArrows a.left").css({"background-image":"url(img/tenlast2.png)","cursor":"default"});	
+		}
+	});
+	
+	$("#two .sliderArrows a.right").click(function(e){
+		e.preventDefault();
+		
+		if (num < 5) {
+			num++;
+			showPanel(num);
+		}
+		
+		if (num > 1) {
+			$("#two .sliderArrows .left").css({"background-image":"url(img/last.png)","cursor":"pointer"})
+		}
+		
+		if (num == 5) {		
+			$("#two .sliderArrows .right").css({"background-image":"url(img/next_grey.png)","cursor":"default"})
+		}
+		
+	});
+	
+	$("#two .sliderArrows a.left").click(function(e){
+		e.preventDefault();
+		
+		if (num > 1) {
+			showPanel(num);
+			num--;
+		}
+		
+		if (num < 5) {
+			$("#two .sliderArrows .right").css({"background-image":"url(img/next.png)","cursor":"pointer"})
+		}
+		
+		if (num == 1) {		
+			$("#two .sliderArrows .left").css({"background-image":"url(img/last_grey.png)","cursor":"default"})
+		}
+		
+		
+	});
+	
+	$(window).bind('scroll', function(){
+		var pos = $(window).scrollTop();
+		//console.log("Position: ", pos);
+		
+		if ((pos > 939)) { 
+			$('#red').fadeIn(1000,"linear");
+			//$('#red').css({"background-color": "#e13029"}); 
+			
+		}
+		else { 
+			$('#red').fadeOut(1000,"linear");
+			//$('#red').css({"background-color": "white"}); 
+		}
+		
+		if ((pos > 2949)) { 
+			$('#green').fadeIn(500);
+			//$('#red').css({"background-color": "#e13029"}); 
+			
+		}
+		else { 
+			$('#green').fadeOut(500);
+			//$('#red').css({"background-color": "white"}); 
+		}
+		
+		if ((pos > 4049)) { 
+			$('#wb1').css({rotate: '7deg'});
+			$('#wb2').css({rotate: '-7deg'});
+		}
+		else { 
+			$('#wb1').css({rotate: '0deg'});
+			$('#wb2').css({rotate: '0deg'});
+		}
+		
+		if ((pos > 6289)) { 
+			$('#wb3').css({rotate: '7deg'});
+			$('#wb4').css({rotate: '-7deg'});
+		}
+		else { 
+			$('#wb3').css({rotate: '0deg'});
+			$('#wb4').css({rotate: '0deg'});
+		}
+		
+		
+		
+		
+		
+		
+		
+		if ((pos > 939)) {
+			$("#navbar").css({"position":"fixed", "top":"0","background-color":"black"});
+		}
+		else {
+			$("#navbar").css({"position":"absolute", "top":"940px", "background-color":"#9e0b0f"});
+		}
+		
+		
+		
+		
+		
+		
+		
+		/*if ((pos > 2319)) { $('.twister').css({"opacity": "1"}); }
+		else {  $('.twister').css({"opacity": "0"}); }*/
+		
+	});
+	
+	
+	var height = $(window).height();
+	
+	//$('section').css({"height":height})
+	height=1000;
+	
+	var deck = new $.scrolldeck({
+		buttons: '.nav-button, .pre-nav-button',
+		slides: 'section',
+		duration: 1500,
+		easing: 'easeOutExpo',
+		offset: 0
+	  });
+	
+	
+		if (!DetectIphoneOrIpod()) {
+			$('#one').parallax("50%", 1000, .3, true);
+			$('#two').parallax("50%", 1500, .5, true);
+			$('#three').parallax("50%", 2000, 0.3, true);
+			$('#four').parallax("50%", 4000, 0.3, true);
+			$('#green').parallax("50%", 4000, 0.3, true);
+			$('#five').parallax("50%", 5000, 0.3, true);
+			$('#six').parallax("50%", 5800, 0.3, true);
+			$('#seven').parallax("50%", 2650, 0.1, true);
+			$('#eight').parallax("50%", 7800, 0.3, true);
+			$('#nine').parallax("50%", 8800, 0.1, true);
+			$('#ten').parallax("50%", 8800, 0.3, true);
+			$('#eleven').parallax("50%", 10800, 0.1, true);
+			
+			$('.twister').parallax("50%", 2000, 0.3, true);
+		}
+	
+	  
+	});
+  
+  </script>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31589994-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type='text/javascript'>
+    //QueryLoader.init();
+</script>
+</body>
+</html>
