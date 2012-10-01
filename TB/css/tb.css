@@ -1,0 +1,531 @@
+body {
+	background-color: rgb(198,200,166);
+	display: block;	
+}
+
+header {
+	position: relative;
+	background: url(../img/tb1_2000.jpg) no-repeat fixed;
+	display: block;
+	height: 474px;
+}
+
+header h1 {
+	font-size: 2.6em;
+	color: white;
+	width: 960px;
+	font-weight: 100;
+	margin: 0px auto 0;
+	/*text-indent: -9999px;*/
+	padding: 76px 0 0 0;
+	display: block;	
+	/*background: url(../img/top.png) no-repeat scroll top left;*/
+	height: 345px;
+}
+
+header h2 {
+	top: 309px;
+	left: 50%;
+	margin-left: 160px;
+	display: block;	
+	position: absolute;
+	width: 344px;
+	color: white;
+	font-weight: 100;
+	font-size: 17px;
+}
+
+span.byline {
+	position: relative;
+	display:block;	
+	width: 960px;
+	margin: -14px auto 80px;
+	color: white;
+	font-weight: 800;
+	font-size: 1.1em;
+}
+
+.stealcaption {
+	color: #777;
+	display: block;	
+	width: 573px;
+	margin: 7px auto 0 0;
+	font-size: .8em;
+	font-weight: lighter;
+}
+
+.primates {
+	display: block;
+	margin: 36px auto;	
+}
+
+.microbes {
+	display: block;
+	margin: 20px 0 7px;	
+}
+
+.ofthe {
+	margin-left: 13px;
+	display: inline-block;
+		
+}
+
+.tuberculosis {
+	line-height: 71px;
+	color: white;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+div#main {
+	overflow: auto;
+	width: 960px;
+	display: block;
+	position: relative;	
+	margin: 71px auto 0;
+}
+
+div#left {
+	padding: 0;
+	border-right: thin solid #D8D5B7;
+	color: #333;
+	width: 629px;
+	margin: 0px;
+	float: left;
+	display: block;
+	position: relative;	
+	overflow: visible;
+}
+
+div#border {
+	top: 0;
+	margin: -20px 0 0;
+	padding: 0 50px 0 0;
+	border-right: thin solid #C0BD99;	
+	overflow: visible;
+}
+
+div#right {
+	top: 515px;
+	margin-left: 620px;
+	height: 100%;
+	padding: 0 0 0 30px;
+	width: 289px;
+	display: block;	
+	position: fixed;
+}
+
+p.pullquote {
+	display: block;
+	position: relative;
+	font-size: 26px;
+	line-height: 39px;
+	background: url(../img/quote.png) no-repeat top left;
+	padding: 5px 8px 0 51px;
+	color: #444;
+	margin: 0 0 30px 20px;	
+}
+
+div#percentofworld {
+	top: 77px;
+	left: 29px;
+	position: absolute;
+	display: block;
+	width: 282px; 
+	height: 282px; 	
+}
+
+div#percentofworld #text {
+	font-weight: bold;
+	color: #D70A16;
+	display: block;
+	left: 289px;
+	top: 118px;
+	position: absolute;	
+	font-size: 2.1em;
+	display: none;
+}
+
+div#percentofworld img {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+
+div#percentofworld_bg {
+	left: 0;
+	position: absolute;
+	display: block;
+	height: 282px;
+	width: 282px;
+	z-index: -2;
+	background: #333;	
+}
+
+div#percentofworld_inner {
+	-webkit-transition: 2s all ease;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	display: block;
+	width: 282px;
+	z-index: -1;
+	background: #D70A16;	
+	top: 282px;
+}
+
+div.clicktoreveal {
+	display: block;
+	position: absolute;
+	top: 361px;	
+	left: 32px;
+	font-size: .75em;
+	font-weight: lighter;
+}
+
+div#tenpct {
+	position: absolute;
+	display: block;
+	height: 282px;
+	width: 282px;
+	top: 420px;
+}
+
+div#tenpct .ten, div#tenpct .pct {
+	color: #D6D4BB;
+	display: inline-block;
+	letter-spacing: -12px;
+	float: left;
+	position: relative;
+	font-weight: bold;
+	font-size: 5em;	
+}
+
+.ten {
+	display: block;
+	overflow: visible;
+	width: 75px;	
+}
+
+div#tenpct .pct {
+	letter-spacing: 0px;
+	font-size: 2.6em;	
+	top: 23px;
+	float: left;
+	left: 1px;
+}
+
+div#tenpct .info {
+	margin: 33px 0 0 13px;
+	width: 140px;
+	float: left;	
+	font-size: 0.7em;
+}
+
+div#tenpcttwo {
+	position: absolute;
+	display: block;
+	height: 282px;
+	width: 282px;
+	top: 510px;
+}
+
+div#tenpcttwo .ten, div#tenpcttwo .pct {
+	color: #D6D4BB;
+	display: inline-block;
+	letter-spacing: -12px;
+	float: left;
+	position: relative;
+	font-weight: bold;
+	font-size: 5em;	
+}
+
+div#tenpcttwo .pct {
+	letter-spacing: 0px;
+	font-size: 2.6em;	
+	top: 23px;
+	float: left;
+	left: 1px;
+}
+
+div#tenpcttwo .info {
+	margin: 33px 0 0 13px;
+	width: 140px;
+	float: left;	
+	font-size: 0.7em;
+}
+
+div#tenpctthree {
+	position: absolute;
+	display: block;
+	height: 282px;
+	width: 282px;
+	top: 600px;
+}
+
+div#tenpctthree .ten, div#tenpctthree .pct {
+	color: #D6D4BB;
+	display: inline-block;
+	letter-spacing: -12px;
+	float: left;
+	position: relative;
+	font-weight: bold;
+	font-size: 5em;	
+}
+
+div#tenpctthree .pct {
+	letter-spacing: 0px;
+	font-size: 2.6em;	
+	top: 23px;
+	float: left;
+	left: 1px;
+}
+
+div#tenpctthree .info {
+	margin: 33px 0 0 13px;
+	width: 140px;
+	float: left;	
+	font-size: 0.7em;
+}
+
+div#hivdeaths {
+	display: block;
+	width: 282px;
+	position: absolute;	
+	top: 770px;
+}
+
+
+
+.navigation {
+	display: block;
+	position: absolute;
+	pointer-events: none !important;	
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	color: #99CC33;
+}
+
+.navigation a {
+	/*color: #0EC637;
+	color: white;*/
+	color: #9C971D;
+	background: transparent;
+	font-size: 2em;
+	pointer-events: all !important;
+}
+
+.sticky {
+	background: none repeat scroll 0 0 #222222;
+    box-shadow: 0 2px 4px #333333;
+    display: block;
+    height: 48px;
+    position: fixed;
+    top: 0px;
+	left: 0;	
+    width: 100%;
+    z-index: 1000;
+}
+
+.ie7 .sticky {
+}
+
+a#circle {
+	display: block;
+	position: absolute;
+	right: -60px;
+	height: 48px;
+	width: 48px;
+	top: -10px;	
+}
+
+#holder {
+    height: 260px;
+	
+}
+
+.sticky ul {
+	display: block;
+	width: 960px;
+	margin: 2px auto;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	height: 45px;
+	background: url(../img/dmebadge.jpg) scroll no-repeat top left;
+}
+
+.sticky ul li {
+	list-style: none;
+	display: inline;
+	float: right;
+	margin: 4px 0 0;
+}
+
+.sticky ul li.simplify a {
+	text-align: right;
+	right: 0;
+	position: absolute;
+	width: 270px;	
+}
+
+li.dmegallery {
+	right: 57px;
+	display: block;
+	position: absolute;
+	top: 5px;
+}
+
+.sticky ul li a, .sticky ul li a:visited {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.sticky ul li.home {
+	position: absolute;
+	left: 0; top: 8px;
+	margin: 0;
+}
+
+.sticky ul li.counts {
+	float: none;	
+}
+
+#topbar {
+	width: 1007px;
+	padding: 10px 0 4px 0;
+	/*border-bottom: thin solid #FFC421;*/
+	position: relative;
+	margin: 0 auto;
+}
+
+.navigation a:hover, .navigation a:active, .navigation a:visited {
+	background: transparent;	
+}
+
+.navigation a.next {
+	position: absolute;
+	right: 10px; bottom: 10px;
+	
+}
+
+.navigation a.last {
+	position: absolute;
+	left: 10px; bottom: 10px;	
+}
+
+.navigation p#countdown {
+	font-family: "tachyon", sans-serif;
+	display: block;
+	width: 350px;
+	position: absolute;
+	font-size: 9px;
+	z-index: 1001;
+	left: 50%;
+	margin: 10px 0 0 -109px;
+}
+
+footer {
+	display: block;
+	margin: 150px 0 0 0;
+	width: 100%;
+	height: 440px;
+	position: relative;
+	clear: both;
+	color: #aaa;
+	background: url(../img/foot.png) #333 bottom right repeat-x;	
+}
+
+div#footercontainer {
+	background: url("../img/footer_img.png") repeat-x scroll right bottom #333;
+    display: block;
+    
+	height: 440px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 960px;
+	font-size: 14px;
+}
+
+footer a, footer a:visited {
+	color: white;	
+	text-decoration: none;
+}
+
+#breadcrumbs {
+	display: block;
+    margin-top: 0;
+    
+	padding: 40px 0 0;
+    position: relative;	
+}
+
+footer #credits {
+	display: block;	
+	margin: 0;
+}
+
+#credits ul {
+	display: block;	
+	padding: 0;
+	font-size: .85em;
+	font-weight: 100;
+}
+
+#credits ul li {
+    list-style: none;
+		
+    margin: 0;
+    padding: 0;
+}
+
+#credits ul#photocredits {
+	display: block;
+}	
+
+tspan {
+	-webkit-transform-origin-x: 20px;
+	position: relative;
+	left: 75px !important;
+	font-size: 11px !important;
+	display: block;	
+}
+
+.sharetext {
+    margin-top: 30px;
+    font-size: .8em;
+	
+    font-style: italic;
+}
+
+#sidevideo {
+    margin: 0 0 15px;		
+}
+
+#granuloma {
+    height: 330px;
+    z-index: 0 !important;	
+}
+#vidcontainer {
+	
+    width: 570px;
+    height: 321px;
+    overflow: hidden;
+}
+
+#blackbox {
+    margin-top: 43px;
+	
+}
+
+blockquote {
+    display: inline;
+		
+    margin: 0;
+    font-weight: bold;
+}
