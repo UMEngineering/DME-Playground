@@ -1,31 +1,31 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>QUnit Tests</title>
-	<link rel="stylesheet" href="qunit/qunit.css" media="screen">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
 
-<!-- reference your own javascript files here -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-  <script src="../js/libs/modernizr-1.7.min.js"></script>
-  
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
-  <script src="../js/plugins.js"></script> 
-  <script src="../js/script.js"></script> 
-
-
-<!-- test runner files -->
-	<script src="qunit/qunit.js"></script>
-	<script src="tests.js"></script>
-
-
-
+    <link href="impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-<body class="flora">
-	<h1 id="qunit-header">QUnit Test Suite</h1>
-	<h2 id="qunit-banner"></h2>
-	<div id="qunit-testrunner-toolbar"></div>
-	<h2 id="qunit-userAgent"></h2>
-	<ol id="qunit-tests"></ol>
-	<div id="qunit-fixture">test markup</div>
-	</body>
+
+<body class="impress-not-supported">
+	<canvas id="myCanvas" width="1000" height="600" style="border: 1px solid white;"></canvas>
+    <script type="text/javascript">
+	alert(document.body.clientWidth);
+	var c = document.getElementById("myCanvas");
+	var cxt = c.getContext("2d");
+	cxt.moveTo(10, 10);
+	cxt.lineTo(150, 50);
+	cxt.lineTo(10, 50);
+	cxt.stroke();
+	</script>
+</body>
 </html>

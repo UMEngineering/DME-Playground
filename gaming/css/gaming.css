@@ -117,18 +117,23 @@ a.title {
 }
 
 
-/* For the slider 
-.nivoSlider {
-    position:relative;
-    background:url(images/loading.gif) no-repeat 50% 50%;
+@media (min-width: 1001px) {
+	#wrapper {
+		width: 980px;
+		margin: auto;
+	}
 }
-.nivoSlider img {
-    position:absolute;
-    top:0px;
-    left:0px;
-    display:none;
+
+@media (max-width: 1000px) and (min-width: 700px) {
+	#wrapper {
+		width: 680px;
+		margin: auto;
+	}
 }
-.nivoSlider a {
-    border:0;
-    display:block;
-}*/
+
+@media (max-width: 699px) and (min-width: 400px) {
+	#wrapper {
+		width: 380px;
+		margin: auto;
+	}
+}
