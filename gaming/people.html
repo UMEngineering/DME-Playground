@@ -261,17 +261,28 @@ function drawLines (scale){
 		var w2 = obj.offsetWidth * s;
 		var h2 = obj.offsetHeight * s;
 		
+		// The blank space to the two side of browser at two side of "impress"
+		var blankW = (document.body.clientWidth - 1024 * scale) / 2;
+		var blankH = (document.body.clientHeight - 768 * scale) / 2;
 		var c = document.getElementById("mycanvas");
 		var ctx = c.getContext("2d");
-		//ctx.moveTo(x1 + w1/2, y1 + h1/2);
-		//ctx.lineTo(x2 + w2/2, y2 + h2/2);
-		//ctx.stroke();
-		//ctx.lineTo(10, 50);
-		var interal = setInterval(function () {
-			ctx.clearRect(0, 0, document.body.clientWidth, document.body.clientHeight);
-			ctx.moveTo(x1 + w1/2, y1 + h1/2);
-			ctx.lineTo(x2 + w2/2, y2 + h2/2);
+		/*ctx.moveTo(x1 + w1/2, y1 + h1/2);
+		ctx.lineTo((x2 + w2/2)/2, (y2 + h2/2)/2);
+		ctx.stroke();
+		ctx.lineTo(10, 50);*/
+		var dot = 100;
+		var xstart = x1 + w1/2;
+		var ystart = y1 + h1/2;
+		var xend = (x2-blankW + w2/2)/dot + blankW;
+		var yend = (y2-blankH + h2/2)/dot + blankH;
+		var timer = setInterval(function () {
+			//ctx.clearRect(0, 0, document.body.clientWidth, document.body.clientHeight);
+			ctx.moveTo(xstart, ystart);
+			ctx.lineTo(xend, yend);
 			ctx.stroke();
+			
+			xstart = xend + 1;
+			ystart += yend;
 		}, 1);
 		//alert(scale);
 	}, 800);
