@@ -320,3 +320,13 @@ ul {
 .active.moreinfo, .active .moreinfo {
 	opacity: 1 !important;	
 }
+
+#impress svg {
+	display: block;	
+	position: absolute !important;
+	width: 4000px;
+	height: 4000px;
+	left: 50%;
+	margin: -2000px 0 0 -2000px;
+	overflow: visible !important;
+}
