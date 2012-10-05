@@ -18,9 +18,6 @@
 <!-- *******CANVAS******* -->
 
 <div id="impress">
-
-<canvas id="mycanvas" style=""></canvas>
-
     <!--
         
         Here is where interesting thing start to happen.
@@ -239,50 +236,27 @@ if ("ontouchstart" in document.documentElement) {
 -->
 <script src="js/libs/impress.js"></script>
 <script src="js/libs/rafael.js"></script>
+
 <script>
+
+// Creates canvas 320 × 200 at 10, 50
+var paper = Raphael(document.getElementById("impress"), 10000, 6000);
+
+// Creates circle at x = 50, y = 40, with radius 10
+var circle = paper.circle(50, 40, 10);
+// Sets the fill attribute of the circle to red (#f00)
+circle.attr("fill", "#f00");
+
+// Sets the stroke attribute of the circle to white
+circle.attr("stroke", "#fff");
+
+var line = paper.path("M0 0L7000 2000");
+
+line.attr("stroke", "#f00");
+
+
 impress().init();
 
-var CP = window.CanvasRenderingContext2D && CanvasRenderingContext2D.prototype;
-if (CP && CP.lineTo){
-  CP.dashedLine = function(x,y,x2,y2,dashArray){
-    if (!dashArray) dashArray=[10,5];
-    if (dashLength==0) dashLength = 0.001; // Hack for Safari
-    var dashCount = dashArray.length;
-    this.moveTo(x, y);
-    var dx = (x2-x), dy = (y2-y);
-    var slope = dy/dx;
-    var distRemaining = Math.sqrt( dx*dx + dy*dy );
-    var dashIndex=0, draw=true;
-    while (distRemaining>=0.1){
-      var dashLength = dashArray[dashIndex++%dashCount];
-      if (dashLength > distRemaining) dashLength = distRemaining;
-      var xStep = Math.sqrt( dashLength*dashLength / (1 + slope*slope) );
-      if (dx<0) xStep = -xStep;
-      x += xStep
-      y += slope*xStep;
-      this[draw ? 'lineTo' : 'moveTo'](x,y);
-      distRemaining -= dashLength;
-      draw = !draw;
-    }
-  }
-}
-
-function drawLines (){
-	
-	var c = document.getElementById("mycanvas");
-	var cxt = c.getContext("2d");
-	/*cxt.moveTo(0, 0);
-	cxt.lineTo(7000, 3000);
-	cxt.stroke();*/
-	cxt.dashedLine(0,0,7000,3000,[10,10]);
-	cxt.stroke();
-}
-
-drawLines();
-
-
-
-// Start draw lines
 
 </script>
 

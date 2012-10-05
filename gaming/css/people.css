@@ -702,9 +702,13 @@ a:focus {
     for you.
 */
 
-#mycanvas {
-	border: 10px solid red;	
-	position: absolute;
-	width: 7000px;
-	height: 3000px;
+#impress svg {
+	position: absolute !important;
+	left: 50% !important;
+	top:  50% !important;
+	margin-left: -3500px;
+	margin-top: -1750px;
+	z-index: 100;
+	background: transparent;
+	-webkit-backface-visibility: hidden;
 }
