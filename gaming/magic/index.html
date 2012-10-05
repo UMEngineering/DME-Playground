@@ -68,19 +68,19 @@ if ("ontouchstart" in document.documentElement) {
 <script src="../js/libs/rafael.js"></script>
 <script>
 
+drawLine(1449, 465, 582, 864);
+drawLine(1449, 465, 2370, 864);
+function drawLine(x1, y1, x2, y2){
     var paper = Raphael(document.getElementById("impress"), 7000, 3000);
-    var line = paper.path("M1449 465L582 864");
+    var line = paper.path("M"+x1+" "+y1+"L"+x2+" "+y2);
     line.attr("stroke", "#333");
-	
-	$(document).ready(function(){
-		$("svg").click(function(e){
-			console.log(e, this);
-			console.log("X, Y: ", e.offsetX + ", " + e.offsetY);	
-		});
-			
-	});
-	
-    impress().init();
+}
+
+function clearPaper(paper){
+	paper.clear();
+}
+
+impress().init();
 
 </script>
 </body>

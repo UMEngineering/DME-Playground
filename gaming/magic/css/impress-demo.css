@@ -322,7 +322,7 @@ ul {
 }
 
 #impress svg {
-	border: 10px solid white !important;
+	/*border: 10px solid white !important;*/
 	display: block;	
 	position: absolute !important;
 	width: 4000px;
