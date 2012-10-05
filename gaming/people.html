@@ -16,8 +16,11 @@
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 <!-- *******CANVAS******* -->
-<canvas id="mycanvas" style=""></canvas>
+
 <div id="impress">
+
+<canvas id="mycanvas" style=""></canvas>
+
     <!--
         
         Here is where interesting thing start to happen.
@@ -35,6 +38,10 @@
         It will not be rotated or scaled.
         
     -->
+    
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+    
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
         <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
     </div>
@@ -178,8 +185,7 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
+    
 
 </div>
 
@@ -232,50 +238,48 @@ if ("ontouchstart" in document.documentElement) {
     
 -->
 <script src="js/libs/impress.js"></script>
+<script src="js/libs/rafael.js"></script>
 <script>
 impress().init();
 
-function drawLines (scale){
-	// Default window size
-	// Width: 1024, height: 768
-	// Set the Canvas size
-	//document.getElementById("mycanvas").width = 1024;
-	//document.getElementById("mycanvas").height = 768;
-	//scale = scale / 10;
-	
-	
-	// Start to draw lines on canvas
-	/*var c = document.getElementById("mycanvas");
-	var cxt = c.getContext("2d");
-	cxt.moveTo(-1000 * scale, -1500 * scale);
-	cxt.lineTo(150 * scale, 50 * scale);
-	cxt.lineTo(10, 50);
-	cxt.stroke();*/
-	setTimeout (function(){
-	var s = scale / 10;
-	document.getElementById("mycanvas").width = document.body.clientWidth;
-	document.getElementById("mycanvas").height = document.body.clientHeight;
-	var obj = document.getElementById("bored");
-	var x1 = obj.getBoundingClientRect().left;
-	var y1 = obj.getBoundingClientRect().top;
-	var w1 = obj.offsetWidth * s;
-	var h1 = obj.offsetHeight * s;
-	
-	obj = document.getElementById("its-in-3d");
-	var x2 = obj.getBoundingClientRect().left;
-	var y2 = obj.getBoundingClientRect().top;
-	var w2 = obj.offsetWidth * s;
-	var h2 = obj.offsetHeight * s;
+var CP = window.CanvasRenderingContext2D && CanvasRenderingContext2D.prototype;
+if (CP && CP.lineTo){
+  CP.dashedLine = function(x,y,x2,y2,dashArray){
+    if (!dashArray) dashArray=[10,5];
+    if (dashLength==0) dashLength = 0.001; // Hack for Safari
+    var dashCount = dashArray.length;
+    this.moveTo(x, y);
+    var dx = (x2-x), dy = (y2-y);
+    var slope = dy/dx;
+    var distRemaining = Math.sqrt( dx*dx + dy*dy );
+    var dashIndex=0, draw=true;
+    while (distRemaining>=0.1){
+      var dashLength = dashArray[dashIndex++%dashCount];
+      if (dashLength > distRemaining) dashLength = distRemaining;
+      var xStep = Math.sqrt( dashLength*dashLength / (1 + slope*slope) );
+      if (dx<0) xStep = -xStep;
+      x += xStep
+      y += slope*xStep;
+      this[draw ? 'lineTo' : 'moveTo'](x,y);
+      distRemaining -= dashLength;
+      draw = !draw;
+    }
+  }
+}
+
+function drawLines (){
 	
 	var c = document.getElementById("mycanvas");
 	var cxt = c.getContext("2d");
-	cxt.moveTo(x1 + w1/2, y1 + h1/2);
-	cxt.lineTo(x2 + w2/2, y2 + h2/2);
-	//cxt.lineTo(10, 50);
-	//alert(scale);
+	/*cxt.moveTo(0, 0);
+	cxt.lineTo(7000, 3000);
+	cxt.stroke();*/
+	cxt.dashedLine(0,0,7000,3000,[10,10]);
 	cxt.stroke();
-	}, 800);
 }
+
+drawLines();
+
 
 
 // Start draw lines

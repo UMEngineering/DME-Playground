@@ -163,8 +163,6 @@ var s = 0;
         }
 		
 		// *************************Modified from original impress.js*********************************
-		//s = scale;
-        drawLines(scale);
 		s = scale
         return scale;
     };
