@@ -330,6 +330,6 @@ ul {
 	left: 50%;
 	margin: -2000px 0 0 -2000px;
 	overflow: visible !important;
-	z-index: 1000;
+	z-index: -1;
 	pointer-events: all !important;
 }
