@@ -245,35 +245,35 @@ function drawLines (scale){
 	
 	
 	// Start to draw lines on canvas
-	/*var c = document.getElementById("mycanvas");
-	var cxt = c.getContext("2d");
-	cxt.moveTo(-1000 * scale, -1500 * scale);
-	cxt.lineTo(150 * scale, 50 * scale);
-	cxt.lineTo(10, 50);
-	cxt.stroke();*/
 	setTimeout (function(){
-	var s = scale / 10;
-	document.getElementById("mycanvas").width = document.body.clientWidth;
-	document.getElementById("mycanvas").height = document.body.clientHeight;
-	var obj = document.getElementById("bored");
-	var x1 = obj.getBoundingClientRect().left;
-	var y1 = obj.getBoundingClientRect().top;
-	var w1 = obj.offsetWidth * s;
-	var h1 = obj.offsetHeight * s;
-	
-	obj = document.getElementById("its-in-3d");
-	var x2 = obj.getBoundingClientRect().left;
-	var y2 = obj.getBoundingClientRect().top;
-	var w2 = obj.offsetWidth * s;
-	var h2 = obj.offsetHeight * s;
-	
-	var c = document.getElementById("mycanvas");
-	var cxt = c.getContext("2d");
-	cxt.moveTo(x1 + w1/2, y1 + h1/2);
-	cxt.lineTo(x2 + w2/2, y2 + h2/2);
-	//cxt.lineTo(10, 50);
-	//alert(scale);
-	cxt.stroke();
+		var s = scale / 10;
+		document.getElementById("mycanvas").width = document.body.clientWidth;
+		document.getElementById("mycanvas").height = document.body.clientHeight;
+		var obj = document.getElementById("bored");
+		var x1 = obj.getBoundingClientRect().left;
+		var y1 = obj.getBoundingClientRect().top;
+		var w1 = obj.offsetWidth * s;
+		var h1 = obj.offsetHeight * s;
+		
+		obj = document.getElementById("its-in-3d");
+		var x2 = obj.getBoundingClientRect().left;
+		var y2 = obj.getBoundingClientRect().top;
+		var w2 = obj.offsetWidth * s;
+		var h2 = obj.offsetHeight * s;
+		
+		var c = document.getElementById("mycanvas");
+		var ctx = c.getContext("2d");
+		//ctx.moveTo(x1 + w1/2, y1 + h1/2);
+		//ctx.lineTo(x2 + w2/2, y2 + h2/2);
+		//ctx.stroke();
+		//ctx.lineTo(10, 50);
+		var interal = setInterval(function () {
+			ctx.clearRect(0, 0, document.body.clientWidth, document.body.clientHeight);
+			ctx.moveTo(x1 + w1/2, y1 + h1/2);
+			ctx.lineTo(x2 + w2/2, y2 + h2/2);
+			ctx.stroke();
+		}, 1);
+		//alert(scale);
 	}, 800);
 }
 

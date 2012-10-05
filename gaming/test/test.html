@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<canvas id="mycanvas" style="background: yellow;" width="400" height="300"></canvas>
+<script>
+ 
+        function draw20(id) {
+            var canvas = document.getElementById(id);
+            if (canvas == null)
+                return false;
+            var ctx = canvas.getContext("2d");
+      
+            var interal = setInterval(function () {
+                move(ctx);
+            }, 1);
+        }
+ 
+        var x = 100;//矩形开始坐标
+        var y = 100;//矩形结束坐标
+        var mx = 0;//0右1左
+        var my = 0; //0下1上
+        var ml = 1;//每次移动长度
+        var w = 20;//矩形宽度
+        var h = 20;//矩形高度
+        var cw = 400;//canvas宽度
+        var ch = 300; //canvas高度
+ 
+ 
+        function move(ctx) {
+            ctx.clearRect(0, 0, 400, 300);
+            ctx.fillStyle = "#EEEEFF";
+            ctx.fillRect(0, 0, 400, 300);
+            ctx.fillStyle = "red";
+            ctx.fillRect(x, y, w, h);       
+            if (mx == 0) {
+                x = x + ml;
+                if (x >= cw-w) {
+                    mx = 1;
+                }
+            }
+            else {
+                x = x - ml;
+                if (x <= 0) {
+                    mx = 0;
+                }
+            }
+            if (my == 0) {
+                y = y + ml;
+                if (y >= ch-h) {
+                    my = 1;
+                }
+            }
+            else {
+                y = y - ml;
+                if (y <= 0) {
+                    my = 0;
+                }
+            }
+          
+        }
+draw20("mycanvas");
+</script>
+</body>
+</html>
