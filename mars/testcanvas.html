@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<canvas id="earthCanvas" width="1800" height="1800">Fallback content</canvas>
+
+</body>
+
+
+<style type="text/css">
+	canvas#earthCanvas {
+			border: 3px solid red;
+			width: 1800px;
+			height: 1800px;
+			position: absolute;
+			left: 50%;
+			margin-left: -900px;
+			pointer-events: all !important;
+		}
+</style>
+
+<script type="text/javascript">
+
+	
+	var earth = null;
+	function loadEarth() {
+		earth = new Image();
+		earth.src = "http://engcomm.engin.umich.edu/mars/img/large/earth1.png";
+		earth.addEventListener('load', function(){
+			var canvas = document.getElementById("earthCanvas");
+			var ctx = canvas.getContext("2d");
+			ctx.drawImage(earth,0,0);
+			console.log("Drawing image callback", earth);
+			console.log("Context callback:", ctx);
+		});
+	}
+	
+	window.onload = function() {
+		loadEarth();
+	}
+	
+
+</script>
+
+</html>

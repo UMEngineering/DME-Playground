@@ -1,0 +1,1317 @@
+body {
+   /* font-family: 'PT Sans', sans-serif;*/	
+    min-height: 740px;
+    /*background: url(../img/large/earth1.jpg) no-repeat top left black; 
+	background-color: black;*/
+	
+	overflow: hidden;
+	
+	background: rgb(0, 0, 0);
+   /*background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(35, 35, 35)), to(rgb(0, 0, 0)));
+    background: -webkit-radial-gradient(rgb(35, 35, 35), rgb(0, 0, 0));
+    background:    -moz-radial-gradient(rgb(35, 35, 35), rgb(0, 0, 0));
+    background:     -ms-radial-gradient(rgb(35, 35, 35), rgb(0, 0, 0));
+    background:      -o-radial-gradient(rgb(35, 35, 35), rgb(0, 0, 0));
+    background:         radial-gradient(rgb(35, 35, 35), rgb(0, 0, 0));*/
+}
+
+* {
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;	
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+
+iframe {
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;	
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+	-webkit-transform: none !important;
+	-moz-transform: none !important;
+	-o-transform: none !important;
+	transform: none !important;
+}
+
+h2 {
+	font-family: "tachyon", sans-serif;
+	color: white;
+	font-size: 18px;
+	margin-bottom:13px;
+}
+
+#userchoice {
+	pointer-events: all !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	display: none;	
+}
+
+#userchoice a {
+	color: white;
+	padding: 4px;
+	background: black;	
+}
+
+.inner {
+	font-size: .9em;	
+}
+
+#impress {
+	display: none;	
+}
+
+#loader {
+	background: #545883;
+	display: block;
+	z-index: 2000;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	overflow: hidden;
+}
+
+#loader p {
+	display: block;
+	position: absolute;
+	width: 212px;
+	text-align: right;
+	margin: auto;
+	height: 70px;
+	top: 50%;
+	left: 50%;
+	margin: -100px -106px;
+	vertical-align: center;
+	background: url(../img/loader.gif) no-repeat top left;
+	font-size: 40px;
+	padding: 7px 0 0;
+}
+
+.navigation {
+	display: block;
+	position: absolute;
+	pointer-events: none !important;	
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	color: #99CC33;
+}
+
+.navigation a {
+	/*color: #0EC637;
+	color: white;*/
+	color: #99CC33;
+	background: transparent;
+	font-size: 2em;
+	pointer-events: all !important;
+}
+
+.sticky {
+	background: none repeat scroll 0 0 #222222;
+    box-shadow: 0 2px 4px #333333;
+    display: block;
+    height: 63px;
+    position: fixed;
+    top: 0px;
+	left: 0;	
+    width: 100%;
+    z-index: 1000;
+}
+
+.ie7 .sticky {
+}
+
+.sticky ul {
+	width: 960px;
+	margin: 10px auto;
+	padding: 0;	
+	position: relative;
+}
+
+.sticky ul li {
+	list-style: none;
+	display: inline;
+	float: right;
+	margin: 10px 0 0;
+}
+
+.sticky ul li a, .sticky ul li a:visited {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.sticky ul li.home {
+	position: absolute;
+	left: 0;
+	margin: 0;
+}
+
+.sticky ul li.counts {
+	float: none;	
+}
+
+#topbar {
+	width: 1007px;
+	padding: 10px 0 4px 0;
+	/*border-bottom: thin solid #FFC421;*/
+	position: relative;
+	margin: 0 auto;
+}
+
+.navigation a:hover, .navigation a:active, .navigation a:visited {
+	background: transparent;	
+}
+
+.navigation a.next {
+	position: absolute;
+	right: 10px; bottom: 10px;
+	
+}
+
+.navigation a.last {
+	position: absolute;
+	left: 10px; bottom: 10px;	
+}
+
+.navigation p#countdown {
+	font-family: "tachyon", sans-serif;
+	display: block;
+	width: 350px;
+	position: absolute;
+	font-size: 9px;
+	z-index: 1001;
+	left: 50%;
+	margin: 10px 0 0 -109px;
+}
+
+.simplify {
+	position: absolute;
+	right: 0;
+	top: 18px;
+}
+
+.simplify a, .simplify a:visited, .simplify a:active {
+	color: #ccc !important;	
+	font-size: 11px !important;
+}
+
+.countdown_show4 .countdown_section {
+    width: 19.5%;
+}
+
+.origin {
+	opacity: 0 !important;	
+}
+
+.origin.present {
+	opacity: 1 !important;	
+}
+
+iframe {
+	position: relative;
+	display: block;
+}
+
+iframe a {
+	cursor: pointer;	
+}
+
+#earth {
+	width: 3260px;
+	padding: 1660px 0;
+	/*background: url(../img/large/earth1.png) no-repeat bottom left;*/
+	font-size: 20px;
+}
+
+#earth h1 {
+	-webkit-transform: translate3d(-50px, 0px, 0px) rotateY(-23deg);
+	-moz-transform: translate3d(-50px, 0px, 0px) rotateY(-20deg);
+	-o-transform: translate3d(-50px, 0px, 0px) rotateY(-20deg);
+	transform: translate3d(-50px, 0px, 0px) rotateY(-20deg);
+	display: block;
+	font-size: 180px;
+	height: 300px;
+	line-height: 144px;
+	margin: 0 auto 10px;
+	width: 1000px;
+	color: white;
+	text-align: center;
+	font-weight: 100;
+}
+
+.tight {
+	display: inline;
+	letter-spacing: -10px;	
+}
+
+#earth p {
+	display: block;
+	width: 821px;
+	height: auto;
+	margin: auto auto 20px auto;
+	color: white;
+}
+
+#earth p.byline {
+	position: absolute;
+	-webkit-transform: translate3d(-50px, 0px, 0px) rotateY(-23deg);
+	-moz-transform: translate3d(-50px, 0px, 0px) rotateY(-23deg);
+	-o-transform: translate3d(-50px, 0px, 0px) rotateY(-23deg);
+	transform: translate3d(-50px, 0px, 0px) rotateY(-23deg);
+	font-size: 18px;
+	display: block;
+	color: #CCC;
+	width: 180px;
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	left: 1933px;
+	top: 1855px;	
+}
+
+#mars {
+	width: 3000px;
+	padding: 1202px 0;
+	/*background: url(../img/large/mars3000.png) no-repeat bottom left;*/
+}
+
+#mars p.lander {
+	color: white;
+	padding: 280px;
+	display: block;
+	width: 229px;
+	height: auto;
+	margin: 0 auto;
+	background: url(../img/large/lander.png) no-repeat top left;
+	-webkit-transform: translateZ(-1px);
+}
+
+#mars_post p {
+	color: white;	
+}
+
+#mars p.landing {
+	font-size: 120px;
+	position: absolute;
+	color: white;
+	left: 50%;
+	-webkit-transition: all 1s ease;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateZ(0) rotateY(0) rotateX(0) translate(-50%, -50%) translate3d(-9679px, 1450px, 27500px) scale(1);
+	-moz-transition: all 2s ease;
+	-moz-transform-origin: 0% 0%;
+	-moz-transform-style: preserve-3d;
+	-moz-transform: rotateZ(0) rotateY(0) rotateX(0) translate(-50%, -50%) translate3d(-9679px, 1450px, 27500px) scale(1);
+	-o-transition: all 2s ease;
+	-o-transform-origin: 0% 0%;
+	-o-transform-style: preserve-3d;
+	-o-transform: rotateZ(0) rotateY(0) rotateX(0) translate(-50%, -50%) translate3d(-9679px, 1450px, 27500px) scale(1);
+	transition: all 2s ease;
+	transform-origin: 0% 0%;
+	transform-style: preserve-3d;
+	transform: rotateZ(0) rotateY(0) rotateX(0) translate(-50%, -50%) translate3d(-9679px, 1450px, 27500px) scale(1);
+	opacity: 1;
+	display: block;
+}
+
+#mars p.landing span {
+	/*-webkit-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);*/
+	display: inline-block;
+	width: 1300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 3s ease;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateX(180deg) translate(-50%, -50%);
+	-moz-transition: all 3s ease;
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: rotateX(180deg) translate(-50%, -50%);
+	-o-transition: all 3s ease;
+	-o-transform-style: preserve-3d;
+	-o-transform-origin: 0% 0%;
+	-o-transform: rotateX(180deg) translate(-50%, -50%);
+	transition: all 3s ease;
+	transform-style: preserve-3d;
+	transform-origin: 0% 0%;
+	transform: rotateX(180deg) translate(-50%, -50%);
+}
+
+#mars.active p.landing span {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateX(0deg) translate(-50%, -50%);
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: rotateX(0deg) translate(-50%, -50%);
+	-o-transform-style: preserve-3d;
+	-o-transform-origin: 0% 0%;
+	-o-transform: rotateX(0deg) translate(-50%, -50%);
+	transform-style: preserve-3d;
+	transform-origin: 0% 0%;
+	transform: rotateX(0deg) translate(-50%, -50%);
+}
+
+#mars .caption p {
+	background: url(../img/50pctw.png) repeat;
+	color: black;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+#mars.past {
+	/*opacity: 0;*/
+}
+
+#mars .color_red {
+	height: 181px;
+    width: 500px;
+	-webkit-transition: none;
+	-moz-transition: all 0s;
+	-o-transition: none;
+	transition: all 0s;
+}
+
+.color_red {
+	background-color: #8E5C36;
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin: -360px 0 0 -260px;
+	padding: 20px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 20px 0px;
+	color: white;
+	box-shadow: 0 0 20px #321;
+}
+
+#mars2 {
+	display: block;
+	position: absolute;
+	width: 1000px;
+	margin-left: -500px;
+	left: 50%; margin-left: -500px; top: -270px;
+}
+
+#mars2 .caption {
+	z-index: 1000;
+	position: relative;
+	display: block;
+	
+}
+
+#mars2 iframe.youtube {
+	float: right;
+	margin: 0 20px;
+	z-index: 1200;
+	pointer-events: all !important;
+}
+
+#mars8 span {
+    display: inline-block;            
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#mars8 .nasa {
+	-webkit-transform: translateZ(60px);
+	-moz-transform:    translateZ(60px);
+	-ms-transform:     translateZ(60px);
+	-o-transform:      translateZ(60px);
+	transform:         translateZ(60px);	
+}
+
+#mars8 .landing {
+	-webkit-transform: translateZ(170px);
+	-moz-transform:    translateZ(170px);
+	-ms-transform:     translateZ(170px);
+	-o-transform:      translateZ(170px);
+	transform:         translateZ(170px);
+	-webkit-transition: 2.5s;
+    -moz-transition:    2.5s;
+    -ms-transition:     2.5s;
+    -o-transition:      2.5s;
+    transition:         2.5s;	
+}
+
+#mars8 .insane {
+	-webkit-transform: translateZ(80px);
+	-moz-transform:    translateZ(80px);
+	-ms-transform:     translateZ(80px);
+	-o-transform:      translateZ(80px);
+	transform:         translateZ(80px);	
+}
+
+#mars8.present span {
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
+
+#renno {
+	top: -360px !important;	
+}
+
+#renno iframe {
+	float: left;
+	position: relative;
+	pointer-events: all !important;
+	margin: 0 10px 5px;
+	z-index: 1000;
+}
+
+#surface1_pre, #surface1, #surface1_post, #surface3_pre, #surface3, #surface3_post {
+	color: white;
+}
+
+#surface2_pre, #surface2, #surface2_post {
+	color: #222;	
+}
+
+#surface1_pre p, #surface1 p {
+	width: 380px;
+	float: right;
+	font-size: 19px
+}
+
+img.lander {
+	left: 50%;
+    position: absolute;
+    top: -50%;
+    margin-left: -563px;
+	-webkit-transform: translate(0,0) rotateX(-10deg) translate3d(0px, 150px, -210px);
+    -moz-transform: translate(0,0) rotateX(-10deg) translate3d(0px, 150px, -210px);	
+	-o-transform: translate(0,0) rotateX(-10deg) translate3d(0px, 150px, -210px);
+    transform: translate(0,0) rotateX(-10deg) translate3d(0px, 150px, -210px);	
+}
+
+#surface1 {
+	padding: 710px 1040px;
+	display: block;
+	/*background: url("../img/large/landing2500digi.png") no-repeat scroll left top transparent;*/
+	height: 1406px;
+	width: 2900px;
+}
+
+#surface1 p {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: translateZ(40px);
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: translateZ(40px);
+	-o-transform-style: preserve-3d;
+	-o-transform-origin: 0% 0%;
+	-o-transform: translateZ(40px);
+	transform-style: preserve-3d;
+	transform-origin: 0% 0%;
+	transform: translateZ(40px);
+}
+
+#surface2 {
+	padding: 662px 1036px;
+	display: block;
+	/*background: url("../img/large/surface22900.jpg") no-repeat scroll left top #FBF6EC;*/
+	height: 1406px;
+	width: 2900px;
+}
+
+.lander2 {
+	-moz-transform: translate(0px) rotateX(-25deg) rotateY(9deg) translate3d(370px, 390px, -280px);
+    display: block;
+    left: 50%;
+    margin-left: -1450px;
+    margin-top: -703px;
+    position: absolute;
+    top: 50%;	
+}
+
+#surface2 p {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: translateZ(100px);
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: translateZ(100px);
+	-o-transform-style: preserve-3d;
+	-o-transform-origin: 0% 0%;
+	-o-transform: translateZ(100px);
+	transform-style: preserve-3d;
+	transform-origin: 0% 0%;
+	transform: translateZ(100px);
+}
+
+
+#surface3 {
+	padding: 662px 1036px;
+	display: block;
+	background: url("../img/large/surface22900.jpg") no-repeat scroll left top #FBF6EC;
+	height: 1406px;
+	width: 2900px;
+}
+
+#surface3 p {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: translateZ(100px);
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: translateZ(100px);
+	-o-transform-style: preserve-3d;
+	-o-transform-origin: 0% 0%;
+	-o-transform: translateZ(100px);
+	transform-style: preserve-3d;
+	transform-origin: 0% 0%;
+	transform: translateZ(100px);
+}
+
+#rover1 {
+	color: #eee;
+	width: 1024px; height: 300px;
+}
+
+#rover1 p {
+	position: relative;
+	display: block;
+	float: left;	
+	width: 600px;
+	margin: auto auto;
+	font-size: 18px;
+}
+
+#rover1 .chapter2 {
+	-webkit-transform: translate(0, 0) translate3d(240px, 800px, 4440px) rotateY(60deg) rotateZ(-24deg) rotateX(30deg);
+	-moz-transform: translate(0, 0) translate3d(240px, 800px, 4440px) rotateY(60deg) rotateZ(-24deg) rotateX(30deg);
+	-o-transform: translate(0, 0) translate3d(240px, 800px, 4440px) rotateY(60deg) rotateZ(-24deg) rotateX(30deg);
+	transform: translate(0, 0) translate3d(240px, 800px, 4440px) rotateY(60deg) rotateZ(-24deg) rotateX(30deg);
+	color: white;
+}
+
+#rover2 {
+	color: #fff;
+	padding: 2440px 3300px;
+	-webkit-transition: all 1s cubic-bezier(0.5, 0.000, 1.000, 0.5);
+	-moz-transition: all 1s cubic-bezier(0.5, 0.000, 1.000, 0.5);
+	-o-transition: all 1s cubic-bezier(0.5, 0.000, 1.000, 0.5);
+	transition: all 1s cubic-bezier(0.5, 0.000, 1.000, 0.5);
+	/*background: url("../img/large/rover1.jpg") no-repeat scroll left bottom transparent;*/
+	display: block;
+	height: 3375px;
+	width: 6000px;
+}
+
+#rover1Canvas {
+	left: 50%;
+    position: absolute;
+    top: 50%;
+    margin: -606px 0 0 -990px;
+	opacity: 0;
+	-webkit-transition: opacity 1s ease;
+	-webkit-transform: translateZ(-10px);
+	-moz-transition: opacity 1s ease;
+	-moz-transform: translateZ(-10px);
+	-o-transition: opacity 1s ease;
+	-o-transform: translateZ(-10px);
+	transition: opacity 1s ease;
+	transform: translateZ(-10px);
+}
+
+#rover2.litUp #rover1Canvas {
+	opacity: 1;	
+}
+
+#rover2 p {
+	color: #fff;
+	height: auto;
+	margin-right: -290px;
+	position: absolute;
+	right: 50%;
+	top: 2240px;
+	width: 570px;
+	font-size: 18px;
+	-moz-transform: color 1s ease;
+	-webkit-transform: color 1s ease;
+	-o-transform: color 1s ease;
+	transform: color 1s ease;
+}
+
+#rover2.litUp p {
+	color: #222;	
+}
+
+#rover3, #rover4 {
+	color: #fff;
+    display: block;
+    height: 300px;
+    width: 600px;
+	font-size: 18px;
+}
+
+#rover3.litUp p, #rover4.litUp p {
+	color: #222;	
+}
+
+#laser1 {
+	background: url("../img/large/laser1.jpg") no-repeat scroll left bottom transparent;
+    color: white;
+    display: block;
+    font-size: 18px;
+    height: 414px;
+    padding: 61px 40px 0 630px;
+    text-align: left;
+    width: 984px;
+}
+
+#craft2 {
+	background: url("../img/large/craft2.jpg") no-repeat scroll left bottom transparent;
+    color: white;
+    display: block;
+    height: 455px;
+    padding: 0 40px 30px 650px;
+    text-align: left;
+    width: 984px;
+}
+
+#craft2 p.caption {
+	margin-top: 70px;	
+}
+
+
+#crater {
+	padding: 20px 101px;
+	display: block;
+	background: url("../img/large/crater.jpg") no-repeat scroll left top transparent;
+	width: 1024px;
+	height: 576px;
+}
+
+#mars_end {
+	background: url("../img/large/marsend.jpg") no-repeat scroll 50% 50% transparent;
+    display: block;
+    height: 3000px;
+    padding: 1360px 2256px;
+    width: 5333px;
+}
+
+#mars_end_post {
+	width: 770px;	
+}
+
+#end {
+	/*background: url("../img/large/planets.jpg") no-repeat scroll left top transparent;*/
+    display: block;
+    height: 1688px;
+    padding: 670px 1036px;
+    width: 3000px;
+	color: white;
+	background-color: black;
+}
+
+#end p {
+	display: block;
+	-webkit-transform: translateZ(10px);	
+}
+
+.orion {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1500px 0 0 -1500px;
+    opacity: 0;
+	-webkit-transition: opacity 15s ease;
+	-moz-transition: opacity 15s ease;
+	-o-transition: opacity 15s ease;
+	transition: opacity 15s ease;
+}
+
+#end.litUp p {
+	opacity: 0 !important;
+}
+
+#end.litUp.active p {
+	opacity: 1 !important;
+}
+
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+@-moz-keyframes rotating {
+    from{
+        -moz-transform: rotate(0deg);
+    }
+    to{
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotating {
+    from{
+        -o-transform: rotate(0deg);
+    }
+    to{
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.active .orion, .litUp .orion {
+	-webkit-animation: rotating 365s linear infinite;
+	-moz-animation: rotating 365s linear infinite;
+	-o-animation: rotating 365s linear infinite;
+	animation: rotating 365s linear infinite;
+	opacity: .6;
+}
+
+#credits {
+	color: white;
+		
+}
+
+/*
+    Now let's bring some text styles back ...
+*/
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+/*
+    ... and give links a nice look.
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+p {
+	display: block;
+	position: relative;
+	margin-bottom: 30px;	
+}
+
+/*
+    Because the main point behind the impress.js demo is to demo impress.js
+    we display a fallback message for users with browsers that don't support
+    all the features required by it.
+    
+    All of the content will be still fully accessible for them, but I want
+    them to know that they are missing something - that's what the demo is
+    about, isn't it?
+    
+    And then we hide the message, when support is detected in the browser.
+*/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/*
+    Now let's style the presentation steps.
+    
+    We start with basics to make sure it displays correctly in everywhere ...
+*/
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/*
+    ... and we enhance the styles for impress.js.
+    
+    Basically we remove the margin and make inactive steps a little bit transparent.
+*/
+.impress-enabled .step {
+    margin: 0;
+    opacity: .2;
+
+    -webkit-transition: opacity .5s;
+    -moz-transition:    opacity .5s;
+    -ms-transition:     opacity .5s;
+    -o-transition:      opacity .5s;
+    transition:         opacity .5s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+#title {
+    padding: 0;
+}
+
+#title .try {
+    font-size: 64px;
+    position: absolute;
+    top: -0.5em;
+    left: 1.5em;
+    
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
+#title h1 {
+    font-size: 190px;
+    
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#title .footnote {
+    font-size: 32px;
+}
+
+
+#overview { display: none }
+
+/*
+    We also make other steps visible and give them a pointer cursor using the
+    `impress-on-` class.
+*/
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.hint {
+    /*
+        We hide the hint until presentation is started and from browsers not supporting
+        impress.js, as they will have a linear scrollable view ...
+    */
+    display: none;
+    
+    /*
+        ... and give it some fixed position and nice styles.
+    */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 50px;
+    padding: 20px;
+    
+    z-index: 10000;
+    
+    /*
+        By default we don't want the hint to be visible, so we make it transparent ...
+    */
+    opacity: 0;
+    
+    /*
+        ... and position it below the bottom of the screen (relative to it's fixed position)
+    */
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+   
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+/*
+    Now we 'enable' the hint when presentation is initialized ...
+*/
+
+
+
+.impress-enabled .hint { display: block }
+
+.impress-on-bored .hint {
+ 
+    opacity: 1;
+    
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
+    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
+}
+
+.tk-tachyon {
+	color: #545883;
+	font-weight: 100;
+	display: block;
+	font-family: "tachyon", sans-serif;	
+}
+
+#earth .tk-tachyon {
+	left: 50%;
+	margin: -327px 0 0 -410px;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+}
+
+.typekit-badge {
+	display: none !important;	
+}
+
+
+.impress-enabled, html          { pointer-events: none !important; }
+.impress-enabled #impress { pointer-events: auto !important; }
+
+.litUp {
+	opacity: 1 !important;	
+}
+
+.share {
+	width: 360px;
+	
+}
+.sharrre .button {
+	float:left;
+	width:60px;
+}
+
+.impress-supported canvas#earthCanvas {
+	width: 1836px;
+	height: 1836px;
+	position: absolute;
+	left: 50%;
+	margin: 350px 0 0 -1660px;
+}
+
+.impress-supported canvas#marsCanvas {
+	width: 3000px;
+	height: 3000px;
+	position: absolute;
+	left: 50%;
+	margin: -1300px 0 0 -1500px;
+	-webkit-transform: translateZ(-2px);
+}
+.impress-supported canvas#surface2Canvas {
+	width: 2900px;
+	height: 1406px;
+	position: absolute;
+	left: 50%;
+	margin: -500px 0 0 -970px;
+	-webkit-transform: translate3d(10px, 90px, -220px) rotateX(-12deg);
+	-moz-transform: translate3d(10px, 90px, -220px) rotateX(-12deg);
+	-o-transform: translate3d(10px, 90px, -220px) rotateX(-12deg);
+	transform: translate3d(10px, 90px, -220px) rotateX(-12deg);
+}
+
+.impress-supported canvas#orionCanvas {
+	width: 3000px;
+	height: 3000px;
+	position: absolute;
+	left: 50%;
+	margin: -1500px 0 0 -1500px;			
+}
+
+.impress-not-supported .navigation {
+	display: none;	
+}
+
+.impress-not-supported canvas {
+	display: none !important;	
+}
+
+.impress-not-supported .step {
+	padding: 10px 10px 20px 10px !important;
+	overflow: hidden !important;
+	opacity: 1 !important;
+	clear: left !important;
+	position: relative !important;
+	width: 100% !important;
+	height: auto !important;
+	max-width: 960px !important;
+	margin: 10px auto !important;
+	left: auto !important;
+	top: auto !important;
+	color: white !important;
+	font-size: 18px !important;
+}
+
+.impress-not-supported p, .impress-not-supported h2 {
+	width: auto !important;	
+	height: auto !important;
+}
+
+p.clearfix {
+	display: block;
+	height: 0; width: 0;
+	position: relative;
+	clear: both;	
+}
+
+.impress-not-supported #earth h1 {
+	font-size: 40px !important;
+	line-height: 1.5em !important;
+	margin: 0 auto 20px;
+	height: auto !important;
+	text-align: left !important;
+	-moz-transform: none !important;
+	-webkit-transform: none !important;
+	-o-transform: none !important;
+	transform: none !important;
+	width: auto !important;
+}
+
+
+.impress-not-supported .color_red {
+	height: auto !important;
+    width: auto !important;
+	margin: auto !important;
+	
+}
+
+.impress-not-supported h1 .tight {
+	letter-spacing: normal !important;
+}
+
+.impress-not-supported .lander, .impress-not-supported #laser1, .impress-not-supported #craft2, .impress-not-supported #crater {
+	background-image: none !important;	
+}
+
+.impress-not-supported #mars {
+	position:relative !important;
+	margin: 0 auto 70px !important;
+}
+
+.impress-not-supported p.landing {
+	position:relative !important;
+	left: auto !important;
+	font-size: 18px !important;
+	width: 100% !important;
+}
+
+.impress-not-supported #mars .color_red {
+	left: auto !important;
+	position: relative !important;
+	
+}
+
+.impress-not-supported p.landing span {
+	/*-webkit-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);*/
+	display: block !important;
+	width: 100% !important;
+	position: relative !important;
+	top: auto !important;
+	left: auto !important;
+	float: left !important;
+}
+
+.impress-not-supported #mars_post {
+	left: auto !important;
+	margin-top: -60px !important;	
+}
+
+.impress-not-supported #mars2 {
+	margin-top: 30px !important;	
+}
+
+.impress-not-supported #renno {
+	top: auto !important;	
+}
+
+.impress-not-supported img.lander, .impress-not-supported p.lander {
+	display: none !important;
+}	
+
+.impress-not-supported #mars_end {
+	background-image: none !important;	
+}
+
+.impress-not-supported #laser1 {
+	padding: 0 0 0 0 !important;	
+}
+
+.impress-not-supported #craft2 {
+	padding: 0 0 0 0 !important;	
+}
+
+.impress-not-supported #craft2 {
+	padding: 0 0 0 0 !important;	
+}
+
+.impress-not-supported img.orion {
+	display: none;	
+}
+
+.impress-not-supported * {
+	-webkit-transform: none !important;
+	-moz-transform: none !important;
+	-o-transform: none !important;
+	transform: none !important;
+	opacity: 1 !important;	
+}
+
+.impress-not-supported iframe.youtube {
+	width: 240px !important;
+	height: 135px !important;	
+}
+
+.impress-not-supported .nomobile {
+	display: none !important;	
+}
+
+.impress-not-supported #loader p {
+	width: 212px !important;
+	height: 70px !important;
+}
+
+.impress-not-supported .fallback-message {
+	width: 300px !important;
+	padding: 10px !important;
+	color: black !important;	
+}
+
+.impress-not-supported #canvas, .impress-not-supported #impress {
+	position: relative !important;
+	top: 0 !important; left: 0  !important;
+	margin: 0  !important;
+}
+
+.impress-not-supported p {
+	color: white !important;	
+}
+
+.impress-not-supported .hint {
+	display: none !Important;	
+}
+
+.impress-not-supported {
+	overflow-y: scroll !important;	
+}
+
+.impress-not-supported.userchoice #userchoice {
+	display: block;	
+}
+
+.userchoice iframe.youtube {
+	width: 560px !important; height: 315px !important;	
+}
