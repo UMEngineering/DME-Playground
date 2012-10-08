@@ -421,7 +421,20 @@
         // `goto` API function that moves to step given with `el` parameter (by index, id or element),
         // with a transition `duration` optionally given as second parameter.
         var goto = function ( el, duration ) {
-            
+			// ************************* Move the Line ****************************
+			// Raphael Transformation
+			if (el.id != "overview") {
+				// Move to new position. Add any number after any four coordinates
+            	animateLine(line1, line1c[0]-400, line1c[1], line1c[2], line1c[3]);
+            	animateLine(line2, line2c[0]+400, line2c[1], line2c[2], line2c[3]);
+			} else if (el.id == "overview") {
+				// When in "overview" screen, let all lines go back to original position
+            	animateLine(line1, line1c[0], line1c[1], line1c[2], line1c[3]);
+            	animateLine(line2, line2c[0], line2c[1], line2c[2], line2c[3]);
+			}
+			// ************************ Move Line Ends ****************************
+			
+			
             if ( !initialized || !(el = getStep(el)) ) {
                 // presentation not initialized or given element is not a step
                 return false;
