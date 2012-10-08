@@ -1,0 +1,119 @@
+/* CSS Document */
+body {
+	background: #4eb1de;
+}
+
+header {
+	display: block;	
+	position: relative;
+	height: 40px;
+	background: #363A38;
+	z-index: 10;
+}
+
+footer {
+	display: block;	
+	position: relative;
+	height: 100px;
+	background: #75003c;
+	z-index: 10;
+}
+
+div#topcontainer {
+	display: block;	
+	position: relative;
+	margin: -1px auto;
+	height: 300px;
+	background: url(../img/inspiration.jpg) repeat-x 50% scroll;
+	overflow: visible;
+	z-index: 1;
+}
+
+div#top {
+	display: block;	
+	position: relative;
+	height: 100%;
+	margin: 0 auto;
+	width: 960px;
+}
+
+div#top h1 {
+	display: block;	
+	position: absolute;
+	width: 600px;
+	height: 76px;
+	top: 50px;
+	left: 89.8%;
+	margin: 0 0 0 -424px;
+	background: #C33;
+	opacity: 0.8;
+	font-size: 42pt;
+	font-weight: 100;
+	color: white;
+	padding-left: 1em;
+}
+
+div#top h1 img {
+	height: 70px;
+	margin: 0;
+	position: absolute;
+	top: 4px;
+	left: 63%;
+}
+
+div#contentcontainer {
+	display: block;	
+	min-height: 1000px;
+	width: 100%;
+	background: #53B1DC;
+	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
+	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
+	z-index: -1;
+}
+
+div#content {
+	display: block;
+	position: relative;
+	width: 960px;
+	margin: 0px auto;
+	overflow: auto;
+}
+
+div.transparent {
+    position: absolute;
+    padding: 6px;
+    bottom: 0;
+    height: 119px;
+    background: rgba(0, 0, 0, .4);
+    color: #ccc;
+	
+	/* display none initially */
+	display: none;
+}
+
+a.title {
+	display: block;	
+	margin: 0 0 3px;
+	color: #0E98C4;
+	text-decoration: none;
+	font-weight: 100;
+	font-size: 20px;
+}
+
+div#contenttop {
+	margin-top: 2em;
+}
+
+div#contenttop div {
+	float: left;
+	width: 350px;
+	color: white;
+	margin-top: 8px;
+	margin-left: 10px;
+	font-size: 30pt;
+	font-weight: 100;
+}
+
+div#contenttop img {
+	float: left;
+}
