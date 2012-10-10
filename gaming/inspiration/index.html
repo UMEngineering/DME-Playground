@@ -5,8 +5,15 @@
     <title>Inspiration</title>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.lightbox-0.5.min.js"></script>
+    <script>
+    	$(function() {
+			$("#main1").lightBox({fixedNavigation:true});
+			$("#main2").lightBox({fixedNavigation:true});
+		});
+    </script>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/inspiration.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
 </head>
 
 <body>
@@ -22,8 +29,27 @@
         <div id="contentcontainer">
         	<div id="content">
             	<div id="contenttop">
-                	<img src="img/main1.png" alt="gaming for the greater good"/>
+                	<a id="main1" href="img/main1.png" title="Gaming for the greater good"><img src="img/main1.png" alt="gaming for the greater good"/></a>
                     <div>“If anyone deserves to play a fantasy computer game, it’s <br />this kid.”</div>
+                </div>
+                <div id="contentmain">
+                	<p>He chalks it up to his Catholic upbringing, but David Chesney can’t help but shoehorn some good into unexpected places. “I’ve always tried to build social context into the courses I teach,” said the University of Michigan computer science instructor. </p>
+
+                    <p>So his section of ENGIN 100, a required course for all Michigan Engineering freshmen, is “Gaming for the Greater Good.” </p>
+                    
+                    <p>Up until a few years ago, he was often inundated with algebra-teaching programs, as students would often build games around their favorite subject in high school.</p>
+                    
+                    <div id="withimg">
+                    <a id="main2" href="img/main2.png" title="Gaming for the greater good"><img id="main2" src="img/main2.png" alt="team" /></a>
+                    <p>Then, on a whim, he toured the special needs classroom in his daughter’s elementary school. There, he saw the technology set-up for a quadriplegic kid who had been injured in a car accident as a toddler. </p>
+                    
+                    <p>“The device they had set up for him was a camera on top of his PC, and they’d put a metallic dot on his head that would move the cursor,” Chesney said. “That’s the main way he’d interface with his computer.” </p>
+                    
+                    <p>Chesney was struck. “If anyone deserves to play a fantasy computer game, it’s this kid,” he remembers thinking. </p>
+                    
+                    <p>He lifted a Nintendo controller that was setting on the table in front of him. “This is what today’s gaming interface looks like. I can barely use it.”</p>
+                    
+                    <p>That tour would change the course of his course. </p></div>
                 </div>
             </div>
         </div>

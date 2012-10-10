@@ -1,6 +1,6 @@
 /* CSS Document */
 body {
-	background: #4eb1de;
+	background: white;
 }
 
 header {
@@ -24,7 +24,8 @@ div#topcontainer {
 	position: relative;
 	margin: -1px auto;
 	height: 300px;
-	background: url(../img/inspiration.jpg) repeat-x 50% scroll;
+	background: url(../img/inspiration.jpg) repeat-y 20% scroll;
+	opacity: 0.8;
 	overflow: visible;
 	z-index: 1;
 }
@@ -116,4 +117,22 @@ div#contenttop div {
 
 div#contenttop img {
 	float: left;
+}
+
+div#contentmain {
+	clear: both;
+	color: white;
+	font-size: 12pt;
+	font-weight: 100;
+	margin: 1em;
+	padding-top: 2em;
+}
+
+div#contentmain p {
+	margin-bottom: 1em;
+}
+
+div#withimg img {
+	float: right;
+	margin-left: 1em;
 }
