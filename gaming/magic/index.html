@@ -68,10 +68,8 @@ if ("ontouchstart" in document.documentElement) {
 <script src="../js/libs/rafael.js"></script>
 <script>
 
-<<<<<<< HEAD
 drawLine(1263, 479, 582, 864);
 drawLine(1449, 465, 2370, 864);
-=======
 var paper = Raphael(document.getElementById("impress"), 7000, 3000);
 
 // Coordinates of line 1 and line 2:
@@ -84,7 +82,6 @@ var line1 = drawLine(line1c[0], line1c[1], line1c[2], line1c[3]);
 var line2 = drawLine(line2c[0], line2c[1], line2c[2], line2c[3]);
 
 //Draw the line in given x and ys
->>>>>>> Move line works
 function drawLine(x1, y1, x2, y2){
     var line = paper.path("M"+x1+" "+y1+"L"+x2+" "+y2);
     line.attr("stroke", "#333");
@@ -96,7 +93,6 @@ function clearPaper(){
 	paper.clear();
 }
 
-<<<<<<< HEAD
 $(document).ready(function(){
 	$("svg").click(function(e){
 		console.log(e, this);
@@ -104,13 +100,11 @@ $(document).ready(function(){
 	});
 		
 });
-=======
 // Animates the given line to the "moveTo" coordinates
 function animateLine(line, moveToX1, moveToY1, moveToX2, moveToY2){
 	var _temp = Raphael.transformPath("M"+moveToX1+" "+moveToY1+"L"+moveToX2+" "+moveToY2, "T0,0");
 	line.animate({path: _temp}, 1000);
 }
->>>>>>> Move line works
 
 impress().init();
 
