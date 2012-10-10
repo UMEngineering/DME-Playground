@@ -110,7 +110,7 @@
 		</div>
     </div>
     
-    <div id="decamillis" class="step" data-x="100" data-y="-300">
+    <div id="decamillis" class="step" data-x="1000" data-y="-300">
         <h2>Jason Decamillis</h2>
         <div class="moreinfo">
             <p>Special ed student at EMU</p>
@@ -134,6 +134,9 @@
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
+<div class="navigation">
+	<a href="#overview" class="go-overview" >OVERVIEW</a>
+</div>
 <script>
 if ("ontouchstart" in document.documentElement) { 
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
@@ -149,10 +152,26 @@ var paper = Raphael(document.getElementById("impress"), 7000, 3000);
 // [x1, y1, x2, y2]
 var line1c = [1449, 465, 582, 864];
 var line2c = [1449, 465, 2370, 864];
+var line100tSC = [2370, 940, 670, 1340];	// From ENGIN 100 to Summer Working group
+var line100tMC = [2370, 940, 1900, 1200];	// From ENGIN 100 to Mott Family Network
+var lineStBC = [670, 1400, 670, 1520];		// From Summer Working group to Brachial Plexus U-M
+var lineStTC = [670, 1400, 1420, 1540];		// From Summer Working group to Office of tech transfer
+var lineBtPC = [670, 1600, 670, 1860];		// From Brachial Plexus U-M to Patients with Brachial
+var lineTtPC = [1420, 1600, 670, 1860];		// From Office of Tech Transfer to Patients with Brachial
+var lineTtAC = [1420, 1600, 1350, 1860];	// From Office of Tech Transfer to Autistic Children
+var lineEtAC = [2240, 1550, 1350, 1860];	// From EMU Austism to Autistic Children
 
 // Draw these lines
 var line1 = drawLine(line1c[0], line1c[1], line1c[2], line1c[3]);
 var line2 = drawLine(line2c[0], line2c[1], line2c[2], line2c[3]);
+var line100tS = drawLine(line100tSC[0], line100tSC[1], line100tSC[2], line100tSC[3]);
+var line100tM = drawLine(line100tMC[0], line100tMC[1], line100tMC[2], line100tMC[3]);
+var lineStB = drawLine(lineStBC[0], lineStBC[1], lineStBC[2], lineStBC[3]);
+var lineStT = drawLine(lineStTC[0], lineStTC[1], lineStTC[2], lineStTC[3]);
+var lineBtP = drawLine(lineBtPC[0], lineBtPC[1], lineBtPC[2], lineBtPC[3]);
+var lineTtP = drawLine(lineTtPC[0], lineTtPC[1], lineTtPC[2], lineTtPC[3]);
+var lineTtA = drawLine(lineTtAC[0], lineTtAC[1], lineTtAC[2], lineTtAC[3]);
+var lineEtA = drawLine(lineEtAC[0], lineEtAC[1], lineEtAC[2], lineEtAC[3]);
 
 //Draw the line in given x and ys
 function drawLine(x1, y1, x2, y2){
