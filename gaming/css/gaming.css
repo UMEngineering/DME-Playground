@@ -53,7 +53,7 @@ div#contentcontainer {
 	background: #53B1DC;
 	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
 	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
-	z-index: -1;
+	z-index: 0;
 	margin: -51px 0 0 0;
 	padding: 100px 0 0;
 }
@@ -125,7 +125,7 @@ ul#nav li:hover div.transparent {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 119px;
+    height: 144px;
     background: rgba(10, 10, 10, .8);
     color: #ccc;
     display: block;
@@ -139,14 +139,15 @@ ul#nav li:hover div.transparent .title {
 	padding: 0;
 }
 
-ul#nav li:hover div.transparent .title a {
-	color: #0E98C4;
+ul#nav li:hover div.transparent .title a, ul#nav li:hover div.transparent .title a:visited {
+	color: #0E98C4 !important;
 }
 div.transparent .subtitle {
 	opacity: 0;
 	-webkit-transition: all .4s ease;
 	display:  block;
 	margin: 0 10px;
+	font-weight: 100;
 }
 
 ul#nav li:hover div.transparent .subtitle {
@@ -161,7 +162,7 @@ ul#nav li:hover div.transparent .subtitle {
 	padding: 0;
 	text-indent: 0px;
 	background: #333;
-	width: 295px;
+	width: 100%;
 	box-shadow: 0px 3px 2px rgba(0, 0, 0, .3);
 	overflow: hidden;
 }

@@ -1,7 +1,7 @@
 /* CSS Document */
 body {
 	background: white;
-	font-family: "nimbus-sans";
+	font-family: "proxima-nova";
 }
 
 header {
@@ -33,17 +33,9 @@ div#topcontainer {
 
 div#top {
 	display: block;	
-	position: relative;
-	height: 100%;
-	margin: 0 auto;
-	width: 960px;
-}
-
-div#top h1 {
-	display: block;	
 	position: absolute;
 	width: 1600px;
-	height: 76px;
+	height: 91px;
 	top: 50px;
 	left: 50%;
 	right: 0;
@@ -53,14 +45,23 @@ div#top h1 {
 	font-size: 42pt;
 	font-weight: 100;
 	color: white;
-	padding-left: 1em;
+	padding-left: 50px;
+}
+
+div#top h1 {
+    text-indent: -9999px;
+	
+    background: url(../img/theinspiration.png) no-repeat scroll top left;
+    width: 470px;
+    height: 100px;
+    margin: 11px 0 0 0;
 }
 
 div#top h1 img {
 	height: 70px;
-	margin: 0 0 0 -410px;
+	margin: 0 0 0 -321px;
 	position: absolute;
-	top: 4px;
+	top: 10px;
 	left: 50%;
 }
 
@@ -121,6 +122,10 @@ div#contenttop img {
 	float: left;
 }
 
+#main2 {
+	
+}
+
 div#contentmain {
 	clear: both;
 	color: white;
@@ -135,10 +140,20 @@ div#contentmain p {
 	width: 500px;
 	line-height: 1.5em;
 	font-size: 1.2em;
-	font-weight: lighter;
+	font-weight: 100;
 }
 
 div#withimg img {
 	float: right;
 	margin-left: 1em;
+}
+
+div#fantasy {
+    text-indent: -9999px;
+	
+    display: block;
+    position: relative;
+    background: url(../img/fantasy.png) no-repeat top left;
+    width: 320px !important;
+    height: 252px;
 }
