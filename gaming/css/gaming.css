@@ -47,12 +47,15 @@ div#top iframe {
 
 div#contentcontainer {
 	display: block;	
+	position: relative;
 	min-height: 1000px;
 	width: 100%;
 	background: #53B1DC;
 	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
 	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
 	z-index: -1;
+	margin: -51px 0 0 0;
+	padding: 100px 0 0;
 }
 
 div#content {
@@ -67,7 +70,7 @@ ul#nav {
     position: relative;
     display: block;
     width: 885px;
-    margin: 50px auto;
+    margin: 0 auto;
     overflow: visible;
 }
 

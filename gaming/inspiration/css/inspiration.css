@@ -1,6 +1,7 @@
 /* CSS Document */
 body {
 	background: white;
+	font-family: "nimbus-sans";
 }
 
 header {
@@ -24,7 +25,7 @@ div#topcontainer {
 	position: relative;
 	margin: -1px auto;
 	height: 300px;
-	background: url(../img/inspiration.jpg) repeat-y 20% scroll;
+	background: url(../img/inspiration.jpg) repeat-x 50% scroll;
 	opacity: 0.8;
 	overflow: visible;
 	z-index: 1;
@@ -41,13 +42,14 @@ div#top {
 div#top h1 {
 	display: block;	
 	position: absolute;
-	width: 600px;
+	width: 1600px;
 	height: 76px;
 	top: 50px;
-	left: 89.8%;
-	margin: 0 0 0 -424px;
-	background: #C33;
-	opacity: 0.8;
+	left: 50%;
+	right: 0;
+	margin: 0 0 0 -54px;
+	background: rgba(214, 91, 91, .8);
+	opacity: 1;
 	font-size: 42pt;
 	font-weight: 100;
 	color: white;
@@ -56,10 +58,10 @@ div#top h1 {
 
 div#top h1 img {
 	height: 70px;
-	margin: 0;
+	margin: 0 0 0 -410px;
 	position: absolute;
 	top: 4px;
-	left: 63%;
+	left: 50%;
 }
 
 div#contentcontainer {
@@ -102,7 +104,7 @@ a.title {
 }
 
 div#contenttop {
-	margin-top: 2em;
+	margin-top: 6em;
 }
 
 div#contenttop div {
@@ -130,6 +132,10 @@ div#contentmain {
 
 div#contentmain p {
 	margin-bottom: 1em;
+	width: 520px;
+	line-height: 1.5em;
+	font-size: 1.2em;
+	font-weight: lighter;
 }
 
 div#withimg img {
