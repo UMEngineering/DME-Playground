@@ -423,14 +423,37 @@
         var goto = function ( el, duration ) {
 			// ************************* Move the Line ****************************
 			// Raphael Transformation
-			if (el.id != "overview") {
+			if (el.id == "chesney") {
 				// Move to new position. Add any number after any four coordinates
             	animateLine(line1, line1c[0]-400, line1c[1], line1c[2], line1c[3]);
             	animateLine(line2, line2c[0]+400, line2c[1], line2c[2], line2c[3]);
+			} else if (el.id == "one00") {
+				// ENGIN 100
+				
+			} else if (el.id == "summer") {
+				// Summer working group
+            	animateLine(lineStB, lineStBC[0], lineStBC[1]+100, lineStBC[2], lineStBC[3]);
+            	animateLine(lineStT, lineStTC[0], lineStTC[1]+100, lineStTC[2], lineStTC[3]);
+			} else if (el.id == "brachial") {
+				// Brachial Plexus Palsy Camp U-M Health System
+            	animateLine(lineBtP, lineBtPC[0], lineBtPC[1]+100, lineBtPC[2], lineBtPC[3]);
+			} else if (el.id == "techtransfer") {
+				// Office of tech transfer
+            	animateLine(lineTtA, lineTtAC[0], lineTtAC[1]+100, lineTtAC[2], lineTtAC[3]);
+            	animateLine(lineTtP, lineTtPC[0], lineTtPC[1]+100, lineTtPC[2], lineTtPC[3]);
+			} else if (el.id == "emu") {
+				// Eastern Michigan University Austism Collaborative Center
+            	animateLine(lineEtA, lineEtAC[0], lineEtAC[1]+80, lineEtAC[2], lineEtAC[3]);
 			} else if (el.id == "overview") {
 				// When in "overview" screen, let all lines go back to original position
             	animateLine(line1, line1c[0], line1c[1], line1c[2], line1c[3]);
             	animateLine(line2, line2c[0], line2c[1], line2c[2], line2c[3]);
+				animateLine(lineStB, lineStBC[0], lineStBC[1], lineStBC[2], lineStBC[3]);
+            	animateLine(lineStT, lineStTC[0], lineStTC[1], lineStTC[2], lineStTC[3]);
+            	animateLine(lineBtP, lineBtPC[0], lineBtPC[1], lineBtPC[2], lineBtPC[3]);
+            	animateLine(lineTtA, lineTtAC[0], lineTtAC[1], lineTtAC[2], lineTtAC[3]);
+            	animateLine(lineTtP, lineTtPC[0], lineTtPC[1], lineTtPC[2], lineTtPC[3]);
+            	animateLine(lineEtA, lineEtAC[0], lineEtAC[1], lineEtAC[2], lineEtAC[3]);
 			}
 			// ************************ Move Line Ends ****************************
 			
