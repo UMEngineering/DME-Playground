@@ -281,7 +281,11 @@ ul#nav li:hover div.transparent .subtitle {
 	text-decoration: none;
 }
 
+<<<<<<< HEAD
 #gallery, #gallery2, #video {
+=======
+#gallery, #gallery2 {
+>>>>>>> 1:46
     display: none;
 	
 }
