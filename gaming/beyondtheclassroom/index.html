@@ -126,37 +126,10 @@
                         </li>
                     </ul>
                 </div><!-- / gallery -->
-<<<<<<< HEAD
                 
-                <div id="gallery2">
-                	<ul>
-                    	<li>
-                        	<a href="img/slideshow/autistic_kids/1.jpg" title="Title 1">
-                            </a>
-                        </li>
-                    	<li>
-                        	<a href="img/slideshow/autistic_kids/2.jpg" title="Title 2">
-                            </a>
-                        </li>
-                    	<li>
-                        	<a href="img/slideshow/autistic_kids/3.jpg" title="Title 3">
-                            </a>
-                        </li>
-                    	<li>
-                        	<a href="img/slideshow/autistic_kids/4.jpg" title="Title 4">
-                            </a>
-                        </li>
-                        <li>
-                        	<a href="img/slideshow/autistic_kids/5.jpg" title="Title 5">
-                            </a>
-                        </li>
-                    </ul>
-                </div><!-- / gallery -->
 
-=======
 				
                 <div id="video"><a href="img/video.jpg"></a></div>
->>>>>>> 280827fa0799319092a9a521db8b31fbd7cf6736
                 
                 <div id="gallery2">
                 	<ul>
@@ -197,15 +170,12 @@
 		$(document).ready(function(){
 			$("#gallery a").lightBox({fixedNavigation:true});
 			$("#gallery2 a").lightBox({fixedNavigation:true});
-<<<<<<< HEAD
 			
-=======
 			$("#video a").lightBox({fixedNavigation:true});
 		
->>>>>>> 280827fa0799319092a9a521db8b31fbd7cf6736
 			$("#li1 a").click(function(e){
 				e.preventDefault();
-				$("#gallery a").trigger("click");
+				$("#gallery a:first").trigger("click");
 				deleteBox();
 			});
 			
@@ -219,7 +189,7 @@
 			
 			$("#li3 a").click(function(e){
 				e.preventDefault();
-				$("#gallery2 a").trigger("click");
+				$("#gallery2 a:first").trigger("click");
 				deleteBox();
 			});
 		
