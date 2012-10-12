@@ -191,7 +191,6 @@
 				$(window).hashchange(function () {
 					if(window.location.hash && window.location.hash != "#") {
 						var hash = window.location.hash.replace("#/", "#").replace("#","");
-				
 					}
 				});
 				

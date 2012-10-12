@@ -15,18 +15,20 @@ header {
 footer {
 	display: block;	
 	position: relative;
-	height: 100px;
-	background: #75003c;
+	height: 400px;
+	background: #6C090E;
 	z-index: 10;
+	-webkit-box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
+	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
 }
 
 div#topcontainer {
 	display: block;	
 	position: relative;
 	margin: -1px auto;
-	height: 300px;
-	background: url(../img/inspiration.jpg) repeat-x 50% scroll;
-	opacity: 0.8;
+	height: 400px;
+	background: url(../img/inspiration.jpg) 50% -80px scroll;
+	opacity: 1;
 	overflow: visible;
 	z-index: 1;
 }
@@ -40,7 +42,7 @@ div#top {
 	left: 50%;
 	right: 0;
 	margin: 0 0 0 -54px;
-	background: rgba(214, 91, 91, .8);
+	background: rgba(210, 32, 40, .8);
 	opacity: 1;
 	font-size: 42pt;
 	font-weight: 100;
@@ -73,6 +75,7 @@ div#contentcontainer {
 	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
 	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
 	z-index: -1;
+	padding: 0 0 100px;
 }
 
 div#content {
@@ -112,7 +115,7 @@ div#contenttop div {
 	float: left;
 	width: 350px;
 	color: white;
-	margin-top: 8px;
+	margin-top: 58px;
 	margin-left: 10px;
 	font-size: 30pt;
 	font-weight: 100;
@@ -123,7 +126,9 @@ div#contenttop img {
 }
 
 #main2 {
+    float: right;
 	
+    display: block;
 }
 
 div#contentmain {

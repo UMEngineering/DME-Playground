@@ -29,19 +29,17 @@
 	<div id="overview" class="step" data-x="-440" data-y="-700" data-scale="3">
     </div>
 
-    <div id="chesney" class="step" data-x="-100" data-y="-1300" data-scale="1.5" data-connection="four81">
+    <div id="chesney" class="step" data-x="-250" data-y="-1400" data-scale="1" data-connection="four81">
         <h2>David Chesney</h2>
         <div class="moreinfo">
         	<p><img src="../img/chesney_sm.jpg" alt="David Chesney" />Computer science instructor who refocused his classes to make games that could help those with disorders or diseases.</p>
-     		<ul>
-                <li><a href="#four81">Connected to ENGIN 481</a></li>
-                <li><a href="">Connected to ENGIN 100</a></li>
-            </ul>
+            <a class="linelink" id="chesneyfour81" href="#four81">Connected to ENGIN 481</a>
+            <a class="linelink" id="chesneyone00" href="#one00">Connected to ENGIN 100</a>
 		</div>
         <a class="moreinfo" href="index.html#/chesneyinfo">See more info</a>
     </div>
     
-    <div id="chesneyinfo" class="step moreinfo" data-x="-100" data-y="-1300" data-rotate-x="-90" data-scale="1.5">
+    <div id="chesneyinfo" class="step moreinfo" data-x="-100" data-y="-1300" data-rotate-x="-90" data-scale="1">
     	<p>Here's some more info about David Chesney. <a href="index.html#/chesney">Back</a></p>
     </div>
     
@@ -142,16 +140,18 @@ if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
 </script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="js/rafael.js"></script>
 <script src="js/impress.js"></script>
+<script src="js/hashchange.js"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>-->
 <script>
 var paper = Raphael(document.getElementById("impress"), 7000, 3000);
 
 // Coordinates of line 1 and line 2:
 // [x1, y1, x2, y2]
-var line1c = [1449, 465, 582, 864];
-var line2c = [1449, 465, 2370, 864];
+var line1c = [1449, 465, 582, 864];			// From Chesney to 481
+var line2c = [1449, 465, 2370, 864];		// From Chesney to 100
 var line100tSC = [2370, 940, 670, 1340];	// From ENGIN 100 to Summer Working group
 var line100tMC = [2370, 940, 1900, 1200];	// From ENGIN 100 to Mott Family Network
 var lineStBC = [670, 1400, 670, 1520];		// From Summer Working group to Brachial Plexus U-M
@@ -173,6 +173,9 @@ var lineTtP = drawLine(lineTtPC[0], lineTtPC[1], lineTtPC[2], lineTtPC[3]);
 var lineTtA = drawLine(lineTtAC[0], lineTtAC[1], lineTtAC[2], lineTtAC[3]);
 var lineEtA = drawLine(lineEtAC[0], lineEtAC[1], lineEtAC[2], lineEtAC[3]);
 
+
+line1c.push(line1); line2c.push(line2); line100tSC.push(line100tSC); line100tMC.push(line100tM); lineStBC.push(lineStB); lineStTC.push(lineStT); lineBtPC.push(lineBtP); lineTtPC.push(lineTtP); lineTtAC.push(lineTtA); lineEtAC.push(lineEtA);
+
 //Draw the line in given x and ys
 function drawLine(x1, y1, x2, y2){
     var line = paper.path("M"+x1+" "+y1+"L"+x2+" "+y2);
@@ -185,13 +188,6 @@ function clearPaper(){
 	paper.clear();
 }
 
-/*
-$(document).ready(function(){
-	$("svg").click(function(e){
-		console.log(e, this);
-		console.log("X, Y: ", e.offsetX + ", " + e.offsetY);	
-	});
-});*/
 
 // Animates the given line to the "moveTo" coordinates
 function animateLine(line, moveToX1, moveToY1, moveToX2, moveToY2){
@@ -199,7 +195,70 @@ function animateLine(line, moveToX1, moveToY1, moveToX2, moveToY2){
 	line.animate({path: _temp}, 1000);
 }
 
+var changedLines = new Array();
+
 impress().init();
+
+
+function hashim(hash) {
+	console.log("CL VAR: ", changedLines);
+	
+	for(k in changedLines)
+	{
+		console.log("ChangedLines Array", changedLines);
+	   	console.log("Changedlines "+k+": ", changedLines[k][4]);
+	   	animateLine(changedLines[k][4], changedLines[k][0], changedLines[k][1], changedLines[k][2], changedLines[k][3]);
+	}
+	
+	
+	
+	var nextStep = $(".active").attr("id");
+	if (nextStep == "chesney") {
+		changedLines[0] = line1c;
+		changedLines[1] = line2c;
+		animateLine(line1, line1c[0]-100, line1c[1], line1c[2], line1c[3]);
+		animateLine(line2, line2c[0]+400, line2c[1]+170, line2c[2], line2c[3]);
+	}
+	
+	if (nextStep == "summer") {
+		changedLines[0] = lineStBC;
+		changedLines[1] = lineStTC;
+		animateLine(lineStB, lineStBC[0], lineStBC[1]+70, lineStBC[2], lineStBC[3]);
+		animateLine(lineStT, lineStTC[0]+400, lineStTC[1]+70, lineStTC[2], lineStTC[3]);
+	}
+	
+	if (nextStep == "brachial") {
+		changedLines[0] = lineBtPC;
+		changedLines.splice(1,1);
+		animateLine(lineBtP, lineBtPC[0], lineBtPC[1]+100, lineBtPC[2], lineBtPC[3]);
+	}
+	
+}
+
+
+$(document).ready(function(){
+	var hash = window.location.hash.replace("#/", "#").replace("#","");
+	console.log(hash);
+
+	if (hash != "overview") hashim(hash);
+
+	$("svg").click(function(e){
+		console.log(e, this);
+		console.log("X, Y: ", e.offsetX + ", " + e.offsetY);	
+	});
+	
+	$("#impress").bind("impress:stepleave", function(){
+		if(window.location.hash && window.location.hash != "#") {
+			var hash = window.location.hash.replace("#/", "#").replace("#","");
+			hashim(hash);
+		}		
+	});
+	$(window).hashchange(function () {
+			var hash = window.location.hash.replace("#/", "#").replace("#","");
+			console.log(hash);
+	});
+});
+
 
 </script>
 </body>

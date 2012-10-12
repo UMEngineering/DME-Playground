@@ -421,6 +421,8 @@
         // `goto` API function that moves to step given with `el` parameter (by index, id or element),
         // with a transition `duration` optionally given as second parameter.
         var goto = function ( el, duration ) {
+			
+			/*
 			// ************************* Move the Line ****************************
 			// Raphael Transformation
 			if (el.id == "chesney") {
@@ -456,7 +458,7 @@
             	animateLine(lineEtA, lineEtAC[0], lineEtAC[1], lineEtAC[2], lineEtAC[3]);
 			}
 			// ************************ Move Line Ends ****************************
-			
+			*/
 			
             if ( !initialized || !(el = getStep(el)) ) {
                 // presentation not initialized or given element is not a step

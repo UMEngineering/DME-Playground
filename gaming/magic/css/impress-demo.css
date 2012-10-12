@@ -346,3 +346,19 @@ ul {
 	font-weight: 100;
 	pointer-events: all !important;
 }
+
+.linelink {
+    font-size: 0.65em;
+}
+
+.linelink:after {
+	content: " >";	
+}
+
+#chesneyfour81 {
+	
+}
+
+#chesneyone00 {
+	
+}
