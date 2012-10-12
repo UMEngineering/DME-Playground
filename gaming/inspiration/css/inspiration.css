@@ -155,10 +155,14 @@ div#withimg img {
 
 div#fantasy {
     text-indent: -9999px;
-	
     display: block;
     position: relative;
     background: url(../img/fantasy.png) no-repeat top left;
     width: 320px !important;
     height: 252px;
+}
+
+#main {
+    overflow: hidden;
+		
 }

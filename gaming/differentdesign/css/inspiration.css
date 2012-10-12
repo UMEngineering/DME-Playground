@@ -26,8 +26,8 @@ div#topcontainer {
 	display: block;	
 	position: relative;
 	margin: -1px auto;
-	height: 400px;
-	background: url(../img/banner.jpg) 50% 0px scroll;
+	height: 350px;
+	background: url(../img/banner.jpg) 50% -25px scroll;
 	opacity: 1;
 	overflow: visible;
 	z-index: 1;
@@ -167,4 +167,8 @@ div#fantasy {
     background: url(../img/bestsociety.png) no-repeat top left;
     width: 338px !important;
     height: 322px;
+}
+
+#main {
+	overflow: hidden;	
 }
