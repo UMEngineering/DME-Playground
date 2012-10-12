@@ -26,8 +26,8 @@ div#topcontainer {
 	display: block;	
 	position: relative;
 	margin: -1px auto;
-	height: 400px;
-	background: url(../img/inspiration.jpg) 50% -80px scroll;
+	height: 350px;
+	background: url(../img/inspiration.jpg) 50% -95px scroll;
 	opacity: 1;
 	overflow: visible;
 	z-index: 1;
