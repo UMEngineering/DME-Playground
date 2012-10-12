@@ -84,8 +84,33 @@
                         </li>
                     </ul>
                 </div><!-- / gallery -->
-
+				
+                <div id="video"><a href="img/video.jpg" /></div>
                 
+                <div id="gallery2">
+                	<ul>
+                    	<li>
+                        	<a href="img/slideshow/brachial_plexus_kids/1.jpg" title="Title 1">
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="img/slideshow/brachial_plexus_kids/2.jpg" title="Title 2">
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="img/slideshow/brachial_plexus_kids/3.jpg" title="Title 3">
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="img/slideshow/brachial_plexus_kids/4.jpg" title="Title 4">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="img/slideshow/brachial_plexus_kids/5.jpg" title="Title 5">
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- / gallery -->
                 
             </div>
         </div>
@@ -100,11 +125,23 @@
     <script>
 		$(document).ready(function(){
 			$("#gallery a").lightBox({fixedNavigation:true});
+			$("#gallery2 a").lightBox({fixedNavigation:true});
+			$("#video a").lightBox({fixedNavigation:true});
 		
 			$("#li1 a").click(function(e){
 				e.preventDefault();
-				$("#gallery a").trigger("click");	
-				
+				$("#gallery a").trigger("click");
+			});
+			
+			$("#li2 a").click(function(e){
+				e.preventDefault();
+				$("#video a").trigger("click");
+				$("#lightbox-container-image").html("<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/ItgJ9PsvGQQ\" frameborder=\"0\" allowfullscreen></iframe>");
+			});
+			
+			$("#li3 a").click(function(e){
+				e.preventDefault();
+				$("#gallery2 a").trigger("click");
 			});
 		
 		});
