@@ -84,6 +84,31 @@
                         </li>
                     </ul>
                 </div><!-- / gallery -->
+                
+                <div id="gallery2">
+                	<ul>
+                    	<li>
+                        	<a href="img/slideshow/autistic_kids/1.jpg" title="Title 1">
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="img/slideshow/autistic_kids/2.jpg" title="Title 2">
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="img/slideshow/autistic_kids/3.jpg" title="Title 3">
+                            </a>
+                        </li>
+                    	<li>
+                        	<a href="img/slideshow/autistic_kids/4.jpg" title="Title 4">
+                            </a>
+                        </li>
+                        <li>
+                        	<a href="img/slideshow/autistic_kids/5.jpg" title="Title 5">
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- / gallery -->
 
                 
                 
@@ -100,7 +125,8 @@
     <script>
 		$(document).ready(function(){
 			$("#gallery a").lightBox({fixedNavigation:true});
-		
+			$("#gallery2 a").lightBox({fixedNavigation:true});
+			
 			$("#li1 a").click(function(e){
 				e.preventDefault();
 				$("#gallery a").trigger("click");	
