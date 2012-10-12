@@ -2,7 +2,7 @@ header {
 	display: block;	
 	position: relative;
 	height: 61px;
-	background: #363A38;
+	background: #111111;
 	z-index: 10;
 	-webkit-box-shadow: 0 0 21px rgba(0, 0, 0, .8);
 }
