@@ -1,63 +1,14 @@
-/* CSS Document */
-body {
-	background: white;
-	font-family: "proxima-nova";
-}
-
-header {
-	display: block;
-	position: relative;
-	height: 61px;
-	background: #111;
-	z-index: 10;
-	-webkit-box-shadow: 0 0 21px rgba(0, 0, 0, .8);
-}
-
-footer {
-	display: block;	
-	position: relative;
-	height: 400px;
-	background: #6C090E;
-	z-index: 10;
-	-webkit-box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
-	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
-}
-
 div#topcontainer {
-	display: block;	
-	position: relative;
-	margin: -1px auto;
-	height: 400px;
 	background: url(../img/banner.jpg) 50% 0px scroll;
-	opacity: 1;
-	overflow: visible;
-	z-index: 1;
-}
-
-div#top {
-	display: block;	
-	position: absolute;
-	width: 1600px;
-	height: 96px;
-	top: 50px;
-	left: 50%;
-	right: 0;
-	margin: 0 0 0 46px;
-	background: rgba(255,87,10,.8);
-	opacity: 1;
-	font-size: 42pt;
-	font-weight: 100;
-	color: white;
-	padding-left: 50px;
 }
 
 div#top h1 {
     text-indent: -9999px;
-	
-    background: url(../img/beyond.png) no-repeat scroll top left;
     width: 470px;
-    height: 94px;
-    margin: 7px 0 0 0;
+    height: 100px;
+    margin: 8px 0 0 0;
+    background: url(../img/beyond.png) no-repeat scroll top left;
+
 }
 
 div#top h1 img {
@@ -66,26 +17,6 @@ div#top h1 img {
 	position: absolute;
 	top: 10px;
 	left: 50%;
-}
-
-div#contentcontainer {
-	display: block;	
-	min-height: 1000px;
-	width: 100%;
-	background: #53B1DC;
-	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
-	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
-	z-index: -1;
-	padding: 0 0 100px;
-}
-
-div#content {
-	display: block;
-	position: relative;
-	width: 960px;
-	margin: 0px auto;
-	overflow: visible;
-	padding: 4em 0;
 }
 
 div.transparent {
@@ -100,18 +31,6 @@ div.transparent {
 	display: none;
 }
 
-a.title {
-	display: block;	
-	margin: 0 0 3px;
-	color: #0E98C4;
-	text-decoration: none;
-	font-weight: 100;
-	font-size: 20px;
-}
-
-div#contenttop {
-}
-
 div#contenttop div {
 	float: left;
 	width: 350px;
@@ -122,13 +41,19 @@ div#contenttop div {
 	font-weight: 100;
 }
 
-#content img {
-	box-shadow: 0px 0px 21px rgba(0, 0, 0, .8);	
-}
 
 div#contenttop img {
 	float: left;
 }
+
+div#contentmain p {
+	margin: 0 0 1em .6em;
+	width: 420px;
+	line-height: 1.5em;
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
 
 #main2, #main3 {
     float: right;
@@ -136,23 +61,6 @@ div#contenttop img {
     display: block;
     margin: 30px 0 60px;
     clear: both;
-}
-
-div#contentmain {
-	clear: both;
-	color: white;
-	font-size: 12pt;
-	font-weight: 100;
-	margin: 1em;
-	padding-top: 2em;
-}
-
-div#contentmain p {
-	margin-bottom: 1em;
-	width: 430px;
-	line-height: 1.5em;
-	font-size: 1.2em;
-	font-weight: 100;
 }
 
 div#withimg img {
@@ -175,7 +83,7 @@ ul#nav {
     display: block;
     width: 345px;
     right: 110px;
-    top: 111px;
+    top: 71px;
     overflow: visible;
 }
 

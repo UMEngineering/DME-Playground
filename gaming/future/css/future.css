@@ -1,19 +1,18 @@
 div#topcontainer {
-	background: url(../img/inspiration.jpg) 50% -95px scroll;
+	background: url(../img/future.jpg) 50% -60px scroll;
 }
 
 div#top h1 {
     text-indent: -9999px;
-    width: 470px;
+    background: url(../img/futuretitle.png) no-repeat scroll top left;
+    width: 570px;
     height: 100px;
     margin: 11px 0 0 0;
-    background: url(../img/theinspiration.png) no-repeat scroll top left;
 }
-
 
 div#top h1 img {
 	height: 70px;
-	margin: 0 0 0 -321px;
+	margin: 0 0 0 -201px;
 	position: absolute;
 	top: 10px;
 	left: 50%;
@@ -26,32 +25,23 @@ div.transparent {
     height: 119px;
     background: rgba(0, 0, 0, .4);
     color: #ccc;
+	
 	/* display none initially */
 	display: none;
 }
 
-div#contenttop div {
-	float: left;
-	width: 350px;
-	color: white;
-	margin-top: 58px;
-	margin-left: 10px;
-	font-size: 30pt;
-	font-weight: 100;
+#main1 {
+    float: left;
+	
 }
 
-div#contenttop img {
-	float: left;
-}
-
-div#contentmain {
-	padding-top: 1em;	
-}
 
 #main2 {
     float: right;
+	
     display: block;
 }
+
 
 div#withimg img {
 	float: right;
@@ -60,9 +50,11 @@ div#withimg img {
 
 div#fantasy {
     text-indent: -9999px;
+	
     display: block;
     position: relative;
-    background: url(../img/fantasy.png) no-repeat top left;
-    width: 320px !important;
+    background: url(../img/eyemovement.png) no-repeat top left;
+    width: 359px !important;
     height: 252px;
+    margin: 50px 0 0 610px;
 }

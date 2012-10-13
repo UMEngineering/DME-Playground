@@ -1,19 +1,19 @@
 div#topcontainer {
-	background: url(../img/inspiration.jpg) 50% -95px scroll;
+	background: url(../img/banner.jpg) 50% -25px scroll;
 }
 
 div#top h1 {
     text-indent: -9999px;
     width: 470px;
     height: 100px;
-    margin: 11px 0 0 0;
-    background: url(../img/theinspiration.png) no-repeat scroll top left;
+    margin: 5px 0 0 0;
+    background: url(../img/differenttitle.png) no-repeat scroll top left;
 }
 
 
 div#top h1 img {
 	height: 70px;
-	margin: 0 0 0 -321px;
+	margin: 0 0 0 -468px;
 	position: absolute;
 	top: 10px;
 	left: 50%;
@@ -26,6 +26,7 @@ div.transparent {
     height: 119px;
     background: rgba(0, 0, 0, .4);
     color: #ccc;
+	
 	/* display none initially */
 	display: none;
 }
@@ -34,23 +35,24 @@ div#contenttop div {
 	float: left;
 	width: 350px;
 	color: white;
-	margin-top: 58px;
-	margin-left: 10px;
+	margin-top: 39px;
+	margin-left: 30px;
 	font-size: 30pt;
 	font-weight: 100;
 }
-
 div#contenttop img {
 	float: left;
 }
 
 div#contentmain {
-	padding-top: 1em;	
+	padding-top: 3em;	
 }
 
-#main2 {
+#main2, #main3 {
     float: right;
     display: block;
+    margin: 30px 0 60px;
+    clear: both;
 }
 
 div#withimg img {
@@ -60,9 +62,10 @@ div#withimg img {
 
 div#fantasy {
     text-indent: -9999px;
+	
     display: block;
     position: relative;
-    background: url(../img/fantasy.png) no-repeat top left;
-    width: 320px !important;
-    height: 252px;
+    background: url(../img/bestsociety.png) no-repeat top left;
+    width: 338px !important;
+    height: 322px;
 }
