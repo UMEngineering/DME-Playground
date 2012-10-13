@@ -1,6 +1,9 @@
 body {
 	background: white;
 	font-family: "proxima-nova";
+	position: relative;
+	display: block;
+	border: 3px solid blue;
 }
 
 header {
