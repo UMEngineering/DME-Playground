@@ -76,7 +76,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
  */
 
 /* Always force a scrollbar in non-IE */
-html { overflow-y: scroll; }
+html { overflow-y: scroll; overflow-x: scroll;}
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
