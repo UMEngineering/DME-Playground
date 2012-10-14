@@ -30,3 +30,32 @@ header {
     position: absolute;
     margin-top:20px;
 }
+
+p {
+    width: 770px;
+	
+}
+
+#chesney h2, #techtransfer h2, #umhealth h2, #patients h2, #kauffman h2 {
+    background: url(../img/blue.png) no-repeat 0px 15px scroll;
+    padding: 0px 0px 0px 43px;
+    margin: 0 0 0 -48px;
+}
+
+#four81 h2, #mottfamily h2, #decamillis h2, #microsoft h2 {
+    background: url(../img/yellow.png) no-repeat 0px 15px scroll;
+    padding: 0px 0px 0px 43px;
+    margin: 0 0 0 -48px;
+}
+
+#one00 h2, #kirsch h2, #sirkin h2, #summer h2, #autistickid h2 {
+    background: url(../img/green.png) no-repeat 0px 15px scroll;
+    padding: 0px 0px 0px 43px;
+    margin: 0 0 0 -48px;
+}
+
+#sirkin h2, #brachial h2, #emu h2 {
+    background: url(../img/red.png) no-repeat 0px 15px scroll;
+    padding: 0px 0px 0px 43px;
+    margin: 0 0 0 -48px;
+}
