@@ -32,11 +32,8 @@ div.transparent {
 
 div#contenttop div {
 	float: left;
-	width: 350px;
+	width: 600px;
 	color: white;
-	margin-top: 58px;
-	margin-left: 10px;
-	font-size: 30pt;
 	font-weight: 100;
 }
 
@@ -48,7 +45,7 @@ div#contentmain {
 	padding-top: 1em;	
 }
 
-#main2 {
+#main2div {
     float: right;
     display: block;
 }
@@ -65,4 +62,6 @@ div#fantasy {
     background: url(../img/fantasy.png) no-repeat top left;
     width: 320px !important;
     height: 252px;
+	margin-top: 50px;
+	margin-left: 10px;
 }

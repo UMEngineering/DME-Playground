@@ -33,11 +33,8 @@ div.transparent {
 
 div#contenttop div {
 	float: left;
-	width: 350px;
+	width: 600px;
 	color: white;
-	margin-top: 39px;
-	margin-left: 30px;
-	font-size: 30pt;
 	font-weight: 100;
 }
 div#contenttop img {
@@ -48,7 +45,7 @@ div#contentmain {
 	padding-top: 3em;	
 }
 
-#main2, #main3 {
+#main2div, #main3div {
     float: right;
     display: block;
     margin: 30px 0 60px;
@@ -62,10 +59,11 @@ div#withimg img {
 
 div#fantasy {
     text-indent: -9999px;
-	
     display: block;
     position: relative;
     background: url(../img/bestsociety.png) no-repeat top left;
     width: 338px !important;
     height: 322px;
+	margin-top: 50px;
+	margin-left: 10px;
 }

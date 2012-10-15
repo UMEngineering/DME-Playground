@@ -395,3 +395,8 @@ header a.last {
     font-weight: 100;
 }
 
+.caption {
+	text-align: center;
+	font-size: 12pt;
+	color: white;
+}

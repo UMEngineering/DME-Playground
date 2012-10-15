@@ -30,18 +30,15 @@ div.transparent {
 	display: none;
 }
 
-#main1 {
+#main1div {
     float: left;
-	
 }
 
 
-#main2 {
+#main2div {
     float: right;
-	
     display: block;
 }
-
 
 div#withimg img {
 	float: right;
@@ -50,7 +47,6 @@ div#withimg img {
 
 div#fantasy {
     text-indent: -9999px;
-	
     display: block;
     position: relative;
     background: url(../img/eyemovement.png) no-repeat top left;
