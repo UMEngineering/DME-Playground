@@ -51,14 +51,13 @@ div#top {
 
 div#contentcontainer {
 	position: relative;
-	pointer-events: none;
 	display: block;	
 	min-height: 1000px;
 	width: 100%;
 	background: #53B1DC;
 	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
 	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
-	z-index: -1;
+	z-index: 0;
 	padding: 0 0 100px;
 }
 
@@ -82,7 +81,7 @@ a.title {
 }
 
 div#contenttop {
-    padding-top: 6em;
+    padding: 1em 0 0;
 }
 
 
@@ -107,7 +106,6 @@ div#contentmain p {
 
 #main {
     overflow: hidden;
-		
 }
 
 
@@ -274,3 +272,126 @@ ul#navsmall li:hover div.transp .subtitle {
 	text-decoration: none;
 	border-bottom: 1px solid white;
 }
+
+.sticky {
+	background: none repeat scroll 0 0 #222222;
+    box-shadow: 0 2px 4px #333333;
+    display: block;
+    height: 48px;
+	position: relative;
+    top: 0px;
+	left: 0;	
+    width: 100%;
+    
+	overflow: auto;
+	padding: 8px 0 0;
+	z-index: 1000;
+}
+
+.ie7 .sticky {
+}
+
+a#circle {
+	display: block;
+	position: absolute;
+	right: -60px;
+	height: 48px;
+	width: 48px;
+	top: -10px;	
+}
+
+#holder {
+    height: 260px;
+	
+}
+
+.sticky ul {
+	position: relative;
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px 0 0;
+	position: relative;
+	overflow: visible;
+	height: 45px;
+	background: url(../img/dmebadge.jpg) scroll no-repeat top left;
+}
+
+.sticky ul li {
+	list-style: none;
+	display: inline;
+	float: right;
+	margin: 4px 0 0;
+}
+
+.sticky ul li.simplify a {
+	text-align: right;
+	right: 0;
+	position: absolute;
+	width: 270px;	
+}
+
+li.dmegallery {
+	right: 57px;
+	display: block;
+	position: absolute;
+	top: 9px;
+}
+
+.sticky ul li a, .sticky ul li a:visited {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 100;
+}
+
+.sticky ul li.home {
+	position: absolute;
+	left: 0; top: 8px;
+	margin: 0;
+}
+
+.sticky ul li.counts {
+	float: none;	
+}
+
+#topbar {
+	width: 1007px;
+	padding: 10px 0 4px 0;
+	/*border-bottom: thin solid #FFC421;*/
+	position: relative;
+	margin: 0 auto;
+}
+
+header a:hover, header a:active, header a:visited {
+	background: transparent;	
+}
+
+header a.next {
+	position: absolute;
+	right: 10px; bottom: 10px;
+	
+}
+
+header a.last {
+	position: absolute;
+	left: 10px; bottom: 10px;	
+}
+
+.bc {
+    display: block;
+    position: relative;
+    overflow: auto;
+    margin: 0;
+    padding: 70px 0 0 10px;
+    font-size: 1.4em;
+    z-index: 100;
+}
+
+.bc a, .bc a:visited {
+    color: white;
+	
+    text-decoration: none;
+    font-weight: 100;
+}
+
