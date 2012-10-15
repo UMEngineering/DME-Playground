@@ -178,7 +178,6 @@ ul {
 .impress-on-overview .step {
     opacity: 1;
     cursor: pointer;
-    overflow: hidden;
 }
 
 .hint {
@@ -316,7 +315,6 @@ ul {
 .moreinfo {
 	opacity: 0 !important;	
 	-webkit-transition: all 2s ease;
-	margin: 10px 0 0 10px;
 }
 
 .active.moreinfo, .active .moreinfo {
@@ -333,7 +331,7 @@ ul {
 	margin: -2000px 0 0 -2000px;
 	overflow: visible !important;
 	z-index: -100;
-	pointer-events: none !important;
+	pointer-events: all !important;
 }
 
 .navigation {
