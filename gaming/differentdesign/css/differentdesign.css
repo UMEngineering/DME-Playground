@@ -70,3 +70,8 @@ div#fantasy {
 	margin-top: 50px;
 	margin-left: 10px;
 }
+
+#contentmain ul {
+    width: 420px;
+    line-height: 1.5;
+}
