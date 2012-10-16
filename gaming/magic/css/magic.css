@@ -178,6 +178,7 @@ header a.last {
     right: 0;
     display: block;
     top: -3px;
+    display: none;
 }
 
 #sirkin p {
@@ -195,7 +196,7 @@ header a.last {
 	top: 85px;	
 	width: 470px;
 	left: 30px;
-	font-size: 2.2em;
+	font-size: 2em;
 	font-weight: 100;
 	color: white;
 	text-shadow: 0 0 10px rgba(2, 2, 2, .6);
@@ -210,6 +211,15 @@ header a.last {
 	opacity: .9;
 	z-index: 100;	
 	pointer-events: all;
+}
+
+.impress-on-overview .go-overview {
+	display: none;	
+}
+
+.impress-on-overview .go-home {
+	display: block;	
+	top: -20px;
 }
 
 .instructions {
@@ -269,4 +279,11 @@ header a.last {
     float: right;
     margin: 0px 20px 20px;
     font-family: Georgia, serif;
+}
+
+.bc {
+    margin: -11px 0 5px 0;
+	
+    font-size: 1.8em;
+    line-height: 1.2;
 }
