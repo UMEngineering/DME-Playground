@@ -1,5 +1,8 @@
 div#topcontainer {
 	background: url(../img/future.jpg) 50% -60px scroll;
+	
+	/* IE 6, 7, 8 */
+	background: url(../img/future.jpg) \9;
 }
 
 div#top h1 {
@@ -55,4 +58,5 @@ div#fantasy {
     height: 252px;
     margin: 50px 0 0 610px;
 	margin-left: 10px \9; /* IE 6, 7, 8 */
+	float: right \9;
 }

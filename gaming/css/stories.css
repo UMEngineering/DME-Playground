@@ -30,6 +30,9 @@ div#topcontainer {
 	opacity: 1;
 	overflow: visible;
 	z-index: 1;
+	
+	/* IE 6, 7, 8 */
+	overflow-x: hidden \9;
 }
 
 div#top {
@@ -51,6 +54,7 @@ div#top {
 	/* IE 6, 7, 8 */
 	background: #D22028 \9;
 	filter: Alpha(Opacity=80) \9;
+	overflow: hidden \9;
 }
 
 div#contentcontainer {
@@ -185,6 +189,7 @@ div.transp {
     z-index: 100;
     width: 100%;
     cursor: pointer;
+	
 }
 
 ul#navsmall li:hover div.transp {
@@ -198,6 +203,10 @@ ul#navsmall li:hover div.transp {
     background: rgba(10, 10, 10, .8);
     color: #ccc;
     display: block;
+	
+	/* IE 6, 7, 8 */
+	background: #0A0A0A \9;
+	filter: Alpha(Opacity=80) \9;
 }
 
 ul#navsmall li:hover div.transp .title {

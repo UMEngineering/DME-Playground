@@ -1,5 +1,8 @@
 div#topcontainer {
 	background: url(../img/banner.jpg) 50% -25px scroll;
+	
+	/* IE 6, 7, 8 */
+	background: url(../img/banner.jpg) \9;
 }
 
 div#top h1 {

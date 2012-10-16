@@ -1,5 +1,8 @@
 div#topcontainer {
 	background: url(../img/banner.jpg) 50% 0px scroll;
+	
+	/* IE 6, 7, 8 */
+	background: url(../img/banner.jpg) \9;
 }
 
 div#top h1 {
@@ -23,6 +26,7 @@ div.transparent {
     position: absolute;
     padding: 6px;
     bottom: 0;
+	left: 0px \9;
     height: 119px;
     background: rgba(0, 0, 0, .4);
     color: #ccc;
@@ -132,6 +136,11 @@ div.transparent {
     width: 100%;
 }
 
+/* IE 6, 7, 8 */
+.subtitle {
+	visibility: hidden \9;
+}
+
 ul#nav li:hover div.transparent {
     position: absolute;
     -webkit-transition: all .4s ease;
@@ -144,6 +153,15 @@ ul#nav li:hover div.transparent {
     color: #ccc;
     display: block;
     overflow: hidden;
+	
+	/* IE 6, 7, 8 */
+	background: #0A0A0A \9;
+	filter: Alpha(Opacity=80) \9;
+}
+
+/* IE 6, 7, 8 */
+ul#nav li:hover .subtitle {
+	visibility: visible \9;
 }
 
 ul#nav li:hover div.transparent .title {
