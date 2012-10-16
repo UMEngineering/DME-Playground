@@ -38,6 +38,7 @@ div.transparent {
 #main2div {
     float: right;
     display: block;
+	
 }
 
 div#withimg img {
@@ -53,4 +54,5 @@ div#fantasy {
     width: 359px !important;
     height: 252px;
     margin: 50px 0 0 610px;
+	margin-left: 10px \9; /* IE 6, 7, 8 */
 }
