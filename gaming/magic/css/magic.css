@@ -35,6 +35,12 @@ p {
     width: 770px;
 	
     font-size: .9em !important;
+    pointer-events: all !important;
+}
+
+h2 {
+    width: auto !important;
+	
 }
 
 #chesney h2, #techtransfer h2, #umhealth h2, #patients h2, #kauffman h2 {
@@ -171,7 +177,7 @@ header a.last {
 	
     right: 0;
     display: block;
-    top: 0;
+    top: -3px;
 }
 
 #sirkin p {
@@ -196,17 +202,16 @@ header a.last {
 	padding: 16px 0px 6px 13px;
 	border-radius: 5px;
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-	z-index: 100;
-	pointer-events: all !important;
+	z-index: -1;
 }
 
 .impress-on-overview #magictitle {
-	opacity: .8;	
+	opacity: .8;
+	z-index: 100;	
 }
 
 .instructions {
     font-size: .4em;
-	
     margin: 10px 4px;
     line-height: 1.5em;
 }
@@ -237,4 +242,18 @@ header a.last {
 
 .active .showinit span {
 	opacity: 1 !important;
+}
+
+.navigation a {
+    background: #222;
+	
+    padding: 5px 7px;
+    border-radius: 7px;
+    z-index: 100;
+    pointer-events:  all !important;
+}
+
+#umhealth p {
+    width: 529px;
+	
 }

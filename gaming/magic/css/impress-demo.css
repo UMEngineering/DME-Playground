@@ -100,6 +100,7 @@ a:focus {
 
 h2 {
 	font-size: 2em;	
+	pointer-events: all !important;
 }
 
 ul {
@@ -128,6 +129,8 @@ ul {
 	display:  block;
 	float: left;	
 	margin: 0 12px 0 0;
+	pointer-events: all !important;
+	z-index: 10;
 }
 
 .center {
@@ -144,6 +147,7 @@ ul {
     -ms-transition:     opacity 1s;
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
+    pointer-events: none;
 }
 
 .impress-enabled .step.active { opacity: 1 }
