@@ -134,8 +134,38 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  	
+	$(document).ready(function(){
+		
+		$("#li2").click(function(e){
+			e.preventDefault();
+			window.location = "inspiration/";
+		});
+		$("#li3").click(function(e){
+			e.preventDefault();
+			window.location = "differentdesign/";
+		});
+		$("#li4").click(function(e){
+			e.preventDefault();
+			window.location = "beyondtheclassroom/";
+		});
+		$("#li5").click(function(e){
+			e.preventDefault();
+			window.location = "magic/";
+		});
+		$("#li6").click(function(e){
+			e.preventDefault();
+			window.location = "future/";
+		});
+			
+		
+		
+	});
+  
+  </script>
+ 
   <!-- end scripts-->
-
 
   <!--[if lt IE 7 ]>
     <script src="js/libs/dd_belatedpng.js"></script>

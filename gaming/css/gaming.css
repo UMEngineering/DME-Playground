@@ -121,6 +121,7 @@ div.transparent {
     display: block;
     z-index: 100;
     overflow: visible;
+    cursor: pointer;
 }
 
 ul#nav li:hover div.transparent {

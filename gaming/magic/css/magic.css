@@ -210,3 +210,31 @@ header a.last {
     margin: 10px 4px;
     line-height: 1.5em;
 }
+
+
+.moreinfo {
+	-webkit-transition: all 2s ease;
+}
+
+.moreinfo  {
+	-webkit-transition: all 2s ease;
+	opacity: 0 !important;	
+	margin: 10px 0 0 10px;
+}
+
+.active.moreinfo, .active .moreinfo {
+	opacity: 1 !important;	
+}
+
+.showinit.moreinfo {
+	opacity: 1 !important;	
+}
+
+.showinit span {
+	opacity: 0 !important;	
+	-webkit-transition: all 2s ease;
+}
+
+.active .showinit span {
+	opacity: 1 !important;
+}

@@ -313,15 +313,6 @@ ul {
     for you.
 */
 
-.moreinfo {
-	opacity: 0 !important;	
-	-webkit-transition: all 2s ease;
-	margin: 10px 0 0 10px;
-}
-
-.active.moreinfo, .active .moreinfo {
-	opacity: 1 !important;	
-}
 
 #impress svg {
 	/*border: 10px solid white !important;*/

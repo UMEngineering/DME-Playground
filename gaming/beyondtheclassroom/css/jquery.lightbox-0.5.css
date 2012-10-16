@@ -27,6 +27,7 @@
 	z-index: 100;
 	text-align: center;
 	line-height: 0;
+	overflow: auto;
 }
 #jquery-lightbox a img { border: none; }
 #lightbox-container-image-box {
@@ -39,12 +40,8 @@
 #lightbox-container-image { padding: 10px; }
 #lightbox-loading {
 	position: absolute;
-	top: 40%;
-	left: 0%;
-	height: 25%;
-	width: 100%;
-	text-align: center;
 	line-height: 0;
+	width: 10px !important;
 }
 #lightbox-nav {
 	position: absolute;
@@ -84,7 +81,7 @@
 	color: #666; 
 }
 #lightbox-container-image-data #lightbox-image-details { 
-	width: 70%; 
+	width: 300px; 
 	float: left; 
 	text-align: left; 
 }	

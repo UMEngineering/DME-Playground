@@ -197,3 +197,55 @@ ul#nav li:hover div.transparent .subtitle {
 #main {
 	overflow: hidden;	
 }
+
+#lightbox-container-image img {
+    width: 560px;
+    float: left;
+}
+
+#lightbox-container-image-data-box {
+    width: 410px !important;
+	
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    margin: 0 0 0 70px !important;
+}
+
+#lightbox-container-image-data #lightbox-image-details {
+    width: 300px !important;
+	
+}
+
+#lightbox-image-details-caption {
+    font-weight: 100 !important;
+	
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+#lightbox-nav a {
+	background-position: 0% 400px !important;	
+}
+
+#lightbox-loading {
+    left: 50%;
+	
+    margin: 0 0 0 -238px;
+    top: 180px;
+}
+
+#lightbox-loading img {
+	width: 40px;	
+}
+
+#lightbox-container-image-box {
+    height: 439px !important;
+	
+    min-width: 940px !important;
+}
+
+#jquery-lightbox {
+    min-width: 1170px !important;
+	
+}

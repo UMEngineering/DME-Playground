@@ -43,13 +43,13 @@
         <div class="instructions">
             Explore our map of "the common good" to see the ways in which various entities came together to make this happen.<br />
             Navigate by clicking, or by using the arrow keys.<br />
-            <a class="hide">Hide instructions</a>
+            <a href="#" class="hide">Hide instructions</a>
         </div>
     </div>
 
     <div id="impress">
     
-        <div id="overview" class="step" data-x="-440" data-y="-900" data-scale="2.6">
+        <div id="overview" class="step" data-x="-440" data-y="-830" data-scale="2.6">
         </div>
         
         <div id="chesney" class="step" data-x="-250" data-y="-1400" data-scale="1" data-connection="four81">
@@ -85,8 +85,8 @@
         
         <div id="kauffman" class="step" data-x="-800" data-y="-950" data-z="-100" data-rotate-y="25">
             <h2>Jackie Kauffman</h2>
-            <div class="moreinfo">
-                <p><img src="img/kauffman.jpg" alt="Jackie Kauffman" />U-M assistant professor of rehabilitation psychology and neuropsychology who came to talk to Chesney's classes about autism and continues to work on moving the project forward</p>
+            <div class="moreinfo showinit">
+                <p><img src="img/kauffman.jpg" alt="Jackie Kauffman" /><span>U-M assistant professor of rehabilitation psychology and neuropsychology who came to talk to Chesney's classes about autism and continues to work on moving the project forward</span></p>
             </div>
         </div>
         
@@ -121,8 +121,8 @@
         
         <div id="mottfamily" class="step" data-x="100" data-y="-700">
             <h2>Mott Family Network</h2>
-            <div class="moreinfo">
-                <p><img src="img/mott.jpg" alt="Mott Family Network" />A nonprofit volunteer organization that helps patients and families stay connected to life outside the hospital during their hospital stay. Students Connor Davidson and Patrick Godwin interned there over the summer and helped to install games from both classes into patient rooms and rehab clinics in the health system. Joe Kryza is also affiliated with this group.</p>
+            <div class="moreinfo showinit">
+                <p><img src="img/mott.jpg" alt="Mott Family Network" /><span>A nonprofit volunteer organization that helps patients and families stay connected to life outside the hospital during their hospital stay. Students Connor Davidson and Patrick Godwin interned there over the summer and helped to install games from both classes into patient rooms and rehab clinics in the health system. Joe Kryza is also affiliated with this group.</span></p>
             </div>
         </div>
         
@@ -168,8 +168,8 @@
         
         <div id="patients" class="step" data-x="-1200" data-y="-100" data-z="-100" data-rotate-y="28">
             <h2>Patients with brachial plexus palsy</h2>
-            <div class="moreinfo">
-                <p><img src="img/brachial.jpg" alt="Kids with Brachial Plexus Palsy" />About 1 in every 1,500 children in the U.S. has this disorder, which is caused by trauma to the nerves between the neck and an arm during childbirth.</p>
+            <div class="moreinfo showinit">
+                <p><img src="img/brachial.jpg" alt="Kids with Brachial Plexus Palsy" /><span>About 1 in every 1,500 children in the U.S. has this disorder, which is caused by trauma to the nerves between the neck and an arm during childbirth.</span></p>
             </div>
         </div>
     
@@ -325,6 +325,12 @@ $(document).ready(function(){
 	$(window).hashchange(function () {
 			var hash = window.location.hash.replace("#/", "#").replace("#","");
 			console.log(hash);
+	});
+	
+	$(".hide").click(function(e){
+		e.preventDefault();
+		$("#magictitle").css("opacity","0");
+		$("#magictitle").css("z-index","-1");	
 	});
 });
 
