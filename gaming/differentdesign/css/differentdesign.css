@@ -37,7 +37,7 @@ div.transparent {
 div#contenttop div {
 	float: left;
 	width: 600px;
-	color: white;
+	color: black;
 	font-weight: 100;
 }
 div#contenttop img {
@@ -67,7 +67,8 @@ div#fantasy {
     background: url(../img/bestsociety.png) no-repeat top left;
     width: 338px !important;
     height: 322px;
-	margin-top: 50px;
+	
+    margin-top: 42px;
 	margin-left: 10px;
 }
 
