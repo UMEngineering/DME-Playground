@@ -1,5 +1,5 @@
 div#topcontainer {
-	background: url(../img/inspiration.jpg) 50% -95px scroll;
+	background: url(../img/inspiration.jpg) #DFE0DA 50% -95px scroll no-repeat;
 	
 	/* IE 6, 7, 8 */
 	background: url(../img/inspiration.jpg) -40px scroll \9;

@@ -193,7 +193,7 @@ header a.last {
 	font-family: Helvetica, sans-serif;
 	position: absolute;
 	top: 85px;	
-	width: 400px;
+	width: 470px;
 	left: 30px;
 	font-size: 2.2em;
 	font-weight: 100;
@@ -202,17 +202,19 @@ header a.last {
 	padding: 16px 0px 6px 13px;
 	border-radius: 5px;
 	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+	pointer-events: none;
 	z-index: -1;
 }
 
 .impress-on-overview #magictitle {
-	opacity: .8;
+	opacity: .9;
 	z-index: 100;	
+	pointer-events: all;
 }
 
 .instructions {
     font-size: .4em;
-    margin: 10px 4px;
+    margin: 16px 4px;
     line-height: 1.5em;
 }
 
@@ -256,4 +258,15 @@ header a.last {
 #umhealth p {
     width: 529px;
 	
+}
+
+#quote {
+    width: 267px;
+	
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.3;
+    float: right;
+    margin: 0px 20px 20px;
+    font-family: Georgia, serif;
 }

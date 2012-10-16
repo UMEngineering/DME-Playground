@@ -409,7 +409,20 @@ header a.last {
 }
 
 .caption {
-	text-align: center;
-	font-size: 12pt;
+	text-align: left;
+	font-size: 10pt;
 	color: white;
+	margin: 0px 0 0 20px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	width: 530px;
+}
+
+.caption-right {
+	text-align: left;
+	font-size: 10pt;
+	color: white;
+	width: 350px;
+	margin: 0px 0 0 10px;
+	letter-spacing: 1px;
 }
