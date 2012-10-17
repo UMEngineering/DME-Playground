@@ -60,7 +60,7 @@ div#top {
 div#contentcontainer {
 	position: relative;
 	display: block;	
-	min-height: 1000px;
+	min-height: 1912px;
 	width: 100%;
 	background: #53B1DC;
 	-webkit-box-shadow: inset 0px 0px 100px -10px rgba(0, 0, 0, 1); 
@@ -105,7 +105,7 @@ div#contentmain {
 
 
 div#contentmain p {
-	margin: 0 0 1em .6em;
+	margin: 0 0 1em 0;
 	width: 500px;
 	line-height: 1.5em;
 	font-size: 1.2em;

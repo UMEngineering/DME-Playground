@@ -12,8 +12,9 @@ div#topcontainer {
 	display: block;	
 	position: relative;
 	margin: -1px auto;
+	padding: 39px 0 0 0;
 	height: 539px;
-	background: url(../img/top.jpg) repeat-x 50% scroll;
+	background: url(../img/game.jpg) repeat-x 50% 0px scroll;
 	overflow: visible;
 	z-index: 1;
 }
@@ -23,18 +24,18 @@ div#top {
 	position: relative;
 	height: 100%;
 	margin: 0 auto;
-	width: 960px;
+	width: 80%;
 }
 
-div#top h1 {
+div#container h1 {
 	display: block;	
 	position: absolute;
 	width: 847px;
 	height: 76px;
-	top: 25px;
+	top: 30px;
 	left: 50%;
 	margin: 0 0 0 -424px;
-	background: url(../img/title.png) no-repeat top left;
+	background: url(../img/title.png) 50% top no-repeat scroll;
 	text-indent: -9999px;
 }
 
@@ -57,6 +58,7 @@ div#contentcontainer {
 	box-shadow: inset 0px 0px 170px -10px rgba(0, 0, 0, .6);
 	z-index: 0;
 	margin: -51px 0 0 0;
+	overflow: visible;
 	padding: 100px 0 0;
 }
 
@@ -69,20 +71,20 @@ div#content {
 }
 
 ul#nav {
-    position: absolute;
+    position: relative;
     display: block;
-    width: 875px;
+    max-width: 960px;
+    width: 100%;
     height: 543px;
-    left: 50%;
-    margin: 154px 0 0 -442px;
     overflow: visible;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+    margin: 92px auto 0;
 }
 
 ul#nav li {
 	position: relative;
 	list-style: none;
-	width: 295px;
+	width: 33%;
 	height: 181px;
 	float: left;
 	background: white;
@@ -97,6 +99,9 @@ ul#nav li {
 }
 
 ul#nav li.wide {
+	 margin: 0 0 0 0;
+	
+	 width: 50%;
 }
 
 /* image hovering animation */
@@ -114,6 +119,7 @@ ul#nav li:hover img{
 
 div.transparent {
     position: absolute;
+    width: 100%;
     -webkit-transition: all .4s ease;
     padding: 0px;
     bottom: 0;
@@ -178,13 +184,12 @@ ul#nav li:hover div.transparent .subtitle {
 .title {
 	-webkit-transition: all 1s ease;
 	display: block;	
-	margin: 70px 0 0;
+	margin: 70px 0;
 	padding: 0;
-	text-indent: 0px;
 	background: #333;
 	width: 100%;
-	box-shadow: 0px 3px 2px rgba(0, 0, 0, .3);
 	overflow: hidden;
+	-webkit-box-shadow: 0 4px 10px rgba(0,0,0,.5);
 }
 
 .title a {
@@ -196,52 +201,67 @@ ul#nav li:hover div.transparent .subtitle {
 	text-decoration: none;
 }
 
-
-@media (min-width: 1001px) {
-	#wrapper {
-		width: 980px;
-		margin: auto;
-	}
-}
-
-@media (max-width: 1000px) and (min-width: 700px) {
-	#wrapper {
-		width: 680px;
-		margin: auto;
-	}
-}
-
-@media (max-width: 699px) and (min-width: 400px) {
-	#wrapper {
-		width: 380px;
-		margin: auto;
-	}
+#main li img {
+	
+    margin: 0 auto;
+    left: 50% !important;
+    position: absolute;
+    margin: 0 0 0 -250px;
 }
 
 li#li1 {
-	width: 580px !important;
-	height: 362px !important;
+	width: 100% !important;
+	height: 300px !important;
 	float: right !important;	
 	margin: 0 0px 0 0 !important;
+}
+
+#li1 img {
+    margin: -128px 0 0 -480px !important;
+	
+    cursor: pointer;
 }
 
 li#li2 {
 	
 }
 
+#li2 img {
+	
+}
+
 li#li3 {
+    width: 34% !important;
+	
+}
+
+#li3 img {
 	
 }
 
 li#li4 {
 }
 
+#li4 img {
+    margin-top: -45px !important;
+	
+}
+
 li#li5 {
-    width: 285px !important;
+	
+}
+
+#li5 img {
+    margin-top: -70px !important;
 	
 }
 
 li#li6 {
+	
+}
+
+#li6 img {
+    margin-top: -120px !important;
 	
 }
 
@@ -375,4 +395,85 @@ header p#countdown {
 	z-index: 1001;
 	left: 50%;
 	margin: 10px 0 0 -109px;
+}
+
+#playbutton {
+    width: 70px;
+	
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -35px 0 0 -35px;
+    background: url(../img/play.png) no-repeat;
+    opacity: .8;
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+	#wrapper {
+		width: 380px;
+		margin: auto;
+	}
+	
+	.transparent .title a {
+    	font-size: 12px !important;
+	}
+	.transparent .subtitle {
+		font-size: 11px;	
+	}
+	div#container h1 {
+		background-image: url(../img/title_500.png);	
+	
+		background-position: left top;
+		width: 585px;
+	}
+}
+
+@media only screen and (max-width : 500px) {
+	.transparent .title a {
+    	font-size: 12px !important;
+	}
+	.transparent .subtitle {
+		font-size: 11px;	
+	}
+	div#container h1 {
+		background-image: url(../img/title_500.png);	
+	}
+	ul#nav li {
+		width: 100% !important;	
+	}
+	#contentcontainer {
+		min-height: 1000px !important;	
+	}
+}
+
+.openvideo {
+	display: block;	
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#cee_box {
+    background: #000;
+	
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#cee_title {
+	display: none !important;	
+}
+
+#cee_closeBtn {
+    text-indent: -9999px;
+		
+    display: block;
+    width: 35px;
+    height: 39px;
+    background: url(../img/ex.png) no-repeat -5px -5px;
+    margin-bottom: 3px;
 }

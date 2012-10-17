@@ -63,12 +63,18 @@
     
     <div id="main" role="main">
 		<div id="topcontainer">
-        	<div id="top">
-               <h1>Gaming for the Greater Good</h1>
+           <h1>Gaming for the Greater Good</h1>
+            <div id="top">
               
                <ul id="nav">
                     <li id="li1">
-                        <iframe width="590" height="332" src="http://www.youtube.com/embed/59_K_tJXTkg" frameborder="0" allowfullscreen></iframe>
+                        <img src="img/vidpreview.jpg" alt="place holder"/>
+                   		<a class="openvideo" href="http://www.youtube.com/watch?v=3eOR6b6TAZw&feature=g-vrec"></a>
+                        <div id="playbutton"></div>
+                        <div class="transparent" id="a1">
+                            <span class="title"><a class="" href="inspiration">Video</a></span>
+                            <span class="subtitle">Text for the video.</span>
+                        </div>
                     </li>
                     <li id="li2">
                         <img src="img/inspiration.jpg" alt="place holder"/>
@@ -119,7 +125,6 @@
         </div>
     </div>
     <footer>
-
     </footer>
   </div> <!--! end of #container -->
 
@@ -134,10 +139,16 @@
   <!-- scripts concatenated and minified via ant build script-->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/ceebox/js/jquery.swfobject.js"></script>
+  <script src="js/ceebox/js/jquery.ceebox.js"></script>
   <script>
   	
 	$(document).ready(function(){
 		
+		$("#li1, #li1 img").click(function(e){
+			e.preventDefault();
+			$(this).addClass("noclick");
+		});
 		$("#li2").click(function(e){
 			e.preventDefault();
 			window.location = "inspiration/";
@@ -158,6 +169,8 @@
 			e.preventDefault();
 			window.location = "future/";
 		});
+		
+		$(".openvideo").ceebox();
 			
 		
 		

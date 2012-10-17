@@ -50,9 +50,17 @@
             Explore our map of "the common good" to see the ways in which various entities came together to make this happen.<br />
             Navigate by clicking, or by using the arrow keys.<br />
             <a href="#" class="hide">Hide instructions</a>
+            <a href="../">Return home</a>
         </div>
     </div>
-
+    <div id="top">
+    	<h1>The Magic of the Common Good</h1>
+        <img src="img/title.png" />
+    </div>
+    
+    <div id="quoteimp">
+    
+    </div>
     <div id="impress">
     
         <div id="overview" class="step" data-x="-560" data-y="-730" data-scale="2.6">
@@ -127,7 +135,7 @@
         
         <div id="mottfamily" class="step" data-x="100" data-y="-700">
             <h2>Mott Family Network</h2>
-            <div class="moreinfo showinit">
+            <div class="moreinfo">
                 <p><img src="img/mott.jpg" alt="Mott Family Network" /><span>A nonprofit volunteer organization that helps patients and families stay connected to life outside the hospital during their hospital stay. Students Connor Davidson and Patrick Godwin interned there over the summer and helped to install games from both classes into patient rooms and rehab clinics in the health system. Joe Kryza is also affiliated with this group.</span></p>
             </div>
         </div>
@@ -146,7 +154,7 @@
             </div>
         </div>
         
-        <div id="emu" class="step" data-x="300" data-y="-300">
+        <div id="emu" class="step" data-x="0" data-y="-170">
             <h2>Eastern Michigan University Austism Collaborative Center</h2>
             <div class="moreinfo">
                 <p><img src="img/emu.jpg" alt="Eastern Michigan University Austism Collaborative Center" />With assistance from Betty Lou Rowe, director of the summer program at the center, U-M students let autistic children play the games.</p>
@@ -177,6 +185,8 @@
                 <p><img src="img/brachial.jpg" alt="Kids with Brachial Plexus Palsy" /><span>About 1 in every 1,500 children in the U.S. has this disorder, which is caused by trauma to the nerves between the neck and an arm during childbirth.</span></p>
             </div>
         </div>
+        
+        
     
     </div>
 
@@ -187,7 +197,7 @@
 </div>
 <div class="navigation">
 	<a href="#overview" class="go-overview" >OVERVIEW</a>
-    <a href="../index.html" class="go-home">GO HOME</a>
+    <a href="../../index.html" class="go-home">GO HOME</a>
 </div>
 
 <script>
@@ -214,7 +224,7 @@ var lineStTC = [1270, 1270, 1320, 1540];	// From Summer Working group to Office 
 var lineBtPC = [670, 1600, 670, 1730];		// From Brachial Plexus U-M to Patients with Brachial
 var lineTtPC = [1420, 1600, 670, 1730];		// From Office of Tech Transfer to Patients with Brachial
 var lineTtAC = [1420, 1600, 1350, 1750];	// From Office of Tech Transfer to Autistic Children
-var lineEtAC = [2040, 1640, 1350, 1750];	// From EMU Austism to Autistic Children
+//var lineEtAC = [2040, 1640, 1350, 1750];	// From EMU Austism to Autistic Children
 
 // Draw these lines
 var line1 = drawLine(line1c[0], line1c[1], line1c[2], line1c[3]);
@@ -226,10 +236,10 @@ var lineStT = drawLine(lineStTC[0], lineStTC[1], lineStTC[2], lineStTC[3]);
 var lineBtP = drawLine(lineBtPC[0], lineBtPC[1], lineBtPC[2], lineBtPC[3]);
 var lineTtP = drawLine(lineTtPC[0], lineTtPC[1], lineTtPC[2], lineTtPC[3]);
 var lineTtA = drawLine(lineTtAC[0], lineTtAC[1], lineTtAC[2], lineTtAC[3]);
-var lineEtA = drawLine(lineEtAC[0], lineEtAC[1], lineEtAC[2], lineEtAC[3]);
+//var lineEtA = drawLine(lineEtAC[0], lineEtAC[1], lineEtAC[2], lineEtAC[3]);
 
 
-line1c.push(line1); line2c.push(line2); line100tSC.push(line100tS); line100tMC.push(line100tM); lineStBC.push(lineStB); lineStTC.push(lineStT); lineBtPC.push(lineBtP); lineTtPC.push(lineTtP); lineTtAC.push(lineTtA); lineEtAC.push(lineEtA);
+line1c.push(line1); line2c.push(line2); line100tSC.push(line100tS); line100tMC.push(line100tM); lineStBC.push(lineStB); lineStTC.push(lineStT); lineBtPC.push(lineBtP); lineTtPC.push(lineTtP); lineTtAC.push(lineTtA); //lineEtAC.push(lineEtA);
 
 //Draw the line in given x and ys
 function drawLine(x1, y1, x2, y2){
@@ -329,13 +339,28 @@ $(document).ready(function(){
 	$(window).hashchange(function () {
 			var hash = window.location.hash.replace("#/", "#").replace("#","");
 			console.log(hash);
+			if (hash != "overview") {
+				$("#magictitle, #top, #quoteimp").css("opacity","0");
+				$("#magictitle, #top, #quoteimp").css("z-index","-1");
+			}
+			else {
+				$("#magictitle, #top, #quoteimp").css("opacity","1");
+				$("#magictitle, #top, #quoteimp").css("z-index","1");
+			}
 	});
 	
 	$(".hide").click(function(e){
 		e.preventDefault();
-		$("#magictitle").css("opacity","0");
-		$("#magictitle").css("z-index","-1");	
+		$("#magictitle, #top, #quoteimp").css("opacity","0");
+		$("#magictitle, #top, #quoteimp").css("z-index","-1");
+		
 	});
+	
+	$(".go-overview").click(function(e){
+		$("#magictitle, #top, #quoteimp").css("opacity","1");
+		$("#magictitle, #top, #quoteimp").css("z-index","1");
+	});
+	
 });
 
 
