@@ -80,14 +80,10 @@ ul#nav {
     height: 543px;
     overflow: visible;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .8);
-<<<<<<< HEAD
-    margin: 112px auto 0;
-    background-color: #333;
-=======
 	-moz-box-shadow: 0 0 30px rgba(0, 0, 0, .8);
 	box-shadow: 0 0 30px rgba(0, 0, 0, .8);
-    margin: 92px auto 0;
->>>>>>> Add -moz- and -o-
+    margin: 112px auto 0;
+    background-color: #333;
 }
 
 ul#nav li {
