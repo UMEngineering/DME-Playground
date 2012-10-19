@@ -68,3 +68,33 @@ div#fantasy {
 	margin-top: 50px;
 	margin-left: 10px;
 }
+
+@media only screen and (max-width : 500px) {
+	.transparent .title a {
+    	font-size: 12px !important;
+	}
+	.transparent .subtitle {
+		font-size: 11px;	
+	}
+	div#top h1 {
+		background-image: url(../img/theinspiration_small.png);	
+	}
+	ul#nav li {
+		width: 100% !important;	
+	}
+	#contentcontainer {
+		min-height: 1000px !important;	
+	}
+	#main1 img {
+		width: 450px !important;
+	}
+	#contenttop div{
+		width: 480px !important;
+	}
+	#contentmain, #main2div, p {
+		max-width: 480px !important;
+		padding: 10px !important;
+		font-size: 11pt !important;
+	}
+	
+}
