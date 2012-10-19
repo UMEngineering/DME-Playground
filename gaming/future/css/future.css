@@ -55,7 +55,7 @@ div#fantasy {
     background: url(../img/eyemovement.png) no-repeat top left;
     width: 359px !important;
     height: 252px;
-    margin: 100px 0 0 585px;
+    margin: 80px 0 0 585px;
 	margin-left: 10px \9; /* IE 6, 7, 8 */
 	float: right \9;
 }
