@@ -63,7 +63,7 @@ input, select { vertical-align: middle; }
  * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
  */
 
-body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+body { font:13px/1.231 sans-serif; *font-size:small; height: 100%;} /* Hack retained to preserve specificity */
 select, input, textarea, button { font:99% sans-serif; }
 
 /* Normalize monospace sizing:
@@ -76,7 +76,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
  */
 
 /* Always force a scrollbar in non-IE */
-html { overflow-y: scroll; }
+html { overflow: auto; height: 100%; position: relative; display: block;}
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
