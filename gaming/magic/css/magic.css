@@ -347,17 +347,18 @@ header a.last {
 	float: right;
 	position: absolute;
 	top: 0;
-	right: 50px;
+	left: 50px;
 	height: 100%;
 	text-indent: -9999px;
-	background: url(../img/magic.png) no-repeat scroll 10px 17px;
+	background: url(../img/magic.png) no-repeat scroll 0px 7px;
+	width: 240px;
 }
 
 #top img {
     position: absolute;
 	
     top: 13px;
-    right: 250px;
+    left: 277px;
     width: 50px;
 }
 

@@ -1,6 +1,7 @@
 body {
 	background: white;
 	font-family: "proxima-nova";
+	overflow-x: hidden;
 }
 
 header {
@@ -109,7 +110,7 @@ div#contentmain {
 
 
 div#contentmain p {
-	margin: 0 0 1em 0;
+	margin: 0 0 1em 1em;
 	width: 500px;
 	line-height: 1.5em;
 	font-size: 1.2em;
@@ -448,4 +449,14 @@ header a.last {
 	width: 350px;
 	margin: 0px 0 0 10px;
 	letter-spacing: 1px;
+}
+
+@media only screen and (max-width : 1000px) {
+	body {
+		font-size: .9em;
+	}
+	
+	#contentmain p {
+			
+	}
 }
