@@ -195,7 +195,8 @@ header a.last {
 	font-family: Helvetica, sans-serif;
 	position: absolute;
 	top: 181px;	
-	width: 692px;
+	max-width: 692px;
+	width: 100%;
 	left: 0px;
 	font-size: 2em;
 	font-weight: 100;
@@ -318,12 +319,12 @@ header a.last {
 #top {
 	display: block;
 	position: absolute;
-	width: 1600px;
+	width: 100%;
+	max-width: 692px;
 	height: 91px;
 	top: 90px;
-	right: 50%;
 	left: 0;
-	margin: 0 0 0 -945px;
+	margin: 0 0 0 -37px;
 	z-index: 100;
 	background: rgba(210, 32, 40, .8);
 	opacity: 1;
