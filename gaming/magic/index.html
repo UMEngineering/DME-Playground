@@ -196,9 +196,6 @@
                 <p><img src="img/brachial.jpg" alt="Kids with Brachial Plexus Palsy" /><span>About one in every 1,500 children in the U.S. has this disorder, which is caused by trauma to the nerves between the neck and an arm during childbirth. Michigan Engineering students developed video games that could potentially improve their therapy.</span></p>
             </div>
         </div>
-        
-        
-    
     </div>
 
 
@@ -216,7 +213,7 @@ if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
 }
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="js/rafael.js"></script>
 <script src="js/impress.js"></script>
 <script src="js/hashchange.js"></script>
@@ -235,17 +232,17 @@ var lineStTC = [1270, 1270, 1320, 1540];	// From Summer Working group to Office 
 var lineBtPC = [670, 1600, 670, 1730];		// From Brachial Plexus U-M to Patients with Brachial
 var lineTtPC = [1420, 1600, 670, 1730];		// From Office of Tech Transfer to Patients with Brachial
 var lineTtAC = [1420, 1600, 1350, 1750];	// From Office of Tech Transfer to Autistic Children
-var nicole1C = []; //Joe Kryza to Microsoft
-var nicole2C = []; //Joe Kryza to Microsoft
-var nicole3C = []; //Joe Kryza to Microsoft
-var nicole4C = []; //Joe Kryza to Microsoft
-var nicole5C = []; //Joe Kryza to Microsoft
-var nicole6C = []; //Joe Kryza to Microsoft
-var nicole7C = []; //Joe Kryza to Microsoft
-var nicole8C = []; //Joe Kryza to Microsoft
-var nicole9C = []; //Joe Kryza to Microsoft
-var nicole10C = []; //Joe Kryza to Microsoft
-var nicole11C = []; //Joe Kryza to Microsoft
+var nicole1C = [1070, 430, 1539, 515]; 		//Joe Kryza to David Chesney
+var nicole2C = [1070, 430, 1900, 1120]; 	//Joe Kryza to Mott Family
+var nicole3C = [840, 430, 580, 1200]; 		//Joe Kryza to Microsoft
+var nicole4C = [730, 830, 1170, 780]; 		//ENGIN 481 to Marc Sirkin
+var nicole5C = [730, 830, 790, 920]; 		//ENGIN 481 to Jackie Kauffman
+var nicole6C = [730, 830, 1270, 1200]; 		//ENGIN 481 to Sumer Working Group
+var nicole7C = [580, 1200, 1320, 810]; 		//Microsoft to Marc Sirkin
+var nicole8C = [1150, 1100, 2235, 840]; 	//Jackie Kauffman to ENGIN 100
+var nicole9C = [1900, 1220, 1850, 1650]; 	//Mott Family to EMU
+var nicole10C = [1270, 1270, 1850, 1650]; 	//Summer Working Group to EMU
+var nicole11C = [1350, 1750, 1540, 1690]; 	//Autistic children to EMU
 
 
 
@@ -259,20 +256,21 @@ var lineStT = drawLine(lineStTC[0], lineStTC[1], lineStTC[2], lineStTC[3]);
 var lineBtP = drawLine(lineBtPC[0], lineBtPC[1], lineBtPC[2], lineBtPC[3]);
 var lineTtP = drawLine(lineTtPC[0], lineTtPC[1], lineTtPC[2], lineTtPC[3]);
 var lineTtA = drawLine(lineTtAC[0], lineTtAC[1], lineTtAC[2], lineTtAC[3]);
-//var nicole1 = drawLine(nicole1C[0], nicole1C[1], nicole1C[2], nicole1C[3]);
-//var nicole2 = drawLine(nicole2C[0], nicole2C[1], nicole2C[2], nicole2C[3]);
-//var nicole3 = drawLine(nicole3C[0], nicole3C[1], nicole3C[2], nicole3C[3]);
-//var nicole4 = drawLine(nicole4C[0], nicole4C[1], nicole4C[2], nicole4C[3]);
-//var nicole5 = drawLine(nicole5C[0], nicole5C[1], nicole5C[2], nicole5C[3]);
-//var nicole6 = drawLine(nicole6C[0], nicole6C[1], nicole6C[2], nicole6C[3]);
-//var nicole7 = drawLine(nicole7C[0], nicole7C[1], nicole7C[2], nicole7C[3]);
-//var nicole8 = drawLine(nicole8C[0], nicole8C[1], nicole8C[2], nicole8C[3]);
-//var nicole9 = drawLine(nicole9C[0], nicole9C[1], nicole9C[2], nicole9C[3]);
-//var nicole10 = drawLine(nicole10C[0], nicole10C[1], nicole10C[2], nicole10C[3]);
-//var nicole11 = drawLine(nicole10C[0], nicole11C[1], nicole11C[2], nicole11C[3]);
+var nicole1 = drawLine(nicole1C[0], nicole1C[1], nicole1C[2], nicole1C[3]);
+var nicole2 = drawLine(nicole2C[0], nicole2C[1], nicole2C[2], nicole2C[3]);
+var nicole3 = drawLine(nicole3C[0], nicole3C[1], nicole3C[2], nicole3C[3]);
+var nicole4 = drawLine(nicole4C[0], nicole4C[1], nicole4C[2], nicole4C[3]);
+var nicole5 = drawLine(nicole5C[0], nicole5C[1], nicole5C[2], nicole5C[3]);
+var nicole6 = drawLine(nicole6C[0], nicole6C[1], nicole6C[2], nicole6C[3]);
+var nicole7 = drawLine(nicole7C[0], nicole7C[1], nicole7C[2], nicole7C[3]);
+var nicole8 = drawLine(nicole8C[0], nicole8C[1], nicole8C[2], nicole8C[3]);
+var nicole9 = drawLine(nicole9C[0], nicole9C[1], nicole9C[2], nicole9C[3]);
+var nicole10 = drawLine(nicole10C[0], nicole10C[1], nicole10C[2], nicole10C[3]);
+var nicole11 = drawLine(nicole11C[0], nicole11C[1], nicole11C[2], nicole11C[3]);
 
 
-line1c.push(line1); line2c.push(line2); line100tSC.push(line100tS); line100tMC.push(line100tM); lineStBC.push(lineStB); lineStTC.push(lineStT); lineBtPC.push(lineBtP); lineTtPC.push(lineTtP); lineTtAC.push(lineTtA); //lineEtAC.push(lineEtA);
+line1c.push(line1); line2c.push(line2); line100tSC.push(line100tS); line100tMC.push(line100tM); lineStBC.push(lineStB); lineStTC.push(lineStT); lineBtPC.push(lineBtP); lineTtPC.push(lineTtP); lineTtAC.push(lineTtA); 
+nicole1C.push(nicole1); nicole2C.push(nicole2); nicole3C.push(nicole3); nicole4C.push(nicole4); nicole5C.push(nicole5); nicole6C.push(nicole6); nicole7C.push(nicole7); nicole8C.push(nicole8);  nicole9C.push(nicole9);  nicole10C.push(nicole10);  nicole11C.push(nicole11);
 
 //Draw the line in given x and ys
 function drawLine(x1, y1, x2, y2){
@@ -308,12 +306,27 @@ function hashim(hash) {
 	   	animateLine(changedLines[k][4], changedLines[k][0], changedLines[k][1], changedLines[k][2], changedLines[k][3]);
 	}
 	
-	
 	var nextStep = $(".active").attr("id");
 	if (nextStep == "chesney") {
 		changedLines[0] = line2c;
 		changedLines.splice(1,1);
 		animateLine(line2, line2c[0]+350, line2c[1]+150, line2c[2], line2c[3]);
+	}
+	
+	if (nextStep == "umhealth") {
+		changedLines[0] = nicole1C;
+		changedLines[1] = nicole2C;
+		animateLine(nicole1, nicole1C[0]+350, nicole1C[1]+50, nicole1C[2], nicole1C[3]);
+		animateLine(nicole2, nicole2C[0]+350, nicole2C[1]+50, nicole2C[2], nicole2C[3]);
+	}
+	
+	if (nextStep == "four81") {
+		changedLines[0] = nicole4C;
+		changedLines[1] = nicole5C;
+		changedLines[2] = nicole6C;
+		animateLine(nicole4, nicole4C[0], nicole4C[1], nicole4C[2], nicole4C[3]);
+		animateLine(nicole5, nicole5C[0]+100, nicole5C[1]+80, nicole5C[2], nicole5C[3]);
+		animateLine(nicole6, nicole6C[0]+100, nicole6C[1]+80, nicole6C[2], nicole6C[3]);
 	}
 	
 	if (nextStep == "one00") {
@@ -326,8 +339,25 @@ function hashim(hash) {
 	if (nextStep == "summer") {
 		changedLines[0] = lineStBC;
 		changedLines[1] = lineStTC;
+		changedLines[2] = nicole10C;
 		animateLine(lineStB, lineStBC[0], lineStBC[1]+240, lineStBC[2], lineStBC[3]);
 		animateLine(lineStT, lineStTC[0], lineStTC[1]+240, lineStTC[2], lineStTC[3]);
+		animateLine(nicole10, nicole10C[0], nicole10C[1]+240, nicole10C[2], nicole10C[3]);
+	}
+	
+	if (nextStep == "mottfamily") {
+		changedLines[0] = nicole9C;
+		animateLine(nicole9, nicole9C[0], nicole9C[1]+240, nicole9C[2], nicole9C[3]);
+	}
+	
+	if (nextStep == "sirkin") {
+		changedLines[0] = nicole7C;
+		animateLine(nicole7, nicole7C[0], nicole7C[1], nicole7C[2]-100, nicole7C[3]+70);
+	}
+	
+	if (nextStep == "kauffman") {
+		changedLines[0] =nicole8C;
+		animateLine(nicole8, nicole8C[0]+300, nicole8C[1]-100, nicole8C[2], nicole8C[3]);
 	}
 	
 	if (nextStep == "brachial") {
