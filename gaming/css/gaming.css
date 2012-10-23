@@ -12,11 +12,10 @@ header {
 #main {
     position: relative;
     display: block;
-    height: 100%;
+    height: 1000px;
 }
 
 #container {
-    height: 100%;
 	
 }
 
