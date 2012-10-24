@@ -1,0 +1,23 @@
+/* CSS Document */
+#main {
+	background: #254874;
+}
+
+#main p {
+	margin-top: 0;
+}
+
+ul#nav {
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+
+ul#nav li {
+	list-style: none;
+	color: white;
+	float: left;
+	background: #657E9D;
+	margin: 0 1em 0 0;
+	font-size: 10pt;
+	padding: 4px;
+}
