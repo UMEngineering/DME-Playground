@@ -1,20 +1,20 @@
 /* CSS Document */
 #main {
 	background: #254874;
-	padding: 10px 0 0 0;
+	padding: 1px 0 0 0;
 }
 
 #main p {
 	margin-top: 0;
 }
 
-ul {
+ul#nav, ul.inside-nav {
 	overflow: hidden;
 	margin: 0;
 	padding-left: 10px;
 }
 
-ul li {
+ul#nav li, ul.inside-nav li {
 	list-style: none;
 	color: white;
 	float: left;
@@ -28,11 +28,56 @@ ul#nav li.current {
 	background: #254874;
 }
 
-div.scroll-right {
-	background: #657E9D;
+ul.inside-nav {
+	margin: 10px 0 0 0;
 }
 
-div.scroll-right img.scroll-img {
+div.scroll-right {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	background: #657E9D;
+	
+	/*white-space: nowrap;
+	background: #657E9D;
+	height: 150px;*/
+}
+
+ul.imgs-nav {
+	display: inline-block;
+	height: 140px;
+	white-space: nowrap;
+	margin: 0;
+	padding: 0 10px 0 0;
+}
+
+ul.imgs-nav li {
+	height: 100%;
+	display: inline-block;
+}
+
+img.scroll-img {
 	border: 2px solid white;
 	margin: 10px 0 10px 10px;
+}
+
+ul.imgs-nav li {
+	margin: 0;
+	padding: 0;
+}
+
+div.transparent {
+    position: relative;
+	padding: 0px;
+	width: 93px;
+    bottom: 50px;
+    height: 40px;
+    background: rgba(255, 255, 255, .7);
+    color: black;
+	margin-left: 12px;
+	font-size: 10pt;
+}
+
+div {
+	white-space: normal;
 }
