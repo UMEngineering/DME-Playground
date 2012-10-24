@@ -1,23 +1,38 @@
 /* CSS Document */
 #main {
 	background: #254874;
+	padding: 10px 0 0 0;
 }
 
 #main p {
 	margin-top: 0;
 }
 
-ul#nav {
+ul {
 	overflow: hidden;
-	margin-bottom: 0px;
+	margin: 0;
+	padding-left: 10px;
 }
 
-ul#nav li {
+ul li {
 	list-style: none;
 	color: white;
 	float: left;
 	background: #657E9D;
 	margin: 0 1em 0 0;
-	font-size: 10pt;
-	padding: 4px;
+	font-size: 9pt;
+	padding: 5px 10px 5px 10px;
+}
+
+ul#nav li.current {
+	background: #254874;
+}
+
+div.scroll-right {
+	background: #657E9D;
+}
+
+div.scroll-right img.scroll-img {
+	border: 2px solid white;
+	margin: 10px 0 10px 10px;
 }
