@@ -2,6 +2,7 @@
 #main {
 	background: #254874;
 	padding: 1px 0 0 0;
+	margin: 0;
 }
 
 #main p {
@@ -30,6 +31,10 @@ ul#nav li.current {
 
 ul.inside-nav {
 	margin: 10px 0 0 0;
+}
+
+div.scroll-background {
+	background: #657E9D;
 }
 
 div.scroll-right {
@@ -80,4 +85,19 @@ div.transparent {
 
 div {
 	white-space: normal;
+}
+
+/* To layout horizontal LIs */
+.scrollview-right {
+    white-space: nowrap;
+}
+
+.scrollview-right li {
+    display: inline-block;
+}
+
+/* For IE 6/7 - needs inline block hack (and the background color mentioned above) */
+.scrollview-right li {
+    *display: inline;
+    *zoom: 1;
 }

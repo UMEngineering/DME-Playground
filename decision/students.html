@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/student.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="yui3-skin-sam">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -38,38 +38,40 @@
                 	<li>ACADEMICS</li>
                 </ul>
                 <!--<div class="scroll-right">-->
-                <div class="scroll-right">
-                	<ul class="imgs-nav">
-                		<li>
-                        	<img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                		<li>
-                        	<img class="scroll-img" src="img/scroll/scroll2.png" alt="undergrad research" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                        <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div>
-                        </li>
-                    </ul>
+                <div class="scroll-background">
+                    <div class="scrollview-right">
+                        <ul class="imgs-nav">
+                            <li>
+                                <img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li>
+                                <img class="scroll-img" src="img/scroll/scroll2.png" alt="undergrad research" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                            <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
             	<ul class="inside-nav">
@@ -151,7 +153,30 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+        YUI().use('scrollview', function(Y) {
+        
+            var scrollView = new Y.ScrollView({
+                id: 'scrollview',
+                srcNode: '.scrollview-right',
+                width: 400,
+                flick: {
+                    minDistance:10,
+                    minVelocity:0.3,
+                    axis: "x"
+                }
+            });
+        
+            scrollView.render();
+        	
+            // Prevent default image drag behavior
+            scrollView.get("contentBox").delegate("mousedown", function(e) {
+                e.preventDefault();
+            }, "img");
+            
+        });
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
