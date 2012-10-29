@@ -1,0 +1,278 @@
+.item {
+  margin: 0px;
+  float: left;
+}
+
+#main {
+    position: relative;
+    display: block;
+    width: 80%;
+	
+    margin: 23px auto;
+}
+
+#container {
+    height: 2000px;
+	
+    position: relative;
+    display: block;
+}
+
+.mason {
+    position: absolute;
+	
+    display: block;
+    margin: 10px;
+}
+
+div.transparent {
+    position: absolute;
+    font-size: 12px;
+    width: 100%;
+    -webkit-transition: all .4s ease;
+	-mos-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	
+    margin: 0px;
+    padding: 0px;
+    bottom: 0;
+    left: 0px;
+    height: 133px;
+    background: rgba(10, 10, 10, 0);
+    color: #ccc;
+	
+	/* display none initially */
+	
+    display: block;
+    z-index: 100;
+    overflow: visible;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.mason:hover div.transparent {
+    position: absolute;
+    -webkit-transition: all .4s ease;
+	-mos-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	
+    padding: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 124px;
+    background: rgba(10, 10, 10, .8);
+    color: #ccc;
+    display: block;
+	
+	/* IE 6, 7, 8 */
+	background: #0A0A0A \9;
+	filter: Alpha(Opacity=80) \9;
+}
+
+/* IE 6, 7, 8 */
+.mason:hover .subtitle {
+	visibility: visible \9;
+}
+
+.mason:hover div.transparent .title {
+	background: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mason:hover div.transparent .title a, .mason:hover div.transparent .title a:visited {
+	color: #0E98C4 !important;
+}
+div.transparent .subtitle {
+	opacity: 0;
+    -webkit-transition: all .4s ease;
+	-mos-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	
+	display:  block;
+	margin: 0 10px;
+	font-weight: 100;
+}
+
+.mason:hover div.transparent .subtitle {
+	opacity: 1;
+}
+
+
+.title {
+	-webkit-transition: all 1s ease;
+	-mos-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	
+	display: block;	
+	margin: 80px 0 0;
+	padding: 0;
+	background: #333;
+	width: 100%;
+	height: 32px;
+	overflow: hidden;
+	-webkit-box-shadow: 0 4px 10px rgba(0,0,0,.5);
+}
+
+.title a {
+	display: block;
+	color: #eee;
+	font-size: 16px;
+	font-weight: 100;
+	margin: 10px 0 3px 10px;
+	text-decoration: none;
+}
+
+.sticky {
+	background: none repeat scroll 0 0 #222222;
+    box-shadow: 0 2px 4px #333333;
+    display: block;
+    height: 51px;
+    
+	position: relative;
+    top: 0px;
+	left: 0;	
+    width: 100%;
+    
+	overflow: hidden;
+	padding: 8px 0 0;
+	z-index: 1000;
+}
+
+.ie7 .sticky {
+}
+
+a#circle {
+	display: block;
+	position: absolute;
+	right: -60px;
+	height: 48px;
+	width: 48px;
+	top: -10px;	
+}
+
+#holder {
+    height: 260px;
+	
+}
+
+.sticky ul {
+	position: relative;
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px 0 0;
+	position: relative;
+	overflow: visible;
+	height: 45px;
+	background: url(../img/dmebadge.jpg) scroll no-repeat top left;
+}
+
+.sticky ul li {
+	list-style: none;
+	display: inline;
+	float: right;
+	margin: 4px 0 0;
+}
+
+.sticky ul li.simplify a {
+	text-align: right;
+	right: 0;
+	position: absolute;
+	width: 270px;	
+}
+
+li.dmegallery {
+	right: 57px;
+	display: block;
+	position: absolute;
+	top: 9px;
+}
+
+.sticky ul li a, .sticky ul li a:visited {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 100;
+}
+
+.sticky ul li.home {
+	position: absolute;
+	left: 0; top: 8px;
+	margin: 0;
+}
+
+.sticky ul li.counts {
+	float: none;	
+}
+
+#topbar {
+	width: 1007px;
+	padding: 10px 0 4px 0;
+	/*border-bottom: thin solid #FFC421;*/
+	position: relative;
+	margin: 0 auto;
+}
+
+header a:hover, header a:active, header a:visited {
+	background: transparent;	
+}
+
+.sm {
+    width: 135px;
+	
+}
+
+.lg {
+    width: 285px;
+	
+}
+
+.sm .transparent {
+    height: 52px;	
+}
+
+.sm .transparent .title {
+    margin: 10px 0;
+	margin-bottom:1px;	
+	height:20px;
+}
+
+.sm .transparent .title a {
+	margin-top: 2px;
+	font-size: .96em;
+}
+
+.sm .transparent .subtitle {
+	font-size: .9em;
+}
+
+.mason.sm:hover div.transparent {
+	padding: 0px;
+	height: 60px;
+	background: rgba(10, 10, 10, .8);
+	color: #CCC;
+	display: block;
+	background: #0A0A0A 9;
+	filter: Alpha(Opacity=80) 9;
+}
+
+.masonry,
+.masonry .mason {
+  -webkit-transition: all 0.7s ease;
+     -moz-transition: all 0.7s ease;
+      -ms-transition: all 0.7s ease;
+       -o-transition: all 0.7s ease;
+          transition: all 0.7s ease;
+}
+
+#page-nav {
+	display:block;	
+	position: relative;
+}

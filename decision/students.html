@@ -49,25 +49,32 @@
                                 <img class="scroll-img" src="img/scroll/scroll2.png" alt="undergrad research" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll2.png" alt="tutor" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
-                            <li><img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
+                            <li>
+                            	<img class="scroll-img" src="img/scroll/scroll3.png" alt="honors" />
                                 <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
                         </ul>
@@ -159,6 +166,7 @@
         <script src="js/main.js"></script>
         <script src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
 		<script type="text/javascript" charset="utf-8">
+<<<<<<< HEAD
 			var screenWidth = $(window).width();
 			YUI().use('scrollview', function(Y) {
 				var scrollView = new Y.ScrollView({
@@ -238,6 +246,29 @@
 					resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
 				});
 			});
+=======
+        YUI().use('scrollview', function(Y) {
+        
+            var scrollView = new Y.ScrollView({
+                id: 'scrollview',
+                srcNode: '.scrollview-right',
+                width: "100%",
+                flick: {
+                    minDistance: 4,
+                    minVelocity:.3,
+                    axis: "x"
+                }
+            });
+        
+            scrollView.render();
+        	
+            // Prevent default image drag behavior
+            scrollView.get("contentBox").delegate("mousedown", function(e) {
+                e.preventDefault();
+            }, "img");
+            
+        });
+>>>>>>> 1:15
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
