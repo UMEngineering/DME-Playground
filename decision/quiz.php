@@ -23,29 +23,21 @@
         <![endif]-->
 
 		<div id="container">
-        	<div id="topcontainer">5 Quick Qs: Question 1
+        	<div id="topcontainer"><span id="top_title">5 Quick Qs: Question 1</span>
             <img id="right-logo" src="img/engin-logo1.png" alt="um-logo" />
             </div>
             
             <div id="main">
-            	<p>I imagine myself making a difference by:</p>
-                <form id="questions">
-                    <div><input type="checkbox" name="one" value="one" /><p>Developing new technology to make everyday items better, faster, smaller or stronger</p></div>
-                    <div><input type="checkbox" name="one" value="one" /><p>Creating sustainable solutions in health, energy or environmental issues</p></div>
-                    <div><input type="checkbox" name="one" value="one" /><p>Sharing my knowledge with others and having an impact on the community</p></div>
-                    <div><input type="checkbox" name="one" value="one" /><p>Making something new and risky like the next Google or SpaceX</p></div>
-                    <div><input type="checkbox" name="one" value="one" /><p>Traveling the world to help developing nations</p></div>
-                
-                </form>
+            	<div id="question_content"></div>
             </div>
             <a class='skip' href="#">Skip this</a>
-            <a class='next' href="#">Next</a>
+            <a class='next' href="#" onclick="next_question();">Next</a>
             <span class="only">Only 4 more to go!</span>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/load_question.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

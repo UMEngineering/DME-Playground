@@ -1,5 +1,8 @@
 /* CSS Document */
 form#questions div {
-	float: left;
-	width: 100px;
+	clear: both;
+}
+
+form#questions div input {
+	margin: 5px 10px 10px 10px;
 }
