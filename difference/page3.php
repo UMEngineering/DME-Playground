@@ -1,5 +1,5 @@
 <?php
-	require("../../dbdiff.php");
+	require("../../db.php");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -38,7 +38,7 @@
             <div id="container">
                 
                 <?
-					$q1 = "SELECT * FROM images";
+					$q1 = "SELECT * FROM difference";
 					$result = mysql_query($q1);
 					for ($i=0; $i<3; $i++) {
 						echo "<!-- i: $i -->";
@@ -63,7 +63,7 @@
 							<!-- <?= $image ?> -->
 							
 							<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
-								<img class="item" style="width:100%;" src="img/uploads/<?= $image?>" />
+								<img class="item" style="width:100%;" src="<?= $image?>" />
 								<div class="transparent" style="width: <?= $width?>px;" id="a1">
 									<span class="title"><a class="" href="inspiration">Page three</a></span>
 									<span class="subtitle"><?= $subtitle?></span>
