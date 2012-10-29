@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/quiz.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -28,12 +29,12 @@
             
             <div id="main">
             	<p>I imagine myself making a difference by:</p>
-                <form>
-                    <input type="checkbox" name="one" value="one"><p>Developing new technology to make everyday items better, faster, smaller or stronger</p>
-                    <input type="checkbox" name="one" value="one"><p>Creating sustainable solutions in health, energy or environmental issues</p>
-                    <input type="checkbox" name="one" value="one"><p>Sharing my knowledge with others and having an impact on the community</p>
-                    <input type="checkbox" name="one" value="one"><p>Making something new and risky like the next Google or SpaceX</p>
-                    <input type="checkbox" name="one" value="one"><p>Traveling the world to help developing nations</p>
+                <form id="questions">
+                    <div><input type="checkbox" name="one" value="one" /><p>Developing new technology to make everyday items better, faster, smaller or stronger</p></div>
+                    <div><input type="checkbox" name="one" value="one" /><p>Creating sustainable solutions in health, energy or environmental issues</p></div>
+                    <div><input type="checkbox" name="one" value="one" /><p>Sharing my knowledge with others and having an impact on the community</p></div>
+                    <div><input type="checkbox" name="one" value="one" /><p>Making something new and risky like the next Google or SpaceX</p></div>
+                    <div><input type="checkbox" name="one" value="one" /><p>Traveling the world to help developing nations</p></div>
                 
                 </form>
             </div>
