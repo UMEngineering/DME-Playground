@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/student.css">
+        <link rel="stylesheet" href="css/result.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="yui3-skin-sam">
@@ -29,21 +30,21 @@
             </div>
             
             <ul id="nav">
-                <li>Q'S RESULTS</li>
-               	<li class="current">EXPLORE</li>
-               	<li>WHAT'S NEXT?</li>
+                <li class="current" id="result-nav"><a href="#" onclick="changePage('result');">Q'S RESULTS</a></li>
+               	<li id="explore-nav"><a href="#" onclick="changePage('explore');">EXPLORE</a></li>
+               	<li id="next-nav"><a href="#" onclick="changePage('next');">WHAT'S NEXT?</a></li>
             </ul>
             <div id="main">
-            	<ul class="inside-nav">
+            
+            	<!--<ul class="inside-nav">
                 	<li>ACADEMICS</li>
                 </ul>
-                <!--<div class="scroll-right">-->
                 <div class="scroll-background">
                     <div class="scrollview-right" id="scrollview-right1">
                         <ul class="imgs-nav">
                             <li>
-                                <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                                <div class="transparent"><span class="title">Undergrad Research</span></div></a>
+                                <img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div>
                             </li>
                             <li>
                                 <img class="scroll-img" src="img/scroll/scroll2.png" alt="undergrad research" />
@@ -157,94 +158,19 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="http://yui.yahooapis.com/3.7.3/build/yui/yui-min.js"></script>
-		<script type="text/javascript" charset="utf-8">
-			var screenWidth = $(window).width();
-			YUI().use('scrollview', function(Y) {
-				var scrollView = new Y.ScrollView({
-					id: 'scrollview',
-					srcNode: '#scrollview-right1',
-					width: screenWidth,
-					flick: {
-						minDistance:10,
-						minVelocity:0.3,
-						axis: "x"
-					}
-				});
-			
-				scrollView.render();
-				
-				// Prevent default image drag behavior
-				scrollView.get("contentBox").delegate("mousedown", function(e) {
-					e.preventDefault();
-				}, "img");
-				
-				var resizeTimer;
-				$(window).resize(function () { 
-					clearTimeout(resizeTimer);
-					screenWidth = $(window).width();
-					resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
-				});
-			});
-			YUI().use('scrollview', function(Y) {
-				var scrollView = new Y.ScrollView({
-					id: 'scrollview',
-					srcNode: '#scrollview-right2',
-					width: screenWidth,
-					flick: {
-						minDistance:10,
-						minVelocity:0.3,
-						axis: "x"
-					}
-				});
-			
-				scrollView.render();
-				
-				// Prevent default image drag behavior
-				scrollView.get("contentBox").delegate("mousedown", function(e) {
-					e.preventDefault();
-				}, "img");
-				
-				var resizeTimer;
-				$(window).resize(function () { 
-					clearTimeout(resizeTimer);
-					screenWidth = $(window).width();
-					resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
-				});
-			});
-			YUI().use('scrollview', function(Y) {
-				var scrollView = new Y.ScrollView({
-					id: 'scrollview',
-					srcNode: '#scrollview-right3',
-					width: screenWidth,
-					flick: {
-						minDistance:10,
-						minVelocity:0.3,
-						axis: "x"
-					}
-				});
-			
-				scrollView.render();
-				
-				// Prevent default image drag behavior
-				scrollView.get("contentBox").delegate("mousedown", function(e) {
-					e.preventDefault();
-				}, "img");
-				
-				var resizeTimer;
-				$(window).resize(function () { 
-					clearTimeout(resizeTimer);
-					screenWidth = $(window).width();
-					resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
-				});
-			});
+        <script src="js/quiz_result.js"></script>
+        <script src="js/vendor/yui-min.js"></script>
+		<script>
+        $(document).ready(function(){
+			changePage("result");
+		});
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

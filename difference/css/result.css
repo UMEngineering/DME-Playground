@@ -1,0 +1,20 @@
+/* CSS Document */
+ul#result-image {
+	white-space: normal;
+}
+
+div#result-div {
+	height: 350px;
+}
+
+.explore {
+	font-family: Chalkduster, Tahoma, Geneva, sans-serif;
+	color: white;
+	margin: 0 10px;
+	font-weight: 100;
+	background: url(../img/arrow.png) no-repeat right 2px;
+	font-size: 15px;
+	padding: 0px 56px 12px 0;
+	text-decoration: none;
+	float: right;
+}

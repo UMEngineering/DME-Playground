@@ -30,7 +30,7 @@
             <div id="main">
             	<div id="question_content"></div>
             </div>
-            <a class='skip' href="#">Skip this</a>
+            <a class='skip' href="#" onclick="next_question();">Skip this</a>
             <a class='next' href="#" onclick="next_question();">Next</a>
             <span class="only">Only 4 more to go!</span>
         </div>

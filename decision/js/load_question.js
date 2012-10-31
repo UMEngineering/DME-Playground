@@ -16,7 +16,7 @@ function get_question(qid){
 		} else {
 			$(".only").remove();
 			$(".next").html("RESULTS");
-			$(".next").attr("onclick", "goto('students.html');");
+			$(".next").attr("onclick", "goto('result.php');");
 		}
 	}});
 }
@@ -24,28 +24,10 @@ function get_question(qid){
 function goto(url){
 	// Save the last question's cookie
 	save_cookie();
-	
-	var param = split_cookie();
-	window.location.href=url+"?"+param;
+	window.location.href=url;
 }
 
-// Split the cookie to get data from each one of cookie
-function split_cookie(){
-	// All cookies are in one string, and break them apart by ";"
-	var str_cookie = document.cookie;
-	
-	alert(str_cookie);
-	
-	var arr_cookie = str_cookie.split("; ");
-	var result = "";
-	for (var i=0; i<arr_cookie.length-2; i++){
-		//var arr_temp = arr_cookie[i].split("=");
-		result += arr_cookie[i]+"&";
-	}
-	
-	result += arr_cookie[i];
-	return result;
-}
+
 
 function next_question(){
 	if (qid < questions){
@@ -69,11 +51,11 @@ function save_cookie(){
 	var answer = "";
 	$(".choices").each(function(index, element) {
 		if ($(this).attr("checked")){
-			answer += (index+1);
+			answer += (index+1)+"-";
 		}
     });
 	if (answer == "") answer = "0";
 	
 	// Save the cookie, format: "q1=123" etc.
-	document.cookie = "q"+qid+"="+answer;	
+	document.cookie = "q"+qid+"="+answer.substring(0, answer.length-1);	
 }

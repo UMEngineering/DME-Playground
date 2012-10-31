@@ -5,6 +5,11 @@
 	margin: 0;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
 #main p {
 	margin-top: 0;
 }
@@ -54,6 +59,7 @@ ul.imgs-nav {
 	white-space: nowrap;
 	margin: 0;
 	padding: 0 10px 0 0;
+	overflow-y: hidden;
 }
 
 ul.imgs-nav li {
@@ -69,6 +75,10 @@ img.scroll-img {
 ul.imgs-nav li {
 	margin: 0;
 	padding: 0;
+}
+
+ul.imgs-nav li a{
+	color: black;
 }
 
 div.transparent {
