@@ -1,5 +1,6 @@
 <?php
-	require("../../db.php");
+	require("database/db.php");
+	require_once("functions.php");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -18,6 +19,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/difference.css">
+    	<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -63,10 +65,10 @@
 							<!-- <?= $image ?> -->
 							
 							<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
-								<img class="item" style="width:100%;" src="<?= $image?>" />
+								<a class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
 								<div class="transparent" style="width: <?= $width?>px" id="a1">
 									<span class="title"><a class="" href="inspiration">Page one</a></span>
-									<span class="subtitle"><?= $subtitle?></span>
+									<span class="subtitle"><?= limit_size($subtitle, $class) ?></span>
 								</div>
 							</div>
 							
@@ -85,14 +87,15 @@
 		</div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/jquery.infinitescroll.min.js"></script>
         <script src="js/masonry.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-		
+        
+        <script src="js/vendor/jquery.lightbox-0.5.min.js"></script>
         <script>
 			$(document).ready(function(){
+				create_lightbox();
 				var $container = $('#container');
 				$container.imagesLoaded(function(){
 				  $container.masonry({
@@ -121,11 +124,16 @@
 					  $newElems.animate({ opacity: 1 });
 					  $container.masonry( 'appended', $newElems, true ); 
 					});
-					}
-				);
-				
-					
+					create_lightbox();
+				});
 			});
+			
+			// Create lightbox for each image
+			function create_lightbox() {
+				$(".lightbox-image").each(function(index, element) {
+                    $(this).lightBox({fixedNavigation:true});
+                });
+			}
 		</script>
         
         

@@ -23,6 +23,7 @@
 # Dump of table difference
 # ------------------------------------------------------------
 
+USE `difference`;
 DROP TABLE IF EXISTS `difference`;
 
 CREATE TABLE `difference` (

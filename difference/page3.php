@@ -1,5 +1,6 @@
 <?php
-	require("../../db.php");
+	require("database/db.php");
+	require_once("functions.php");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -63,10 +64,10 @@
 							<!-- <?= $image ?> -->
 							
 							<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
-								<img class="item" style="width:100%;" src="<?= $image?>" />
+								<a class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
 								<div class="transparent" style="width: <?= $width?>px;" id="a1">
 									<span class="title"><a class="" href="inspiration">Page three</a></span>
-									<span class="subtitle"><?= $subtitle?></span>
+									<span class="subtitle"><?= limit_size($subtitle, $class) ?></span>
 								</div>
 							</div>
 							
