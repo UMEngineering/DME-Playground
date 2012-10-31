@@ -78,7 +78,7 @@ h2 {
     top: 0px;
 	left: 0;	
     width: 100%;
-    
+    pointer-events: all !important;
 	overflow: auto;
 	padding: 8px 0 0;
 	z-index: 1000;

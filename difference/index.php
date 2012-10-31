@@ -58,7 +58,7 @@
 							echo "<!-- $rand -->";
 							$image = $line['image1']; 
 							$subtitle = $line['story'];
-							
+							if ($line['color'] != "") $color = $line['color'];
 							?>
 							<!-- <?= $image ?> -->
 							
