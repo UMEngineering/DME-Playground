@@ -46,7 +46,7 @@ div.transparent {
 	
     display: block;
     z-index: 100;
-    overflow: visible;
+    overflow: hidden;
     cursor: pointer;
     pointer-events: none;
 }
