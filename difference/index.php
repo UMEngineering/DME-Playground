@@ -126,6 +126,14 @@
 					});
 					create_lightbox();
 				});
+				
+				//=======================
+				// Try to make the click to triger the load
+				/*$(window).unbind('.infscr');
+				$("#next").click(function(){
+					$(document).trigger('retrieve.infscr');
+					return false;
+				});*/
 			});
 			
 			// Create lightbox for each image

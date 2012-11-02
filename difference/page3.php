@@ -76,9 +76,9 @@
 						}
 					}
 				?>
-                <div id="page-nav" style="display: block;">
+                <!--<div id="page-nav" style="display: block;">
                     <a href="page2.php">Next</a>
-                </div>	
+                </div>	-->
             </div>
             
 
@@ -100,7 +100,7 @@
 				  });
 				});
 				
-				$container.infinitescroll({
+				/*$container.infinitescroll({
 					navSelector  : '#page-nav',    // selector for the paged navigation 
 					nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
 					itemSelector : '.mason',     // selector for all items you'll retrieve
@@ -121,9 +121,9 @@
 					  $container.masonry( 'appended', $newElems, true ); 
 					});
 					}
-				);
+				);*/
 				
-					
+				
 			});
 		</script>
         
