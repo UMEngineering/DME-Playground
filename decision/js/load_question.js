@@ -51,11 +51,11 @@ function save_cookie(){
 	var answer = "";
 	$(".choices").each(function(index, element) {
 		if ($(this).attr("checked")){
-			answer += (index+1)+"-";
+			answer += (index+1);
 		}
     });
 	if (answer == "") answer = "0";
 	
 	// Save the cookie, format: "q1=123" etc.
-	document.cookie = "q"+qid+"="+answer.substring(0, answer.length-1);	
+	document.cookie = "q"+qid+"="+answer;	
 }

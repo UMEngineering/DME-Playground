@@ -10,10 +10,18 @@ for ($i=1; $i<=$Q_COUNT; $i++){
 	if(!array_key_exists("q{$i}",$_COOKIE)) {
 		$exist_cookie = "false";
 	} else {
-		$results[$i] = explode("-", $_COOKIE["q{$i}"]);
+		$results[$i] = $_COOKIE["q{$i}"];
 	}
 }
-#print_r($results);
+$str_results = implode("-", $results);
+
+# Logic information
+# $logic array format: key=answers from the quiz, in "q1-q2-q3-q4-q5", value is the order of image
+$logic = array("23-45-23-45-2"=>"231450");
+$order_image = "012345";	# Default order: 012345
+if (array_key_exists($str_results, $logic)) {
+	$order_image = $logic[$str_results];
+}
 
 # The six images in the result page
 $images = array(array("img/scroll/scroll1.png", "Multidisciplinary Design program", "Multidisciplinary Design program", "#"),
@@ -22,9 +30,7 @@ $images = array(array("img/scroll/scroll1.png", "Multidisciplinary Design progra
 				array("img/scroll/scroll1.png", "Undergrad Research", "Undergrad Research", "#"),
 				array("img/scroll/scroll2.png", "Student Teams &amp; Organizations", "Student Teams &amp; Organizations", "#"),
 				array("img/scroll/scroll3.png", "Honors Program", "Honors Program", "#"));
-				
-# For the quiz result image order
-$order_image = array(0, 1, 2, 3, 4, 5);
+
 
 
 # =========== AJAX return start =============
@@ -47,7 +53,7 @@ if ($_REQUEST["page"] == "result"){
 		<div id="result-div">
 			<ul class="imgs-nav" id="result-image">
 			<?php
-				for ($i=0; $i<count($order_image); $i++){
+				for ($i=0; $i<strlen($order_image); $i++){
 					?>
 					<li>
 						<a href="<?= $images[$order_image[$i]][3] ?>">
