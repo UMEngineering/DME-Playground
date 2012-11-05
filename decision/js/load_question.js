@@ -57,5 +57,5 @@ function save_cookie(){
 	if (answer == "") answer = "0";
 	
 	// Save the cookie, format: "q1=123" etc.
-	document.cookie = "q"+qid+"="+answer;	
+	document.cookie = "q"+qid+"="+answer;
 }

@@ -1,0 +1,51 @@
+/* CSS Document */
+
+#main {
+	background: white;
+}
+
+#container, #main {
+	height: 120%;
+}
+
+#main p, #checklist div p {
+	font-family: sans-serif;
+	color: black;
+	font-weight: normal;
+}
+
+span.steps, span.checked {
+	font-weight: bold;
+	color: #00285C;
+}
+
+span.checked {
+	color: #E79500;
+}
+
+.styled {
+	position: absolute;
+	width: 99px;
+	height: 128px;
+	background: url(unchecked.png) no-repeat;
+	display: block;
+}
+
+.bottom {
+	width: 100%;
+	background: white;
+	position: fixed;
+	bottom: 0%;
+}
+
+#bottom-title, #img-nav-div {
+	background: #212A55;
+}
+
+#bottom-title {
+	color: white;
+	width: 90%;
+	margin: auto;
+	padding-left: 1em;
+	font-size: 10pt;
+}
