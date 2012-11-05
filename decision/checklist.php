@@ -9,15 +9,13 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
         <script type="application/javascript" src="js/vendor/add2home.js"></script>
         <link rel="stylesheet" href="css/add2home.css">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/student.css">
-        <link rel="stylesheet" href="css/result.css">
+        <link rel="stylesheet" href="css/pages.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="yui3-skin-sam">
@@ -32,12 +30,30 @@
             </div>
             
             <ul id="nav">
-                <li class="current" id="result-nav"><a href="#" onclick="changePage('result');">Q'S RESULTS</a></li>
-               	<li id="explore-nav"><a href="#" onclick="changePage('explore');">EXPLORE</a></li>
-               	<li id="next-nav"><a href="#" onclick="changePage('next');">WHAT'S NEXT?</a></li>
+                <li>CHECKLIST</li>
             </ul>
             <div id="main">
-            
+            	<p>Your Admissions Checklist includes the list of task needed to enroll at Michigan Engineering. Click each box to check when complete.</p>
+                <form id="checklist">
+                	<div><input class="styled" id="c1" type="checkbox" name="step1" value="1" onclick="checkthis('c1')"/><p><span class="steps" id="c1p">STEP ONE</span><br />Receive your acceptance letter and view admitted student website.</p></div>
+                	<div><input class="styled" id="c2" type="checkbox" name="step2" value="2" onclick="checkthis('c2')"/><p><span class="steps" id="c2p">STEP TWO</span><br />Submit $200 application deposit. The deposit can be paid via credit card or check. If paying by check, make payable to the University of Michigan College of Engineering and mail to 1000 University Ave, Suite 3A, Ann Arbor, MI 48108</p></div>
+                	<div><input class="styled" id="c3" type="checkbox" name="step3" value="3" onclick="checkthis('c3')"/><p><span class="steps" id="c3p">STEP THREE</span><br />Receive your acceptance letter and view admitted student website.</p></div>
+                </form>
+            </div>
+            <div class="bottom">
+            	<div id="bottom-title">NEXT STEPS</div>
+                <div id="img-nav-div">
+                    <ul class="imgs-nav">
+                        <li>
+                            <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="register" />
+                            <div class="transparent"><span class="title">Register for Campus Day</span></div></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="scroll-img" src="img/scroll/scroll2.png" alt="putdate" />
+                            <div class="transparent"><span class="title">Put dates onto your Google Cal</span></div></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -46,9 +62,10 @@
         <script src="js/main.js"></script>
         <script src="js/quiz_result.js"></script>
         <script src="js/vendor/yui-min.js"></script>
+        <!--<script src="js/custom_checkbox.js"></script>-->
 		<script>
         $(document).ready(function(){
-			changePage("result");
+			load_checklist();
 		});
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

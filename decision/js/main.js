@@ -55,3 +55,32 @@ function create_yui(class_name){
 		});
 	});
 }
+
+// Checkbox for pages, change the current style and save them into cookie
+function checkthis(id){
+	if ($("#"+id+"p").attr('class') == "steps") $("#"+id+"p").attr('class', 'checked');
+	else $("#"+id+"p").attr('class', 'steps');
+	
+	// Save to cookie
+	var answer = "";
+	$(".styled").each(function(index, element) {
+		if ($(this).attr("checked")){
+			answer += (index+1)+"-";
+		}
+    });
+	document.cookie = "checklist="+answer.substr(0, answer.length-1);	
+	//alert(document.cookie);
+}
+
+// Load the checklist from the cookie
+function load_checklist(){
+	var str_cookie = document.cookie;
+	
+	var arr_cookie = str_cookie.split("; ");
+	var arr_split_cookie = arr_cookie[0].split("=");
+	var arr_result = arr_split_cookie[1].split("-");
+	for (var i=0; i<arr_result.length; i++){
+		$("#c"+arr_result[i]).attr("checked", "checked");
+		checkthis("c"+arr_result[i]);
+	}
+}
