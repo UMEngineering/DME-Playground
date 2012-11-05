@@ -1,0 +1,290 @@
+html {
+	height: 100%	
+}
+
+body {
+	height: 100%;
+	font-size: 16px;
+	pointer-events:none;
+	margin: 0;	
+	font: 14px/20px 'Trebuchet MS', Verdana, Arial;
+	overflow: hidden;
+}
+
+#container {
+	text-align: center;	
+	height: 100%;
+	position: relative;
+}
+
+#imageholder {
+	display: block;
+	height: auto;
+	position: relative;
+	float: left;
+	overflow: auto;
+	display: block;
+	width: 280px;
+	margin: 4px 8px 0 0;
+	padding: 0;
+}
+
+img.switchable {
+	height: 184px;
+	left: 0;
+	width: auto;
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+img.primary {
+	display: block;	
+}
+
+ul.thumbs {
+	height: auto;
+	display: block;
+	float: left;
+	position: relative;
+	margin: 193px 0 0;
+	padding: 0;
+}
+
+ul.thumbs li {
+	margin: 0 3px 0 0;
+	display: block;
+	float: left;
+	list-style: none;
+}
+
+ul.thumbs li img {
+	width: 37px;	
+}
+
+
+a img {
+	border: none;	
+}
+
+div.clear {
+	display: block;
+	position: relative;
+	height: 0;
+	width: 100%;
+	clear: both;	
+}
+
+#googlemap {
+	display: block;
+	position: fixed !important;
+	min-height: 100% !important;
+	top: 0; bottom: 0; left: 0; right: 0;
+	pointer-events: all !important;
+	z-index: 0;
+}
+
+div.spacer {
+	display: block;
+	position: relative;
+	height: 20px;
+	width: 100%;
+	clear: both;
+}
+
+div.googleInfo {
+	text-align: left;	
+}
+
+div.author {
+	font-size: 18px;
+	color: #009be3;	
+	margin-bottom: 5px;
+}
+
+div.address {
+	line-height: 15px;
+	margin: 0 0 9px;
+	font-size: 12px;
+	color: #333;
+	font-family: "Helvetica", Arial, sans-serif;
+}
+
+div.department {
+	display: block;
+	line-height: 15px;
+	margin: 0 0 1px;
+	font-size: 12px;
+	color: #888;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-weight: 100;
+}
+
+div.viewOnFlickr {
+	display: block;
+	font-size: .85em;
+	color: #888;
+	font-weight: 100;	
+}
+
+div.story {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+div.lightbox {
+	display: none;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;	
+	background: black;
+	z-index: 1;
+	background: rgba(0, 0, 0, .8)
+}
+
+div#lbcontainer {
+	width: 960px;
+	height: auto;
+	overflow: auto;
+	margin: 150px auto;
+	pointer-events: none;
+}
+
+div#lbcontainer.active {
+	pointer-events: all !important;	
+}
+
+.lightbox div.mainimg {
+	display: block;
+	width: 600px;
+	height: 400px;
+	position: relative;	
+}
+
+.lightbox div.mainimg img {
+	left: 0;
+	top: 0;
+	max-width: 600px;
+	max-height: 400px;
+	position: absolute;	
+}
+
+.lightbox ul#thumbnails {
+	display: block;
+	position: relative;
+	height: 50px;
+	width: 600px;
+	padding: 0;
+	margin: 8px 0 0;
+}
+
+.lightbox ul#thumbnails img {
+	margin: 0 2px 0;
+	float: left;
+	width: 44px;
+	height: auto;
+	border: thin solid #CCC;	
+}
+
+
+
+
+/****** Old, but maybe still necessary ******/
+
+.youtubeHolder {
+	display: block;
+	z-index: 0;
+	position: relative;
+	background-color: black;
+	width: 420px;
+	height: 315px;	
+}
+
+iframe.youtubeOverlay {
+	display: none;	
+}
+
+form#search {
+	color: white;
+	pointer-events: all;
+	display: block;
+	position: absolute;
+	left: 6px;
+	top: 77px;
+	text-align: left;
+	z-index: 11;
+}
+
+form#search label {
+	display: block;
+	margin-left: 4px;		
+}
+
+form#search input {
+	height: 22px;
+	width: 139px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	background-image: url('../img/search_sm.png');
+	background-repeat: no-repeat;
+	background-position: 6px 5px;
+	padding: 0 0 0 24px;
+}
+
+form#search input:focus {
+	outline: none;	
+}
+
+div.result {
+	background: white;
+	pointer-events: all;
+	padding: 5px;
+}
+
+div#resultcontainer {
+	position: relative;
+	display: block;
+	max-height:50%;
+	overflow-y: scroll;	
+	z-index: 11;
+}
+
+div.result h2 {
+	margin: 0;	
+}
+
+div.result h2 a {
+	margin: 0 0 3px 0;	
+	color: #9AC1D6;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: left;
+}
+
+div.result p {
+	margin: 0 0 5px 0;
+	font-size: 11px;
+	color: #333;
+}
+
+a.searchForMe {
+	background-image: url('../img/agent.png');
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	padding: 7px 0 0 33px;	
+}
+
+a.searchForDepartment {
+	background-image: url('../img/home.png');
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	padding: 14px 0 0 33px;	
+}
+
+a.searchForGroup {
+	background-image: url('../img/multi-agents.png');
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	padding: 14px 0 0 36px;	
+}
