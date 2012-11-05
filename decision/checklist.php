@@ -61,7 +61,7 @@ function isIphone($user_agent=NULL) {
                             <div class="transparent"><span class="title">Register for Campus Day</span></div></a>
                         </li>
                         <li>
-                            <a href="#"><img class="scroll-img" src="img/scroll/scroll2.png" alt="putdate" />
+                            <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=This%20is%20a%20test&dates=20121201/20121208&details=description&location=where%20test&trp=false&sprop=http%3A%2F%2Fwww.engin.umich.edu%2F&sprop=name:College%20of%20Engineering" target="_blank"><img class="scroll-img" src="img/scroll/scroll2.png" alt="putdate" />
                             <div class="transparent"><span class="title">Put dates onto your Google Cal</span></div></a>
                         </li>
                     </ul>
