@@ -1,3 +1,12 @@
+<?php
+
+function isIphone($user_agent=NULL) {
+    if(!isset($user_agent)) {
+        $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+    }
+    return (strpos($user_agent, 'iPhone') !== FALSE);
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -26,7 +35,10 @@
 		<div id="container">
         	<div id="topcontainer">
             	<img id="main-logo" src="img/engin-logo2.png" alt="um-logo" />
-                <p class="right-text">+ Add to Homescreen</p>
+                <?php
+				if (!isIphone())
+                	echo "<p class=\"right-text\">+ Add to Homescreen</p>";
+				?>
             </div>
             
             <ul id="nav">
