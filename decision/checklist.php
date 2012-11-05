@@ -9,8 +9,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script type="application/javascript" src="js/vendor/add2home.js"></script>
+        <link rel="stylesheet" href="css/add2home.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
