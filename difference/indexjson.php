@@ -81,7 +81,7 @@
                                
             </div>
             <div id="page-nav" style="display: block;">
-                <a href="page2.php">Next</a>
+                <a onclick="getimages(1)">Next</a>
             </div>	
 
 		</div>
@@ -95,55 +95,16 @@
         <script src="js/vendor/jquery.lightbox-0.5.min.js"></script>
         <script>
 			$(document).ready(function(){
-				getimages();
+				getimages(0);
 				// Load more when scroll down
-				$(window).scroll(function(){
+				/*$(window).scroll(function(){
 					//$("#test3").html(+" = "+$(window).scrollTop());
 					var value = $(document).height() - $(window).height();
-					if (($(window).scrollTop() <= value+120 && $(window).scrollTop() >= value-120) /*&& $("#finished").text() != "finish" && status != 1*/){
+					if (($(window).scrollTop() <= value+120 && $(window).scrollTop() >= value-120) /*&& $("#finished").text() != "finish" && status != 1){
 						//current = current + 20;
 						//status = 1;
-						getimages();
+						getimages(1);
 					}
-				});
-				/*create_lightbox();
-				var $container = $('#container');
-				$container.imagesLoaded(function(){
-				  $container.masonry({
-					itemSelector: '.mason'
-					//isAnimated : 'true'
-				  });
-				});
-				
-				$container.infinitescroll({
-					navSelector  : '#page-nav',    // selector for the paged navigation 
-					nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
-					itemSelector : '.mason',     // selector for all items you'll retrieve
-					loading: {
-					  finishedMsg: 'No more pages to load.',
-					  img: 'http://i.imgur.com/6RMhx.gif'
-					}
-					},
-					// trigger Masonry as a callback
-					function( newElements ) {
-					// hide new items while they are loading
-					var $newElems = $( newElements ).css({ opacity: 0 });
-					// ensure that images load before adding to masonry layout
-					$newElems.imagesLoaded(function(){
-						console.log("Loading new images");
-					  // show elems now they're ready
-					  $newElems.animate({ opacity: 1 });
-					  $container.masonry( 'appended', $newElems, true ); 
-					});
-					create_lightbox();
-				});
-				
-				//=======================
-				// Try to make the click to triger the load
-				/*$(window).unbind('.infscr');
-				$("#next").click(function(){
-					$(document).trigger('retrieve.infscr');
-					return false;
 				});*/
 			});
 			
@@ -169,7 +130,7 @@
 					  $newElems.animate({ opacity: 1 });
 					  $container.masonry( 'appended', $newElems, true ); 
 					});*/
-					if (first = 0){
+					if (first == 0){
 						$container.append(response.responseText);
 						create_lightbox();
 						$container.imagesLoaded(function(){
@@ -179,7 +140,14 @@
 						  });
 						});
 					} else {
+						// hide new items while they are loading
+						//var $newElems = $(document.createElement("div")).css({ opacity: 0 });
+						//$newElems.append(response.responseText);
+						var newElems = $(response.responseText);
+						$('#container').append(newElems).masonry('appended', newElems);
+						// ensure that images load before adding to masonry layout
 						
+						create_lightbox();
 					}
 				}});
 			}
