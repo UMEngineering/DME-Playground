@@ -41,7 +41,7 @@
                 
             </div>
             <div id="page-nav" style="display: block;">
-                <a onclick="getimages(1)">Next</a>
+                <a class="cursor" onclick="getimages(1)">Next</a>
             </div>	
 
 		</div>
@@ -59,14 +59,16 @@
 			var amount = 15;
 			$(document).ready(function(){
 				getimages(0);
+				
 				// Load more when scroll down
 				$(window).scroll(function(){
 					//$("#test3").html(+" = "+$(window).scrollTop());
 					var value = $(document).height() - $(window).height();
-					if (($(window).scrollTop() <= value+80 && $(window).scrollTop() >= value-80) && $("#nomore").text() == "" && loading == 0){
+					if (($(window).scrollTop() <= value+0 && $(window).scrollTop() >= value-0) && $("#nomore").text() == "" && loading == 0){
 						loading = 1;
-						current = current + amount;
+						//current = current + amount;
 						getimages(1);
+						current = current + amount;
 					}
 				});
 			});
@@ -79,31 +81,33 @@
 			}
 			
 			function getimages(first){
-				var urlAjax = "pagejson.php?offset="+current+"&amount="+amount;
-				var $container = $('#container');
-				//alert(urlAjax);
-				//alert(type);
-				var response = $.ajax({url: urlAjax, success: function(){
-					if (first == 0){
-						// Load the first set of page
-						$container.append(response.responseText);
-						create_lightbox();
-						$container.imagesLoaded(function(){
-						  $container.masonry({
-							itemSelector: '.mason'
-							//isAnimated : 'true'
-						  });
-						});
-					} else {
-						// Load more images when user scroll down or click "next"
-						var newElems = $(response.responseText);
-						newElems.imagesLoaded(function(){
-							$('#container').append(newElems).masonry('appended', newElems);
+				if ($("#nomore").text() == ""){
+					var urlAjax = "pagejson.php?offset="+current+"&amount="+amount;
+					var $container = $('#container');
+					//alert(urlAjax);
+					//alert(type);
+					var response = $.ajax({url: urlAjax, success: function(){
+						if (first == 0){
+							// Load the first set of page
+							$container.append(response.responseText);
 							create_lightbox();
-						});
-					}
-					loading = 0;
-				}});
+							$container.imagesLoaded(function(){
+							  $container.masonry({
+								itemSelector: '.mason'
+								//isAnimated : 'true'
+							  });
+							});
+						} else {
+							// Load more images when user scroll down or click "next"
+							var newElems = $(response.responseText);
+							newElems.imagesLoaded(function(){
+								$('#container').append(newElems).masonry('appended', newElems);
+								create_lightbox();
+							});
+						}
+						loading = 0;
+					}});
+				}
 			}
 		</script>
         

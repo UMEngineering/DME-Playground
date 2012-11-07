@@ -276,3 +276,19 @@ header a:hover, header a:active, header a:visited {
 	display:block;	
 	position: relative;
 }
+
+#nomore {
+	width: 80%;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: rgba(10, 10, 10, .3);
+}
+
+.cursor:hover {
+	cursor: pointer;
+	color: white;
+}

@@ -17,8 +17,7 @@ $result = mysql_query($q1);
 if (!$line = mysql_fetch_array($result)){
 	echo "<div class=\"mason\" id=\"nomore\">No more images!</div>";
 } else {
-	do {	
-
+	do {
 		$rand = rand(0, 100);
 		$class = " sm";
 		
@@ -40,7 +39,7 @@ if (!$line = mysql_fetch_array($result)){
 		<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
 			<a class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
 			<div class="transparent" style="width: <?= $width?>px" id="a1">
-				<span class="title"><a class="" href="inspiration">Page one</a></span>
+				<span class="title"><a class="" href="inspiration">Page <?= $offset ?></a></span>
 				<span class="subtitle"><?= $subtitle ?></span>
 			</div>
 		</div>
