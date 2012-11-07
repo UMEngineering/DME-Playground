@@ -39,46 +39,6 @@
         
             <div id="container">
                 
-                <?/*
-					$q1 = "SELECT * FROM difference";
-					$result = mysql_query($q1);
-					for ($i=0; $i<3; $i++) {
-						echo "<!-- i: $i -->";
-						while ($line = mysql_fetch_array($result)){	
-						
-							$rand = rand(0, 100);
-							$class = " sm";
-							
-							if ($rand > 80) $class = " lg";
-							
-							if ($rand < 20) $color = "#2E282E";
-							else if ($rand < 40) $color = "#8A404D";
-							else if ($rand < 60) $color = "#FA5F53";
-							else if ($rand < 80) $color = "#F1EEF5";
-							else $color = "#8691CC";
-							
-							echo "<!-- $rand -->";
-							$image = $line['image1']; 
-							$subtitle = $line['story'];
-							if ($line['color'] != "") $color = $line['color'];
-							?>
-							<!-- <?= $image ?> -->
-							
-							<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
-								<a class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
-								<div class="transparent" style="width: <?= $width?>px" id="a1">
-									<span class="title"><a class="" href="inspiration">Page one</a></span>
-									<span class="subtitle"><?= limit_size($subtitle, $class) ?></span>
-								</div>
-							</div>
-							
-							
-							<?
-						}
-					}*/
-				?>
-                
-                               
             </div>
             <div id="page-nav" style="display: block;">
                 <a onclick="getimages(1)">Next</a>
@@ -94,18 +54,21 @@
         
         <script src="js/vendor/jquery.lightbox-0.5.min.js"></script>
         <script>
+			var loading = 1;
+			var current = 0;
+			var amount = 15;
 			$(document).ready(function(){
 				getimages(0);
 				// Load more when scroll down
-				/*$(window).scroll(function(){
+				$(window).scroll(function(){
 					//$("#test3").html(+" = "+$(window).scrollTop());
 					var value = $(document).height() - $(window).height();
-					if (($(window).scrollTop() <= value+120 && $(window).scrollTop() >= value-120) /*&& $("#finished").text() != "finish" && status != 1){
-						//current = current + 20;
-						//status = 1;
+					if (($(window).scrollTop() <= value+80 && $(window).scrollTop() >= value-80) && $("#nomore").text() == "" && loading == 0){
+						loading = 1;
+						current = current + amount;
 						getimages(1);
 					}
-				});*/
+				});
 			});
 			
 			// Create lightbox for each image
@@ -116,21 +79,13 @@
 			}
 			
 			function getimages(first){
-				var urlAjax = "pagejson.php";
+				var urlAjax = "pagejson.php?offset="+current+"&amount="+amount;
 				var $container = $('#container');
 				//alert(urlAjax);
 				//alert(type);
 				var response = $.ajax({url: urlAjax, success: function(){
-					//$("#dealDiv").append(response.responseText);
-					//var newElems = $( response.responseText );
-					// ensure that images load before adding to masonry layout
-					/*$newElems.imagesLoaded(function(){
-						console.log("Loading new images");
-					  // show elems now they're ready
-					  $newElems.animate({ opacity: 1 });
-					  $container.masonry( 'appended', $newElems, true ); 
-					});*/
 					if (first == 0){
+						// Load the first set of page
 						$container.append(response.responseText);
 						create_lightbox();
 						$container.imagesLoaded(function(){
@@ -140,15 +95,14 @@
 						  });
 						});
 					} else {
-						// hide new items while they are loading
-						//var $newElems = $(document.createElement("div")).css({ opacity: 0 });
-						//$newElems.append(response.responseText);
+						// Load more images when user scroll down or click "next"
 						var newElems = $(response.responseText);
-						$('#container').append(newElems).masonry('appended', newElems);
-						// ensure that images load before adding to masonry layout
-						
-						create_lightbox();
+						newElems.imagesLoaded(function(){
+							$('#container').append(newElems).masonry('appended', newElems);
+							create_lightbox();
+						});
 					}
+					loading = 0;
 				}});
 			}
 		</script>
