@@ -2,13 +2,22 @@
 require("database/db.php");
 require_once("functions.php");
 
-$q1 = "SELECT * FROM difference";
+$offset = 0;
+$amount = 15;
+if (!empty($_REQUEST["offset"]) && !empty($_REQUEST["amount"])){
+	$offset = $_REQUEST["offset"];
+	$amount = $_REQUEST["amount"];
+}
+
+$q1 = "SELECT * FROM difference LIMIT {$offset},{$amount};";
 $result = mysql_query($q1);
-$result_json = array();
-for ($i=0; $i<3; $i++) {
+//$result_json = array();
+//for ($i=0; $i<3; $i++) {
 	//echo "<!-- i: $i -->";
-	while ($line = mysql_fetch_array($result)){	
-	
+if (!$line = mysql_fetch_array($result)){
+	echo "<div class=\"mason\" id=\"nomore\">No more images!</div>";
+} else {
+	do {
 		$rand = rand(0, 100);
 		$class = " sm";
 		
@@ -30,15 +39,16 @@ for ($i=0; $i<3; $i++) {
 		<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
 			<a class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
 			<div class="transparent" style="width: <?= $width?>px" id="a1">
-				<span class="title"><a class="" href="inspiration">Page one</a></span>
-				<span class="subtitle"><?= limit_size($subtitle, $class) ?></span>
+				<span class="title"><a class="" href="inspiration">Page <?= $offset ?></a></span>
+				<span class="subtitle"><?= $subtitle ?></span>
 			</div>
 		</div>
 		<?php
-		array_push($result_json, array('id'=>$line['id'], 'href'=>$line['image1'], 'src'=>$image, 'class'=>$class, 'color'=>$color, 'width'=>$width, 'subtitle'=>$subtitle));
-	}
+		//array_push($result_json, array('id'=>$line['id'], 'href'=>$line['image1'], 'src'=>$image, 'class'=>$class, 'color'=>$color, 'width'=>$width, 'subtitle'=>$subtitle));
+	} while ($line = mysql_fetch_array($result));
 }
-$json_string = json_encode($result_json);
+//}
+//$json_string = json_encode($result_json);
 //print_r($json_string);
 
 ?>
