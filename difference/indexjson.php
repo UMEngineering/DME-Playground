@@ -66,7 +66,6 @@
 					var value = $(document).height() - $(window).height();
 					if (($(window).scrollTop() <= value+0 && $(window).scrollTop() >= value-0) && $("#nomore").text() == "" && loading == 0){
 						loading = 1;
-						current = current + amount;
 						getimages(1);
 						//current = current + amount;
 					}
@@ -97,12 +96,14 @@
 								//isAnimated : 'true'
 							  });
 							});
+							current = current + amount;
 						} else {
 							// Load more images when user scroll down or click "next"
 							var newElems = $(response.responseText);
 							newElems.imagesLoaded(function(){
 								$('#container').append(newElems).masonry('appended', newElems);
 								create_lightbox();
+								current = current + amount;
 							});
 						}
 						loading = 0;
