@@ -36,6 +36,8 @@ span.checked {
 	background: white;
 	position: fixed;
 	bottom: 0%;
+	overflow-y: scroll;
+	white-space: nowrap;
 }
 
 #bottom-title, #img-nav-div {
@@ -48,4 +50,9 @@ span.checked {
 	margin: auto;
 	padding-left: 1em;
 	font-size: 10pt;
+}
+
+div.bottom, div#img-nav-div, ul.imgs-nav {
+	white-space: nowrap;
+	overflow-y: scroll;
 }

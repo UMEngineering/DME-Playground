@@ -58,7 +58,7 @@ if (!$result){
 # Prepare the content for output
 $contents = array();
 while ($row = mysql_fetch_row($result)){
-	array_push($contents, array('r_id'=>$row[1], 'title'=>$row[2], 'description'=>$row[3], 'category'=>$row[4], 'subcategory'=>$row[5]));
+	array_push($contents, array('r_id'=>$row[1], 'title'=>str_replace("&", "&amp;", $row[2]), 'description'=>str_replace("&", "&amp;", $row[3]), 'category'=>str_replace("&", "&amp;", $row[4]), 'subcategory'=>str_replace("&", "&amp;", $row[5]), 'img_src'=>$row[6]));
 }
 
 # =========== AJAX return start =============
@@ -83,11 +83,17 @@ if ($_REQUEST["page"] == "result"){
 			<?php
 				for ($i=0; $i<6; $i++){
 					?>
-					<li>
-						<a href="#">
-							<img class="scroll-img" src="img/scroll/scroll1.png" alt="<?= $contents[$i]['title'] ?>" />
-							<div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span>
+					<li id="<?= $contents[$i]['r_id'] ?>">
+						<a href="#" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
+							<img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
+							<div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
 						</a>
+                        <div class="content-for-page" id="content<?= $contents[$i]['r_id'] ?>" style="display: none;">
+                        	<span class="title"><?= $contents[$i]['title'] ?></span>
+                        	<span class="category"><?= $contents[$i]['category'] ?></span>
+                        	<span class="subcategory"><?= $contents[$i]['subcategory'] ?></span>
+                        	<span class="description"><?= $contents[$i]['description'] ?></span>
+                        </div>
 					</li>
 					<?php
 				}

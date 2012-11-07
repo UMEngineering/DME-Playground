@@ -14,6 +14,10 @@ a {
 	margin-top: 0;
 }
 
+#main p a {
+	color: #2026B9;
+}
+
 ul#nav, ul.inside-nav {
 	overflow: hidden;
 	margin: 0;
