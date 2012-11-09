@@ -167,7 +167,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			console.log("Video: ", vid);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="420" height="315"></div><div class="clear">&nbsp;</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="250" height="141"></div><div class="clear">&nbsp;</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
@@ -178,7 +178,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="420" height="315"></div><div class="clear">&nbsp;</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="250" height="141"></div><div class="clear">&nbsp;</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
@@ -215,7 +215,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 				infoWindows[id]=infowindow;
 			}
 			console.log("iPhone:", iphone());
-			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="420" height="315" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
+			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="250" height="141" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
 			$("iframe#ifr_"+id).load(function(){refreshMap();});
 			infowindow.setContent(contentString);
 			$(".googleInfo").parent().css({"overflow":"hidden"});
@@ -294,7 +294,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 				infoWindows[id]=infowindow;
 			}
 			console.log("iPhone:", iphone());
-			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="420" height="315" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
+			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="250" height="141" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
 			$("iframe#ifr_"+id).load(function(){refreshMap();});
 			infowindow.setContent(contentString);
 			$(".googleInfo").parent().css({"overflow":"hidden"});
@@ -513,7 +513,6 @@ $("div#googlemap").bind("loadmap", function initialize() {
 						lonarr.push(parseFloat(v.lon));	
 						if (latarr.length > 1) { latarr.splice(-1,1); }
 						if (lonarr.length > 1) { lonarr.splice(-1,1); }
-						
 				});//End each
 			  },//End success condition
 			error: function(xhr, statusText, errorThrown){
