@@ -2,6 +2,7 @@
 # Connect to database
 require_once("connect.php");
 require_once("functions.php");
+//require_once("../../db.php");
 
 # Questions
 $Q_COUNT = 5;
@@ -68,6 +69,7 @@ if ($_REQUEST["page"] == "result"){
 	# If the Ajax request is for the RESULT page
 	if ($exist_cookie == "false"){
 		?>
+        
 		<div id="content"><p>To see which opportunities you might be interested in, please take the customized quiz.</p>
 		<a class="start" href="quiz.php">Start the quiz!</a>
 		</div>
