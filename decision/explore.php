@@ -10,40 +10,47 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
+        <script type="application/javascript" src="js/vendor/add2home.js"></script>
+        <link rel="stylesheet" href="css/add2home.css">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/student.css">
+        <link rel="stylesheet" href="css/result.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="yui3-skin-sam">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
 		<div id="container">
-        	<div id="topcontainer">Congrats - you're in!
-            <img id="right-logo" src="img/engin-logo1.png" alt="um-logo" />
+        	<div id="topcontainer">
+            	<img id="main-logo" src="img/engin-logo2.png" alt="um-logo" />
+                <p class="right-text">+ Add to Homescreen</p>
             </div>
             
+            <ul id="nav">
+                <li class="current" id="result-nav"><a href="#" onclick="changePage('result');">Q'S RESULTS</a></li>
+               	<li id="explore-nav"><a href="#" onclick="changePage('explore');">EXPLORE</a></li>
+               	<li id="next-nav"><a href="#" onclick="changePage('next');">WHAT'S NEXT?</a></li>
+            </ul>
             <div id="main">
-            	<p>Your unique qualities have identified you as someone with passion and the potential to change the world. Michigan Engineering has the tools to bring those to reality.</p>
-                <div class="video">
-                	<img id="youtubevideo" src="img/placeholder1.png" alt="video" />
-                    <div class="how"><span>How will you make a difference?</span></div>
-                </div>
-                <div class="links">
-                	<a href="quiz.php" class="custom">Customize with 5 Quick Qs</a>
-                    <a href="result.php" class="explore">Explore on your own</a>
-                </div>
-                
+            
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="js/quiz_result.js"></script>
+        <script src="js/vendor/yui-min.js"></script>
+		<script>
+        $(document).ready(function(){
+			changePage("result");
+		});
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
