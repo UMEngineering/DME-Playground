@@ -1,9 +1,9 @@
 <?php
 
 # Connect to database
-//require_once("connect.php");
+require_once("connect.php");
 require_once("functions.php");
-require_once("../../db.php");
+//require_once("../../db.php");
 
 # Questions
 $Q_COUNT = 5;
