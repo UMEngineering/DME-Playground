@@ -9,7 +9,7 @@ $(document).ready(function(){
 function get_question(qid){
 	var urlAjax = "load_question.php?qid=" + qid;
 	var response = $.ajax({url: urlAjax, success: function(){
-		$("#top_title").html(questions+" Quick Qs: Question "+qid);
+		$(".top_title").html(questions+" Quick Qs: Question "+qid);
 		$("#question_content").html(response.responseText);
 		if (questions-qid > 0){
 			$(".only").html("Only "+(questions-qid)+" more to go!");

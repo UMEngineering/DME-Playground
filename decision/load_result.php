@@ -3,7 +3,7 @@
 # Connect to database
 //require_once("connect.php");
 require_once("functions.php");
-require_once("../../db.php");
+require_once("database/db.php");
 
 # Questions
 $Q_COUNT = 5;
@@ -114,7 +114,8 @@ if ($_REQUEST["page"] == "result"){
         <ul class="inside-nav">
             <li><?= $categories[$i] ?></li>
         </ul>
-        <div class="scroll-background">
+        <!-- Display this in mobile version -->
+        <div class="scroll-background display-when-mobile">
             <div class="scrollview-right" id="scrollview-right<?= $i ?>">
                 <ul class="imgs-nav">
 					<?php
@@ -129,6 +130,31 @@ if ($_REQUEST["page"] == "result"){
                     ?>
                 </ul>
             </div>
+        </div>
+        <!-- Display this in desktop version -->
+        <div class="scroll-background display-when-desktop flexslider">
+            <ul class="slides">
+				<?php
+                for ($k=0; $k<2; $k++) {
+                ?>
+                <li>
+                    <ul class="imgs-nav">
+                        <?php
+                        for ($j=0; $j<4; $j++) {
+                            ?>
+                            <li>
+                                <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                                <div class="transparent"><span class="title">Undergrad Research</span></div></a>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                    </ul>
+                </li>
+                <?php
+                }
+                ?>
+            </ul>
         </div>
         <?php
 	}

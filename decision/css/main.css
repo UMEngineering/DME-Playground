@@ -435,8 +435,98 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 801px) {
+    #container {
+		max-width: 960px;
+	}
+	
+	#main {
+		background: #212A55;
+		height: 100%;
+		box-shadow: 0 0 0 rgba(0,0,0,.8);
+		border-bottom: 0;
+	}
+	
+	#topcontainer {
+		background: #e89500;
+		height: 35px;
+		padding: 18px 0 0 8px;
+		margin-top: 0px;
+	}
+	
+	#top-content-desktop {
+		font-family: Tahoma, Geneva, sans-serif;
+		font-weight: bold;
+	}
+	
+	.display-when-desktop {
+		display: block;
+	}
+	
+	.display-when-mobile {
+		display: none;
+	}
+	
+	p#congrats-desktop {
+		font-family: Chalkduster, Tahoma, Geneva, sans-serif;
+		font-size: 15pt;
+		text-align: center;
+	}
+	
+	div.video {
+		float: left;
+		width: 490px;
+		margin: 0;
+	}
+	
+	p#introduction {
+		float: right;
+		width: 280px;
+		margin: 100px 10px 40px 0;
+	}
+	
+	div.links {
+		float: right;
+		width: 260px;
+		margin-right: 10px;
+	}
+	
+	#topcontainer img#right-logo {
+		/*position: absolute;
+		right: 10px;*/
+		float: right;
+		margin: -30px 10px 0 10px;
+		overflow: hidden;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	p#introduction {
+		float: right;
+		width: 330px;
+		margin: 100px 40px 40px 0;
+	}
+	
+	div.links {
+		float: right;
+		width: 260px;
+		margin-right: 80px;
+	}
+	
+}
+
+@media only screen and (max-width: 800px) {
+    #container {
+		max-width: 800px;
+	}
+	
+	.display-when-desktop {
+		display: none;
+	}
+	
+	.display-when-mobile {
+		display: block;
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),

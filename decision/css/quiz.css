@@ -6,3 +6,45 @@ form#questions div {
 form#questions div input {
 	margin: 5px 10px 10px 10px;
 }
+
+@media only screen and (min-width: 801px) {
+    #container {
+		max-width: 960px;
+	}
+	
+	#main {
+		background: #2A4872;
+		margin: 10px;
+		padding: 2px 0px 20px;
+		border-bottom: 3px solid white;
+		border-top: 3px solid white;
+		box-shadow: 0 0 10px rgba(0,0,0,.8);
+	}
+	
+	#topcontainer {
+		height: 35px;
+		padding: 18px 0 0 8px;
+		margin-top: 0px;
+	}
+	
+	#top-content-desktop {
+		font-family: Tahoma, Geneva, sans-serif;
+		font-weight: bold;
+	}
+	
+	#top-content-mobile {
+		display: none;
+	}
+	
+	.display-when-desktop {
+		display: block;
+	}
+	
+	#topcontainer img#right-logo {
+		/*position: absolute;
+		right: 10px;*/
+		float: right;
+		margin: -30px 10px 0 10px;
+		overflow: hidden;
+	}
+}

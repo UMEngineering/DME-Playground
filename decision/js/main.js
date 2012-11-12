@@ -13,9 +13,13 @@ function changePage(page){
 		
 		// Create horizontal scroll if in page "explore" or "what's next"
 		if (page == "explore") {
-			create_yui('#scrollview-right0');
+			/*create_yui('#scrollview-right0');
 			create_yui('#scrollview-right1');
-			create_yui('#scrollview-right2');
+			create_yui('#scrollview-right2');*/
+			$('.flexslider').flexslider({
+				animation: "slide",
+				slideshow: false
+			});
 		} else if (page == "next") {
 			create_yui('#scrollview-right0');
 			create_yui('#scrollview-right1');

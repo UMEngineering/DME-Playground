@@ -56,3 +56,25 @@ div.bottom, div#img-nav-div, ul.imgs-nav {
 	white-space: nowrap;
 	overflow-y: scroll;
 }
+
+@media only screen and (min-width: 801px) {
+	.bottom {
+		width: 940px;
+		background: white;
+		position: fixed;
+		bottom: 0%;
+		overflow-y: scroll;
+		margin-left: 10px;
+	}
+	
+	#bottom-title, #img-nav-div {
+		background: #254874;
+	}
+	
+	#bottom-title {
+		color: white;
+		margin: auto;
+		padding-left: 1em;
+		font-size: 10pt;
+	}
+}

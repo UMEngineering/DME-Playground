@@ -28,3 +28,79 @@ div#result-div {
 	margin: 10px;
 	float: left;
 }
+
+@media only screen and (min-width: 801px) {
+    #container {
+		max-width: 960px;
+	}
+	
+	#main {
+		background: #2A4872;
+		margin: 0 10px 10px 10px;
+		padding: 2px 0px 20px;
+		box-shadow: 0 0 10px rgba(0,0,0,.8);
+	}
+	
+	#topcontainer {
+		height: 35px;
+		padding: 18px 0 0 8px;
+		margin-top: 0px;
+	}
+	
+	#top-content-desktop {
+		font-family: Tahoma, Geneva, sans-serif;
+		font-weight: bold;
+	}
+	
+	#top-content-mobile {
+		display: none;
+	}
+	
+	.display-when-desktop {
+		display: block;
+	}
+	
+	ul#nav {
+		margin-left: 10px;
+	}
+	
+	div#result-div {
+		float: right;
+		width: 480px;
+	}
+	
+	div#content {
+		max-width: 300px;
+		float: left;
+	}
+	
+	ul.imgs-nav, ul.imgs-nav li {
+		height: 200px;
+	}
+	
+	ul.imgs-nav li a img {
+		width: 140px;
+	}
+	
+	div.transparent {
+		position: relative;
+		width: 140px;
+		bottom: 73px;
+		height: 55px;
+	}
+	
+	#topcontainer img#right-logo {
+		/*position: absolute;
+		right: 10px;*/
+		float: right;
+		margin: -30px 10px 0 10px;
+		overflow: hidden;
+	}
+}
+
+@media only screen and (min-width: 901px) {
+	div#content {
+		max-width: 400px;
+		float: left;
+	}
+}

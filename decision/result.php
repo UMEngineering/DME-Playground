@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/student.css">
         <link rel="stylesheet" href="css/result.css">
+        <link rel="stylesheet" href="css/flexslider.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="yui3-skin-sam">
@@ -46,6 +47,7 @@
         <script src="js/main.js"></script>
         <script src="js/quiz_result.js"></script>
         <script src="js/vendor/yui-min.js"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
 		<script>
         $(document).ready(function(){
 			changePage("result");

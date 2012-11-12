@@ -23,11 +23,12 @@
         <![endif]-->
 
 		<div id="container">
-        	<div id="topcontainer"><span id="top_title">5 Quick Qs: Question 1</span>
+        	<div id="topcontainer"><span class="top_title display-when-mobile">5 Quick Qs: Question 1</span><span id="top-content-desktop" class="display-when-desktop">Michigan Engineering</span>
             <img id="right-logo" src="img/engin-logo1.png" alt="um-logo" />
             </div>
             
             <div id="main">
+            	<p class="display-when-desktop" id="congrats-desktop"><span class="top_title">5 Quick Qs: Question 1</span></p>
             	<div id="question_content"></div>
             </div>
             <a class='skip' href="#" onclick="next_question();">Skip this</a>
