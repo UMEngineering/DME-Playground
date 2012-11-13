@@ -43,7 +43,6 @@ function isIphone($user_agent=NULL) {
             
             <ul id="nav">
                 <li>CHECKLIST</li>
-                <span id="goback">Go Back</span>
             </ul>
             <div id="main">
             	<p>Your Admissions Checklist includes the list of task needed to enroll at Michigan Engineering. Click each box to check when complete.</p>
