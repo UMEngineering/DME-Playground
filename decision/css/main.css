@@ -204,7 +204,6 @@ div.how span {
     left: 50%;
     bottom: 50%;
     margin: -12px -133px;
-    font-size: 13px;
 }
 
 div.links {
@@ -231,12 +230,12 @@ div.links a {
     border: thin solid white;
     border-radius: 30px;
     display: block;
-    width: 77px;
+    width: 105px;
 	
     height: 39px;
     float: left;
     color: #00295C;
-    font-size: 11px;
+    font-size: 12px;
     text-decoration: none;
     padding: 8px 23px 0;
     text-align: center;
@@ -277,6 +276,7 @@ hr {
  */
 
 img {
+    vertical-align: middle;
 }
 
 /*
