@@ -111,18 +111,11 @@ function refreshMap() {
 // but I added this as a failsafe.
 setInterval(function(){refreshMap()}, 50);
 
-var LAYER = getUrlVars()["layer"];
-
 // Create a new event called "loadmap" and bind it to the map's div.  Also create an "unloadmap" event, and bind that.  These will be fired when the page loads.
 $("div#googlemap").bind("loadmap", function initialize() {
 	$(this).removeClass("mapready").addClass("maploaded");
 	var lat = 42.29011737230321, lon = -83.71559682724455;
 	var latlng = new google.maps.LatLng(lat, lon);
-	if (LAYER == "decision") {
-		var lat = 42.274705, lon = -83.744408;
-		var latlng = new google.maps.LatLng(lat, lon);
-	}
-	
 	
 //****** Set map options! ******	
 	
@@ -154,85 +147,6 @@ $("div#googlemap").bind("loadmap", function initialize() {
 	var ii = 0;
 	
 // Map the appropriate marker, infoWindow, content and placeholder divs.
-
-//  < Decision map function >
-
-	function decisionMap (id, lat, lng, text, vid, vopen, name) {
-		var id=String(lat).replace(".","").replace("-","");
-		id += String(lng).replace(".","").replace("-","");
-		
-		// Set "contentString" differently for video or text.
-		if (vid || vid != "") { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: hidden;">';
-			console.log("Video: ", vid);
-			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
-			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="420" height="315"></div><div class="clear">&nbsp;</div>';
-			else {contentString += '<div class="story">';
-				contentString += text+'</div>';
-			}
-			contentString += '</div>';
-		}
-		else { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
-			console.log("No Video");
-			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
-			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="420" height="315"></div><div class="clear">&nbsp;</div>';
-			else {contentString += '<div class="story">';
-				contentString += text+'</div>';
-			}
-			contentString += '</div>';
-		}
-		var infowindow = new google.maps.InfoWindow({
-			content: contentString,
-			maxWidth: 420
-		});
-		var LL = new google.maps.LatLng(lat, lng);
-		// Create marker 
-		var marker = new google.maps.Marker({
-			  position: LL,
-			  //icon: "img/mpin.png",
-			  zIndexProcess: function() { return 1; }	
-		});
-		marker.setZIndex(0);
-		var mpointer = String(lat)+String(lng);
-		// Place the current marker in the "markers" array. It's useful to keep track of everything we're working on in a global context.
-		markers[mpointer]=marker;
-		if (vopen == 1) {
-			infowindow.open(map,marker);
-		}
-		google.maps.event.addListener(marker, 'click', function() {
-			for (key in infoWindows) {
-				console.log("Close infowindow ", key);
-				try { infoWindows[key].close(); }
-				catch (e){}
-				$("iframe#ifr_"+key).remove();	
-			}
-			infowindow.open(map,marker);
-			var strIndex = String(infowindow.anchor.position.Pa+infowindow.anchor.position.Qa);
-			if (id != null) {
-				infoWindows[id]=infowindow;
-			}
-			console.log("iPhone:", iphone());
-			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="420" height="315" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
-			$("iframe#ifr_"+id).load(function(){refreshMap();});
-			infowindow.setContent(contentString);
-			$(".googleInfo").parent().css({"overflow":"hidden"});
-			//$("div[data-innerid="+id+"]").prepend(youtubeOverlay);
-			$("#googlemap").append(youtubeOverlay);
-			google.maps.event.addListener(infowindow,'closeclick',function(event){
-				for (key in infoWindows) {
-					$("iframe#ifr_"+key).remove();	
-				}
-			});
-		});
-		marker.setMap(map);	
-		map.setZoom(16);
-	}
-
-// </ Decision map function>	
-
 
 //  < Holiday map function >
 
@@ -480,6 +394,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 	
 // Ping the server for user submissions.
 
+	var LAYER = getUrlVars()["layer"];
 	console.log("Layer: ", LAYER);
 
 // In this area, we will determine which map content to load.
@@ -488,40 +403,6 @@ $("div#googlemap").bind("loadmap", function initialize() {
 
 // At some point down the line, there may be the need to call multiple types of maps.
 // When this happens, I'll have to find a way to determine the proper scope (e.g. map.setZoom, etc).
-
-// < Decision Call >	
-
-	if (LAYER == "decision") {	
-		$.ajax({
-			  url: 'decision.php', 
-			  type: 'GET',
-				dataType: 'json',
-				success: function(data){
-					var latarr = new Array(), lonarr = new Array();
-					$(data).each(function(k, v){
-						
-	//*****************THIS IS WHERE THE DATABASE IS TRAVERSED.***********//
-						var tx = "none";
-						if (v.text != null) { tx = v.text; }
-						var nm = "none";
-						if (v.name != null) { nm = v.name; }
-						
-	//*****************THIS IS WHERE WE MAP AN ELEMENT.***********//
-						console.log("Mapping something");
-						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm);
-						latarr.push(parseFloat(v.lat));	
-						lonarr.push(parseFloat(v.lon));	
-						if (latarr.length > 1) { latarr.splice(-1,1); }
-						if (lonarr.length > 1) { lonarr.splice(-1,1); }
-						
-				});//End each
-			  },//End success condition
-			error: function(xhr, statusText, errorThrown){
-				alert('Server error: '+xhr.statusText+", "+xhr.errorThrown+", "+ xhr.responseText+", "+xhr.status);
-			}
-		});
-	}
-// </ Decision Call>
 
 // < Holiday Call >	
 

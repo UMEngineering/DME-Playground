@@ -91,20 +91,10 @@ div.transparent {
 	width: 93px;
     bottom: 50px;
     height: 40px;
-    background: rgba(0,39,82,.7);
-    color: white;
+    background: rgba(255, 255, 255, .7);
+    color: black;
 	margin-left: 12px;
 	font-size: 10pt;
-    font-weight: 100;
-    overflow: hidden;
-}
-
-div.transparent .title {
-    padding: 2px;
-
-	
-    display: block;
-    position: relative;
 }
 
 div {
