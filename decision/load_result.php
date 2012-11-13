@@ -10,42 +10,13 @@ for ($i=1; $i<=$Q_COUNT; $i++){
 	if(!array_key_exists("q{$i}",$_COOKIE)) {
 		$exist_cookie = "false";
 	} else {
-		$results[$i] = str_split($_COOKIE["q{$i}"]);
+		$results[$i] = $_COOKIE["q{$i}"];
 	}
 }
-//print_r($results);
 $str_results = implode("-", $results);
 
 # Logic information
 # $logic array format: key=answers from the quiz, in "q1-q2-q3-q4-q5", value is the order of image
-$result = mysql_query("SELECT ans_id, q_id, logic FROM questions;");
-if (!$result){
-	print("Cannot load questions");
-}
-
-// Load the logic
-$logic_db = array();
-$logic_score = array();
-$j = 0;
-for ($i=0; $i<28; $i++){
-	$temp_id = "A";
-	$j++;
-	if ($i == 10) {
-		$temp_id = "O"; $j = 1;
-	} elseif ($i == 20) {
-		$temp_id = "L"; $j = 1;
-	}
-	$logic_score["{$temp_id}{$j}"] = "";
-}
-print_r(array_keys($logic_score));
-while ($row = mysql_fetch_row($result)){
-	if (in_array($row[0], $results[$row[1]])) {
-		$logic_ans = explode(";", $row[2]);
-	}
-}
-
-
-// ==================
 $logic = array("23-45-23-45-2"=>"231450");
 $order_image = "012345";	# Default order: 012345
 if (array_key_exists($str_results, $logic)) {
