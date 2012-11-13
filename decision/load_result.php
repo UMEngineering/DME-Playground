@@ -1,7 +1,6 @@
 <?php
 # Connect to database
 require_once("connect.php");
-require_once("functions.php");
 
 # Questions
 $Q_COUNT = 5;
@@ -131,40 +130,10 @@ if ($_REQUEST["page"] == "result"){
 	}
 } elseif ($_REQUEST["page"] == "next") {
 	# For the 'next' page
-	$categories = array(/*"NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS"*/);
-	
-	# Load the photos from database
-	$result = mysql_query("SELECT title, imgsrc, subcategory, id FROM pages ORDER BY subcategory;");
-	if (!$result){
-		print("Cannot load info from PAGE");
-	}
-	
-	$start = 0;
-	$category_index = -1;
-	while ($row = mysql_fetch_row($result)) {
-		if (!in_array($row[2], $categories)) {
-			$category_index++;
-			array_push($categories, $row[2]);
-			if ($start != 0) echo "</ul></div></div>";?>
-            <ul class="inside-nav" id="category<?= $category_index ?>">
-                <li><?= strtoupper($categories[$category_index]) ?></li>
-            </ul>
-            <div class="scroll-background">
-                <div class="scrollview-right" id="scrollview-right<?= $category_index ?>">
-                    <ul class="imgs-nav">
-            <?php
-		}?>
-                        <li>
-                            <a href="#" onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')"><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
-                            <div class="transparent"><span class="title"><?= $row[0] ?></span></div></a>
-                        </li>
-        <?php
-		$start++;
-	}
-	/*
+	$categories = array("NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS");
 	for ($i=0; $i<count($categories); $i++) {
 		?>
-        <ul class="inside-nav" id="category<?= $i ?>">
+        <ul class="inside-nav">
             <li><?= $categories[$i] ?></li>
         </ul>
         <div class="scroll-background">
@@ -174,7 +143,7 @@ if ($_REQUEST["page"] == "result"){
                     for ($j=0; $j<9; $j++) {
                         ?>
                         <li>
-                            <a href="#" onclick="changePageDetail(1, '<?= $categories[$i] ?>', 'scrollview-right<?= $i ?>')"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                            <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
                             <div class="transparent"><span class="title">Undergrad Research</span></div></a>
                         </li>
                     <?php
@@ -184,10 +153,6 @@ if ($_REQUEST["page"] == "result"){
             </div>
         </div>
         <?php
-	}*/
-} elseif ($_REQUEST["page"] == "detail" && !empty($_REQUEST["id"])) {
-	# For detail page (when click on a image)
-	$id = $_REQUEST["id"];
-	load_page($id);
+	}
 }
 ?>

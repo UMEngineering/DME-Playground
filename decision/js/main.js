@@ -1,5 +1,5 @@
 
-// Change a page for quiz result, drag information via Ajax
+// Change a page, drag information via Ajax
 function changePage(page){
 	var urlAjax = "load_result.php?page=" + page;
 	var response = $.ajax({url: urlAjax, success: function(){
@@ -22,22 +22,6 @@ function changePage(page){
 			create_yui('#scrollview-right2');
 			create_yui('#scrollview-right3');
 		}
-	}});
-}
-
-// Load the detailed page
-function changePageDetail(id, title, navid){
-	var urlAjax = "load_result.php?page=detail&id=" + id;
-	var response = $.ajax({url: urlAjax, success: function(){
-		if ($(".bottom").html() == null) {
-			// Append the bottom first
-			$('head').append("<link rel=\"stylesheet\" href=\"css/pages.css\" type=\"text/css\" />");
-			$("#container").append("<div class=\"bottom\"><div id=\"bottom-title\">"+title+"</div><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#"+navid).html()+"</div></div>");
-			//create_yui('#img-nav-div');
-		}
-		
-		$("#main").html(response.responseText);
-		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
 	}});
 }
 
@@ -96,12 +80,11 @@ function load_checklist(){
 	for (var i=0; i<arr_cookie.length; i++) {
 		if (arr_cookie[i].indexOf("checklist=") == 0) {
 			var arr_split_cookie = arr_cookie[i].split("=");
-			var arr_finalresult = arr_split_cookie[1].split("-");
-			for (var i=0; i<arr_finalresult.length; i++){
-				$("#c"+arr_finalresult[i]).attr("checked", "checked");
-				checkthis("c"+arr_finalresult[i]);
+			var arr_result = arr_split_cookie[1].split("-");
+			for (var i=0; i<arr_result.length; i++){
+				$("#c"+arr_result[i]).attr("checked", "checked");
+				checkthis("c"+arr_result[i]);
 			}
-			break;
 		}
 	}
 	

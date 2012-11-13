@@ -22,9 +22,3 @@ div#result-div {
 	padding: 0px 56px 12px 0;
 	text-decoration: none;
 }
-
-.innerIMG {
-	border: 5px solid orange;
-	margin: 10px;
-	float: left;
-}
