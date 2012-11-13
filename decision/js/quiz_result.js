@@ -1,24 +1,16 @@
 // JavaScript Document
 // Result page js
-$(document).ready(function(){
-	var param = split_cookie();
-});
 
-// Split the cookie to get data from each one of cookie
-function split_cookie(){
-	// All cookies are in one string, and break them apart by ";"
-	var str_cookie = document.cookie;
-	
-	//alert(str_cookie);
-	
-	var arr_cookie = str_cookie.split("; ");
-	if (arr_cookie.length != 6) {
-		//alert("Failed!");
+// Change the page content to the target page id
+function displayPage(id){
+	if ($(".bottom").html() == null) {
+		$('head').append("<link rel=\"stylesheet\" href=\"css/pages.css\" type=\"text/css\" />");
+		$("#container").append("<div class=\"bottom\"><div id=\"bottom-title\">RESULTS</div><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#result-div").html()+"</div></div>");
+		//create_yui('#img-nav-div');
 	} else {
-		var arr_split_cookie = new Array();
-		for (var i=0; i<arr_cookie.length-1; i++){
-			arr_split_cookie[i] = arr_cookie[i].split("=");
-		}
-		//alert(arr_split_cookie);
+		
 	}
+	
+	$("#nav").html("<li>"+$("#content"+id+" .title").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
+	$("#main").html($("#content"+id+" .description").html());
 }

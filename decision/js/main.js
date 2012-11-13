@@ -77,10 +77,15 @@ function load_checklist(){
 	var str_cookie = document.cookie;
 	
 	var arr_cookie = str_cookie.split("; ");
-	var arr_split_cookie = arr_cookie[0].split("=");
-	var arr_result = arr_split_cookie[1].split("-");
-	for (var i=0; i<arr_result.length; i++){
-		$("#c"+arr_result[i]).attr("checked", "checked");
-		checkthis("c"+arr_result[i]);
+	for (var i=0; i<arr_cookie.length; i++) {
+		if (arr_cookie[i].indexOf("checklist=") == 0) {
+			var arr_split_cookie = arr_cookie[i].split("=");
+			var arr_result = arr_split_cookie[1].split("-");
+			for (var i=0; i<arr_result.length; i++){
+				$("#c"+arr_result[i]).attr("checked", "checked");
+				checkthis("c"+arr_result[i]);
+			}
+		}
 	}
+	
 }
