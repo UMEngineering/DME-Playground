@@ -92,7 +92,7 @@ body {
     background: #2A4872;
 	
     margin: 10px;
-    padding: 2px 0px 20px;
+    padding: 2px 4px 20px;
     border-bottom: 3px solid white;
     box-shadow: 0 0 10px rgba(0,0,0,.8);
 }
@@ -171,64 +171,6 @@ div.video {
 
 div.video img {
 	max-width: 100%;
-}
-
-div.how {
-    position: relative;
-    width: 100%;
-    height: 53px;
-    background: white;
-    font-size: 17px;
-    color: #00295C;
-    font-weight: bold;
-    text-align: center;
-}
-
-div.how span {
-    display: block;
-	
-    position: absolute;
-    width: 264px;
-    height: 24px;
-    left: 50%;
-    bottom: 50%;
-    margin: -12px -133px;
-}
-
-div.links {
-    position: relative;
-    overflow: auto;
-    display: block;
-	
-    width: 330px;
-    margin: 20px auto 0;
-    padding: 51px 0 0;
-    background: url(../img/start.png) no-repeat center top;
-}
-
-a.custom {
-    
-}
-
-a.explore {
-    float: right !important;
-    
-}
-
-div.links a {
-    border: thin solid white;
-    border-radius: 30px;
-    display: block;
-    width: 105px;
-	
-    height: 39px;
-    float: left;
-    color: #00295C;
-    font-size: 12px;
-    text-decoration: none;
-    padding: 8px 23px 0;
-    text-align: center;
-    background: #E89600;
 }
 
 /*
