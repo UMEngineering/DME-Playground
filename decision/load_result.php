@@ -13,6 +13,7 @@ for ($i=1; $i<=$Q_COUNT; $i++){
 		$results[$i] = str_split($_COOKIE["q{$i}"]);
 	}
 }
+//print_r($results);
 $str_results = implode("-", $results);
 
 # Logic information
@@ -22,44 +23,44 @@ if (!$result){
 	print("Cannot load questions");
 }
 
-# Load and calculate the logic
+// Load the logic
 $logic_db = array();
 $logic_score = array();
 $j = 0;
-$temp_id = "A";
 for ($i=0; $i<28; $i++){
+	$temp_id = "A";
 	$j++;
 	if ($i == 10) {
 		$temp_id = "O"; $j = 1;
 	} elseif ($i == 20) {
 		$temp_id = "L"; $j = 1;
 	}
-	$logic_score["{$temp_id}{$j}"] = 0;
+	$logic_score["{$temp_id}{$j}"] = "";
 }
+print_r(array_keys($logic_score));
 while ($row = mysql_fetch_row($result)){
 	if (in_array($row[0], $results[$row[1]])) {
 		$logic_ans = explode(";", $row[2]);
-		for ($i=0; $i<count($logic_ans); $i++) {
-			if (array_key_exists($logic_ans[$i], $logic_score)) {
-				$logic_score[$logic_ans[$i]]++;
-			}
-		}
 	}
 }
-arsort($logic_score);
-$rank = (array_keys($logic_score));
 
-# Load the top 6 best match result from the database based on the logic result
-$result = mysql_query("SELECT * FROM results WHERE r_id='{$rank[0]}' OR r_id='{$rank[1]}' OR r_id='{$rank[2]}' OR r_id='{$rank[3]}' OR r_id='{$rank[4]}' OR r_id='{$rank[5]}';");
-if (!$result){
-	print("Cannot load questions");
+
+// ==================
+$logic = array("23-45-23-45-2"=>"231450");
+$order_image = "012345";	# Default order: 012345
+if (array_key_exists($str_results, $logic)) {
+	$order_image = $logic[$str_results];
 }
 
-# Prepare the content for output
-$contents = array();
-while ($row = mysql_fetch_row($result)){
-	array_push($contents, array('r_id'=>$row[1], 'title'=>$row[2], 'description'=>$row[3], 'category'=>$row[4], 'subcategory'=>$row[5]));
-}
+# The six images in the result page
+$images = array(array("img/scroll/scroll1.png", "Multidisciplinary Design program", "Multidisciplinary Design program", "#"),
+				array("img/scroll/scroll2.png", "Arts &amp; Culture", "Arts &amp; Culture", "#"),
+				array("img/scroll/scroll3.png", "Entrepreneurship", "Entrepreneurship", "#"),
+				array("img/scroll/scroll1.png", "Undergrad Research", "Undergrad Research", "#"),
+				array("img/scroll/scroll2.png", "Student Teams &amp; Organizations", "Student Teams &amp; Organizations", "#"),
+				array("img/scroll/scroll3.png", "Honors Program", "Honors Program", "#"));
+
+
 
 # =========== AJAX return start =============
 # Pages: result, explore, next
@@ -81,12 +82,12 @@ if ($_REQUEST["page"] == "result"){
 		<div id="result-div">
 			<ul class="imgs-nav" id="result-image">
 			<?php
-				for ($i=0; $i<6; $i++){
+				for ($i=0; $i<strlen($order_image); $i++){
 					?>
 					<li>
-						<a href="#">
-							<img class="scroll-img" src="img/scroll/scroll1.png" alt="<?= $contents[$i]['title'] ?>" />
-							<div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span>
+						<a href="<?= $images[$order_image[$i]][3] ?>">
+							<img class="scroll-img" src="<?= $images[$order_image[$i]][0] ?>" alt="<?= $images[$order_image[$i]][1] ?>" />
+							<div class="transparent"><span class="title"><?= $images[$order_image[$i]][2] ?></span>
 						</a>
 					</li>
 					<?php
@@ -97,7 +98,6 @@ if ($_REQUEST["page"] == "result"){
 		<?php
 	}
 } elseif ($_REQUEST["page"] == "explore") {
-	# For the 'explore' page
 	$categories = array("ACADEMICS", "OPPORTUNITIES", "LIFE &amp; ACTIVITIES");
 	for ($i=0; $i<count($categories); $i++) {
 		?>
@@ -123,7 +123,6 @@ if ($_REQUEST["page"] == "result"){
         <?php
 	}
 } elseif ($_REQUEST["page"] == "next") {
-	# For the 'next' page
 	$categories = array("NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS");
 	for ($i=0; $i<count($categories); $i++) {
 		?>
