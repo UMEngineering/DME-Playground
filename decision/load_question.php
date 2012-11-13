@@ -9,7 +9,7 @@
 	}
 	
 	# Fetch the questions
-	$result = mysql_query("SELECT * FROM questions WHERE q_id=\"{$qid}\";");
+	$result = mysql_query("SELECT q_id, question, answer FROM questions WHERE q_id=\"{$qid}\";");
 	if (!$result){
 		print("Cannot load questions");
 	}
