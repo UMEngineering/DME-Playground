@@ -57,5 +57,8 @@ function save_cookie(){
 	if (answer == "") answer = "0";
 	
 	// Save the cookie, format: "q1=123" etc.
-	document.cookie = "q"+qid+"="+answer;
+	var days = 120;
+	var expTime = new Date();
+	expTime.setTime(expTime.getTime()+days*24*60*60*1000);
+	document.cookie = "q"+qid+"="+answer+";expires="+expTime.toGMTString();
 }

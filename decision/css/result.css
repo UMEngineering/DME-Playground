@@ -4,12 +4,20 @@ ul#result-image {
 	overflow-y: visible;
 }
 
+#main {
+	margin: 0 10px 10px 10px;
+}
+
 div#result-div {
 	height: 300px;
 }
 
 #result-explore {
 	height: 50px;
+}
+
+.flex-control-nav {
+	background: #657E9D;
 }
 
 .explore {
@@ -36,7 +44,7 @@ div#result-div {
 	
 	#main {
 		background: #2A4872;
-		margin: 0 10px 10px 10px;
+		margin: 0 5px 10px 5px;
 		padding: 2px 0px 20px;
 		box-shadow: 0 0 10px rgba(0,0,0,.8);
 	}
@@ -66,7 +74,7 @@ div#result-div {
 	
 	div#result-div {
 		float: right;
-		width: 480px;
+		width: 485px;
 	}
 	
 	div#content {
@@ -83,6 +91,7 @@ div#result-div {
 	}
 	
 	div.transparent {
+		font-family: sans-serif;
 		position: relative;
 		width: 140px;
 		bottom: 73px;
@@ -96,11 +105,27 @@ div#result-div {
 		margin: -30px 10px 0 10px;
 		overflow: hidden;
 	}
+	
+	.imgs-nav-desktop {
+		position: relative;
+		left: 10%;
+	}
 }
 
 @media only screen and (min-width: 901px) {
 	div#content {
 		max-width: 400px;
 		float: left;
+	}
+	
+	.imgs-nav-desktop {
+		position: relative;
+		left: 16%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#main {
+		margin: 0;
 	}
 }

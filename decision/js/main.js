@@ -1,9 +1,11 @@
+var inNav = true;
 
 // Change a page for quiz result, drag information via Ajax
 function changePage(page){
 	var urlAjax = "load_result.php?page=" + page;
 	var response = $.ajax({url: urlAjax, success: function(){
 		$("#main").html(response.responseText);
+		$("#main").css("height", "100%");
 		
 		// Set the "current" class for the top nav
 		$("ul#nav li").each(function(index, element) {
@@ -12,35 +14,62 @@ function changePage(page){
 		$("#"+page+"-nav").attr("class", "current");
 		
 		// Create horizontal scroll if in page "explore" or "what's next"
-		if (page == "explore") {
-			/*create_yui('#scrollview-right0');
-			create_yui('#scrollview-right1');
-			create_yui('#scrollview-right2');*/
-			$('.flexslider').flexslider({
-				animation: "slide",
-				slideshow: false
+		var screenWidth = $(window).width();
+		var originWidth = screenWidth;
+		if (page == "explore" || page == "next") {
+			if (screenWidth <= 800){
+				create_yui('#scrollview-right0');
+				create_yui('#scrollview-right1');
+				create_yui('#scrollview-right2');
+				create_yui('#scrollview-right3');
+			} else {
+				$('.flexslider').flexslider({
+					animation: "slide",
+					slideshow: false/*,
+					animationLoop: false*/
+				});
+			}
+			$("#main").css("height", "auto");
+			$(window).resize(function () { 
+				screenWidth = $(window).width();
+				if (screenWidth <= 800 && originWidth > 800 && inNav){
+					create_yui('#scrollview-right0');
+					create_yui('#scrollview-right1');
+					create_yui('#scrollview-right2');
+					create_yui('#scrollview-right3');
+				} else if (screenWidth > 800 && originWidth <= 800 && inNav) {
+					$('.flexslider').flexslider({
+						animation: "slide",
+						slideshow: false/*,
+						animationLoop: false*/
+					});
+					originWidth = screenWidth;
+				}
 			});
-		} else if (page == "next") {
-			create_yui('#scrollview-right0');
-			create_yui('#scrollview-right1');
-			create_yui('#scrollview-right2');
-			create_yui('#scrollview-right3');
 		}
 	}});
 }
 
 // Load the detailed page
 function changePageDetail(id, title, navid){
+	inNav = false;
+	$("#main").css("height", "100%");
 	var urlAjax = "load_result.php?page=detail&id=" + id;
 	var response = $.ajax({url: urlAjax, success: function(){
 		if ($(".bottom").html() == null) {
 			// Append the bottom first
 			$('head').append("<link rel=\"stylesheet\" href=\"css/pages.css\" type=\"text/css\" />");
-			$("#container").append("<div class=\"bottom\"><div id=\"bottom-title\">"+title+"</div><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#"+navid).html()+"</div></div>");
-			//create_yui('#img-nav-div');
+			$("#container").append("<div class=\"bottom display-when-mobile\"><div id=\"bottom-title\">"+title+"</div><div id=\"bottom-scrollbackground\"><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#"+navid).html()+"</div></div></div>");
+			$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\">"+$("#desk-"+navid).html()+"</div></div>");
 		}
 		
 		$("#main").html(response.responseText);
+		create_yui('#img-nav-div');
+		$('.flexslider').flexslider({
+			animation: "slide",
+			slideshow: false/*,
+			animationLoop: false*/
+		});
 		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
 	}});
 }
