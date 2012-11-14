@@ -4,12 +4,20 @@ ul#result-image {
 	overflow-y: visible;
 }
 
+#main {
+	margin: 0 10px 10px 10px;
+}
+
 div#result-div {
 	height: 300px;
 }
 
 #result-explore {
 	height: 50px;
+}
+
+.flex-control-nav {
+	background: #657E9D;
 }
 
 .explore {
@@ -27,4 +35,97 @@ div#result-div {
 	border: 5px solid orange;
 	margin: 10px;
 	float: left;
+}
+
+@media only screen and (min-width: 801px) {
+    #container {
+		max-width: 960px;
+	}
+	
+	#main {
+		background: #2A4872;
+		margin: 0 5px 10px 5px;
+		padding: 2px 0px 20px;
+		box-shadow: 0 0 10px rgba(0,0,0,.8);
+	}
+	
+	#topcontainer {
+		height: 35px;
+		padding: 18px 0 0 8px;
+		margin-top: 0px;
+	}
+	
+	#top-content-desktop {
+		font-family: Tahoma, Geneva, sans-serif;
+		font-weight: bold;
+	}
+	
+	#top-content-mobile {
+		display: none;
+	}
+	
+	.display-when-desktop {
+		display: block;
+	}
+	
+	ul#nav {
+		margin-left: 10px;
+	}
+	
+	div#result-div {
+		float: right;
+		width: 485px;
+	}
+	
+	div#content {
+		max-width: 300px;
+		float: left;
+	}
+	
+	ul.imgs-nav, ul.imgs-nav li {
+		height: 200px;
+	}
+	
+	ul.imgs-nav li a img {
+		width: 140px;
+	}
+	
+	div.transparent {
+		font-family: sans-serif;
+		position: relative;
+		width: 140px;
+		bottom: 73px;
+		height: 55px;
+	}
+	
+	#topcontainer img#right-logo {
+		/*position: absolute;
+		right: 10px;*/
+		float: right;
+		margin: -30px 10px 0 10px;
+		overflow: hidden;
+	}
+	
+	.imgs-nav-desktop {
+		position: relative;
+		left: 10%;
+	}
+}
+
+@media only screen and (min-width: 901px) {
+	div#content {
+		max-width: 400px;
+		float: left;
+	}
+	
+	.imgs-nav-desktop {
+		position: relative;
+		left: 16%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#main {
+		margin: 0;
+	}
 }

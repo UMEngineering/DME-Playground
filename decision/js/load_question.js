@@ -9,7 +9,7 @@ $(document).ready(function(){
 function get_question(qid){
 	var urlAjax = "load_question.php?qid=" + qid;
 	var response = $.ajax({url: urlAjax, success: function(){
-		$("#top_title").html(questions+" Quick Qs: Question "+qid);
+		$(".top_title").html(questions+" Quick Qs: Question "+qid);
 		$("#question_content").html(response.responseText);
 		if (questions-qid > 0){
 			$(".only").html("Only "+(questions-qid)+" more to go!");
@@ -57,5 +57,8 @@ function save_cookie(){
 	if (answer == "") answer = "0";
 	
 	// Save the cookie, format: "q1=123" etc.
-	document.cookie = "q"+qid+"="+answer;
+	var days = 120;
+	var expTime = new Date();
+	expTime.setTime(expTime.getTime()+days*24*60*60*1000);
+	document.cookie = "q"+qid+"="+answer+";expires="+expTime.toGMTString();
 }

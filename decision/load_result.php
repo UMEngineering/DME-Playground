@@ -4,6 +4,7 @@
 require_once("connect.php");
 require_once("functions.php");
 //require_once("../../db.php");
+require_once("database/db.php");
 
 # Questions
 $Q_COUNT = 5;
@@ -107,14 +108,112 @@ if ($_REQUEST["page"] == "result"){
 		<?php
 	}
 } elseif ($_REQUEST["page"] == "explore") {
+	
 	# For the 'explore' page
-	$categories = array("ACADEMICS", "OPPORTUNITIES", "LIFE &amp; ACTIVITIES");
+	$categories = array(/*"NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS"*/);
+	
+	# Load the photos from database
+	$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"explore\" ORDER BY subcategory;");
+	if (!$result){
+		print("Cannot load info from PAGE");
+	}
+	
+	# For mobile version
+	$start = 0;
+	$category_index = -1;
+	$target_blank = "";
+	while ($row = mysql_fetch_row($result)) {
+		if ($row[4] != "") {
+			$out_href=$row[4];
+			$target_blank = "target=_blank";
+		} else { 
+			$out_href="#";
+			$target_blank = "";
+		}
+		if (!in_array($row[2], $categories)) {
+			$count = 1;
+			$category_index++;
+			array_push($categories, $row[2]);
+			if ($start != 0) echo "</ul></div></div>";?>
+            <ul class="inside-nav display-when-mobile" id="category<?= $category_index ?>">
+                <li><?= strtoupper($categories[$category_index]) ?></li>
+            </ul>
+        	<!-- Display this in mobile version -->
+            <div class="scroll-background display-when-mobile">
+                <div class="scrollview-right" id="scrollview-right<?= $category_index ?>">
+                    <ul class="imgs-nav">
+            <?php
+		}?>
+                        <li>
+                            <a href="<?= $out_href ?>" <?= $target_blank ?>
+                            <?php
+                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')";
+							<?php
+							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
+                            <div class="transparent"><span class="title"><?= $row[0] ?></span></div></a>
+                        </li>
+        <?php
+		$start++;
+	}
+	echo "</ul></div></div>";
+	
+	# Desktop Version
+	mysql_data_seek($result,0);
+	$start = 0;
+	$category_index = -1;
+	while ($row = mysql_fetch_row($result)) {
+		if ($row[4] != "") {
+			$out_href=$row[4];
+			$target_blank = "target=_blank";
+		} else { 
+			$out_href="#";
+			$target_blank = "";
+		}
+		if ($row[2] != $categories[$category_index]) {
+			$category_index++;
+			if ($count % 4 != 0) echo "</ul></li>";
+			if ($start != 0) echo "</ul></div>";
+			$count = 0;
+			?>
+            <ul class="inside-nav display-when-desktop" id="category<?= $category_index ?>">
+                <li><?= strtoupper($categories[$category_index]) ?></li>
+            </ul>
+            <!-- Display this in desktop version -->
+            <div class="scroll-background display-when-desktop flexslider" id="desk-scrollview-right<?= $category_index ?>">
+            	<ul class="slides">
+            <?php
+		}
+	?>
+        
+            <?php
+            if ($count % 4 == 0) echo "<li><ul class=\"imgs-nav imgs-nav-desktop\">";
+            ?>
+                    <li>
+                            <a href="<?= $out_href ?>" <?= $target_blank ?>
+                            <?php
+                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')";
+							<?php
+							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
+                            <div class="transparent" style="bottom: 67px;"><span class="title"><?= $row[0] ?></span></div></a>
+                    </li>
+            <?php
+			$count++;
+			if ($count % 4 == 0) echo "</ul></li>";
+            ?>
+        <?php
+		$start++;
+	}
+	if ($count % 4 != 0) echo "</ul></li>";
+	echo "</ul></div>";
+	# For the 'explore' page
+	/*$categories = array("ACADEMICS", "OPPORTUNITIES", "LIFE &amp; ACTIVITIES");
 	for ($i=0; $i<count($categories); $i++) {
 		?>
         <ul class="inside-nav">
             <li><?= $categories[$i] ?></li>
         </ul>
-        <div class="scroll-background">
+        <!-- Display this in mobile version -->
+        <div class="scroll-background display-when-mobile">
             <div class="scrollview-right" id="scrollview-right<?= $i ?>">
                 <ul class="imgs-nav">
 					<?php
@@ -130,64 +229,129 @@ if ($_REQUEST["page"] == "result"){
                 </ul>
             </div>
         </div>
+        <!-- Display this in desktop version -->
+        <div class="scroll-background display-when-desktop flexslider">
+            <ul class="slides">
+				<?php
+                for ($k=0; $k<2; $k++) {
+                ?>
+                <li>
+                    <ul class="imgs-nav imgs-nav-desktop">
+                        <?php
+                        for ($j=0; $j<4; $j++) {
+                            ?>
+                            <li>
+                                <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
+                                <div class="transparent" style="bottom: 67px;"><span class="title">Undergrad Research</span></div></a>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                    </ul>
+                </li>
+                <?php
+                }
+                ?>
+            </ul>
+        </div>
         <?php
-	}
+	}*/
 } elseif ($_REQUEST["page"] == "next") {
 	# For the 'next' page
 	$categories = array(/*"NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS"*/);
 	
 	# Load the photos from database
-	$result = mysql_query("SELECT title, imgsrc, subcategory, id FROM pages ORDER BY subcategory;");
+	$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"next\" ORDER BY subcategory;");
 	if (!$result){
 		print("Cannot load info from PAGE");
 	}
 	
+	# For mobile version
 	$start = 0;
 	$category_index = -1;
 	while ($row = mysql_fetch_row($result)) {
+		if ($row[4] != "") {
+			$out_href=$row[4];
+			$target_blank = "target=_blank";
+		} else { 
+			$out_href="#";
+			$target_blank = "";
+		}
 		if (!in_array($row[2], $categories)) {
+			$count = 1;
 			$category_index++;
 			array_push($categories, $row[2]);
 			if ($start != 0) echo "</ul></div></div>";?>
-            <ul class="inside-nav" id="category<?= $category_index ?>">
+            <ul class="inside-nav display-when-mobile" id="category<?= $category_index ?>">
                 <li><?= strtoupper($categories[$category_index]) ?></li>
             </ul>
-            <div class="scroll-background">
+        	<!-- Display this in mobile version -->
+            <div class="scroll-background display-when-mobile">
                 <div class="scrollview-right" id="scrollview-right<?= $category_index ?>">
                     <ul class="imgs-nav">
             <?php
 		}?>
                         <li>
-                            <a href="#" onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')"><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
+                            <a href="<?= $out_href ?>" <?= $target_blank ?>
+                            <?php
+                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')";
+							<?php
+							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent"><span class="title"><?= $row[0] ?></span></div></a>
                         </li>
         <?php
 		$start++;
 	}
-	/*
-	for ($i=0; $i<count($categories); $i++) {
-		?>
-        <ul class="inside-nav" id="category<?= $i ?>">
-            <li><?= $categories[$i] ?></li>
-        </ul>
-        <div class="scroll-background">
-            <div class="scrollview-right" id="scrollview-right<?= $i ?>">
-                <ul class="imgs-nav">
-					<?php
-                    for ($j=0; $j<9; $j++) {
-                        ?>
-                        <li>
-                            <a href="#" onclick="changePageDetail(1, '<?= $categories[$i] ?>', 'scrollview-right<?= $i ?>')"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div></a>
-                        </li>
-                    <?php
-                    }
-                    ?>
-                </ul>
-            </div>
-        </div>
+	echo "</ul></div></div>";
+	
+	# Desktop Version
+	mysql_data_seek($result,0);
+	$start = 0;
+	$category_index = -1;
+	while ($row = mysql_fetch_row($result)) {
+		if ($row[4] != "") {
+			$out_href=$row[4];
+			$target_blank = "target=_blank";
+		} else { 
+			$out_href="#";
+			$target_blank = "";
+		}
+		if ($row[2] != $categories[$category_index]) {
+			$category_index++;
+			if ($count % 4 != 0) echo "</ul></li>";
+			if ($start != 0) echo "</ul></div>";
+			$count = 0;
+			?>
+            <ul class="inside-nav display-when-desktop" id="category<?= $category_index ?>">
+                <li><?= strtoupper($categories[$category_index]) ?></li>
+            </ul>
+            <!-- Display this in desktop version -->
+            <div class="scroll-background display-when-desktop flexslider" id="desk-scrollview-right<?= $category_index ?>">
+            	<ul class="slides">
+            <?php
+		}
+	?>
+        
+            <?php
+            if ($count % 4 == 0) echo "<li><ul class=\"imgs-nav imgs-nav-desktop\">";
+            ?>
+                    <li>
+                            <a href="<?= $out_href ?>" <?= $target_blank ?>
+                            <?php
+                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')";
+							<?php
+							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
+                            <div class="transparent" style="bottom: 67px;"><span class="title"><?= $row[0] ?></span></div></a>
+                    </li>
+            <?php
+			$count++;
+			if ($count % 4 == 0) echo "</ul></li>";
+            ?>
         <?php
-	}*/
+		$start++;
+	}
+	if ($count % 4 != 0) echo "</ul></li>";
+	echo "</ul></div>";
 } elseif ($_REQUEST["page"] == "detail" && !empty($_REQUEST["id"])) {
 	# For detail page (when click on a image)
 	$id = $_REQUEST["id"];

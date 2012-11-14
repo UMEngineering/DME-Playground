@@ -3,11 +3,7 @@
 #main {
 	background: white;
 }
-
-#container, #main {
-	height: 120%;
-}
-
+	
 #main p, #checklist div p {
 	font-family: sans-serif;
 	color: black;
@@ -31,15 +27,6 @@ span.checked {
 	display: block;
 }
 
-.bottom {
-	width: 100%;
-	background: white;
-	position: fixed;
-	bottom: 0%;
-	overflow-y: scroll;
-	white-space: nowrap;
-}
-
 #bottom-title, #img-nav-div {
 	background: #212A55;
 }
@@ -52,7 +39,55 @@ span.checked {
 	font-size: 10pt;
 }
 
-div.bottom, div#img-nav-div, ul.imgs-nav {
-	white-space: nowrap;
-	overflow-y: scroll;
+@media only screen and (max-width: 800px) {
+	#container, #main {
+		height: 100%;
+	}
+	
+	.bottom {
+		width: 100%;
+		background: white;
+		position: fixed;
+		bottom: 0%;
+		white-space: nowrap;
+	}
+	
+	div#img-nav-div{
+		white-space: nowrap;
+	}
+	
+	#bottom-scrollbackground {
+		background: #212A55;
+	}
+	
+	#top-content-mobile {
+		display: block;
+	}
+	
+	.display-when-desktop {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 801px) {
+	#main {
+		margin-bottom: 0;
+	}
+	
+	.bottom {
+		background: white;
+		margin: 0 5px 0 5px;
+	}
+	
+	#bottom-title, .flex-control-nav {
+		background: #657E9D;
+	}
+	
+	#top-content-mobile {
+		display: none;
+	}
+	
+	.display-when-desktop {
+		display: block;
+	}
 }
