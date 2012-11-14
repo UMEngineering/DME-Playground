@@ -1,5 +1,5 @@
 <?php
-	require("../../db.php");
+	require("database/db.php");
 	require_once("functions.php");
 ?>
 <!DOCTYPE html>
@@ -21,10 +21,6 @@
         <link rel="stylesheet" href="css/difference.css">
     	<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="//use.typekit.net/eys6qmh.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">stLight.options({publisher: "39723eac-eec9-4aea-a4c7-aa9cb890e47a"});</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -39,22 +35,54 @@
                 </ul>
             </div>        
             <div id="main" role="main">
-          	<h1>Making a Difference</h1>
+          
         
             <div id="container">
                 
+                <?
+					$q1 = "SELECT * FROM difference";
+					$result = mysql_query($q1);
+					for ($i=0; $i<3; $i++) {
+						echo "<!-- i: $i -->";
+						while ($line = mysql_fetch_array($result)){	
+						
+							$rand = rand(0, 100);
+							$class = " sm";
+							
+							if ($rand > 80) $class = " lg";
+							
+							if ($rand < 20) $color = "#2E282E";
+							else if ($rand < 40) $color = "#8A404D";
+							else if ($rand < 60) $color = "#FA5F53";
+							else if ($rand < 80) $color = "#F1EEF5";
+							else $color = "#8691CC";
+							
+							echo "<!-- $rand -->";
+							$image = $line['image1']; 
+							$subtitle = $line['story'];
+							if ($line['color'] != "") $color = $line['color'];
+							?>
+							<!-- <?= $image ?> -->
+							
+							<div class="mason<?= $class?>" style="border: 6px solid <?= $color?>;">
+								<a class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
+								<div class="transparent" style="width: <?= $width?>px" id="a1">
+									<span class="title"><a class="" href="inspiration">Page one</a></span>
+									<span class="subtitle"><?= limit_size($subtitle, $class) ?></span>
+								</div>
+							</div>
+							
+							
+							<?
+						}
+					}
+				?>
+                
+                               
             </div>
             <div id="page-nav" style="display: block;">
-                <a class="cursor" onclick="getimages(1)">Next</a>
+                <a href="page2.php">Next</a>
             </div>	
-            
-            <div id="sharing">
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
-                <span class='st_pinterest_large' displayText='Pinterest'></span>
-            </div>
 
 		</div>
 
@@ -66,22 +94,46 @@
         
         <script src="js/vendor/jquery.lightbox-0.5.min.js"></script>
         <script>
-			var loading = 1;
-			var current = 0;
-			var amount = 25;
 			$(document).ready(function(){
-				getimages(0);
-				
-				// Load more when scroll down
-				$(window).scroll(function(){
-					//$("#test3").html(+" = "+$(window).scrollTop());
-					var value = $(document).height() - $(window).height();
-					if (($(window).scrollTop() <= value+0 && $(window).scrollTop() >= value-0) && $("#nomore").text() == "" && loading == 0){
-						loading = 1;
-						getimages(1);
-						//current = current + amount;
-					}
+				create_lightbox();
+				var $container = $('#container');
+				$container.imagesLoaded(function(){
+				  $container.masonry({
+					itemSelector: '.mason'
+					//isAnimated : 'true'
+				  });
 				});
+				
+				$container.infinitescroll({
+					navSelector  : '#page-nav',    // selector for the paged navigation 
+					nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
+					itemSelector : '.mason',     // selector for all items you'll retrieve
+					loading: {
+					  finishedMsg: 'No more pages to load.',
+					  img: 'http://i.imgur.com/6RMhx.gif'
+					}
+					},
+					// trigger Masonry as a callback
+					function( newElements ) {
+					// hide new items while they are loading
+					var $newElems = $( newElements ).css({ opacity: 0 });
+					// ensure that images load before adding to masonry layout
+					$newElems.imagesLoaded(function(){
+						console.log("Loading new images");
+					  // show elems now they're ready
+					  $newElems.animate({ opacity: 1 });
+					  $container.masonry( 'appended', $newElems, true ); 
+					});
+					create_lightbox();
+				});
+				
+				//=======================
+				// Try to make the click to triger the load
+				/*$(window).unbind('.infscr');
+				$("#next").click(function(){
+					$(document).trigger('retrieve.infscr');
+					return false;
+				});*/
 			});
 			
 			// Create lightbox for each image
@@ -89,39 +141,6 @@
 				$(".lightbox-image").each(function(index, element) {
                     $(this).lightBox({fixedNavigation:true});
                 });
-			}
-			
-			function getimages(first){
-				if ($("#nomore").text() == ""){
-					var urlAjax = "pagejson.php?offset="+current+"&amount="+amount;
-					var $container = $('#container');
-					//alert(urlAjax);
-					//alert(type);
-					var response = $.ajax({url: urlAjax, success: function(){
-						if (first == 0){
-							// Load the first set of page
-							$container.append(response.responseText);
-							create_lightbox();
-							$container.imagesLoaded(function(){
-							  $container.masonry({
-								itemSelector: '.mason'
-								//isAnimated : 'true'
-							  });
-							});
-							current = current + amount;
-							amount = amount + amount;
-						} else {
-							// Load more images when user scroll down or click "next"
-							var newElems = $(response.responseText);
-							newElems.imagesLoaded(function(){
-								$('#container').append(newElems).masonry('appended', newElems);
-								create_lightbox();
-								current = current + amount;
-							});
-						}
-						loading = 0;
-					}});
-				}
 			}
 		</script>
         

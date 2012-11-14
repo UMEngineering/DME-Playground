@@ -1,3 +1,14 @@
+h1 {
+    font-family: "league-gothic", sans-serif;
+	
+    color: white;
+    margin: 10px 0 30px 6px;
+    font-size: 109px;
+    text-transform: uppercase;
+    font-weight: 100;
+    border-bottom: thin solid rgba(255,255,255,.4);
+}
+
 .item {
   margin: 0px;
   float: left;
@@ -280,6 +291,7 @@ header a:hover, header a:active, header a:visited {
 
 #nomore {
 	width: 100%;
+	margin: 60px 0 0;
 	color: white;
 	text-align: center;
 	padding: 10px;
@@ -287,9 +299,34 @@ header a:hover, header a:active, header a:visited {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	background: rgba(10, 10, 10, .3);
+	border: thin solid #222;
 }
 
 .cursor:hover {
 	cursor: pointer;
 	color: white;
+}
+
+#sharing {
+    display: block;
+    position: fixed;
+    width: 43px;
+	
+    border: thin solid #333;
+    right: 0;
+    top: 50%;
+    margin: -130px 0 0;
+    background: white;
+    padding: 7px 0 0 2px;
+    box-shadow: 0 0 30px rgba(0,0,0,.3);
+}
+
+#sharing span {
+    display: block;
+	
+}
+
+.typekit-badge {
+    display: none !important;
+	
 }

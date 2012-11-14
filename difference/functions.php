@@ -23,7 +23,7 @@ function limit_size($str, $class){
 	$result = $str;
 	if ($i < strlen($str)) {
 		$result = substr($str, 0, $last_white_space);
-		return "{$result} ...";
+		return "{$result}...";
 	}
 	return $result;
 }
