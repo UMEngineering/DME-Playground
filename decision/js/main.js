@@ -59,18 +59,27 @@ function changePageDetail(id, title, navid){
 		if ($(".bottom").html() == null) {
 			// Append the bottom first
 			$('head').append("<link rel=\"stylesheet\" href=\"css/pages.css\" type=\"text/css\" />");
+			
+			// Mobile version bottom
 			$("#container").append("<div class=\"bottom display-when-mobile\"><div id=\"bottom-title\">"+title+"</div><div id=\"bottom-scrollbackground\"><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#"+navid).html()+"</div></div></div>");
-			$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\">"+$("#desk-"+navid).html()+"</div></div>");
+			
+			// Desktop version bottom
+			if ($("#desk-"+navid+" .flex-direction-nav").html()) {
+				$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\"><ul class=\"slides\">"+$("#desk-"+navid+" .flex-viewport .slides").html()+"</ul></div></div>");
+				$("li.clone").remove();
+			} else {
+				$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\">"+$("#desk-"+navid).html()+"</div></div>");
+			}
 		}
 		
-		$("#main").html(response.responseText);
 		create_yui('#img-nav-div');
 		$('.flexslider').flexslider({
 			animation: "slide",
-			slideshow: false/*,
-			animationLoop: false*/
+			slideshow: false
 		});
-		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
+		
+		$("#main").html(response.responseText);
+		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"#\" onclick=\"history.back(-1)\">Go Back</a></span>");
 	}});
 }
 
@@ -117,7 +126,11 @@ function checkthis(id){
 			answer += (index+1)+"-";
 		}
     });
-	document.cookie = "checklist="+answer.substr(0, answer.length-1);	
+	
+	var days = 120;
+	var expTime = new Date();
+	expTime.setTime(expTime.getTime()+days*24*60*60*1000);
+	document.cookie = "checklist="+answer.substr(0, answer.length-1)+";expires="+expTime.toGMTString();	
 	//alert(document.cookie);
 }
 

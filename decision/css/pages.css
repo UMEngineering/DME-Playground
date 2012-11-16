@@ -23,7 +23,7 @@ span.checked {
 	position: absolute;
 	width: 99px;
 	height: 128px;
-	background: url(unchecked.png) no-repeat;
+	background: url(../img/unchecked.png) no-repeat;
 	display: block;
 }
 

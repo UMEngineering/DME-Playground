@@ -1,8 +1,8 @@
 <?php
 
-$host = "webapps-db.web.itd.umich.edu";
-$username = "engcomm";
-$pass = "l;'l;kljk90-908978";
+$host = "localhost:8889";
+$username = "root";
+$pass = "root";
 $db = "engcomm";
 
     $link = mysql_connect($host ,$username , $pass)

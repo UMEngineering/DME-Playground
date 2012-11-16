@@ -37,6 +37,34 @@ div#result-div {
 	float: left;
 }
 
+/* Change the style for checklist */
+#checklist {
+	padding: 0 1em 0 1em;
+}
+input[type=checkbox].styled {
+	display: none;
+}
+
+input[type=checkbox].styled + label {
+	display: block;
+	background: url(../img/unchecked-small.png) no-repeat;
+	position: relative;
+	top: 40px;
+	width: 23px;
+	height: 30px;
+	padding: 0;
+}
+
+input[type=checkbox].styled:checked + label {
+	display: block;
+	background: url(../img/checked-small.png) no-repeat;
+	position: relative;
+	top: 40px;
+	width: 23px;
+	height: 30px;
+	padding: 0;
+}
+
 @media only screen and (min-width: 801px) {
     #container {
 		max-width: 960px;

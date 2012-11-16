@@ -2,8 +2,8 @@
 # Connect to database
 //require_once("connect.php");
 require_once("functions.php");
-require_once("../../db.php");
-//require_once("database/db.php");
+//require_once("../../db.php");
+require_once("database/db.php");
 
 # Questions
 $Q_COUNT = 5;
@@ -106,13 +106,13 @@ if ($_REQUEST["page"] == "result"){
 		</div>
 		<?php
 	}
-} elseif ($_REQUEST["page"] == "explore") {
-	
-	# For the 'explore' page
+} elseif ($_REQUEST["page"] == "explore" || $_REQUEST["page"] == "next") {
+	# For the 'explore' or 'next' page
 	$categories = array(/*"NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS"*/);
+	$request_page = $_REQUEST["page"];
 	
 	# Load the photos from database
-	$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"explore\" ORDER BY subcategory;");
+	$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" ORDER BY subcategory;");
 	if (!$result){
 		print("Cannot load info from PAGE");
 	}
@@ -204,60 +204,9 @@ if ($_REQUEST["page"] == "result"){
 	}
 	if ($count % 4 != 0) echo "</ul></li>";
 	echo "</ul></div>";
-	# For the 'explore' page
-	/*$categories = array("ACADEMICS", "OPPORTUNITIES", "LIFE &amp; ACTIVITIES");
-	for ($i=0; $i<count($categories); $i++) {
-		?>
-        <ul class="inside-nav">
-            <li><?= $categories[$i] ?></li>
-        </ul>
-        <!-- Display this in mobile version -->
-        <div class="scroll-background display-when-mobile">
-            <div class="scrollview-right" id="scrollview-right<?= $i ?>">
-                <ul class="imgs-nav">
-					<?php
-                    for ($j=0; $j<9; $j++) {
-                        ?>
-                        <li>
-                            <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                            <div class="transparent"><span class="title">Undergrad Research</span></div></a>
-                        </li>
-                    <?php
-                    }
-                    ?>
-                </ul>
-            </div>
-        </div>
-        <!-- Display this in desktop version -->
-        <div class="scroll-background display-when-desktop flexslider">
-            <ul class="slides">
-				<?php
-                for ($k=0; $k<2; $k++) {
-                ?>
-                <li>
-                    <ul class="imgs-nav imgs-nav-desktop">
-                        <?php
-                        for ($j=0; $j<4; $j++) {
-                            ?>
-                            <li>
-                                <a href="#"><img class="scroll-img" src="img/scroll/scroll1.png" alt="undergrad research" />
-                                <div class="transparent" style="bottom: 67px;"><span class="title">Undergrad Research</span></div></a>
-                            </li>
-                        <?php
-                        }
-                        ?>
-                    </ul>
-                </li>
-                <?php
-                }
-                ?>
-            </ul>
-        </div>
-        <?php
-	}*/
 } elseif ($_REQUEST["page"] == "next") {
-	# For the 'next' page
-	$categories = array(/*"NEXT STEPS", "MEET SOME STUDENTS", "EXPLORE ANN ARBOR", "MAKE CONNECTIONS"*/);
+	/*# For the 'next' page
+	$categories = array();
 	
 	# Load the photos from database
 	$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"next\" ORDER BY subcategory;");
@@ -350,7 +299,7 @@ if ($_REQUEST["page"] == "result"){
 		$start++;
 	}
 	if ($count % 4 != 0) echo "</ul></li>";
-	echo "</ul></div>";
+	echo "</ul></div>";*/
 } elseif ($_REQUEST["page"] == "detail" && !empty($_REQUEST["id"])) {
 	# For detail page (when click on a image)
 	$id = $_REQUEST["id"];

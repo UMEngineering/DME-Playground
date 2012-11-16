@@ -33,9 +33,9 @@
             </div>
             
             <ul id="nav">
-                <li class="current" id="result-nav"><a href="#" onclick="changePage('result');">Q'S RESULTS</a></li>
-               	<li id="explore-nav"><a href="#" onclick="changePage('explore');">EXPLORE</a></li>
-               	<li id="next-nav"><a href="#" onclick="changePage('next');">WHAT'S NEXT?</a></li>
+                <li class="current" id="result-nav"><a href="#result">Q'S RESULTS</a></li>
+               	<li id="explore-nav"><a href="#explore">EXPLORE</a></li>
+               	<li id="next-nav"><a href="#next">WHAT'S NEXT?</a></li>
             </ul>
             <div id="main">
             
@@ -48,9 +48,34 @@
         <script src="js/quiz_result.js"></script>
         <script src="js/vendor/yui-min.js"></script>
         <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/jquery.ba-hashchange.min.js"></script>
 		<script>
+		/*$(function(){
+			$(window).hashchange( function(){
+				var hash = location.hash;
+				$('#nav a').each(function(){
+					var that = $(this);
+					that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
+				});
+			})
+			$(window).hashchange();
+		});*/
+		var prev_hash = "#result";
+		var current_hash = window.location.hash;
+		if (current_hash != "#result" && current_hash != "") {
+			prev_hash = current_hash;
+		}
         $(document).ready(function(){
-			changePage("result");
+			window.location.hash = prev_hash;
+			$(window).hashchange( function(){
+				var hash = location.hash;
+				if (hash != "") {
+					if (prev_hash == "")	window.location.reload();
+					changePage(hash.replace( /^#/, '' ));
+				}
+				prev_hash = hash;
+			});
+			$(window).hashchange();
 		});
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
