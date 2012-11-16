@@ -39,7 +39,7 @@ if (!$line = mysql_fetch_array($result)){
 		?>
 		
 		<div class="mason<?= $class?>" style="border: 1px solid <?= $color?>;">
-			<a title="<?= $line['story']?>" class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['image1'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
+			<a title="<?= $line['story']?>" class="lightbox-image" id="<?= $line['id'] ?>" href="<?= $line['hires'] ?>"><img class="item" style="width:100%;" src="<?= $image?>" /></a>
 			<div class="transparent" style="width: <?= $width?>px" id="a1">
 				<span class="title"><a class="" href="inspiration"><?= $title?></a></span>
 				<span class="subtitle"><?= $subtitle ?></span>

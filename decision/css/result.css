@@ -128,4 +128,7 @@ div#result-div {
 	#main {
 		margin: 0;
 	}
+	ul.imgs-nav li a img {
+		width: 93px;
+	}
 }

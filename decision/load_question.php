@@ -1,7 +1,8 @@
 <?php
 	# Connect to database
 	//require_once("connect.php");
-	require_once("database/db.php");
+	require_once("../../db.php");
+	
 	# Set the question id
 	$qid = 1;
 	if (!empty($_REQUEST["qid"])){
