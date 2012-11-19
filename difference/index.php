@@ -63,6 +63,7 @@
             </div>        
             <div id="main" role="main">
           	<h1>Making a Difference</h1>
+            <h2>See how Michigan Engineers have been empowered to make a difference in the world</h2>
         	
             
             
@@ -104,7 +105,7 @@
 				$(".hideme").animate({
 					right: '0px'
 				  }, 3000, 'swing', function() {
-					  setInterval(hide, 4000);
+					  setInterval(hide, 3000);
 				});
 				
 				$("span.submit").click(function(e){
