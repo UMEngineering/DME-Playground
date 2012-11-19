@@ -27,6 +27,29 @@
 		<script type="text/javascript">stLight.options({publisher: "39723eac-eec9-4aea-a4c7-aa9cb890e47a"});</script>
     </head>
     <body>
+    	<div class="lightbox">
+        	<div id="round">
+                <span id="closebox">x</span>
+
+                <div id="wufoo-m7x3w7" class="">
+                    Fill out my <a href="http://bencollins2.wufoo.com/forms/m7x3w7">online form</a>.
+                    </div>
+                    <script type="text/javascript">var m7x3w7;(function(d, t) {
+                    var s = d.createElement(t), options = {
+                    'userName':'bencollins2', 
+                    'formHash':'m7x3w7', 
+                    'autoResize':true,
+                    'height':'1381',
+                    'async':true,
+                    'header':'show'};
+                    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+                    s.onload = s.onreadystatechange = function() {
+                    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                    try { m7x3w7 = new WufooForm();m7x3w7.initialize(options);m7x3w7.display(); } catch (e) {}};
+                    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                    })(document, 'script');</script>
+                </div>
+            </div>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -40,7 +63,9 @@
             </div>        
             <div id="main" role="main">
           	<h1>Making a Difference</h1>
-        
+        	
+            
+            
             <div id="container">
                 
             </div>
@@ -54,10 +79,11 @@
                 <span class='st_twitter_large' displayText='Tweet'></span>
                 <span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
                 <span class='st_pinterest_large' displayText='Pinterest'></span>
+                <span class='submit' displayText="Submit your own photo"></span>
             </div>
 
 		</div>
-
+        <div class="hideme">Submit your own photo! &rarr;</div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script src="js/jquery.infinitescroll.min.js"></script>
         <script src="js/masonry.min.js"></script>
@@ -69,8 +95,31 @@
 			var loading = 1;
 			var current = 0;
 			var amount = 25;
+			function hide() {
+				$(".hideme").animate({opacity: '0'}, 1000, 'swing');	
+			}
 			$(document).ready(function(){
 				getimages(0);
+				
+				$(".hideme").animate({
+					right: '0px'
+				  }, 3000, 'swing', function() {
+					  setInterval(hide, 4000);
+				});
+				
+				$("span.submit").click(function(e){
+					$(".lightbox").css({"opacity":"1","pointer-events":"all"});
+				});
+				$("span#closebox, div.lightbox").click(function(e){
+					$(".lightbox").css({"opacity":"0","pointer-events":"none"});
+				});
+				$(window).keydown(function(e){
+					console.log("TEST");
+					console.log(e.keyCode);
+					if (e.keyCode == "27") {
+						$(".lightbox").css({"opacity":"0","pointer-events":"none"});
+					}
+				});
 				
 				// Load more when scroll down
 				$(window).scroll(function(){

@@ -7,6 +7,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 100;
     border-bottom: thin solid rgba(255,255,255,.4);
+    line-height: 93px;
 }
 
 .item {
@@ -312,6 +313,7 @@ header a:hover, header a:active, header a:visited {
     position: fixed;
     width: 43px;
 	
+    height: 228px;
     border: thin solid #333;
     right: 0;
     top: 50%;
@@ -329,4 +331,71 @@ header a:hover, header a:active, header a:visited {
 .typekit-badge {
     display: none !important;
 	
+}
+
+.lightbox {
+    -webkit-transition: all 1s ease;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1011;
+    background: rgba(0,0,0,.8);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lightbox #round {
+    position: relative;
+    display: block;
+    width: 74%;
+    height: 400px;
+    margin: 180px auto;
+    overflow: auto;
+    border-radius: 20px;
+    padding: 40px;
+    background: white;
+}
+
+.submit {
+	
+    cursor: pointer;
+    height: 31px;
+    width: 31px;
+    margin: 0 0 0 3px;
+    border-radius: 4px;
+    background: #333 url(http://engcomm.engin.umich.edu/difference/img/up.png) no-repeat 2px 3px;
+}
+
+#closebox {	
+	display: block;
+	position: absolute;
+	border: thin solid white;
+	color: #333;
+	width: 33px;
+	height: 33px;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	text-align: center;
+	border-radius: 20px;
+	font-size: 25px;
+	cursor: pointer;
+	overflow: visible;
+}
+.hideme {
+    position: fixed;
+    color: white;
+    right: -222px;
+    font-weight: 100;
+    top: 50%;
+    font-size: 12px;
+    width: 144px;
+    background: rgba(10,10,10,.7);
+    padding: 3px 6px;
+    margin: 72px 60px;
+}
+.unhide {
+	right: 0 !important;	
 }

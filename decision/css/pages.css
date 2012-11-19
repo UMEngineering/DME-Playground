@@ -5,7 +5,6 @@
 }
 	
 #main p, #checklist div p {
-	font-family: sans-serif;
 	color: black;
 	font-weight: normal;
 }
@@ -37,6 +36,8 @@ span.checked {
 	margin: auto;
 	padding-left: 1em;
 	font-size: 10pt;
+	font-weight: 100;
+	padding: 4px 7px 0;
 }
 
 @media only screen and (max-width: 800px) {

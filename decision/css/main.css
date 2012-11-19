@@ -171,11 +171,10 @@ body {
 
 #main p {
 	color: white;
-	font-family: Helvetica Neue, Tahoma, Geneva, sans-serif;
+	font-family: Arial, helvetica, sans-serif;
 	margin: 1em;
 	font-size: 11pt;
 	font-weight: 100;
-	letter-spacing: 1px;
 }
 
 div.video {
