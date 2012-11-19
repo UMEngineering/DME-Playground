@@ -1,6 +1,8 @@
 <?php
 	//We are going to need a database connection:
-	require_once("../../db.php");
+	//require_once("../../db.php");
+	//require_once("database.php");
+	require_once("db.php");
 	if (!extension_loaded('json')) {
 			dl('json.so');  
 	}	

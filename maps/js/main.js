@@ -5,6 +5,20 @@
 // Ben Collins
 
 // Check if the browser is Internet Explorer and store the version.
+
+// ================== Edited 11/19 ==================
+var latlon_arr = new Array();
+var current = 0;
+var wholemap;
+function pantoNext(){
+	wholemap.panTo(latlon_arr[current]);
+	current++;
+	if (current == latlon_arr.length){
+		current = 0;
+	}
+}
+// ================== Edited End ==================
+
 var ie = (function(){
 	var undef,
 		v = 3,
@@ -142,6 +156,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 	
 	var map = new google.maps.Map(this,
 			myOptions);
+	wholemap = map;
 	mapBuffer = map;
 	google.maps.event.addListener(map, 'click', function (event){ console.log("Click",event.latLng) });	
 	
@@ -161,34 +176,45 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
 		
+		// Youtube size
+		var youtubeW = 410;
+		var youtubeH = 231;
+		if (iphone()) {
+			youtubeW = 250;
+			youtubeH = 141;
+		}
+		
 		// Set "contentString" differently for video or text.
 		if (vid || vid != "") { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: hidden;">';
+			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: hidden;">';
 			console.log("Video: ", vid);
+			var temp = new google.maps.LatLng(0, 0);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="250" height="141"></div><div class="clear">&nbsp;</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="clear">&nbsp;</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '</div>';
+			contentString += '<span style="position: absolute; bottom: 0; right: 0;" onclick="pantoNext();" class="nextMarker" id="nextMarker'+id+'">next</span></div>';
 		}
+		//onclick="pantoNext();" 
 		else { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
+			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="250" height="141"></div><div class="clear">&nbsp;</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="clear">&nbsp;</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '</div>';
+			contentString += '<span style="position: absolute; bottom: 0; right: 0;" onclick="pantoNext();" class="nextMarker" id="nextMarker'+id+'">next</span></div>';
 		}
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString,
 			maxWidth: 420
 		});
 		var LL = new google.maps.LatLng(lat, lng);
+		latlon_arr.push(LL);
 		// Create marker 
 		var marker = new google.maps.Marker({
 			  position: LL,
@@ -202,6 +228,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		if (vopen == 1) {
 			infowindow.open(map,marker);
 		}
+		
 		google.maps.event.addListener(marker, 'click', function() {
 			for (key in infoWindows) {
 				console.log("Close infowindow ", key);
@@ -215,7 +242,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 				infoWindows[id]=infowindow;
 			}
 			console.log("iPhone:", iphone());
-			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="250" height="141" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
+			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="'+youtubeW+'" height="'+youtubeH+'" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
 			$("iframe#ifr_"+id).load(function(){refreshMap();});
 			infowindow.setContent(contentString);
 			$(".googleInfo").parent().css({"overflow":"hidden"});
@@ -227,15 +254,23 @@ $("div#googlemap").bind("loadmap", function initialize() {
 				}
 			});
 		});
+		google.maps.event.addDomListener($("#nextMarker"+id), 'click', function() {
+			alert("11");
+			map.panTo(latlon_arr[current]);
+			current++;
+			if (current == latlon_arr.length){
+				current = 0;
+			}
+		});
 		marker.setMap(map);	
 		map.setZoom(16);
+		//map.panTo(latlon_arr[0]);
 	}
 
 // </ Decision map function>	
 
 
 //  < Holiday map function >
-
 	function holidayMap (id, lat, lng, text, vid, vopen, name) {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
@@ -585,6 +620,8 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		});
 	}
 	
+		
+		
 // < / Campus Call>
 }).bind("unloadmap", function () {
 		$(this).empty().removeClass("maploaded").addClass("mapready");
@@ -604,6 +641,7 @@ function eraser() {
 		catch (e) {}
 	}
 }
+
 var zInd = 0;
 // This function iterates through an array and "highlights" the pins (replaces the pin icon with one of a specified color).
 // the reason I'm able to pass a color in is because I've already pre-rendered pins in the format mpin_blue.png, mpin_red.png, etc.
@@ -630,5 +668,4 @@ $(document).ready(function(){
 		$("#snow").css({"display":"block"});	
 		console.log("Let it snow!");
 	}
-	
 }); // document ready
