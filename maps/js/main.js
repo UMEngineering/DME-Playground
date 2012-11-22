@@ -6,19 +6,6 @@
 
 // Check if the browser is Internet Explorer and store the version.
 
-// ================== Edited 11/19 ==================
-var latlon_arr = new Array();
-var current = 0;
-var wholemap;
-function pantoNext(){
-	wholemap.panTo(latlon_arr[current]);
-	current++;
-	if (current == latlon_arr.length){
-		current = 0;
-	}
-}
-// ================== Edited End ==================
-
 var ie = (function(){
 	var undef,
 		v = 3,
@@ -175,6 +162,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 	function decisionMap (id, lat, lng, text, vid, vopen, name) {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
+		var mpointer = String(lat)+String(lng);
 		
 		// Youtube size
 		var youtubeW = 410;
@@ -195,9 +183,8 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '<span style="position: absolute; bottom: 0; right: 0;" onclick="pantoNext();" class="nextMarker" id="nextMarker'+id+'">next</span></div>';
+			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next '+temp_current+'</span></div>';
 		}
-		//onclick="pantoNext();" 
 		else { 
 			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
 			console.log("No Video");
@@ -207,8 +194,10 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '<span style="position: absolute; bottom: 0; right: 0;" onclick="pantoNext();" class="nextMarker" id="nextMarker'+id+'">next</span></div>';
+			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next '+temp_current+'</span></div>';
 		}
+		var this_id = temp_current;
+		temp_current++;
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString,
 			maxWidth: 420
@@ -222,12 +211,22 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			  zIndexProcess: function() { return 1; }	
 		});
 		marker.setZIndex(0);
-		var mpointer = String(lat)+String(lng);
+		//var mpointer = String(lat)+String(lng);
 		// Place the current marker in the "markers" array. It's useful to keep track of everything we're working on in a global context.
 		markers[mpointer]=marker;
+		markers_inorder.push(marker);
 		if (vopen == 1) {
 			infowindow.open(map,marker);
+			if (id != null) {
+				infoWindows[id]=infowindow;
+			}
+			var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="'+youtubeW+'" height="'+youtubeH+'" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
+			$("iframe#ifr_"+id).load(function(){refreshMap();});
+			$(".googleInfo").parent().css({"overflow":"hidden"});
+			$("#googlemap").append(youtubeOverlay);
+			//.open(map, markers[mpointer]);
 		}
+		infoWindows_inorder.push(infowindow);
 		
 		google.maps.event.addListener(marker, 'click', function() {
 			for (key in infoWindows) {
@@ -253,18 +252,26 @@ $("div#googlemap").bind("loadmap", function initialize() {
 					$("iframe#ifr_"+key).remove();	
 				}
 			});
+			
+			// ==========================Haoyi Yang EDITED 11/22===================================
+			current = this_id;
+			
+			prev = current+1;
+			if (prev == latlon_arr.length) prev = 0;
 		});
-		google.maps.event.addDomListener($("#nextMarker"+id), 'click', function() {
-			alert("11");
+		/*google.maps.event.addDomListener($("#nextMarker"+id), 'click', function() {
+			alert("#nextMarker"+id);
 			map.panTo(latlon_arr[current]);
 			current++;
 			if (current == latlon_arr.length){
 				current = 0;
 			}
-		});
+		});*/
 		marker.setMap(map);	
 		map.setZoom(16);
-		//map.panTo(latlon_arr[0]);
+		
+		// =================== EDIT 11/22=========================
+		current = latlon_arr.length-1;
 	}
 
 // </ Decision map function>	
@@ -641,6 +648,80 @@ function eraser() {
 		catch (e) {}
 	}
 }
+
+// ================== Edited 11/19 ==================
+var temp_current = 0;
+var latlon_arr = new Array();
+var markers_inorder = new Array();
+var infoWindows_inorder = new Array();
+var current = 0;
+var prev = 0;
+var wholemap;
+//var prev_id;
+//var prev_mpointer;
+function pantoNext(id, vid){
+	//var i = 0;
+	//prev_id = id;
+	//prev_mpointer = mpointer
+	/*for (var key in infoWindows) {
+		if (i == current) {
+			//alert("key: " + key);
+			var j = 0;
+			var mkey_temp = mpointer;
+			for (var mkey in markers) {
+				if (j == i) mkey_temp = mkey;
+			}
+			wholemap.panTo(latlon_arr[current]);
+			infoWindows[key].open(wholemap, markers[mkey_temp]);
+			infoWindows[prev_id].close();
+		}
+		i++;
+	}*/
+	/*i=0;
+	for (var key in markers) {
+		if (i == current) {
+			//alert("key: " + key);
+			markers[key].click();
+			//infoWindows[prev_id].close();
+		}
+		i++;
+	}*/
+	//markers[mpointer]
+	//wholemap.panTo(latlon_arr[current]);
+	prev = current;
+	current--;
+	if (current == -1){
+		current = latlon_arr.length-1;
+	}
+	wholemap.panTo(latlon_arr[current]);
+	infoWindows_inorder[current].open(wholemap, markers_inorder[current]);
+	infoWindows_inorder[prev].close();
+	$(".youtubeOverlay").remove();
+	
+	/*var i = 0;
+	for (var key in infoWindows) {
+		if (i == current) {
+			id = key;
+		}
+		i++;
+	}
+	
+	if (id != null) {
+		infoWindows[id]=infoWindows_inorder[current];
+	}
+	var youtubeW = 410;
+	var youtubeH = 231;
+	if (iphone()) {
+		youtubeW = 250;
+		youtubeH = 141;
+	}
+	
+	var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="'+youtubeW+'" height="'+youtubeH+'" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
+	$("iframe#ifr_"+id).load(function(){refreshMap();});
+	$(".googleInfo").parent().css({"overflow":"hidden"});
+	$("#googlemap").append(youtubeOverlay);*/
+}
+// ================== Edited End ==================
 
 var zInd = 0;
 // This function iterates through an array and "highlights" the pins (replaces the pin icon with one of a specified color).
