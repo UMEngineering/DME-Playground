@@ -168,7 +168,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		var youtubeW = 250;
 		var youtubeH = 190;
 		if (iphone()) {
-			youtubeW = 250;
+			youtubeW = 200;
 			youtubeH = 141;
 		}
 		
