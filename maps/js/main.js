@@ -225,6 +225,11 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			$(".googleInfo").parent().css({"overflow":"hidden"});
 			$("#googlemap").append(youtubeOverlay);
 			//.open(map, markers[mpointer]);
+			google.maps.event.addListener(infowindow,'closeclick',function(event){
+				for (key in infoWindows) {
+					$("iframe#ifr_"+key).remove();	
+				}
+			});
 		}
 		infoWindows_inorder.push(infowindow);
 		
@@ -721,6 +726,11 @@ function pantoNext(id, vid){
 	$("iframe#ifr_"+id).load(function(){refreshMap();});
 	$(".googleInfo").parent().css({"overflow":"hidden"});
 	$("#googlemap").append(youtubeOverlay);
+	google.maps.event.addListener(infoWindows[id],'closeclick',function(event){
+		for (key in infoWindows) {
+			$("iframe#ifr_"+key).remove();	
+		}
+	});
 }
 // ================== Edited End ==================
 
