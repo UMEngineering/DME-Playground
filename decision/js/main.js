@@ -51,10 +51,10 @@ function changePage(page){
 }
 
 // Load the detailed page
-function changePageDetail(id, title, navid){
+function changePageDetail(id, title, navid, typePage){
 	inNav = false;
 	$("#main").css("height", "100%");
-	var urlAjax = "load_result.php?page=detail&id=" + id;
+	var urlAjax = "load_result.php?page=detail&id=" + id + "&typePage=" + typePage;
 	var response = $.ajax({url: urlAjax, success: function(){
 		if ($(".bottom").html() == null) {
 			// Append the bottom first
@@ -79,6 +79,7 @@ function changePageDetail(id, title, navid){
 		});
 		
 		$("#main").html(response.responseText);
+		$("#main").css("height", "auto");
 		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"#\" onclick=\"history.back(-1)\">Go Back</a></span>");
 	}});
 }

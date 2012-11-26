@@ -103,6 +103,50 @@ if ($_REQUEST["page"] == "result"){
 				}
 			?>
 			</ul>
+         </div>
+         <div id="result-div-detail" style="display: none;">
+            <ul class="slides">
+            	<li>
+                	<?php
+					for ($i=0; $i<4; $i++){
+						?>
+                        <li id="<?= $contents[$i]['r_id'] ?>">
+                            <a href="#" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
+                                <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
+                                <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
+                            </a>
+                            <div class="content-for-page" id="content<?= $contents[$i]['r_id'] ?>" style="display: none;">
+                                <span class="title"><?= $contents[$i]['title'] ?></span>
+                                <span class="category"><?= $contents[$i]['category'] ?></span>
+                                <span class="subcategory"><?= $contents[$i]['subcategory'] ?></span>
+                                <span class="description"><?= $contents[$i]['description'] ?></span>
+                            </div>
+                        </li>
+                        <?php
+					}
+					?>
+                </li>
+                <li>
+                	<?php
+					for ($i=4; $i<6; $i++){
+						?>
+                        <li id="<?= $contents[$i]['r_id'] ?>">
+                            <a href="#" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
+                                <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
+                                <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
+                            </a>
+                            <div class="content-for-page" id="content<?= $contents[$i]['r_id'] ?>" style="display: none;">
+                                <span class="title"><?= $contents[$i]['title'] ?></span>
+                                <span class="category"><?= $contents[$i]['category'] ?></span>
+                                <span class="subcategory"><?= $contents[$i]['subcategory'] ?></span>
+                                <span class="description"><?= $contents[$i]['description'] ?></span>
+                            </div>
+                        </li>
+                        <?php
+					}
+					?>
+                </li>
+            </ul>
 		</div>
 		<?php
 	}
@@ -112,7 +156,11 @@ if ($_REQUEST["page"] == "result"){
 	$request_page = $_REQUEST["page"];
 	
 	# Load the photos from database
-	$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" ORDER BY subcategory;");
+	if ($request_page == "explore") {
+		$result = mysql_query("SELECT title, img_src, category, id, outside_href FROM results ORDER BY category;");
+	} else {
+		$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" ORDER BY subcategory;");
+	}
 	if (!$result){
 		print("Cannot load info from PAGE");
 	}
@@ -146,7 +194,7 @@ if ($_REQUEST["page"] == "result"){
                         <li>
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
-                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')";
+                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
 							<?php
 							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent"><span class="title"><?= $row[0] ?></span></div></a>
@@ -190,7 +238,7 @@ if ($_REQUEST["page"] == "result"){
                     <li>
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
-                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>')";
+                            if ($out_href=="#") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
 							<?php
 							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent" style="bottom: 67px;"><span class="title"><?= $row[0] ?></span></div></a>
@@ -300,9 +348,9 @@ if ($_REQUEST["page"] == "result"){
 	}
 	if ($count % 4 != 0) echo "</ul></li>";
 	echo "</ul></div>";*/
-} elseif ($_REQUEST["page"] == "detail" && !empty($_REQUEST["id"])) {
+} elseif ($_REQUEST["page"] == "detail" && !empty($_REQUEST["id"]) && !empty($_REQUEST["typePage"])) {
 	# For detail page (when click on a image)
 	$id = $_REQUEST["id"];
-	load_page($id);
+	load_page($id, $_REQUEST["typePage"]);
 }
 ?>
