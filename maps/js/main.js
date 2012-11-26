@@ -704,7 +704,7 @@ function pantoNext(id, vid){
 			id = key;
 		}
 		i++;
-	}
+	}*/
 	
 	if (id != null) {
 		infoWindows[id]=infoWindows_inorder[current];
@@ -716,10 +716,11 @@ function pantoNext(id, vid){
 		youtubeH = 141;
 	}
 	
+	$(".youtubeHolder").attr("id", id);
 	var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="'+youtubeW+'" height="'+youtubeH+'" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
 	$("iframe#ifr_"+id).load(function(){refreshMap();});
 	$(".googleInfo").parent().css({"overflow":"hidden"});
-	$("#googlemap").append(youtubeOverlay);*/
+	$("#googlemap").append(youtubeOverlay);
 }
 // ================== Edited End ==================
 

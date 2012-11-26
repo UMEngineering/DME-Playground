@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
+$host = "localhost:8889";
 $username = "root";
-$pass = "";
+$pass = "root";
 $db = "engcomm";
     $link = mysql_connect($host ,$username , $pass)
         or die("Could not connect");
