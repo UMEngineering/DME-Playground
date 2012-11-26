@@ -159,14 +159,14 @@ $("div#googlemap").bind("loadmap", function initialize() {
 
 //  < Decision map function >
 
-	function decisionMap (id, lat, lng, text, vid, vopen, name) {
+	function decisionMap (id, lat, lng, text, vid, vopen, name, description) {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
 		var mpointer = String(lat)+String(lng);
 		
 		// Youtube size
-		var youtubeW = 410;
-		var youtubeH = 231;
+		var youtubeW = 250;
+		var youtubeH = 190;
 		if (iphone()) {
 			youtubeW = 250;
 			youtubeH = 141;
@@ -179,22 +179,22 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			var temp = new google.maps.LatLng(0, 0);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="clear">&nbsp;</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="description">'+description+'</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next '+temp_current+'</span></div>';
+			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next</span></div>';
 		}
 		else { 
 			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="clear">&nbsp;</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="description">'+description+'</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next '+temp_current+'</span></div>';
+			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next</span></div>';
 		}
 		var this_id = temp_current;
 		temp_current++;
@@ -550,7 +550,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 						
 	//*****************THIS IS WHERE WE MAP AN ELEMENT.***********//
 						console.log("Mapping something");
-						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm);
+						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm, v.description);
 						latarr.push(parseFloat(v.lat));	
 						lonarr.push(parseFloat(v.lon));	
 						if (latarr.length > 1) { latarr.splice(-1,1); }
@@ -709,8 +709,8 @@ function pantoNext(id, vid){
 	if (id != null) {
 		infoWindows[id]=infoWindows_inorder[current];
 	}
-	var youtubeW = 410;
-	var youtubeH = 231;
+	var youtubeW = 250;
+	var youtubeH = 210;
 	if (iphone()) {
 		youtubeW = 250;
 		youtubeH = 141;

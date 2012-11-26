@@ -288,3 +288,10 @@ a.searchForGroup {
 	background-position: 0px 3px;
 	padding: 14px 0 0 36px;	
 }
+
+
+/*=========================*/
+.description {
+	width: 150px;
+	float: right;	
+}
