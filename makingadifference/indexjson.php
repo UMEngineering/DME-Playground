@@ -89,6 +89,7 @@
 						if (first == 0){
 							// Load the first set of page
 							$container.append(response.responseText);
+							console.log(response.responseText);
 							create_lightbox();
 							$container.imagesLoaded(function(){
 							  $container.masonry({
