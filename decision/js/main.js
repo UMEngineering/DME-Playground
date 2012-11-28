@@ -17,12 +17,13 @@ function changePage(page){
 		var screenWidth = $(window).width();
 		var originWidth = screenWidth;
 		if (page == "explore" || page == "next") {
-			if (screenWidth <= 800){
+			if (screenWidth <= 800 && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
 				create_yui('#scrollview-right0');
 				create_yui('#scrollview-right1');
 				create_yui('#scrollview-right2');
 				create_yui('#scrollview-right3');
 			} else {
+				$(".scrollview-right").css("overflow-x", "scroll");
 				$('.flexslider').flexslider({
 					animation: "slide",
 					slideshow: false/*,
@@ -32,12 +33,13 @@ function changePage(page){
 			$("#main").css("height", "auto");
 			$(window).resize(function () { 
 				screenWidth = $(window).width();
-				if (screenWidth <= 800 && originWidth > 800 && inNav){
+				if (screenWidth <= 800 && originWidth > 800 && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
 					create_yui('#scrollview-right0');
 					create_yui('#scrollview-right1');
 					create_yui('#scrollview-right2');
 					create_yui('#scrollview-right3');
 				} else if (screenWidth > 800 && originWidth <= 800 && inNav) {
+					$(".scrollview-right").css("overflow-x", "scroll");
 					$('.flexslider').flexslider({
 						animation: "slide",
 						slideshow: false/*,
@@ -74,7 +76,10 @@ function changePageDetail(id, title, navid, typePage){
 			}
 		}
 		
-		create_yui('#img-nav-div');
+		if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i))
+			create_yui('#img-nav-div');
+		else
+			$("#img-nav-div").css("overflow-x", "scroll");
 		$('.flexslider').flexslider({
 			animation: "slide",
 			slideshow: false
