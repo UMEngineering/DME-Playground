@@ -168,8 +168,8 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		var youtubeW = 250;
 		var youtubeH = 190;
 		if (iphone()) {
-			youtubeW = 200;
-			youtubeH = 141;
+			youtubeW = 150;
+			youtubeH = 100;
 		}
 		
 		// Set "contentString" differently for video or text.
