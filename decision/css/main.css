@@ -244,7 +244,7 @@ div.links a {
     border: thin solid white;
     border-radius: 30px;
     display: block;
-    width: 77px;
+    width: 84px;
 	
     height: 39px;
     float: left;
@@ -522,7 +522,7 @@ textarea {
 	
 	div.links {
 		float: right;
-		width: 260px;
+		width: 270px;
 		margin-right: 80px;
 	}
 	
