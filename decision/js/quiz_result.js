@@ -26,4 +26,6 @@ function displayPage(id){
 	
 	$("#nav").html("<li>"+$("#d"+id+" a img").attr("alt").toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
 	$("#main").html($("#content"+id+" .description").html());
+	$("#main").css("height", "auto");
+	$("#main p a").attr("target", "_blank");
 }

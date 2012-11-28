@@ -46,7 +46,9 @@ function changePage(page){
 					originWidth = screenWidth;
 				}
 			});
+			
 		}
+		$(".page_detail p a").attr("target", "_blank");
 	}});
 }
 
@@ -81,6 +83,7 @@ function changePageDetail(id, title, navid, typePage){
 		$("#main").html(response.responseText);
 		$("#main").css("height", "auto");
 		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"#\" onclick=\"history.back(-1)\">Go Back</a></span>");
+		$(".page_detail p a").attr("target", "_blank");
 	}});
 }
 

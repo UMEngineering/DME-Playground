@@ -10,8 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <script type="application/javascript" src="js/vendor/add2home.js"></script>
-        <link rel="stylesheet" href="css/add2home.css">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/student.css">

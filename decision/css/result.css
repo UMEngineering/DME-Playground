@@ -157,6 +157,9 @@ input[type=checkbox].styled:checked + label {
 	#main {
 		margin: 0;
 	}
+	.page_detail {
+		padding-bottom: 150px;
+	}
 	ul.imgs-nav li a img {
 		width: 93px;
 	}
