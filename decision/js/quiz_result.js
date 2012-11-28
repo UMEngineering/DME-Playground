@@ -9,19 +9,21 @@ function displayPage(id){
 		//create_yui('#img-nav-div');
 		
 		// Mobile version bottom
-		$("#container").append("<div class=\"bottom display-when-mobile\"><div id=\"bottom-title\">RESULTS</div><div id=\"bottom-scrollbackground\"><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#result-div-detail").html()+"</div></div></div>");
+		$("#container").append("<div class=\"bottom display-when-mobile\"><div id=\"bottom-title\">RESULTS</div><div id=\"bottom-scrollbackground\"><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#result-div").html()+"</div></div></div>");
 		
 		// Desktop version bottom
 		$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">RESULTS</div><div class=\"scroll-background flexslider\">"+$("#result-div-detail").html()+"</div></div>");
 	} else {
 		
 	}
+	
+	$(".imgs-nav").attr("id", "");
 	create_yui('#img-nav-div');
 	$('.flexslider').flexslider({
 		animation: "slide",
 		slideshow: false
 	});
 	
-	$("#nav").html("<li>"+$("#content"+id+" .title").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
+	$("#nav").html("<li>"+$("#d"+id+" a img").attr("alt").toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
 	$("#main").html($("#content"+id+" .description").html());
 }

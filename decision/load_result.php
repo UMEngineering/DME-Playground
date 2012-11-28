@@ -107,16 +107,17 @@ if ($_REQUEST["page"] == "result"){
          <div id="result-div-detail" style="display: none;">
             <ul class="slides">
             	<li>
+                	<ul class="imgs-nav imgs-nav-desktop" id="result-image">
                 	<?php
 					for ($i=0; $i<4; $i++){
 						?>
-                        <li id="<?= $contents[$i]['r_id'] ?>">
+                        <li id="d<?= $contents[$i]['r_id'] ?>">
                             <a href="#" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
                                 <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
                                 <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
                             </a>
                             <div class="content-for-page" id="content<?= $contents[$i]['r_id'] ?>" style="display: none;">
-                                <span class="title"><?= $contents[$i]['title'] ?></span>
+                                <span class="title<?= $contents[$i]['r_id'] ?>"><?= $contents[$i]['title'] ?></span>
                                 <span class="category"><?= $contents[$i]['category'] ?></span>
                                 <span class="subcategory"><?= $contents[$i]['subcategory'] ?></span>
                                 <span class="description"><?= $contents[$i]['description'] ?></span>
@@ -125,18 +126,20 @@ if ($_REQUEST["page"] == "result"){
                         <?php
 					}
 					?>
+                    </ul>
                 </li>
                 <li>
+                	<ul class="imgs-nav imgs-nav-desktop" id="result-image">
                 	<?php
 					for ($i=4; $i<6; $i++){
 						?>
-                        <li id="<?= $contents[$i]['r_id'] ?>">
+                        <li id="d<?= $contents[$i]['r_id'] ?>">
                             <a href="#" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
                                 <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
                                 <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
                             </a>
                             <div class="content-for-page" id="content<?= $contents[$i]['r_id'] ?>" style="display: none;">
-                                <span class="title"><?= $contents[$i]['title'] ?></span>
+                                <span class="title<?= $contents[$i]['r_id'] ?>"><?= $contents[$i]['title'] ?></span>
                                 <span class="category"><?= $contents[$i]['category'] ?></span>
                                 <span class="subcategory"><?= $contents[$i]['subcategory'] ?></span>
                                 <span class="description"><?= $contents[$i]['description'] ?></span>
@@ -145,6 +148,7 @@ if ($_REQUEST["page"] == "result"){
                         <?php
 					}
 					?>
+                    </ul>
                 </li>
             </ul>
 		</div>
