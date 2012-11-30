@@ -103,7 +103,7 @@ input[type=checkbox].styled:checked + label {
 	
 	div#result-div {
 		float: right;
-		width: 490px;
+		width: 485px;
 	}
 	
 	div#content {
