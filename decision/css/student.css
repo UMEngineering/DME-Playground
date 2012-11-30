@@ -61,6 +61,7 @@ div.scroll-right {
 }
 
 ul.imgs-nav {
+	display: inline-block;
 	height: 130px;
 	white-space: nowrap;
 	margin: 0;

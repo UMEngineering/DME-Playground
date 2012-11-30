@@ -35,6 +35,7 @@ function changePage(page){
 			$(window).resize(function () { 
 				screenWidth = $(window).width();
 				if (screenWidth <= 800 && originWidth > 800 && inNav /*&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)*/){
+					//create_yui_vert('.container');
 					create_yui('#scrollview-right0');
 					create_yui('#scrollview-right1');
 					create_yui('#scrollview-right2');
@@ -107,6 +108,7 @@ function create_yui(class_name){
 				axis: "x"
 			}
 		});
+		scrollView._prevent.move = false;
 	
 		scrollView.render();
 		
