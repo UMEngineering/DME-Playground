@@ -18,6 +18,7 @@ function changePage(page){
 		var originWidth = screenWidth;
 		if (page == "explore" || page == "next") {
 			if (screenWidth <= 800 && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
+				//create_yui_vert('.container');
 				create_yui('#scrollview-right0');
 				create_yui('#scrollview-right1');
 				create_yui('#scrollview-right2');
@@ -113,6 +114,39 @@ function create_yui(class_name){
 		scrollView.get("contentBox").delegate("mousedown", function(e) {
 			e.preventDefault();
 		}, "img");
+		
+		var resizeTimer;
+		$(window).resize(function () { 
+			clearTimeout(resizeTimer);
+			screenWidth = $(window).width();
+			resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
+		});
+	});
+}
+
+// Create vertical scrolling for mobile
+function create_yui_vert(class_name){
+	
+	var screenWidth = $(window).width();
+	var screenHeight = $(window).height();
+	YUI().use('scrollview', function(Y) {
+		var scrollView = new Y.ScrollView({
+			id: 'scrollview',
+			srcNode: class_name,
+			height: '200',
+			flick: {
+				minDistance:10,
+				minVelocity:0.3,
+				axis: "y"
+			}
+		});
+	
+		scrollView.render();
+		
+		// Prevent default image drag behavior
+	/*	scrollView.get("contentBox").delegate("mousedown", function(e) {
+			e.preventDefault();
+		}, "img");*/
 		
 		var resizeTimer;
 		$(window).resize(function () { 
