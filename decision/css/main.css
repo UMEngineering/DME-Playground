@@ -28,13 +28,6 @@ body {
     background: #212A55;
 }
 
-@font-face {
-  font-family: 'Chalkduster';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Chalkduster'), local('Chalkduster'), url(font/chalkdust.ttf) format("truetype");
-}
-
 #goback {
     font-family: Chalkduster, Tahoma, Geneva, sans-serif;
 	float: right;

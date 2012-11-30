@@ -1,23 +1,10 @@
 /* CSS Document */
-#question_content p {
-	margin: 10px 10px 0 20px;
-}
-
-form#questions {
-	line-height: 1;
-	margin: 0 10px 0 20px;
-}
-
 form#questions div {
 	clear: both;
 }
 
 form#questions div input {
 	margin: 5px 10px 10px 10px;
-}
-
-input[type=checkbox].styled + label {
-	background: url(../img/unchecked-smallwhite.png) no-repeat;
 }
 
 @media only screen and (min-width: 801px) {
