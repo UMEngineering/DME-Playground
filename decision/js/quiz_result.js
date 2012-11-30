@@ -18,10 +18,7 @@ function displayPage(id){
 	}
 	
 	$(".imgs-nav").attr("id", "");
-	if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i))
-		create_yui('#img-nav-div');
-	else
-		$("#img-nav-div").css("overflow-x", "scroll");
+	create_yui('#img-nav-div');
 	$('.flexslider').flexslider({
 		animation: "slide",
 		slideshow: false

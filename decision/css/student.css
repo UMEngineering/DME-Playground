@@ -114,7 +114,6 @@ div {
 /* To layout horizontal LIs */
 .scrollview-right {
     white-space: nowrap;
-	/*overflow-x: scroll;*/
 }
 
 .scrollview-right li {

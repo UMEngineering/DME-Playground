@@ -292,5 +292,6 @@ a.searchForGroup {
 
 /*=========================*/
 .description {
+	width: 150px;
 	float: right;	
 }
