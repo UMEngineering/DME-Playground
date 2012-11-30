@@ -28,9 +28,13 @@ function getUrlVars() {
 
 //Check if it's an iPhone 
 function iphone() {
-	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+	/*if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
 	   if (document.cookie.indexOf("iphone_redirect=false") == -1) return true;
 	}		
+	return false;*/
+	if ($(window).width() <= 800){
+		return true;
+	}
 	return false;
 }
 
@@ -167,9 +171,11 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		// Youtube size
 		var youtubeW = 250;
 		var youtubeH = 190;
+		var descriptionW = 150;
 		if (iphone()) {
 			youtubeW = 150;
 			youtubeH = 100;
+			descriptionW = 250;
 		}
 		
 		// Set "contentString" differently for video or text.
@@ -179,7 +185,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			var temp = new google.maps.LatLng(0, 0);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="description">'+description+'</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px">'+description+'</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
@@ -190,7 +196,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left;" width="'+youtubeW+'" height="'+youtubeH+'"></div><div class="description">'+description+'</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px">'+description+'</div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
@@ -715,10 +721,12 @@ function pantoNext(id, vid){
 		infoWindows[id]=infoWindows_inorder[current];
 	}
 	var youtubeW = 250;
-	var youtubeH = 210;
+	var youtubeH = 190;
+	var descriptionW = 150;
 	if (iphone()) {
-		youtubeW = 250;
-		youtubeH = 141;
+		youtubeW = 150;
+		youtubeH = 100;
+		descriptionW = 250;
 	}
 	
 	$(".youtubeHolder").attr("id", id);
