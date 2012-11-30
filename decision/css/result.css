@@ -111,8 +111,13 @@ input[type=checkbox].styled:checked + label {
 		float: left;
 	}
 	
-	ul.imgs-nav, ul.imgs-nav li {
-		height: 200px;
+	ul.imgs-nav {
+		height: 189px;
+	}
+	
+	ul.imgs-nav li {
+		height: 183px;
+		width: 140px;	
 	}
 	
 	ul.imgs-nav li a img {
@@ -123,9 +128,11 @@ input[type=checkbox].styled:checked + label {
 		font-family: ariel, sans-serif;
 		position: relative;
 		width: 140px;
-		bottom: 73px;
+		bottom: 53px !important;
 		height: 55px;
-	}
+	
+		font-size: 14px;
+}
 	
 	#topcontainer img#right-logo {
 		/*position: absolute;
@@ -161,6 +168,6 @@ input[type=checkbox].styled:checked + label {
 		padding-bottom: 150px;
 	}
 	ul.imgs-nav li a img {
-		width: 93px;
+		width: 98px;
 	}
 }
