@@ -79,7 +79,7 @@ if ($_REQUEST["page"] == "result"){
 		?>
 		<div id="result-explore"><span class="explore">Or explore</span></div>
 		<div id="content">
-			<p>11Your answers indicate that you would be interested in the following opportunities at Michigan Engineering. But there are dozens more!</p>
+			<p>Your answers indicate that you would be interested in the following opportunities at Michigan Engineering. But there are dozens more!</p>
 			<a class="start" href="quiz.php">Take the quiz again</a>
 		</div>
 		<div id="result-div">
