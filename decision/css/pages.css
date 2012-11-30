@@ -73,9 +73,7 @@ span.checked {
 @media only screen and (min-width: 801px) {
 	#main {
 		margin-bottom: 0;
-	
-		min-height: 300px;
-}
+	}
 	
 	.bottom {
 		background: white;
