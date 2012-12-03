@@ -180,7 +180,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			var temp = new google.maps.LatLng(0, 0);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow: scroll;">'+desc_string+'</ol></div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow-y: scroll; overflow-x: hidden;">'+desc_string+'</ol></div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
@@ -191,7 +191,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow: scroll;">'+desc_string+'</ol></div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow-y: scroll; overflow-x: hidden;">'+desc_string+'</ol></div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}

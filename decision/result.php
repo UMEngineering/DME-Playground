@@ -68,7 +68,7 @@
 			$(window).hashchange( function(){
 				var hash = location.hash;
 				if (hash != "") {
-					if (prev_hash == "")	window.location.reload();
+					if (prev_hash == "")	window.location.reload();//history.go(0);
 					changePage(hash.replace( /^#/, '' ));
 				}
 				prev_hash = hash;
