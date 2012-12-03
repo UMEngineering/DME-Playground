@@ -292,5 +292,11 @@ a.searchForGroup {
 
 /*=========================*/
 .description {
-	float: right;	
+	float: left;
+	overflow-y: scroll;
+}
+
+.description ol li:hover, .nextMarker:hover {
+	cursor: pointer;
+	color: #009BE3;
 }

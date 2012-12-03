@@ -163,53 +163,48 @@ $("div#googlemap").bind("loadmap", function initialize() {
 
 //  < Decision map function >
 
-	function decisionMap (id, lat, lng, text, vid, vopen, name, description) {
+	function decisionMap (id, lat, lng, text, vid, vopen, name/*, description*/) {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
 		var mpointer = String(lat)+String(lng);
 		
-		// Youtube size
-		var youtubeW = 250;
-		var youtubeH = 190;
-		var descriptionW = 150;
-		if (iphone()) {
-			youtubeW = 150;
-			youtubeH = 100;
-			descriptionW = 250;
-		}
+		// The list of all markers to be displayed as "description"
+		
+		// Define the description string
+		desc_string += "<li onclick='pantoNext("+temp_current+")'>"+name+"</li>";
 		
 		// Set "contentString" differently for video or text.
 		if (vid || vid != "") { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: hidden;">';
+			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: '+infoWindowW+'px; z-index: 100; height: '+infoWindowH+'px; max-height:'+infoWindowH+'px; overflow: hidden;">';
 			console.log("Video: ", vid);
 			var temp = new google.maps.LatLng(0, 0);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px">'+description+'</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow: scroll;">'+desc_string+'</ol></div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next</span></div>';
+			contentString += '<div id="nav_prev_next" style="position: absolute; top: '+(youtubeH+30)+'px; left: 0px; width: '+youtubeW+'px;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
 		}
 		else { 
 			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px">'+description+'</div>';
+			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow: scroll;">'+desc_string+'</ol></div>';
 			else {contentString += '<div class="story">';
 				contentString += text+'</div>';
 			}
-			contentString += '<span style="position: absolute; bottom: 0; right: 0;" class="nextMarker" onclick="pantoNext(\''+id+'\', \''+vid+'\');" id="nextMarker'+id+'">next</span></div>';
+			contentString += '<div id="nav_prev_next" style="position: absolute; top: '+(youtubeH+30)+'px; left: 0px; width: '+youtubeW+'px;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
 		}
 		var this_id = temp_current;
 		temp_current++;
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString,
-			maxWidth: 420
+			maxWidth: infoWindowW
 		});
 		var LL = new google.maps.LatLng(lat, lng);
-		latlon_arr.push(LL);
+		
 		// Create marker 
 		var marker = new google.maps.Marker({
 			  position: LL,
@@ -220,7 +215,18 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		//var mpointer = String(lat)+String(lng);
 		// Place the current marker in the "markers" array. It's useful to keep track of everything we're working on in a global context.
 		markers[mpointer]=marker;
+		
+		// ================================
+		// Push the item into ordered array
+		// ================================
 		markers_inorder.push(marker);
+		infoWindows_inorder.push(infowindow);
+		video_inorder.push(vid);
+		latlon_arr.push(LL);
+		names_inorder.push(name);
+		ids_inorder.push(id);
+		
+		
 		if (vopen == 1) {
 			infowindow.open(map,marker);
 			if (id != null) {
@@ -237,7 +243,6 @@ $("div#googlemap").bind("loadmap", function initialize() {
 				}
 			});
 		}
-		infoWindows_inorder.push(infowindow);
 		
 		google.maps.event.addListener(marker, 'click', function() {
 			for (key in infoWindows) {
@@ -263,25 +268,16 @@ $("div#googlemap").bind("loadmap", function initialize() {
 					$("iframe#ifr_"+key).remove();	
 				}
 			});
+			$(".description").html(desc_string);
 			
 			// ==========================Haoyi Yang EDITED 11/22===================================
 			current = this_id;
 			
-			prev = current+1;
-			if (prev == latlon_arr.length) prev = 0;
+			prev = current-1;
+			if (prev < 0) prev = latlon_arr.length;
 		});
-		/*google.maps.event.addDomListener($("#nextMarker"+id), 'click', function() {
-			alert("#nextMarker"+id);
-			map.panTo(latlon_arr[current]);
-			current++;
-			if (current == latlon_arr.length){
-				current = 0;
-			}
-		});*/
 		marker.setMap(map);	
 		map.setZoom(16);
-		
-		// =================== EDIT 11/22=========================
 		current = latlon_arr.length-1;
 	}
 
@@ -561,12 +557,22 @@ $("div#googlemap").bind("loadmap", function initialize() {
 						
 	//*****************THIS IS WHERE WE MAP AN ELEMENT.***********//
 						console.log("Mapping something");
-						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm, v.description);
+						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm/*, v.description*/);
 						latarr.push(parseFloat(v.lat));	
 						lonarr.push(parseFloat(v.lon));	
 						if (latarr.length > 1) { latarr.splice(-1,1); }
 						if (lonarr.length > 1) { lonarr.splice(-1,1); }
 				});//End each
+				
+				//======================================================
+				// 12-3: make a clickable list of all markers
+				//  display in the description area for each info window
+				//======================================================
+				/*var length = names_inorder.length;
+				for (var i=0; i<names_inorder.length; i++){
+					desc_string += "<li onclick='pantoNext("+i+")'>"+names_inorder[i]+"</li>";
+				}*/
+				desc_string += "</ol>";
 			  },//End success condition
 			error: function(xhr, statusText, errorThrown){
 				alert('Server error: '+xhr.statusText+", "+xhr.errorThrown+", "+ xhr.responseText+", "+xhr.status);
@@ -662,73 +668,63 @@ function eraser() {
 
 // ================== Edited 11/19 ==================
 var temp_current = 0;
+var desc_string = "<ol style='margin: 0;'>";	// ordered list of all markers display in description area
 var latlon_arr = new Array();
 var markers_inorder = new Array();
 var infoWindows_inorder = new Array();
-var current = 0;
+var video_inorder = new Array();
+var names_inorder = new Array();
+var ids_inorder = new Array();
+var current = latlon_arr.length;
 var prev = 0;
 var wholemap;
+
+// Youtube and description size
+var youtubeW = 250;
+var youtubeH = 190;
+var descriptionW = 150;
+var descriptionH = 300;
+var infoWindowW = 420;
+var infoWindowH = 360;
+if (iphone()) {
+	youtubeW = 150;
+	youtubeH = 100;
+	descriptionH = 200;
+	infoWindowW = 300;
+	infoWindowH = 257;
+}
 //var prev_id;
 //var prev_mpointer;
-function pantoNext(id, vid){
-	//var i = 0;
-	//prev_id = id;
-	//prev_mpointer = mpointer
-	/*for (var key in infoWindows) {
-		if (i == current) {
-			//alert("key: " + key);
-			var j = 0;
-			var mkey_temp = mpointer;
-			for (var mkey in markers) {
-				if (j == i) mkey_temp = mkey;
-			}
-			wholemap.panTo(latlon_arr[current]);
-			infoWindows[key].open(wholemap, markers[mkey_temp]);
-			infoWindows[prev_id].close();
-		}
-		i++;
-	}*/
-	/*i=0;
-	for (var key in markers) {
-		if (i == current) {
-			//alert("key: " + key);
-			markers[key].click();
-			//infoWindows[prev_id].close();
-		}
-		i++;
-	}*/
-	//markers[mpointer]
-	//wholemap.panTo(latlon_arr[current]);
+function pantoNext(gotoid){
 	prev = current;
-	current--;
-	if (current == -1){
-		current = latlon_arr.length-1;
+	if (gotoid == -99) {
+		// Next one
+		current++;
+		if (current == latlon_arr.length){
+			current = 0;
+		}
+	} else if (gotoid == -98) {
+		// Previous one
+		current--;
+		if (current == -1){
+			current = latlon_arr.length-1;
+		}
+	} else if (gotoid >= 0) {
+		// Go to given id of marker
+		current = gotoid;
 	}
 	wholemap.panTo(latlon_arr[current]);
 	infoWindows_inorder[current].open(wholemap, markers_inorder[current]);
-	infoWindows_inorder[prev].close();
+	if (prev != current)
+		infoWindows_inorder[prev].close();
 	$(".youtubeOverlay").remove();
 	
-	/*var i = 0;
-	for (var key in infoWindows) {
-		if (i == current) {
-			id = key;
-		}
-		i++;
-	}*/
-	
+	id = ids_inorder[current];
 	if (id != null) {
 		infoWindows[id]=infoWindows_inorder[current];
 	}
-	var youtubeW = 250;
-	var youtubeH = 190;
-	var descriptionW = 150;
-	if (iphone()) {
-		youtubeW = 150;
-		youtubeH = 100;
-		descriptionW = 250;
-	}
 	
+	var vid = video_inorder[current];
 	$(".youtubeHolder").attr("id", id);
 	var youtubeOverlay = '<iframe class="youtubeOverlay" id="ifr_'+id+'" style="position: absolute; top: 20px; left: 0px; display: none; z-index: 1010;" width="'+youtubeW+'" height="'+youtubeH+'" src="http://www.youtube.com/embed/'+vid+'?'+mode+'" frameborder="0" allowfullscreen></iframe>';
 	$("iframe#ifr_"+id).load(function(){refreshMap();});
@@ -739,6 +735,7 @@ function pantoNext(id, vid){
 			$("iframe#ifr_"+key).remove();	
 		}
 	});
+	$(".description").html(desc_string);
 }
 // ================== Edited End ==================
 
