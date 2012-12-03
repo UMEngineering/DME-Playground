@@ -80,6 +80,7 @@ img.scroll-img {
 }
 
 ul.imgs-nav li {
+	position: relative;
 	width: 98px;
 	border: 1px solid white;
 	margin: 0 1px;
@@ -92,11 +93,11 @@ ul.imgs-nav li a{
 }
 
 div.transparent {
-    position: relative;
+    position: absolute;
 	padding: 0px;
 	
     width: 98px;
-    bottom: 42px;
+    bottom: 0;
     height: 40px;
     background: rgba(255, 255, 255, .7);
     color: #2A4872;

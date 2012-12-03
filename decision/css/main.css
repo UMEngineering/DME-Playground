@@ -505,6 +505,11 @@ textarea {
 		margin-right: 10px;
 	}
 	
+	div.links a {
+    width: 77px;
+		
+	}
+	
 	#topcontainer img#right-logo {
 		/*position: absolute;
 		right: 10px;*/
