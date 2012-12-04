@@ -1,0 +1,380 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* /reset */
+body {
+	font-size: 14px;
+	cursor: auto !important;
+}
+
+#fullbox a { 
+	color: white; border: none !important;
+}
+
+#fullbox a:hover {
+	color: #D2232A !important;
+}
+
+#fullbox {
+	position: absolute; 
+	display: block;
+	top: 0; 
+	left: 0; 
+	height: 900px; width: 100%; 
+	background: none repeat scroll 0 0 black;
+	opacity: 1;
+	overflow: hidden;
+	overflow-x: hidden !important;
+	overflow-y: scroll !important;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	z-index:100;
+}
+
+#lightboxContent {
+	position: absolute;
+	top:0;
+	left: 50%; 
+	margin: 0px auto 0 -590px; 
+	padding: 0px; 
+	color: white; 
+	width: 1200px; 
+	height: 800px;	
+}
+
+#lightboxContent strong {
+	color: white;	
+}
+
+.title {
+	margin: 0 0 55px;
+    padding: 20px 0 90px 35px;
+    position: relative;
+	
+}
+.title img {
+	float: left;
+}
+
+.title span.subtitle {
+	float: left;
+	clear: left;
+	margin: 7px 0 0 0;
+	font-size: 1em;
+	letter-spacing: .13em;
+	line-height: 1.5em;
+	font-weight:lighter;
+	color: #fff;
+}
+
+#arrows {
+	float: left;
+	clear: left;
+	margin-top: 7px;
+	font-size: .9em;
+	color: #666;
+}
+
+#return {
+	right: 0;
+	clear: none;	
+	width: 215px;
+	padding: 7px 35px 0 0;
+	text-align: right;
+	position: absolute;
+	height: auto;
+	display: block;
+}
+
+#return a {
+	opacity: .6;
+	pointer-events: all !important;
+}
+
+#return a:hover {
+	opacity: 1;	
+}
+
+#return img {
+	margin-top: -12px;	
+}
+
+.round-top {
+	border-radius: 15px 15px 0 0;
+	-moz-border-radius: 15px 15px 0 0;
+	-webkit-border-radius: 15px 15px 0 0;
+	border-top: thin solid #816F6F;
+}	
+
+.round-bottom {
+	border-radius: 0 0 15px 15px;
+	-moz-border-radius: 0 0 15px 15px;
+	-webkit-border-radius: 0 0 15px 15px;
+	border-bottom: thin solid #816F6F;
+
+}	
+
+.bl_bar {
+	background: url("http://engcomm.engin.umich.edu/human2/img/bl_bar.png") repeat;
+	width: 1200px;
+	height: auto;	
+	min-height: 15px;
+	border-left: thin solid #816F6F;
+	border-right: thin solid #816F6F;
+}
+
+.bl_top {
+	background: url("http://engcomm.engin.umich.edu/human2/img/bl_top.png") repeat-y;
+	width: 1200px;
+	height: auto;	
+	min-height: 112px;
+	border-left: thin solid #816F6F;
+	border-right: thin solid #816F6F;
+}
+
+.bl_trans {
+	background: url("http://engcomm.engin.umich.edu/human2/img/bl_trans.png") repeat-y;
+	width: 1200px;
+	height: auto;
+	min-height: 275px;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	border-left: thin solid #816F6F;
+	border-right: thin solid #816F6F;
+}
+
+.bl_bottom {
+	background: url("http://engcomm.engin.umich.edu/human2/img/bl_bottom.png") no-repeat scroll left bottom transparent;
+	width: 1200px;
+	height: 12px;
+	border-left: thin solid #816F6F;
+	border-right: thin solid #816F6F;
+
+}
+
+#overlay {
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;	position: absolute; 
+	border: none; 
+	width: 1200px; 
+	height: 800px; 
+	float: left; 
+	/*overflow: hidden; */
+	z-index: 1000;
+	top: 40px;
+}
+
+#container1 {
+    height: 800px;
+    overflow: visible;
+    width: 1200px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	-moz-box-shadow: 2px 2px 2px #222;
+	-webkit-box-shadow: 2px 2px 2px #222;
+	box-shadow: 2px 2px 2px #222;
+	
+}
+
+.textOverlay {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.dim {
+	background-color: transparent;	
+}
+
+.dim h2 {
+	margin-bottom: 9px;	
+}
+
+h2 {
+	color: #E6B70A;	
+	font-weight: bold;
+}
+
+.textOverlay p {
+	line-height: 1.7em;	
+}
+
+#tabs { 
+	margin-top: 2px;
+    position: absolute;
+    right: 146px;
+    top: 156px;
+	pointer-events: all !important;
+    z-index: 1001;
+}
+
+#tabs li {
+	display: inline; 
+	list-style: none;	
+	padding-left: 6px !important;
+	padding: 4px 6px 10px 6px; !important;
+	margin: 0 0 0 6px !important;
+	background: url("http://engcomm.engin.umich.edu/human2/img/bl_bar_2.png") repeat !important;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	/*-moz-transition: all 1s ease;*/
+	
+}
+
+#tabs li a {
+	color: #aaa;
+	font-family:"Times New Roman", Times, serif;
+	font-style: italic;
+	letter-spacing: .22em;
+	font-size: .9em;
+	padding: 0; margin: 0;	
+	border: none;
+}
+
+#tabs li.active {
+	border-top: thin solid black;/*#816F6F;*/
+	border-left: thin solid black; /* #816F6F;*/
+	border-right: thin solid black; /*#816F6F;*/
+	border-bottom: 2px solid black;
+	background: black !important;
+	-moz-box-shadow: 0px -1px 1px #816f6f;
+	-webkit-box-shadow: 0px -1px 1px #816f6f;
+	box-shadow: 0px -1px 1px #816f6f;
+}
+
+#tabs li.active a {
+	color: #ffffff;	
+}
+
+#bottom-content {
+	width: 1120px; 
+	padding: 35px;	
+	pointer-events: all !important;
+}
+
+#bottom-content .left {
+	float: left;	
+}
+
+#bottom-content .right {
+	float: right;	
+}
+
+#bottom-content .small {
+	width: 31%;	
+}
+
+#bottom-content .wide {
+	width: 65%;	
+}
+
+.moreinfo {
+	-moz-transition: opacity 1s ease;	
+	-webkit-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+	position: absolute;
+	width: 100%;
+}
+
+.moreinfo h2 {
+	font-size: 1.1em;
+}
+.moreinfo h2, .moreinfo p {
+	margin-bottom: 8px;		
+}
+.jqexpand {
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: all 1s ease;
+}
+
+#tabs #left {
+	background: url("http://engcomm.engin.umich.edu/human2/img/navleft.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 24px;
+    left: -103px;
+    position: absolute;
+    top: -4px;
+    width: 100px;
+}
+#tabs #left:hover, #tabs #left.down {
+	background-position: -100px 0;
+}
+#tabs #right {
+	background: url("http://engcomm.engin.umich.edu/human2/img/navright.png") no-repeat scroll -100px 0 transparent;
+    display: block;
+    height: 24px;
+    position: absolute;
+    right: -116px;
+    top: -4px;
+    width: 100px;
+}
+#tabs #right:hover, #tabs #right.down {
+	background-position: 0 0;	
+}
+div#textoverlay {
+	position: absolute; 
+	z-index: 600; 
+	color: white; 
+	top: 0pt; 
+	left: 0pt; 
+	-moz-transition: all 1.5s ease 0s; 
+	-webkit-transition: all 1.5s ease 0s; 
+	-o-transition: opacity 1.5s ease;	
+}
+img#humanwide {
+	position: absolute; 
+	z-index: 500; 
+	-moz-transition: all 1s ease 0s; 
+	-webkit-transition: all 1s ease 0s; 
+	-o-transition: opacity 1s ease; 	
+}
