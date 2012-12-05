@@ -48,27 +48,17 @@
         <script src="js/jquery.flexslider-min.js"></script>
         <script src="js/jquery.ba-hashchange.min.js"></script>
 		<script>
-		/*$(function(){
-			$(window).hashchange( function(){
-				var hash = location.hash;
-				$('#nav a').each(function(){
-					var that = $(this);
-					that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
-				});
-			})
-			$(window).hashchange();
-		});*/
 		var prev_hash = "#result";
 		var current_hash = window.location.hash;
-		if (current_hash != "#result" && current_hash != "") {
+		if (current_hash != "#result" && current_hash != "#detail" && current_hash != "") {
 			prev_hash = current_hash;
 		}
         $(document).ready(function(){
 			window.location.hash = prev_hash;
 			$(window).hashchange( function(){
 				var hash = location.hash;
-				if (hash != "") {
-					if (prev_hash == "")	window.location.reload();//history.go(0);
+				if (hash != "#detail") {
+					if (prev_hash == "#detail")	window.location.reload();//history.go(0);
 					changePage(hash.replace( /^#/, '' ));
 				}
 				prev_hash = hash;

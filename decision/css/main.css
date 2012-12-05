@@ -45,6 +45,10 @@ body {
 	margin-right: 1em;
 }
 
+#goback:hover {
+	cursor: pointer;
+}
+
 .skip {
     font-family: Chalkduster, Tahoma, Geneva, sans-serif;
 	
@@ -507,7 +511,7 @@ textarea {
 	}
 	
 	div.links a {
-    width: 77px;
+    	width: 84px;
 		
 	}
 	
