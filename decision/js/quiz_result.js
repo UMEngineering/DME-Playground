@@ -28,5 +28,12 @@ function displayPage(id){
 	$("#nav").html("<li>"+$("#d"+id+" a img").attr("alt").toUpperCase()+"</li><span id=\"goback\"><a href=\"result.php\">Go Back</a></span>");
 	$("#main").html($("#content"+id+" .description").html());
 	$("#main").css("height", "auto");
+	
+	// Change the #main's height to screen's height if in mobile version
+	var screenWidth = $(window).width();
+		if (screenWidth <= 800 && $(document).height() - $(window).height() <= 20) {
+			//alert($(window).height()+" "+$(document).height());
+			$("#main").css("height", ($(window).height()-200)+"px");;
+		}
 	$("#main p a").attr("target", "_blank");
 }
