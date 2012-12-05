@@ -17,14 +17,17 @@ function changePage(page){
 		var screenWidth = $(window).width();
 		var originWidth = screenWidth;
 		if (page == "explore" || page == "next") {
-			if (screenWidth <= 800 /*&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)*/){
+			if (screenWidth <= 800){
 				//create_yui_vert('.container');
-				create_yui('#scrollview-right0');
-				create_yui('#scrollview-right1');
-				create_yui('#scrollview-right2');
-				create_yui('#scrollview-right3');
+				if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
+					create_yui('#scrollview-right0');
+					create_yui('#scrollview-right1');
+					create_yui('#scrollview-right2');
+					create_yui('#scrollview-right3');
+				} else {
+					$(".scrollview-right").css("overflow-x", "scroll");
+				}
 			} else {
-				$(".scrollview-right").css("overflow-x", "scroll");
 				$('.flexslider').flexslider({
 					animation: "slide",
 					slideshow: false/*,
@@ -34,13 +37,15 @@ function changePage(page){
 			$("#main").css("height", "auto");
 			$(window).resize(function () { 
 				screenWidth = $(window).width();
-				if (screenWidth <= 800 && originWidth > 800 && inNav /*&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)*/){
-					//create_yui_vert('.container');
-					create_yui('#scrollview-right0');
-					create_yui('#scrollview-right1');
-					create_yui('#scrollview-right2');
-					create_yui('#scrollview-right3');
-					$(".scrollview-right").css("overflow-x", "scroll");
+				if (screenWidth <= 800 && originWidth > 800/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
+					if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
+						create_yui('#scrollview-right0');
+						create_yui('#scrollview-right1');
+						create_yui('#scrollview-right2');
+						create_yui('#scrollview-right3');
+					} else {
+						$(".scrollview-right").css("overflow-x", "scroll");
+					}
 				} else if (screenWidth > 800 && originWidth <= 800 && inNav) {
 					$(".scrollview-right").css("overflow-x", "scroll");
 					$('.flexslider').flexslider({
@@ -79,12 +84,12 @@ function changePageDetail(id, title, navid, typePage){
 			}
 		}
 		
-		//if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)) {
+		if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)) {
 			//$(".scrollview-right").css("overflow-x", "scroll");
 			create_yui('#img-nav-div');
-		//} else {
-			//$("#img-nav-div").css("overflow-x", "scroll");
-		//}
+		} else {
+			$("#img-nav-div").css("overflow-x", "scroll");
+		}
 		$('.flexslider').flexslider({
 			animation: "slide",
 			slideshow: false
@@ -106,7 +111,7 @@ function changePageDetail(id, title, navid, typePage){
 
 // Create horizontal scroll bars
 function create_yui(class_name){
-	/*var screenWidth = $(window).width();
+	var screenWidth = $(window).width();
 	YUI().use('scrollview', function(Y) {
 		var scrollView = new Y.ScrollView({
 			id: 'scrollview',
@@ -118,7 +123,7 @@ function create_yui(class_name){
 				axis: "x"
 			}
 		});
-		scrollView._prevent.move = false;
+		//scrollView._prevent.move = false;
 	
 		scrollView.render();
 		
@@ -133,12 +138,7 @@ function create_yui(class_name){
 			screenWidth = $(window).width();
 			resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
 		});
-	});*/
-	
-	$(class_name).droidscroll({
-		direction: 'h'
 	});
-	$("#img-nav-div").css("overflow", "hidden");
 }
 
 // Create vertical scrolling for mobile

@@ -70,7 +70,7 @@ ul.imgs-nav {
 }
 
 ul.imgs-nav li {
-	height: 126px;
+	height: 119px;
 	display: inline-block;
 	overflow: hidden;
 }
@@ -81,7 +81,7 @@ img.scroll-img {
 
 ul.imgs-nav li {
 	position: relative;
-	width: 98px;
+	width: 90px;
 	border: 1px solid white;
 	margin: 0 1px;
 	padding: 0;
@@ -96,9 +96,9 @@ div.transparent {
     position: absolute;
 	padding: 0px;
 	
-    width: 98px;
+    width: 90px;
     bottom: 0;
-    height: 40px;
+    height: 48px;
     background: rgba(255, 255, 255, .7);
     color: #2A4872;
 	

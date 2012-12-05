@@ -1,6 +1,7 @@
 /* CSS Document */
 #question_content p {
 	margin: 10px 10px 0 20px;
+	font-size: 19px;
 }
 
 form#questions {
@@ -10,6 +11,9 @@ form#questions {
 
 form#questions div {
 	clear: both;
+	height: auto;
+	display: block;
+	position: relative;
 }
 
 form#questions div input {

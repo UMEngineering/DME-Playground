@@ -49,7 +49,7 @@ input[type=checkbox].styled + label {
 	display: block;
 	background: url(../img/unchecked-small.png) no-repeat;
 	position: relative;
-	top: 40px;
+	top: 26px;
 	width: 23px;
 	height: 30px;
 	padding: 0;
@@ -59,11 +59,23 @@ input[type=checkbox].styled:checked + label {
 	display: block;
 	background: url(../img/checked-small.png) no-repeat;
 	position: relative;
-	top: 40px;
+	top: 26px;
 	width: 23px;
 	height: 30px;
 	padding: 0;
 	cursor: pointer;
+}
+
+#videos, .video-item {
+	margin: auto;
+}
+
+.video-item p {
+	margin-top: 0;
+}
+
+.video-item {
+	padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 801px) {
@@ -146,6 +158,10 @@ input[type=checkbox].styled:checked + label {
 		position: relative;
 		left: 10%;
 	}
+	
+	#videos, .youtubeOverlay {
+		width: 500px;
+	}
 }
 
 @media only screen and (min-width: 901px) {
@@ -169,5 +185,9 @@ input[type=checkbox].styled:checked + label {
 	}
 	ul.imgs-nav li a img {
 		width: 98px;
+	}
+	
+	#videos, .youtubeOverlay {
+		width: 300px;
 	}
 }

@@ -16,7 +16,7 @@ function displayPage(id){
 	}
 	
 	$(".imgs-nav").attr("id", "");
-	if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)){
+	if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
 		create_yui('#img-nav-div');
 	}else{
 		$("#img-nav-div").css("overflow-x", "scroll");
