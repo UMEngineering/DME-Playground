@@ -685,7 +685,7 @@ var youtubeH = 190;
 var descriptionW = 150;
 var descriptionH = 300;
 var infoWindowW = 420;
-var infoWindowH = 360;
+var infoWindowH = 250;
 if (iphone()) {
 	youtubeW = 150;
 	youtubeH = 100;

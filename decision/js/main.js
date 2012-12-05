@@ -24,7 +24,7 @@ function changePage(page){
 				create_yui('#scrollview-right2');
 				create_yui('#scrollview-right3');
 			} else {
-				//$(".scrollview-right").css("overflow-x", "scroll");
+				$(".scrollview-right").css("overflow-x", "scroll");
 				$('.flexslider').flexslider({
 					animation: "slide",
 					slideshow: false/*,
@@ -40,8 +40,9 @@ function changePage(page){
 					create_yui('#scrollview-right1');
 					create_yui('#scrollview-right2');
 					create_yui('#scrollview-right3');
+					$(".scrollview-right").css("overflow-x", "scroll");
 				} else if (screenWidth > 800 && originWidth <= 800 && inNav) {
-					//$(".scrollview-right").css("overflow-x", "scroll");
+					$(".scrollview-right").css("overflow-x", "scroll");
 					$('.flexslider').flexslider({
 						animation: "slide",
 						slideshow: false/*,
@@ -78,10 +79,12 @@ function changePageDetail(id, title, navid, typePage){
 			}
 		}
 		
-		//if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i))
+		//if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)) {
+			//$(".scrollview-right").css("overflow-x", "scroll");
 			create_yui('#img-nav-div');
-		//else
+		//} else {
 			//$("#img-nav-div").css("overflow-x", "scroll");
+		//}
 		$('.flexslider').flexslider({
 			animation: "slide",
 			slideshow: false
@@ -103,7 +106,7 @@ function changePageDetail(id, title, navid, typePage){
 
 // Create horizontal scroll bars
 function create_yui(class_name){
-	var screenWidth = $(window).width();
+	/*var screenWidth = $(window).width();
 	YUI().use('scrollview', function(Y) {
 		var scrollView = new Y.ScrollView({
 			id: 'scrollview',
@@ -130,7 +133,12 @@ function create_yui(class_name){
 			screenWidth = $(window).width();
 			resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
 		});
+	});*/
+	
+	$(class_name).droidscroll({
+		direction: 'h'
 	});
+	$("#img-nav-div").css("overflow", "hidden");
 }
 
 // Create vertical scrolling for mobile

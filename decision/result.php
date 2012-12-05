@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/result.css">
         <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/jquery.droidscroll.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body class="yui3-skin-sam">
@@ -44,9 +45,10 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/quiz_result.js"></script>
-        <script src="js/vendor/yui-min.js"></script>
+        <!--<script src="js/vendor/yui-min.js"></script>-->
         <script src="js/jquery.flexslider-min.js"></script>
         <script src="js/jquery.ba-hashchange.min.js"></script>
+        <script src="js/jquery.droidscroll.min.js"></script>
 		<script>
 		var prev_hash = "#result";
 		var current_hash = window.location.hash;
