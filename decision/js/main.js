@@ -1,7 +1,9 @@
 var inNav = true;
-
+//alert("Test");
+// window.scrollTo(0, 0);
 // Change a page for quiz result, drag information via Ajax
 function changePage(page){
+	console.log("changePage");
 	var urlAjax = "load_result.php?page=" + page;
 	var response = $.ajax({url: urlAjax, success: function(){
 		$("#main").html(response.responseText);
@@ -64,6 +66,8 @@ function changePage(page){
 
 // Load the detailed page
 function changePageDetail(id, title, navid, typePage){
+	console.log("changePageDetail");
+	window.scrollTo(0, 0);
 	inNav = false;
 	$("#main").css("height", "100%");
 	var urlAjax = "load_result.php?page=detail&id=" + id + "&typePage=" + typePage;

@@ -1,16 +1,16 @@
 <?php
 function load_page($id, $type_page){
 	if ($type_page == "explore") {
-		$result = mysql_query("SELECT title, img_src, description, alt FROM results WHERE id={$id};");
+		$result = mysql_query("SELECT title, img_src, description, alt, hideimg FROM results WHERE id={$id};");
 	} else {
-		$result = mysql_query("SELECT title, imgsrc, paragraph, alt FROM pages WHERE id={$id};");
+		$result = mysql_query("SELECT title, imgsrc, paragraph, alt, hideimg FROM pages WHERE id={$id};");
 	}
 	if (!$result){
 		print("Cannot load info from {$type_page}");
 	}
 	
 	if ($row = mysql_fetch_row($result)) {
-		if ($row[1] != "") {
+		if ($row[1] != "" && $row[4] != 1) {
 			echo "<div class=\"innerIMG\"><img src=\"{$row[1]}\" alt=\"{$row[3]}\" /></div>";
 		}
 		echo "<div class=\"page_detail\">{$row[2]}</div>";

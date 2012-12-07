@@ -41,11 +41,20 @@ span.checked {
 	padding: 4px 7px 0;
 }
 
+.twitter-timeline {
+    margin: 0 auto;
+    width: 100%;
+}
+
 @media only screen and (max-width: 800px) {
 	#container, #main {
 		height: 100%;
 	
-}
+	}
+
+	.twitter-timeline {
+		
+	}
 	
 	.bottom {
 		width: 100%;
