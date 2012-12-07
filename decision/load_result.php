@@ -195,7 +195,7 @@ if ($_REQUEST["page"] == "result"){
                     <ul class="imgs-nav">
             <?php
 		}?>
-                        <li>
+                        <li class="m-bottom-nav-<?= $row[3] ?>">
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
                             if ($out_href=="#detail") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
@@ -237,9 +237,9 @@ if ($_REQUEST["page"] == "result"){
 	?>
         
             <?php
-            if ($count % 4 == 0) echo "<li><ul class=\"imgs-nav imgs-nav-desktop\">";
+            if ($count % 4 == 0) echo "<li><ul class=\"imgs-nav imgs-nav-desktop {$count}\">";
             ?>
-                    <li>
+                    <li class="d-bottom-nav-<?= $row[3] ?>">
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
                             if ($out_href=="#detail") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
