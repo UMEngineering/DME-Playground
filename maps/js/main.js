@@ -26,6 +26,8 @@ function getUrlVars() {
 	return map;
 }
 
+
+
 //Check if it's an iPhone 
 function iphone() {
 	/*if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
@@ -117,18 +119,27 @@ function refreshMap() {
 setInterval(function(){refreshMap()}, 50);
 
 var LAYER = getUrlVars()["layer"];
+var LAT = getUrlVars()["lat"];
+var LON = getUrlVars()["lon"];
+
+LAT = parseFloat(LAT);
+LON = parseFloat(LON);
 
 // Create a new event called "loadmap" and bind it to the map's div.  Also create an "unloadmap" event, and bind that.  These will be fired when the page loads.
 $("div#googlemap").bind("loadmap", function initialize() {
 	$(this).removeClass("mapready").addClass("maploaded");
-	var lat = 42.29011737230321, lon = -83.71559682724455;
-	var latlng = new google.maps.LatLng(lat, lon);
-	if (LAYER == "decision") {
-		var lat = 42.274705, lon = -83.744408;
-		var latlng = new google.maps.LatLng(lat, lon);
+
+	if (isNaN(LAT) || isNaN(LON)) {
+		console.log("The things were undefined!");
+		var lat = 42.29011737230321, lon = -83.71559682724455;
+		if (LAYER=="decision") var lat = 42.274705, lon = -83.744408;
 	}
-	
-	
+	else {
+		var lat = LAT; var lon = LON;
+
+	}
+	var latlng = new google.maps.LatLng(lat, lon);
+	console.log("LatLng",latlng);
 //****** Set map options! ******	
 	
 	var myOptions = {
@@ -163,7 +174,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 
 //  < Decision map function >
 
-	function decisionMap (id, lat, lng, text, vid, vopen, name/*, description*/) {
+	function decisionMap (id, lat, lng, text, vid, vopen, name, description) {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
 		var mpointer = String(lat)+String(lng);
@@ -173,30 +184,17 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		// Define the description string
 		desc_string += "<li onclick='pantoNext("+temp_current+")'>"+name+"</li>";
 		
-		// Set "contentString" differently for video or text.
-		if (vid || vid != "") { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: '+infoWindowW+'px; z-index: 100; height: '+infoWindowH+'px; max-height:'+infoWindowH+'px; overflow: hidden;">';
-			console.log("Video: ", vid);
-			var temp = new google.maps.LatLng(0, 0);
-			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
-			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow-y: scroll; overflow-x: hidden;">'+desc_string+'</ol></div>';
-			else {contentString += '<div class="story">';
-				contentString += text+'</div>';
-			}
-			contentString += '<div id="nav_prev_next" style="position: absolute; top: '+(youtubeH+30)+'px; left: 0px; width: '+youtubeW+'px;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
-		}
-		else { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
-			console.log("No Video");
-			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
-			else contentString += '<div class="spacer"></div>';
-			if (text == "none")	contentString += '<div id="'+id+'" class="youtubeHolder" style="opacity: 1 !important; z-index: 1000 !important; background-color: black !important; float: left; width: '+youtubeW+'px; height:'+youtubeH+'px;"></div><div class="description" style="width: '+descriptionW+'px; height: '+descriptionH+'px; overflow-y: scroll; overflow-x: hidden;">'+desc_string+'</ol></div>';
-			else {contentString += '<div class="story">';
-				contentString += text+'</div>';
-			}
-			contentString += '<div id="nav_prev_next" style="position: absolute; top: '+(youtubeH+30)+'px; left: 0px; width: '+youtubeW+'px;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
-		}
+		// Set "contentString"
+		//**************************************************
+		var contentString = '<div data-innerid="'+id+'" class="googleInfo" id="googleInfoa'+id+'" style="width: '+infoWindowW+'px; z-index: 100; max-height:'+infoWindowH+'px; overflow: hidden;">';
+		var temp = new google.maps.LatLng(0, 0);
+		if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
+		else contentString += '<div class="spacer"></div>';
+		contentString += '<div class="description">test</div>';
+	
+		contentString += '<div id="nav_prev_next" style="position: relative;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
+		//**************************************************
+
 		var this_id = temp_current;
 		temp_current++;
 		var infowindow = new google.maps.InfoWindow({
@@ -268,7 +266,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 					$("iframe#ifr_"+key).remove();	
 				}
 			});
-			$(".description").html(desc_string);
+			//$(".description").html(desc_string);
 			
 			// ==========================Haoyi Yang EDITED 11/22===================================
 			current = this_id;
@@ -557,7 +555,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 						
 	//*****************THIS IS WHERE WE MAP AN ELEMENT.***********//
 						console.log("Mapping something");
-						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm/*, v.description*/);
+						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm, v.description);
 						latarr.push(parseFloat(v.lat));	
 						lonarr.push(parseFloat(v.lon));	
 						if (latarr.length > 1) { latarr.splice(-1,1); }
@@ -684,8 +682,13 @@ var youtubeW = 250;
 var youtubeH = 190;
 var descriptionW = 150;
 var descriptionH = 300;
+<<<<<<< HEAD
 var infoWindowW = 420;
 var infoWindowH = 250;
+=======
+var infoWindowW = 300;
+var infoWindowH = 150;
+>>>>>>> Items 1-8 on list
 if (iphone()) {
 	youtubeW = 150;
 	youtubeH = 100;

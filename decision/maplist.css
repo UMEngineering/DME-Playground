@@ -1,0 +1,85 @@
+.video-item {
+    position: relative;
+    width: 280px;
+    margin: 0 15px 20px;
+    float: left;
+    height: 100px;
+}
+
+.video-content {
+    padding: 0;
+    width: 280px;
+    height: 23px;
+    margin: 0;
+    position: relative;
+    font-size: 11px !important;
+    margin: -23px 0 20px 0px;
+    background: rgba(255, 255, 255, .8);
+    z-index: 10;
+}
+
+.video-content p {
+    display: block;
+    position: absolute;
+    margin: 0 !important;
+    font-size: 10px !important;
+}
+
+.video-content p:nth-child(1) {
+    left: 3px;
+    bottom: 4px;
+}
+
+.video-content p:nth-child(2) {
+    right: 5px;
+    bottom: 4px;
+    width: auto;
+    max-width: 138px;
+}
+
+.video-content p a {
+    width: auto;
+    background: url(http://engin.umich.edu/congrats/img/pages/map-pics/pin.png) no-repeat right top scroll;
+    max-width: 138px;
+    padding: 18px 24px 0 0;
+    text-decoration:none;
+}
+
+iframe {
+    display: block;
+    margin: 0;
+
+    
+    width: 280px;
+    z-index: -2;
+}
+
+.overlay {
+    width: 280px;
+    height: 100px;
+    position: absolute;
+
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.overlay img {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    margin: 0 0 0 -192px;
+    width: 335px;
+    z-index: -110;
+}
+
+.overlay .play {
+    background: url("http://engin.umich.edu/congrats/img/pages/map-pics/map-play-arrow.png") no-repeat center center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none !important;
+    width: 32px;
+    height: 24px;
+    margin: -14px 0 0 -20px;
+}

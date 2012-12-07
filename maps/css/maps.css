@@ -293,8 +293,6 @@ a.searchForGroup {
 /*=========================*/
 .description {
 	float: left;
-	overflow-y: scroll;
-	overflow-x: hidden;
 }
 
 .description ol li:hover, .nextMarker:hover {
@@ -302,9 +300,17 @@ a.searchForGroup {
 	color: #009BE3;
 }
 
+#nav_prev_next {
+
+	display:block;
+	position:relative;
+	clear:both;
+	
+}
+
 ::-webkit-scrollbar {
 	-webkit-appearance: none;
-	width: 7px;
+	width: 4px;
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 4px;

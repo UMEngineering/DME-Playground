@@ -192,6 +192,7 @@ body {
 	margin: 1em;
 	font-size: 11pt;
 	font-weight: 100 !important;
+	word-wrap: break-word;
 }
 
 div.video {

@@ -178,10 +178,11 @@ input[type=checkbox].styled:checked + label {
 
 @media only screen and (max-width: 800px) {
 	#main {
+		padding-bottom: 200px;
 		margin: 0;
-	}
+	
+}
 	.page_detail {
-		padding-bottom: 160px;
 	}
 	ul.imgs-nav li a img {
 		width: 98px;
