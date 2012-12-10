@@ -35,7 +35,7 @@
                	<li id="explore-nav"><a href="#explore">EXPLORE</a></li>
                	<li id="next-nav"><a href="#next">WHAT'S NEXT?</a></li>
             </ul>
-            <div id="main">
+            <div id="main" class="mainResult">
             
             </div>
         </div>

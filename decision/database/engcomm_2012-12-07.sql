@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
-# Host: webapps-db.web.itd.umich.edu (MySQL 5.0.45-log)
+# Host: 127.0.0.1 (MySQL 5.5.9)
 # Database: engcomm
-# Generation Time: 2012-12-07 21:08:27 +0000
+# Generation Time: 2012-12-07 21:39:37 +0000
 # ************************************************************
 
 
@@ -26,19 +26,19 @@
 DROP TABLE IF EXISTS `campus`;
 
 CREATE TABLE `campus` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `building_name` varchar(100) default NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `building_name` varchar(100) DEFAULT NULL,
   `address` text,
-  `description` text character set utf8,
-  `link` varchar(200) default NULL,
-  `lat` varchar(100) default NULL,
-  `lon` varchar(100) default NULL,
-  `open` tinyint(1) unsigned default '0',
-  `department` varchar(200) default NULL,
-  `num_thumbs` int(10) default NULL,
-  `flickr_photoset` varchar(200) default NULL,
-  `online` tinyint(4) default '0',
-  PRIMARY KEY  (`id`)
+  `description` text CHARACTER SET utf8,
+  `link` varchar(200) DEFAULT NULL,
+  `lat` varchar(100) DEFAULT NULL,
+  `lon` varchar(100) DEFAULT NULL,
+  `open` tinyint(1) unsigned DEFAULT '0',
+  `department` varchar(200) DEFAULT NULL,
+  `num_thumbs` int(10) DEFAULT NULL,
+  `flickr_photoset` varchar(200) DEFAULT NULL,
+  `online` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `campus` WRITE;
@@ -83,20 +83,20 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `decision`;
 
 CREATE TABLE `decision` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `name` varchar(100) default NULL,
-  `link` varchar(200) default NULL,
-  `location` varchar(100) default NULL,
-  `lat` varchar(100) default NULL,
-  `lon` varchar(100) default NULL,
-  `open` tinyint(1) unsigned default '0',
-  `text` text character set utf8,
-  `classyear` int(11) default NULL,
-  `department` varchar(200) default NULL,
-  `grp` varchar(200) default NULL,
-  `online` tinyint(4) default '0',
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `link` varchar(200) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `lat` varchar(100) DEFAULT NULL,
+  `lon` varchar(100) DEFAULT NULL,
+  `open` tinyint(1) unsigned DEFAULT '0',
+  `text` text CHARACTER SET utf8,
+  `classyear` int(11) DEFAULT NULL,
+  `department` varchar(200) DEFAULT NULL,
+  `grp` varchar(200) DEFAULT NULL,
+  `online` tinyint(4) DEFAULT '0',
   `description` text,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `decision` WRITE;
@@ -134,10 +134,10 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `departments`;
 
 CREATE TABLE `departments` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `department_name` varchar(200) default NULL,
-  `department_shortname` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `department_name` varchar(200) DEFAULT NULL,
+  `department_shortname` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `departments` WRITE;
@@ -168,19 +168,19 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `difference`;
 
 CREATE TABLE `difference` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `image1` varchar(200) default NULL,
-  `hires` varchar(200) default NULL,
-  `name` varchar(100) default NULL,
-  `city` varchar(50) default NULL,
-  `state` varchar(2) default NULL,
-  `country` varchar(20) default NULL,
-  `email` varchar(50) default NULL,
-  `title` varchar(300) default NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `image1` varchar(200) DEFAULT NULL,
+  `hires` varchar(200) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `state` varchar(2) DEFAULT NULL,
+  `country` varchar(20) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `title` varchar(300) DEFAULT NULL,
   `story` text,
   `under18` text,
-  `color` varchar(12) default NULL,
-  PRIMARY KEY  (`id`)
+  `color` varchar(12) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `difference` WRITE;
@@ -233,10 +233,10 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `groups`;
 
 CREATE TABLE `groups` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `group_name` varchar(200) default NULL,
-  `group_shortname` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(200) DEFAULT NULL,
+  `group_shortname` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `groups` WRITE;
@@ -342,19 +342,19 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `holidays`;
 
 CREATE TABLE `holidays` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `name` varchar(100) default NULL,
-  `link` varchar(200) default NULL,
-  `location` varchar(100) default NULL,
-  `lat` varchar(100) default NULL,
-  `lon` varchar(100) default NULL,
-  `open` tinyint(1) unsigned default '0',
-  `text` text character set utf8,
-  `classyear` int(11) default NULL,
-  `department` varchar(200) default NULL,
-  `grp` varchar(200) default NULL,
-  `online` tinyint(4) default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `link` varchar(200) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `lat` varchar(100) DEFAULT NULL,
+  `lon` varchar(100) DEFAULT NULL,
+  `open` tinyint(1) unsigned DEFAULT '0',
+  `text` text CHARACTER SET utf8,
+  `classyear` int(11) DEFAULT NULL,
+  `department` varchar(200) DEFAULT NULL,
+  `grp` varchar(200) DEFAULT NULL,
+  `online` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=84 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `holidays` WRITE;
@@ -444,12 +444,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `layer`;
 
 CREATE TABLE `layer` (
-  `id` int(11) unsigned NOT NULL auto_increment,
-  `title` int(11) default NULL,
-  `description` int(11) default NULL,
-  `summary` int(11) default NULL,
-  `fields` int(11) default NULL,
-  PRIMARY KEY  (`id`)
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` int(11) DEFAULT NULL,
+  `description` int(11) DEFAULT NULL,
+  `summary` int(11) DEFAULT NULL,
+  `fields` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
@@ -460,22 +460,22 @@ CREATE TABLE `layer` (
 DROP TABLE IF EXISTS `map_pin`;
 
 CREATE TABLE `map_pin` (
-  `id` int(11) unsigned NOT NULL auto_increment,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` text,
-  `layer_id` int(11) default NULL,
-  `pin_img` varchar(200) default NULL,
-  `thumbnail_img` varchar(200) default NULL,
-  `main_img` varchar(200) default NULL,
-  `youtube_link` varchar(200) default NULL,
-  `vimeo_link` int(11) default NULL,
-  `photoset_id` int(11) default NULL,
+  `layer_id` int(11) DEFAULT NULL,
+  `pin_img` varchar(200) DEFAULT NULL,
+  `thumbnail_img` varchar(200) DEFAULT NULL,
+  `main_img` varchar(200) DEFAULT NULL,
+  `youtube_link` varchar(200) DEFAULT NULL,
+  `vimeo_link` int(11) DEFAULT NULL,
+  `photoset_id` int(11) DEFAULT NULL,
   `html_embed` text,
-  `lat` float default NULL,
-  `lon` float default NULL,
-  `created_by` varchar(8) default NULL,
-  `edited_by` varchar(8) default NULL,
-  `public` tinyint(1) default NULL,
-  PRIMARY KEY  (`id`)
+  `lat` float DEFAULT NULL,
+  `lon` float DEFAULT NULL,
+  `created_by` varchar(8) DEFAULT NULL,
+  `edited_by` varchar(8) DEFAULT NULL,
+  `public` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
@@ -486,7 +486,7 @@ CREATE TABLE `map_pin` (
 DROP TABLE IF EXISTS `pages`;
 
 CREATE TABLE `pages` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
   `imgsrc` text NOT NULL,
   `media` text NOT NULL,
@@ -494,28 +494,29 @@ CREATE TABLE `pages` (
   `subcategory` text NOT NULL,
   `paragraph` text NOT NULL,
   `outside_href` text NOT NULL,
-  `alt` varchar(200) default NULL,
-  `hideimg` tinyint(4) default NULL,
-  PRIMARY KEY  (`id`)
+  `alt` varchar(200) DEFAULT NULL,
+  `hideimg` tinyint(4) DEFAULT NULL,
+  `sort` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `pages` WRITE;
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 
-INSERT INTO `pages` (`id`, `title`, `imgsrc`, `media`, `category`, `subcategory`, `paragraph`, `outside_href`, `alt`, `hideimg`)
+INSERT INTO `pages` (`id`, `title`, `imgsrc`, `media`, `category`, `subcategory`, `paragraph`, `outside_href`, `alt`, `hideimg`, `sort`)
 VALUES
-	(3,'Checklist of admissions tasks','img/pages/next-checklist.jpg','','next','next steps','<p>Your Admissions Checklist includes the list of task needed to enroll at Michigan Engineering. Click each box to check when complete.</p>                <form id=\"checklist\">                	<div><input class=\"styled\" id=\"c1\" type=\"checkbox\" name=\"step1\" value=\"1\" onclick=\"checkthis(\'c1\')\" checked=\"checked\" /><label for=\"c1\"></label><p><span class=\"steps\" id=\"c1p\">STEP ONE</span><br />Receive your acceptance letter and view admitted student website.</p></div>                	<div><input class=\"styled\" id=\"c2\" type=\"checkbox\" name=\"step2\" value=\"2\" onclick=\"checkthis(\'c2\')\"/><label for=\"c2\"></label><p><span class=\"steps\" id=\"c2p\">STEP TWO</span><br /><a href=\"\">Register for Campus Day</a>. This program is held January through April, and registration starts in January.</p></div>                	<div><input class=\"styled\" id=\"c3\" type=\"checkbox\" name=\"step3\" value=\"3\" onclick=\"checkthis(\'c3\')\"/><label for=\"c3\"></label><p><span class=\"steps\" id=\"c3p\">STEP THREE</span><br />Complete your <a href=\"\">CSS Profile and FAFSA</a>: The early deadline is February 15. April 30 is the final deadline.</p></div>                	<div><input class=\"styled\" id=\"c4\" type=\"checkbox\" name=\"step4\" value=\"4\" onclick=\"checkthis(\'c4\')\"/><label for=\"c4\"></label><p><span class=\"steps\" id=\"c4p\">STEP FOUR</span><br />Pay your $200 enrollment deposit. Deposit is due by May 1. Payment can be made via <a href=\"http://wolverineaccess.umich.edu/render.userLayoutRootNode.uP?uP_root=root&uP_sparam=activeTab&activeTab=2\">Wolverine Access</a>, or post marked by May 1, 2013. If paying by check, make payable to the University of Michigan College of Engineering and mail to 1000 University Ave, Suite 3A, Ann Arbor, MI 48108.</p></div>                	<div><input class=\"styled\" id=\"c5\" type=\"checkbox\" name=\"step5\" value=\"5\" onclick=\"checkthis(\'c5\')\"/><label for=\"c5\"></label><p><span class=\"steps\" id=\"c5p\">STEP FIVE</span><br />Check scholarship status. Admitted first-year students are automatically considered for <a href=\"http://www.engin.umich.edu/students/scholarships/newstudents\">College of Engineering merit-based scholarships</a>, and notification of awards are made before mid-April. <a href=\"http://www.finaid.umich.edu/Home/TypesofAid/ScholarshipsandGrants/OFAScholarshipListing.aspx\">U-M Scholarships</a> are administered by the Office of Financial Aid and most recipients are notified by April 15.</p></div>                	<div><input class=\"styled\" id=\"c6\" type=\"checkbox\" name=\"step6\" value=\"6\" onclick=\"checkthis(\'c6\')\"/><label for=\"c6\"></label><p><span class=\"steps\" id=\"c6p\">STEP SIX</span><br />Submit your <a href=\"http://housing.umich.edu/applications/freshman\">Housing/Michigan Learning Community Application</a>. Due by May 7.  If applying for a Michigan Learning Community, additional essays are required. Please verify the requirements for your selection. (Note: Enrollment Deposit must be paid)</p></div>                	<div><input class=\"styled\" id=\"c7\" type=\"checkbox\" name=\"step7\" value=\"7\" onclick=\"checkthis(\'c7\')\"/><label for=\"c7\"></label><p><span class=\"steps\" id=\"c7p\">STEP SEVEN</span><br /><a href=\"http://onsp.umich.edu/incoming_freshmen/orientation/\">Register for Orientation</a>. Registration slots made available in early April (Note: Enrollment Deposit must be paid)</p></div>                </form><script>load_checklist();</script>','',NULL,NULL),
-	(4,'See students at their fav spots','img/pages/explore-favspots.jpg','','next','explore ann arbor','<iframe width=\"100%\" height=\"100%\" style=\"border:none;height:100%;\" src=\"http://www.engin.umich.edu/congrats/maplist.php\"></iframe>','',NULL,NULL),
-	(11,'Register for campus day','img/pages/next-campusday.jpg','','next','next steps','<p>How can you know where you want to spend your college years without seeing it in person? <a href=\"http://www.admissions.umich.edu/drupal/campus-day-registration\">Campus Day</a> lets you get a glimpse of what Michigan Engineering has - and whether it\'s right for you. You\'ll have the opportunity to learn about life at the University, see the campus and Ann Arbor, visit departments, and interact with faculty.</p>\n \n<p><a href=\"http://www.admissions.umich.edu/drupal/campusday\">Register Now for Campus Day</a>:  This program is held January through April, and registration starts in January.</p>\n\n<p><ul>\n	<li>Campus Day 2013 Dates</li>\n	<li>Saturday, January 26</li>\n	<li>Monday, February 11</li>\n	<li>Saturday, February 16</li>\n	<li>Monday, February 18</li>\n	<li>Friday, February 22</li>\n	<li>Monday, March 11</li>\n	<li>Friday, March 15</li>\n	<li>Monday, March 18</li>\n	<li>Friday, March 22</li>\n	<li>Saturday, March 23</li>\n	<li>Monday, March 25</li>\n	<li>Friday, March 29</li>\n	<li>Monday, April 1</li>\n	<li>Friday, April 5</li>\n	<li>Monday, April 8</li>\n	<li>Friday, April 12</li>\n	<li>Saturday, April 13</li>\n	<li>Monday, April 15</li>\n	<li>Friday, April 19</li>\n	<li>Saturday, April 20</li>\n	<li>Monday, April 22</li>\n</ul></p>','',NULL,NULL),
-	(13,'Put dates on your calendar','img/scroll/scroll1.png','','next','next steps','<p>Add these dates to your calendar!</p>\n<p>\n    <ul>\n        <li><b>January 1:</b> <a href=\"http://www.admissions.umich.edu/drupal/campusday\">Register for Campus Day</a></li>\n        <li><b>February 15:</b> <a href=\"#\">Financial Aid deadlines</a>: <a href=\"http://www.fafsa.ed.gov/\">FAFSA</a>  &amp; <a href=\"https://profileonline.collegeboard.org/prf/index.jsp\">CSS</a> early file deadline</li>\n        <li><b>March 15:</b> Don\'t forget - $200 Enrollment Deposit is due before you can register for orientation or apply for housing. Final deadline for deposit is May 1.</li>\n        <li><b>March 29:</b> <a href=\"http://www.admissions.umich.edu/drupal/campusday\">Register for Campus Day</a> If you haven\'t done this yet, you should do it now!</li>\n        <li><b>April 1:</b> <a href=\"http://onsp.umich.edu/incoming_freshmen/orientation/\">Register for Orientation</a> <span style=\"font-style: italic;\">(Note: May apply after enrollment deposit is made)</span>\n</li>\n        <li><b>April 15:</b> Scholarship status sent out on or before this date</li>\n        <li><b>April 30:</b> <a href=\"#\">Financial Aid deadlines</a>: <a href=\"http://www.fafsa.ed.gov/\">FAFSA</a>  &amp; <a href=\"https://profileonline.collegeboard.org/prf/index.jsp\">CSS</a> final file deadline</li>\n        <li><b>May 1:</b> $200 Enrollment Deposit due. Payment can be made via Wolverine Access, or post marked by May 1, 2013. If paying by check, make payable to the University of Michigan College of Engineering and mail to 1000 University Ave, Suite 3A, Ann Arbor, MI 48108.</li>\n        <li><b>May 7:</b> Deadline for <a href=\"http://housing.umich.edu/applications/freshman\">Housing/Michigan Learning Community Application</a>. If applying for a Michigan Learning Community, additional essays are required. <span style=\"font-style: italic;\">(Note: May apply after enrollment deposit is made)</span></li>\n        <li><b>May 10:</b> <a href=\"http://onsp.umich.edu/incoming_freshmen/orientation/\">Register for Orientation</a> if you haven\'t done this yet, you should do it now! <span style=\"font-style: italic;\">(Note: May apply after enrollment deposit is made)</span></li>\n    </ul>\n</p>','',NULL,NULL),
-	(23,'A Sophomore in South Quad','img/pages/slice-cheriyan.jpg','','next','grab a slice','<p>Hannah Cheriyan knows first-hand the importance of medical advancements. As an infant her very life depended on it, and now she is determined to give back by following her passion for medical research - while still finding time for classes, music and fun.</p>','',NULL,NULL),
-	(24,'Hybrids & Hockey','img/pages/slice-cheriyan.jpg','','next','grab a slice','<p>Need Content here</p>','',NULL,NULL),
-	(25,'Jersey girl goes blue','img/pages/slice-cheriyan.jpg','','next','grab a slice','<p>Need Content here</p>','',NULL,NULL),
-	(26,'Explore a map of North Campus','img/pages/explore-northcampus.jpg','','next','explore ann arbor','<p>North Campus is packed with classrooms, labs and facilities. See the buildings and areas that Michigan Engineering has to offer in this interactive map.<br /><a href=\"campusmap.php\">See the North Campus map</a></p>','',NULL,NULL),
-	(27,'Watch video about A2\'s spirit','img/pages/explore-a2spirit.jpg','','next','explore ann arbor','<p>Ann Arbor is known as the quintessential college town, and it\'s full of its own quirky culture that students grow to love. This video captures the \"Spirit of Ann Arbor.\"<br /><a href=\"map.html\">{Launch \"Spirit of Ann Arbor\" video}</a></p>','',NULL,NULL),
-	(28,'#UMengin17','img/pages/pond-twitter.jpg','','next','connect','<p>See who else is considering being the class of 2017 - and share your excitement with them! Tweet with the hashtag #UMengin17. Don\'t have Twitter? <a href=\"mailto:UMengineering17@umich.edu\">Email us</a> and we\'ll do it for you!<br /><br /><a class=\"twitter-timeline\" href=\"https://twitter.com/search?q=%23fiscalcliff\" data-widget-id=\"276381492421214208\">Tweets about \"#fiscalcliff\"</a>\n<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=\"//platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>\n','',NULL,1),
-	(29,'What\'s up on Facebook','img/pages/pond-facebook.jpg','','next','connect','<iframe src=\"http://www.facebook.com/plugins/likebox.php?id=51664048323&amp;width=272&amp;connections=8&amp;stream=true&amp;header=false&amp;\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden;\" allowTransparency=\"true\"></iframe>','',NULL,1),
-	(30,'Email us','img/pages/pond-emailus.jpg','','next','connect','<p>You have questions, and we have answers. Here are some people you may want to know:</p>\n\n<p><b>Admissions Information</b><br />\nKatrina Williams<br />\nAs Director of Recruitment & Admissions, Katrina can answer any questions you have about the admissions process - including dates, deadlines, forms and more.<br />\n<a href=\"mailto:katwill@umich.edu?cc=bencollins2@gmail.com&amp;subject=Admissions question&amp;\">katwill@umich.edu</a></p>\n\n<p><b>College and University Information</b><br />\nJeanne Murabito<br />\nIf you (or your family) are wondering what the campus, classes or programs are like, Jeanne, the Executive Director of Student Affairs, can give you the skinny.<br />\n<a href=\"mailto:murabito@umich.edu\">murabito@umich.edu</a></p>\n\n<p><b>Campus Visits</b><br />\nDavid Betts<br />\nIf you\'d like one more look at the college before you commit, David (our Campus Visit Coordinator) can get you hooked up.<br />\n<a href=\"mailto:djmbetts@umich.edu\">djmbetts@umich.edu</a></p>\n\n<p><b>Scholarships</b><br />\nGeorge Dendrinos<br />\nIf you\'re trying to navigate the world of financial aid or are wondering what scholarships may be available for you, our Scholarship Manager George has you covered.<br />\n<a href=\"mailto:coe.scholarships@umich.edu\">coe.scholarships@umich.edu</a></p>\n\n<p><b>Student Life</b><br />\nJennifer Wegner<br />\nJen is Assistant Director of Student Affairs, which is a fancy way of saying that she knows everything there is to know about what it\'s like to be a student at Michigan Engineering.<br />\n<a href=\"mailto:jwegner@umich.edu\">jwegner@umich.edu</a></p>','',NULL,NULL);
+	(3,'Checklist of admissions tasks','img/pages/next-checklist.jpg','','next','next steps','<p>Your Admissions Checklist includes the list of task needed to enroll at Michigan Engineering. Click each box to check when complete.</p>                <form id=\"checklist\">                	<div><input class=\"styled\" id=\"c1\" type=\"checkbox\" name=\"step1\" value=\"1\" onclick=\"checkthis(\'c1\')\" checked=\"checked\" /><label for=\"c1\"></label><p><span class=\"steps\" id=\"c1p\">STEP ONE</span><br />Receive your acceptance letter and view admitted student website.</p></div>                	<div><input class=\"styled\" id=\"c2\" type=\"checkbox\" name=\"step2\" value=\"2\" onclick=\"checkthis(\'c2\')\"/><label for=\"c2\"></label><p><span class=\"steps\" id=\"c2p\">STEP TWO</span><br /><a href=\"\">Register for Campus Day</a>. This program is held January through April, and registration starts in January.</p></div>                	<div><input class=\"styled\" id=\"c3\" type=\"checkbox\" name=\"step3\" value=\"3\" onclick=\"checkthis(\'c3\')\"/><label for=\"c3\"></label><p><span class=\"steps\" id=\"c3p\">STEP THREE</span><br />Complete your <a href=\"\">CSS Profile and FAFSA</a>: The early deadline is February 15. April 30 is the final deadline.</p></div>                	<div><input class=\"styled\" id=\"c4\" type=\"checkbox\" name=\"step4\" value=\"4\" onclick=\"checkthis(\'c4\')\"/><label for=\"c4\"></label><p><span class=\"steps\" id=\"c4p\">STEP FOUR</span><br />Pay your $200 enrollment deposit. Deposit is due by May 1. Payment can be made via <a href=\"http://wolverineaccess.umich.edu/render.userLayoutRootNode.uP?uP_root=root&uP_sparam=activeTab&activeTab=2\">Wolverine Access</a>, or post marked by May 1, 2013. If paying by check, make payable to the University of Michigan College of Engineering and mail to 1000 University Ave, Suite 3A, Ann Arbor, MI 48108.</p></div>                	<div><input class=\"styled\" id=\"c5\" type=\"checkbox\" name=\"step5\" value=\"5\" onclick=\"checkthis(\'c5\')\"/><label for=\"c5\"></label><p><span class=\"steps\" id=\"c5p\">STEP FIVE</span><br />Check scholarship status. Admitted first-year students are automatically considered for <a href=\"http://www.engin.umich.edu/students/scholarships/newstudents\">College of Engineering merit-based scholarships</a>, and notification of awards are made before mid-April. <a href=\"http://www.finaid.umich.edu/Home/TypesofAid/ScholarshipsandGrants/OFAScholarshipListing.aspx\">U-M Scholarships</a> are administered by the Office of Financial Aid and most recipients are notified by April 15.</p></div>                	<div><input class=\"styled\" id=\"c6\" type=\"checkbox\" name=\"step6\" value=\"6\" onclick=\"checkthis(\'c6\')\"/><label for=\"c6\"></label><p><span class=\"steps\" id=\"c6p\">STEP SIX</span><br />Submit your <a href=\"http://housing.umich.edu/applications/freshman\">Housing/Michigan Learning Community Application</a>. Due by May 7.  If applying for a Michigan Learning Community, additional essays are required. Please verify the requirements for your selection. (Note: Enrollment Deposit must be paid)</p></div>                	<div><input class=\"styled\" id=\"c7\" type=\"checkbox\" name=\"step7\" value=\"7\" onclick=\"checkthis(\'c7\')\"/><label for=\"c7\"></label><p><span class=\"steps\" id=\"c7p\">STEP SEVEN</span><br /><a href=\"http://onsp.umich.edu/incoming_freshmen/orientation/\">Register for Orientation</a>. Registration slots made available in early April (Note: Enrollment Deposit must be paid)</p></div>                </form><script>load_checklist();</script>','',NULL,NULL,1),
+	(4,'See students at their fav spots','img/pages/explore-favspots.jpg','','next','explore ann arbor','<iframe width=\"100%\" height=\"100%\" style=\"border:none;height:100%;\" src=\"http://www.engin.umich.edu/congrats/maplist.php\"></iframe>','',NULL,NULL,2),
+	(11,'Register for campus day','img/pages/next-campusday.jpg','','next','next steps','<p>How can you know where you want to spend your college years without seeing it in person? <a href=\"http://www.admissions.umich.edu/drupal/campus-day-registration\">Campus Day</a> lets you get a glimpse of what Michigan Engineering has - and whether it\'s right for you. You\'ll have the opportunity to learn about life at the University, see the campus and Ann Arbor, visit departments, and interact with faculty.</p>\n \n<p><a href=\"http://www.admissions.umich.edu/drupal/campusday\">Register Now for Campus Day</a>:  This program is held January through April, and registration starts in January.</p>\n\n<p><ul>\n	<li>Campus Day 2013 Dates</li>\n	<li>Saturday, January 26</li>\n	<li>Monday, February 11</li>\n	<li>Saturday, February 16</li>\n	<li>Monday, February 18</li>\n	<li>Friday, February 22</li>\n	<li>Monday, March 11</li>\n	<li>Friday, March 15</li>\n	<li>Monday, March 18</li>\n	<li>Friday, March 22</li>\n	<li>Saturday, March 23</li>\n	<li>Monday, March 25</li>\n	<li>Friday, March 29</li>\n	<li>Monday, April 1</li>\n	<li>Friday, April 5</li>\n	<li>Monday, April 8</li>\n	<li>Friday, April 12</li>\n	<li>Saturday, April 13</li>\n	<li>Monday, April 15</li>\n	<li>Friday, April 19</li>\n	<li>Saturday, April 20</li>\n	<li>Monday, April 22</li>\n</ul></p>','',NULL,NULL,1),
+	(13,'Put dates on your calendar','img/scroll/scroll1.png','','next','next steps','<p>Add these dates to your calendar!</p>\n<p>\n    <ul>\n        <li><b>January 1:</b> <a href=\"http://www.admissions.umich.edu/drupal/campusday\">Register for Campus Day</a></li>\n        <li><b>February 15:</b> <a href=\"#\">Financial Aid deadlines</a>: <a href=\"http://www.fafsa.ed.gov/\">FAFSA</a>  &amp; <a href=\"https://profileonline.collegeboard.org/prf/index.jsp\">CSS</a> early file deadline</li>\n        <li><b>March 15:</b> Don\'t forget - $200 Enrollment Deposit is due before you can register for orientation or apply for housing. Final deadline for deposit is May 1.</li>\n        <li><b>March 29:</b> <a href=\"http://www.admissions.umich.edu/drupal/campusday\">Register for Campus Day</a> If you haven\'t done this yet, you should do it now!</li>\n        <li><b>April 1:</b> <a href=\"http://onsp.umich.edu/incoming_freshmen/orientation/\">Register for Orientation</a> <span style=\"font-style: italic;\">(Note: May apply after enrollment deposit is made)</span>\n</li>\n        <li><b>April 15:</b> Scholarship status sent out on or before this date</li>\n        <li><b>April 30:</b> <a href=\"#\">Financial Aid deadlines</a>: <a href=\"http://www.fafsa.ed.gov/\">FAFSA</a>  &amp; <a href=\"https://profileonline.collegeboard.org/prf/index.jsp\">CSS</a> final file deadline</li>\n        <li><b>May 1:</b> $200 Enrollment Deposit due. Payment can be made via Wolverine Access, or post marked by May 1, 2013. If paying by check, make payable to the University of Michigan College of Engineering and mail to 1000 University Ave, Suite 3A, Ann Arbor, MI 48108.</li>\n        <li><b>May 7:</b> Deadline for <a href=\"http://housing.umich.edu/applications/freshman\">Housing/Michigan Learning Community Application</a>. If applying for a Michigan Learning Community, additional essays are required. <span style=\"font-style: italic;\">(Note: May apply after enrollment deposit is made)</span></li>\n        <li><b>May 10:</b> <a href=\"http://onsp.umich.edu/incoming_freshmen/orientation/\">Register for Orientation</a> if you haven\'t done this yet, you should do it now! <span style=\"font-style: italic;\">(Note: May apply after enrollment deposit is made)</span></li>\n    </ul>\n</p>','',NULL,NULL,1),
+	(23,'A Sophomore in South Quad','img/pages/slice-cheriyan.jpg','','next','grab a slice','<p>Hannah Cheriyan knows first-hand the importance of medical advancements. As an infant her very life depended on it, and now she is determined to give back by following her passion for medical research - while still finding time for classes, music and fun.</p>','',NULL,NULL,3),
+	(24,'Hybrids & Hockey','img/pages/slice-cheriyan.jpg','','next','grab a slice','<p>Need Content here</p>','',NULL,NULL,3),
+	(25,'Jersey girl goes blue','img/pages/slice-cheriyan.jpg','','next','grab a slice','<p>Need Content here</p>','',NULL,NULL,3),
+	(26,'Explore a map of North Campus','img/pages/explore-northcampus.jpg','','next','explore ann arbor','<p>North Campus is packed with classrooms, labs and facilities. See the buildings and areas that Michigan Engineering has to offer in this interactive map.<br /><a href=\"campusmap.php\">See the North Campus map</a></p>','',NULL,NULL,2),
+	(27,'Watch video about A2\'s spirit','img/pages/explore-a2spirit.jpg','','next','explore ann arbor','<p>Ann Arbor is known as the quintessential college town, and it\'s full of its own quirky culture that students grow to love. This video captures the \"Spirit of Ann Arbor.\"<br /><a href=\"map.html\">{Launch \"Spirit of Ann Arbor\" video}</a></p>','',NULL,NULL,2),
+	(28,'#UMengin17','img/pages/pond-twitter.jpg','','next','connect','<p>See who else is considering being the class of 2017 - and share your excitement with them! Tweet with the hashtag #UMengin17. Don\'t have Twitter? <a href=\"mailto:UMengineering17@umich.edu\">Email us</a> and we\'ll do it for you!<br /><br /><a class=\"twitter-timeline\" href=\"https://twitter.com/search?q=%23fiscalcliff\" data-widget-id=\"276381492421214208\">Tweets about \"#fiscalcliff\"</a>\n<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=\"//platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>\n','',NULL,1,4),
+	(29,'What\'s up on Facebook','img/pages/pond-facebook.jpg','','next','connect','<iframe src=\"http://www.facebook.com/plugins/likebox.php?id=51664048323&amp;width=272&amp;connections=8&amp;stream=true&amp;header=false&amp;\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden;\" allowTransparency=\"true\"></iframe>','',NULL,1,4),
+	(30,'Email us','img/pages/pond-emailus.jpg','','next','connect','<p>You have questions, and we have answers. Here are some people you may want to know:</p>\n\n<p><b>Admissions Information</b><br />\nKatrina Williams<br />\nAs Director of Recruitment & Admissions, Katrina can answer any questions you have about the admissions process - including dates, deadlines, forms and more.<br />\n<a href=\"mailto:katwill@umich.edu?cc=bencollins2@gmail.com&amp;subject=Admissions question&amp;\">katwill@umich.edu</a></p>\n\n<p><b>College and University Information</b><br />\nJeanne Murabito<br />\nIf you (or your family) are wondering what the campus, classes or programs are like, Jeanne, the Executive Director of Student Affairs, can give you the skinny.<br />\n<a href=\"mailto:murabito@umich.edu\">murabito@umich.edu</a></p>\n\n<p><b>Campus Visits</b><br />\nDavid Betts<br />\nIf you\'d like one more look at the college before you commit, David (our Campus Visit Coordinator) can get you hooked up.<br />\n<a href=\"mailto:djmbetts@umich.edu\">djmbetts@umich.edu</a></p>\n\n<p><b>Scholarships</b><br />\nGeorge Dendrinos<br />\nIf you\'re trying to navigate the world of financial aid or are wondering what scholarships may be available for you, our Scholarship Manager George has you covered.<br />\n<a href=\"mailto:coe.scholarships@umich.edu\">coe.scholarships@umich.edu</a></p>\n\n<p><b>Student Life</b><br />\nJennifer Wegner<br />\nJen is Assistant Director of Student Affairs, which is a fancy way of saying that she knows everything there is to know about what it\'s like to be a student at Michigan Engineering.<br />\n<a href=\"mailto:jwegner@umich.edu\">jwegner@umich.edu</a></p>','',NULL,NULL,4);
 
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -527,13 +528,13 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `questions`;
 
 CREATE TABLE `questions` (
-  `id` int(11) NOT NULL auto_increment,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `ans_id` int(11) NOT NULL,
   `q_id` int(11) NOT NULL,
   `question` text NOT NULL,
   `answer` text NOT NULL,
   `logic` varchar(50) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `questions` WRITE;
@@ -578,53 +579,54 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `results`;
 
 CREATE TABLE `results` (
-  `id` int(11) unsigned NOT NULL auto_increment,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `r_id` varchar(3) NOT NULL,
-  `title` varchar(200) default NULL,
-  `description` text character set utf8,
-  `category` varchar(200) default NULL,
-  `subcategory` varchar(200) default NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `description` text CHARACTER SET utf8,
+  `category` varchar(200) DEFAULT NULL,
+  `subcategory` varchar(200) DEFAULT NULL,
   `img_src` text NOT NULL,
   `outside_href` text NOT NULL,
   `media` text NOT NULL,
-  `alt` varchar(200) default NULL,
-  `hideimg` tinyint(4) default NULL,
-  PRIMARY KEY  (`id`)
+  `alt` varchar(200) DEFAULT NULL,
+  `hideimg` tinyint(4) DEFAULT NULL,
+  `sort` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `results` WRITE;
 /*!40000 ALTER TABLE `results` DISABLE KEYS */;
 
-INSERT INTO `results` (`id`, `r_id`, `title`, `description`, `category`, `subcategory`, `img_src`, `outside_href`, `media`, `alt`, `hideimg`)
+INSERT INTO `results` (`id`, `r_id`, `title`, `description`, `category`, `subcategory`, `img_src`, `outside_href`, `media`, `alt`, `hideimg`, `sort`)
 VALUES
-	(1,'A1','Honors Programs','<p>With specialized courses, unique academic tracks and special access to faculty mentors, the <a href=\"http://www.engin.umich.edu/academics/honors\">Honors Program</a> creates an enriched learning environment. It is a unique opportunity for highly-motivated students to reach their full potential.</p>\n<p>Its partner program, <a  href=\"http://www.engin.umich.edu/academics/honors/egl\">Engineering Global Leadership (EGL)</a> specialization, is a unique opportunity for students interested in integrating engineering into a global business environment. EGL students continue at U-M beyond the College of Engineering Honors Program to earn a Masters in an engineering discipline.</p>','Academics','Programs & Research','img/pages/academics-honors.jpg','','',NULL,NULL),
-	(2,'A2','Programs & Minors','<p>The University of Michigan has 95 top-ranked programs, nine top-ten engineering departments, state-of-the-art facilities and award-winning faculty &ndash; which all empower you to carve your own path. The College of Engineering offers 14 undergraduate programs, and many courses for one undergraduate program apply towards the requirements for another. That means that pursuing more than one degree in engineering is not just possible, it\'s encouraged.</p>\n<p>You can also take advantage of a number of joint degrees or minors with other U-M schools.<br /><a href=\"http://www.engin.umich.edu/departments/\">College of Engineering departments</a><br /><a href=\"http://www.engin.umich.edu/bulletin/uged/degree.html\">Undergraduate Degree Options</a><br /><a href=\"http://www.engin.umich.edu/bulletin/uged/coeminors.html\">Engineering Minors and Certificates</a><br /><a href=\"http://www.engin.umich.edu/bulletin/uged/minors.html\">Additional Approved Minors </a></p>','Academics','Programs & Research','img/pages/academics-programs.jpg','','',NULL,NULL),
-	(3,'A3','Graduate Studies','<p>Thinking you may want to delve further into the world of education and get a graduate degree? Many of our Michigan Engineering undergrads continue with their education in graduate school or professional programs. The beauty of an engineering degree is that it opens the door to a wide range of careers and post-college programs, including medical and law school, public policy or entrepreneurship.</p>\n<p><a href=\"http://www.engin.umich.edu/gradadmissions/\">CoE Graduate Education</a><br />\n<a href=\"http://www.rackham.umich.edu/prospective_students/\">Rackham Graduate School</a><br />\n<a href=\"http://entrepreneurship.umich.edu/\">Master of Entrepreneurship</a></p>','Academics','Programs & Research','img/pages/academics-gradstudies.jpg','','',NULL,NULL),
-	(4,'A4','Undergraduate Research','<p>Want to get your hands dirty right away? The College of Engineering offers hundreds of labs and opportunities to students looking to create their own projects or assist award-winning professors with groundbreaking research. Opportunities are available throughout the semester and during the summer.</p>\n<p><a href=\"http://www.lsa.umich.edu/urop/\">Undergraduate Research Opportunities Program</a><br />\n<a href=\"http://www.lsa.umich.edu/urop/students/fallwinterprograms/researchscholarsprogram\">Research Scholars Program</a><br />\n<a href=\"http://www.engin.umich.edu/gradadmissions/sure/\">Summer Undergraduate Research in Engineering </a>\n</p>','Academics','Programs & Research','img/pages/academics-undergradresearch.jpg','','',NULL,NULL),
-	(5,'A5','Academic Advising','<p>Academic advising isn\'t like high school. At Michigan Engineering, you meet one-on-one with an advisor, who will help you manage your credits and course distributions. The <a href=\"http://www.engin.umich.edu/students/advising/\">Engineering Advising Center</a> is all about helping you explore and navigate your college experience. Your advisor will talk to you about careers, personal counseling and graduation requirements, and help demystify the college experience.</p>','Academics','Support & Services','img/pages/academics-advising.jpg','','',NULL,NULL),
-	(6,'A6','Tutoring','<p>Make no mistake about it: College courses are hard, and sometimes you need to do more than just homework to understand material. That\'s where expert, affordable tutoring comes in. The <a href=\"http://www.engin.umich.edu/elc/\">Engineering Learning Center</a>\noffers free peer tutoring to help you stay on track. It also provides a 24-hour study area with computers, academic skill development workshops and practice exam sessions.</p>\n<p><a href=\"http://academicsupport.umich.edu/view.cfm?cat=40\">More U-M Tutoring Options</a> </p>','Academics','Support & Services','img/pages/academics-tutoring.jpg','','',NULL,NULL),
-	(7,'A7','Health & Wellness','<p>The \"freshman 15\" doesn\'t have to be a reality. Using U-M\'s exercise facilities for cardio, strength training or a game of basketball is time well spent. Just a short walk from your engineering classes is the <a href=\"http://www.recsports.umich.edu/facilities/north-campus-recreation-building-ncrb\">North Campus Rec Building</a>, which offers free 7am to 9pm access to weights, cardio machines, a pool and courts for volleyball, basketball, racquetball and more.</p>\n<p><a href=\"http://www.recsports.umich.edu/facilities/central-campus-recreation-building-ccrb\">Central Campus Rec Building</a><br />\n<a href=\"http://www.recsports.umich.edu/facilities/intramural-sports-building-imsb\">Intramural Sports Building</a></p>','Academics','Support & Services','img/pages/academics-health.jpg','','',NULL,NULL),
-	(8,'A8','Scholarships & Financial Aid','<p>The College of Engineering offers a variety of <a href=\"http://www.engin.umich.edu/students/scholarships/\">scholarships</a> to help you through your college years and reward you for the extraordinary work you have done, and will continue to do.</p>\n<p>There are many scholarships available at U-M. Some are available for all students and others require special applications. The best tactic to secure scholarships is to look into them and apply early, taking the time to revise as needed. And, of course, maintain good academic standing!</p>\n<p><a href=\"http://www.engin.umich.edu/students/scholarships/\">Student Scholarship Opportunities</a></p>','Academics','Support & Services','img/pages/academics-scholarships.jpg','','',NULL,NULL),
-	(9,'A9','Mentoring','<p>Ever feel like you could use an older sibling at U-M? Someone to show you around, help you with your courses, and give you sage advice about college and life? Look no further than a <a href=\"http://www.engin.umich.edu/students/advising/mentoring\">peer mentor</a>! Whether you\'re taking advantage of one of the many mentoring programs U-M has to offer or you\'ve decided to mentor someone yourself, entering into a mentoring relationship with someone is a proud legacy at U-M, forging friendships and connections that last lifetimes.</p>','Academics','Support & Services','img/pages/academics-mentor.jpg','','',NULL,NULL),
-	(10,'A10','Diversity & Social Justice','<p>Having a diverse student population is very important at U-M, and we take social justice to heart. A plethora of <a href=\"http://maizepages.umich.edu/organizations?SearchValue=Cultural%2FEthnic&SearchType=Category&CurrentPage=1&SelectedCategoryId=3651\">cultural or ethnic orgs</a> offer a chance to connect with the community to offer support and alliance. The office of <a href=\"http://mesa.umich.edu/\">Multi-Ethnic Student Affairs</a> will help keep you informed about the events and active orgs on campus, and the <a href=\"http://spectrumcenter.umich.edu/\">Spectrum Center</a> focuses on gender identity to help you feel comfortable in your own skin.</p>\n<p>U-M also  participates in an annual school-wide <a href=\"http://mchange.umich.edu/doc/index.html\">Day of Change</a>. The Day of Change is an event during Welcome Week on the U-M campus that features keynote speakers, discussions and events for anyone interested in pursuing and experiencing the rich diversity the school and Ann Arbor has to offer.</p>','Academics','Support & Services','img/pages/academics-diversity.jpg','','',NULL,NULL),
-	(11,'O1','Internships & Co-ops','<p>When it comes to getting your feet wet in the business world, there are a few options at Michigan. A \"co-op\" (short for <a href=\"http://career.engin.umich.edu/studalums/interns\">Cooperative Education Program</a>) is a two-semester immersion within a company for an in-depth professional experience. <a href=\"http://career.engin.umich.edu/studalums/interns/internships.html\">Internships</a> are shorter experiences often taking place in the spring/summer for students to explore professional practice and industry culture.</p>\n\n<p>It\'s never too early for a Michigan Engineer to explore their professional opportunities, and internships and co-ops found through the <a href=\"http://career.engin.umich.edu/studalums\">Engineering Career Resource Center (ECRC)</a> can allow companies to meet you as a professional while offering you the chance to see the \"inside\" culture of a company.</p>\n\n<p>Use the <a href=\"http://career.engin.umich.edu/studalums/careermanual.pdf\">ECRC Career Manual (PDF)</a> to help you get prepared.</p>','Opportunities','Career Path','img/pages/opp-careerpath.jpg','','',NULL,NULL),
-	(12,'O2','Entrepreneurship','<p>U-M has the support systems and funding to get you started making your own venture &mdash; the limit is only your ambition and imagination. The <a href=\"http://cfe.umich.edu\">Center for Entrepreneurship</a> connects students with alumni in the start-up community, provides grants, facilitates intellectual property transfer and develops entrepreneurial courses within the College of Engineering. The venture accelerator <a href=\"http://cfe.umich.edu/techarb/\">TechArb</a> has granted more than $5 million in start-up funds - launching more than 100 startups by over 300 students!</p>\n<p><a href=\"http://micevc.com/\">Michigan Clean Energy Venture</a><br /><a href=\"https://1000pitches.com\">1000 Pitches</a></p>','Opportunities','Career Path','img/pages/opp-entrepreneurship.jpg','','',NULL,NULL),
-	(13,'O3','Corporate Jobs','<p>Employers consistently come to U-M to find top-notch engineers. And our students find positions in corporations throughout the world. If you want to work in the fields of energy, finance, automotive, aerospace and defense, medical fields or more, the <a href=\"http://career.engin.umich.edu/\">Engineering Career Resource Center (ECRC)</a> can help you find the perfect fit. </p>\n\n<p>Our alumni have reported salaries as high as $75,000 for students with bachelor\'s degrees. Find out the range of salaries and positions with the <a href=\"http://career.engin.umich.edu/annualReport/index.html\">ECRC Annual Report</a>. And start your job hunt with <a href=\"https://engineering-umich-csm.symplicity.com/students/\">ENGenius.Jobs</a>, the Michigan Engineering job posting website.</p>','Opportunities','Career Path','img/pages/opp-corpjobs.jpg','','',NULL,NULL),
-	(14,'O4','Non-Profit or Public Sector','<p>Michigan Engineers are committed to making a difference in the world, and that often is demonstrated through their public service. Whether it\'s improving local or global communities through sustainable technologies, creating improvements in public health or taking a place at the round table of public policy, engineers can and do impact the community on a daily basis.</p>\n\n<p>While in school, students can explore involvement in the <a href=\"http://internationalcenter.umich.edu/peace/overview.html\">Peace Corps</a> or <a href=\"http://tfa.soe.umich.edu/\">Teach for America</a>. Or, Michigan Engineers can pursue a graduate certificate in Science Technology and Public Policy through the <a href=\"http://www.fordschool.umich.edu/research/stpp/\">Ford School of Public Policy.</a></p>','Opportunities','Career Path','img/pages/opp-nonprofit.jpg','','',NULL,NULL),
-	(15,'O5','Work Abroad','<p>We all know that the global market is the key to the future, and that learning \"global competence\" while still a student will make your life easier after graduation. But, let\'s be honest - trying to find a job in a country whose language you don?t even speak can be a little intimidating. Luckily, Michigan Engineering\'s <a href=\"http://www.engin.umich.edu/workabroad\">Work Abroad</a> program offers the tips and skills to help land those positions - and keep them!</p>\n\n<p><a href=\"http://www.engin.umich.edu/ipe/\">International Programs in Engineering</a><br />\n<a href=\"http://www.engin.umich.edu/academics/honors/egl\">Engineering Global Leadership</a></p>','Opportunities','Career Path','img/pages/opp-workabroad.jpg','','',NULL,NULL),
-	(16,'O6','Design, Test, Build Orgs','<p>If you\'re looking for hands-on experience while you\'re still in college, the design, test and build organizations at Michigan Engineering offer that opportunity. With more than 50 teams in the <a href=\"http://www.engin.umich.edu/teamprojects/\">Wilson Student Team Project Center</a>, students can experience hands-on development, fabrication and develop a well-rounded approach to the engineering system. From Solar Car to BLUELab, the center furnishes groups with an opportunity to interact, share ideas and showcase their projects.</p>\n<p>Many students in the center also participate in the <a href=\"http://www.engin.umich.edu/minors/multidisciplinarydesign/index.html\">Multidisciplinary Design Program</a>, which mimics real-life environments by encouraging teamwork in different specialties.  </p>','Opportunities','Orgs & More','img/pages/opp-designbuild.jpg','','',NULL,NULL),
-	(17,'O7','Volunteering & Service ','<p>Community service is more than just a resume-booster; it\'s a way of exploring Ann Arbor, making new connections, and feeling good about helping others. There are many <a href=\"http://www.engin.umich.edu/students/involvement/communityservice.html\"> Community Service Opportunities</a> available through Michigan Engineering and the U-M for you to take advantage of. </p>\n<p>Not sure where you want to do your community service? Visit the <a href=\"http://ginsberg.umich.edu/about/\">Ginsberg Center</a>, an office solely devoted to helping students learn through service. Their advisors will work with you to find the perfect fit, whether it\'s tutoring young kids or working in a food kitchen.</p>','Opportunities','Orgs & More','img/pages/opp-volunteer.jpg','','',NULL,NULL),
-	(18,'O8','Travel Abroad','<p>In a field that is becoming more global, why not get your international experience started early? The <a href=\"http://www.engin.umich.edu/ipe\">International Programs in Engineering Office</a> makes the travel abroad process easy, and the intercultural learning will last the rest of your life.</p>\n<p>The <a href=\"http://www.engin.umich.edu/academics/honors/egl\">Engineering Global Leadership (EGL)</a> specialization is a unique opportunity for students interested in integrating engineering into a global business environment. EGL students continue at U-M beyond the College of Engineering Honors Program to earn a Masters in an engineering discipline.</p>','Opportunities','Orgs & More','img/pages/opp-travelabroad.jpg','','',NULL,NULL),
-	(19,'O9','Professional & Academic Orgs','<p>Sure, being in an academic or professional organization is a resume booster, but it\'s more than that. It\'s a way to make connections with like-minded people. It\'s an opportunity to develop your leadership and professional skills. And it\'s a chance to demonstrate your commitment to engineering by giving back to the community through tutoring, mentoring or industry sessions. <a href=\"http://maizepages.umich.edu/organizations?SearchValue=Academic%2FHonor%20Societies&SearchType=Category&CurrentPage=1&SelectedCategoryId=3649\">Find out what orgs you might be interested in</a>.</p>','Opportunities','Orgs & More','img/pages/opp-proforgs.jpg','','',NULL,NULL),
-	(21,'O10','Identity-Based Societies ','<p>Are you worried about how you might fit in once you\'re on campus? Or would you like to find people with the same experiences and social identities as you? Michigan Engineering has a variety of unique organizations that celebrate the diversity and social identities of our student body. <a href=\"http://maizepages.umich.edu/organizations?SearchValue=Cultural%2FEthnic&SearchType=Category&CurrentPage=1&SelectedCategoryId=3651\">Cultural or Ethnic Orgs</a> offer a chance to connect with the community to offer support and alliance. The office of <a href=\"http://mesa.umich.edu/\">Multi-Ethnic Student Affairs</a> will help keep you informed about the events and active orgs on campus, and the <a href=\"http://spectrumcenter.umich.edu/\">Spectrum Center</a> focuses on gender identity to help you feel comfortable in your own skin.</p>','Opportunities','Orgs & More','img/pages/opp-identityorgs.jpg','','',NULL,NULL),
-	(22,'L1','Greek Life','<p>One of the university\'s longest traditions, <a href=\"http://greeklife.umich.edu/\">Greek Life</a> will welcome you into a family away from home, creating opportunities and friendships that will last for years to come. The legacy of Greek life at U-M dates back to 1845, when two national fraternities established chapters in Ann Arbor. Today, almost 5,000 students are involved in the Greek Community, with many unique and culturally diverse fraternities and sororities available to anyone.</p>','Life & Activities','Extracurriculars','img/pages/life-greek.jpg','','',NULL,NULL),
-	(23,'L2','Music','<p>With a campus shared with the School of Music, Theatre & Dance and a town dedicated to local artists, the college is surrounded by chances to get involved with music: <a href=\"http://www.music.umich.edu/performances_events/event_display.php?f=m\">U-M Performances</a>.</p>\n<p>Michigan Engineers comprises more than one-third of the <a href=\"http://mmb.music.umich.edu/\">Michigan Marching Band</a>, and students interested in playing percussion, brass and woodwinds or being a flag bearer are encouraged to audition and join this musical legacy.</p>','Life & Activities','Extracurriculars','img/pages/life-music.jpg','','',NULL,NULL),
-	(24,'L3','Athletics','<p>Michigan athletics is all about being a leader and the best on and off the field - teamwork, loyalty, fun and skill are all strengthened through U-M\'s most endearing legacy.  Renowned for our football games in the famous \"Big House\", Michigan also has winning baseball, basketball, softball and ice hockey teams, among countless others. Many of the events can be attended by students for free through <a href=\"http://www.mgoblue.com/\">MGoBlue</a>.</p>','Life & Activities','Extracurriculars','img/pages/life-athletics.jpg','','',NULL,NULL),
-	(25,'L4','Intramurals & Fitness','<p>Soccer, basketball, tennis and... wallyball? <a href=\"http://www.recsports.umich.edu/intramurals/\">Intramural Sports</a> and <a href=\"http://www.recsports.umich.edu/clubs/\">Club Sports</a> offer dozens of opportunities for students to participate in their favorite sport on a semi-competitive level - so you can get out and get some exercise and have fun doing it.</p>\n<p>Or, if you\'re just looking for somewhere to work out and relieve some stress during finals, the <a href=\"http://www.recsports.umich.edu/clubs/\">North Campus Rec Building</a> is just minutes away from the residence halls and offers free 7am to 9pm access to weights, cardio machines, a pool and courts for volleyball, basketball, racquetball and more.</p>','Life & Activities','Extracurriculars','img/pages/life-intramurals.jpg','','',NULL,NULL),
-	(26,'L5','Living & Dining','<p>Nothing says college life more than living in a residence hall, and U-M\'s close-knit communities and modern facilities will make you never want to leave. There are many options to choose from, including <a href=\"http://www.housing.umich.edu/options/\">On-campus</a> and <a href=\"http://www.offcampus.housing.umich.edu/lt/index.cfm\">Off-Campus Housing</a>.</p>\n<p>U-M <a href=\"http://www.housing.umich.edu/dining/\">dining & meal plans</a> offers options across campus with <a href=\"http://www.housing.umich.edu/dining/menus/\">menus</a> ranging from pizza buffets to all-vegan fare. But the residence halls are\'?t the only food options available at U-M. Your meal plan will also come with <a href=\"http://www.housing.umich.edu/bluebucks\">Blue Bucks</a> -- which allow you to go to food courts across campus and purchase at select restaurants. And, all of Ann Arbor has options ranging from five-star restaurants to college classics like Buffalo Wild Wings.</p>','Life & Activities','Student Life','img/pages/life-living.jpg','','',NULL,NULL),
-	(27,'L6','Arts & Culture','<p>As one of Michigan\'s cultural hotspots, U-M students can take advantage of film festivals, art fairs and award-winning theatre just minutes away from campus. Located in the heart of downtown Ann Arbor, the historic <a href=\"http://www.michtheater.org/\">Michigan Theatre</a> is a mecca of culture. You can catch organ performances, live speakers, current movies and concerts -- plus the annual Ann Arbor Film Festival and TED talks.</p>\n<p><a href=\"http://www.umich.edu/museums.php\">Local Museums & Galleries</a><br />\n<a href=\"http://www.umich.edu/perform_arts.php\">Local Performing Arts</a></p>','Life & Activities','Student Life','img/pages/life-arts.jpg','','',NULL,NULL),
-	(28,'L7','Learning Communities','<p>If creativity and exploration oozes from your pores and you\'re dying to find a place where you can maximize that energy, then the <a href=\"http://www.housing.umich.edu/undergrad/learning-communities\">Michigan Learning Communities</a> may be the perfect fit for you. These innovative residence halls offer a smaller, more intimate environment where you will be surrounded by people who are just as creative as you. By thinking, studying, living and learning with others, you can maximize your experiences at Michigan.</p>\n\n<p>There are dozens of options to choose from, but the <a href=\"http://www.lsa.umich.edu/mrc\">Michigan Research Community</a>, <a href=\"http://www.livingarts.umich.edu/\">Living Arts</a>, and <a href=\"http://www.lsa.umich.edu/wiserp\">Women In Science and Engineering</a> programs are perfect for engineering students.</p>','Life & Activities','Student Life','img/pages/life-learncomm.jpg','','',NULL,NULL),
-	(29,'L8','In your free time','<p>The question isn\'t what CAN you do in Ann Arbor, but what CAN\'T you do! There are dozens of activities you can engage in while at Michigan, but the burning question will be: how do you fit it all in? Here are some suggestions for making the most of your time at college:	</p>\n<p>\n<ol>\n<li>Take advantage of <a href=\"http://studentaffairs.umich.edu/campuslife\">campus programming</a>. Many events are free or discounted for students!</li>\n<li>Start a bucket list. Prioritize your time in Ann Arbor.</li>\n<li>Enjoy the city. When you have a little down time, just get out and explore!</li>\n<li>Stay active. Participate in <a href=\"http://www.recsports.umich.edu/intramurals/\">Intramural Sports</a> or <a href=\"http://www.recsports.umich.edu/clubs/\">Club Sports</a> or exercise at the <a href=\"http://www.recsports.umich.edu/facilities/north-campus-recreation-building-ncrb\">North Campus Rec Building</a>.</li>\n<li>It\'s important to balance your academics, friends and family - be sure to take a little time for yourself.</li>\n<li>Don\'t schedule every minute of your time. Be spontaneous - you never know who you might meet or what you might discover!</li>\n</ol></p>','Life & Activities','Student Life','img/pages/life-freetime.jpg','','',NULL,NULL);
+	(1,'A1','Honors Programs','<p>With specialized courses, unique academic tracks and special access to faculty mentors, the <a href=\"http://www.engin.umich.edu/academics/honors\">Honors Program</a> creates an enriched learning environment. It is a unique opportunity for highly-motivated students to reach their full potential.</p>\n<p>Its partner program, <a  href=\"http://www.engin.umich.edu/academics/honors/egl\">Engineering Global Leadership (EGL)</a> specialization, is a unique opportunity for students interested in integrating engineering into a global business environment. EGL students continue at U-M beyond the College of Engineering Honors Program to earn a Masters in an engineering discipline.</p>','Academics','Programs & Research','img/pages/academics-honors.jpg','','',NULL,NULL,1),
+	(2,'A2','Programs & Minors','<p>The University of Michigan has 95 top-ranked programs, nine top-ten engineering departments, state-of-the-art facilities and award-winning faculty &ndash; which all empower you to carve your own path. The College of Engineering offers 14 undergraduate programs, and many courses for one undergraduate program apply towards the requirements for another. That means that pursuing more than one degree in engineering is not just possible, it\'s encouraged.</p>\n<p>You can also take advantage of a number of joint degrees or minors with other U-M schools.<br /><a href=\"http://www.engin.umich.edu/departments/\">College of Engineering departments</a><br /><a href=\"http://www.engin.umich.edu/bulletin/uged/degree.html\">Undergraduate Degree Options</a><br /><a href=\"http://www.engin.umich.edu/bulletin/uged/coeminors.html\">Engineering Minors and Certificates</a><br /><a href=\"http://www.engin.umich.edu/bulletin/uged/minors.html\">Additional Approved Minors </a></p>','Academics','Programs & Research','img/pages/academics-programs.jpg','','',NULL,NULL,1),
+	(3,'A3','Graduate Studies','<p>Thinking you may want to delve further into the world of education and get a graduate degree? Many of our Michigan Engineering undergrads continue with their education in graduate school or professional programs. The beauty of an engineering degree is that it opens the door to a wide range of careers and post-college programs, including medical and law school, public policy or entrepreneurship.</p>\n<p><a href=\"http://www.engin.umich.edu/gradadmissions/\">CoE Graduate Education</a><br />\n<a href=\"http://www.rackham.umich.edu/prospective_students/\">Rackham Graduate School</a><br />\n<a href=\"http://entrepreneurship.umich.edu/\">Master of Entrepreneurship</a></p>','Academics','Programs & Research','img/pages/academics-gradstudies.jpg','','',NULL,NULL,1),
+	(4,'A4','Undergraduate Research','<p>Want to get your hands dirty right away? The College of Engineering offers hundreds of labs and opportunities to students looking to create their own projects or assist award-winning professors with groundbreaking research. Opportunities are available throughout the semester and during the summer.</p>\n<p><a href=\"http://www.lsa.umich.edu/urop/\">Undergraduate Research Opportunities Program</a><br />\n<a href=\"http://www.lsa.umich.edu/urop/students/fallwinterprograms/researchscholarsprogram\">Research Scholars Program</a><br />\n<a href=\"http://www.engin.umich.edu/gradadmissions/sure/\">Summer Undergraduate Research in Engineering </a>\n</p>','Academics','Programs & Research','img/pages/academics-undergradresearch.jpg','','',NULL,NULL,1),
+	(5,'A5','Academic Advising','<p>Academic advising isn\'t like high school. At Michigan Engineering, you meet one-on-one with an advisor, who will help you manage your credits and course distributions. The <a href=\"http://www.engin.umich.edu/students/advising/\">Engineering Advising Center</a> is all about helping you explore and navigate your college experience. Your advisor will talk to you about careers, personal counseling and graduation requirements, and help demystify the college experience.</p>','Academics','Support & Services','img/pages/academics-advising.jpg','','',NULL,NULL,1),
+	(6,'A6','Tutoring','<p>Make no mistake about it: College courses are hard, and sometimes you need to do more than just homework to understand material. That\'s where expert, affordable tutoring comes in. The <a href=\"http://www.engin.umich.edu/elc/\">Engineering Learning Center</a>\noffers free peer tutoring to help you stay on track. It also provides a 24-hour study area with computers, academic skill development workshops and practice exam sessions.</p>\n<p><a href=\"http://academicsupport.umich.edu/view.cfm?cat=40\">More U-M Tutoring Options</a> </p>','Academics','Support & Services','img/pages/academics-tutoring.jpg','','',NULL,NULL,1),
+	(7,'A7','Health & Wellness','<p>The \"freshman 15\" doesn\'t have to be a reality. Using U-M\'s exercise facilities for cardio, strength training or a game of basketball is time well spent. Just a short walk from your engineering classes is the <a href=\"http://www.recsports.umich.edu/facilities/north-campus-recreation-building-ncrb\">North Campus Rec Building</a>, which offers free 7am to 9pm access to weights, cardio machines, a pool and courts for volleyball, basketball, racquetball and more.</p>\n<p><a href=\"http://www.recsports.umich.edu/facilities/central-campus-recreation-building-ccrb\">Central Campus Rec Building</a><br />\n<a href=\"http://www.recsports.umich.edu/facilities/intramural-sports-building-imsb\">Intramural Sports Building</a></p>','Academics','Support & Services','img/pages/academics-health.jpg','','',NULL,NULL,1),
+	(8,'A8','Scholarships & Financial Aid','<p>The College of Engineering offers a variety of <a href=\"http://www.engin.umich.edu/students/scholarships/\">scholarships</a> to help you through your college years and reward you for the extraordinary work you have done, and will continue to do.</p>\n<p>There are many scholarships available at U-M. Some are available for all students and others require special applications. The best tactic to secure scholarships is to look into them and apply early, taking the time to revise as needed. And, of course, maintain good academic standing!</p>\n<p><a href=\"http://www.engin.umich.edu/students/scholarships/\">Student Scholarship Opportunities</a></p>','Academics','Support & Services','img/pages/academics-scholarships.jpg','','',NULL,NULL,1),
+	(9,'A9','Mentoring','<p>Ever feel like you could use an older sibling at U-M? Someone to show you around, help you with your courses, and give you sage advice about college and life? Look no further than a <a href=\"http://www.engin.umich.edu/students/advising/mentoring\">peer mentor</a>! Whether you\'re taking advantage of one of the many mentoring programs U-M has to offer or you\'ve decided to mentor someone yourself, entering into a mentoring relationship with someone is a proud legacy at U-M, forging friendships and connections that last lifetimes.</p>','Academics','Support & Services','img/pages/academics-mentor.jpg','','',NULL,NULL,1),
+	(10,'A10','Diversity & Social Justice','<p>Having a diverse student population is very important at U-M, and we take social justice to heart. A plethora of <a href=\"http://maizepages.umich.edu/organizations?SearchValue=Cultural%2FEthnic&SearchType=Category&CurrentPage=1&SelectedCategoryId=3651\">cultural or ethnic orgs</a> offer a chance to connect with the community to offer support and alliance. The office of <a href=\"http://mesa.umich.edu/\">Multi-Ethnic Student Affairs</a> will help keep you informed about the events and active orgs on campus, and the <a href=\"http://spectrumcenter.umich.edu/\">Spectrum Center</a> focuses on gender identity to help you feel comfortable in your own skin.</p>\n<p>U-M also  participates in an annual school-wide <a href=\"http://mchange.umich.edu/doc/index.html\">Day of Change</a>. The Day of Change is an event during Welcome Week on the U-M campus that features keynote speakers, discussions and events for anyone interested in pursuing and experiencing the rich diversity the school and Ann Arbor has to offer.</p>','Academics','Support & Services','img/pages/academics-diversity.jpg','','',NULL,NULL,1),
+	(11,'O1','Internships & Co-ops','<p>When it comes to getting your feet wet in the business world, there are a few options at Michigan. A \"co-op\" (short for <a href=\"http://career.engin.umich.edu/studalums/interns\">Cooperative Education Program</a>) is a two-semester immersion within a company for an in-depth professional experience. <a href=\"http://career.engin.umich.edu/studalums/interns/internships.html\">Internships</a> are shorter experiences often taking place in the spring/summer for students to explore professional practice and industry culture.</p>\n\n<p>It\'s never too early for a Michigan Engineer to explore their professional opportunities, and internships and co-ops found through the <a href=\"http://career.engin.umich.edu/studalums\">Engineering Career Resource Center (ECRC)</a> can allow companies to meet you as a professional while offering you the chance to see the \"inside\" culture of a company.</p>\n\n<p>Use the <a href=\"http://career.engin.umich.edu/studalums/careermanual.pdf\">ECRC Career Manual (PDF)</a> to help you get prepared.</p>','Opportunities','Career Path','img/pages/opp-careerpath.jpg','','',NULL,NULL,2),
+	(12,'O2','Entrepreneurship','<p>U-M has the support systems and funding to get you started making your own venture &mdash; the limit is only your ambition and imagination. The <a href=\"http://cfe.umich.edu\">Center for Entrepreneurship</a> connects students with alumni in the start-up community, provides grants, facilitates intellectual property transfer and develops entrepreneurial courses within the College of Engineering. The venture accelerator <a href=\"http://cfe.umich.edu/techarb/\">TechArb</a> has granted more than $5 million in start-up funds - launching more than 100 startups by over 300 students!</p>\n<p><a href=\"http://micevc.com/\">Michigan Clean Energy Venture</a><br /><a href=\"https://1000pitches.com\">1000 Pitches</a></p>','Opportunities','Career Path','img/pages/opp-entrepreneurship.jpg','','',NULL,NULL,2),
+	(13,'O3','Corporate Jobs','<p>Employers consistently come to U-M to find top-notch engineers. And our students find positions in corporations throughout the world. If you want to work in the fields of energy, finance, automotive, aerospace and defense, medical fields or more, the <a href=\"http://career.engin.umich.edu/\">Engineering Career Resource Center (ECRC)</a> can help you find the perfect fit. </p>\n\n<p>Our alumni have reported salaries as high as $75,000 for students with bachelor\'s degrees. Find out the range of salaries and positions with the <a href=\"http://career.engin.umich.edu/annualReport/index.html\">ECRC Annual Report</a>. And start your job hunt with <a href=\"https://engineering-umich-csm.symplicity.com/students/\">ENGenius.Jobs</a>, the Michigan Engineering job posting website.</p>','Opportunities','Career Path','img/pages/opp-corpjobs.jpg','','',NULL,NULL,2),
+	(14,'O4','Non-Profit or Public Sector','<p>Michigan Engineers are committed to making a difference in the world, and that often is demonstrated through their public service. Whether it\'s improving local or global communities through sustainable technologies, creating improvements in public health or taking a place at the round table of public policy, engineers can and do impact the community on a daily basis.</p>\n\n<p>While in school, students can explore involvement in the <a href=\"http://internationalcenter.umich.edu/peace/overview.html\">Peace Corps</a> or <a href=\"http://tfa.soe.umich.edu/\">Teach for America</a>. Or, Michigan Engineers can pursue a graduate certificate in Science Technology and Public Policy through the <a href=\"http://www.fordschool.umich.edu/research/stpp/\">Ford School of Public Policy.</a></p>','Opportunities','Career Path','img/pages/opp-nonprofit.jpg','','',NULL,NULL,2),
+	(15,'O5','Work Abroad','<p>We all know that the global market is the key to the future, and that learning \"global competence\" while still a student will make your life easier after graduation. But, let\'s be honest - trying to find a job in a country whose language you don?t even speak can be a little intimidating. Luckily, Michigan Engineering\'s <a href=\"http://www.engin.umich.edu/workabroad\">Work Abroad</a> program offers the tips and skills to help land those positions - and keep them!</p>\n\n<p><a href=\"http://www.engin.umich.edu/ipe/\">International Programs in Engineering</a><br />\n<a href=\"http://www.engin.umich.edu/academics/honors/egl\">Engineering Global Leadership</a></p>','Opportunities','Career Path','img/pages/opp-workabroad.jpg','','',NULL,NULL,2),
+	(16,'O6','Design, Test, Build Orgs','<p>If you\'re looking for hands-on experience while you\'re still in college, the design, test and build organizations at Michigan Engineering offer that opportunity. With more than 50 teams in the <a href=\"http://www.engin.umich.edu/teamprojects/\">Wilson Student Team Project Center</a>, students can experience hands-on development, fabrication and develop a well-rounded approach to the engineering system. From Solar Car to BLUELab, the center furnishes groups with an opportunity to interact, share ideas and showcase their projects.</p>\n<p>Many students in the center also participate in the <a href=\"http://www.engin.umich.edu/minors/multidisciplinarydesign/index.html\">Multidisciplinary Design Program</a>, which mimics real-life environments by encouraging teamwork in different specialties.  </p>','Opportunities','Orgs & More','img/pages/opp-designbuild.jpg','','',NULL,NULL,2),
+	(17,'O7','Volunteering & Service ','<p>Community service is more than just a resume-booster; it\'s a way of exploring Ann Arbor, making new connections, and feeling good about helping others. There are many <a href=\"http://www.engin.umich.edu/students/involvement/communityservice.html\"> Community Service Opportunities</a> available through Michigan Engineering and the U-M for you to take advantage of. </p>\n<p>Not sure where you want to do your community service? Visit the <a href=\"http://ginsberg.umich.edu/about/\">Ginsberg Center</a>, an office solely devoted to helping students learn through service. Their advisors will work with you to find the perfect fit, whether it\'s tutoring young kids or working in a food kitchen.</p>','Opportunities','Orgs & More','img/pages/opp-volunteer.jpg','','',NULL,NULL,2),
+	(18,'O8','Travel Abroad','<p>In a field that is becoming more global, why not get your international experience started early? The <a href=\"http://www.engin.umich.edu/ipe\">International Programs in Engineering Office</a> makes the travel abroad process easy, and the intercultural learning will last the rest of your life.</p>\n<p>The <a href=\"http://www.engin.umich.edu/academics/honors/egl\">Engineering Global Leadership (EGL)</a> specialization is a unique opportunity for students interested in integrating engineering into a global business environment. EGL students continue at U-M beyond the College of Engineering Honors Program to earn a Masters in an engineering discipline.</p>','Opportunities','Orgs & More','img/pages/opp-travelabroad.jpg','','',NULL,NULL,2),
+	(19,'O9','Professional & Academic Orgs','<p>Sure, being in an academic or professional organization is a resume booster, but it\'s more than that. It\'s a way to make connections with like-minded people. It\'s an opportunity to develop your leadership and professional skills. And it\'s a chance to demonstrate your commitment to engineering by giving back to the community through tutoring, mentoring or industry sessions. <a href=\"http://maizepages.umich.edu/organizations?SearchValue=Academic%2FHonor%20Societies&SearchType=Category&CurrentPage=1&SelectedCategoryId=3649\">Find out what orgs you might be interested in</a>.</p>','Opportunities','Orgs & More','img/pages/opp-proforgs.jpg','','',NULL,NULL,2),
+	(21,'O10','Identity-Based Societies ','<p>Are you worried about how you might fit in once you\'re on campus? Or would you like to find people with the same experiences and social identities as you? Michigan Engineering has a variety of unique organizations that celebrate the diversity and social identities of our student body. <a href=\"http://maizepages.umich.edu/organizations?SearchValue=Cultural%2FEthnic&SearchType=Category&CurrentPage=1&SelectedCategoryId=3651\">Cultural or Ethnic Orgs</a> offer a chance to connect with the community to offer support and alliance. The office of <a href=\"http://mesa.umich.edu/\">Multi-Ethnic Student Affairs</a> will help keep you informed about the events and active orgs on campus, and the <a href=\"http://spectrumcenter.umich.edu/\">Spectrum Center</a> focuses on gender identity to help you feel comfortable in your own skin.</p>','Opportunities','Orgs & More','img/pages/opp-identityorgs.jpg','','',NULL,NULL,2),
+	(22,'L1','Greek Life','<p>One of the university\'s longest traditions, <a href=\"http://greeklife.umich.edu/\">Greek Life</a> will welcome you into a family away from home, creating opportunities and friendships that will last for years to come. The legacy of Greek life at U-M dates back to 1845, when two national fraternities established chapters in Ann Arbor. Today, almost 5,000 students are involved in the Greek Community, with many unique and culturally diverse fraternities and sororities available to anyone.</p>','Life & Activities','Extracurriculars','img/pages/life-greek.jpg','','',NULL,NULL,3),
+	(23,'L2','Music','<p>With a campus shared with the School of Music, Theatre & Dance and a town dedicated to local artists, the college is surrounded by chances to get involved with music: <a href=\"http://www.music.umich.edu/performances_events/event_display.php?f=m\">U-M Performances</a>.</p>\n<p>Michigan Engineers comprises more than one-third of the <a href=\"http://mmb.music.umich.edu/\">Michigan Marching Band</a>, and students interested in playing percussion, brass and woodwinds or being a flag bearer are encouraged to audition and join this musical legacy.</p>','Life & Activities','Extracurriculars','img/pages/life-music.jpg','','',NULL,NULL,3),
+	(24,'L3','Athletics','<p>Michigan athletics is all about being a leader and the best on and off the field - teamwork, loyalty, fun and skill are all strengthened through U-M\'s most endearing legacy.  Renowned for our football games in the famous \"Big House\", Michigan also has winning baseball, basketball, softball and ice hockey teams, among countless others. Many of the events can be attended by students for free through <a href=\"http://www.mgoblue.com/\">MGoBlue</a>.</p>','Life & Activities','Extracurriculars','img/pages/life-athletics.jpg','','',NULL,NULL,3),
+	(25,'L4','Intramurals & Fitness','<p>Soccer, basketball, tennis and... wallyball? <a href=\"http://www.recsports.umich.edu/intramurals/\">Intramural Sports</a> and <a href=\"http://www.recsports.umich.edu/clubs/\">Club Sports</a> offer dozens of opportunities for students to participate in their favorite sport on a semi-competitive level - so you can get out and get some exercise and have fun doing it.</p>\n<p>Or, if you\'re just looking for somewhere to work out and relieve some stress during finals, the <a href=\"http://www.recsports.umich.edu/clubs/\">North Campus Rec Building</a> is just minutes away from the residence halls and offers free 7am to 9pm access to weights, cardio machines, a pool and courts for volleyball, basketball, racquetball and more.</p>','Life & Activities','Extracurriculars','img/pages/life-intramurals.jpg','','',NULL,NULL,3),
+	(26,'L5','Living & Dining','<p>Nothing says college life more than living in a residence hall, and U-M\'s close-knit communities and modern facilities will make you never want to leave. There are many options to choose from, including <a href=\"http://www.housing.umich.edu/options/\">On-campus</a> and <a href=\"http://www.offcampus.housing.umich.edu/lt/index.cfm\">Off-Campus Housing</a>.</p>\n<p>U-M <a href=\"http://www.housing.umich.edu/dining/\">dining & meal plans</a> offers options across campus with <a href=\"http://www.housing.umich.edu/dining/menus/\">menus</a> ranging from pizza buffets to all-vegan fare. But the residence halls are\'?t the only food options available at U-M. Your meal plan will also come with <a href=\"http://www.housing.umich.edu/bluebucks\">Blue Bucks</a> -- which allow you to go to food courts across campus and purchase at select restaurants. And, all of Ann Arbor has options ranging from five-star restaurants to college classics like Buffalo Wild Wings.</p>','Life & Activities','Student Life','img/pages/life-living.jpg','','',NULL,NULL,3),
+	(27,'L6','Arts & Culture','<p>As one of Michigan\'s cultural hotspots, U-M students can take advantage of film festivals, art fairs and award-winning theatre just minutes away from campus. Located in the heart of downtown Ann Arbor, the historic <a href=\"http://www.michtheater.org/\">Michigan Theatre</a> is a mecca of culture. You can catch organ performances, live speakers, current movies and concerts -- plus the annual Ann Arbor Film Festival and TED talks.</p>\n<p><a href=\"http://www.umich.edu/museums.php\">Local Museums & Galleries</a><br />\n<a href=\"http://www.umich.edu/perform_arts.php\">Local Performing Arts</a></p>','Life & Activities','Student Life','img/pages/life-arts.jpg','','',NULL,NULL,3),
+	(28,'L7','Learning Communities','<p>If creativity and exploration oozes from your pores and you\'re dying to find a place where you can maximize that energy, then the <a href=\"http://www.housing.umich.edu/undergrad/learning-communities\">Michigan Learning Communities</a> may be the perfect fit for you. These innovative residence halls offer a smaller, more intimate environment where you will be surrounded by people who are just as creative as you. By thinking, studying, living and learning with others, you can maximize your experiences at Michigan.</p>\n\n<p>There are dozens of options to choose from, but the <a href=\"http://www.lsa.umich.edu/mrc\">Michigan Research Community</a>, <a href=\"http://www.livingarts.umich.edu/\">Living Arts</a>, and <a href=\"http://www.lsa.umich.edu/wiserp\">Women In Science and Engineering</a> programs are perfect for engineering students.</p>','Life & Activities','Student Life','img/pages/life-learncomm.jpg','','',NULL,NULL,3),
+	(29,'L8','In your free time','<p>The question isn\'t what CAN you do in Ann Arbor, but what CAN\'T you do! There are dozens of activities you can engage in while at Michigan, but the burning question will be: how do you fit it all in? Here are some suggestions for making the most of your time at college:	</p>\n<p>\n<ol>\n<li>Take advantage of <a href=\"http://studentaffairs.umich.edu/campuslife\">campus programming</a>. Many events are free or discounted for students!</li>\n<li>Start a bucket list. Prioritize your time in Ann Arbor.</li>\n<li>Enjoy the city. When you have a little down time, just get out and explore!</li>\n<li>Stay active. Participate in <a href=\"http://www.recsports.umich.edu/intramurals/\">Intramural Sports</a> or <a href=\"http://www.recsports.umich.edu/clubs/\">Club Sports</a> or exercise at the <a href=\"http://www.recsports.umich.edu/facilities/north-campus-recreation-building-ncrb\">North Campus Rec Building</a>.</li>\n<li>It\'s important to balance your academics, friends and family - be sure to take a little time for yourself.</li>\n<li>Don\'t schedule every minute of your time. Be spontaneous - you never know who you might meet or what you might discover!</li>\n</ol></p>','Life & Activities','Student Life','img/pages/life-freetime.jpg','','',NULL,NULL,3);
 
 /*!40000 ALTER TABLE `results` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -636,18 +638,18 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `social`;
 
 CREATE TABLE `social` (
-  `id` bigint(100) unsigned NOT NULL auto_increment,
-  `img` varchar(200) default NULL,
-  `text` varchar(140) default NULL,
-  `screen_name` varchar(50) default NULL,
-  `followers_count` int(11) default NULL,
-  `lat` varchar(100) default NULL,
-  `lon` varchar(100) default NULL,
-  `av_lat` float default NULL,
-  `av_lon` float default NULL,
-  `created_at` datetime default NULL,
-  `place_url` varchar(200) default NULL,
-  PRIMARY KEY  (`id`)
+  `id` bigint(100) unsigned NOT NULL AUTO_INCREMENT,
+  `img` varchar(200) DEFAULT NULL,
+  `text` varchar(140) DEFAULT NULL,
+  `screen_name` varchar(50) DEFAULT NULL,
+  `followers_count` int(11) DEFAULT NULL,
+  `lat` varchar(100) DEFAULT NULL,
+  `lon` varchar(100) DEFAULT NULL,
+  `av_lat` float DEFAULT NULL,
+  `av_lon` float DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `place_url` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=277107832871059457 DEFAULT CHARSET=latin1;
 
 LOCK TABLES `social` WRITE;

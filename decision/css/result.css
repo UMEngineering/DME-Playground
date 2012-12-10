@@ -176,7 +176,7 @@ input[type=checkbox].styled:checked + label {
 }
 
 @media only screen and (max-width: 800px) {
-	#main {
+	.mainResult {
 		padding-bottom: 200px;
 		margin: 0;
 	}

@@ -47,6 +47,7 @@ ul.inside-nav {
 div.scroll-background {
 	background: #657E9D;
 	box-shadow: 0 30px 60px rgba(0,0,0,.25);
+	overflow: hidden;
 }
 
 div.scroll-right {
@@ -96,7 +97,7 @@ div.transparent {
     position: absolute;
 	padding: 0px;
 	
-    width: 90px;
+    width: 100%;
     bottom: 0;
     height: 48px;
     background: rgba(255, 255, 255, .7);

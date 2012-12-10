@@ -161,9 +161,9 @@ if ($_REQUEST["page"] == "result"){
 	
 	# Load the photos from database
 	if ($request_page == "explore") {
-		$result = mysql_query("SELECT title, img_src, category, id, outside_href FROM results ORDER BY category;");
+		$result = mysql_query("SELECT title, img_src, category, id, outside_href FROM results ORDER BY sort;");
 	} else {
-		$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" ORDER BY subcategory;");
+		$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" ORDER BY sort;");
 	}
 	if (!$result){
 		print("Cannot load info from PAGE");

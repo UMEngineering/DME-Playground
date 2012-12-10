@@ -1,11 +1,8 @@
 var inNav = true;
-<<<<<<< HEAD
 //alert("Test");
 // window.scrollTo(0, 0);
-=======
 var originalBottom = new Array("", "", "", "");
 
->>>>>>> 15:00 Friday
 // Change a page for quiz result, drag information via Ajax
 function changePage(page){
 	console.log("changePage");

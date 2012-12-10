@@ -52,7 +52,24 @@ span.checked {
 	
 	}
 
-	.twitter-timeline {
+	.bottom ul.imgs-nav {
+    height: 67px;
+
+	}
+
+	.bottom ul.imgs-nav li {
+    height: 78px;
+		
+	
+    width: 70px;
+}
+
+	.bottom ul.imgs-nav li img {
+  		width: 70px;
+	}
+
+	.bottom ul.imgs-nav .transparent {
+    font-size: 10px;
 		
 	}
 	

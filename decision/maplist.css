@@ -92,3 +92,32 @@ iframe {
     height: 24px;
     margin: -14px 0 0 -20px;
 }
+
+@media only screen and (min-width: 600px) {
+    .video-content {
+    width: 560px;
+
+    height: 35px;
+    margin-top: -35px;
+}
+
+    .video-item {
+        display:block;
+
+    
+        height: 315px;
+        width: 560px;
+}
+
+    .overlay {
+        display: none;    
+    }
+    iframe {
+    width: 560px;
+    height: 315px;
+    }
+    .video-content p:nth-child(1) {
+    font-size: 14px !important;
+        
+    }
+}
