@@ -106,29 +106,30 @@ function changePageDetail(id, title, navid, typePage){
 			}
 		}
 		
-		// Remove the current nav from the bottom
-		$(".bottom .scroll-background").removeClass("flexslider");
-		$(".flexslider").remove();
+		// Let the current bottom nav photo display none
 		$(".display-when-desktop .d-bottom-nav-"+id).detach();
-		$(".m-bottom-nav-"+id).detach();
-		
-		var bottom_arr = new Array();
-		$(".d-bottom-nav").each(function(index, element) {
-			bottom_arr.push($(this).detach());
-        });
-		
-		var count = 0;
-		var i = 0;
-		while($(".bottom-nav-ul"+count).html()){
-			if (i%4 == 0 && i != 0){
-				count += 4;
+		//var appended = false;
+		for (var i=id+1; ; i++){
+			if (!$(".display-when-desktop .d-bottom-nav-"+i).html()){
+				
+				break;
 			}
-			$(".bottom-nav-ul"+count).append(bottom_arr[i]);
-			i++;
+			/*if ($(".display-when-desktop .d-bottom-nav-"+i).html()){
+				var temp = $(".display-when-desktop .bottom-nav-"+i).detach();
+				if (!appended) {
+					$(".display-when-desktop .d-bottom-nav-"+id).parent().append(temp);
+				} else {
+					$(".display-when-desktop .d-bottom-nav-"+i).parent().append(temp);
+				}
+				
+				if ($(".display-when-desktop .d-bottom-nav-"+i).parent().attr("class") != $(".display-when-desktop .d-bottom-nav-"+id).parent().attr("class")){
+					appended = true;
+				}
+			} else {
+				break;
+			}*/
 		}
-		$(".bottom .scroll-background").addClass("flexslider");
 		
-		// Build the scroll and slideshow
 		if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)) {
 			//$(".scrollview-right").css("overflow-x", "scroll");
 			create_yui('#img-nav-div');

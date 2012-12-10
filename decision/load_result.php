@@ -107,11 +107,11 @@ if ($_REQUEST["page"] == "result"){
          <div id="result-div-detail" style="display: none;">
             <ul class="slides">
             	<li>
-                	<ul class="imgs-nav imgs-nav-desktop imgs-nav-desktop0" id="result-image">
+                	<ul class="imgs-nav imgs-nav-desktop" id="result-image">
                 	<?php
 					for ($i=0; $i<4; $i++){
 						?>
-                        <li id="d<?= $contents[$i]['r_id'] ?>" class="result-nav-li">
+                        <li id="d<?= $contents[$i]['r_id'] ?>">
                             <a href="#detail" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
                                 <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
                                 <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
@@ -129,11 +129,11 @@ if ($_REQUEST["page"] == "result"){
                     </ul>
                 </li>
                 <li>
-                	<ul class="imgs-nav imgs-nav-desktop imgs-nav-desktop1" id="result-image">
+                	<ul class="imgs-nav imgs-nav-desktop" id="result-image">
                 	<?php
 					for ($i=4; $i<6; $i++){
 						?>
-                        <li id="d<?= $contents[$i]['r_id'] ?>" class="result-nav-li">
+                        <li id="d<?= $contents[$i]['r_id'] ?>">
                             <a href="#detail" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
                                 <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
                                 <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
@@ -178,7 +178,7 @@ if ($_REQUEST["page"] == "result"){
 			$out_href=$row[4];
 			$target_blank = "target=_blank";
 		} else { 
-			$out_href="#{$request_page}-{$row[3]}";
+			$out_href="#detail";
 			$target_blank = "";
 		}
 		if (!in_array($row[2], $categories)) {
@@ -198,7 +198,7 @@ if ($_REQUEST["page"] == "result"){
                         <li class="m-bottom-nav-<?= $row[3] ?>">
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
-                            if ($out_href=="#{$request_page}-{$row[3]}") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
+                            if ($out_href=="#detail") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
 							<?php
 							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent"><span class="title"><?= $row[0] ?></span></div></a>
@@ -217,7 +217,7 @@ if ($_REQUEST["page"] == "result"){
 			$out_href=$row[4];
 			$target_blank = "target=_blank";
 		} else { 
-			$out_href="#{$request_page}-{$row[3]}";
+			$out_href="#detail";
 			$target_blank = "";
 		}
 		if ($row[2] != $categories[$category_index]) {
@@ -237,12 +237,12 @@ if ($_REQUEST["page"] == "result"){
 	?>
         
             <?php
-            if ($count % 4 == 0) echo "<li><ul class=\"imgs-nav imgs-nav-desktop bottom-nav-ul{$count}\">";
+            if ($count % 4 == 0) echo "<li><ul class=\"imgs-nav imgs-nav-desktop {$count}\">";
             ?>
-                    <li class="d-bottom-nav-<?= $row[3] ?> d-bottom-nav">
+                    <li class="d-bottom-nav-<?= $row[3] ?>">
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
-                            if ($out_href=="#{$request_page}-{$row[3]}") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
+                            if ($out_href=="#detail") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
 							<?php
 							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent" style="bottom: 67px;"><span class="title"><?= $row[0] ?></span></div></a>
@@ -256,7 +256,7 @@ if ($_REQUEST["page"] == "result"){
 	}
 	if ($count % 4 != 0) echo "</ul></li>";
 	echo "</ul></div>";
-} elseif (/*$_REQUEST["page"] == "detail" &&*/ !empty($_REQUEST["id"]) && !empty($_REQUEST["typePage"])) {
+} elseif ($_REQUEST["page"] == "detail" && !empty($_REQUEST["id"]) && !empty($_REQUEST["typePage"])) {
 	# For detail page (when click on a image)
 	$id = $_REQUEST["id"];
 	load_page($id, $_REQUEST["typePage"]);
