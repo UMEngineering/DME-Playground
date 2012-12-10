@@ -181,6 +181,7 @@ input[type=checkbox].styled:checked + label {
 		margin: 0;
 	}
 	.page_detail {
+   		padding-bottom: 141px;
 	
 	}
 	

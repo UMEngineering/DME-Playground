@@ -55,6 +55,11 @@ li {
 	cursor: pointer;
 }
 
+#introduction {
+    margin: 10px 20px !important;
+    
+}
+
 .skip {
     font-family: Chalkduster, Tahoma, Geneva, sans-serif;
 	
@@ -194,7 +199,7 @@ li {
 
 #main p {
 	color: white;
-	font-family: Arial, helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	margin: 12px;
 	font-size: 14px;
 	line-height: 18px;
@@ -509,12 +514,13 @@ textarea {
 		float: right;
 		text-align: center;
 		width: 240px;
-		margin: 100px 21px 40px 0;
+		margin: 100px 21px 40px 0 !important;
 	}
 	
 	div.links {
 		float: right;
 		width: 260px;
+		margin-top: -6px;
 		margin-right: 10px;
 	}
 	
@@ -537,7 +543,7 @@ textarea {
 		float: right;
 		text-align: center;
 		width: 280px;
-		margin: 100px 73px 40px 0;
+		margin: 100px 73px 40px 0 !important;
 	}
 	
 	div.links {

@@ -7,6 +7,18 @@ body p:nth-child(1) {
     
 }
 
+#videos {
+    display: none;
+}
+
+#loading {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(img/ajax-loader.gif) no-repeat top left;
+    margin: 20px auto;
+}
+
 .video-item {
     position: relative;
     width: 280px;
@@ -110,7 +122,7 @@ iframe {
 }
 
     .overlay {
-        display: none;    
+        display: none !important;    
     }
     iframe {
     width: 560px;

@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="maplist.css">
 
 <p>We asked Michigan students where they love to hang out, study and play, and this interactive map features their video answers on what makes Ann Arbor unique.<br />
+<div id="loading"></div>
 <div id="videos">
 	<div class="video-item" id="vid0">
 		<div id="player0"></div>
@@ -209,6 +210,7 @@
 <script type="text/javascript">
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
+      var numberLoaded = 0;
       tag.src = "//www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -223,6 +225,14 @@
             width: '280',
             videoId: '<?=$v?>',
             events: {
+              'onReady': function(event){ 
+                    numberLoaded ++;
+                    console.log("Number loaded:", numberLoaded);
+                    if (numberLoaded > 17) {
+                        $("#loading").hide();
+                        $("#videos").show();
+                    }
+              },
               'onStateChange': function(event){ var parent = $(event.target.a).parent()[0]; var overlay = $(parent).find(".overlay")[0];var details = $(parent).find(".video-content")[0];if (event.data == 2) { $(overlay).fadeIn(500);$(details).fadeIn(500);}}
             }
           });
