@@ -121,6 +121,7 @@ setInterval(function(){refreshMap()}, 50);
 var LAYER = getUrlVars()["layer"];
 var LAT = getUrlVars()["lat"];
 var LON = getUrlVars()["lon"];
+var OPEN = getUrlVars()["open"];
 
 LAT = parseFloat(LAT);
 LON = parseFloat(LON);
@@ -175,8 +176,10 @@ $("div#googlemap").bind("loadmap", function initialize() {
 //  < Decision map function >
 
 	function decisionMap (id, lat, lng, text, vid, vopen, name, description) {
+		if (id == OPEN) vopen = 1;
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
+		console.log("ID:", id);
 		var mpointer = String(lat)+String(lng);
 		
 		// The list of all markers to be displayed as "description"
@@ -554,7 +557,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 						if (v.name != null) { nm = v.name; }
 						
 	//*****************THIS IS WHERE WE MAP AN ELEMENT.***********//
-						console.log("Mapping something");
+						console.log("Mapping something:", v.id);
 						decisionMap(v.id, v.lat, v.lon, tx, v.link, v.open, nm, v.description);
 						latarr.push(parseFloat(v.lat));	
 						lonarr.push(parseFloat(v.lon));	
@@ -682,13 +685,9 @@ var youtubeW = 250;
 var youtubeH = 190;
 var descriptionW = 150;
 var descriptionH = 300;
-<<<<<<< HEAD
-var infoWindowW = 420;
-var infoWindowH = 250;
-=======
+
 var infoWindowW = 300;
 var infoWindowH = 150;
->>>>>>> Items 1-8 on list
 if (iphone()) {
 	youtubeW = 150;
 	youtubeH = 100;

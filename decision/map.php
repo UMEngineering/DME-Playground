@@ -1,6 +1,7 @@
 <?php
     $lat = $_GET["lat"];
     $lon = $_GET["lon"];
+    $open = $_GET["open"];
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -30,7 +31,7 @@
         	<div id="topcontainer">Congrats - you're in!
             <img id="right-logo" src="img/engin-logo1.png" alt="um-logo" />
         </div-->
-        	<iframe class="map" src="http://engcomm.engin.umich.edu/maps/index.php?layer=decision<?php if ($lat != "" AND $lon != "")?>&lat=<?=$lat?>&lon=<?=$lon?><?;?>"></iframe>
+        	<iframe class="map" src="http://engcomm.engin.umich.edu/maps/index.php?layer=decision<?php if ($lat != "" AND $lon != "")?>&lat=<?=$lat?>&lon=<?=$lon?><?;?><?php if ($open != "")?>&open=<?=$open?><?;?>"></iframe>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>

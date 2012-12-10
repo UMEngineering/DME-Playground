@@ -11,7 +11,7 @@
 		<div class="video-content">
         	<p>Elbel Field</p>
             <!--p>336 Hill Street Ann Arbor (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a href="http://engin.umich.edu/congrats/map.php?lat=42.272133&lon=-83.7458">map it</a></p>
+            <p><a target="_blank" href="http://engin.umich.edu/congrats/map.php?lat=42.272133&lon=-83.7458&open=1">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid1">
@@ -22,7 +22,7 @@
 		</div>
 		<div class="video-content">        	<p>The Arb</p>
             <!--p>Washington Heights (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.28096&lon=-83.729259">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.28096&lon=-83.729259&open=2">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid2">
@@ -33,7 +33,7 @@
 		</div>
 		<div class="video-content">        	<p>Blimpie Burger</p>
             <!--p>551 South Division Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.2748&lon=-83.744062">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.2748&lon=-83.744062&open=3">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid3">
@@ -44,7 +44,7 @@
 		</div>
 		<div class="video-content">        	<p>Main Street</p>
             <!--p>300 S Main Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279722&lon=-83.748611">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279722&lon=-83.748611&open=4">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid4">
@@ -55,7 +55,7 @@
 		</div>
 		<div class="video-content">        	<p>Wilson Center</p>
             <!--p>2603 Draper (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.294008&lon=-83.710291">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.294008&lon=-83.710291&open=5">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid5">
@@ -66,7 +66,7 @@
 		</div>
 		<div class="video-content">        	<p>Grad Library</p>
             <!--p>913 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.276753&lon=-83.737367">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.276753&lon=-83.737367&open=6">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid6">
@@ -77,7 +77,7 @@
 		</div>
 		<div class="video-content">        	<p>Arcade Barbers</p>
             <!--p>6 Nickels Arcade (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278674&lon=42.278674">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278674&lon=42.278674&open=7">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid7">
@@ -88,7 +88,7 @@
 		</div>
 		<div class="video-content">        	<p>Pinball Pete's Arcade</p>
             <!--p>1214 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275229&lon=-83.734148">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275229&lon=-83.734148&open=8">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid8">
@@ -99,7 +99,7 @@
 		</div>
 		<div class="video-content">        	<p>The Diag</p>
             <!--p>State and North U ish (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.277261&lon=-83.737882">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.277261&lon=-83.737882&open=9">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid9">
@@ -110,7 +110,7 @@
 		</div>
 		<div class="video-content">        	<p>Ingalls Mall </p>
             <!--p>881 North University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278245&lon=-83.739513">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278245&lon=-83.739513&open=10">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid10">
@@ -121,7 +121,7 @@
 		</div>
 		<div class="video-content">        	<p>Maize & Blue Deli</p>
             <!--p>1329 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275562&lon=-83.73211">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275562&lon=-83.73211&open=11">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid11">
@@ -132,7 +132,7 @@
 		</div>
 		<div class="video-content">        	<p>Michigan Theatre</p>
             <!--p>603 East Liberty Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279626&lon=-83.741959">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279626&lon=-83.741959&open=12">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid12">
@@ -143,7 +143,7 @@
 		</div>
 		<div class="video-content">        	<p>Pierpont Commons</p>
             <!--p>2101 Bonisteel Blvd (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291675&lon=-83.717583">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291675&lon=-83.717583&open=13">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid13">
@@ -154,7 +154,7 @@
 		</div>
 		<div class="video-content">        	<p>North Campus Rec Building</p>
             <!--p>2375 Hubbard Road (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.295215&lon=-83.719793">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.295215&lon=-83.719793&open=14">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid14">
@@ -165,7 +165,7 @@
 		</div>
 		<div class="video-content">        	<p>Video Game Archive</p>
             <!--p>2281 Bonisteel Blvd. (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291389&lon=-83.71563">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291389&lon=-83.71563&open=15">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid15">
@@ -176,7 +176,7 @@
 		</div>
 		<div class="video-content">        	<p>Shapiro Undergrad Library</p>
             <!--p>919 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275927&lon=-83.736938">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275927&lon=-83.736938&open=16">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid16">
@@ -187,7 +187,7 @@
 		</div>
 		<div class="video-content">        	<p>Billiards Room</p>
             <!--p>530 South State Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275165&lon=-83.74095">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275165&lon=-83.74095&open=17">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid17">
@@ -198,7 +198,7 @@
 		</div>
 		<div class="video-content">        	<p>Espresso Royale </p>
             <!--p>324 South State Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.27896&lon=-83.740779">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.27896&lon=-83.740779&open=18">map it</a></p>
 		</div>
     </div>
 </div>
