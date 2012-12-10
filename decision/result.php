@@ -50,19 +50,23 @@
 		<script>
 		var prev_hash = "#result";
 		var current_hash = window.location.hash;
-		if (current_hash != "#result" && current_hash != "#detail" && current_hash != "") {
+		var explode_current = current_hash.split("-");
+		if (current_hash != "#result" && !explode_current[1] && current_hash != "") {
 			prev_hash = current_hash;
 		}
         $(document).ready(function(){
 			window.location.hash = prev_hash;
 			$(window).hashchange( function(){
 				var hash = location.hash;
-				if (hash != "#detail") {
-					if (prev_hash == "#detail")	{
+				if (hash == "#result" || hash == "#explore" || hash == "#next") {
+					var explode_hash = hash.split("-");
+					if (explode_hash[1])	{
                         window.location.reload();//history.go(0);
                     }
 					changePage(hash.replace( /^#/, '' ));
-
+				} else {
+					var hash_arr = hash.split("-");
+					//changePage(hash_arr[0].replace( /^#/, '' ));
 				}
 				prev_hash = hash;
 			});
