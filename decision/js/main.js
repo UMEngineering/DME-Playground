@@ -1,11 +1,7 @@
 var inNav = true;
-//alert("Test");
-// window.scrollTo(0, 0);
-var originalBottom = new Array("", "", "", "");
 
 // Change a page for quiz result, drag information via Ajax
 function changePage(page){
-	console.log("changePage");
 	var urlAjax = "load_result.php?page=" + page;
 	var response = $.ajax({url: urlAjax, success: function(){
 		$("#main").html(response.responseText);
@@ -21,17 +17,14 @@ function changePage(page){
 		var screenWidth = $(window).width();
 		var originWidth = screenWidth;
 		if (page == "explore" || page == "next") {
-			if (screenWidth <= 800){
+			if (screenWidth <= 800 /*&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)*/){
 				//create_yui_vert('.container');
-				if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
-					create_yui('#scrollview-right0');
-					create_yui('#scrollview-right1');
-					create_yui('#scrollview-right2');
-					create_yui('#scrollview-right3');
-				} else {
-					$(".scrollview-right").css("overflow-x", "scroll");
-				}
+				create_yui('#scrollview-right0');
+				create_yui('#scrollview-right1');
+				create_yui('#scrollview-right2');
+				create_yui('#scrollview-right3');
 			} else {
+				//$(".scrollview-right").css("overflow-x", "scroll");
 				$('.flexslider').flexslider({
 					animation: "slide",
 					slideshow: false/*,
@@ -41,17 +34,14 @@ function changePage(page){
 			$("#main").css("height", "auto");
 			$(window).resize(function () { 
 				screenWidth = $(window).width();
-				if (screenWidth <= 800 && originWidth > 800/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
-					if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
-						create_yui('#scrollview-right0');
-						create_yui('#scrollview-right1');
-						create_yui('#scrollview-right2');
-						create_yui('#scrollview-right3');
-					} else {
-						$(".scrollview-right").css("overflow-x", "scroll");
-					}
+				if (screenWidth <= 800 && originWidth > 800 && inNav /*&& navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)*/){
+					//create_yui_vert('.container');
+					create_yui('#scrollview-right0');
+					create_yui('#scrollview-right1');
+					create_yui('#scrollview-right2');
+					create_yui('#scrollview-right3');
 				} else if (screenWidth > 800 && originWidth <= 800 && inNav) {
-					$(".scrollview-right").css("overflow-x", "scroll");
+					//$(".scrollview-right").css("overflow-x", "scroll");
 					$('.flexslider').flexslider({
 						animation: "slide",
 						slideshow: false/*,
@@ -68,8 +58,6 @@ function changePage(page){
 
 // Load the detailed page
 function changePageDetail(id, title, navid, typePage){
-	console.log("changePageDetail");
-	window.scrollTo(0, 0);
 	inNav = false;
 	$("#main").css("height", "100%");
 	var urlAjax = "load_result.php?page=detail&id=" + id + "&typePage=" + typePage;
@@ -78,64 +66,22 @@ function changePageDetail(id, title, navid, typePage){
 			// Append the bottom first
 			$('head').append("<link rel=\"stylesheet\" href=\"css/pages.css\" type=\"text/css\" />");
 			
-			// Append the original bottom nav
-			if(originalBottom[0] == "" && originalBottom[1] == "" && originalBottom[2] == "") {
-				originalBottom[0] = "<div id=\"bottom-title\">"+title+"</div><div id=\"bottom-scrollbackground\"><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#"+navid).html()+"</div></div>";
-				originalBottom[1] = "<div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\"><ul class=\"slides\">"+$("#desk-"+navid+" .flex-viewport .slides").html()+"</ul></div>";
-				originalBottom[2] = "<div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\">"+$("#desk-"+navid).html()+"</div>";
-			}
-			
 			// Mobile version bottom
-			$("#container").append("<div class=\"bottom display-when-mobile\">"+originalBottom[0]+"</div>");
+			$("#container").append("<div class=\"bottom display-when-mobile\"><div id=\"bottom-title\">"+title+"</div><div id=\"bottom-scrollbackground\"><div class=\"scrollview-right\" id=\"img-nav-div\">"+$("#"+navid).html()+"</div></div></div>");
 			
 			// Desktop version bottom
 			if ($("#desk-"+navid+" .flex-direction-nav").html()) {
-				$("#container").append("<div class=\"bottom display-when-desktop\">"+originalBottom[1]+"</div>");
+				$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\"><ul class=\"slides\">"+$("#desk-"+navid+" .flex-viewport .slides").html()+"</ul></div></div>");
 				$("li.clone").remove();
 			} else {
-				$("#container").append("<div class=\"bottom display-when-desktop\">"+originalBottom[2]+"</div>");
-			}
-		} else {
-			// If the bottom nav exists
-			$(".display-when-mobile").html(originalBottom[0]);
-			if ($(".clone").html()) {
-				$(".display-when-desktop").html(originalBottom[1]);
-				$("li.clone").remove();
-			} else {
-				$(".display-when-desktop").html(originalBottom[2]);
+				$("#container").append("<div class=\"bottom display-when-desktop\"><div id=\"bottom-title\">"+title+"</div><div class=\"scroll-background flexslider\">"+$("#desk-"+navid).html()+"</div></div>");
 			}
 		}
 		
-		// Let the current bottom nav photo display none
-		$(".display-when-desktop .d-bottom-nav-"+id).detach();
-		//var appended = false;
-		for (var i=id+1; ; i++){
-			if (!$(".display-when-desktop .d-bottom-nav-"+i).html()){
-				
-				break;
-			}
-			/*if ($(".display-when-desktop .d-bottom-nav-"+i).html()){
-				var temp = $(".display-when-desktop .bottom-nav-"+i).detach();
-				if (!appended) {
-					$(".display-when-desktop .d-bottom-nav-"+id).parent().append(temp);
-				} else {
-					$(".display-when-desktop .d-bottom-nav-"+i).parent().append(temp);
-				}
-				
-				if ($(".display-when-desktop .d-bottom-nav-"+i).parent().attr("class") != $(".display-when-desktop .d-bottom-nav-"+id).parent().attr("class")){
-					appended = true;
-				}
-			} else {
-				break;
-			}*/
-		}
-		
-		if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)) {
-			//$(".scrollview-right").css("overflow-x", "scroll");
+		//if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i))
 			create_yui('#img-nav-div');
-		} else {
-			$("#img-nav-div").css("overflow-x", "scroll");
-		}
+		//else
+			//$("#img-nav-div").css("overflow-x", "scroll");
 		$('.flexslider').flexslider({
 			animation: "slide",
 			slideshow: false
@@ -143,14 +89,7 @@ function changePageDetail(id, title, navid, typePage){
 		
 		$("#main").html(response.responseText);
 		$("#main").css("height", "auto");
-		
-		// Change the #main's height to screen's height if in mobile version
-		var screenWidth = $(window).width();
-		if (screenWidth <= 800 && $(document).height() - $(window).height() <= 20) {
-			//alert($(window).height()+" "+$(document).height());
-			$("#main").css("height", ($(window).height()-200)+"px");;
-		}
-		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><span onclick=\"history.back(-1)\">Go Back</span></span>");
+		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"#\" onclick=\"history.back(-1)\">Go Back</a></span>");
 		$(".page_detail p a").attr("target", "_blank");
 	}});
 }
@@ -169,7 +108,7 @@ function create_yui(class_name){
 				axis: "x"
 			}
 		});
-		//scrollView._prevent.move = false;
+		scrollView._prevent.move = false;
 	
 		scrollView.render();
 		
