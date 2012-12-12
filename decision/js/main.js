@@ -1,5 +1,4 @@
 var inNav = true;
-//alert("Test");
 // window.scrollTo(0, 0);
 var originalBottom = new Array("", "", "", "");
 
@@ -24,12 +23,10 @@ function changePage(page){
 			if (navigator.userAgent.match(/(iPad)/i)) {
 				$('.flexslider').flexslider({
 					animation: "slide",
-					slideshow: false/*,
-					animationLoop: false*/
+					slideshow: false
 				});
 			}
 			else if (screenWidth <= 800){
-				//create_yui_vert('.container');
 				if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
 					create_yui('#scrollview-right0');
 					create_yui('#scrollview-right1');
@@ -48,8 +45,15 @@ function changePage(page){
 			$("#main").css("height", "auto");
 			$(window).resize(function () { 
 				screenWidth = $(window).width();
-				if (screenWidth <= 800 && originWidth > 800/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
+				if (navigator.userAgent.match(/(iPad)/i)) {
+					$('.flexslider').flexslider({
+						animation: "slide",
+						slideshow: false
+					});
+				}
+				else if (screenWidth <= 800 && originWidth > 800/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
 					if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
+
 						create_yui('#scrollview-right0');
 						create_yui('#scrollview-right1');
 						create_yui('#scrollview-right2');
@@ -152,7 +156,13 @@ function changePageDetail(id, title, navid, typePage){
 		$(".bottom .scroll-background").addClass("flexslider");
 		
 		// Build the scroll and slideshow
-		if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)) {
+		if (navigator.userAgent.match(/(iPad)/i)) {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				slideshow: false
+			});
+		}
+		else if (navigator.userAgent.match(/(iPhone)|(iPod)/i)) {
 			//$(".scrollview-right").css("overflow-x", "scroll");
 			create_yui('#img-nav-div');
 		} else {
@@ -200,39 +210,6 @@ function create_yui(class_name){
 		scrollView.get("contentBox").delegate("mousedown", function(e) {
 			e.preventDefault();
 		}, "img");
-		
-		var resizeTimer;
-		$(window).resize(function () { 
-			clearTimeout(resizeTimer);
-			screenWidth = $(window).width();
-			resizeTimer = setTimeout(scrollView.set('width', screenWidth), 100);
-		});
-	});
-}
-
-// Create vertical scrolling for mobile
-function create_yui_vert(class_name){
-	
-	var screenWidth = $(window).width();
-	var screenHeight = $(window).height();
-	YUI().use('scrollview', function(Y) {
-		var scrollView = new Y.ScrollView({
-			id: 'scrollview',
-			srcNode: class_name,
-			height: '200',
-			flick: {
-				minDistance:10,
-				minVelocity:0.3,
-				axis: "y"
-			}
-		});
-	
-		scrollView.render();
-		
-		// Prevent default image drag behavior
-	/*	scrollView.get("contentBox").delegate("mousedown", function(e) {
-			e.preventDefault();
-		}, "img");*/
 		
 		var resizeTimer;
 		$(window).resize(function () { 
