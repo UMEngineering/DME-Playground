@@ -67,9 +67,15 @@ function changePage(page){
 		// If refreshing the detailed page, then run the detail function
 		if (initial == 1) {
 			var hash_arr = window.location.hash.split("-");
-			var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
-			var func_str_arr = func_str.split(",");
-			changePageDetail(func_str_arr[0], func_str_arr[1], func_str_arr[2], func_str_arr[3]);
+			if (hash_arr[0] == "#result") {
+				displayPage(hash_arr[1]);
+			} else {
+				var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
+				var func_str_arr = func_str.split(",");
+				changePageDetail(func_str_arr[0], func_str_arr[1], func_str_arr[2], func_str_arr[3]);
+				$(".slides li").css("opacity", 1);
+			}
+			initial = 0;
 		}
 	}});
 }

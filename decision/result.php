@@ -26,7 +26,7 @@
 
 		<div class="container" id="container">
         	<div id="topcontainer">
-            	<a href="index.html"><img id="main-logo" src="img/engin-logo2.png" alt="um-logo" /></a>
+            	<img id="main-logo" src="img/engin-logo2.png" alt="um-logo" />
                 <p class="right-text">+ Add to Homescreen</p>
             </div>
             
@@ -56,6 +56,7 @@
 			prev_hash = current_hash;
 		}
         $(document).ready(function(){
+			// Load the content for the parent page
 			if(window.location.hash.split("-")[1]){
 				changePage(window.location.hash.split("-")[0].replace( /^#/, '' ));
 			} else {
@@ -71,10 +72,15 @@
                     }
 					changePage(hash.replace( /^#/, '' ));
 				} else if (hash.split("-")[1] && initial == 0){
+					// If detailed page
 					var hash_arr = hash.split("-");
-					var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
-					var func_str_arr = func_str.split(",");
-					changePageDetail(func_str_arr[0], func_str_arr[1], func_str_arr[2], func_str_arr[3]);
+					if (hash_arr[0] == "#result") {
+						displayPage(hash_arr[1]);
+					} else {
+						var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
+						var func_str_arr = func_str.split(",");
+						changePageDetail(func_str_arr[0], func_str_arr[1], func_str_arr[2], func_str_arr[3]);
+					}
 				}
 				prev_hash = hash;
 			});

@@ -61,7 +61,7 @@ if (!$result){
 # Prepare the content for output
 $contents = array();
 while ($row = mysql_fetch_row($result)){
-	array_push($contents, array('r_id'=>$row[1], 'title'=>str_replace("&", "&amp;", $row[2]), 'description'=>str_replace("&", "&amp;", $row[3]), 'category'=>str_replace("&", "&amp;", $row[4]), 'subcategory'=>str_replace("&", "&amp;", $row[5]), 'img_src'=>$row[6]));
+	array_push($contents, array('r_id'=>$row[1], 'title'=>str_replace("&", "&amp;", $row[2]), 'description'=>str_replace("&", "&amp;", $row[3]), 'category'=>str_replace("&", "&amp;", $row[4]), 'subcategory'=>str_replace("&", "&amp;", $row[5]), 'img_src'=>$row[6], 'id'=>$row[0]));
 }
 
 # =========== AJAX return start =============
@@ -88,7 +88,7 @@ if ($_REQUEST["page"] == "result"){
 				for ($i=0; $i<6; $i++){
 					?>
 					<li id="<?= $contents[$i]['r_id'] ?>">
-						<a href="#detail" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
+						<a href="#result-<?= $contents[$i]['r_id'] ?>">
 							<img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
 							<div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
 						</a>
@@ -112,7 +112,7 @@ if ($_REQUEST["page"] == "result"){
 					for ($i=0; $i<4; $i++){
 						?>
                         <li id="d<?= $contents[$i]['r_id'] ?>" class="result-nav-li">
-                            <a href="#detail" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
+                            <a href="#result-<?= $contents[$i]['r_id'] ?>"">
                                 <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
                                 <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
                             </a>
@@ -134,7 +134,7 @@ if ($_REQUEST["page"] == "result"){
 					for ($i=4; $i<6; $i++){
 						?>
                         <li id="d<?= $contents[$i]['r_id'] ?>" class="result-nav-li">
-                            <a href="#detail" onclick="displayPage('<?= $contents[$i]['r_id'] ?>');">
+                            <a href="#result-<?= $contents[$i]['r_id'] ?>">
                                 <img class="scroll-img" src="<?= $contents[$i]['img_src'] ?>" alt="<?= $contents[$i]['title'] ?>" />
                                 <div class="transparent"><span class="title"><?= $contents[$i]['title'] ?></span></div>
                             </a>
