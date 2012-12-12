@@ -49,24 +49,32 @@
         <script src="js/jquery.ba-hashchange.min.js"></script>
 		<script>
 		var prev_hash = "#result";
+		var initial = 1;
 		var current_hash = window.location.hash;
 		var explode_current = current_hash.split("-");
 		if (current_hash != "#result" && !explode_current[1] && current_hash != "") {
 			prev_hash = current_hash;
 		}
         $(document).ready(function(){
-			window.location.hash = prev_hash;
+			if(window.location.hash.split("-")[1]){
+				changePage(window.location.hash.split("-")[0].replace( /^#/, '' ));
+			} else {
+				window.location.hash = prev_hash;
+				initial = 0;
+			}
 			$(window).hashchange( function(){
 				var hash = location.hash;
 				if (hash == "#result" || hash == "#explore" || hash == "#next") {
-					var explode_hash = hash.split("-");
-					if (explode_hash[1])	{
+					var explode_prev_hash = prev_hash.split("-");
+					if (explode_prev_hash[1])	{
                         window.location.reload();//history.go(0);
                     }
 					changePage(hash.replace( /^#/, '' ));
-				} else {
+				} else if (hash.split("-")[1] && initial == 0){
 					var hash_arr = hash.split("-");
-					//changePage(hash_arr[0].replace( /^#/, '' ));
+					var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
+					var func_str_arr = func_str.split(",");
+					changePageDetail(func_str_arr[0], func_str_arr[1], func_str_arr[2], func_str_arr[3]);
 				}
 				prev_hash = hash;
 			});

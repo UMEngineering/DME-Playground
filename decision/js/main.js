@@ -63,6 +63,14 @@ function changePage(page){
 			
 		}
 		$(".page_detail p a").attr("target", "_blank");
+		
+		// If refreshing the detailed page, then run the detail function
+		if (initial == 1) {
+			var hash_arr = window.location.hash.split("-");
+			var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
+			var func_str_arr = func_str.split(",");
+			changePageDetail(func_str_arr[0], func_str_arr[1], func_str_arr[2], func_str_arr[3]);
+		}
 	}});
 }
 
@@ -149,7 +157,7 @@ function changePageDetail(id, title, navid, typePage){
 			//alert($(window).height()+" "+$(document).height());
 			$("#main").css("height", ($(window).height()-200)+"px");;
 		}
-		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><span onclick=\"history.back(-1)\">Go Back</span></span>");
+		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"#"+typePage+"\">Go Back</a></span>");
 		$(".page_detail p a").attr("target", "_blank");
 	}});
 }

@@ -198,7 +198,7 @@ if ($_REQUEST["page"] == "result"){
                         <li class="m-bottom-nav-<?= $row[3] ?>">
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
-                            if ($out_href=="#{$request_page}-{$row[3]}") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
+                            if ($out_href=="#{$request_page}-{$row[3]}") {?>id="<?= $row[3] ?>,<?= strtoupper($categories[$category_index]) ?>,scrollview-right<?= $category_index ?>,<?= $request_page ?>"
 							<?php
 							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent"><span class="title"><?= $row[0] ?></span></div></a>
@@ -242,7 +242,7 @@ if ($_REQUEST["page"] == "result"){
                     <li class="d-bottom-nav-<?= $row[3] ?> d-bottom-nav">
                             <a href="<?= $out_href ?>" <?= $target_blank ?>
                             <?php
-                            if ($out_href=="#{$request_page}-{$row[3]}") {?>onclick="changePageDetail(<?= $row[3] ?>, '<?= strtoupper($categories[$category_index]) ?>', 'scrollview-right<?= $category_index ?>', '<?= $request_page ?>')";
+                            if ($out_href=="#{$request_page}-{$row[3]}") {?>id="<?= $row[3] ?>,<?= strtoupper($categories[$category_index]) ?>,scrollview-right<?= $category_index ?>,<?= $request_page ?>"
 							<?php
 							}?>><img class="scroll-img" src="<?= $row[1] ?>" alt="<?= $row[0] ?>" />
                             <div class="transparent" style="bottom: 67px;"><span class="title"><?= $row[0] ?></span></div></a>
