@@ -29,7 +29,7 @@
             </div>
             
             <div id="main">
-            	<p class="display-when-desktop" id="congrats-desktop"><span class="top_title">5 Quick Qs: Question 1</span><span class="morethan">(You can pick more than one)</span></p>
+            	<p class="display-when-desktop" id="congrats-desktop"><span class="top_title">5 Quick Qs: Question 1</span></p>
             	<div id="question_content"></div>
             </div>
             <a class='skip' href="result.php#explore" >Skip this quiz</a>

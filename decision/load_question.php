@@ -23,7 +23,7 @@
 		array_push($choices, $row[2]);
 	}
 	
-	echo "<p>{$question}</p><form id=\"questions\">";
+	echo "<p class='q'>{$question}</p><form id=\"questions\">";
 	for($i=0; $i<count($choices); $i++){
 		echo("<div><input class=\"choices styled\" type=\"checkbox\" name=\"choice{$i}\" value=\"{$i}\" id=\"q{$i}\" /><label for=\"q{$i}\"></label><p>{$choices[$i]}</p></div>");
 	}

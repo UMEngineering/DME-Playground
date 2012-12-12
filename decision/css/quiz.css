@@ -4,6 +4,15 @@
 	font-size: 19px;
 }
 
+#question_content p:first-child::after
+{ 
+content: "(You can pick more than one)";
+font-size: 12px;
+display: block;
+margin: 10px 0;
+font-style: italic;
+}
+
 form#questions {
 	line-height: 1;
 	margin: 0 10px 0 20px;
@@ -24,21 +33,15 @@ input[type=checkbox].styled + label {
 	background: url(../img/unchecked-smallwhite.png) no-repeat;
 }
 
-.morethan {
-    font-family: Arial, Helvetica, sans-serif;
 
-	
-    display: block;
-    font-size: 11px;
-    margin: 5px 10px 10px;
-    font-style: italic;
-}
+
 
 @media only screen and (min-width: 801px) {
     #container {
 		max-width: 960px;
 	}
-	
+
+
 	#main {
 		background: #2A4872;
 		margin: 10px;

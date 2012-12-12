@@ -26,7 +26,7 @@
 
 		<div class="container" id="container">
         	<div id="topcontainer">
-            	<img id="main-logo" src="img/engin-logo2.png" alt="um-logo" />
+            	<a href="index.html"><img id="main-logo" src="img/engin-logo2.png" alt="um-logo" /></a>
                 <p class="right-text">+ Add to Homescreen</p>
             </div>
             

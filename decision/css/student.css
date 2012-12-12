@@ -65,7 +65,7 @@ div.scroll-right {
 
 ul.imgs-nav {
 	display: inline-block;
-	height: 130px;
+	height: 100px;
 	white-space: nowrap;
 	margin: 0;
 	padding: 13px 11px;
@@ -73,7 +73,7 @@ ul.imgs-nav {
 }
 
 ul.imgs-nav li {
-	height: 119px;
+	height: 103px;
 	display: inline-block;
 	overflow: hidden;
 }
@@ -84,7 +84,7 @@ img.scroll-img {
 
 ul.imgs-nav li {
 	position: relative;
-	width: 90px;
+	width: 82px;
 	border: 1px solid white;
 	margin: 0 1px;
 	padding: 0;
