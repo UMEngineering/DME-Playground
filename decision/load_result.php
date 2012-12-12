@@ -163,7 +163,7 @@ if ($_REQUEST["page"] == "result"){
 	if ($request_page == "explore") {
 		$result = mysql_query("SELECT title, img_src, category, id, outside_href FROM results ORDER BY sort;");
 	} else {
-		$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" ORDER BY sort;");
+		$result = mysql_query("SELECT title, imgsrc, subcategory, id, outside_href FROM pages WHERE category=\"{$request_page}\" AND `live` =1 ORDER BY sort;");
 	}
 	if (!$result){
 		print("Cannot load info from PAGE");

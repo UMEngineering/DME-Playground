@@ -24,8 +24,8 @@
         <![endif]-->
 
 		<div id="container">
-        	<div id="topcontainer"><span class="top_title display-when-mobile">5 Quick Qs: Question 1</span><span id="top-content-desktop" class="display-when-desktop">Michigan Engineering</span>
-            <img id="right-logo" src="img/engin-logo1.png" alt="um-logo" />
+        	<div id="topcontainer"><span class="top_title display-when-mobile">5 Quick Qs: Question 1</span><!--span id="top-content-desktop" class="display-when-desktop">Michigan Engineering</span-->
+           <a href="index.html"><img id="main-logo" src="img/engin-logo2.png" alt="um-logo" /></a>
             </div>
             
             <div id="main">

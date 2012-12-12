@@ -70,12 +70,14 @@ function changePage(page){
 			
 		}
 		$(".page_detail p a").attr("target", "_blank");
+		$(".page_detail p a.self").attr("target", "_self");
 		
 		// If refreshing the detailed page, then run the detail function
 		if (initial == 1) {
 			var hash_arr = window.location.hash.split("-");
 			if (hash_arr[0] == "#result") {
 				displayPage(hash_arr[1]);
+				$(".slides li").css("opacity", 1);
 			} else {
 				var func_str = $(".d-bottom-nav-"+hash_arr[1]+" a").attr("id");
 				var func_str_arr = func_str.split(",");
@@ -172,6 +174,7 @@ function changePageDetail(id, title, navid, typePage){
 		}
 		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><a href=\"#"+typePage+"\">Go Back</a></span>");
 		$(".page_detail p a").attr("target", "_blank");
+		$(".page_detail p a.self").attr("target", "_self");
 	}});
 }
 

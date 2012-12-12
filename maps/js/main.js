@@ -193,7 +193,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		var temp = new google.maps.LatLng(0, 0);
 		if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 		else contentString += '<div class="spacer"></div>';
-		contentString += '<div class="description">test</div>';
+		contentString += '<div class="description">'+description+'</div>';
 	
 		contentString += '<div id="nav_prev_next" style="position: relative;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
 		//**************************************************

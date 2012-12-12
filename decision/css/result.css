@@ -5,7 +5,7 @@ ul#result-image {
 }
 
 #main {
-	margin: 0 10px 10px 10px;
+	/*margin: 0 10px 10px 10px;*/
 }
 
 div#result-div {
@@ -48,21 +48,23 @@ input[type=checkbox].styled + label {
 	display: block;
 	background: url(../img/unchecked-small.png) no-repeat;
 	position: relative;
-	top: 26px;
 	width: 23px;
 	height: 30px;
 	padding: 0;
+	float: left;
+	margin: 0 10px;
 }
 
 input[type=checkbox].styled:checked + label {
 	display: block;
 	background: url(../img/checked-small.png) no-repeat;
 	position: relative;
-	top: 26px;
 	width: 23px;
 	height: 30px;
 	padding: 0;
 	cursor: pointer;
+	float: left;
+	margin: 0 10px;
 }
 
 #videos, .video-item {
@@ -128,7 +130,12 @@ input[type=checkbox].styled:checked + label {
 	
 	ul.imgs-nav li {
 		height: 183px;
-		width: 140px;	
+		width: 140px;
+		opacity: 1 !important;	
+	}
+
+	ul.slides li {
+		opacity: 1 !important;
 	}
 	
 	ul.imgs-nav li a img {
