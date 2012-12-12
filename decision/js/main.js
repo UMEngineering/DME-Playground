@@ -21,7 +21,14 @@ function changePage(page){
 		var screenWidth = $(window).width();
 		var originWidth = screenWidth;
 		if (page == "explore" || page == "next") {
-			if (screenWidth <= 800){
+			if (navigator.userAgent.match(/(iPad)/i)) {
+				$('.flexslider').flexslider({
+					animation: "slide",
+					slideshow: false/*,
+					animationLoop: false*/
+				});
+			}
+			else if (screenWidth <= 800){
 				//create_yui_vert('.container');
 				if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
 					create_yui('#scrollview-right0');

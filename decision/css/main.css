@@ -60,6 +60,16 @@ li {
     
 }
 
+#playerContainer {
+    position: relative;
+    display: block;
+}
+
+#playerContainer iframe {
+    height: auto;
+    position: relative;
+}
+
 .skip {
     font-family: Chalkduster, Tahoma, Geneva, sans-serif;
 	
@@ -213,6 +223,34 @@ div.video {
 
 div.video img {
 	max-width: 100%;
+}
+
+div.video .overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.overlay .play {
+    position: absolute;
+
+    width: 15%;
+    height: 15%;
+    margin: -7.5% 0 0 -7.5%;
+    left: 50%;
+    top: 50%;
+    background: url(../img/play.png) no-repeat top left scroll;
+}
+
+.overlay img {
+    max-width: inherit !important;
+    
+    width: 110%;
+    margin: 0 0 0 -5%;
 }
 
 div.how {
@@ -477,6 +515,14 @@ textarea {
 		box-shadow: 0 0 0 rgba(0,0,0,.8);
 		border-bottom: 0;
 	}
+
+    #playerContainer iframe {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    
+        height: 320px;
+}
 	
 	#topcontainer {
 		background: #e89500;
