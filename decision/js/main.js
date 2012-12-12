@@ -23,7 +23,7 @@ function changePage(page){
 		if (page == "explore" || page == "next") {
 			if (screenWidth <= 800){
 				//create_yui_vert('.container');
-				if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
+				if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
 					create_yui('#scrollview-right0');
 					create_yui('#scrollview-right1');
 					create_yui('#scrollview-right2');
@@ -42,7 +42,7 @@ function changePage(page){
 			$(window).resize(function () { 
 				screenWidth = $(window).width();
 				if (screenWidth <= 800 && originWidth > 800/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
-					if (navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)){
+					if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
 						create_yui('#scrollview-right0');
 						create_yui('#scrollview-right1');
 						create_yui('#scrollview-right2');
