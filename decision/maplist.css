@@ -8,7 +8,7 @@ body p:nth-child(1) {
 }
 
 #videos {
-    display: none;
+    /*display: none;*/
 }
 
 #loading {
@@ -83,6 +83,8 @@ iframe {
     top: 0;
     overflow: hidden;
     z-index: 1;
+	
+	display: none;
 }
 
 .overlay img {
@@ -105,7 +107,41 @@ iframe {
     margin: -14px 0 0 -20px;
 }
 
+/* Lazy load Youtube START*/
+a.youtube-lazy-link {
+  vertical-align:top;
+  background:#555;
+  width:280px; 
+  height:100px;
+  /*background-size:cover;*/
+  
+  text-decoration:none;
+  color:#DDD;
+  text-align:left;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display:inline-block;
+}
+a.youtube-lazy-link:hover {
+  text-decoration:none;
+  color:#FFF;
+}
+.youtube-lazy-link-div {
+  width:280px; 
+  height:100px;
+  background: url(http://lh4.googleusercontent.com/-QCeB6REIFlE/TuGUlY3N46I/AAAAAAAAAaI/9-urEUtpKcI/s800/youtube-play-button.png) center no-repeat;
+  position:absolute;
+}
+.youtube-lazy-link-div:hover {
+  background: url(http://lh5.googleusercontent.com/-oBFjswrosz4/TuHqainRc3I/AAAAAAAAAbE/t3rMQuSJdLA/s800/youtube-play-button-hover.png) center center no-repeat;
+}
+
+
 @media only screen and (min-width: 600px) {
+	a.youtube-lazy-link, .youtube-lazy-link-div {
+		width: 560px;
+		height: 315px;
+	}
+	
     .video-content {
     width: 560px;
 
