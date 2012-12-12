@@ -150,7 +150,7 @@ function changePageDetail(id, title, navid, typePage){
 			//alert($(window).height()+" "+$(document).height());
 			$("#main").css("height", ($(window).height()-200)+"px");;
 		}
-		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><span onclick=\"history.back(-1)\">Go Back</span></span>");
+		$("#nav").html("<li>"+$("#title-none-display").text().toUpperCase()+"</li><span id=\"goback\"><span onclick=\"window.location.reload()\">Go Back</span></span>");
 		$(".page_detail p a").attr("target", "_blank");
 	}});
 }
