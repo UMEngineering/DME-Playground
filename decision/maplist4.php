@@ -21,7 +21,7 @@
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map2-arb.jpg" />
 		</div>
-		<div class="video-content">        	<p>The Arb: When things "get crazy."</p>
+		<div class="video-content">        	<p>The Arb</p>
             <!--p>Washington Heights (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
             <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.28096&lon=-83.729259&open=2">map it</a></p>
 		</div>
@@ -206,7 +206,6 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-<script src="js/modernizr_mq.js"></script>
 <script type="text/javascript">
 
 	// 2. This code loads the IFrame Player API code asynchronously.
@@ -227,7 +226,8 @@
           player = new YT.Player(elem, {
             height: '100',
             width: '280',
-            videoId: youid,            events: {
+            videoId: youid,
+            events: {
               'onReady': function(event){ 
                    player.playVideo();
               },
@@ -243,8 +243,9 @@
 		var youid = embedparms.split("?")[0].split("#")[0], thisId = $(this).parent().attr("id");
 
 		$(this).prepend('<div class="youtube-lazy-link-div"></div>&nbsp;')
+		$(this).css("background", "#000 url(http://i2.ytimg.com/vi/"+youid+"/0.jpg) center no-repeat");
+		$(this).css("background-size", "100%");
 		$(this).attr("href", "http://www.youtube.com/watch?v="+youid);
-		$(this).attr("class", "youtube-lazy-link preview_image_"+thisId);
 		var emu = 'http://www.youtube.com/embed/'+embedparms;
 		emu += ((emu.indexOf("?")==-1) ? "?" : "&") + "autoplay=1";
 		var videoFrame = '<iframe width="'+parseInt($(this).css("width"))+'" height="'+parseInt($(this).css("height"))+'" style="vertical-align:top;" src="'+emu+'" frameborder="0" allowfullscreen></iframe>';

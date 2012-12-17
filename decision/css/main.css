@@ -126,7 +126,7 @@ li {
     background: #2A4872;
 	
     margin: 10px;
-    padding: 2px 0px 140px;
+    padding: 2px 0px 0px !important;
     border-bottom: 3px solid white;
     box-shadow: 0 0 10px rgba(0,0,0,.8);
 	height: auto;
@@ -142,9 +142,9 @@ li {
 
 #main form p {
     margin: 0px 0 14px 37px;
-	
     padding: 0;
     font-size: 15px;
+    line-height: 21px;
     font-weight: 100;
 }
 
@@ -287,7 +287,7 @@ div.links {
     display: block;
 	
     width: 262px;
-    margin: 20px auto 0;
+    margin: 20px auto 20px;
     padding: 51px 0 0;
     background: url(../img/nextarrow.png) no-repeat center top;
 }
@@ -509,7 +509,7 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 768px) {
     #container {
 		max-width: 960px;
 	}
@@ -561,15 +561,15 @@ textarea {
 	
 	div.video {
 		float: left;
-		width: 490px;
+		width: 450px;
 		margin: 0;
 	}
 	
 	p#introduction {
 		float: right;
 		text-align: center;
-		width: 240px;
-		margin: 100px 21px 40px 0 !important;
+		width: 228px;
+		margin: 89px 21px 40px 0 !important;
 	}
 	
 	div.links {
@@ -609,9 +609,10 @@ textarea {
 	
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 767px) {
+
     #container {
-		max-width: 800px;
+		max-width: 768px;
 	}
 	
 	.display-when-desktop {
@@ -621,6 +622,11 @@ textarea {
 	.display-when-mobile {
 		display: block;
 	}
+    .congrats {
+
+        display:none;
+    }
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),

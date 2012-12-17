@@ -52,7 +52,7 @@ input[type=checkbox].styled + label {
 	height: 30px;
 	padding: 0;
 	float: left;
-	margin: 0 10px;
+	margin: -2px 10px;
 }
 
 input[type=checkbox].styled:checked + label {
@@ -79,7 +79,11 @@ input[type=checkbox].styled:checked + label {
 	padding-bottom: 20px;
 }
 
-@media only screen and (min-width: 801px) {
+.mainResult {
+	padding-bottom:200px !important;
+}
+
+@media only screen and (min-width: 768px) {
     #container {
 		max-width: 960px;
 	}
@@ -150,7 +154,7 @@ input[type=checkbox].styled:checked + label {
 		height: 55px;
 	
 		font-size: 14px;
-}
+	}
 	
 	#topcontainer img#right-logo {
 		/*position: absolute;
@@ -168,6 +172,11 @@ input[type=checkbox].styled:checked + label {
 	#videos, .youtubeOverlay {
 		width: 500px;
 	}
+
+	.d-bottom-nav {
+    margin: 0 3px !important;
+		
+	}
 }
 
 @media only screen and (min-width: 901px) {
@@ -182,7 +191,7 @@ input[type=checkbox].styled:checked + label {
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 767px) {
 	.mainResult {
 		padding-bottom: 200px;
 		margin: 0;

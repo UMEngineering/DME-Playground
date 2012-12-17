@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="maplist.css">
+<link rel="stylesheet" href="maplist2.css">
 
 <p>We asked Michigan students where they love to hang out, study and play, and this interactive map features their video answers on what makes Ann Arbor unique.<br />
 <!--<div id="loading"></div>-->
@@ -81,7 +81,7 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278674&lon=42.278674&open=7">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid7">
+	<!--div class="video-item" id="vid7">
     <div id="player7"></div>    
     <div class="overlay">
 			<div class="play"></div>
@@ -89,11 +89,11 @@
 		</div>
 		<div class="video-content">        	<p>Pinball Pete's Arcade</p>
             <!--p>1214 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275229&lon=-83.734148&open=8">map it</a></p>
+            <!--p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275229&lon=-83.734148&open=8">map it</a></p>
 		</div>
-    </div>
-	<div class="video-item" id="vid8">
-    <div id="player8"></div>    
+    </div-->
+	<div class="video-item" id="vid7">
+    <div id="player7"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map9-diag.jpg" />
@@ -103,8 +103,8 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.277261&lon=-83.737882&open=9">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid9">
-    <div id="player9"></div>    
+	<div class="video-item" id="vid8">
+    <div id="player8"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map10-ingalls.jpg" />
@@ -114,7 +114,7 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278245&lon=-83.739513&open=10">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid10">
+	<!--div class="video-item" id="vid10">
     <div id="player10"></div>    
     <div class="overlay">
 			<div class="play"></div>
@@ -122,11 +122,11 @@
 		</div>
 		<div class="video-content">        	<p>Maize & Blue Deli</p>
             <!--p>1329 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275562&lon=-83.73211&open=11">map it</a></p>
+            <!--p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275562&lon=-83.73211&open=11">map it</a></p>
 		</div>
-    </div>
-	<div class="video-item" id="vid11">
-    <div id="player11"></div>    
+    </div-->
+	<div class="video-item" id="vid9">
+    <div id="player9"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map12-michtheatre.jpg" />
@@ -136,7 +136,7 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279626&lon=-83.741959&open=12">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid12">
+	<!--div class="video-item" id="vid12">
     <div id="player12"></div>    
     <div class="overlay">
 			<div class="play"></div>
@@ -144,11 +144,11 @@
 		</div>
 		<div class="video-content">        	<p>Pierpont Commons</p>
             <!--p>2101 Bonisteel Blvd (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291675&lon=-83.717583&open=13">map it</a></p>
+            <!--p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291675&lon=-83.717583&open=13">map it</a></p>
 		</div>
-    </div>
-	<div class="video-item" id="vid13">
-    <div id="player13"></div>    
+    </div-->
+	<div class="video-item" id="vid10">
+    <div id="player10"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map14-ncrec.jpg" />
@@ -158,7 +158,7 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.295215&lon=-83.719793&open=14">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid14">
+	<!--div class="video-item" id="vid14">
     <div id="player14"></div>    
     <div class="overlay">
 			<div class="play"></div>
@@ -166,11 +166,11 @@
 		</div>
 		<div class="video-content">        	<p>Video Game Archive</p>
             <!--p>2281 Bonisteel Blvd. (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291389&lon=-83.71563&open=15">map it</a></p>
+            <!--p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.291389&lon=-83.71563&open=15">map it</a></p>
 		</div>
-    </div>
-	<div class="video-item" id="vid15">
-    <div id="player15"></div>    
+    </div-->
+	<div class="video-item" id="vid11">
+    <div id="player11"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map16-shapirolibrary.jpg" />
@@ -180,8 +180,8 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275927&lon=-83.736938&open=16">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid16">
-    <div id="player16"></div>    
+	<div class="video-item" id="vid12">
+    <div id="player12"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map17-billiards.jpg" />
@@ -191,8 +191,8 @@
             <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275165&lon=-83.74095&open=17">map it</a></p>
 		</div>
     </div>
-	<div class="video-item" id="vid17">
-    <div id="player17"></div>    
+	<div class="video-item" id="vid13">
+    <div id="player13"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map18-espresso.jpg" />
@@ -210,7 +210,7 @@
 <script type="text/javascript">
 	// Lazy load
 	//$(document).ready(function() {
-		var ytArray = new Array("phJDxXI9Dqk","NQ2h-gdWulA","wjbySdv_69Y","L_sQe5d74Gs","lV-0atL3ynU","Hwsi0QGJbAc","u7VtNpcIzFg","phJDxXI9Dqk","0qyrguo_liE","DpU2kI-n04I","phJDxXI9Dqk","sicRf9UBfSc","-75bkstCAiY","phJDxXI9Dqk","M549dybYNiI","jKAMmmdU3DE","-fwRIJ4Ni4M","phJDxXI9Dqk");
+		var ytArray = new Array("phJDxXI9Dqk","NQ2h-gdWulA","wjbySdv_69Y","L_sQe5d74Gs","lV-0atL3ynU","Hwsi0QGJbAc","u7VtNpcIzFg","0qyrguo_liE","DpU2kI-n04I","sicRf9UBfSc","-75bkstCAiY","M549dybYNiI","jKAMmmdU3DE","-fwRIJ4Ni4M");
 		
 		for (var i=0; i<ytArray.length; i++){
 			$("#player"+i).html("<a class='youtube-lazy-link' href='http://www.youtube.com/watch?v="+ytArray[i]+"'></a>");

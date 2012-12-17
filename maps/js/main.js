@@ -185,7 +185,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		// The list of all markers to be displayed as "description"
 		
 		// Define the description string
-		desc_string += "<li onclick='pantoNext("+temp_current+")'>"+name+"</li>";
+		desc_string += "<li onclick='pantoNext("+temp_current+", '"+description+"')'>"+name+"</li>";
 		
 		// Set "contentString"
 		//**************************************************
@@ -194,8 +194,8 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 		else contentString += '<div class="spacer"></div>';
 		contentString += '<div class="description">'+description+'</div>';
-	
-		contentString += '<div id="nav_prev_next" style="position: relative;"><span class="nextMarker" onclick="pantoNext(-98);" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99);" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
+		var slashdescription = description.replace(/"/g, "\\'");
+		contentString += '<div id="nav_prev_next" style="position: relative;"><span class="nextMarker" onclick="pantoNext(-98, \''+slashdescription+'\');" id="nextMarker'+id+'" style="float: left;">prev</span><span class="nextMarker" onclick="pantoNext(-99, \''+slashdescription+'\');" id="nextMarker'+id+'" style="float: right;">next</span></div></div>';
 		//**************************************************
 
 		var this_id = temp_current;
@@ -697,7 +697,7 @@ if (iphone()) {
 }
 //var prev_id;
 //var prev_mpointer;
-function pantoNext(gotoid){
+function pantoNext(gotoid, desc){
 	prev = current;
 	if (gotoid == -99) {
 		// Next one
@@ -737,7 +737,7 @@ function pantoNext(gotoid){
 			$("iframe#ifr_"+key).remove();	
 		}
 	});
-	$(".description").html(desc_string);
+	$(".description").html(desc);
 }
 // ================== Edited End ==================
 

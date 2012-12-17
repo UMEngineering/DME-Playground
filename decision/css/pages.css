@@ -10,6 +10,11 @@
 	font-weight: normal;
 }
 
+.page_detail {
+	display: block;
+	position: relative;
+}
+
 span.steps, span.checked {
 	font-weight: bold;
 	color: #00285C;
@@ -60,10 +65,23 @@ p.contact {
     width: 100%;
 }
 
-@media only screen and (max-width: 800px) {
+iframe.fb {
+    height: 580px;
+    width: 100%;	
+}
+
+iframe.fb img {
+	height: auto;
+	width: auto;
+}
+
+@media only screen and (max-width: 767px) {
 	#container, #main {
 		height: 100%;
-	
+	}
+
+	iframe.maplist {
+ 	   height: 760px !important;
 	}
 
 	.bottom ul.imgs-nav {
@@ -72,19 +90,25 @@ p.contact {
 	}
 
 	.bottom ul.imgs-nav li {
-    height: 78px;
-		
-	
-    width: 70px;
-}
+	    height: 78px;
+	    width: 70px;
+	}
 
 	.bottom ul.imgs-nav li img {
   		width: 70px;
 	}
 
 	.bottom ul.imgs-nav .transparent {
-    font-size: 10px;
+    	font-size: 10px;
 		
+	}
+
+	iframe.fb {
+	    height: 580px;
+	    width: 300px;	
+	    margin: 0 auto;
+	    display: block;
+	    position: relative;
 	}
 	
 	.bottom {
@@ -110,16 +134,25 @@ p.contact {
 	.display-when-desktop {
 		display: none;
 	}
+
+	.page_detail iframe.youtube {
+	    width: 280px;
+	    height: 162px;
+	}
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 768px) {
 	#main {
 		margin-bottom: 0;
 	
 		min-height: 300px;
 		overflow: auto;
-}
+	}
 	
+	iframe.maplist {
+ 	   height: 790px !important;
+	}
+
 	.bottom {
 		background: white;
 		margin: 0 5px 0 5px;
@@ -135,5 +168,10 @@ p.contact {
 	
 	.display-when-desktop {
 		display: block;
+	}
+
+	.page_detail iframe.youtube {
+		width: 560px;
+		height: 320px;
 	}
 }

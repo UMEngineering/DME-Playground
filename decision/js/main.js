@@ -20,13 +20,8 @@ function changePage(page){
 		var screenWidth = $(window).width();
 		var originWidth = screenWidth;
 		if (page == "explore" || page == "next") {
-			if (navigator.userAgent.match(/(iPad)/i)) {
-				$('.flexslider').flexslider({
-					animation: "slide",
-					slideshow: false
-				});
-			}
-			else if (screenWidth <= 800){
+			
+			if (screenWidth <= 767 && !navigator.userAgent.match(/(iPad)/i)){
 				if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
 					create_yui('#scrollview-right0');
 					create_yui('#scrollview-right1');
@@ -51,7 +46,7 @@ function changePage(page){
 						slideshow: false
 					});
 				}
-				else if (screenWidth <= 800 && originWidth > 800/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
+				else if (screenWidth <= 767 && originWidth > 767/* && inNav && navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i)*/){
 					if (navigator.userAgent.match(/(iPhone)|(iPod)/i)){
 
 						create_yui('#scrollview-right0');
@@ -61,7 +56,7 @@ function changePage(page){
 					} else {
 						$(".scrollview-right").css("overflow-x", "scroll");
 					}
-				} else if (screenWidth > 800 && originWidth <= 800 && inNav) {
+				} else if (screenWidth > 768 && originWidth <= 768 && inNav) {
 					$(".scrollview-right").css("overflow-x", "scroll");
 					$('.flexslider').flexslider({
 						animation: "slide",
@@ -178,7 +173,7 @@ function changePageDetail(id, title, navid, typePage){
 		
 		// Change the #main's height to screen's height if in mobile version
 		var screenWidth = $(window).width();
-		if (screenWidth <= 800 && $(document).height() - $(window).height() <= 20) {
+		if (screenWidth <= 768 && $(document).height() - $(window).height() <= 20) {
 			//alert($(window).height()+" "+$(document).height());
 			$("#main").css("height", ($(window).height()-200)+"px");;
 		}

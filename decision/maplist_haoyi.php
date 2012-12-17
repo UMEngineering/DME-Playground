@@ -21,7 +21,7 @@
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map2-arb.jpg" />
 		</div>
-		<div class="video-content">        	<p>The Arb: When things "get crazy."</p>
+		<div class="video-content">        	<p>The Arb</p>
             <!--p>Washington Heights (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
             <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.28096&lon=-83.729259&open=2">map it</a></p>
 		</div>
@@ -206,61 +206,52 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-<script src="js/modernizr_mq.js"></script>
+
 <script type="text/javascript">
-
-	// 2. This code loads the IFrame Player API code asynchronously.
-	var tag = document.createElement('script');
-	var numberLoaded = 0;
-	tag.src = "//www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-	function loadVideo(youid,which) {
-		console.log("Hey");
-
-		var oldHtml = $(which).html();
-
-		var player;
-		var elem = which;
-          player = new YT.Player(elem, {
-            height: '100',
-            width: '280',
-            videoId: youid,            events: {
-              'onReady': function(event){ 
-                   player.playVideo();
-              },
-              'onStateChange': function(event){ }
-            }
-          });
-	}
+	// Lazy load
 
 	function loadVids() {
 	  $("a.youtube-lazy-link").each(function(index) {
 		var embedparms = $(this).attr("href").split("/embed/")[1];
 		if(!embedparms) embedparms = $(this).attr("href").split("?v=")[1].replace(/\&/,'?');
-		var youid = embedparms.split("?")[0].split("#")[0], thisId = $(this).parent().attr("id");
-
+		var youid = embedparms.split("?")[0].split("#")[0];
+		var start = embedparms.match(/[#&]t=(\d+)s/);
+		if(start) start = start[1];
+		else {
+		  start = embedparms.match(/[#&]t=(\d+)m(\d+)s/);
+		  if(start) start = parseInt(start[1])*60+parseInt(start[2]);
+		  else {
+			start = embedparms.match(/[?&]start=(\d+)/);
+			if(start) start = start[1];
+		  }
+		}
+		embedparms = embedparms.split("#")[0];
+		if(start && embedparms.indexOf("start=") == -1)
+		  embedparms += ((embedparms.indexOf("?")==-1) ? "?" : "&") + "start="+start;
+		if(embedparms.indexOf("showinfo=0") != -1)
+		  $(this).html('');
 		$(this).prepend('<div class="youtube-lazy-link-div"></div>&nbsp;')
-		$(this).attr("href", "http://www.youtube.com/watch?v="+youid);
-		$(this).attr("class", "youtube-lazy-link preview_image_"+thisId);
+		$(this).css("background", "#000 url(http://i2.ytimg.com/vi/"+youid+"/0.jpg) center no-repeat");
+		$(this).css("background-size", "100%");
+		$(this).attr("id", youid);
+		$(this).attr("href", "http://www.youtube.com/watch?v="+youid+(start ? "#t="+start+"s" : ""));
 		var emu = 'http://www.youtube.com/embed/'+embedparms;
 		emu += ((emu.indexOf("?")==-1) ? "?" : "&") + "autoplay=1";
 		var videoFrame = '<iframe width="'+parseInt($(this).css("width"))+'" height="'+parseInt($(this).css("height"))+'" style="vertical-align:top;" src="'+emu+'" frameborder="0" allowfullscreen></iframe>';
-		$(this).attr("onclick", "loadVideo('"+youid+"',"+thisId+");return false;");
+		$(this).attr("onclick", "$('#"+youid+"').replaceWith('"+videoFrame+"');return false;");
 	  });
+
 	}
 
 	$(document).ready(function() {
 		var ytArray = new Array("phJDxXI9Dqk","NQ2h-gdWulA","wjbySdv_69Y","L_sQe5d74Gs","lV-0atL3ynU","Hwsi0QGJbAc","u7VtNpcIzFg","0qyrguo_liE","DpU2kI-n04I","sicRf9UBfSc","-75bkstCAiY","M549dybYNiI","jKAMmmdU3DE","-fwRIJ4Ni4M");
+		
 		for (var i=0; i<ytArray.length; i++){
 			$("#player"+i).html("<a class='youtube-lazy-link' href='http://www.youtube.com/watch?v="+ytArray[i]+"'></a>");
 		}
 		loadVids();
+		
+		
+		
 	});
 </script>
-
-
-
-

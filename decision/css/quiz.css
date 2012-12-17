@@ -34,9 +34,19 @@ input[type=checkbox].styled + label {
 }
 
 
+.quiz-main {
+	display:none;
+}
 
 
-@media only screen and (min-width: 801px) {
+
+
+@media only screen and (min-width: 769px) {
+
+	.quiz-main {
+		display:block;
+	}
+
     #container {
 		max-width: 960px;
 	}

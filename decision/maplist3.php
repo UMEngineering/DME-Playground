@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="maplist.css">
 
-<p>Michigan students tell us about where they love to hang out, study and play in these videos.<br />
-<!--<div id="loading"></div>-->
+<p>We asked Michigan students where they love to hang out, study and play, and these video answers show what they think makes Ann Arbor unique.<br />
+<div id="loading"></div>
 <div id="videos">
 	<div class="video-item" id="vid0">
 		<div id="player0"></div>
@@ -12,7 +12,7 @@
 		<div class="video-content">
         	<p>Elbel Field</p>
             <!--p>336 Hill Street Ann Arbor (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://engin.umich.edu/congrats/map.php?lat=42.272133&lon=-83.7458&open=1">map it</a></p>
+            <p><a target="_blank" href="http://engin.umich.edu/congrats/map.php?lat=42.272133&lon=-83.7458&open=1">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid1">
@@ -21,9 +21,9 @@
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map2-arb.jpg" />
 		</div>
-		<div class="video-content">        	<p>The Arb: When things "get crazy."</p>
+		<div class="video-content">        	<p>The Arb</p>
             <!--p>Washington Heights (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.28096&lon=-83.729259&open=2">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.28096&lon=-83.729259&open=2">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid2">
@@ -34,7 +34,7 @@
 		</div>
 		<div class="video-content">        	<p>Blimpie Burger</p>
             <!--p>551 South Division Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.2748&lon=-83.744062&open=3">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.2748&lon=-83.744062&open=3">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid3">
@@ -45,7 +45,7 @@
 		</div>
 		<div class="video-content">        	<p>Main Street</p>
             <!--p>300 S Main Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279722&lon=-83.748611&open=4">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279722&lon=-83.748611&open=4">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid4">
@@ -56,7 +56,7 @@
 		</div>
 		<div class="video-content">        	<p>Wilson Center</p>
             <!--p>2603 Draper (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.294008&lon=-83.710291&open=5">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.294008&lon=-83.710291&open=5">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid5">
@@ -67,7 +67,7 @@
 		</div>
 		<div class="video-content">        	<p>Grad Library</p>
             <!--p>913 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.276753&lon=-83.737367&open=6">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.276753&lon=-83.737367&open=6">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid6">
@@ -78,7 +78,7 @@
 		</div>
 		<div class="video-content">        	<p>Arcade Barbers</p>
             <!--p>6 Nickels Arcade (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278674&lon=42.278674&open=7">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278674&lon=42.278674&open=7">map it</a></p>
 		</div>
     </div>
 	<!--div class="video-item" id="vid7">
@@ -100,7 +100,7 @@
 		</div>
 		<div class="video-content">        	<p>The Diag</p>
             <!--p>State and North U ish (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.277261&lon=-83.737882&open=9">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.277261&lon=-83.737882&open=9">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid8">
@@ -111,7 +111,7 @@
 		</div>
 		<div class="video-content">        	<p>Ingalls Mall </p>
             <!--p>881 North University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278245&lon=-83.739513&open=10">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.278245&lon=-83.739513&open=10">map it</a></p>
 		</div>
     </div>
 	<!--div class="video-item" id="vid10">
@@ -133,7 +133,7 @@
 		</div>
 		<div class="video-content">        	<p>Michigan Theatre</p>
             <!--p>603 East Liberty Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279626&lon=-83.741959&open=12">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.279626&lon=-83.741959&open=12">map it</a></p>
 		</div>
     </div>
 	<!--div class="video-item" id="vid12">
@@ -155,11 +155,11 @@
 		</div>
 		<div class="video-content">        	<p>North Campus Rec Building</p>
             <!--p>2375 Hubbard Road (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.295215&lon=-83.719793&open=14">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.295215&lon=-83.719793&open=14">map it</a></p>
 		</div>
     </div>
-	<!--div class="video-item" id="vid14">
-    <div id="player14"></div>    
+	<!--div class="video-item" id="vid11">
+    <div id="player11"></div>    
     <div class="overlay">
 			<div class="play"></div>
 			<img src="http://engin.umich.edu/congrats/img/pages/map-pics/map1-elbel.jpg" />
@@ -177,7 +177,7 @@
 		</div>
 		<div class="video-content">        	<p>Shapiro Undergrad Library</p>
             <!--p>919 South University Avenue (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275927&lon=-83.736938&open=16">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275927&lon=-83.736938&open=16">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid12">
@@ -188,7 +188,7 @@
 		</div>
 		<div class="video-content">        	<p>Billiards Room</p>
             <!--p>530 South State Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275165&lon=-83.74095&open=17">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.275165&lon=-83.74095&open=17">map it</a></p>
 		</div>
     </div>
 	<div class="video-item" id="vid13">
@@ -199,67 +199,62 @@
 		</div>
 		<div class="video-content">        	<p>Espresso Royale </p>
             <!--p>324 South State Street (<a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=1&lon=2">See it on the map</a>)</p-->
-            <p class="maplink"><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.27896&lon=-83.740779&open=18">map it</a></p>
+            <p><a target="_blank" href="http://www.engin.umich.edu/congrats/map.php?lat=42.27896&lon=-83.740779&open=18">map it</a></p>
 		</div>
     </div>
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-<script src="js/modernizr_mq.js"></script>
+
 <script type="text/javascript">
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+      var numberLoaded = 0;
+      tag.src = "//www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-	// 2. This code loads the IFrame Player API code asynchronously.
-	var tag = document.createElement('script');
-	var numberLoaded = 0;
-	tag.src = "//www.youtube.com/iframe_api";
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-	function loadVideo(youid,which) {
-		console.log("Hey");
-
-		var oldHtml = $(which).html();
-
-		var player;
-		var elem = which;
-          player = new YT.Player(elem, {
+      function onYouTubeIframeAPIReady() {
+<?php
+      $ytArray = array("phJDxXI9Dqk","NQ2h-gdWulA","wjbySdv_69Y","L_sQe5d74Gs","lV-0atL3ynU","Hwsi0QGJbAc","u7VtNpcIzFg","0qyrguo_liE","DpU2kI-n04I","sicRf9UBfSc","-75bkstCAiY","M549dybYNiI","jKAMmmdU3DE","-fwRIJ4Ni4M","phJDxXI9Dqk");
+      foreach ($ytArray as $k => $v) {?>
+        var player<?=$k?>;
+          player<?=$k?> = new YT.Player('player<?=$k?>', {
             height: '100',
             width: '280',
-            videoId: youid,            events: {
+            videoId: '<?=$v?>',
+            events: {
               'onReady': function(event){ 
-                   player.playVideo();
+                    numberLoaded ++;
+                    console.log("Number loaded:", numberLoaded);
+                    if (numberLoaded > 11) {
+                        $("#loading").hide();
+                        $("#videos").show();
+                    }
               },
-              'onStateChange': function(event){ }
+              'onStateChange': function(event){ var parent = $(event.target.a).parent()[0]; var overlay = $(parent).find(".overlay")[0];var details = $(parent).find(".video-content")[0];if (event.data == 2) { $(overlay).fadeIn(500);$(details).fadeIn(500);}}
             }
           });
-	}
 
-	function loadVids() {
-	  $("a.youtube-lazy-link").each(function(index) {
-		var embedparms = $(this).attr("href").split("/embed/")[1];
-		if(!embedparms) embedparms = $(this).attr("href").split("?v=")[1].replace(/\&/,'?');
-		var youid = embedparms.split("?")[0].split("#")[0], thisId = $(this).parent().attr("id");
+    <?}?>
 
-		$(this).prepend('<div class="youtube-lazy-link-div"></div>&nbsp;')
-		$(this).attr("href", "http://www.youtube.com/watch?v="+youid);
-		$(this).attr("class", "youtube-lazy-link preview_image_"+thisId);
-		var emu = 'http://www.youtube.com/embed/'+embedparms;
-		emu += ((emu.indexOf("?")==-1) ? "?" : "&") + "autoplay=1";
-		var videoFrame = '<iframe width="'+parseInt($(this).css("width"))+'" height="'+parseInt($(this).css("height"))+'" style="vertical-align:top;" src="'+emu+'" frameborder="0" allowfullscreen></iframe>';
-		$(this).attr("onclick", "loadVideo('"+youid+"',"+thisId+");return false;");
-	  });
-	}
+<?php
 
-	$(document).ready(function() {
-		var ytArray = new Array("phJDxXI9Dqk","NQ2h-gdWulA","wjbySdv_69Y","L_sQe5d74Gs","lV-0atL3ynU","Hwsi0QGJbAc","u7VtNpcIzFg","0qyrguo_liE","DpU2kI-n04I","sicRf9UBfSc","-75bkstCAiY","M549dybYNiI","jKAMmmdU3DE","-fwRIJ4Ni4M");
-		for (var i=0; i<ytArray.length; i++){
-			$("#player"+i).html("<a class='youtube-lazy-link' href='http://www.youtube.com/watch?v="+ytArray[i]+"'></a>");
-		}
-		loadVids();
-	});
+    for($i=0;$i<19;$i++) {?>
+      $("#vid<?=$i?> img").click(function(e){
+        e.preventDefault();
+        var overlay = $(this).parent().parent().find(".overlay")[0];
+        var details = $(this).parent().parent().find(".video-content")[0];
+        console.log(overlay);
+        $(overlay).fadeOut(500);
+        $(details).fadeOut(800);
+        player<?=$i?>.playVideo();
+      });
+    <?} ?>
+  }
 </script>
+
 
 
 

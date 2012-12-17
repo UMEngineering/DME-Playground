@@ -37,6 +37,7 @@ body p:nth-child(1) {
     margin: -23px 0 20px 0px;
     background: rgba(255, 255, 255, .8);
     z-index: 10;
+    pointer-events: none;
 }
 
 .video-content p {
@@ -110,9 +111,8 @@ iframe {
 /* Lazy load Youtube START*/
 a.youtube-lazy-link {
   vertical-align:top;
-  background:#555;
   width:280px; 
-  height:100px;
+  height: 81px;
   /*background-size:cover;*/
   
   text-decoration:none;
@@ -128,34 +128,108 @@ a.youtube-lazy-link:hover {
 .youtube-lazy-link-div {
   width:280px; 
   height:100px;
-  background: url(http://lh4.googleusercontent.com/-QCeB6REIFlE/TuGUlY3N46I/AAAAAAAAAaI/9-urEUtpKcI/s800/youtube-play-button.png) center no-repeat;
+  background: url(img/pages/map-pics/map-play-arrow.png)center no-repeat;
   position:absolute;
 }
 .youtube-lazy-link-div:hover {
-  background: url(http://lh5.googleusercontent.com/-oBFjswrosz4/TuHqainRc3I/AAAAAAAAAbE/t3rMQuSJdLA/s800/youtube-play-button-hover.png) center center no-repeat;
 }
 
+.maplink {
+    display: none !important;
+    pointer-events: all !important;
+}
 
-@media only screen and (min-width: 600px) {
+.preview_image_player0 {
+    background: #555 url(img/pages/map-pics/map1-elbel.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player1 {
+    background: #555 url(img/pages/map-pics/map2-arb.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player2 {
+    background: #555 url(img/pages/map-pics/map3-blimpie.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player3 {
+    background: #555 url(img/pages/map-pics/map4-mainst.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player4 {
+    background: #555 url(img/pages/map-pics/map5-wilsoncenter.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player5 {
+    background: #555 url(img/pages/map-pics/map6-gradlibrary.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player6 {
+    background: #555 url(img/pages/map-pics/map7-arcadebarber.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player7 {
+    background: #555 url(img/pages/map-pics/map9-diag.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player8 {
+    background: #555 url(img/pages/map-pics/map10-ingalls.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player9 {
+    background: #555 url(img/pages/map-pics/map12-michtheatre.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player10 {
+    background: #555 url(img/pages/map-pics/map14-ncrec.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player11 {
+    background: #555 url(img/pages/map-pics/map16-shapirolibrary.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player12 {
+    background: #555 url(img/pages/map-pics/map17-billiards.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player13 {
+    background: #555 url(img/pages/map-pics/map18-espresso.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+@media only screen and (min-width: 769px) {
 	a.youtube-lazy-link, .youtube-lazy-link-div {
 		width: 560px;
 		height: 315px;
 	}
+
+    .maplink {
+        display: none !important;
+    }
 	
     .video-content {
-    width: 560px;
-
-    height: 35px;
-    margin-top: -35px;
-}
+        width: 560px;
+        height: 35px;
+        margin-top: -35px;
+    }
 
     .video-item {
         display:block;
-
-    
         height: 315px;
         width: 560px;
-}
+    }
 
     .overlay {
         display: none !important;    
@@ -168,4 +242,75 @@ a.youtube-lazy-link:hover {
     font-size: 14px !important;
         
     }
+
+    .preview_image_player0 {
+        background: #555 url(img/pages/map-pics/map1-elbel-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player1 {
+        background: #555 url(img/pages/map-pics/map2-arb-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player2 {
+        background: #555 url(img/pages/map-pics/map3-blimpie-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player3 {
+        background: #555 url(img/pages/map-pics/map4-mainst-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player4 {
+        background: #555 url(img/pages/map-pics/map5-wilsoncenter-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player5 {
+        background: #555 url(img/pages/map-pics/map6-gradlibrary-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player6 {
+        background: #555 url(img/pages/map-pics/map7-arcadebarber-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player7 {
+        background: #555 url(img/pages/map-pics/map9-diag-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player8 {
+        background: #555 url(img/pages/map-pics/map10-ingalls-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player9 {
+        background: #555 url(img/pages/map-pics/map12-michtheatre-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player10 {
+        background: #555 url(img/pages/map-pics/map14-ncrec-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player11 {
+        background: #555 url(img/pages/map-pics/map16-shapirolibrary-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player12 {
+        background: #555 url(img/pages/map-pics/map17-billiards-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player13 {
+        background: #555 url(img/pages/map-pics/map18-espresso-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
 }
