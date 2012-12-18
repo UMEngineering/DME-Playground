@@ -64,7 +64,9 @@
 				initial = 0;
 			}
 			$(window).hashchange( function(){
-				var hash = location.hash;
+                _gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+                //console.log("GA Test:", location.pathname + location.search + location.hash);
+            	var hash = location.hash;
 				if (hash == "#result" || hash == "#explore" || hash == "#next") {
 					var explode_prev_hash = prev_hash.split("-");
 					if (explode_prev_hash[1])	{
