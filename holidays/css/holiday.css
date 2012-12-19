@@ -1,0 +1,227 @@
+html {
+	height: 100%	
+}
+
+body {
+	height: 100%;
+	font-size: 16px;
+	pointer-events:none;
+	margin: 0;	
+}
+
+#container {
+	text-align: center;	
+	height: 100%;
+	position: relative;
+}
+
+a {
+	text-decoration: none;	
+	color: white;
+	font-family: 'Cookie', cursive;
+	font-size: 1.8em;
+	-moz-transition: color 1s ease;
+}
+
+a img {
+	border: none;	
+}
+
+div.clear {
+	display: block;
+	position: relative;
+	height: 0;
+	width: 100%;
+	clear: both;	
+}
+
+#googlemap {
+	display: block;
+	position: fixed !important;
+	min-height: 100% !important;
+	top: 0; bottom: 0; left: 0; right: 0;
+	pointer-events: all !important;
+	z-index: 0;
+}
+
+div.spacer {
+	display: block;
+	position: relative;
+	height: 20px;
+	width: 100%;
+	clear: both;
+}
+
+#snow {
+    bottom: 0;
+    display: block;
+    left: 0;
+    pointer-events: none !important;
+    position: fixed !important;
+    right: 0;
+    top: 0;
+    z-index: 1;
+	background: none !important;
+}
+#pile {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 130px;
+	left: 0;
+	background-image: url("../img/snow.png");	
+}
+
+#globe {
+    -moz-transform-origin: 100px 1040px;
+    -moz-transition: all 1s ease 0s;
+	-webkit-transform-origin: 100px 1040px;
+    -webkit-transition: all 1s ease 0s;
+	-o-transform-origin: 100px 1040px;
+    -o-transition: all 1s ease 0s;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+	background: none !important;
+	overflow: hidden;
+}
+
+#globe #hh_base {
+	pointer-events: all;	
+}
+
+#globe img {
+	position: absolute;
+	bottom: -100px; left: 0; right: 0;
+	margin: 0 auto;	
+	max-width: 100%;
+}
+
+#start {
+	display: block;
+	position: absolute;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	left: 0; right: 0;
+	margin: 0 auto 0 -230px;	
+	width: 140px;
+}
+
+
+#logo {
+	margin-left: -52px;	
+}
+
+figure {
+	display: block;
+	background: #EEE;
+	padding: 10px;
+	max-width: 420px;
+}
+
+#contact {
+	width: 250px;
+	position: absolute;
+	pointer-events: all;
+	bottom: 100px;
+	left: 0; right: 0;
+	margin: 0 auto;
+}
+
+#globe iframe {
+	position: absolute;
+	width: 340px;
+	height: 255px;
+	bottom: 200px;
+	left: 0;
+	right: 240px;
+	margin: 0 auto;
+	pointer-events: all;
+}
+
+#globe #exit {
+	display: block;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	bottom: 740px;
+	left: 0;
+	right: 530px;
+	margin: 0 auto;
+	pointer-events: all;
+}
+
+#globe #exit img {
+	max-width: 100%;	
+}
+
+#hh_base {
+	z-index: -10;
+}
+
+#hh_top {
+	pointer-events: none;	
+}
+
+.ie7 #smglobe, .ie8 #smglobe {
+	display: none;	
+}
+
+.ie7 footer, .ie8 footer {
+	display: block;
+}
+
+#smglobe {
+	opacity: 0;	
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	-moz-transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	z-index: 10;
+	pointer-events: none;
+}
+
+#smglobe img {
+	float: left;	
+	margin-left: 10px;
+}
+
+#smglobe a {
+	float: left;
+	color: #003366;
+	font-size: 27px;
+	width: auto;
+	margin: 70px 30px 0;
+	position: relative;
+	
+}
+
+div.googleInfo {
+	text-align: left;	
+}
+
+div.author {
+	font-size: 18px;
+	color: #009be3;	
+	margin-bottom: 20px;
+	font-family: "Cookie", cursive;
+}
+
+div.story {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+div.errorBox {
+	margin-bottom: 10px;	
+}
+
+footer {
+	z-index:100;
+}	
