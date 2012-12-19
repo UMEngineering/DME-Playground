@@ -1,0 +1,8 @@
+/* CSS Document */
+.altByCol td:nth-child(even), .altByRow tr:nth-child(even) td {
+	background: #95B7D9;
+}
+
+.altByCol th:nth-child(even) {
+	background: #0B5595;
+}
