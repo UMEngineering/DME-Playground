@@ -190,22 +190,32 @@ a.youtube-lazy-link:hover {
 }
 
 .preview_image_player10 {
-    background: #555 url(img/pages/map-pics/map14-ncrec.jpg) no-repeat center scroll;
+    background: #555 url(img/pages/map-pics/map11-videoarchive.jpg) no-repeat center scroll;
     background-size: 100%;
 }
 
 .preview_image_player11 {
-    background: #555 url(img/pages/map-pics/map16-shapirolibrary.jpg) no-repeat center scroll;
+    background: #555 url(img/pages/map-pics/map14-ncrec.jpg) no-repeat center scroll;
     background-size: 100%;
 }
 
 .preview_image_player12 {
-    background: #555 url(img/pages/map-pics/map17-billiards.jpg) no-repeat center scroll;
+    background: #555 url(img/pages/map-pics/map16-shapirolibrary.jpg) no-repeat center scroll;
     background-size: 100%;
 }
 
 .preview_image_player13 {
+    background: #555 url(img/pages/map-pics/map17-billiards.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player14 {
     background: #555 url(img/pages/map-pics/map18-espresso.jpg) no-repeat center scroll;
+    background-size: 100%;
+}
+
+.preview_image_player15 {
+    background: #555 url(img/pages/map-pics/map15-maizeblue.jpg) no-repeat center scroll;
     background-size: 100%;
 }
 
@@ -292,24 +302,31 @@ a.youtube-lazy-link:hover {
         background: #555 url(img/pages/map-pics/map12-michtheatre-desktop.jpg) no-repeat center scroll;
         background-size: 100%;
     }
-
     .preview_image_player10 {
+        background: #555 url(img/pages/map-pics/map11-videoarchive-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+    .preview_image_player11 {
         background: #555 url(img/pages/map-pics/map14-ncrec-desktop.jpg) no-repeat center scroll;
         background-size: 100%;
     }
-
-    .preview_image_player11 {
+    .preview_image_player12 {
         background: #555 url(img/pages/map-pics/map16-shapirolibrary-desktop.jpg) no-repeat center scroll;
         background-size: 100%;
     }
 
-    .preview_image_player12 {
+    .preview_image_player13 {
         background: #555 url(img/pages/map-pics/map17-billiards-desktop.jpg) no-repeat center scroll;
         background-size: 100%;
     }
 
-    .preview_image_player13 {
+    .preview_image_player14 {
         background: #555 url(img/pages/map-pics/map18-espresso-desktop.jpg) no-repeat center scroll;
+        background-size: 100%;
+    }
+
+    .preview_image_player15 {
+        background: #555 url(img/pages/map-pics/map15-maizeblue-desktop.jpg) no-repeat center scroll;
         background-size: 100%;
     }
 
