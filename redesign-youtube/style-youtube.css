@@ -1,46 +1,31 @@
 /* CSS Document */
-.promoHolderYoutube, a.youtube-lazy-link {
+.promoHolderYoutube, .youtubeColorbox, .youtube-div {
 	width: 200px;
 	height: 200px;
+	overflow: hidden;
 }
 
-/*.youtubeinfo {
-	display: block;
+a.youtubeColorbox img {
+	height: 270px;
+	margin-top: -35px;
+	margin-left: -80px;
+}
+
+a.youtubeColorbox {
+	text-decoration: none;
+}
+
+div.youtube-title {
+	color: white;
 	width: 200px;
-	height: 40px;
+	height: 50px;
+	padding: 5px;
 	position: relative;
-	margin: -53px 0 20px 0px;
-	background: rgba(255,255,255,.8);
+	top: 140px;
+	left: 0;
+	background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(103, 104, 105, .8));
 }
 
-.youtubetitle {
-	padding: 5px 0 0 5px;
-}*/
-
-.c1Image img {
-	width: 200px;
-}
-
-/* Lazy load Youtube START*/
-a.youtube-lazy-link {
-  vertical-align:top;
-  width:200px; 
-  height: 200px;
-  /*background-size:cover;*/
-  
-  text-decoration:none;
-  color:#DDD;
-  text-align:left;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  display:inline-block;
-}
-a.youtube-lazy-link:hover {
-  text-decoration:none;
-  color:#FFF;
-}
-.youtube-lazy-link-div {
-  width:200px; 
-  height:200px;
-  background: url(map-play-arrow.png)center no-repeat;
-  position:absolute;
+div.youtube-title p {
+	margin: 2px 0;
 }
