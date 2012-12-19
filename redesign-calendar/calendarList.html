@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#date=2012/7/1 -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./calendarList_files/widgets.js"></script><script type="text/javascript" src="./calendarList_files/widgets.js"></script><script id="LR1" type="text/javascript" async src="./calendarList_files/hubclient.js"></script><script type="text/javascript" src="./calendarList_files/shares.json"></script><script type="text/javascript" src="./calendarList_files/shares(1).json"></script><script type="text/javascript" src="./calendarList_files/shares(2).json"></script><script type="text/javascript" src="./calendarList_files/shares(3).json"></script><script type="text/javascript" src="./calendarList_files/shares(4).json"></script><script type="text/javascript" src="./calendarList_files/shares(5).json"></script><script type="text/javascript" src="./calendarList_files/shares(6).json"></script><script type="text/javascript" src="./calendarList_files/shares(7).json"></script><script type="text/javascript" src="./calendarList_files/shares(8).json"></script><script type="text/javascript" src="./calendarList_files/shares(9).json"></script><script type="text/javascript" src="./calendarList_files/shares(10).json"></script><script type="text/javascript" src="./calendarList_files/counter009.js"></script><link rel="stylesheet" type="text/css" href="./calendarList_files/counter007.css" media="all"><script type="text/javascript" src="./calendarList_files/widgets.js"></script><link rel="stylesheet" type="text/css" href="./calendarList_files/widget100.css" media="all">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile viewport optimized: j.mp/bplateviewport 
+		<meta name="viewport" content="width=device-width,initial-scale=1">-->
+    <link href="http://www.engin.umich.edu/redesign/06-11-12/css/style.css" rel="stylesheet">
+    <link href="http://www.engin.umich.edu/redesign/06-11-12/css/navigation.css" rel="stylesheet">
+    <link href="http://www.engin.umich.edu/redesign/06-11-12/css/calendarMonth.css" rel="stylesheet">
+    <link href="http://www.engin.umich.edu/redesign/06-11-12/css/promos.css" rel="stylesheet">
+    <link href="http://www.engin.umich.edu/redesign/06-11-12/css/print.css" rel="stylesheet">
+    <link href="style-calendar.css" rel="stylesheet">
+    <!-- for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
+
+    <script src="./calendarList_files/modernizr-2.0.6.min.js"></script>
+
+<div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh"><iframe id="_atssh242" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./calendarList_files/sh105.html"></iframe></div><script type="text/javascript" src="./calendarList_files/core053.js"></script><script type="text/javascript" src="./calendarList_files/core053.js"></script><script type="text/javascript" src="./calendarList_files/core053.js"></script></head>
+<body class="hasBreadcrumbs calendarList calendarPage" style="background-position: 0px 112px;" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" style="position: absolute; top: -9999em; width: 10px; height: 10px;" src="./calendarList_files/hub(1).html"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" style="position: absolute; top: -9999em; width: 10px; height: 10px;" src="./calendarList_files/hub.html"></iframe>
+    <div id="wrapper" class="lightBg">
+        <!-- hasBreadcrumbs class tells the Main nav whether it needs to stretch over a breadcrumb bar or not -->
+        <header>
+		    <a href="http://www.engin.umich.edu/" id="logo" class="ir">Michigan Engineering</a>
+			<div id="skip">
+				<a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#content">Skip to Main Content</a>
+			</div>
+			<nav id="utility">
+				<ul>
+					<li class="contact"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Contact</a></li>
+					<li class="role">
+						<span></span>
+						<a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#" class="roleChange">Select Role</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Prospective Student</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Current Students</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Alumni</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Faculty</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Staff</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Family / Parents</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">College Supporters</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Media</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="search">
+						<label for="search">Search</label>
+						<input id="search" type="text">
+						<a href="http://www.engin.umich.edu/redesign/06-11-12/Search.htm" class="ir">Go</a> 
+						<!-- Replace Search.htm with the appropriate URL for the search page that accepts a ?q=QUERY type search query -->
+					</li>
+				</ul>
+			</nav>
+			<nav id="mainBar">
+				<ul>
+					<li class="about"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">About</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">News Center</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Calendar</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Special Events</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Computing (CAEN)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Facilities</a></li>
+							</ul>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Message from the Dean</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Facts &amp; Figures</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">People</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Ann Arbor &amp; Campus</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">College Administration</a></li>
+							</ul>
+							<ul class="last">
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Center for Entrepreneurship</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Multidisciplinary Design Program</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Center for Diversity and Outreach</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">International Program in Engineering</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="research"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Research</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Centers &amp; Labs</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Undergraduate Research Opportunities*</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Getting Research Funding</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Sponsored Research</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Instant Innovation Program</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Corporate Relationships</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="academics"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Academics</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Undergraduate Programs/Degrees</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Graduate Programs/Degrees</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Courses</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Academic Calendar</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Student Resources</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Graduation</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="admissions"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Admissions</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Undergraduate Admissions</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Graduate Admissions</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">International Student</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Scholarships, Financial Aid &amp; Funding</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">FAQs</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Visit Us</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="departments"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Departments</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Aerospace Engineering (AERO)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Atmospheric, Oceanic &amp; Space Sciences (AOSS)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Biomedical Engineering (BME)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Chemical Engineering (CHE)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Civil and Environmental Engineering (CEE)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Electrical Engineering and Computer Sciences (EECS)</a></li>
+							</ul>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Industrial and Operation Engineering (IOE)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Interdisciplinary Professional Programs (InterPro)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Material Science and Engineering (MSE)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Mechanical Engineering (ME)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Naval Architecture and Marine Engineering (NAME)</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Nuclear Engineering and Radiological Sciences (NERS)</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="investing"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Investing</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Why I Give</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Where to Give</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">How to Give</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="last infoForYou"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Info for You</a>
+						<div>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Prospective Student</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Current Student</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Alumni</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Faculty</a></li>
+							</ul>
+							<ul>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Staff</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Family / Parents</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Supporters of the College</a></li>
+								<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Media</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<nav id="breadcrumbs">
+				<ul>
+					<li>/ <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Home</a></li>
+					<li>/ <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Academics</a></li>
+					<li>/ <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Student Resources</a></li>
+					<li>/ <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Advising</a></li>
+					<li class="last">/ <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">First Year Planning</a></li>
+				</ul>
+			</nav>
+		</header>
+        <div role="main" id="contentWrap">
+			<div id="content" class="content">
+                <div class="pageHeader">
+                    <h1>
+                        <span>Event</span> Calendar</h1>
+                    <ul id="calendarNav">
+                        <li><a id="prevMonth" class="prev" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#date=2012/5/1" rel="2012/5/1"><span>May</span></a></li>
+                        <li><span id="currentMonth" class="currentDate" rel="2012/6/1">June 2006</span></li>
+                        <li><a id="nextMonth" class="next" href="./calendarList_files/calendarList.html" rel="2012/7/1"><span>Jul</span></a></li>
+                    </ul>
+                    <ul id="calendarView">
+                        <li><a id="monthView" class="button" href="http://www.engin.umich.edu/redesign/06-11-12/calendarMonth.htm?date=2012/6/1">Month View<span class="rightArrow"></span></a></li>
+                        <li><a id="weekView" class="button" href="http://www.engin.umich.edu/redesign/06-11-12/calendarWeek.htm?date=2012/6/1">Week View<span class="rightArrow"></span></a></li>
+                        <li><a id="listView" class="button active" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm?date=2012/6/1"><span class="icon">
+                        </span>List View<span class="rightArrow"></span></a></li>
+                    </ul>
+                    <div id="calendarFilter">
+                        <div id="filterEvents">
+                            <label>
+                                Show events for:</label>
+                            <select id="selectEvent">
+                                <option value="">Select</option>
+                                <option>Topic 1</option>
+                                <option>Topic 2</option>
+                                <option>Topic 3</option>
+                                <option>Topic 4</option>
+                                <option>Topic 5</option>
+                            </select>
+                        </div>
+                        <div id="filterDepartments">
+                            <label>
+                                Filter by Department/Organization:</label>
+                            <select id="selectDepartment">
+                                <option value="">Select</option>
+                                <option>Department 1</option>
+                                <option>Department 2</option>
+                                <option>Organization 1</option>
+                                <option>Organization 2</option>
+                                <option>Organization 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="searchEvents">
+                        <label>
+                            Search Events:</label>
+                        <input type="text" value="Enter Text..."><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#" class="icon"></a>
+                    </div>
+                </div>
+                <div id="contentHolder">
+                    <!--Begin Listing View-->
+                    <div class="eventListing">
+            <div class="item first">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=77"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my first event and this has a really really long title that is…</a></h2>
+                        </div>                
+                        <p class="timeframe">6/6/2012</p>
+                        <p>man this is over asdfasdfasfasfasdfasf</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=77" tw:title="my first event and this has a really really long title that is probably going to wrap and make this break" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129.html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=77" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=4"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my first event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/5/2012</p>
+                        <p>man this is a great event</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=4" tw:title="my first event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(1).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=4" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=1123"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my second event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/6/2012</p>
+                        <p>man this is better</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=1123" tw:title="my second event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(2).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=1123" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=1"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my second event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/6/2012</p>
+                        <p>man this is better</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=1" tw:title="my second event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(3).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=1" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=44"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my second event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/6/2012</p>
+                        <p>man this is better</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=44" tw:title="my second event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(4).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=44" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=4434"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my second event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/7/2012</p>
+                        <p>man this is better</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=4434" tw:title="my second event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(5).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=4434" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=123"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my second event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/6/2012</p>
+                        <p>man this is better</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=123" tw:title="my second event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(6).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=123" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=12443"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my second event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/6/2012</p>
+                        <p>man this is better</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=12443" tw:title="my second event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(7).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=12443" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=751"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">last month</a></h2>
+                        </div>                
+                        <p class="timeframe">3/10/2012</p>
+                        <p>man this is over asdfasdfasfasfasdfasf</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=751" tw:title="last month" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(9).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=751" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=2"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my third event</a></h2>
+                        </div>                
+                        <p class="timeframe">3/20/2012</p>
+                        <p>man this is the best</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=2" tw:title="my third event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(8).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=2" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="item last">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm?id=23456"><img src="./calendarList_files/theaterFPO.jpg" alt="alt text is here"></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarEventsDetailPage.htm" class="trimmed">my third event</a></h2>
+                        </div>                
+                        <p class="timeframe">4/2/2012</p>
+                        <p>man this is the best</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like at300b" fb:="" like:layout="button_count" addthis:url="" addthis:title="" title="Facebook_like" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe style="overflow: hidden; border: 0px none; width: 90px; height: 25px;" src="./calendarList_files/like.html"></iframe></a>
+					            <a class="addthis_button_tweet at300b" tw:url="calendarEventsDetailPage.htm?id=23456" tw:title="my third event" title="Tweet" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./calendarList_files/tweet_button.1355514129(10).html" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px;" title="Twitter Tweet Button" data-twttr-rendered="true"></iframe></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id=23456" style="display: block;" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" title="View more services" href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#"></a></a>
+                            <div class="atclear"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="moreResults">
+                            <a class="resultsLink button" href="">See More Results<span></span></a>
+                        </div></div>
+                    <!-- End Listing View -->
+                </div>
+            </div>
+			<footer>
+				<p class="copyright">© <span class="year">2011</span> University of Michigan College
+					of Engineering</p>
+				<nav>
+					<ul>
+						<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Site Map</a></li>
+						<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Site Feedback</a></li>
+						<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Accessibility</a></li>
+						<li><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Safety</a></li>
+						<li class="last"><a href="http://www.engin.umich.edu/redesign/06-11-12/calendarList.htm#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<a href="http://www.umich.edu/" target="_blank" id="umFooterLogo" class="ir">University
+					of Michigan</a> 
+			</footer>
+		</div>
+        <!-- JavaScript at the bottom for fast page loading -->
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+        <script src="./calendarList_files/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+		
+		<script>
+			var webserviceUrl = 'json/monthJSON.js';
+		</script>
+        <!-- scripts concatenated and minified via build script -->
+        <script src="./calendarList_files/plugins.js"></script>
+        <script src="./calendarList_files/scripts.js"></script>
+        <script src="./calendarList_files/jsrender.js"></script>
+        <script src="./calendarList_files/calendarUtils.js"></script>
+
+        <script id="eventListItem" type="text/x-jquery-tmpl">
+            <div class="item">
+                <div class="itemShadow">
+                    <div class="shadow itemImg">
+                        <a href="calendarEventsDetailPage.htm?id={{=id}}"><img src="{{=image.src}}" alt="{{=image.alt}}" /></a>
+                    </div>
+                    <div class="details">
+                        <div class="header">
+                            <h2><a href="{{=url}}" class="trimmed">{{=title}}</a></h2>
+                        </div>                
+                        <p class="timeframe">{{=month}}/{{=day}}/{{=year}}</p>
+                        <p>{{=details}}</p>
+                        <div class="social">
+                           <div class="addthis_toolbox addthis_default_style "> 
+					            <a class="addthis_button_facebook_like" fb: like:layout="button_count" addthis:url="{{=URL}}" addthis:title="{{=Title}}"></a>
+					            <a class="addthis_button_tweet" tw:url="calendarEventsDetailPage.htm?id={{=id}}" tw:title="{{=title}}"></a>
+					            <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id={{=id}}"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <!-- end scripts -->
+        <!-- External scripts -->
+
+        <script type="text/javascript" src="./calendarList_files/addthis_widget.js"></script>
+
+        <!-- end External scripts -->
+
+
+</div></body></html>
