@@ -1,0 +1,1185 @@
+
+/* - overrides.css - */
+@media screen {
+/*  */
+/*  */
+/* - overrides.css - */
+#content-core form{
+background-color: #ffffff;
+font-size: 12pt;
+}
+/* Footer issues */
+footer nav li a {
+    color: #fff !important;
+}
+/* Edit Bar */
+dt.actionMenuHeader a, dd.actionMenuContent a {
+    text-decoration: none;
+}
+#contentActionMenus {
+    padding: 0 !important;
+    margin-right: 0;
+    margin-top: 1px !important;
+}
+#contentActionMenus li {
+    float: right;
+    margin-bottom: 0 !important;
+    list-style: none; 
+}
+#contentActionMenus a {
+    border: none !important;
+    font-weight: normal;
+}
+#contentActionMenus a:hover {
+    color: #fff !important;
+}
+dd.actionMenuContent li {
+    float: none !important;
+}
+dd.actionMenuContent ul {
+    padding: 0 !important;
+}
+#contentActionMenus dl.actionMenu.activated dd a:hover {
+    color: #666 !important;
+}
+dd.actionMenuContent ul li a {
+    padding: 5px;
+}
+.contentViews li {
+    list-style: none;
+    float: left;
+    margin: 0 !important;
+}
+.contentViews li a {
+    border: none !important;
+}
+#edit-bar .plain a {
+    color: #fff !important;
+}
+#edit-bar .plain a:hover, #edit-bar .selected a:hover {
+    color: #000 !important;
+}
+#edit-bar {
+    border-radius: 0;
+    font-size:1em;
+    padding: 3px 5px 0 0;
+    min-height: 2.em;
+}
+.contentViews {
+    padding: 0 !important;
+}
+dd.actionMenuContent {
+    margin-right: 1px !important;
+position: relative;
+z-index: 50;
+}
+dl.actionMenu.activated, dl.actionMenu.deactivated {
+    margin-bottom: 0 !important;
+}
+dd.actionMenuContent ul {
+    padding: 0px !important;
+}
+dd.actionMenuContent ul li a {
+    padding: 0 .25em !important;
+    line-height: 2em;
+}
+.contentViews a {
+    margin-left: 3px !important;
+}
+#content a.link-overlay {
+    border: none !important;
+}
+/* For event cal portlets */
+.promoEvents h4 {text-transform:uppercase;}
+/* Manage portlets link - matters on Primary pages */
+div.managePortletsLink,
+a.managePortletsFallback {
+    width: 225px;
+    float:left;
+    text-align: center;
+    font-size: 80%;
+    background: #ddd;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+}
+#rightPortlets .managePortletsLink {
+    float: right;
+    width: 200px;
+}
+li.private a {
+    color: #cc0000 !important;
+    font-weight: bold !important;
+}
+/* Folder contents view */
+.state-private {
+    #ee0000 !important;
+}
+/*.shadow {
+    background: none;
+    box-shadow: none;
+}*/
+#listing-table, #listing-table td {
+    width: auto;
+}
+#listing-table {
+    margin: 10px 0;
+}
+#folderlisting-main-table input.context {
+    height: 1.7em; /* Keep buttons from looking squished */
+}
+/* Add/edit form, including grey bar */
+ul.formTabs {
+    padding: 0;
+}
+form.enableFormTabbing {
+    border-radius: .5em .5em 0 0;
+}
+fieldset.formPanel {
+    padding: 10px;
+    font-size: .8em;
+}
+.formControls {
+    height: 2em;
+}
+.formControls input {
+    height: 1.6em;
+    font-size: .8em;
+}
+/* Portlets manager */
+.portletAssignments {
+    font-size: 1em !important;
+}
+.portletAssignments .formControls input {
+    font-size: 1em !important;
+}
+#portletmanager-plone-leftcolumn {
+    padding-left: 8px;
+}
+/* New 03-02-12 styles seem to have caused this to appear */
+#skip, .skip { display:none;}
+ul.contentViews {
+    margin: 0;
+}
+.content {
+/*    display: table; screws with calendars - can't be here */
+/*    overflow: visible; screws with footers - can't be here */
+}
+#wrapper {
+    overflow: visible;
+}
+footer {
+    z-index: 1;
+}
+.template-folder_contents .content {
+   display: table;
+    overflow: visible;
+}
+/* Needed for manage portlets button etc.*/
+.template-manage-portlets #rightPortlets{
+float:right;
+}
+/* Unanticipated body styles */
+.contentBlock dl {
+padding: 20px;
+}
+.contentBlock form{
+padding:20px;
+}
+.contentBlock a.link-parent{
+padding:20px;
+}
+/* Overrides for things not taken account for */
+.contentBlock h2,
+.contentBlock h3,
+.contentBlock h4,
+.contentBlock h5{
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left: 0px;
+font-size: 18px;
+font-weight: bold;
+padding-top: 20px;
+padding-left: 20px;
+padding-bottom: 5px;
+color: #212a55;
+letter-spacing: -0.2px;
+}
+.contentBlock h2{
+font-size: 19px;
+}
+.contentBlock h3{
+font-size: 18px;
+}
+.contentBlock h4{
+font-size: 17px;
+}
+.contentBlock h5{
+font-size: 16px;
+}
+/* Keep drop down to be able to be seen and not cut off in short pages */
+.editPage .content {
+    min-height: 1257px;
+}
+/* Fix rotation image sizing*/
+.primaryLanding #contentWrap {
+    padding-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.content a.mapButton {background: url(https://caen-cms-stage.engin.umich.edu/mapPinImg.png) no-repeat scroll left top transparent;}
+#contentWrap {
+    z-index: 1;
+}
+
+#contentActionMenus dl.actionMenu {
+    line-height: 2em;
+	margin-top: 0;
+}
+.sideNav ul li a {
+padding: 9px 25px 9px 20px;
+}
+#rightPortlets .first *, .leftCol .first * {
+    border-radius: 5px 5px 0 0;
+}
+#rightPortlets .last *, .leftCol .last * {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#rightPortlets td, #rightPortlets th, #rightPortlets img, .leftCol th, .leftCol td, .leftCol img {
+    border-radius: 0 0 0 0 !important;
+}
+.sideNav ul li.first * {
+    border-radius: 0 5px 0 0;
+}
+.sideNav ul li ul * {
+    border-radius: 0 0 0 0 !important;
+}
+.content .first {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#contactBox {
+    background: none repeat scroll 0 0 white;
+}
+a.calloutCTA {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    background: url(https://caen-cms-stage.engin.umich.edu/faqLinkArrow.png) no-repeat right center;
+    padding-right: 7px;
+    margin: 5px -15px 0 0;
+}
+a.calloutCTA:hover {
+    text-decoration: underline;
+}
+/* Manage portlets page */
+.template-manage-portlets #content-core {
+    float: left;
+    width: 450px;
+}
+/* Orange promo portlet */
+.promoHolderTeam {
+    height: auto;
+    min-height: 200px;
+}
+.promoTeam {
+    height: auto;
+    min-height: 200px;
+    position: relative;
+    padding-bottom: 15px;
+}
+.promoTeam h3 {
+    text-transform: uppercase;
+}
+.promoTeam li {
+    list-style: none;
+    background: url(https://caen-cms-stage.engin.umich.edu/pxlarrow.gif) no-repeat left center;
+    padding: 4px 7px;
+}
+.promoTeam ul {
+    padding-left: 16px;
+}
+.promoTeam a, .promoTeam li {
+    color: #FBB62E;
+    font-weight: bold;
+    text-decoration: none;
+}
+.promoTeam a:hover {
+    color: #fff;
+}
+/* Calendar edit controls */
+.calendarPage #calendarFilter {
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    top: 10px;
+}
+
+
+#content option {
+    padding: 2px;
+}
+
+.calendarPage #calendarFilter #filterEvents select {
+    margin-top: 4px;
+}
+
+
+.calendarPage #calendarFilter #filterDepartments select {
+    margin-top: 4px;
+    padding-left: 10px;
+}
+
+.calendarPage .content div.documentByLine {
+    margin-left:120px;
+}
+/* Nav long line */
+.sideNav ul li .current > a, .sideNav ul li li a:hover, .sideNav ul li li a:focus {
+    padding: 9px 15px 9px 20px;
+}
+
+/* Body styles */
+.contentBlock h1 {
+    color: #212A55;
+    padding: 20px 0 5px 20px;
+    font-size: 18px;
+}
+.contentBlock p {
+    margin: 0 20px 0 0;
+    padding: 10px 10px 0 20px;
+}
+.contentBlock ul {
+    padding-right: 10px !important;
+}
+
+.thinCol .contentBlock .fullWidthImg {
+    width: 500px;
+    margin: 10px -20px;
+}
+
+.wideCol .contentBlock .fullWidthImg {
+    width: 720px;
+    margin: 10px -20px;
+}
+
+.contentBlock ol {
+    color: #0E4270;
+    padding: 14px 10px 6px 48px;
+    line-height: 1.5em;
+}
+
+blockquote .quotes b {
+    font-size: 24px;
+}
+h4.bodySubHead {
+    font-weight: normal;
+    font-size: 14px;
+    color: #0B5595;
+    padding: 20px 0 0 20px;
+}
+.contentBlock .videoHolder h2 {
+    padding: 0 !important;
+    font-size: 18px !important;
+}
+/* Tags */
+#category span.tags {
+    background: #fff;
+    padding: .25em .5em;
+    margin-right: 1px;
+    color: #0E4270;
+    border-radius: .5em;
+    box-shadow: 0 0 3px #D2D4DA inset;
+}
+#category a.link-category, span.selectedTag { 
+    background: #004785;    
+    padding: .25em .5em;
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: .5em;
+    margin: 0 0 4px;
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: bold;    
+}
+
+#category a.link-category:hover { 
+    background: #6aa0cf;
+    text-decoration:underline;
+}
+
+
+/* Orange */
+.promoTeam ol {
+    padding-left: 32px;
+}
+.promoTeam ol li {
+    background: none;
+    list-style-type: inherit;
+    padding-left: 0;
+}
+
+.promoTeam h2, .promoTeam h4, .promoTeam h5, .promoTeam h6 {
+    color: #ffbb30;
+    padding: .5em 15px;
+}
+
+.promoTeam ul, .promoTeam ol {
+    color: #fff;
+}
+
+/* Green bar */
+.editPage #contentWrap {
+    min-height: 1257px;
+}
+
+
+/* Check-in/Check-out */
+.formControls input {
+    font-size: 1em;
+    height: 2.5em;
+}
+
+#rightPortlets {
+    float: right;
+    width: 220px;
+}
+
+/* Header for vhost nav */
+h1.subsiteHeader{
+font-size: 14px;
+color: #212a55;
+font-weight: normal;
+padding-top: 0pt;
+padding-right: 0pt;
+padding-bottom: 10px;
+padding-left: 22px;
+}
+
+
+h1.subsiteHeader span{
+font-size: 18px;
+display: block;
+text-transform: uppercase;
+}
+
+.formControls input {
+    font-size: 1em;
+    height: 95%;
+}
+/* Trying to fix chrome issue */
+#zc.page.browser_form fieldset {
+   width: 720px;
+}
+
+.promoTower .linkCtA {
+    margin: 0;
+}
+.promoTower .promoBtn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    max-width: 127px;
+    line-height: 1.4em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.contentBlock blockquote {
+    color: #0E4270;
+}
+
+
+/* More HTML Portlets stuff */
+.promoTeam pre {
+    background: #222;
+    color: #fff;
+    font-size: 90%;
+    line-height: 1.25em;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+.promoTeam .pullquote {
+    color: #444;
+    float: right;
+    font-size: 1.6em;
+    font-weight: bold;
+    letter-spacing: -.08em;
+    margin: 0 1em .5em .5em;
+}
+
+.promoTeam .callout {
+    background: #eee;
+    color: #666;
+    border-left: 1em solid #ccc;
+    clear: both;
+    padding: 1em;
+}
+
+.promoTeam {
+    overflow: hidden;
+}
+
+.promoTeam .discreet {
+    color: #666;
+    font-size: 85%;
+}
+
+.promoTeam .visualHighlight {
+    background: #ffffbb;
+    color: #666;
+}
+
+.callout, .visualHighlight, .discreet, pre {
+    border-radius: 0 !important;
+}
+
+/* End HTML Portlets */
+
+
+.thinCol .faqBlock, .thinCol .contentBlock {
+    width: 500px;
+}
+.faqs #contentHolder {
+    float: left;
+}
+.nonSectionBodyContent {
+    color: #0e4270;
+    line-height: 1.6em;
+    padding: 0 10px 15px;
+}
+.theaterBg {
+    left: 50% !important;
+    z-index: 4 !important;
+}
+/* Social Feed Fix */
+/* Social Stream style modifications. */
+.socialBubble .image.youTube {
+    max-height: 65px;
+    max-width: 110px;
+}
+
+.fbPreviewImage {
+    max-height: 60px;
+    max-width: 50px;
+}
+
+.comboHolder {
+    top: -149px !important;
+}
+.scheduledOutageIcon, .serviceChangeOutageIcon, .serviceProviderOutageIcon {
+
+    background-position: left top;
+}
+.tableFilters {
+    margin: 0 20px !important;
+    padding: 0 !important;
+}
+.softwareListing th {
+    background: #4e83b2 !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    padding: 5px 0 5px 10px !important;
+}
+.softwareListing td {
+    background: #bfd3eb !important;
+    border: 1px solid #fff !important;
+}
+.softwareListing .even td {
+    background: none !important;
+}
+
+/* Fix for ticket 173 */
+.promoCol .promo { box-shadow: 0 0 4px #000; float: left; margin: 0 0 8px 20px; }
+.content .pageSubHeading { background: url(https://caen-cms-stage.engin.umich.edu/subNavBar.png) repeat scroll left top transparent; overflow: hidden; padding: 0; width: 700px; }
+
+
+.promoHolderOutages h3 {
+    padding-left: 20px;
+    border-radius: 0 !important;
+}
+
+.content .outageDescription {
+    width: 460px;
+}
+
+/* Main navigation dropdown fixes */
+
+#mainBar .about div {
+    width: 600px;
+}
+#mainBar .giving div {
+    margin-left: -48px;
+    width: 129px;
+}
+/* Fix for shading on .wideCol content */
+
+.wideCol .contentBlock .innerShadow {
+    box-shadow: 0 0 20px #D2D4DA inset;
+}
+
+/* Fix for added attributes on news wall */
+.newsExplore .showStories, .newsExplore .storyDropdown {
+    box-shadow: none;
+    height: auto;
+}
+.newsExplore .showStories {
+    padding-bottom: 5px;
+}
+.newsTopRow {
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 -1px 2px #7F8EA6;
+    margin: 12px 0 0;
+    padding: 0 !important;
+    background: #2C4F90;
+}
+
+.faqSectionHdr {
+    color: #8892a2;
+    font-size: 18px;
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 20px 30px 15px;
+    text-transform: uppercase;
+}
+
+.faqBlock
+/*sends to back so it isn't on top of the dropdown from the green edit bar*/
+{
+    z-index: 0;
+}
+
+.faqBlock.last
+/*border radius for last faq dropdown*/
+{
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+/* Play button for video player */
+.videoPlayButton {
+   position: relative;
+   left: 195px;
+   top: 93px;
+   z-index: 500;
+   opacity: 0.8; /* Standard: FF gt 1.5, Opera, Safari */
+   filter: alpha(opacity=80); /* IE lt 8 */
+   -ms-filter: "alpha(opacity=80)"; /* IE 8 */
+   -khtml-opacity: .8; /* Safari 1.x */
+   -moz-opacity: .8; /* FF lt 1.5, Netscape */
+}
+
+.videoPlayButton:hover {
+    opacity: 1; /* Standard: FF gt 1.5, Opera, Safari */
+       filter: alpha(opacity=100); /* IE lt 8 */
+       -ms-filter: "alpha(opacity=100)"; /* IE 8 */
+       -khtml-opacity: 1; /* Safari 1.x */
+       -moz-opacity: 1; /* FF lt 1.5, Netscape */
+}
+
+.newsExplore .storyDropdown {
+    border-radius: 0 4px 4px 0;
+} 
+/* Fixes for Quick Uploads portlet */
+
+.qq-upload-button {
+    border-bottom: medium none;
+    border-radius: 5px !important;
+}
+
+.QuickUploadPortlet .portletHeader {
+    border-radius: 0;
+}
+#contentActionMenus dl.actionMenu a, #contentActionMenus
+dl.actionMenu.activated dd {
+   z-index: 50;
+}
+/* Google Plus */
+.googleplusIcon {
+   background: url(https://caen-cms-stage.engin.umich.edu/googleplusIcon.png)
+no-repeat scroll 0 0 transparent;
+}
+
+.pinterestIcon {
+   background: url(https://caen-cms-stage.engin.umich.edu/pinterestIcon.png)
+no-repeat scroll 0 0 transparent;
+}
+
+.blogIcon, .twitterIcon, .youTubeIcon, .newsIcon, .facebookIcon,
+.googleplusIcon, .pinterestIcon {
+   float: left;
+   height: 24px;
+   position: relative;
+   width: 24px;
+}
+
+.blogIcon:hover, .twitterIcon:hover, .youTubeIcon:hover,
+.newsIcon:hover, .facebookIcon:hover, .flickrIcon:hover,
+.googleplusIcon:hover, .pinterestIcon:hover {
+   background-position: 0 -24px;
+}
+.promoHolderRelatedLinksBl {
+   color: #fff;
+}
+
+/* Extending background for long wrapping breadcrumbs */
+
+#breadcrumbs {
+    height: auto;
+    background-repeat: repeat;
+}
+
+#breadcrumbs ul {
+    height: auto;
+}
+#portal-header {
+   z-index: 200;
+}
+
+.wideCol .contentBlock .innerShadow, .portaltype-uom-news-newsstory .contentBlock .innerShadow {
+    box-shadow: 0 0 20px #D2D4DA inset;
+}
+/* Fix Feature Image rotation issues */
+#supersized li.activeslide {
+   z-index: -10;
+}
+#supersized li.prevslide {
+   z-index: -20;
+}
+
+/* Fix news portlet see more */
+.promoNews .linkCtA {
+   background: url(https://caen-cms-stage.engin.umich.edu/pxlarrow.gif) center right no-repeat;
+   clear: both;
+   color: #FFFFFF;
+   display: block;
+   float: right;
+   font-size: 14px;
+   margin: 10px 10px 0 0;
+   padding: 0 8px 0 0;
+   text-decoration: none;
+
+}
+
+.faqBlock .faqAnswer .innerShadow
+/*Fixes padding in page section dropdowns*/
+{
+     padding: 0px 10px 10px 20px;
+}
+
+/* Subsite logos */
+header #logo.subsiteLogo
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/logo_name2012.png) 0 0 no-repeat;
+}
+/* for all pages except the home page, only displays the view: all feeds > portion of social links of social feed */
+.socialLinks > *
+{
+ visibility: hidden;
+}
+
+.socialLinks > :nth-last-child(1), .socialLinks > :nth-last-child(2)
+{
+ visibility: visible;
+}
+/* styles body links */
+.contentBlock a
+{
+    color: #A56C17;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Aerospace drop-down navigation */
+
+.aero-about div {
+    width: 425px;
+    margin-left: -61px;
+}
+
+.aero-research div {
+    width: 154px;
+    margin-left: -77px;
+}
+
+.aero-academics div {
+    margin-left: -65px;
+}
+
+.aero-giving div {
+    width: 237px;
+    margin-left: -118px;
+}
+
+.aero-infoForYou div {
+    width: 164px;
+    margin-left: -82px;
+}
+
+
+/* NERS drop-down navigation */
+
+.nersabout div {
+    width: 363px;
+    margin-left: -61px;
+}
+
+.nersresearch div {
+    width: 154px;
+    margin-left: -77px;
+}
+
+.nersacademics div {
+    margin-left: -65px;
+}
+
+.nerspeople div {
+
+    margin-left: -58px;
+}
+
+.nersgiving div {
+    width: 130px;
+    margin-left: -79px;
+}
+
+.nersinfoForYou div {
+    width: 164px;
+    margin-left: -82px;
+}
+
+
+/* News Byte fixes */
+
+.newsHitIcon
+/*Fixes padding on little M icon*/
+{
+    padding-bottom: 4px;
+}
+
+/* News promo box should be purple, not blue inner shadows */
+
+.promoNews {
+    box-shadow: none !important;
+}
+
+
+/* Fixups for selects with long option values - blows out the layout. */
+.select-widget
+{
+	width: 100%;
+}
+
+/* Override plone base.css colors for pre elements */
+#content pre
+{
+ border: 1px solid #aaa !important;
+ background-color: #eee !important;
+ color: #000 !important;
+ margin-left: 1em;
+ margin-right: 1em;
+}
+/* Per ticket 506*/
+.subsiteOpen, .subsiteClose {
+ cursor: pointer;
+}
+
+/* Centers embedded video in CMS video player view */
+
+.portaltype-uom-news-videoplayer iframe {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5px;
+}
+
+
+/* Event calendar details popup */
+.calendarPage #calendarContainer .fullDetails {
+    width: 211px;
+}
+
+/* height/font size of Engineering Calendar button */
+
+#eventButtons #eventReturnBtn {
+background-size: auto 70px !important;
+font-size: 15px !important;
+height: 17px !important;
+letter-spacing: 0 !important;
+margin-top: -3px !important;
+padding: 4px 19px 13px 2px !important;
+background: url(https://caen-cms-stage.engin.umich.edu/eventsReturnBtn.png) no-repeat top left;
+}
+
+/* Widths of buttons in calendar event view */
+
+#eventButtons #eventEmailBtn {
+    margin-left: -16px;
+    width: 175px;
+}
+
+#eventButtons #calendarBtn {
+    width: 140px;
+}
+
+/* Try to fix edit page float issue */
+dl.portalMessage {
+clear:none;
+}
+
+/* Font size of news wall popups */
+
+.newsExplore .overlay {
+    font-size: 100%;
+}
+
+.newsExplore li.small p.trimmedTitle {
+top: 6px;
+left: 6px;
+width: 78px;
+font-size: 8px;
+line-height: 9px;
+color: white;
+font-weight: normal;
+word-wrap: break-word;
+}
+
+/* Restrict width of related events for long titles */
+
+.eventDetail #eventsBox {
+    width: 205px;
+}
+/* Per ticket 927 */
+    .thinCol .content ul.pageSubHeading {
+        width: 490px;
+    } 
+/* Blue portlet */
+.promoBlueA {
+color: #cbe4fd;
+padding: 25px 20px 20px 13px;
+width: 167px;
+line-height: 1.25em;
+font-family:sans-serif;
+box-shadow: inset 0 0 20px #002755;
+}
+
+.promoBlueA p {
+padding: 0 0 0 7px;}
+
+.promoBlueA a {
+text-decoration: none;
+color: #fff;
+font-weight:bold;
+}
+
+.promoBlueA a:hover {
+color: #fff;
+font-weight:bold;
+text-decoration: underline;
+line-height: 1;
+}
+
+.promoBlueA h2,
+.promoBlueA h3,
+.promoBlueA h4,
+.promoBlueA h5{
+font: 18px FontSiteSansRoman,arial,sans-serif;
+margin: 0 0 0 7px;
+font-weight: bold;
+padding: 2px 25px 0 0;
+color: #fff;
+letter-spacing: -0.1px;
+line-height: 1em;
+display: inline-block;
+}
+
+.lt-ie8 .promoBlueA h3 {
+display:inline;
+}
+
+.promoBlueA h2{
+font-size: 18px;
+}
+.promoBlueA h3 {
+font-size: 18px;
+text-transform: uppercase;
+}
+.promoBlueA h4{
+font-size: 16px;
+}
+.promoBlueA h5{
+font-size: 14px;
+}
+
+
+.promoBlueA ul
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.promoBlueA li{
+background: url(https://caen-cms-stage.engin.umich.edu/pxlarrow.gif) left 5px no-repeat;
+background-position: 0px 5px;
+padding: 0 0 0 7px;
+margin: 15px 0 7px 0;
+font-weight:normal;
+}
+.promoBlueA li a
+{
+color: #fff;
+font-size: 12px;
+text-decoration:none;
+}
+.promoBlueA li a:hover
+{
+color: #fff;
+font-weight:bold;
+text-decoration: underline;
+line-height: 1;
+}
+
+
+.promoBlueA ol li {
+background: url(https://caen-cms-stage.engin.umich.edu/pxlarrow.gif) left 5px no-repeat;
+background-position: 0px 5px;
+padding: 0 0 0 7px;
+margin: 15px 0 7px -40px;
+font-weight:normal;
+list-style:none;
+}
+
+/* White Promo styles */
+
+.promoWhite {
+overflow: hidden;
+height: auto;
+min-height: 200px;
+position: relative;
+display: block;
+width: 167px;
+padding: 25px 20px 20px 13px;
+text-decoration: none;
+background-color: #FFF;
+-moz-opacity: .90;
+opacity: .90;
+filter: alpha(opacity=90);
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+-webkit-border-radius: inherit;
+-moz-border-radius: inherit;
+-o-border-radius: inherit;
+border-radius: inherit;
+box-shadow: inset 0 0 20px #B3B7BE;
+}
+
+.promoWhite a {
+margin: 0px;
+width: auto;
+font-size: 18px;
+color: #273D67;
+}
+
+.promoWhite a:hover {
+color: #3375AE;
+}
+
+.promoWhite h3 {
+margin: 0px;
+padding:0 0 4px 7px;
+font-size: 18px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: -.1px;
+line-height: 1em;
+color: #273D67;
+}
+
+.promoWhite h4, .promoWhite h5 {
+margin: 0px;
+padding:0 0 4px 7px;
+font-size:16px;
+font-weight:bold;
+letter-spacing: -.1px;
+line-height:1em;
+color: #273D67;
+}
+
+.promoWhite p {
+margin:0px;
+padding:0 0 4px 7px;
+width: 160px;
+font-size: 18px;
+color: #333;
+letter-spacing: .1px;
+line-height: 1.05em;
+}
+
+.promoWhite ul, .promoWhite ol {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.promoWhite li {
+background: url(https://caen-cms-stage.engin.umich.edu/arrow.png) left no-repeat;
+background-position: -2px 5px;
+padding: 0 0 0 7px;
+margin: 4px 0 7px 0;
+font-size: 18px;
+color: #333;
+letter-spacing: .1px;
+line-height: 1.05em;
+}
+
+/* Ticket 891 */
+.newsExplore li.small p.trimmedTitle {
+top: 6px;
+left: 6px;
+width: 78px;
+font-size: 8px;
+line-height: 9px;
+color: white;
+font-weight: normal;
+word-wrap: break-word;
+}
+
+#wrapper .contentBlock a {
+color: #7D4D0E;
+}
+ 
+#wrapper .contentBlock a:hover {
+color: #A36714;
+}
+
+.wideCol #category { width: 720px; }
+
+#contentHolder .newsTheater .theaterNavigation {
+padding-left:10px;
+float: left;
+width: 24px;
+}
+
+
+.calendarPage.editPage:not(.template-view) #contentWrap {
+    max-width: 1440px;
+}
+/* Fix edit/template pages for news wall */
+
+.newsList.editPage:not(.template-view) .leftCol {
+    float: left;
+}
+div.sidebar #contactBox div.info {
+border-radius:0;
+}
+/*  */
+
+
+}
+

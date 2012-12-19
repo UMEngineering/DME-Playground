@@ -1,0 +1,145 @@
+
+/* - colorbox.css - */
+@media screen {
+/*  */
+/*  */
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;} 
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(https://caen-cms-stage.engin.umich.edu/overlay.png) repeat 0 0;}
+#colorbox{}
+    #cboxContent{background:#fff; overflow:visible;}
+    .cboxIframe{background:#fff;}
+    #cboxError{padding:50px; border:1px solid #ccc;}
+    #cboxLoadedContent{margin-bottom:0px;}
+    #cboxTitle{position:absolute; bottom:0px; left:0; text-align:center; width:95%; color:#999;}
+    #cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999; display: none !important;}
+    #cboxSlideshow{position:absolute; bottom:0px; right:42px; color:#444;}
+    #cboxPrevious{position:absolute; top: 40%; left: 10px; color:#444; background: url(https://caen-cms-stage.engin.umich.edu/contentImgPrevArrow.png) -8px 0 no-repeat; text-indent: -9999px; width: 8px; height: 14px;}
+    #cboxPrevious:hover 
+    {
+        background-position: 0 0;
+    }
+    #cboxNext{position:absolute; top: 40%; right: 10px; color:#444; background: url(https://caen-cms-stage.engin.umich.edu/contentImgNextArrow.png) 0 0 no-repeat; text-indent: -9999px;  width: 8px; height: 14px;}
+    #cboxNext:hover
+    {
+        background-position: -8px 0
+    }
+    #cboxLoadingOverlay{background:#fff url(https://caen-cms-stage.engin.umich.edu/loading.gif) no-repeat 50% 50%;}
+	/* #cboxClose{position:absolute;top:10px; right:24px; background:url(https://caen-cms-stage.engin.umich.edu/controls.png) no-repeat -25px 1px; width:25px; height:10px; 
+text-indent:-9999px; padding-top: 24px;} */
+	#cboxClose{display: none !important;}	
+	/* #cboxClose:hover{position:absolute;top:0; right:24px; background:url(https://caen-cms-stage.engin.umich.edu/controls.png) no-repeat -25px 1px; width:25px; 
+height:10px; text-indent:-9999px; padding-top: 24px;} */
+ 
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/* Content Styles */
+#cboxContent, #cboxLoadedContent{
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+#cboxContent .addthis_toolbox{
+	float:right;
+}
+#cboxContent .social {
+    float: left;
+    padding: 5px 24px 15px;
+    width: 700px;
+}
+.lbContent {
+	background: #fff;
+	overflow: hidden;
+}
+.lbDescription {
+	padding: 10px 24px 5px;
+}
+.lt-ie8 .lbDescription {
+  margin-top: -10px;
+  margin-bottom: 0px;
+}
+.vidHolder,
+.imgHolder {
+	padding: 10px;
+	text-align: center;
+}
+.videoShadow {
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 1px #000;
+}
+.videoHeader, 
+.imgHeader {
+	font-size: 18px;
+	padding: 24px 24px 5px;
+}
+.lt-ie8 .videoHolder h2,
+.lt-ie8 .videoHeader, 
+.lt-ie8 .imgHeader {
+	font-size: 18px;
+}
+.imgPostDate,
+.videoPostDate {
+	padding: 5px 24px 15px;
+	color: #0B5595;
+}
+.lt-ie8 .imgPostDate,
+.lt-ie8 .videoPostDate {
+	font-size: 12px;
+}
+.lbClose{
+	font-weight:bold;
+	text-decoration:none;
+	color: #0B5595;
+	width: 60px;
+	height: 21px;
+	padding-top: 2px;
+	position:absolute; 
+	top:27px; 
+	right:23px;
+}
+.closeX {
+	background: url(https://caen-cms-stage.engin.umich.edu/closeX-img.png) center right no-repeat;	
+}
+.lbBorderDivider {
+	margin: 15px 0 20px;
+	border-top: 3px solid black;
+	width: 100%;
+}
+/*  */ 
+
+}
+

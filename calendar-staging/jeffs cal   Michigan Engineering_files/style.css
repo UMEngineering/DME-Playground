@@ -1,0 +1,1439 @@
+
+/* - style.css - */
+@media screen, print {
+/*  */
+/*  */
+
+/*
+ * HTML5 ✰ Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section
+{
+    display: block;
+}
+audio, canvas, video
+{
+    display: inline-block; *display:inline;*zoom:1;}
+audio:not([controls])
+{
+    display: none;
+}
+ [
+hidden]
+{
+    display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+html
+{
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.25;
+}
+body, button, input, select, textarea
+{
+    font-family: sans-serif;
+    color: #222;
+}
+::-moz-selection
+{
+    background: #c0d4eb;
+    color: #fff;
+    text-shadow: none;
+}
+::selection
+{
+    background: #c0d4eb;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+.content a
+{
+    color: #a56c17;
+}
+.content a:hover
+{
+    color: #fdb827;
+}
+a:focus, :focus
+{
+    outline: thin dotted;
+    outline-offset: 2px;
+}
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active
+{
+    outline: 0;
+}
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title]
+{
+    border-bottom: 1px dotted;
+}
+b, strong
+{
+    font-weight: bold;
+}
+blockquote
+{
+    margin: 1em 40px;
+}
+dfn
+{
+    font-style: italic;
+}
+hr
+{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+ins
+{
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+mark
+{
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp
+{
+    font-family: monospace, serif;
+    _font-family: 'courier new' , monospace;
+    font-size: 1em;
+}
+
+/* Improve readability of pre-formatted text in all browsers */
+pre
+{
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q
+{
+    quotes: none;
+}
+q:before, q:after
+{
+    content: "";
+    content: none;
+}
+small
+{
+    font-size: 85%;
+}
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup
+{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup
+{
+    top: -0.5em;
+}
+sub
+{
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Web Fonts used on this site
+   ========================================================================== */
+@font-face
+{
+    font-family: 'FontSiteSansRoman';
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Roman-webfont.eot);
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Roman-webfont.eot?#iefix) format('embedded-opentype'),url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Roman-webfont.ttf) format('truetype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Roman-webfont.svg#FontSiteSansRoman) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'FontSiteSansItalic';
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Italic-webfont.eot);
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Italic-webfont.eot?#iefix) format('embedded-opentype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Italic-webfont.woff) format('woff'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Italic-webfont.ttf) format('truetype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Italic-webfont.svg#FontSiteSansItalic) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FontSiteSansLight';
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Light-webfont.eot);
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Light-webfont.eot?#iefix) format('embedded-opentype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Light-webfont.woff) format('woff'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Light-webfont.ttf) format('truetype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Light-webfont.svg#FontSiteSansLight) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FontSiteSansBold';
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Bold-webfont.eot);
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Bold-webfont.eot?#iefix) format('embedded-opentype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Bold-webfont.ttf) format('truetype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Bold-webfont.svg#FontSiteSansBold) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'FontSiteSansCondensed';
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Cond-webfont.eot);
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Cond-webfont.eot?#iefix) format('embedded-opentype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Cond-webfont.ttf) format('truetype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-Cond-webfont.svg#FontSiteSansCondensed) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'FontSiteSansBoldCondensed';
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-BoldCd-webfont.eot);
+    src: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-BoldCd-webfont.eot?#iefix) format('embedded-opentype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-BoldCd-webfont.woff) format('woff'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-BoldCd-webfont.ttf) format('truetype'), url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/FontSiteSans-BoldCd-webfont.svg#FontSiteSansBoldCondensed) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul, ol
+{
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+dd
+{
+    margin: 0 0 0 40px;
+}
+nav ul, nav ol
+{
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+img
+{
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+svg:not(:root)
+{
+    overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure
+{
+    margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+form
+{
+    margin: 0;
+}
+fieldset
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label
+{
+    cursor: pointer;
+}
+legend
+{
+    border: 0; *margin-left:-7px;padding:0;}
+button, input, select, textarea
+{
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline; *vertical-align:middle;}
+button, input
+{
+    line-height: normal;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"]
+{
+    cursor: pointer;
+    -webkit-appearance: button; *overflow:visible;}
+input[type="checkbox"], input[type="radio"]
+{
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="search"]
+{
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration
+{
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner
+{
+    border: 0;
+    padding: 0;
+}
+textarea
+{
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+/* Colors for form validity */
+input:valid, textarea:valid
+{
+}
+input:invalid, textarea:invalid
+{
+    background-color: #f0dddd;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td
+{
+    vertical-align: top;
+}
+
+/* ==|== primary styles =====================================================
+   ========================================================================== */
+
+/* DEVELOPMENT ONLY STYLES <---> REMOVE FOR PRODUCTION */
+.index header h1
+{
+    color: #fff;
+}
+
+
+/*=Global */
+html
+{
+    margin: 0;
+    padding: 0;
+    height: 100%; /* pin footer */
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%; /* pin footer */
+    background: #3375ae url(https://caen-cms-stage.engin.umich.edu/mainPageBg.png) 0 0 repeat-x;
+}
+#wrapper
+{
+    position: relative;
+    z-index: 0;
+    min-width: 990px;
+    min-height: 100%; /* pin footer */
+    overflow: hidden;
+}
+#wrapper.lightBg
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/topContentBg.jpg) 0 84px repeat-x;
+}
+#headerPrintOnly, #headerPrintOnly img.printOnly
+{
+    display: none;
+}
+
+/* Utility Styles */
+
+/* Shadow */
+/* <div class="shadow">
+		<div class="innerShadow">			
+		</div>
+   </div> 
+*/
+.shadow
+{
+    background: #d2d4da;
+    -moz-box-shadow: 0 0 6px #102a58;
+    -webkit-box-shadow: 0 0px 6px #102a58;
+    box-shadow: 0 0 6px #102a58;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    position: relative;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.innerShadow
+{
+    background: #fff;
+    -moz-box-shadow: inset 0 0 20px #d2d4da;
+    -webkit-box-shadow: inset 0 0 20px #d2d4da;
+    box-shadow: inset 0 0 20px #d2d4da;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+/*=Header */
+
+header
+{
+    width: 100%;
+    min-width: 900px;
+    padding-top: 10px;
+    background: url(https://caen-cms-stage.engin.umich.edu/headerTopBar.png) 0 0 repeat-x;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0 0 10px 4px #8f8f8f;
+}
+.hasBreadcrumbs header
+{
+    border-bottom: 2px solid #fff;
+}
+header #logo
+{
+    display: block; /*position: absolute;*/
+    background: url(https://caen-cms-stage.engin.umich.edu/MichiganCollegeEngineeringMainLogo.png) 0 0 no-repeat;
+    height: 36px;
+    width: 270px;
+    margin: 0 0 9px 30px;
+}
+#contentWrap
+{
+    position: relative;
+    width: 100%;
+    min-width: 990px;
+    min-height: 100%;
+    overflow: hidden;
+    z-index: 10;
+    padding-bottom: 20px;
+}
+.lt-ie8 #contentWrap
+{
+    margin-top: 47px;
+    position: relative;
+}
+
+#contactBox
+{
+    background: rgb(255,255,255) url(https://caen-cms-stage.engin.umich.edu/contactBoxBg.png) bottom right no-repeat;
+    background: rgba(255,255,255,1) url(https://caen-cms-stage.engin.umich.edu/contactBoxBg.png) bottom right no-repeat;
+    border: 1px solid #a1a6aa;
+    width: 198px;
+    height: 197px;
+    padding: 25px 0 0 25px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    -o-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+#contactBox h3
+{
+    font: bold 18px FontSiteSansRoman,arial,sans-serif;
+    color: #333333;
+    text-transform: uppercase;
+}
+#contactBox p
+{
+    font: 12px arial,sans-serif;
+    color: #335a9e;
+    margin: 3px 0;
+}
+#contactBox .name
+{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+#contactBox .email a
+{
+    color: #335a9e;
+    text-decoration: none;
+}
+#contactBox .email a:hover
+{
+    color: #FDB827;
+    text-decoration: underline;
+}
+#contactBox .tel, #contactBox .address
+{
+    width: 100px;
+}
+
+
+
+/* Carousel (x1 images visible) */
+.carouselSingle
+{
+    float: right;
+}
+.no-js .carouselSingle h4
+{
+    display: none;
+}
+.carouselSingle
+{
+    background: #e3e4e6;
+    -webkit-box-shadow: inset 0 0 20px #b3b7be;
+    -moz-box-shadow: inset 0 0 20px #b3b7be;
+    box-shadow: inset 0 0 20px #b3b7be;
+    border: 1px solid #bbbbbb;
+    padding: 5px 21px;
+    position: relative;
+    margin: 10px 20px 5px;
+    float: right;
+    width: 200px;
+    overflow: hidden;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.content .carouselSingle ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.carouselSingle h4
+{
+    color: #212a55;
+    font-size: 18px;
+    margin: 4px 0 0 7px;
+}
+.carouselSingle li
+{
+    -webkit-box-shadow: 0 0px 6px #102a58;
+    -moz-box-shadow: 0 0 6px #102a58;
+    box-shadow: 0 0 6px #102a58;
+    margin: 10px 7px;
+    float: left;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.carouselSingle li:hover
+{
+    border: solid 1px #2c345c;
+    margin: 9px 6px;
+}
+.carouselSingle .slider
+{
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    top: 50%;
+    margin-top: -7px;
+    text-indent: -9999px;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+.carouselSingle .sliderPrev
+{
+    left: 8px;
+    background: url(https://caen-cms-stage.engin.umich.edu/contentImgPrevArrow.png) -8px 0 no-repeat;
+}
+.carouselSingle .sliderPrev:hover
+{
+    background-position: 0 0;
+}
+.carouselSingle .sliderNext
+{
+    right: 8px;
+    background: url(https://caen-cms-stage.engin.umich.edu/contentImgNextArrow.png) 0 0 no-repeat;
+}
+.carouselSingle .sliderNext:hover
+{
+    background-position: -8px 0;
+}
+.carouselSingle .navSummary
+{
+    color: #333;
+    text-align: right;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: 11px;
+}
+.no-js .carouselCaption
+{
+    display: none;
+}
+.carouselCaption
+{
+    background: #e3e4e6;
+    -webkit-box-shadow: inset 0 0 20px #b3b7be;
+    -moz-box-shadow: inset 0 0 20px #b3b7be;
+    box-shadow: inset 0 0 20px #b3b7be;
+    -moz-border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #bbbbbb;
+    padding: 5px 21px;
+    position: relative;
+    margin: 0 20px 10px;
+    float: right;
+    clear: right;
+    width: 200px;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.carousel.carouselCaption p
+{
+    font-size: 10px;
+    line-height: 11px;
+    color: #1e4e79;
+    padding: 5px;
+}
+.carousel .c1Image
+{
+    display: block;
+}
+/* Carousel (x4/x6 images visible depending on if thin/wide content column) */
+.carouselFull
+{
+    background: #e3e4e6;
+    -webkit-box-shadow: inset 0 0 20px #b3b7be;
+    -moz-box-shadow: inset 0 0 20px #b3b7be;
+    box-shadow: inset 0 0 20px #b3b7be;
+    border: 1px solid #bbbbbb;
+    padding: 5px 21px;
+    position: relative;
+    margin: 10px 0;
+    overflow: hidden;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.content .carouselFull ul
+{
+	float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px !important;
+}
+.carouselFull li
+{
+    -webkit-box-shadow: 0 0px 6px #102a58;
+    -moz-box-shadow: 0 0 6px #102a58;
+    box-shadow: 0 0 6px #102a58;
+    margin: 10px 7px;
+    float: left;
+    position: relative;
+    behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.carouselFull li:hover
+{
+    border: 1px solid #2c345c;
+    margin: 9px 6px;
+}
+.carouselFull .slider
+{
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    text-indent: -9999px;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+.carouselFull .sliderPrev
+{
+    top: 71px;
+    left: 8px;
+    background: url(https://caen-cms-stage.engin.umich.edu/contentImgPrevArrow.png) -8px 0 no-repeat;
+}
+.carouselFull .sliderPrev:hover
+{
+    background-position: 0 0;
+}
+.carouselFull .sliderNext
+{
+    top: 71px;
+    right: 8px;
+    background: url(https://caen-cms-stage.engin.umich.edu/contentImgNextArrow.png) 0 0 no-repeat;
+}
+.carouselFull .sliderNext:hover
+{
+    background-position: -8px 0;
+}
+.carouselFull .navSummary
+{
+    color: #333;
+    text-align: right;
+    margin: 0 10px 0 0;
+    padding: 0;
+    font-size: 11px;
+}
+
+
+/* ==|== accessibility ======================================================
+	Styles related specifically to making the website more accessible
+   ========================================================================== */
+.screenReaderCopy {
+	display: block;
+	height: 1px;
+	width: 1px;
+	position: relative;
+	text-indent: -9999px;
+}
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+/*@media only screen and (min-width: 480px) {
+   Style adjustments for viewports 480px and over go here 
+}*/
+
+/*@media only screen and (min-width: 768px) {
+   Style adjustments for viewports 768px and over go here 
+}*/
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+/* Style helpers */
+.underline
+{
+    text-decoration: underline;
+}
+/* For image replacement */
+.ir
+{
+    display: block;
+    border: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr; *line-height:0;}
+.ir br
+{
+    display: none;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden
+{
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden
+{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus
+{
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible
+{
+    visibility: hidden;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after
+{
+    content: "";
+    display: table;
+}
+.clearfix:after
+{
+    clear: both;
+}
+.clearfix
+{ *zoom:1;}
+
+
+/* Social Feeds */
+.socialFeedsHolder
+{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    float: left;
+	overflow: hidden;
+	padding-top: 120px;
+}
+.socialFeeds
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/feedBg.png) repeat-x;
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 100%;
+}
+.mainSocialBar
+{
+    padding: 0;
+    height: 24px;
+    float: left;
+    width: 100%;
+	position: relative;
+	z-index: 10;
+}
+.feedScroller
+{
+    padding: 0;
+    clear: left;
+    display: block;
+    width: 100%;
+    height: 50px;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.feedToggle
+{
+    float: left;
+    display: block;
+    margin-left: 32px;
+}
+.feedToggle.arrowDown
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/feedArrows.png) 174px -50px no-repeat;
+}
+.feedToggle.arrowDown:hover
+{
+    background-position: 174px -75px;
+}
+.feedToggle.arrowUp
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/feedArrows.png) 174px 0px no-repeat;
+}
+.feedToggle.arrowUp:hover
+{
+    background-position: 174px -25px;
+}
+.feedHeader
+{
+    padding: 6px 37px 0 0;
+}
+.socialLinks
+{
+    float: right;
+    height: 25px;
+}
+.socialLinks img
+{
+    float: left;
+    top: 7px;
+    position: relative;
+    padding-right: 12px;
+}
+.blogIcon
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/blogIcon.png) 0 0 no-repeat;
+}
+.twitterIcon
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/twitterIcon.png) 0 0 no-repeat;
+}
+.youTubeIcon
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/youTubeIcon.png) 0 0 no-repeat;
+}
+.newsIcon
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/newsIcon.png) 0 0 no-repeat;
+}
+.facebookIcon
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/facebookIcon.png) 0 0 no-repeat;
+}
+.flickrIcon
+{
+    height: 24px;
+    width: 27px;
+    float: left;
+    background: url(https://caen-cms-stage.engin.umich.edu/flickrIcon.png) 0 0 no-repeat;
+    position: relative;
+}
+.allFeeds
+{
+    height: 25px;
+    width: 152px;
+    float: left;
+    background: url(https://caen-cms-stage.engin.umich.edu/allFeeds.png) 0 0 no-repeat;
+    position: relative;
+}
+.blogIcon, .twitterIcon, .youTubeIcon, .newsIcon, .facebookIcon
+{
+    height: 24px;
+    width: 24px;
+    float: left;
+    position: relative;
+}
+.blogIcon:hover, .twitterIcon:hover, .youTubeIcon:hover, .newsIcon:hover, .facebookIcon:hover, .flickrIcon:hover
+{
+    background-position: 0 -24px;
+}
+.allFeeds:hover
+{
+    background-position: 0 -25px;
+}
+.followIcon, .allFeeds
+{
+    padding-left: 4px;
+}
+.follow
+{
+    padding-left: 25px;
+}
+.articleIcon
+{
+    padding-right: 6px;
+}
+.leftArticleIcon
+{
+    padding-left: 12px;
+}
+.view
+{
+    padding-left: 38px;
+}
+.comboHolder {
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+	padding-top: 150px;
+	top: -149px;
+}
+.innerHolder
+{
+    height: 49px;
+    position: relative; 
+    float: left;
+    /*margin: 0 119px;*/
+    left: 0;
+ }
+.scrollLeft
+{
+    display: block;
+    height: 49px;
+    border: none; /*padding-right: 8%;     float: left; 	position: relative;*/
+    position: absolute;
+    left: 0;
+    width: 119px;
+    z-index: 250;
+    background: url(https://caen-cms-stage.engin.umich.edu/feedLeftArrow.png) 0 0 no-repeat;
+    margin-top: 1px;
+}
+.scrollRight {
+    display: block;
+    height: 49px;
+    border: none; /*padding-left: 8%;     float: right; 	position: relative;*/
+    position: absolute;
+    right: 0;
+    width: 119px;
+    z-index: 250;
+    background: url(https://caen-cms-stage.engin.umich.edu/feedRightArrow.png) 100% 0 no-repeat;
+    margin-top: 1px;
+}
+.scrollRight:hover, 
+.scrollLeft:hover, 
+.scrollRight:focus, 
+.scrollLeft:focus {
+    background-position: bottom right;
+}
+.socialFeedDay {
+    float: right;
+    height: 49px;
+    position: relative;
+    display: block;
+}
+.viewFeedsInScroll {
+    float: right;
+    display: block;
+    height: 43px;
+    position: relative;
+    margin-right: 15px;
+    padding-top: 6px;
+    width: 100px;
+}
+.viewFeedsInScroll a {
+	display: block;
+	background: url(https://caen-cms-stage.engin.umich.edu/viewAllFieldsArrow.png) 0 50% no-repeat;
+	font: bold 12px/43px Arial,sans-serif;
+	color: #0f2856;
+	text-decoration: none;
+	width: 100px;
+	padding-left: 7px;
+}
+.viewFeedsInScroll a:hover {
+	color: #2d5091;
+}
+
+.feedSpacer1
+{
+    margin-left: 10px;
+}
+.feedSpacer2
+{
+    margin-left: 15px;
+}
+.feedSpacer3
+{
+    margin-left: 20px;
+}
+.feedSpacer4
+{
+    margin-left: 25px;
+}
+.feedSpacer5
+{
+    margin-left: 30px;
+}
+.dayMarker
+{
+    float: right;
+    top: 0;
+    position: relative;
+    z-index: -1;
+    width: 34px;
+}
+.feedLink
+{
+    top: 20px;
+    float: right;
+    position: relative;
+    display: block;
+    border: none;
+    height: 24px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/* individual feed styles */
+span.blog
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 0;
+}
+.socialFeedsHolder:hover span.blog:hover, span.blog.iconHover, .socialFeedsHolder:hover span.blog.iconHover
+{
+    background-position: -50px 0;
+}
+.socialFeedsHolder.focused span.blog, .socialFeedsHolder:hover span.blog, .iconImage.blog
+{
+    background-position: -25px 0;
+}
+span.facebook
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 -24px;
+}
+.socialFeedsHolder:hover span.facebook:hover, span.facebook.iconHover, .socialFeedsHolder:hover span.facebook.iconHover
+{
+    background-position: -50px -24px;
+}
+.socialFeedsHolder.focused span.facebook, .socialFeedsHolder:hover span.facebook, .iconImage.facebook
+{
+    background-position: -25px -24px;
+}
+
+span.flickr
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 -48px;
+}
+.socialFeedsHolder:hover span.flickr:hover, span.flickr.iconHover, .socialFeedsHolder:hover span.flickr.iconHover
+{
+    background-position: -50px -48px;
+}
+.socialFeedsHolder.focused span.flickr, .socialFeedsHolder:hover span.flickr, .iconImage.flickr
+{
+    background-position: -25px -48px;
+}
+span.news
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 -72px;
+}
+.socialFeedsHolder:hover span.news:hover, span.news.iconHover, .socialFeedsHolder:hover span.news.iconHover
+{
+    background-position: -50px -72px;
+}
+.socialFeedsHolder.focused span.news, .socialFeedsHolder:hover span.news, .iconImage.news
+{
+    background-position: -25px -72px;
+}
+span.twitter
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 -96px;
+}
+.socialFeedsHolder:hover span.twitter:hover, span.twitter.iconHover, .socialFeedsHolder:hover span.twitter.iconHover
+{
+    background-position: -50px -96px;
+}
+.socialFeedsHolder.focused span.twitter, .socialFeedsHolder:hover span.twitter, .iconImage.twitter
+{
+    background-position: -25px -96px;
+}
+span.youTube
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 -120px;
+}
+.socialFeedsHolder:hover span.youTube:hover, span.youTube.iconHover, .socialFeedsHolder:hover span.youTube.iconHover
+{
+    background-position: -50px -120px;
+}
+.socialFeedsHolder.focused span.youTube, .socialFeedsHolder:hover span.youTube, .iconImage.youTube
+{
+    background-position: -25px -120px;
+}
+
+/* Feed bubbles */
+.socialBubble {
+    display: none;
+    position: absolute;
+    width: 317px;
+    height: 118px;
+    left: -4px;
+    bottom: 22px;
+    z-index: 400;
+    padding: 10px 6px 6px 16px;
+}
+.fbPreviewTitle, 
+.fbPreviewDescription,
+.fbPreviewImage {
+    display: none;
+}
+.socialBubble.facebook {
+    background-image: url(https://caen-cms-stage.engin.umich.edu/facebookBgTop.png);
+}
+.socialBubble.facebook .socialMetaData, 
+.socialBubble.facebook .socialTitle, 
+.socialBubble.facebook.fbPreview .socialMetaData, 
+.socialBubble.facebook.fbPreview .socialTitle {
+    display: none;
+}
+.flickr .mainContent, 
+.youTube .mainContent {
+    display: none;
+}
+.socialBubble.facebook.fbPreview {
+    background-image: url(https://caen-cms-stage.engin.umich.edu/facebookPreviewBgTop.png);
+    height: 146px;
+}
+.socialBubble.facebook.fbPreview .fbPreviewTitle, 
+.socialBubble.facebook.fbPreview fbPreviewImage {
+    display: block;
+}
+.socialBubble.facebook.fbPreview .fbPreviewDescription {
+    display: inline;
+}
+.socialBubble.blog
+{
+    background-image: url(https://caen-cms-stage.engin.umich.edu/blogBgTop.png);
+}
+.socialBubble.news
+{
+    background-image: url(https://caen-cms-stage.engin.umich.edu/newsBgTop.png);
+}
+.socialBubble.twitter
+{
+    background-image: url(https://caen-cms-stage.engin.umich.edu/twitterBgTop.png);
+}
+.socialBubble.twitter .socialTitle
+{
+    display: none;
+}
+.socialBubble.youTube
+{
+    background-image: url(https://caen-cms-stage.engin.umich.edu/youTubeBgTop.png);
+    height: 108px;
+}
+.socialBubble.flickr
+{
+    background-image: url(https://caen-cms-stage.engin.umich.edu/flickrBgTop.png);
+    height: 108px;
+}
+.bubbleContentHolder.flickr .socialContent, .bubbleContentHolder.youTube .socialContent
+{
+    display: none;
+}
+.socialName, 
+.socialTitle, 
+.socialContent, 
+.socialMetaData, 
+.socialAction
+{
+    color: #0f2856;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+}
+.socialName, 
+.socialTitle, 
+.socialContent, 
+.socialMetaData {
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.socialName {
+	width: 215px;
+}
+.flickr .socialName,
+.youTube .socialName {
+	width: 165px;
+}
+.socialContent, 
+.socialMetaData, 
+.socialTitle
+{
+    padding-top: 2px;
+}
+.facebook .socialName, 
+.facebook .socialTitle, 
+.facebook .socialContent, 
+.facebook .socialMetaData, 
+.facebook.fbPreview .socialName, 
+.facebook.fbPreview .socialName, 
+.facebook.fbPreview .socialTitle, 
+.facebook.fbPreview .socialContent, 
+.facebook.fbPreview .socialMetaData
+{
+    color: #fff;
+}
+.fbPreviewTitle, 
+.fbPreviewDescription
+{
+    color: #fff;
+    text-decoration: none;
+}
+.fbPreviewTitle:hover, 
+.fbPreviewDescription:hover
+{
+    color: #fff;
+    text-decoration: underline;
+}
+.fbPreviewTitle
+{
+    font-weight: bold;
+}
+.fbPreviewDescription
+{
+    font-weight: normal;
+}
+.socialBubble.fbPreview .belowLine {
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.socialBubble.fbPreview .fbPreviewImage
+{
+    display: block;
+    float: left;
+    position: relative;
+	margin-right: 10px;
+}
+.socialName
+{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    float: left;
+    padding: 2px 8px 0 0;
+    background: url(https://caen-cms-stage.engin.umich.edu/postBlueArrow.png) no-repeat right 50%;
+}
+.facebook .socialName, 
+.facebook.fbPreview .socialName
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/postWhiteArrow.png) no-repeat right 50%;
+}
+.socialAction
+{
+    position: absolute;
+    bottom: 11px;
+    right: 14px;
+    padding-right: 8px;
+    background: url(https://caen-cms-stage.engin.umich.edu/postBlueArrow.png) no-repeat right 50%;
+    text-decoration: none;
+}
+.facebook .socialAction, .facebook.fbPreview .socialAction
+{
+    background: url(https://caen-cms-stage.engin.umich.edu/postWhiteArrow.png) no-repeat right 50%;
+    color: #fff;
+}
+.socialAction:hover
+{
+    text-decoration: underline;
+}
+.socialName:hover
+{
+    text-decoration: underline;
+}
+.socialTitle
+{
+    display: block;
+    text-decoration: none;
+}
+.socialTitle:hover
+{
+    text-decoration: underline;
+}
+.bubbleContentHolder .close
+{
+text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	position: absolute;
+	top: -6px;
+	right: -3px;
+	width: 20px;
+	height: 20px;
+	z-index: 50;
+	padding: 5px 0 0 10px;
+}
+.bubbleContentHolder .close:hover
+{
+    text-decoration: underline;
+}
+.facebook .imageLink, .news .imageLink, .blog .imageLink, .twitter .imageLink
+{
+    display: block;
+    float: left;
+    width: 48px;
+    height: 88px;
+}
+.flickr .imageLink, .youTube .imageLink 
+{
+    display: block;
+    float: left;
+    width: 96px;
+    height: 90px;
+}
+.iconImage
+{
+    position: relative;
+    z-index: 500;
+    left: 34px;
+    background: url(https://caen-cms-stage.engin.umich.edu/socialLinks.png) no-repeat 0 0;
+    width: 25px;
+    height: 24px;
+}
+.iconImage.flickr, .iconImage.youTube
+{
+    left: 80px;
+    top: 0px;
+}
+.iconImage.youTube
+{
+    top: 2px;
+}
+.socialBubble .image
+{
+    position: relative;
+    top: -14px;
+    z-index: 400;
+}
+.socialBubble .image.flickr
+{
+    top: -21px;
+}
+.socialBubble .image.youTube
+{
+    top: -11px;
+}
+.bubbleContentHolder
+{
+    float: left;
+    padding: 0 8px 0 18px;
+    position: relative;
+    width: 242px;
+}
+.bubbleContentHolder.flickr, .bubbleContentHolder.youTube
+{
+    width: 194px;
+}
+/*  */
+
+}
+

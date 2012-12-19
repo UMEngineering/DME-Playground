@@ -1,0 +1,604 @@
+
+/* - navigation.css - */
+@media screen {
+﻿/*  */
+/*  */
+*=Skip Nav Link */
+#skip a, #skip a:hover, #skip a:visited { 
+	position:absolute; 
+	left:-9999px; 
+	top:0px; 
+	width:1px; 
+	height:1px; 
+	overflow:hidden;
+	z-index: 9999;
+	text-align: center;
+} 
+
+#skip a:active, #skip a:focus { 
+	position:absolute; 
+	left:50%;
+	margin-left: -80px;
+	width:160px; 
+	height:auto; 
+	color: #fff;
+}
+
+/*=Global Nav Styles */
+nav li {
+	display: inline-block;
+	position: relative;
+}
+.lt-ie8 nav li {
+	float: left;
+}
+nav li li {
+	display: block;
+}
+.lt-ie8 nav li li {
+	float: none;
+}
+nav li a {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+}
+nav li div {
+	position: absolute;
+	display: none;
+	z-index: 10;
+	padding: 30px 40px;
+	float: left;
+	background: #2c4f90;
+}
+
+
+/*=Main Global Navigation */
+#mainBar {
+	width: 100%;
+	min-width: 900px;
+	background: url(https://caen-cms-stage.engin.umich.edu/navMainBar.png) 0 0 repeat-x;
+	height: 29px;
+}
+.lt-ie8 #mainBar {
+	position: absolute;
+	top: 56px;
+	z-index: 10;
+}
+#mainBar ul {
+	height: 29px;
+	width: 660px;
+	margin: 0 auto;
+}
+#mainBar li {
+	line-height: 29px;
+}
+#mainBar li li {
+}
+#mainBar li a {
+	font: 16px/27px FontSiteSansCondensed,arial,sans-serif;
+	color: #212a55;
+	margin-top: 2px;
+	padding: 0 9px;
+	z-index: 10;
+}
+.no-js #mainBar li:hover,
+.js #mainBar li.jsHover {
+	-webkit-box-shadow: 0px 29px 5px 0 #222;
+	-moz-box-shadow: 0px 29px 5px 0 #222;
+	-o-box-shadow: 0px 29px 5px 0 #222;
+	box-shadow: 0px 29px 5px 0 #222;
+	behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.no-js #mainBar li:hover li,
+.js #mainBar li.jsHover li {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+#mainBar li.current a,
+.no-js #mainBar li:hover a,
+.js #mainBar li.jsHover a,
+.js #mainBar li a:focus {
+	color: #fdb827;
+	background: #2c4f90;
+	box-shadow: 0 0 7px #444 inset;
+	z-index: 20;
+}
+.hasBreadcrumbs #mainBar li.current a:after,
+.no-js #mainBar li:hover a:after,
+.js #mainBar li.jsHover a:after {
+	content: " ";
+	display: block;
+	color: #fdb827;
+	background: #2c4f90;
+	width: 94%;
+	height: 10px;
+	position: absolute;
+	bottom: -5px;
+	left: 3px;
+}
+
+/* Reset main bar link styles for inner links */
+.no-js #mainBar li:hover ul a,
+.js #mainBar li.jsHover ul a,
+.js #mainBar li ul a:focus {
+	margin: 0;
+	font: 14px/18px arial,sans-serif;
+	color: #fff;
+	box-shadow: none;
+}
+.no-js #mainBar li:hover ul li, 
+.no-js #mainBar li:hover ul a,
+.js #mainBar li.jsHover ul li, 
+.js #mainBar li.jsHover ul a  {
+	height: auto;
+	line-height: 21px;
+}
+.no-js #mainBar li:hover ul a:after,
+.js #mainBar li.jsHover ul a:after {
+	content: "";
+	display: none;
+}
+#mainBar li:hover ul a:hover,
+#mainBar li:hover ul a:focus {
+	color: #fdb827;	
+}
+
+/* Reset inner list styles */
+#mainBar ul ul {
+	height: auto;
+}
+.no-js #mainBar li:hover div,
+.js #mainBar li.jsHover div {
+	display: block;
+	margin-top: -1px;
+	box-shadow: 0 0 7px #444 inset;
+}
+.hasBreadcrumbs #mainBar li:hover div,
+.js .hasBreadcrumbs #mainBar li.jsHover div {
+	margin-top: 0px;
+}
+.lt-ie8 #mainBar li:hover div,
+.lt-ie8 #mainBar li.jsHover div {
+	margin-top: 29px;	
+	display: inline-block;
+}
+.lt-ie8 .hasBreadcrumbs #mainBar li:hover div,
+.lt-ie8 .hasBreadcrumbs #mainBar li.jsHover div {
+	margin-top: 55px;	
+	display: inline-block;
+}
+
+/* Adjust height of link to stretch over breadcrumbs if they exist */
+.no-js .hasBreadcrumbs #mainBar li:hover a,
+.js .hasBreadcrumbs #mainBar li.jsHover a {
+	height: 53px;	
+}
+.no-js .hasBreadcrumbs #mainBar li:hover ul li, 
+.no-js .hasBreadcrumbs #mainBar li:hover ul a,
+.js .hasBreadcrumbs #mainBar li.jsHover ul li, 
+.js .hasBreadcrumbs #mainBar li.jsHover ul a  {
+	height: auto;
+	line-height: 21px;
+}
+#mainBar li div ul {
+	padding-right: 20px;
+	float: left;
+	width: auto;
+}
+.lt-ie8 #mainBar li div ul {
+	margin-left: 0;
+}
+ #mainBar li div .last {
+	padding-right: 0;
+}
+#mainBar .about div { width: 595px; margin-left: -61px; }
+#mainBar .research div { width: 292px; margin-left: -116px; }
+#mainBar .academics div { width: 256px; margin-left: -125px; }
+#mainBar .admissions div { width: 277px; margin-left: -120px; }
+#mainBar .departments div { width: 807px; margin-left: -328px; }
+#mainBar .investing div { width: 129px; margin-left: -48px; }
+#mainBar .infoForYou div { width: 365px; margin-left: -150px; }
+
+.lt-ie8 #mainBar .about div { width: 595px; margin-left: -122px; }
+.lt-ie8 #mainBar .research div { width: 292px; margin-left: -190px; }
+.lt-ie8 #mainBar .academics div { width: 256px; margin-left: -210px; }
+.lt-ie8 #mainBar .admissions div { width: 277px; margin-left: -200px; }
+.lt-ie8 #mainBar .departments div { width: 807px; margin-left: -434px; }
+.lt-ie8 #mainBar .investing div { width: 129px; margin-left: -142px; }
+.lt-ie8 #mainBar .infoForYou div { width: 365px; margin-left: -250px; }
+
+/*=Breadcrumb Navigation */
+#breadcrumbs {
+	width: 100%;
+	min-width: 900px;
+	background: url(https://caen-cms-stage.engin.umich.edu/navBreadcrumbsBar.png) 0 0 repeat-x;
+	height: 24px;
+}
+.lt-ie8 #breadcrumbs {
+	position: absolute;
+	top: 85px;
+}
+#breadcrumbs ul {
+	height: 26px;
+	padding: 0 0 0 30px;
+}
+#breadcrumbs li {
+	line-height: 24px;
+	color: #fff;
+}
+#breadcrumbs li li {
+	
+}
+#breadcrumbs li a {
+	font: 12px FontSiteSansRoman,arial,sans-serif;
+	color: #fff;
+	line-height: 24px;
+	padding: 0 3px;
+}
+#breadcrumbs li.last a {
+	font-weight: bold;
+}
+#breadcrumbs li a:hover,
+#breadcrumbs li a:focus {
+	color: #fdb827;
+}
+#breadcrumbs li.last a:hover,
+#breadcrumbs li.last a:focus {
+	color: #fff;
+}
+
+/* Utility Navigation */
+#utility {
+	background: url(https://caen-cms-stage.engin.umich.edu/utilityNavBg.png) 0 0 no-repeat;
+	height: 95px;
+	width: 230px;
+	position: absolute;	
+	top: -1px;
+	right: 16px;
+	z-index: 10;
+}
+.lt-ie8 #utility {
+	z-index: 20;
+	top: 0px;
+}
+#utility ul ul {
+	height: auto;
+}
+#utility .contact {
+	float: left;
+	margin: 5px 0 0 15px;
+}
+#utility .contact a {
+	font: 10px arial,sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+}
+#utility .contact a:hover,
+#utility .contact a:focus {
+	color: #fbd827;	
+}
+#utility .role {
+	float: right;
+	margin: 7px 15px 0 0;
+	width: 126px;
+}
+#utility .role a {
+	display: block;
+	text-align: right;
+	font: 10px/12px arial,sans-serif;
+	color: #fff;
+	padding-right: 8px;
+	background: url(https://caen-cms-stage.engin.umich.edu/roleArrow.png) center right no-repeat;
+}
+#utility .role li a {
+	padding-right: 0;
+	background: none;
+	font: 14px/18px arial,sans-serif;
+	text-align: left;
+	box-shadow: none;
+}
+#utility .search {
+	position: absolute;
+	height: 38px;
+	padding: 8px 8px 0;
+	top: 36px;
+	left: 7px;
+}
+.lt-ie8 #utility .search {
+	display: inline;	
+}
+#utility li span,
+#utility li label {
+	display: block;
+	font: 10px arial,sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+}
+#utility li.role span 
+{
+    text-align: right;
+}
+#utility li input {
+	margin: 2px 0 0 -2px;
+	width: 205px;
+	border: 0;
+	height: 18px;
+	background: #fff;
+}
+#utility .search a {
+	background: #fff url(https://caen-cms-stage.engin.umich.edu/searchIcon.png) 1px -17px no-repeat;
+	display: block;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	right: 9px;
+	margin-top: -19px;
+}
+.lt-ie8 #utility .search a 
+{
+    margin-top: 4px;
+}
+#utility .search a:hover 
+{
+    background-position: 1px 1px;
+}
+#utility li:hover ul a
+{
+	height: auto;	
+}
+/*.no-js #utility li:hover div,
+.js #utility li.jsHover div,*/
+.roleChangeHover
+{
+   	display: block;
+	margin: 0;
+	width: 140px;
+	box-shadow: 0 0 7px #222;
+	padding: 20px;
+	padding-right: 25px;
+	behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+	position: absolute;
+	right: 0;
+}
+#utility .role:hover {
+	behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+#utility .role:hover li
+{
+	box-shadow: none;
+}
+#utility .role:hover a
+{
+	color: #fdb827;
+}
+#utility .role:hover ul a
+ {
+	margin: 0;
+	font: 14px/18px arial,sans-serif;
+	color: #fff;
+	box-shadow: none;
+}
+#utility .role:hover ul a:hover,
+#utility .role:hover ul a:focus
+{
+	color: #fdb827;	
+}
+.lt-ie8 #utility .role,
+.lt-ie8 #utility nav li div {
+	z-index: 20;
+}
+
+/* Sidebar Navigation */
+#col1 {
+	padding-top: 35px;
+	margin: 0 0 45px;
+	/*position: absolute;
+	left: 0;*/
+	float: left;
+	z-index: 5;
+	width: 260px;
+}
+.sideNav {
+	position: relative;
+}
+.sideNav ul {
+	width: 225px;
+	margin: 0;
+} 
+.sideNav ul ul ul {
+	margin: 0 0 0 10px;
+}
+/* Top Nav item */
+.sideNav ul li a {
+	padding: 9px 10px 9px 20px;
+	margin-bottom: 1px;
+	display: block;
+	font: 18px/24px FontSiteSansBold,arial,sans-serif;
+	color: #273d67;
+	/* Gradient */
+	background: #ffbd32 url(https://caen-cms-stage.engin.umich.edu/sideNavFirstBg.png) left bottom repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbd32), to(#c79427));  /* Safari 4-5, Chrome 1-9 */	
+	background-image: -webkit-linear-gradient(top, #ffbd32, #c79427);  /* Safari 5.1, Chrome 10+ */	
+	background-image: -moz-linear-gradient(top, #ffbd32, #c79427);  /* Firefox 3.6+ */
+	background-image: -ms-linear-gradient(top, #ffbd32, #c79427);  /* IE 10 */
+	background-image: -o-linear-gradient(top, #ffbd32, #c79427);  /* Opera 11.10+ */
+	background-image: linear-gradient(top, #ffbd32, #c79427);  /* Default */
+	-webkit-border-radius: 0 4px 0 0;
+	-moz-border-radius: 0 4px 0 0;
+	-o-border-radius: 0 4px 0 0;
+	border-radius: 0 4px 0 0;
+	behavior: url(https://caen-cms-stage.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+.lt-ie8 .sideNav .first > a {
+	width: 195px;
+}
+.sideNav .first > a:hover,
+.sideNav .first > a:focus {
+	color: #212a55;
+}
+
+/* First level */
+.sideNav ul li li a {
+	font: 14px/16px FontSiteSansRoman,arial,sans-serif;
+	color: #fff;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+	border-radius: 0;
+	/* Gradient */
+	background: #273d67 url(https://caen-cms-stage.engin.umich.edu/sideNavBg.png) left bottom repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#273d67), to(#243555));  /* Safari 4-5, Chrome 1-9 */	
+	background-image: -webkit-linear-gradient(top, #273d67, #243555);  /* Safari 5.1, Chrome 10+ */	
+	background-image: -moz-linear-gradient(top, #273d67, #243555);  /* Firefox 3.6+ */
+	background-image: -ms-linear-gradient(top, #273d67, #243555);  /* IE 10 */
+	background-image: -o-linear-gradient(top, #273d67, #243555);  /* Opera 11.10+ */
+	background-image: linear-gradient(top, #273d67, #243555);  /* Default */
+}
+
+/* Highlight current page */
+.sideNav ul li .current > a,
+.sideNav ul li li a:hover,
+.sideNav ul li li a:focus {
+	font: 14px/16px FontSiteSansRoman,arial,sans-serif;
+	color: #fff;
+	display: block;
+	padding: 9px 10px 9px 20px;
+	/* Gradient */
+	background: #375d9f url(https://caen-cms-stage.engin.umich.edu/sideNavCurrentBg.png) left bottom repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#375d9f), to(#304e82));  /* Safari 4-5, Chrome 1-9 */	
+	background-image: -webkit-linear-gradient(top, #375d9f, #304e82);  /* Safari 5.1, Chrome 10+ */	
+	background-image: -moz-linear-gradient(top, #375d9f, #304e82);  /* Firefox 3.6+ */
+	background-image: -ms-linear-gradient(top, #375d9f, #304e82);  /* IE 10 */
+	background-image: -o-linear-gradient(top, #375d9f, #304e82);  /* Opera 11.10+ */
+	background-image: linear-gradient(top, #375d9f, #304e82);  /* Default */
+}
+.sideNav ul li .current > a {
+	font-weight: bold;
+}
+.sideNav ul li .current > a:hover {
+	font-weight: bold;
+}
+/* Hide any third level submenus that shouldn't be shown */
+.sideNav ul ul ul, 
+.sideNav ul li .current li li,
+.sideNav ul li .hasCurrent li,
+.sideNav ul li .hasCurrent ul ul {
+	display: none;
+}	
+
+/* Show sub nav that is under current, or a parent of current, page */
+.sideNav ul li .current,
+.sideNav ul .current ul,
+.sideNav ul li .current ul,
+.sideNav ul li .current li,
+.sideNav ul li .hasCurrent,
+.sideNav ul li .hasCurrent ul,
+.sideNav ul li .hasCurrent .current,
+.sideNav ul li .hasCurrent .hasCurrent,
+.sideNav ul li .hasCurrent .current ul,
+.sideNav ul li .hasCurrent .hasCurrent ul,
+.sideNav ul li .hasCurrent .hasCurrent li {
+	display: block;	
+}
+.sideNav .first > a span {
+	color: #aa7b19;
+	background: url(https://caen-cms-stage.engin.umich.edu/sideNavFirstExpandBtn.png) 4px 14px no-repeat;
+}
+.sideNav .first > a span.open {
+	line-height: .4;
+	background: url(https://caen-cms-stage.engin.umich.edu/sideNavFirstContractBtn.png) 4px 14px no-repeat;
+}
+.sideNav a span {
+	background: url(https://caen-cms-stage.engin.umich.edu/sideNavExpandBtn.png) 4px 11px no-repeat;
+	font: normal 16px arial,sans-serif;
+	line-height: .6;
+	color: #94a4c2;
+	width: 25px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	cursor: pointer;
+}
+.sideNav a span.open {
+	line-height: .4;
+	background: url(https://caen-cms-stage.engin.umich.edu/sideNavContractBtn.png) 4px 11px no-repeat;
+}
+/* Footer */
+footer {
+	width: 100%;
+	min-width: 990px;
+	background: #0f2856;
+	height: 20px;
+	position: relative;
+	z-index: 15;
+	position: absolute;
+	bottom: 0;
+}
+footer p, footer a {
+	font: 11px/11px arial,sans-serif;
+}
+footer .copyright {
+	color: #a2c0e4;
+	position: absolute;
+	left: 25px;
+	margin: 0;
+	padding: 0;	
+	line-height: 20px;
+}
+footer nav {
+	position: absolute;
+	left: 50%;
+	margin-left: -165px;
+	width: 330px;	
+}
+footer nav li, 
+footer nav li a {
+	margin: 0;
+	padding: 0;
+}
+footer nav li {
+	padding-top: 2px;
+	line-height: 14px;
+}
+footer nav li a {
+	border-right: 1px solid #fff;
+	padding: 0 6px 0 3px;
+	color: #fff;
+}
+
+.lt-ie8 footer nav li a {
+    padding-left: 6px;
+}
+
+footer nav li a:hover,
+footer nav li a:focus {
+	color: #fff;
+	text-decoration: underline;
+}
+footer nav .last a {
+	border-right: none;
+}
+#umFooterLogo {
+	background: url(https://caen-cms-stage.engin.umich.edu/UMFooterLogo.png) 0 0 no-repeat;
+	width: 134px;
+	height: 16px;
+	margin-top: 2px;
+	position: absolute;
+	right: 25px;
+}
+
+/* disable pointer on current links */
+#mainBar .current > a, 
+.sideNav .current > a, 
+#breadcrumbs .last > a {
+	cursor: default;
+}
+/*  */ 
+}
+
