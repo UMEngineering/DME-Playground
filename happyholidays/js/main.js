@@ -160,7 +160,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 	function mapit (id, lat, lng, text, vid, vopen, name) {
 		var id=String(lat).replace(".","").replace("-","");
 		id += String(lng).replace(".","").replace("-","");
-		if (vid || vid != "") { var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: hidden;">';
+		if (vid && vid != "null") { var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; max-height:360px; overflow: hidden;">';
 			console.log("Video: ", vid);
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
@@ -171,7 +171,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 			contentString += '</div>';
 		}
 		else { 
-			var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: 360px; max-height:360px; overflow: scroll;">';
+			var contentString = '<div data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; max-height:360px; overflow: scroll;">';
 			console.log("No Video");
 			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
 			else contentString += '<div class="spacer"></div>';
