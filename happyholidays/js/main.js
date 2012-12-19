@@ -381,7 +381,7 @@ $(document).ready(function(){
 	$('div.mapready').trigger('loadmap');
 // Cache some groups of DOM elements for later.
 	$footerActivity = $("#smglobe img, #smglobe a, div.jp-audio");
-	$ieFooterActivity = $(".ie7 #smglobe img, .ie7 #smglobe a, .ie7 div.jp-audio, .ie8 #smglobe img, .ie8 #smglobe a, .ie8 div.jp-audio, .ie9 #smglobe img, .ie9 #smglobe a, .ie9 div.jp-audio, ");
+	$ieFooterActivity = $(".ie7 #smglobe img, .ie7 #smglobe a, .ie7 div.jp-audio, .ie8 #smglobe img, .ie8 #smglobe a, .ie8 div.jp-audio, .ie9 #smglobe img, .ie9 #smglobe a, .ie9 div.jp-audio");
 // Close big globe
 	$("#start, #exit, #googlemap").bind("click", function(clk) {
 		once++;	
