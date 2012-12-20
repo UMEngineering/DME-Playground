@@ -31,5 +31,7 @@ $(document).ready(function() {
 			}
 		});
 		countCol = 0;
+		$(".data tbody td:not(:first-child)").css("text-align","right");
+
 	}
 });

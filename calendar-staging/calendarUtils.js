@@ -373,7 +373,7 @@ var calendarUtils = {
         //populate current month header
         var month = calendarUtils.convertMonthToString(m).longName;
 		
-        $("#calendarNav span#currentMonth").text("qwqqw").attr("rel", y + "/" + dispMon + "/1");
+        $("#calendarNav span#currentMonth").text(month).attr("rel", y + "/" + dispMon + "/1");
 
         var previousMonth = new Date();
         previousMonth.setFullYear(y, m - 1, 1);

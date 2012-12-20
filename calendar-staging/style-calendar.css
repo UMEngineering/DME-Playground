@@ -1,4 +1,3 @@
-/* CSS Document */
-.calendarPage #calendarNav span#currentMonth {
-	width: 160px;
+calendarPage #calendarNav span#currentMonth {
+	width: 150px;
 }

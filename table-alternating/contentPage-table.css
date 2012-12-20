@@ -4,5 +4,9 @@
 }
 
 .altByCol th:nth-child(even) {
-	background: #0B5595;
+	background: #0D437A;
+}
+
+.data tbody td:not(:first-child) {
+	text-align: right;
 }
