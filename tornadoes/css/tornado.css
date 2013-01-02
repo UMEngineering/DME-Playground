@@ -281,6 +281,10 @@ section {
 	background: url(../img/two_2.jpg) no-repeat 50% 0 fixed;
 	display: none;
 	
+	-webkit-transition: background 400ms ease-out;
+	-moz-transition: background 400ms ease-out;
+	-o-transition: background 400ms ease-out;
+	transition: background 400ms ease-out;
 }
 
 #two #slider {
@@ -489,6 +493,7 @@ div#tseventeen {
 	background-color: #1B260B;	
 	border-top: 60px solid #827d00;
 	height: 1040px;
+	
 }
 
 #four #green {
@@ -499,6 +504,10 @@ div#tseventeen {
 	background: url(../img/four.jpg) no-repeat 50% 0 fixed;
 	display: none;
 	
+	-webkit-transition: background 400ms ease-out;
+	-moz-transition: background 400ms ease-out;
+	-o-transition: background 400ms ease-out;
+	transition: background 400ms ease-out;
 }
 
 #four #anearlystart {
