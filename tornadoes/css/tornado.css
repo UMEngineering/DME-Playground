@@ -24,6 +24,7 @@ body {
 
 .hide {
 	opacity: 0;	
+	filter: Alpha(Opacity=0) 9;
 }
 
 .byline {
