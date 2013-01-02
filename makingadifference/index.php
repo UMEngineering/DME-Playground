@@ -108,19 +108,36 @@
 					  setInterval(hide, 3000);
 				});
 				
-				$("span.submit").click(function(e){
-					$(".lightbox").css({"opacity":"1","pointer-events":"all"});
-				});
-				$("span#closebox, div.lightbox").click(function(e){
-					$(".lightbox").css({"opacity":"0","pointer-events":"none"});
-				});
-				$(window).keydown(function(e){
-					console.log("TEST");
-					console.log(e.keyCode);
-					if (e.keyCode == "27") {
+				// If does not support opacity
+				if ($("html.no-opacity").html()) {
+					$("span.submit").click(function(e){
+						$(".lightbox").css({"display":"block"});
+					});
+					$("span#closebox, div.lightbox").click(function(e){
+						$(".lightbox").css({"display":"none"});
+					});
+					$(window).keydown(function(e){
+						console.log("TEST");
+						console.log(e.keyCode);
+						if (e.keyCode == "27") {
+							$(".lightbox").css({"display":"none"});
+						}
+					});
+				} else {
+					$("span.submit").click(function(e){
+						$(".lightbox").css({"opacity":"1","pointer-events":"all"});
+					});
+					$("span#closebox, div.lightbox").click(function(e){
 						$(".lightbox").css({"opacity":"0","pointer-events":"none"});
-					}
-				});
+					});
+					$(window).keydown(function(e){
+						console.log("TEST");
+						console.log(e.keyCode);
+						if (e.keyCode == "27") {
+							$(".lightbox").css({"opacity":"0","pointer-events":"none"});
+						}
+					});
+				}
 				
 				// Load more when scroll down
 				$(window).scroll(function(){
