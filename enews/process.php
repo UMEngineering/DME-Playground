@@ -1,5 +1,5 @@
 <?php
-require_once("file:///Macintosh HD/Users/marketing/Documents/db.php");
+require_once("../../db.php");
 
 if ($_POST["create"]) {
 	// Create a new eNews monthly letter
@@ -48,6 +48,9 @@ if ($_POST["create"]) {
 	$month = $_POST["month"];
 	$year = $_POST["year"];
 	$type = $_POST["type"];
+	
+	// Process upload image
+	
 	$vars = array(checkString($_POST['title-'.$type]), checkString($_POST['image-'.$type]), checkString($_POST['desc-'.$type]), checkString($_POST['href-'.$type]), checkString($_POST['order-'.$type]));
 	
 	// Edit the content in the database

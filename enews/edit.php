@@ -1,5 +1,5 @@
 <?php
-require_once("file:///Macintosh HD/Users/marketing/Documents/db.php");
+require_once("../../db.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -43,6 +43,7 @@ require_once("file:///Macintosh HD/Users/marketing/Documents/db.php");
                     <p>There will be only one top entry</p>
                     <p><label>Title: </label><input type="text" name="title-big" id="title-big" size="80" value="<?=$row[0]?>"/></p>
                     <p><label>Image: </label><input type="text" name="image-big" id="image-big" size="80" value="<?=$row[1]?>"/></p>
+                    <p><label>Upload image: </label><input type="file" name="file" /></p>
                     <p><label>Description: </label><textarea rows="10" cols="50" name="desc-big" id="desc-big"><?=$row[3]?></textarea></p>
                     <p><label>Link: </label><input type="text" name="href-big" id="href-big" size="80" value="<?=$row[4]?>"/></p>
                     <input type="hidden" name="order-big" value="0" />

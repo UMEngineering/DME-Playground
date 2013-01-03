@@ -1,5 +1,5 @@
 <?php
-require_once("file:///Macintosh HD/Users/marketing/Documents/db.php");
+require_once("../../db.php");
 $query = "SELECT DISTINCT year, month FROM enews;";
 $result = mysql_query($query);
 if (!$result){

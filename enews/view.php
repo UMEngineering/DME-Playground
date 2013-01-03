@@ -1,5 +1,5 @@
 <?php
-require_once("file:///Macintosh HD/Users/marketing/Documents/db.php");
+require_once("../../db.php");
 if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
 	$year = $_GET["year"];
 	$month = $_GET["month"];
