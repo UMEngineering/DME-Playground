@@ -10,11 +10,13 @@ if (!$result){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/main.css">
     <title>eNews CMS</title>
 </head>
 
 <body>
 	<div id="content">
+        <h1 class="title">Engineering eNews Editor</h1>
     	<div>
         	<p style="color: red;">
             <?php
@@ -25,14 +27,17 @@ if (!$result){
             </p>
         </div>
     	<div>
-        	<div class="nav"><a href="create.php" target=_blank>Create a new eNews</a></div>
+        	<div class="new"><a href="create.php" target=_blank>Create new eNews</a></div>
+
+            <ul id="results">
         	<?php
 			while($row = mysql_fetch_row($result)){
 				?>
-                <p>eNews <?= $row[0] ?>/<?= $row[1] ?>: <a href="edit.php?year=<?= $row[0] ?>&amp;month=<?= $row[1] ?>" target=_blank>Edit</a> | <a href="view.php?year=<?= $row[0] ?>&amp;month=<?= $row[1] ?>" target=_blank>View in HTML</a></p>
+                <li>eNews <?= $row[0] ?>/<?= $row[1] ?>: <a href="edit.php?year=<?= $row[0] ?>&amp;month=<?= $row[1] ?>" target=_blank>Edit</a> | <a href="view.php?year=<?= $row[0] ?>&amp;month=<?= $row[1] ?>" target=_blank>View in HTML</a></li>
                 <?php
 			}
 			?>
+        </ul>
         </div>
     </div>
 	

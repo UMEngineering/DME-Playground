@@ -1,28 +1,33 @@
 <?php
 require_once("../../db.php");
+
+$year = (int)$_GET['year'];
+$month = (int)$_GET['month'];
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/main.css">
     <title>Edit eNews CMS</title>
 </head>
 
 <body>
 	<div id="content">
+        <h1 class="title">Engineering eNews Editor</h1>
     	<?php
 		if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
 			// Fetch the result from database
 			$year = $_GET["year"];
 			$month = $_GET["month"];
-			$query = "SELECT title, img, type, description, href, id, orders FROM enews WHERE year={$_GET['year']} AND month={$_GET['month']};";
+			$query = "SELECT title, img, type, description, href, id, orders FROM enews WHERE year={$year} AND month={$month};";
 			$result = mysql_query($query);
 			if (!$result){
 				die("Cannot load questions");
 			}
 		?>
-            <h1>eNews <?= $year ?>/<?= $month ?>
-            </h1>
+            <h2>Editing: <?= $year ?> / <?= $month ?> (<a href="view.php?year=<?= $year?>&month=<?= $month?>">Preview</a>)</h2>
             <div class="nav"><a href="index.php">Home</a> | <a href="create.php">Create a new eNews</a></div>
             <p style="color: red;">
             <?php
@@ -39,8 +44,7 @@ require_once("../../db.php");
             
             <form method="POST" action="process.php">
                 <div class="big-entry">
-                    <h2>The top entry (display at the top of enews with big image)</h2>
-                    <p>There will be only one top entry</p>
+                    <h3>Lead story (with  image)</h3>
                     <p><label>Title: </label><input type="text" name="title-big" id="title-big" size="80" value="<?=$row[0]?>"/></p>
                     <p><label>Image: </label><input type="text" name="image-big" id="image-big" size="80" value="<?=$row[1]?>"/></p>
                     <p><label>Upload image: </label><input type="file" name="file" /></p>
@@ -58,12 +62,10 @@ require_once("../../db.php");
                 } else {
             ?>
             <form method="POST" action="process.php">
+                <div class="small-entries">
             <?php
 				if ($counter == 1){
 			?>
-                <div class="small-entries">
-                    <h2>The small entries</h2>
-                    <p>There can be multiple small entries</p>
             <?php
 				}
 			?>
@@ -87,8 +89,8 @@ require_once("../../db.php");
                 }
             }
             ?>
-            
-            <p><a href="javascript:void(0);" onclick="addOne(2);">Add a new small eNew entry</a></p>
+
+            <p><a href="javascript:void(0);" onclick="addOne(2);">New small entry</a></p>
         
         <?php
 		}
