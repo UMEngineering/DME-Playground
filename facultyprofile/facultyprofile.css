@@ -1,8 +1,8 @@
 /* CSS Document */
 .facultyProfileTop {
-	width: 200px;
+	width: 224px;
 	float: left;
-	margin: 0 15px 10px 0px;
+	margin: 5px 15px 10px 5px;
 	box-shadow: 0 0 5px #000;
 }
 
@@ -54,5 +54,11 @@ div.tab-bottom-border {
 }
 
 table td {
-	background: white;
+	background: none;
+	border: 0;
+}
+
+.ui-widget-content {
+	border: 0;
+	background: none;
 }
