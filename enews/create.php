@@ -5,11 +5,13 @@ require_once("../../db.php");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/main.css">
     <title>Create eNews CMS</title>
 </head>
 
 <body>
 	<div id="content">
+        <h1 class="title">Engineering eNews Editor</h1>
     	<div>
         	<p style="color: red;">
             <?php
@@ -22,17 +24,16 @@ require_once("../../db.php");
             </p>
         </div>
         <div class="nav"><a href="index.php">Home</a> | <a href="create.php">Create a new eNews</a></div>
-        <form method="POST" action="process.php">
+        <form method="POST" action="process.php" enctype="multipart/form-data">
         	<p><label>eNews year and month (e.g. year:2012 month:12):</label>
-                <input type="text" size="5" placeholder="year" maxlength="4" name="year" id="year" onchange="changeURL(1);" />
-                <input type="text" size="5" placeholder="month" maxlength="2" name="month" id="month" onchange="changeURL(2);"/>
+                <input type="text" size="5" placeholder="year" maxlength="4" name="year" id="year" />
+                <input type="text" size="5" placeholder="month" maxlength="2" name="month" id="month" />
             </p><br />
             
             <div class="big-entry">
-            	<h2>The top entry (display at the top of enews with big image)</h2>
+                <h3>Lead story (with  image)</h3>
                 <p>There will be only one top entry</p>
                 <p><label>Title: </label><input type="text" name="title-big" id="title-big" size="80"/></p>
-                <p><label>Image: </label><input type="text" name="image-big" id="image-big" class="imageinput" size="80" value="http://engcomm.engin.umich.edu/mon_enews_13/img/1.jpg" /></p>
                 <p><label>Description: </label><textarea rows="10" cols="50" name="desc-big" id="desc-big"></textarea></p>
                 <p><label>Link: </label><input type="text" name="href-big" id="href-big" size="80" /></p>
             </div>
@@ -43,7 +44,6 @@ require_once("../../db.php");
                 <div class="small-entry" id="e1">
                 	<h3>eNews #1</h3>
                     <p><label>Title: </label><input type="text" name="title-small1" id="title-small1" size="80"/></p>
-                    <p><label>Image: </label><input type="text" name="image-small1" id="image-small1" class="imageinput" size="80" value="http://engcomm.engin.umich.edu/mon_enews_13/img/2.jpg" /></p>
                     <p><label>Description: </label><textarea rows="10" cols="50" name="desc-small1" id="desc-small1"></textarea></p>
                     <p><label>Link: </label><input type="text" name="href-small1" id="href-small1" size="80" /></p>
                 </div>

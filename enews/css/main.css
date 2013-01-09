@@ -137,6 +137,15 @@ ul#results li:nth-child(odd) {
 }
 
 form {
+}
+
+.previewimage {
+	width: 150px;
+	margin: 10px 10px 10px 90px;
+	box-shadow: 0 0 5px #000;
+}
+
+.small-entry, .big-entry {
     display: block;
     position: relative;
     background: #eee;

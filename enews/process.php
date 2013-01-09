@@ -10,8 +10,8 @@ if ($_POST["create"]) {
 	
 	$counter = 1;
 	while (true){
-		if ($_POST["title-small".$counter] && $_POST["image-small".$counter] && $_POST["desc-small".$counter] && $_POST["href-small".$counter]){
-			array_push($small_entry, checkString($_POST["title-small".$counter]), checkString($_POST["image-small".$counter]), checkString($_POST["desc-small".$counter]), checkString($_POST["href-small".$counter]));
+		if ($_POST["title-small".$counter] && $_POST["desc-small".$counter] && $_POST["href-small".$counter]){
+			array_push($small_entry, checkString($_POST["title-small".$counter]), checkString($_POST["desc-small".$counter]), checkString($_POST["href-small".$counter]));
 		} else {
 			break;
 		}
@@ -28,10 +28,10 @@ if ($_POST["create"]) {
 		Header("Location:create.php?err=1");
 	} else {
 		// Add the content into the database
-		$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$big_entry[0]}', '{$big_entry[1]}', '0', '{$big_entry[2]}', '{$big_entry[3]}', '{$year}', '{$month}', '0')";
+		$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$big_entry[0]}', '', '0', '{$big_entry[2]}', '{$big_entry[3]}', '{$year}', '{$month}', '0')";
 		$count = 1;
 		for ($i=0; $i<count($small_entry); $i++){
-			$query = $query.", ('{$small_entry[$i]}', '{$small_entry[$i+1]}', '1', '{$small_entry[$i+2]}', '{$small_entry[$i+3]}', '{$year}', '{$month}', '{$count}')";
+			$query = $query.", ('{$small_entry[$i]}', '', '1', '{$small_entry[$i+2]}', '{$small_entry[$i+3]}', '{$year}', '{$month}', '{$count}')";
 			$i = $i+3;
 			$count++;
 		}
@@ -48,13 +48,24 @@ if ($_POST["create"]) {
 	$month = $_POST["month"];
 	$year = $_POST["year"];
 	$type = $_POST["type"];
+	$this_id = $_POST["id"];
 	
-	// Process upload image
+	// Delete the current image
+	$check = mysql_query("SELECT img FROM enews WHERE id={$this_id};");
+	if (!$check){
+		print("Cannot load result");
+	}
+	
+	if ($row = mysql_fetch_row($check)) {
+		unlink("{$row[0]}");
+	}
+	
+	$fuploaded = uploadFile($year, $month);
 	
 	$vars = array(checkString($_POST['title-'.$type]), checkString($_POST['image-'.$type]), checkString($_POST['desc-'.$type]), checkString($_POST['href-'.$type]), checkString($_POST['order-'.$type]));
 	
 	// Edit the content in the database
-	$query = "UPDATE enews SET title='{$vars[0]}', img='{$vars[1]}', description='{$vars[2]}', href='{$vars[3]}', orders='{$vars[4]}' WHERE id={$_POST['id']};";
+	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}', orders='{$vars[4]}' WHERE id={$_POST['id']};";
 	
 	$result = mysql_query($query);
 	if (!$result){
@@ -68,8 +79,11 @@ if ($_POST["create"]) {
 	$order = $_POST["order"];
 	$vars = array(checkString($_POST['title-small'.$order]), checkString($_POST['image-small'.$order]), checkString($_POST['desc-small'.$order]), checkString($_POST['href-small'.$order]));
 	
+	// Upload the photo
+	$fuploaded = uploadFile($year, $month);
+	
 	// Edit the content in the database
-	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$vars[0]}', '{$vars[1]}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}');";
+	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$vars[0]}', '{$fuploaded}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}');";
 	
 	$result = mysql_query($query);
 	if (!$result){
@@ -80,6 +94,16 @@ if ($_POST["create"]) {
 	$month = $_POST["month"];
 	$year = $_POST["year"];
 	$id = $_POST["id"];
+	
+	// Delete the current image
+	$check = mysql_query("SELECT img FROM enews WHERE id={$id};");
+	if (!$check){
+		die("Cannot load result");
+	}
+	
+	if ($row = mysql_fetch_row($check)) {
+		unlink("{$row[0]}");
+	}
 	
 	// Edit the content in the database
 	$query = "DELETE FROM enews WHERE id={$id};";
@@ -97,5 +121,34 @@ function checkString($str){
 	$str = htmlentities($str);
 	$str = strip_tags($str);
 	return str_replace("'", "\'", $str);
+}
+
+function uploadFile($year, $month) {
+	// Process upload image
+	if (!empty($_FILES["file"]["name"])){
+		$path = "img/";
+		
+		// Check if the image format is gif, jpeg or png
+		$img_type = array("image/gif", "image/jpeg", "image/pjpeg", "image/png");
+		if (!in_array($_FILES["file"]["type"], $img_type)) {
+			echo "<script>alert('The image format is not allowed'); history.go(-1);</script>";
+			exit;
+		}
+		
+		$file_type = $_FILES["file"]["type"];
+		if ($file_type == "image/gif") $ftype = ".gif";
+		else if ($file_type == "image/png") $ftype = ".png";
+		else if ($file_type == "image/jpeg" || $file_type == "image/pjpeg") $ftype = ".jpg";
+		
+		$date_time = date(YmdHis);
+		$fuploaded = $path."enews_".$year.$month."_".$date_time.$ftype;
+		$img = "enews_".$year.$month."_".$date_time.$file_type;
+		$success = 1;
+	}
+	
+	// If the file process is successful, then move the file to the folder
+	if ($success == 1) $file_upload = move_uploaded_file($_FILES["file"]["tmp_name"], $fuploaded);
+	
+	return $fuploaded;
 }
 ?>
