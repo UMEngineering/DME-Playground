@@ -1,0 +1,64 @@
+/* CSS Document */
+.facultyProfileTop {
+	width: 224px;
+	float: left;
+	margin: 5px 15px 10px 5px;
+	box-shadow: 0 0 5px #000;
+}
+
+#firstHeaderDiv {
+	margin: 20px;
+	overflow: hidden;
+}
+
+#firstHeaderDivP {
+	padding-top: 0;
+}
+
+#tabs ul {
+	padding: 0 0 0 5px;
+}
+
+h3.tab-header {
+	font-size: 10pt;
+	color: #212A55;
+	padding: 0;
+}
+
+h3.tab-header2 {
+	padding-top: 1em;
+}
+
+div.tab-paragraph {
+	overflow: hidden;
+}
+
+#tabs p {
+	padding-left: 0;
+}
+
+p.tab-subheader {
+	font-weight: bold;
+	padding-left: 0;
+}
+
+img.tab-bio-image {
+	width: 50%;
+	float: right;
+	margin: 10px 5px 10px 10px;
+	box-shadow: 0 0 5px #000;
+}
+
+div.tab-bottom-border {
+	border-bottom: 1px solid #E3EBF4;
+}
+
+table td {
+	background: none;
+	border: 0;
+}
+
+.ui-widget-content {
+	border: 0;
+	background: none;
+}

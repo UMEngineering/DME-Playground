@@ -1,0 +1,28 @@
+/* CSS Document */
+.list-div {
+	padding: 15px;
+	overflow: hidden;
+	border-bottom: 1px solid grey;
+}
+
+.bottom-div {
+	border: 0;
+}
+
+.list-div .facultyProfileTop {
+	width: 142px;
+	float: left;
+	margin: 5px 15px 10px 5px;
+	box-shadow: 0 0 5px #000;
+}
+
+p.bold-profile {
+	font-size: 12pt;
+	padding: 0;
+	font-weight: bold;
+}
+
+p.i-profile {
+	padding-top: 0;
+	font-style: italic;
+}
