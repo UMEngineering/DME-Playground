@@ -56,11 +56,14 @@ if ($_POST["create"]) {
 		print("Cannot load result");
 	}
 	
-	if ($row = mysql_fetch_row($check)) {
-		unlink("{$row[0]}");
-	}
-	
 	$fuploaded = uploadFile($year, $month);
+	if ($fuploaded == "" && $row = mysql_fetch_row($check)) {
+		$fuploaded = $row[0];
+	} else {
+		if ($row != "") {
+			unlink("{$row[0]}");
+		}
+	}
 	
 	$vars = array(checkString($_POST['title-'.$type]), checkString($_POST['image-'.$type]), checkString($_POST['desc-'.$type]), checkString($_POST['href-'.$type]), checkString($_POST['order-'.$type]));
 	
@@ -118,13 +121,14 @@ if ($_POST["create"]) {
 function checkString($str){
 	$str = mysql_real_escape_string($str);
 	$str = stripslashes($str);
-	$str = htmlentities($str);
+	str_replace("&", "&amp;", $str);
 	$str = strip_tags($str);
 	return str_replace("'", "\'", $str);
 }
 
 function uploadFile($year, $month) {
 	// Process upload image
+	$fuploaded == "";
 	if (!empty($_FILES["file"]["name"])){
 		$path = "img/";
 		

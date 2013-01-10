@@ -27,7 +27,7 @@ $month = (int)$_GET['month'];
 				die("Cannot load questions");
 			}
 		?>
-            <h2>Editing: <?= $year ?> / <?= $month ?> (<a href="view.php?year=<?= $year?>&month=<?= $month?>" target=_blank>Preview</a>)</h2>
+            <h2>Editing: <?= $year ?> / <?= $month ?> (<a href="view.php?year=<?= $year?>&month=<?= $month?>" target=_blank>Preview in HTML</a> | <a href="mobile.php?year=<?= $year?>&month=<?= $month?>" target=_blank>Preview in mobile HTML</a> | <a href="text.php?year=<?= $year?>&month=<?= $month?>" target=_blank>Preview in TEXT</a>)</h2>
             <div class="nav"><a href="index.php">Home</a> | <a href="create.php">Create a new eNews</a></div>
             <p style="color: red;">
             <?php

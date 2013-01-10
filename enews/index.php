@@ -34,7 +34,7 @@ if (!$result){
 			while($row = mysql_fetch_row($result)){
 				if (strlen($row[1]) == 1) $zero = "0";
 				?>
-                <li>eNews <?= $row[0] ?>/<?= $zero ?><?= $row[1] ?>: <a href="edit.php?year=<?= $row[0] ?>&amp;month=<?= $zero ?><?= $row[1] ?>" target=_blank>Edit</a> | <a href="view.php?year=<?= $row[0] ?>&amp;month=<?= $zero ?><?= $row[1] ?>" target=_blank>View in HTML</a></li>
+                <li>eNews <?= $row[0] ?>/<?= $zero ?><?= $row[1] ?>: <a href="edit.php?year=<?= $row[0] ?>&amp;month=<?= $zero ?><?= $row[1] ?>" target=_blank>Edit</a> | <a href="view.php?year=<?= $row[0] ?>&amp;month=<?= $zero ?><?= $row[1] ?>" target=_blank>View in HTML</a> | <a href="text.php?year=<?= $row[0] ?>&amp;month=<?= $zero ?><?= $row[1] ?>" target=_blank>View in TEXT</a> | <a href="mobile.php?year=<?= $row[0] ?>&amp;month=<?= $zero ?><?= $row[1] ?>" target=_blank>View in mobile HTML</a></li>
                 <?php
 			}
 			?>
