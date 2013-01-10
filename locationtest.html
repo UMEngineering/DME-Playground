@@ -137,7 +137,7 @@
 
   </head>
 
-  <body class="calendarList calendarPage template-list portaltype-uom-events-eventcalendar site-engin section-training icons-on hasBreadcrumbs editPage contentNormal" dir="ltr">
+  <body class="calendarMonth calendarPage template-view portaltype-uom-events-eventcalendar site-engin section-training icons-on hasBreadcrumbs editPage contentNormal" dir="ltr">
 <div id="wrapper" class="lightBg">
     <div id="visual-portal-wrapper">
 
@@ -429,7 +429,132 @@
 
 <div class="contentActions">
 
-</div></div>
+    
+
+        
+
+        
+
+        <ul id="contentActionMenus">
+
+    <li>
+
+        <dl class="actionMenu deactivated" id="plone-contentmenu-workflow">
+          <dt class="actionMenuHeader label-state-published">
+            <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/content_status_history" title="Change the state of this item">
+               
+                  <span>State:</span>
+                  <span class="state-published">Published</span>
+                  <span class="arrowDownAlternative">&#9660;</span>
+               
+            </a>
+          </dt>
+          <dd class="actionMenuContent">
+            <ul>
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/content_status_modify?workflow_action=hide" class="kssIgnore" id="workflow-transition-hide" title="Making an item private means that it will not be visible to anyone but the owner and the site administrator.">
+                        
+                        <span class="subMenuTitle">Make private</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li class="actionSeparator">
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/content_status_history" class="kssIgnore" id="advanced" title="">
+                        
+                        <span class="subMenuTitle">Advanced...</span>
+                    </a>
+                    
+                  </li>
+                
+            </ul>
+          </dd>
+        </dl>
+
+    </li>
+    <li>
+
+        <dl class="actionMenu deactivated" id="plone-contentmenu-actions">
+          <dt class="actionMenuHeader label-">
+            <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/folder_contents" title="Actions for the current content item">
+               
+                  <span>Actions</span>
+                  
+                  <span class="arrowDownAlternative">&#9660;</span>
+               
+            </a>
+          </dt>
+          <dd class="actionMenuContent">
+            <ul>
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/object_cut" class="actionicon-object_buttons-cut" id="cut" title="">
+                        
+                        <span class="subMenuTitle">Cut</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/object_copy" class="actionicon-object_buttons-copy" id="copy" title="">
+                        
+                        <span class="subMenuTitle">Copy</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/delete_confirmation" class="actionicon-object_buttons-delete" id="delete" title="">
+                        
+                        <span class="subMenuTitle">Delete</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/object_rename" class="actionicon-object_buttons-rename" id="rename" title="">
+                        
+                        <span class="subMenuTitle">Rename</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/@@content-checkout" class="actionicon-object_buttons-iterate_checkout" id="iterate_checkout" title="">
+                        <img width="16" height="16" alt="" src="https://caen-cms-dev.engin.umich.edu/++resource++checkout.png" title="" />
+                        <span class="subMenuTitle">Check out</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/@@sharing" class="actionicon-object_buttons-local_roles" id="local_roles" title="">
+                        
+                        <span class="subMenuTitle">Sharing</span>
+                    </a>
+                    
+                  </li>
+                
+            </ul>
+          </dd>
+        </dl>
+
+    </li>
+
+</ul>
+
+
+    
+
+</div>
+</div>
 
               <span id="contentTopLeft"></span>
               <span id="contentTopRight"></span>
@@ -452,122 +577,125 @@
                     
                       
                       
-            <div class="pageHeader">
-                <h1>Test calendar</h1>
-                <ul id="calendarNav" class="calendarNav">
-                    <li><a id="prevMonth" class="prevMonth prev" href="#"><span></span></a></li>
-                    <li><span id="currentMonth" class="currentMonth currentDate"></span></li>
-                    <li><a id="nextMonth" class="nextMonth next" href="#"><span></span></a></li>
-                </ul>
-                <ul id="calendarView">
-                    <li>
-                        <a id="monthView" class="button" href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/view">
-                            Month View
-                            <span class="rightArrow"></span>
-                        </a>
-                    </li>
-                    <li><a id="weekView" class="button" href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/week">Week View
-                            <span class="rightArrow"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a id="listView" class="button active" href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/list">
-                            <span class="icon"></span>
-                            List View
-                            <span class="rightArrow"></span>
-                        </a>
-                    </li>
-                </ul>
-                <div id="calendarFilter">
-                    <div id="filterEvents">
-                        <label>
-                            Show events for:
-                        </label>
-                        <select id="selectEvent">
-                            
-                                <option>All</option>
-                            
-                            
-                                <option>Prospective Student</option>
-                            
-                            
-                                <option>Current Student</option>
-                            
-                            
-                                <option>Alumni</option>
-                            
-                            
-                                <option>Faculty</option>
-                            
-                            
-                                <option>Staff</option>
-                            
-                            
-                                <option>Family/Parents</option>
-                            
-                            
-                                <option>College Supporters</option>
-                            
-                            
-                                <option>Media</option>
-                            
-                        </select>
+            
+                <div class="pageHeader">
+                    <h1>Test calendar</h1>
+                    <ul id="calendarNav" class="calendarNav">
+                      <li><a id="prevMonth" class="prevMonth prev" href="#"><span></span></a></li>
+                      <li><span id="currentMonth" class="currentMonth currentDate"></span></li>
+                      <li><a id="nextMonth" class="nextMonth next" href="#"><span></span></a></li>
+                    </ul>
+
+                    <ul id="calendarView">
+                        <li>
+                            <a id="monthView" class="button active" href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/view">
+                                Month View
+                                <span class="rightArrow"></span>
+                            </a>
+                        </li>
+                        <li><a id="weekView" class="button" href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/week">Week View
+                                <span class="rightArrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="listView" class="button" href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/list">
+                                <span class="icon"></span>
+                                List View
+                                <span class="rightArrow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="calendarFilter">
+                        <div id="filterEvents">
+                            <label>
+                                Show events for:
+                            </label>
+                            <select id="selectEvent">
+                                
+                                    <option>All</option>
+                                
+                                
+                                    <option>Prospective Student</option>
+                                
+                                
+                                    <option>Current Student</option>
+                                
+                                
+                                    <option>Alumni</option>
+                                
+                                
+                                    <option>Faculty</option>
+                                
+                                
+                                    <option>Staff</option>
+                                
+                                
+                                    <option>Family/Parents</option>
+                                
+                                
+                                    <option>College Supporters</option>
+                                
+                                
+                                    <option>Media</option>
+                                
+                            </select>
+                        </div>
+                        <div id="filterDepartments">
+                            <label>
+                                Filter by Department/Organization:
+                            </label>
+                            <select id="selectDepartment">
+                                
+                                    <option>College of Engineering</option>
+                                
+                                
+                                    <option>Aerospace Engineering</option>
+                                
+                                
+                                    <option>Atmospheric, Oceanic and Space Sciences</option>
+                                
+                                
+                                    <option>Biomedical Engineering</option>
+                                
+                                
+                                    <option>Chemical Engineering</option>
+                                
+                                
+                                    <option>Civil and Environmental Engineering</option>
+                                
+                                
+                                    <option>Electrical Engineering and Computer Science</option>
+                                
+                                
+                                    <option>Industrial and Operations Engineering</option>
+                                
+                                
+                                    <option>Interdisciplinary Programs</option>
+                                
+                                
+                                    <option>Interpro: Interdisciplinary Professional Programs</option>
+                                
+                                
+                                    <option>Materials Science and Engineering</option>
+                                
+                                
+                                    <option>Mechanical Engineering</option>
+                                
+                                
+                                    <option>Michigan Engineering</option>
+                                
+                                
+                                    <option>Naval Architecture and Marine Engineering</option>
+                                
+                                
+                                    <option>Nuclear Engineering and Radiological Sciences</option>
+                                
+                            </select>
+                        </div>
                     </div>
-                    <div id="filterDepartments">
-                        <label>
-                            Filter by Department/Organization:
-                        </label>
-                        <select id="selectDepartment">
-                            
-                                <option>College of Engineering</option>
-                            
-                            
-                                <option>Aerospace Engineering</option>
-                            
-                            
-                                <option>Atmospheric, Oceanic and Space Sciences</option>
-                            
-                            
-                                <option>Biomedical Engineering</option>
-                            
-                            
-                                <option>Chemical Engineering</option>
-                            
-                            
-                                <option>Civil and Environmental Engineering</option>
-                            
-                            
-                                <option>Electrical Engineering and Computer Science</option>
-                            
-                            
-                                <option>Industrial and Operations Engineering</option>
-                            
-                            
-                                <option>Interdisciplinary Programs</option>
-                            
-                            
-                                <option>Interpro: Interdisciplinary Professional Programs</option>
-                            
-                            
-                                <option>Materials Science and Engineering</option>
-                            
-                            
-                                <option>Mechanical Engineering</option>
-                            
-                            
-                                <option>Michigan Engineering</option>
-                            
-                            
-                                <option>Naval Architecture and Marine Engineering</option>
-                            
-                            
-                                <option>Nuclear Engineering and Radiological Sciences</option>
-                            
-                        </select>
-                    </div>
+                    <br />
                 </div>
-                <br />
-            </div>
+            
         
                       <div class="documentByLine" id="plone-document-byline">
   
@@ -593,7 +721,10 @@
 
   
 
-  
+  <span class="contentHistory" id="content-history">
+    —
+    <a href="https://caen-cms-dev.engin.umich.edu/training/tkdman/test-calendar/@@historyview">History</a>
+  </span>
 
   
 
@@ -613,10 +744,299 @@
 
     <div id="contentHolder">
     
-            <div class="eventListing">
-                <div class="moreResults"></div>
+            <div id="calendarContainer">
+                <table class="calendar">
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                    <tr id="week1">
+                        <td id="cell1">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell2">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell3">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell4">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell5">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell6">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell7" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week2">
+                        <td id="cell8">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell9">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell10">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell11">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell12">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell13">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell14" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week3">
+                        <td id="cell15">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell16">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell17">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell18">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell19">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell20">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell21" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week4">
+                        <td id="cell22">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell23">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell24">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell25">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell26">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell27">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell28" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week5">
+                        <td id="cell29">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell30">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell31">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell32">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell33">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell34">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell35" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week6">
+                        <td id="cell36">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell37">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell38">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell39">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell40">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell41">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell42" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+        <script>
+         var webserviceUrl ="monthjson.js", 
+             weekUrl= document.getElementById("weekView").href;
+        </script><script id="eventTemplate" type="text/x-jquery-tmpl">
+ 
+ 
+            <div class="eventBlock {{=am_pm_start}}" tabindex="0">
+             
+            <div class="details fullDetails">
+             
+                
+                    <p>{{#if hideTime == "false"}}{{=startTime}} {{=am_pm_start}}{{#if deadline =="false"}} - {{=endTime}} {{=am_pm_end}}{{/if}}: {{/if}}<span class="eventDate">{{=month}}/{{=day}}</span></p>
+                           
+                <a class="closeDetails" href="#">X</a>
+             
+                <p><b>{{=title}}</b></p>
+             
+                <p class="description">{{=details}}</p>
+             
+                <p><b>{{=location}}</b></p>
+             
+                {{#if host}}<p class="host">By: {{=host}}</p>{{/if}}
+             
+                <a class="detailsLink" href="{{=url}}">Details<span class="arrow"></span></a>
+             
             </div>
-        
+             
+            <div class="details minDetails">
+             
+                {{#if hideTime == "false"}}
+                    <p>{{=startTime}} {{=am_pm_start}} {{#if deadline =="false"}}- {{=endTime}} {{=am_pm}}{{/if}}:</p>
+                {{/if}}
+             
+                <p>
+                    <b>{{=title}}</b>
+                    {{#if location}}
+                        - <span>{{=location}}</span>
+                    {{/if}}
+                </p>
+             
+            </div>   
+             
+            </div> 
+    </script>
+    <script id="moreLinkTemplate" type="text/x-jquery-tmpl">    
+
+                <a href="{|weekUrl|}?date={{=year}}/{{=month}}/{{=day}}&week={|week|}" class="moreLink">More<span></span></a>
+
+    </script>
+
+
+                <ul class="calendarNav calendarNavFoot clearfix">
+                    <li><a class="prevMonth prev" href="#"><span></span></a></li>
+                    <li><span class="currentMonth currentDate"></span></li>
+                    <li><a class="nextMonth next" href="#"><span></span></a></li>
+                </ul>           
+            </div>                
+            
 
     </div>
 
@@ -628,6 +1048,9 @@
           
 
           <div id="viewlet-below-content">
+
+
+
 </div>
 
           
@@ -639,11 +1062,12 @@
       
       
       </div>
-    /div>
+    </div>
 
       
 
         
+
     <footer>
         <div class="hidden" id="hostportinfo">caen-cms-dev.engin.umich.edu:8083</div>
         <p class="copyright">&copy;
@@ -671,57 +1095,7 @@
       
 
       
-                    <script>
-         var webserviceUrl ="monthjson.js"
-        </script>   
-        <script id="eventListItem" type="text/x-jquery-tmpl">
-         
-        <div class="item">
-         
-        <div class="itemShadow">
-         
-            <div class="shadow itemImg">
-         
-                <a href="{{=url}}"><img src="{{=image.src}}" alt="{{=image.alt}}" /></a>
-         
-            </div>
-         
-            <div class="details">
-         
-                <div class="header">
-         
-                    <h2><a href="{{=url}}" class="trimmed">{{=title}}</a></h2>
-         
-                </div>               
-                
-                    <p class="timeframe">{{=month}}/{{=day}}/{{=year}}{{#if hideTime == "false"}}&nbsp;&nbsp;&nbsp;{{=startTime}}{{=am_pm_start}}{{#if deadline=="false"}}&ndash;{{=endTime}}{{=am_pm_end}}{{/if}}{{/if}}</p>
-                    {{#if location}}<p class="location">{{=location}}</p>{{/if}}
-
-                
-                <p>{{=details}}</p>
-         
-                <div class="social">
-         
-                   <div class="addthis_toolbox addthis_default_style ">
-         
-                        <a class="addthis_button_facebook_like" fb: like:layout="button_count" addthis:url="{{=URL}}" addthis:title="{{=Title}}"></a>
-         
-                        <a class="addthis_button_tweet" tw:url="calendarEventsDetailPage.htm?id={{=id}}" tw:title="{{=title}}"></a>
-         
-                        <a class="addthis_counter addthis_pill_style" addthis:url="calendarEventsDetailPage.htm?id={{=id}}"></a>
-         
-                    </div>
-         
-                </div>
-         
-            </div>
-         
-        </div>
-         
-        </div>
-                </script>
-
-        
+      
 
 <div id="kss-spinner"><img alt="" src="https://caen-cms-dev.engin.umich.edu/spinner.png" /></div>
 </div>
