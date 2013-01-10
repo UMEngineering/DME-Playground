@@ -15,8 +15,13 @@
 	padding-top: 0;
 }
 
+#tabs {
+	padding: 0;
+}
+
 #tabs ul {
-	padding: 0 0 0 5px;
+	padding: 0 0 0 10px;
+	border-radius: 4px 4px 0 0;
 }
 
 h3.tab-header {
@@ -63,6 +68,9 @@ table td {
 	background: none;
 }
 
+.ui-tabs .ui-tabs-panel {
+	padding: 10px 20px;
+}
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	-moz-box-shadow: inset 0px 15px 32px -15px #B3B7BE;
 	-webkit-box-shadow: inset 0px 15px 32px -15px #B3B7BE;
