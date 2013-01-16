@@ -1,0 +1,124 @@
+/* CSS Document */
+.facultyProfileTop {
+	width: 224px;
+	float: left;
+	margin: 5px 15px 10px 5px;
+}
+
+#firstHeaderDiv {
+	margin: 20px;
+	overflow: hidden;
+}
+
+#firstHeaderDivP {
+	padding-top: 0;
+	margin-top: 0 !important;
+	font-style: italic;
+	font-size: 14px;
+	color: #0B5595;
+	line-height: 1.25 !important;
+}
+
+#tabs {
+	padding: 0;
+}
+
+#tabs ul {
+	padding: 0 0 0 10px;
+	border-radius: 4px 4px 0 0;
+	background-color: #B1BCD2;
+	box-shadow: inset 0 0 27px #656B78;
+	height: 36px;
+	width: 100%;
+	margin: 0 0 15px -4px;
+}
+
+h3.tab-header {
+	font-size: 10pt;
+	color: #212A55;
+	padding: 0;
+}
+
+h3.tab-header2 {
+	padding-top: 1em;
+}
+
+div.tab-paragraph {
+	overflow: hidden;
+}
+
+#tabs p {
+	padding-left: 0;
+}
+
+p.tab-subheader {
+	font-weight: bold;
+	padding-left: 0;
+}
+
+img.tab-bio-image {
+	width: 60%;
+	float: right;
+	margin: 10px 5px 10px 10px;
+}
+
+div.tab-bottom-border {
+	border-bottom: 1px solid #E3EBF4;
+}
+
+table td {
+	background: none;
+	border: 0;
+}
+
+.ui-widget-content {	
+	border: 0;
+	background: none;
+}
+
+.ui-tabs .ui-tabs-panel {
+	padding: 10px 20px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	-moz-box-shadow: inset 0px 15px 32px -15px #B3B7BE;
+	-webkit-box-shadow: inset 0px 15px 32px -15px #B3B7BE;
+	-o-box-shadow: inset 0px 15px 32px -15px #B3B7BE;
+    
+	box-shadow: inset 0px 15px 32px -15px #B3B7BE;
+}
+
+.ui-tabs .ui-tabs-nav li:nth-child(1).ui-tabs-active {
+    -moz-box-shadow: inset 15px 15px 32px -15px #B3B7BE;
+    -webkit-box-shadow: inset 15px 15px 32px -15px #B3B7BE;
+    -o-box-shadow: inset 15px 15px 32px -15px #B3B7BE;
+    box-shadow: inset 15px 15px 32px -15px #B3B7BE;
+    margin-left: 5px;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    position: relative;
+    margin: 5px 0 0 5px;
+}
+
+#firstHeaderDiv p {
+    display: block;
+    position: relative;
+    width: 40%;
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+#firstHeaderDiv.wide p {
+	width: 416px;
+}
+
+#firstHeaderDiv h3 {
+    margin-top: -18px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.spanbold {
+	font-weight: bold;
+}
