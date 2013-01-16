@@ -1,0 +1,67 @@
+/* CSS Document */
+.list-div {
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	padding: 15px;
+	overflow: hidden;
+	width: 140px;
+}
+
+.thinCol .list-div {
+	width: 130px;
+}
+
+.list-div:nth-child(3n+1) {
+	clear: none;
+}
+
+.list-div:nth-child(4n+1) {
+	clear:left;
+}
+
+.thinCol .list-div:nth-child(3n+1) {
+	clear: left;
+}
+
+.thinCol .list-div:nth-child(4n+1) {
+    clear: none;
+} 
+
+.bottom-div {
+	border: 0;
+}
+
+.list-div p {
+    padding: 0;
+	margin: 0 10px;
+    
+}
+
+.list-div .facultyProfileTop {
+	width: 142px;
+	float: left;
+	margin: 5px 15px 10px 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.list-div p.bold-profile {
+	font-size: 12pt;
+	padding: 0;
+	font-weight: bold;
+	margin: 0 10px;
+}
+
+.list-div p.i-profile {
+	padding-top: 0;
+	font-style: italic;
+	font-size: 11px;
+	line-height: 1.4em;
+}
+
+.list-div .phone {
+
+}
+
+.list-div .email {
+}

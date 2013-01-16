@@ -1,0 +1,11 @@
+.calendarPage .content .item .timeframe {
+  margin: 2px 0 0;
+  color: #0B5595;
+  font-weight: bold;
+  font-size: 14px;
+}
+.calendarPage .content .item .location {
+  font-size: 14px;
+  color: #0B5595;
+  font-style: italic;
+}

@@ -64,6 +64,8 @@
     <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://caen-cms-dev.engin.umich.edu/portal_kss/Engineering%20Theme%202012/resourcetinymce.ksstinymce-cachekey-ea53b4a0c1b36db11b587e512d808977.kss" />
     <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://caen-cms-dev.engin.umich.edu/portal_kss/Engineering%20Theme%202012/at-cachekey-48578a0d8a5c7ed1c3d8b84756041729.kss" />
   
+    <link rel="stylesheet" type="text/css" href="callist.css" />
+
     <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-1.6.4-cachekey-fa7319fca48f2d758a4b15ca7e93c41d.js"></script>
     <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-integration-cachekey-2f8a65924ac78d1a1e55bff869c1ef78.js"></script>
     <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/nodeutilities-cachekey-60722302ca72fd8ed484023ab6646b59.js"></script>
@@ -82,6 +84,7 @@
     <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery.colorbox.min-cachekey-3c3c979521fb6202bf382782b2e63357.js"></script>
     <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jsrender-cachekey-4275e20809c6f8a38ba4584ee63c0646.js"></script>
     <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec44a58724ed4d0"></script>
+
 
 
         
@@ -694,7 +697,7 @@
          
                 </div>               
                 
-                    <p class="timeframe">{{=month}}/{{=day}}/{{=year}}{{#if hideTime == "false"}}&nbsp;&nbsp;&nbsp;{{=startTime}}{{=am_pm_start}}{{#if deadline=="false"}}&ndash;{{=endTime}}{{=am_pm_end}}{{/if}}{{/if}}</p>
+                    <p class="timeframe">{{=month}}/{{=day}}/{{=year}}{{#if hideTime == "false"}}&nbsp;{{=startTime}}{{=am_pm_start}}{{#if deadline=="false"}}&ndash;{{=endTime}}{{=am_pm_end}}{{/if}}{{/if}}</p>
                     {{#if location}}<p class="location">{{=location}}</p>{{/if}}
 
                 

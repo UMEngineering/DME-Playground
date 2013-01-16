@@ -17,5 +17,5 @@ $(document).ready(function() {
 		$("p.youtube-description").text($("p.youtube-description").text().substr(0, spaceAt)+" ...");
     });
 	$(".play-button").css({"width" : "200px", "height" : "200px", "background" : "url(img/map-play-arrow.png) center no-repeat"});
-	$(".youtubeColorbox").colorbox({iframe:true, innerWidth: 560, innerHeight: 315});
+	$(".youtubeColorbox").colorbox({inline: true, innerWidth: 748, innerHeight: 661});
 });

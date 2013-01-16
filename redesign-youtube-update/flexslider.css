@@ -1,0 +1,934 @@
+
+/* - flexslider.css - */
+@media screen {
+/* http://www.engin.umich.edu/portal_css/flexslider.css?original=1 */
+/* */
+/* */
+/* */
+.flex-container a:active, .flexslider a:active
+{
+outline: none;
+}
+.slides, .flex-control-nav, .flex-direction-nav
+{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.flexslider /**/
+{
+margin: 0;
+padding: 0;
+}
+.flexslider .slides > li
+{
+display: none;
+}
+/* */
+.flexslider .slides img
+{
+max-width: 100%;
+display: block;
+}
+.flex-pauseplay span
+{
+text-transform: capitalize;
+}
+/* */
+.slides:after
+{
+content: ".";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+html[xmlns] .slides
+{
+display: block;
+}
+* html .slides
+{
+height: 1%;
+}
+/* */
+/* */
+.no-js .slides > li:first-child
+{
+display: block;
+}
+.flexslider /**/
+{
+zoom: 1;
+}
+.flexslider .slides
+{
+zoom: 1;
+padding-bottom: 5px;
+float: left;
+}
+.flexslider .slides > li
+{
+position: relative;
+}
+/* */
+.flex-container
+{
+zoom: 1;
+position: relative;
+}
+/* */
+/* */
+.flex-caption
+{
+background: none;
+-ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+zoom: 1;
+}
+.flex-caption
+{
+width: 96%;
+padding: 2%;
+position: absolute;
+left: 0;
+bottom: 0;
+background: rgba(0,0,0,.3);
+color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+font-size: 14px;
+line-height: 18px;
+}
+/* */
+.flex-direction-nav li a
+{
+width: 52px;
+height: 52px;
+margin: -13px 0 0;
+display: block;
+background: url(http://www.engin.umich.edu/bg_direction_nav.png) no-repeat 0 0;
+position: absolute;
+top: 50%;
+cursor: pointer;
+text-indent: -9999px;
+}
+.flex-direction-nav li .next
+{
+background-position: -52px 0;
+right: -21px;
+}
+.flex-direction-nav li .prev
+{
+left: -20px;
+}
+.flex-direction-nav li .disabled
+{
+opacity: .3;
+filter: alpha(opacity=30);
+cursor: default;
+}
+/* */
+/* */
+
+}
+
+
+/* - colorbox.css - */
+@media screen {
+/* http://www.engin.umich.edu/portal_css/colorbox.css?original=1 */
+/* */
+/* */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{display: none;clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#cboxOverlay{background:url(http://www.engin.umich.edu/overlay.png) repeat 0 0;}
+#colorbox{}
+#cboxContent{background:#fff; overflow:visible;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{margin-bottom:0px;}
+#cboxTitle{position:absolute; bottom:0px; left:0; text-align:center; width:95%; color:#999;}
+#cboxCurrent{position:absolute; bottom:0px; left:100px; color:#999; display: none !important;}
+#cboxSlideshow{position:absolute; bottom:0px; right:42px; color:#444;}
+#cboxPrevious{position:absolute; top: 40%; left: 10px; color:#444; background: url(http://www.engin.umich.edu/contentImgPrevArrow.png) -8px 0 no-repeat; text-indent: -9999px; width: 8px; height: 14px;}
+#cboxPrevious:hover
+{
+background-position: 0 0;
+}
+#cboxNext{position:absolute; top: 40%; right: 10px; color:#444; background: url(http://www.engin.umich.edu/contentImgNextArrow.png) 0 0 no-repeat; text-indent: -9999px;  width: 8px; height: 14px;}
+#cboxNext:hover
+{
+background-position: -8px 0
+}
+#cboxLoadingOverlay{background:#fff url(http://www.engin.umich.edu/loading.gif) no-repeat 50% 50%;}
+/* */
+#cboxClose{display: none !important;}
+/* */
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+/* */
+#cboxContent, #cboxLoadedContent{
+-webkit-border-radius: 0px 0px 10px 10px;
+-moz-border-radius: 0px 0px 10px 10px;
+border-radius: 0px 0px 10px 10px;
+behavior: url(http://www.engin.umich.edu/++resource++redesign_fonts/pie.htc);
+}
+#cboxContent .addthis_toolbox{
+float:right;
+}
+#cboxContent .social {
+float: left;
+padding: 5px 24px 15px;
+width: 700px;
+}
+.lbContent {
+background: #fff;
+overflow: hidden;
+}
+.lbDescription {
+padding: 10px 24px 5px;
+}
+.lt-ie8 .lbDescription {
+margin-top: -10px;
+margin-bottom: 0px;
+}
+.vidHolder,
+.imgHolder {
+padding: 10px;
+text-align: center;
+}
+.videoShadow {
+background-color: #fff;
+box-shadow: 0px 0px 8px 1px #000;
+}
+.videoHeader,
+.imgHeader {
+font-size: 18px;
+padding: 24px 24px 5px;
+}
+.lt-ie8 .videoHolder h2,
+.lt-ie8 .videoHeader,
+.lt-ie8 .imgHeader {
+font-size: 18px;
+}
+.imgPostDate,
+.videoPostDate {
+padding: 5px 24px 15px;
+color: #0B5595;
+}
+.lt-ie8 .imgPostDate,
+.lt-ie8 .videoPostDate {
+font-size: 12px;
+}
+.lbClose{
+font-weight:bold;
+text-decoration:none;
+color: #0B5595;
+width: 60px;
+height: 21px;
+padding-top: 2px;
+position:absolute;
+top:27px;
+right:23px;
+}
+.closeX {
+background: url(http://www.engin.umich.edu/closeX-img.png) center right no-repeat;
+}
+.lbBorderDivider {
+margin: 15px 0 20px;
+border-top: 3px solid black;
+width: 100%;
+}
+/* */
+
+}
+
+
+/* - candm.css - */
+@media screen {
+/* http://www.engin.umich.edu/portal_css/candm.css?original=1 */
+/* */
+/* */
+/* */
+.promoHolderLogOut {
+width: 200px;
+background-color: rgba(255, 255, 255, 0.85);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8ffffff, endColorstr=#d8ffffff)";   /**/
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8ffffff, endColorstr=#d8ffffff);   /**/
+font-family: sans-serif;
+font-size: 12px;
+}
+.promoHolderLogOut p {
+margin-left: 22px;
+width: 160px;
+}
+.promoHolderLogOut a {
+text-decoration: none; /* */
+}
+.promoHolderLogOut a span.linkCtA {
+display: block;
+margin: 0 0 20px 22px;
+padding: 0 35px 0 20px;
+}
+/* */
+/* */
+.promoHolderOutages {
+width: 200px;
+background: url(http://www.engin.umich.edu/outages-bg.png)top left no-repeat rgba(255, 255, 255, 0.85);
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8ffffff, endColorstr=#d8ffffff)";   /**/
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d8ffffff, endColorstr=#d8ffffff); /**/
+font-family: sans-serif;
+font-size: 12px;
+padding: 36px 0 10px 0;
+margin-bottom: 5px;
+}
+.promoHolderOutages h3 {
+margin: 5px 0 4px 20px;
+padding: 1px 5 1px 20px;
+font-size: 100%;
+}
+.promoHolderOutages p {
+margin: 0 0 7px 40px;
+}
+.promoHolderOutages a {
+font-weight: normal;
+text-decoration: none;
+color:  #a56C17;
+}
+.promoHolderOutages a:hover
+{
+color: #a56c17;
+text-decoration: underline;
+}
+.promoHolderOutages .linkCtA {
+background: url(http://www.engin.umich.edu/outage-pxlarrow.gif) center right no-repeat;
+margin: 10px 10px 0 0;
+padding: 0 8px 0 0;
+font-size: 14px;
+color: #fff;
+display: block;
+float: right;
+clear: both;
+}
+/* */
+/* */
+.promoHolderOutageKey {
+width: 200px;
+background-color: #fff;
+font-family: sans-serif;
+font-size: 12px;
+margin-left: 24px;
+}
+.promoHolderOutageKey ul {
+list-style-type: none;
+margin: 0 0 0 20px;
+padding: 7px 0 10px 0;
+}
+.promoHolderOutageKey ul li {
+margin: 10px 0;
+padding: 1px 0 1px 20px;
+}
+.emergencyOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-emergency.png) left top no-repeat;
+}
+.scheduledOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-scheduled.png) left top no-repeat;
+}
+.serviceChangeOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-servicechange.png) left top no-repeat;
+}
+.serviceProviderOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-serviceprovider.png) left top no-repeat;
+}
+/* */
+table.listing td { background-color: #BFD3EB; min-width: 16px; }
+table.listing .even td { background: none; }
+.tableFilters { margin:0 20px; padding:0; list-style-type: none; }
+.tableFilters li { float: left;  margin: 1.5em 0; border: 1px solid #fff;  background: #D4E1ED; }
+.tableFilters a { display: block; overflow: hidden; outline: none; height: 24px; padding:5px 15px 0; }
+.tableFilters a:hover { background-color: #e6f3ff;}
+.tableFilters li.curFilter a { background: #fff; }
+.promoHolderSoftwareListKey { width: 200px; background: #fff; background: rgba(255, 255, 255, .85); -webkit-border-radius: inherit; -moz-border-radius: inherit; -o-border-radius: inherit; border-radius: inherit; }
+.promoSoftwareListKey { padding: 3px 0 5px 15px; }
+.promoSoftwareListKey h3 { text-transform: uppercase; padding: 10px 5px 0 0; font: 18px FontSiteSansRoman, arial, sans-serif; font-weight: bold; }
+.promoSoftwareListKey ul { list-style: none; margin: 0; padding: 0; }
+.promoSoftwareListKey li { padding: 2px 0 2px 25px; margin: 8px 0; text-transform: capitalize; }
+.softwareListIcon { background: url(http://www.engin.umich.edu/softwareListSprite.png) 0 0 no-repeat; }
+span.softwareListIcon { display: block; height: 24px; width: 16px; text-indent: -99em; }
+.iconWindows { background-position: 0 -25px; }
+.iconClusterComp { background-position: 0 -50px; }
+.iconEnginBaseDsktp { background-position: 0 -76px; }
+.iconDeptLicense { background-position: 0 -103px; }
+.content .outageIntro {
+margin-top: 15px;
+}
+.content .outageDescription {
+border-radius: 8px 8px 8px 8px;
+margin: 7px 20px 20px 20px;
+background-color: #fff;
+width: 460px;
+}
+.content .outageDescription .innerShadow {
+border-radius: 8px 8px 8px 8px;
+}
+.content .outageDescription p {
+font-size: 12px;
+line-height: normal;
+margin: 0;
+padding: 10px 20px 10px 32px;
+}
+.content .outageDescription p.outageStartTime {
+font-size: 12px;
+font-weight: bold;
+line-height: normal;
+margin: 0;
+padding: 15px 0 5px 32px;
+}
+.content .outageDescription p.outageEndTime {
+font-size: 12px;
+font-weight: bold;
+line-height: normal;
+margin: 0;
+padding: 5px 32px;
+}
+.content .outageDescription h4 {
+background: none repeat scroll 0 0 #E3E4E6;
+box-shadow: 0 0 20px #B3B7BE inset;
+font-size: 14px;
+line-height: normal;
+font-weight: normal;
+color: #0E4270;
+margin: 0;
+padding: 20px 100px 20px 32px;
+}
+.content .outageDescription h4 strong {
+font-weight: bold;
+}
+.outageDescription h4.scheduledOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-scheduled.png) 10px 20px no-repeat;
+}
+.outageDescription h4.emergencyOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-emergency.png) 10px 20px no-repeat;
+}
+.outageDescription h4.serviceChangeOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-servicechange.png) 10px 20px no-repeat;
+}
+.outageDescription h4.serviceProviderOutageIcon {
+background: url(http://www.engin.umich.edu/icon-outage-serviceprovider.png) 10px 20px no-repeat;
+}
+.outageDescription h5 {
+font-size: 12px;
+font-weight: bold;
+color: #0E4270;
+padding: 0;
+margin: 12px 0 7px 32px;
+}
+#contentHolder .outageDescription ul {
+padding: 0 0 20px 0;
+margin: 0 0 0 46px;
+}
+.outageDescription ul li {
+padding: 0;
+margin: 0;
+}
+a.outageToggle {
+background: url(http://www.engin.umich.edu/faqToggleArrowDown.png) no-repeat scroll 0 0 transparent;
+display: block;
+height: 34px;
+position: absolute;
+right: 37px;
+text-indent: -9999px;
+top: 0;
+width: 50px;
+}
+a.outageToggle {
+background-position: right top;
+}
+/* */
+.promoRelatedLinksBl .linkCtA { background: url(http://www.engin.umich.edu/pxlarrow.gif) no-repeat scroll right center transparent; clear: both; color: #FFFFFF; display: block; float: right;
+font-size: 14px; margin: 10px 10px 0 0; padding: 0 8px 0 0; text-decoration: none; }
+/* */
+.promoRelatedLinksBl li { background: url(http://www.engin.umich.edu/promoLinkArrow.png) no-repeat scroll 0 5px transparent; margin: 15px 0 7px; padding-left: 7px; }
+/* */
+.promoRelatedLinksBl li .engindate { color: white; }
+.promoRelatedLinksBl h3.rssHeader {
+text-transform: capitalize;
+font-weight: normal;
+}
+.faqSectionHdr {padding: 20px 30px 15px; }
+.newsExplore #filter { width: 765px; position: relative; }
+.newsExplore .showStories { width: 295px; padding-right: 0px; height: 143px; }
+.newsExplore .submit { margin-left: 120px; }
+.newsExplore .storyDropdown { height: 143px; border-radius: 0 4px 4px 0; }
+.newsExplore .searchNews { margin: 0; position: absolute; right: 0; bottom: 4px; }
+.newsExplore #Accolades { margin-left: 5px; }
+.newsExplore #Digital-Multimedia, .newsExplore #News { margin-left: 10px; }
+.newsExplore #Videos { margin-left: 18px; }
+.newsCheckBoxes.newsLeftCol { border-radius: 0 4px 0 0; }
+.newsCheckBoxes.newsLeftCol p { margin-bottom: 8px; }
+/* */
+.promoRelatedLinksBl li .engindate { color: white; display: block; }
+.promoQuotes p { padding: 20px 10px 0 25px; }
+.promoNews .linkCtA { background: url(http://www.engin.umich.edu/pxlarrow.gif) no-repeat scroll right center transparent; clear: both; color: #FFFFFF; display: block; float: right; font-size:
+14px; margin: 10px 10px 0 0; padding: 0 8px 0 0; text-decoration: none; }
+.promoNews li { background: url(http://www.engin.umich.edu/promoLinkArrow.png) no-repeat scroll 0 5px transparent; margin: 15px 0 7px; padding-left: 7px;
+}
+/* */
+.promoNews li .engindate { color: #fff; font-weight: bold;}
+.promoNews h3.rssHeader {
+text-transform: capitalize;
+font-weight: normal;
+}
+.promoNews li .source {
+color: #fff;
+font-variant: small-caps;
+text-transform: uppercase;
+font-size: 11px;
+line-height: 20px;
+letter-spacing: 0.5px;
+}
+.promoNews {
+background: none repeat scroll 0 0 #5e3f71;
+border-radius: inherit;
+display: block;
+opacity: 0.9;
+padding: 25px 20px 20px 13px;
+text-decoration: none;
+}
+.promoNews h3 {
+color: #FFFFFF;
+font: bold 18px FontSiteSansRoman,arial,sans-serif;
+margin-left: 7px;
+text-transform: uppercase;
+}
+.promoNews ul {
+list-style: none outside none;
+margin: 0;
+padding: 0;
+}
+.promoNews li a {
+color: #eac7ff;
+font-size: 12px;
+font-weight: bold;
+text-decoration: none;
+}
+.promoNews li a:hover {
+color: #FFFFFF;
+}
+/* */
+.promoRelatedLinksBl .linkCtA:hover {
+color: #fff;
+}
+/* */
+.dsq-options { display: none !important; }
+.dsq-by { display: none !important; }
+.dsq-dc-logo { display: none !important; }
+.dsq-brlink { display: none !important; }
+#disqus_thread {
+outline: 0px solid green;
+padding: .5em;
+border-bottom: 1px solid grey;
+border-top: 1px solid grey;
+}
+#content #disqus_thread ul li {
+outline: 0px solid blue !important;
+padding-left: 0px !important;
+background-image: url(none) !important;
+margin: 0 0 5px 0;
+}
+.dsq-header-avatar { display: none !important; }
+a.dsq-avatar {  display: none !important; }
+.dsq-authenticate { display: none !important; }
+.dsq-comment-meta a, .dsq-comment-actions a {
+color: #3375AE;
+opacity: 1 !important;
+font-weight: normal !important;
+font-style: italic !important;
+padding-left: 5px;
+}
+.dsq-comment-meta a:hover, .dsq-comment-actions a:hover {
+color: #212A55;
+opacity: 1 !important;
+font-weight: normal !important;
+font-style: italic !important;
+}
+ul#dsq-comments {
+padding-right: 0 !important;
+}
+ul.dsq-global-toolbar-right {
+padding-right: 0 !important;
+}
+a.dsq-subscribe-email em, a.dsq-subscribe-rss em {
+margin-right: 10px;
+}
+#dsq-content .dsq-comment-actions {
+float: right;
+padding-right: 0 !important;
+}
+table .numData {
+text-align: right;
+}
+table .total {
+background-color: #4E83B2;
+color: #FFFFFF;
+}
+table .dataTableFooter {
+background-color: #BFD3EB;
+color: #000000;
+}
+.newsCheckBoxes.newsLeftCol { border-radius: 0 4px 0 0; }
+.newsCheckBoxes.newsLeftCol p { margin-bottom: 8px; }
+/* */
+.newsList .newsMoreOptions .newsDate { float: left; }
+/* */
+.datepicker { border-collapse: collapse; border: 2px solid #2C4F90; position: absolute; z-index: 1000; }
+.datepicker tr.controls th { font-size: 11px; }
+.datepicker .controls span { color: white; position: relative; font-size: 14px; }
+.datepicker .prevMonth { right: 15px; }
+.datepicker .nextMonth { left: 15px; }
+.datepicker select { font-size: 11px; }
+.datepicker tr.days th { height: 18px; color: white; }
+.datepicker th, .datepicker tfoot td { background: #2C4F90; font: 10px/18px sans-serif; }
+.datepicker tfoot td { height: 18px; font-size: 12px; text-align: center; text-transform: capitalize; color: white; }
+.datepicker th span, .datepicker tfoot td span { font-weight: bold; }
+.datepicker tbody td { width: 24px; height: 24px; border: 1px solid #ccc; font: 11px/22px sans-serif; text-align: center; background: #fff; }
+.datepicker tbody td.date { cursor: pointer; }
+.datepicker tbody td.date.over { background-color: #8cf; }
+.datepicker tbody td.date.chosen { font-weight: bold; background-color: #0097e1; }
+#wrapper .contentBlock h4, #mainCol h4 {
+color: #0B5595;
+font-size: 14px;
+font-style: italic;
+font-weight: normal;
+letter-spacing: 0;
+margin: 0;
+padding-bottom: 0;
+padding-left: 20px;
+padding-top: 20px;
+}
+#mainCol .contentInner h4 {
+color: #212A55;
+font-style: normal;
+margin: 25px 0 10px;
+padding: 0 0 0 13px;
+}
+#mainCol .contentInner h4, #mainCol .contentInner h4 a {
+color: #212A55;
+font-size: 16px;
+text-decoration: none;
+font-style: normal;
+}
+.contentWide #wrapper .contentBlock h4 {
+padding-left: 30px;
+}
+#wrapper .contentBlock .carouselSingle h4 {
+color: #212A55;
+font-size: 18px;
+margin: 4px 0 0 7px;
+padding: 0;
+font-style: normal;
+font-weight: bold;
+}
+#wrapper .contentBlock blockquote {
+color: #3375AE;
+font: italic 20px/1.4em Arial,sans-serif;
+margin: 1em 40px;
+text-indent: -0.8em;
+padding: 20px 30px 0;
+}
+#wrapper .contentBlock img.contentImage {
+float: right;
+padding: 20px 35px 10px 10px;
+margin: 0;
+width: auto;
+}
+#wrapper .contentBlock .typeFormatIcon img {
+width: auto;
+margin: 0;
+}
+.search #wrapper .contentBlock img {
+margin: 0;
+}
+#wrapper .contentBlock .carousel img {
+margin: 0;
+}
+#wrapper .contentBlock a, #mainCol a {
+color: #A56C17;
+font-size: 12px;
+font-weight: bold;
+text-decoration: none;
+}
+#wrapper .contentBlock a:hover, #mainCol a:hover {
+color: #FDB827;
+font-size: 12px;
+font-weight: bold;
+text-decoration: none;
+}
+#wrapper .contentBlock table a {
+color: #222222;
+font-weight: normal;
+}
+#wrapper .contentBlock h2 a {
+font-size: inherit;
+margin: 0;
+padding: 0;
+color: #0E4270;
+}
+.search #wrapper .contentBlock a.foundLink {
+color: inherit;
+}
+#wrapper .contentBlock .tourInfo a{
+font-size: 10px;
+text-align: left;
+text-decoration: underline;
+}
+#wrapper .contentBlock .promoBtn {
+font: bold 15px/26px arial,sans-serif;
+}
+table .numData {
+text-align: right;
+}
+table .total {
+background-color: #4E83B2;
+color: #FFFFFF;
+}
+table .dataTableFooter {
+background-color: #BFD3EB;
+color: #000000;
+}
+div.topicList {
+margin-top: 18px;
+font-size: smaller;
+}
+#contentHolder .topicList p {
+display: inline;
+margin: 0;
+padding: 0 0 0 20px;
+color: #0b5595;
+font-style: italic;
+}
+#contentHolder .topicList ul {
+display: inline;
+margin: 0;
+padding: 0;
+}
+#contentHolder .topicList li {
+display: inline;
+margin: 0;
+padding: 0;
+}
+#contentHolder .topicList li:after {
+content: ",";
+}
+#contentHolder .topicList li.lastTopic:after {
+content: ".";
+}
+#contentHolder .topicList a {
+color: #5387b4;
+font-weight: normal;
+font-style: italic;
+}
+#contentHolder .topicList a:hover {
+color: #5387b4;
+text-decoration: underline;
+font-weight: normal;
+font-style: italic;
+}
+a.newsByteLink {
+background: url(http://www.engin.umich.edu/newsByteLinkArrow.png) no-repeat scroll left center transparent;
+padding-left: 6px;
+margin-left: -6px;
+}
+a.newsByteLink:hover {
+background: url(http://www.engin.umich.edu/newsByteLinkArrowHover.png) no-repeat scroll left center transparent;
+}
+a.newsByteLink img {
+margin-bottom: 2px;
+margin-left: 1px;
+}
+/* */
+.promoRelatedLinksBl .linkCtA:hover, .promoNews .linkCtA:hover {
+color: #fff;
+}
+/* */
+#rightPortlets {margin-top: 10px;}
+/* */
+.social {
+min-height:30px;
+padding: 0 0 10px 15px;
+}
+.thinCol .authorAttribution {width: 500px;}
+.thinCol .authorAttribution p {padding-right: 0;}
+.promoQuotes .quoteAttribution
+{
+margin: 0px;
+padding: 0px 15px 15px 0px;
+text-align: right;
+font-size: 10px;
+color: #fff;
+}
+.promoQuotes .quoteAttribution span
+{
+font-weight: bold;
+font-size: 10px;
+}
+#wrapper .contentBlock blockquote.pQuoteAttribution {
+text-align: right;
+padding: 0px 30px;
+margin: 0px;
+font-size: 12px;
+color: #0E4270;
+letter-spacing: 0px;
+line-height: 1.6em;
+}
+/* */
+.promoQuotes p {text-indent: -.6em;}
+/* */
+.newsExplore ul#exploreHolder .noResults {  padding: 1px 10px; float: none; margin: 0 auto 8px; width: 560px; border-radius: 8px; }
+.newsExplore ul#exploreHolder .noResults:hover { border: none; margin: 0 auto 8px; }
+/* */
+#rightPortlets .first .promoOtherSites h3 {
+border-radius:0px;
+}
+/* */
+.carouselFull .carousel {
+width: inherit !important;
+}
+.wideCol .carouselFull .carousel li {
+margin-right: 21px;
+}
+.wideCol .carouselFull .carousel li:hover {
+margin-right: 20px;
+}
+.carouselSingle .carousel {
+margin: 0 auto;
+}
+#col1 .first h3 {    border-radius: 0;}
+#wrapper .contentBlock blockquote.pQuoteAttribution {
+text-align: right;
+padding: 0px 30px;
+margin: 0px 40px 1.7em;
+font-size: 12px;
+color: #0E4270;
+letter-spacing: 0px;
+line-height: 1.6em;
+}
+/* */
+img.lineBreak {
+float: left;
+margin: 0 0 40px;
+}
+/* */
+#wrapper .contentBlock h1 a,
+#wrapper .contentBlock h2 a,
+#wrapper .contentBlock h3 a,
+#wrapper .contentBlock h4 a,
+#wrapper .contentBlock h5 a,
+#wrapper .contentBlock h6 a {
+font-size: inherit;
+color: #7D4D0E;
+text-decoration: none;
+}
+#wrapper .contentBlock h1 a:hover,
+#wrapper .contentBlock h2 a:hover,
+#wrapper .contentBlock h3 a:hover,
+#wrapper .contentBlock h4 a:hover,
+#wrapper .contentBlock h5 a:hover,
+#wrapper .contentBlock h6 a:hover {
+font-size: inherit;
+border-bottom: 0.12em dotted #A36714;
+text-decoration: none;
+color: #A36714;
+}
+#wrapper .contentBlock a:hover {text-decoration: underline;}
+/* */
+#contentHolder .topicList p {display: block;}
+/* */
+.newsList .theaterNavigation {
+float: left;
+width: 24px;
+padding-left: 10px;
+}
+img.lineBreak {
+margin: 0 0 40px -8px;
+float: left;
+}
+#contentHolder div.first.last .innerShadow {border-radius: 8px;}
+#contactBox {
+display:block;
+position: relative;
+width: 223px;
+height: 224px;
+padding: 0;
+}
+#contactBox .info {
+display: block;
+position: absolute;
+border-radius: inherit;
+padding: 6px;
+bottom: 0;
+left: 0;
+right: 0;
+background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(103, 104, 105, .8));
+background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(103, 104, 105, .8));
+background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(103, 104, 105, .8));
+background-image: -ms-linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(103, 104, 105, .8));
+background-image: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(103, 104, 105, .8));
+}
+#contactBox .info p {
+color: white;
+font-size: 12px;
+}
+#contactBox .info a {
+color: white;
+}
+#contactBox .info h3 {
+position: absolute;
+top: -999px;
+left: -999px;
+}
+#contactBox .info p.name {
+margin: 2px 0;
+}
+#contactBox .info p.email {
+}
+#contactBox .info p.tel {
+font-size: 12px;
+width: auto;
+display: inline-block;
+margin: 0;
+}
+#contactBox .info p.address {
+font-size: 12px;
+line-height:1.4;
+position: absolute;
+float: right;
+width: auto;
+margin: 0;
+max-width: 90px;
+bottom: 6px;
+right: 6px;
+text-align: right;
+}
+.ie9 #contactBox .info, .lt-ie9 #contactBox .info {
+background: url(http://www.engin.umich.edu/contact-info-bg.png) 0 0 repeat-y;
+}
+/* */
+
+}

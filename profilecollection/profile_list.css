@@ -1,19 +1,39 @@
 /* CSS Document */
 .list-div {
+	display: block;
+	position: relative;
+	min-height: 150px;
 	padding: 15px;
 	overflow: hidden;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid #bcc1c6;
 }
 
 .bottom-div {
 	border: 0;
 }
 
+.list-div p {
+    display: block;
+    position: relative;
+    width: 422px;
+    float: left;
+    padding: 0;
+    text-align: left;
+    margin: 0 0 0 166px;
+}
+
+.thinCol .list-div p {
+    width: 278px;
+}
+
 .list-div .facultyProfileTop {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	display: block;
 	width: 142px;
-	float: left;
 	margin: 5px 15px 10px 5px;
-	box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
 }
 
 p.bold-profile {
@@ -25,4 +45,14 @@ p.bold-profile {
 p.i-profile {
 	padding-top: 0;
 	font-style: italic;
+	font-size: 11px;
+}
+
+.list-div .phone {
+    padding: 0;
+
+}
+
+.list-div .email {
+    padding: 0;
 }
