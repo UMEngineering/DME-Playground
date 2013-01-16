@@ -35,3 +35,27 @@ function changeURL(type){
 		});
 	}
 }
+
+function editInFull(id){
+	var href = $("#title"+id+" a").attr("href");
+	var title = $("#title"+id).text();
+	var description = $("#desc"+id).text();
+	$("#title"+id).html('<input type="hidden" value="'+id+'" name="id" />Title: <input type="text" name="title-'+id+'" id="title-'+id+'" value="'+title+'" size="55"/>Link: <input type="text" name="href-'+id+'" id="href-'+id+'" value="'+href+'" size="55"/>');
+	$("#desc"+id).html('<textarea rows="10" cols="45" name="desc-'+id+'" id="desc-'+id+'">'+description+'</textarea>');
+	$("#upload"+id).html('Upload an image (optional): <input type="file" name="file" />');
+	$("#submit"+id).html('<input type="submit" value="edit" name="editinfull" />');
+	$("#a"+id).attr("onclick", "");
+}
+
+function changed(){
+	//alert("updated position");
+	var sortedIDs = $( "#sortable" ).sortable( "toArray" );
+	var urlAjax = "changeorder.php?";
+	for (var i=0; i<sortedIDs.length-1; i++){
+		urlAjax += "order"+i+"="+sortedIDs[i]+"&";
+	}
+	urlAjax += "order"+i+"="+sortedIDs[i];
+	var response = $.ajax({url: urlAjax, success: function(){
+		$("#responsetext").html(response.responseText);
+	}});
+}

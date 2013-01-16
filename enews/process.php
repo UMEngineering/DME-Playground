@@ -116,6 +116,37 @@ if ($_POST["create"]) {
 		die("<br />Cannot update".mysql_error());
 	}
 	Header("Location:edit.php?year={$year}&month={$month}&err=0");
+} else if ($_POST["editinfull"]){
+	$month = $_POST["month"];
+	$year = $_POST["year"];
+	$this_id = $_POST["id"];
+	
+	// Delete the current image
+	$check = mysql_query("SELECT img FROM enews WHERE id={$this_id};");
+	if (!$check){
+		print("Cannot load result");
+	}
+	
+	$fuploaded = uploadFile($year, $month);
+	if ($fuploaded == "" && $row = mysql_fetch_row($check)) {
+		$fuploaded = $row[0];
+	} else {
+		if ($row != "") {
+			unlink("{$row[0]}");
+		}
+	}
+	
+	$vars = array(checkString($_POST['title-'.$this_id]), checkString($_POST['image-'.$this_id]), checkString($_POST['desc-'.$this_id]), checkString($_POST['href-'.$this_id]), checkString($_POST['order-'.$this_id]));
+	
+	// Edit the content in the database
+	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}', orders='{$vars[4]}' WHERE id={$this_id};";
+	
+	$result = mysql_query($query);
+	if (!$result){
+		die("<br />Cannot update".mysql_error());
+	}
+	Header("Location:editfull.php?year={$year}&month={$month}&err=0");
+	
 }
 
 function checkString($str){
