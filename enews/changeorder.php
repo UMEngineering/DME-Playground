@@ -5,18 +5,19 @@ if ($_GET["order0"]) {
 	$i=0;
 	$ids = array();
 	$orders = array();
+	$success = true;
 	while(!empty($_GET["order".$i])) {
 		$e = explode("-", $_GET["order".$i]);
-		$query = "UPDATE enews SET orders='{$e[1]}' WHERE id={$e[0]};";
-		/*$result = mysql_query($query);
+		$query = "UPDATE enews SET orders='{$i}' WHERE id='{$e[0]}';";
+		$result = mysql_query($query);
 		if (!$result){
-			die("<br />Cannot update".mysql_error());
-		} else {
-			$success = true;
+			$success = false;
+			print("<br />Cannot update".mysql_error());
+			break;
 		}
-		$i++;*/
+		$i++;
 	}
-	//if ($success)
+	if ($success)
 		print ("Change order success!");
 }
 ?>

@@ -128,7 +128,7 @@ if ($_POST["create"]) {
 	}
 	
 	$fuploaded = uploadFile($year, $month);
-	if ($fuploaded == "" && $row = mysql_fetch_row($check)) {
+	if ($row = mysql_fetch_row($check) && $fuploaded == "") {
 		$fuploaded = $row[0];
 	} else {
 		if ($row != "") {
@@ -139,7 +139,7 @@ if ($_POST["create"]) {
 	$vars = array(checkString($_POST['title-'.$this_id]), checkString($_POST['image-'.$this_id]), checkString($_POST['desc-'.$this_id]), checkString($_POST['href-'.$this_id]), checkString($_POST['order-'.$this_id]));
 	
 	// Edit the content in the database
-	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}', orders='{$vars[4]}' WHERE id={$this_id};";
+	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}' WHERE id={$this_id};";
 	
 	$result = mysql_query($query);
 	if (!$result){

@@ -40,11 +40,12 @@ function editInFull(id){
 	var href = $("#title"+id+" a").attr("href");
 	var title = $("#title"+id).text();
 	var description = $("#desc"+id).text();
-	$("#title"+id).html('<input type="hidden" value="'+id+'" name="id" />Title: <input type="text" name="title-'+id+'" id="title-'+id+'" value="'+title+'" size="55"/>Link: <input type="text" name="href-'+id+'" id="href-'+id+'" value="'+href+'" size="55"/>');
+	$("#title"+id).html('<input type="hidden" value="'+id+'" name="id" />Title: <input type="text" name="title-'+id+'" id="title-'+id+'" value="'+title+'" size="55"/><br />Link: <input type="text" name="href-'+id+'" id="href-'+id+'" value="'+href+'" size="55"/>');
 	$("#desc"+id).html('<textarea rows="10" cols="45" name="desc-'+id+'" id="desc-'+id+'">'+description+'</textarea>');
 	$("#upload"+id).html('Upload an image (optional): <input type="file" name="file" />');
 	$("#submit"+id).html('<input type="submit" value="edit" name="editinfull" />');
 	$("#a"+id).attr("onclick", "");
+	$("#a"+id).css("opacity", "0");
 }
 
 function changed(){

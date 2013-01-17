@@ -47,7 +47,6 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                 <tbody>
                     <tr>
                         <td width="500" valign="top" colspan="3">
-                        <p><a href="javascript: void(0);" style="color: red; font-size: 10pt;" onclick="editInFull(<?= $row[6] ?>, 0);" id="a<?= $row[6] ?>">Edit the top story</a></p>
                         <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="480" border="0" title="Gaming image" src="<?= $row[1] ?>" alt="Making a difference image" /></a></p>
                         </td>
                     </tr>
@@ -65,6 +64,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                         <p id="responsetext" style="color: red;"></p>
                         <input type="hidden" value="<?= $year ?>" name="year" />
                         <input type="hidden" value="<?= $month ?>" name="month" />
+                        <p><a href="javascript: void(0);" style="color: red; font-size: 10pt;" onclick="editInFull(<?= $row[6] ?>, 0);" id="a<?= $row[6] ?>">Edit the top story</a></p>
                         </div>
                     	</form>
                         </td>
@@ -82,7 +82,6 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                                 </div>
                                 <div style="overflow: hidden;">
                                     <div style="width: 100px; float: left;" id="td<?= $row[6] ?>">
-                                        <p><a href="javascript: void(0);" style="color: red; font-size: 10pt;" onclick="editInFull(<?= $row[6] ?>, 1);" id="a<?= $row[6] ?>">Edit the top story</a></p>
                                         <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="100" height="100" border="0" src="<?= $row[1] ?>" title="" alt="Meningitis image" /></a></p>
                                     </div>
                                     <div style="width: 15px; float: left;">
@@ -99,6 +98,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                                                 <input type="hidden" value="<?= $month ?>" name="month" />
                                                 <input type="hidden" value="<?= $row[5] ?>" name="order" />
                                             </form>
+                                        	<p><a href="javascript: void(0);" style="color: red; font-size: 10pt;" onclick="editInFull(<?= $row[6] ?>, 1);" id="a<?= $row[6] ?>">Edit this story</a></p>
                                         </div>
                                     </div>
                                 </div>
