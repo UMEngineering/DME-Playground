@@ -1,1 +1,395 @@
-<p>Your Admissions Checklist includes the list of task needed to enroll at Michigan Engineering. Click each box to check when complete.</p>                <form id="checklist">                	<div><input class="styled" id="c1" type="checkbox" name="step1" value="1" onclick="checkthis('c1')" checked="checked" /><label for="c1"></label><p><span class="steps" id="c1p">STEP ONE</span><br />Receive your acceptance letter and view admitted student website.</p></div>                	<div><input class="styled" id="c2" type="checkbox" name="step2" value="2" onclick="checkthis('c2')"/><label for="c2"></label><p><span class="steps" id="c2p">STEP TWO</span><br /><a href="http://www.engin.umich.edu/congrats/result.php#next-11" target="_self">Register for Campus Day</a>. This program is held January through April, and registration starts in January.</p></div>                	<div><input class="styled" id="c3" type="checkbox" name="step3" value="3" onclick="checkthis('c3')"/><label for="c3"></label><p><span class="steps" id="c3p">STEP THREE</span><br />Complete your <a href="http://www.finaid.umich.edu/Home/HowtoApplyforAid/NewProspectiveUndergraduates.aspx#application">CSS Profile and FAFSA</a>: The early deadline is February 15. April 30 is the final deadline.</p></div>                	<div><input class="styled" id="c4" type="checkbox" name="step4" value="4" onclick="checkthis('c4')"/><label for="c4"></label><p><span class="steps" id="c4p">STEP FOUR</span><br />Pay your $200 enrollment deposit. Deposit is due by May 1. Payment can be made via <a href="http://wolverineaccess.umich.edu/render.userLayoutRootNode.uP?uP_root=root&uP_sparam=activeTab&activeTab=2">Wolverine Access</a>, or post marked by May 1, 2013. Please login to <a href="http://wolverineaccess.umich.edu/render.userLayoutRootNode.uP?uP_root=root&uP_sparam=activeTab&activeTab=2">Wolverine Access</a> for more information about making your deposit.</p></div>                	<div><input class="styled" id="c5" type="checkbox" name="step5" value="5" onclick="checkthis('c5')"/><label for="c5"></label><p><span class="steps" id="c5p">STEP FIVE</span><br />Check scholarship status. Admitted first-year students are automatically considered for <a href="http://www.engin.umich.edu/students/scholarships/newstudents">College of Engineering merit-based scholarships</a>, and notification of awards are made before mid-April. <a href="http://www.finaid.umich.edu/Home/TypesofAid/ScholarshipsandGrants/OFAScholarshipListing.aspx">U-M Scholarships</a> are administered by the Office of Financial Aid and most recipients are notified by April 15.</p></div>                	<div><input class="styled" id="c6" type="checkbox" name="step6" value="6" onclick="checkthis('c6')"/><label for="c6"></label><p><span class="steps" id="c6p">STEP SIX</span><br />Submit your <a href="http://housing.umich.edu/applications/freshman">Housing/Michigan Learning Community Application</a>. Due by May 7.  If applying for a Michigan Learning Community, additional essays are required. Please verify the requirements for your selection. (Note: Enrollment Deposit must be paid)</p></div>                	<div><input class="styled" id="c7" type="checkbox" name="step7" value="7" onclick="checkthis('c7')"/><label for="c7"></label><p><span class="steps" id="c7p">STEP SEVEN</span><br /><a href="http://onsp.umich.edu/incoming_freshmen/orientation/">Register for Orientation</a>. Registration slots made available in early April (Note: Enrollment Deposit must be paid)</p></div>                </form><script>load_checklist();</script>
+
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Mobile viewport optimized: j.mp/bplateviewport 
+		<meta name="viewport" content="width=device-width,initial-scale=1">-->
+		<link href="http://www.engin.umich.edu/redesign/06-11-12/css/style.css" rel="stylesheet">
+		<link href="http://www.engin.umich.edu/redesign/06-11-12/css/navigation.css" rel="stylesheet">
+		<link href="http://www.engin.umich.edu/redesign/06-11-12/css/promos.css" rel="stylesheet">
+		<link href="http://www.engin.umich.edu/redesign/06-11-12/css/primaryLandingPage.css" rel="stylesheet">
+		<link href="http://www.engin.umich.edu/redesign/06-11-12/css/supersized.css" rel="stylesheet">
+		<link href="http://www.engin.umich.edu/redesign/06-11-12/css/print.css" rel="stylesheet">
+		<link href="testcss.css" rel="stylesheet">
+		<!-- for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
+
+		<script src="js/libs/modernizr-2.0.6.min.js"></script>
+
+	</head>
+	<body class="hasBreadcrumbs primaryLanding">
+		<!-- hasBreadcrumbs class tells the Main nav whether it needs to stretch over a breadcrumb bar or not -->
+		<div id="wrapper">
+			<header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+				<div id="skip">
+					<a href="#content">Skip to Main Content</a>
+				</div>
+				<nav id="utility">
+					<ul>
+						<li class="contact"><a href="#">Contact</a></li>
+						<li class="role">
+							<span></span>
+							<a href="#" class="roleChange">Select Role</a> 
+							<div>
+								<ul>
+									<li><a href="#">Prospective Student</a></li>
+									<li><a href="#">Current Students</a></li>
+									<li><a href="#">Alumni</a></li>
+									<li><a href="#">Faculty</a></li>
+									<li><a href="#">Staff</a></li>
+									<li><a href="#">Family / Parents</a></li>
+									<li><a href="#">College Supporters</a></li>
+									<li><a href="#">Media</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="search">
+							<label for="search">Search</label>
+							<input id="search" type="text" />
+							<a href="Search.htm" class="ir">Go</a> 
+							<!-- Replace Search.htm with the appropriate URL for the search page that accepts a ?q=QUERY type search query -->
+						</li>
+					</ul>
+				</nav>
+				<nav id="mainBar">
+					<ul>
+						<li class="about"><a href="#">About</a>
+							<div>
+								<ul>
+									<li><a href="#">News Center</a></li>
+									<li><a href="#">Calendar</a></li>
+									<li><a href="#">Special Events</a></li>
+									<li><a href="#">Computing (CAEN)</a></li>
+									<li><a href="#">Facilities</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Message from the Dean</a></li>
+									<li><a href="#">Facts &amp; Figures</a></li>
+									<li><a href="#">People</a></li>
+									<li><a href="#">Ann Arbor &amp; Campus</a></li>
+									<li><a href="#">College Administration</a></li>
+								</ul>
+								<ul class="last">
+									<li><a href="#">Center for Entrepreneurship</a></li>
+									<li><a href="#">Multidisciplinary Design Program</a></li>
+									<li><a href="#">Center for Diversity and Outreach</a></li>
+									<li><a href="#">International Program in Engineering</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="research"><a href="#">Research</a>
+							<div>
+								<ul>
+									<li><a href="#">Centers &amp; Labs</a></li>
+									<li><a href="#">Undergraduate Research Opportunities*</a></li>
+									<li><a href="#">Getting Research Funding</a></li>
+									<li><a href="#">Sponsored Research</a></li>
+									<li><a href="#">Instant Innovation Program</a></li>
+									<li><a href="#">Corporate Relationships</a></li>
+									<li><a href="#">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="academics current"><a href="#">Academics</a>
+							<div>
+								<ul>
+									<li><a href="#">Undergraduate Programs/Degrees</a></li>
+									<li><a href="#">Graduate Programs/Degrees</a></li>
+									<li><a href="#">Courses</a></li>
+									<li><a href="#">Academic Calendar</a></li>
+									<li><a href="#">Student Resources</a></li>
+									<li><a href="#">Graduation</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="admissions"><a href="#">Admissions</a>
+							<div>
+								<ul>
+									<li><a href="#">Undergraduate Admissions</a></li>
+									<li><a href="#">Graduate Admissions</a></li>
+									<li><a href="#">International Student</a></li>
+									<li><a href="#">Scholarships, Financial Aid &amp; Funding</a></li>
+									<li><a href="#">FAQs</a></li>
+									<li><a href="#">Visit Us</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="departments"><a href="#">Departments</a>
+							<div>
+								<ul>
+									<li><a href="#">Aerospace Engineering (AERO)</a></li>
+									<li><a href="#">Atmospheric, Oceanic &amp; Space Sciences (AOSS)</a></li>
+									<li><a href="#">Biomedical Engineering (BME)</a></li>
+									<li><a href="#">Chemical Engineering (CHE)</a></li>
+									<li><a href="#">Civil and Environmental Engineering (CEE)</a></li>
+									<li><a href="#">Electrical Engineering and Computer Sciences (EECS)</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Industrial and Operation Engineering (IOE)</a></li>
+									<li><a href="#">Interdisciplinary Professional Programs (InterPro)</a></li>
+									<li><a href="#">Material Science and Engineering (MSE)</a></li>
+									<li><a href="#">Mechanical Engineering (ME)</a></li>
+									<li><a href="#">Naval Architecture and Marine Engineering (NAME)</a></li>
+									<li><a href="#">Nuclear Engineering and Radiological Sciences (NERS)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="investing"><a href="#">Investing</a>
+							<div>
+								<ul>
+									<li><a href="#">Why I Give</a></li>
+									<li><a href="#">Where to Give</a></li>
+									<li><a href="#">How to Give</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="last infoForYou"><a href="#">Info for You</a>
+							<div>
+								<ul>
+									<li><a href="#">Prospective Student</a></li>
+									<li><a href="#">Current Student</a></li>
+									<li><a href="#">Alumni</a></li>
+									<li><a href="#">Faculty</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">Staff</a></li>
+									<li><a href="#">Family / Parents</a></li>
+									<li><a href="#">Supporters of the College</a></li>
+									<li><a href="#">Media</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<nav id="breadcrumbs">
+					<ul>
+						<li>/ <a href="#">Home</a></li>
+						<li class="last">/ <a href="#">Academics</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="staticBG">
+				<img src="img/primaryLanding/sampleTheater1.jpg" alt="Theater Image Alt Text" style="width: 100%;" />
+			</div>
+			<div role="main" id="contentWrap">
+				<span id="headerPrintOnly"><img class="printOnly" src="img/header/MichiganCollegeEngineeringPrintOnlyLogo.jpg" alt="print Logo" /></span>
+            	<div id="theaterOverlay">
+					<a href="#" class="theaterLink">
+						<h3 data-innertext="Morbi Euismod Magna Ac Lorem Rutrum">Morbi Euismod Magna Ac Lorem Rutrum</h3>
+						<h4 data-innertext="Sed Nec Diam Eu Diam Mattis Viverra. Nulla Fringilla.">Sed Nec Diam Eu Diam Mattis Viverra. Nulla Fringilla.</h4>
+					</a>
+					<div id="theaterControls">
+						<a href="#" id="prevslide" class="ir">Prev</a>
+						<ul id="slide-list"></ul>
+						<a href="#" id="nextslide" class="ir">Next</a>
+					</div>
+				</div>
+				<div id="col1" class="leftCol">
+						<nav id="sideNav" class="sideNav">
+							<ul>
+								<li class="academics first"><a href="#">Academics</a>
+									<ul>
+										<li><a href="#">Undergraduate Programs/ Degrees</a>
+											<ul>
+												<li><a href="#">Mission</a></li>
+												<li><a href="#">Degree Options</a></li>
+												<li><a href="#">Minors</a></li>
+												<li><a href="#">Core Requirements</a></li>
+												<li><a href="#">Honors Program</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Graduate Programs/ Degrees</a>
+											<ul>
+												<li><a href="#">Graduate Degrees</a></li>
+												<li><a href="#">Just Ask</a></li>
+												<li><a href="#">Graduate Student Advisory Committee</a></li>
+												<li><a href="#">Student Activities</a></li>
+												<li><a href="#">Fellowships</a></li>
+												<li><a href="#">GSI Training</a></li>
+												<li><a href="#">Graduation</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Courses</a></li>
+										<li><a href="#">Academic Calendar</a></li>
+										<li><a href="#">Student Resources</a>
+											<ul>
+												<li><a href="#">Mentoring</a></li>
+												<li><a href="#">Advising</a>
+													<ul>
+														<li><a href="#">Advising Center</a></li>
+														<li><a href="#">Advising Appointments</a></li>
+														<li><a href="#">First Year Planning</a></li>
+														<li><a href="#">Advising Audit Reports</a></li>
+													</ul>
+												</li>
+												<li><a href="#">Class Registration</a></li>
+												<li><a href="#">Career Development</a></li>
+												<li><a href="#">Engineering Abroad</a></li>
+												<li><a href="#">Life @ Michigan</a></li>
+												<li><a href="#">Student Undergraduate Research in Engineering</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Graduation</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<div id="contactBox">
+							<h3>Contact</h3>
+							<p class="name">Jane Smith</p>
+							<p class="email"><a href="mailto:email@engin.umich.edu">email@engin.umich.edu</a></p>
+							<p class="tel">734-000-0000</p>
+							<p class="address">365 Lurie Building</p>
+						</div>
+					</div>
+				<div id="content" class="content">
+					<div id="contentHolder" class="rightCol">
+						<div id="innerContent">
+							<div id="mainCol" class="shadow">
+								<div class="innerShadow">
+									<div class="contentTop">
+										<h1>Academics</h1>
+										<p>Gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio.
+											Praesent eget neque eu eros interdum malesuada non vel leo. <a href="#">Sed fringilla</a>
+											porta ligula egestas tincidunt. Nullam lorem nisi, <a href="#">posuere quis</a>
+											volutpat ege.</p>
+									</div>
+									<div class="contentInner">
+										<h2>This is the Subhead Title</h2>
+										<ul class="contentCol">
+											<li>
+												<h4><a href="#">Etiam At</a></h4>
+												<p>Apply online. Check your application status. Talk to students. Get tuition details.
+												</p>
+											</li>
+											<li>
+												<h4><a href="#">Phasellus Quis Est</a></h4>
+												<p>Information on scholarships, matching funds, graduate student research assistantships,
+													and more. </p>
+											</li>
+											<li>
+												<h4><a href="#">Vestibulum</a></h4>
+												<p>Learn more about one of the newest undergraduate concentrations at the University
+													of Michigan. </p>
+											</li>
+											<li>
+												<h4><a href="#">Nunc Eu</a></h4>
+												<p>Our advanced courses prepare you for exciting existing and emerging. </p>
+											</li>
+										
+											<li>
+												<h4><a href="#">Lorem Ipsum</a></h4>
+												<p>Join our graduates making significant contributions in teaching, research, and administration.
+												</p>
+											</li>
+											<li>
+												<h4><a href="#">Courses</a></h4>
+												<p>Access all master’s and doctoral-level courses. </p>
+											</li>
+											<li>
+												<h4><a href="#">Academic Resources</a></h4>
+												<p>Access all master’s and doctoral-level courses. </p>
+											</li>
+											<li>
+												<h4><a href="#">Life @ SI</a></h4>
+												<p>Housing, transportation, what to do in AA</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="promoCol">
+								<div class="promo promoHolderEvents first">
+									<a href="#" class="promoEvents">
+										<h3>Events</h3>
+										<h4>MAY</h4>
+										<div class="pDateItem">
+											<p class="pDate">5<span class="subSize_txt">th</span></p>
+											<p class="pDate_Info">Spring/Summer<br />
+												Term begins)</p>
+										</div>
+										<div class="pDateItem">
+											<p class="pDate">28<span class="subSize_txt">th</span></p>
+											<p class="pDate_Info">Registration (Full and Spring Half Terms)</p>
+										</div>
+										<span class="linkCtA">see all</span>
+									</a>
+								</div>
+								<div class="promo promoHolderTower">
+									<img src="img/promos/bellTowerBg.jpg" alt="Bell Tower" />
+									<a href="#" class="promoTower">
+										<h3>Vivamus id mollis quam. Morbi ac commodo nulla.</h3>
+										<span class="promoBtn linkCtA">Apply Now<span></span></span> </a>
+								</div>
+								<div class="promo promoHolderTrending last">
+								<div class="promoTrending innerShadow">
+									<h3>Trending</h3>
+									<ul>
+										<li><a href="#">Urna tincidunt congue</a></li>
+										<li><a href="#">Arcu sedAliquam </a></li>
+										<li><a href="#">Vel neque sit amet nunc</a></li>
+										<li><a href="#">Morbi euismod magna </a></li>
+										<li><a href="#">Donec viverraAenean faci</a></li>
+									</ul>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<p class="copyright">&copy; <span class="year">2011</span> University of Michigan College
+					of Engineering</p>
+				<nav>
+					<ul>
+						<li><a href="#">Site Map</a></li>
+						<li><a href="#">Site Feedback</a></li>
+						<li><a href="#">Accessibility</a></li>
+						<li><a href="#">Safety</a></li>
+						<li class="last"><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<a href="http://www.umich.edu" target="_blank" id="umFooterLogo" class="ir">University
+					of Michigan</a>
+			</footer>
+		</div>
+		<!-- JavaScript at the bottom for fast page loading -->
+		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+		<script>			window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+
+		<script>
+			var slideShowImgs = [
+				{ image: 'img/primaryLanding/sampleTheater1.jpg', title: '1: Morbi Euismod Magna Ac Lorem Rutrum', subTitle: '1: Sed Nec Diam Eu Diam Mattis Viverra. Nulla Fringilla.', url: '#link1' },
+				{ image: 'img/primaryLanding/sampleTheater2.jpg', title: '2: Morbi Euismod Magna Ac Lorem Rutrum', subTitle: '2: Sed Nec Diam Eu Diam Mattis Viverra. Nulla Fringilla.', url: '#link2' },
+				{ image: 'img/primaryLanding/sampleTheater3.jpg', title: '3: Morbi Euismod Magna Ac Lorem Rutrum', subTitle: '3: Sed Nec Diam Eu Diam Mattis Viverra. Nulla Fringilla.', url: '#link3' }
+			];
+		</script>
+
+		<!-- scripts concatenated and minified via build script -->
+
+		<script src="js/plugins_source/supersized.3.2.5.js"></script>
+
+		<script src="js/plugins.js"></script>
+
+		<script src="js/plugins_source/supersized.umcoe.js"></script>
+
+		<script src="js/scripts.js"></script>
+
+		<!-- end scripts -->
+	</body>
+</html>

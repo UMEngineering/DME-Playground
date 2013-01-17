@@ -1,0 +1,8 @@
+ul li {
+    width: 195px;
+    float: left;
+    display: block;
+    margin: 0 0 0 3px;
+    border: thin solid blue;
+    position: relative;
+}
