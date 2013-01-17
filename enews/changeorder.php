@@ -8,7 +8,8 @@ if ($_GET["order0"]) {
 	$success = true;
 	while(!empty($_GET["order".$i])) {
 		$e = explode("-", $_GET["order".$i]);
-		$query = "UPDATE enews SET orders='{$i}' WHERE id='{$e[0]}';";
+		$order_put = $i+1;
+		$query = "UPDATE enews SET orders='{$order_put}' WHERE id='{$e[0]}';";
 		$result = mysql_query($query);
 		if (!$result){
 			$success = false;
