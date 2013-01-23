@@ -42,7 +42,8 @@
 
   <div id="container">
     <div id="main" role="main">
-      <div id="one">
+      <button onclick="change('feImg1', 0, 5.5); change('feImg2', 0, 20.5);">Change position</button>
+      <div id="one" style="opacity: 1;">
         <!--svg version = "1.1">
           <filter id = "i1">
               <feImage x="0" y="200" id="imgone" result = "raster1" xlink:href = "img/one.png"/>
@@ -82,6 +83,10 @@
 
   <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
   <script>
+   function change(id, x, y){
+	   document.getElementById(id).setAttribute("x", parseInt(document.getElementById(id).getAttribute("x"))+x);
+	   document.getElementById(id).setAttribute("y", parseInt(document.getElementById(id).getAttribute("y"))+y);
+   }
    $(document).ready(function(){
         var container = document.getElementById("one");
         var mySvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -95,17 +100,19 @@
         feImg1.setAttribute("y",0);
         feImg1.setAttribute("x",0);
         feImg1.setAttribute("result","raster1");
-        feImg1.setAttributeNS('http://www.w3.org/1999/xlink','href','img/one.png');
+		feImg1.setAttribute("id", "feImg1");
+        feImg1.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href','img/one.png');
 
         var feImg2 = document.createElementNS("http://www.w3.org/2000/svg", "feImage");
         feImg2.setAttribute("y",0);
         feImg2.setAttribute("x",0);
         feImg2.setAttribute("result","raster2");
-        feImg2.setAttributeNS('http://www.w3.org/1999/xlink','href','img/two.png');
+		feImg2.setAttribute("id", "feImg2");
+        feImg2.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href','img/two.png');
 
         var feBlend = document.createElementNS("http://www.w3.org/2000/svg", "feBlend");
         feBlend.setAttribute("mode","screen");
-        feBlend.setAttribute("in1","raster1");
+        feBlend.setAttribute("in","raster1");
         feBlend.setAttribute("in2","raster2");
 
         var g = document.createElementNS("http://www.w3.org/2000/svg","g");
