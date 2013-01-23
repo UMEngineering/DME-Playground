@@ -1,0 +1,6 @@
+/* CSS Document */
+#twoimage {
+	width: 291px;
+	height: 291px;
+	background-image: -webkit-cross-fade(url(1.png), url(2.png), 60%);
+}
