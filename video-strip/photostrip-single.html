@@ -1,0 +1,826 @@
+
+
+
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+
+	<!--<![endif]-->
+
+  
+    
+    
+    
+    
+
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+
+    
+      <!--<base href="http://www.engin.umich.edu/college/about/news/stories/2012/november/nuclear-crud" /><!--[if lt IE 7]></base><![endif]-->
+    
+		<!-- Mobile viewport optimized: j.mp/bplateviewport 
+    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+
+    
+        
+        
+        <script>
+            (function (d, s, id) {
+                // This script generates a script tag to include the Facebook code needed for Like button functionality to work
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    
+
+        <meta content="Chemical deposits on fuel rods hurt the electricity output of nuclear power plants, but Michigan engineers understand the crud better after recreating it in a virtual reactor." name="description" />
+<title>How crud forms on nuclear fuel | Michigan Engineering</title>
+
+<link rel="kss-base-url" href="http://www.engin.umich.edu/college/about/news/stories/2012/november/nuclear-crud/" />
+
+  
+    <link rel="stylesheet" type="text/css" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/base-cachekey-23b24ef3e1050f4c3c94abadc709644d.css" />
+        <!--[if lt IE 8]>    
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/IEFixes-cachekey-5a0ab7d073b1309b47b4da568a396319.css" />
+        <![endif]-->
+    
+    <style type="text/css" media="screen">@import url(http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete-cachekey-a2fbfc2463e142c997df40b13d8c8c7c.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.app.dexterity.overlays-cachekey-840c5a5114714a58d886288c8c498aea.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/jquerytools.dateinput-cachekey-8602d8a8b2c4912872c2b183bb2b968f.css" />
+    <link rel="stylesheet" type="text/css" media="screen, print" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/style-cachekey-27209495335c87b46685f62e1e442fab.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/print-cachekey-2075711e27306c56ab6d65e74af24c2a.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/navigation-cachekey-d183a2671c49e19757ed07054bd4993e.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/promos-cachekey-122b0c0d717e2bd722d23f668a35d3a0.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/contentPage-cachekey-fe289d211610009068607bd9cad05779.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/flexslider-cachekey-cd30249f557f5722c70d95bcc8d8fc4b.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/overrides-cachekey-aadd29380d9a518f3eb0f2761c1e605c.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/ploneCustom-cachekey-b662fb7797b4ac04139e56ae1aa850cc.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="http://www.engin.umich.edu/portal_kss/Engineering%20Theme%202012/at-cachekey-c0b176dcb91c997bba2f9b3503a47ea9.kss" />
+  
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-cachekey-a4c0d0ee1ffe89460860d6a50052a04a.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-integration-cachekey-c2f345814fba41b371caa2eed64d2bd9.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/table_sorter-cachekey-a6afee45c9dd417f1a71916e846cd795.js"></script>
+       <!--[if lt IE 8]>
+     
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/iefixes-cachekey-e54c5b2044e5700decd99ab9f23ab758.js"></script>
+       <![endif]-->
+     
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete.min-cachekey-b327e67fe92f9492cf8a994948a89e9e.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompleteformwidget-autocomplete-cachekey-8a1bd7176109d5f34fc6b1ae8f0baafd.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/modernizr-2.5.3.min-cachekey-0d9c43839323dcee3d7eed583345a7fe.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/firstlast-cachekey-18f528bc9c16d4f6b465b0f3bbec4eef.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/plugins-cachekey-525dd097f517351291975478d73e441c.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery.colorbox.min-cachekey-4ac7b24df617514c8d306b0499ed946e.js"></script>
+    <script type="text/javascript" src="js/scripts-multiple.js"></script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec44a58724ed4d0"></script>
+
+
+        
+          
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2932296-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.engin.umich.edu/favicon.ico" />
+
+
+
+   <script> var slideShowData=[{title:"Crud ",caption: "Crud on fuel rods"},{title:"Crud simulation",caption: "Computer simulation of crud on fuel rods"},{title:"Fuel bundle",caption: "Model of nuclear fuel bundle"},];</script>
+   
+
+
+
+
+
+    <link rel="home" href="http://www.engin.umich.edu" title="Front page" />
+
+    <link rel="contents" href="http://www.engin.umich.edu/sitemap" title="Site Map" />
+
+
+
+
+
+
+
+        
+        <!-- Disable IE6 image toolbar -->
+        <meta http-equiv="imagetoolbar" content="no" />
+
+        
+        
+
+        
+        
+
+        
+        
+
+    
+
+  </head>
+
+  <body class="template-view portaltype-uom-news-newsstory site-engin section-college icons-on hasBreadcrumbs editPage contentNormal" dir="ltr">
+<div id="wrapper" class="lightBg">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+    <div id="portal-personaltools-wrapper">
+    <header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+        <div id="skip">
+            <a href="#content">Skip to Main Content</a>
+        </div>
+        <nav id="utility">
+            <ul>
+                
+                <li class="contact"><a href="http://www.engin.umich.edu/about_us/contact">Contact</a></li>
+                <li class="role">
+                    <span></span>
+                    <a href="#" class="roleChange">Select Role</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Prospective Student</a></li>
+                            <li><a href="#">Current Student</a></li>
+                            <li><a href="#">Alumni</a></li>
+                            <li><a href="#">Faculty</a></li>
+                            <li><a href="#">Staff</a></li>
+                            <li><a href="#">Family / Parents</a></li>
+                            <li><a href="#">College Supporters</a></li>
+                            <li><a href="#">Corporate Partners</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="search">
+                    <form name="searchform" method="get" id="searchGadget_form" action="http://www-search.engin.umich.edu/search">
+                        <fieldset>
+                            <label for="search">Search</label>
+                            <input type="hidden" name="site" value="CoE" />
+                            <input type="hidden" name="client" value="coe_frontend" />
+                            <input type="hidden" name="proxystylesheet" value="coe_frontend" />
+                            <input type="hidden" name="output" id="output" value="xml_no_dtd" />
+                            <input name="search" id="search" type="text" />
+                            <a href="http://www-search.engin.umich.edu/search" class="ir">Go</a>
+                        </fieldset>
+                    </form></li>
+                </ul>
+            </nav>
+            <nav id="mainBar">
+                <ul>
+                    
+                        
+                            <li class="about "><a href="http://www.engin.umich.edu/about">About</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/about/news">News</a></li>
+                                        <li><a href="http://www.engin.umich.edu/cal">Calendar</a></li>
+                                        <li><a href="http://www.engin.umich.edu/events">Special Events</a></li>
+                                        <li><a href="http://www.engin.umich.edu/caen ">Computing (CAEN)</a></li>
+                                        <li><a href="http://www.engin.umich.edu/facilities">Facilities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/safety">Safety</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/admin/dean ">Message from the Dean</a></li>
+                                        <li><a href="http://www.engin.umich.edu/about/facts.html">Facts and Figures</a></li>
+                                        <li><a href="http://www.engin.umich.edu/about/people.html">People</a></li>
+                                        <li><a href="http://www.engin.umich.edu/about/campus.html">Ann Arbor &amp; Campus</a></li>
+                                        <li><a href="http://www.engin.umich.edu/admin">College Administration</a></li>
+                                        <li><a href="http://www.engin.umich.edu/contact/quick.html">Contact Us</a></li>
+                                    </ul>
+                                    <ul class="last">
+                                        <li><a href="http://www.engin.umich.edu/diversity">Diversity and Outreach</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="research "><a href="http://www.engin.umich.edu/research">Research</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/research/undergrad.html">Undergraduate Research Opportunities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/admin/adrge/research-support">Getting Research Funding</a></li>
+                                        <li><a href="http://www.engin.umich.edu/departments/research.html">Sponsored Research</a></li>
+                                        <li><a href="http://www.engin.umich.edu/research/innovation.html">Instant Innovation</a></li>
+                                        <li><a href="http://www.engin.umich.edu/corporate">Corporate Relationships</a></li>
+                                        <li><a href="http://www.engin.umich.edu/teaching/crltengin">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="academics "><a href="http://www.engin.umich.edu/academics" title="Education related links">Academics</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/academics/undergrad/">Undergraduate Programs/Degrees</a></li>
+                                        <li><a href="http://www.engin.umich.edu/academics/gradprograms">Graduate Programs/Degrees</a></li>
+                                        <li><a href="http://www.engin.umich.edu/bulletin">College Bulletin</a></li>
+                                        <li><a href="http://www.engin.umich.edu/bulletin/courses.html">Courses</a></li>
+                                        <li><a href="http://www.engin.umich.edu/academics/calendar.html">Academic Calendar</a></li>
+                                        <li><a href="http://www.engin.umich.edu/students/graduation">Graduation</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="admissions "><a href="http://www.engin.umich.edu/admissions" title="Admissions related links">Admissions</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/ugadmissions">Undergraduate Admissions</a></li>
+                                        <li><a href="http://www.engin.umich.edu/gradadmissions">Graduate Admissions</a></li>
+                                        <li><a href="http://www.engin.umich.edu/ugadmissions/international">International Student</a></li>
+                                        <li><a href="http://www.engin.umich.edu/students/finaid.html">Scholarships, Financial Aid &amp; Funding</a></li>
+                                        <li><a href="http://www.engin.umich.edu/ugadmissions/visit">Visit Us</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="departments "><a href="http://www.engin.umich.edu/departments" title="Links to departmental websites">Departments</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://aerospace.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aerospace.engin.umich.edu/')">Aerospace Engineering</a></li>
+                                        <li><a href="http://aoss.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aoss.engin.umich.edu/')">Atmospheric, Oceanic and Space Sciences</a></li>
+                                        <li><a href="http://www.bme.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.bme.umich.edu/')">Biomedical Engineering</a></li>
+                                        <li><a href="http://che.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://che.engin.umich.edu/')">Chemical Engineering</a></li>
+                                        <li><a href="http://cee.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://cee.engin.umich.edu/')">Civil and Environmental Engineering</a></li>
+                                        <li><a href="http://eecs.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://eecs.umich.edu/')">Electrical Engineering and Computer Science</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://ioe.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://ioe.engin.umich.edu/')">Industrial and Operations Engineering</a></li>
+                                        <li><a href="http://interpro.engin.umich.edu" onclick="javascript: pageTracker._trackPageview('/outgoing/http://interpro.engin.umich.edu')">Interdisciplinary Professional Programs</a></li>
+                                        <li><a href="http://www.mse.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.mse.engin.umich.edu/')">Materials Science and Engineering</a></li>
+                                        <li><a href="http://me.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://me.engin.umich.edu/')">Mechanical Engineering</a></li>
+                                        <li><a href="http://name.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://name.engin.umich.edu/')">Naval Architecture and Marine Engineering</a></li>
+                                        <li><a href="http://ners.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www-ners.engin.umich.edu/')">Nuclear Engineering and Radiological Sciences</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="giving "><a href="http://www.engin.umich.edu/giving" title="Supporting the college links">Giving</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/giving/wheretogive">Where to Give</a></li>
+                                        <li><a href="http://www.engin.umich.edu/giving/whyigive">Why I Give</a></li>
+                                        <li><a href="http://www.engin.umich.edu/giving/howtogive">How to Give</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="last infoForYou "><a href="http://www.engin.umich.edu/info" title="Info for You">Info for You</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/students/prospective">Prospective Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/students">Current Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/alumni">Alumni</a></li>
+                                        <li><a href="http://www.engin.umich.edu/faculty">Faculty</a></li>
+                                        <li><a href="http://www.engin.umich.edu/staff">Staff</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/corporate">Corporate Partners</a></li>
+                                        <li><a href="http://www.engin.umich.edu/newscenter/expert.html">Media</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            <nav id="breadcrumbs">
+                <ul>
+                    <li>
+                        /
+                        <a href="http://www.engin.umich.edu">College</a></li>
+                    
+                        
+                            <li>
+                                /<a href="http://www.engin.umich.edu/college/about">About</a></li>
+                            
+                        
+                    
+                    
+                        
+                            <li>
+                                /<a href="http://www.engin.umich.edu/college/about/news">News Center</a></li>
+                            
+                        
+                    
+                    
+                        
+                            <li>
+                                /<a href="http://www.engin.umich.edu/college/about/news/stories">Stories</a></li>
+                            
+                        
+                    
+                    
+                        
+                            <li>
+                                /<a href="http://www.engin.umich.edu/college/about/news/stories/2012">2012</a></li>
+                            
+                        
+                    
+                    
+                        
+                            <li>
+                                /<a href="http://www.engin.umich.edu/college/about/news/stories/2012/november">November</a></li>
+                            
+                        
+                    
+                    
+                        
+                            
+                            <li class="last">/
+                                <a href="http://www.engin.umich.edu/college/about/news/stories/2012/november/nuclear-crud">How crud forms on nuclear fuel</a></li>
+                        
+                    
+                </ul></nav>
+            </header>
+        </div>
+
+<span id="headerPrintOnly"><img class="printOnly" alt="print Logo" src="/engin/MichiganCollegeEngineeringPrintOnlyLogo.jpg" /></span>
+
+
+
+
+
+</div>
+
+      </div>
+
+      
+      
+
+      <div role="main" id="contentWrap" class="wideCol">
+      
+      
+
+        
+        
+          
+          
+          <div class="leftCol" id="col1">
+            
+              <div class="promoCol">
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f636f6c6c6567650a6e617669676174696f6e" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f636f6c6c6567650a6e617669676174696f6e first"><div class="navPortlet">
+
+<nav id="sideNav" class="sideNav">
+<ul>
+    <li class="academics hasCurrent first"><a href="http://www.engin.umich.edu/college/about">About</a>
+        
+        <ul>
+        
+           <li class="hasCurrent"><a href="http://www.engin.umich.edu/college/about/news">News Center </a>
+             
+           </li>
+        
+        </ul>
+        
+    </li>
+</ul>
+</nav>
+
+
+</div>
+</div>
+
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f636f6c6c6567652f61626f75742f6e6577732f73746f726965732f323031322f6e6f76656d6265722f6e75636c6561722d637275640a636f6e74616374" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f636f6c6c6567652f61626f75742f6e6577732f73746f726965732f323031322f6e6f76656d6265722f6e75636c6561722d637275640a636f6e74616374">
+<div class="contactPortlet">
+  
+
+<style scoped>#contactBox {background: #ffffff url("http://www.engin.umich.edu/college/contact-collections/contacts-k-to-o/kate-mcalpine/@@display-file/contact_image/kmca.jpg") bottom right no-repeat;}</style>
+
+      <div id="contactBox" class="vcard">
+        <div class="info">
+          <h3>Contact</h3>
+    	          <p class="name fn">Kate McAlpine</p>
+    		  <p class="email"><a href="mailto:kmca@umich.edu">kmca@umich.edu</a></p>
+    		  <p class="tel">(734) 763-4386</p>
+    		  <p class="address adr"><span class="extended-address">3214 SI-North</span></p>
+        </div>
+      </div>
+   
+
+</div>
+
+</div>
+
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f636f6c6c6567652f61626f75742f6e6577732f73746f726965732f323031322f6e6f76656d6265722f6e75636c6561722d637275640a65787465726e616c2d6c696e6b73" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f636f6c6c6567652f61626f75742f6e6577732f73746f726965732f323031322f6e6f76656d6265722f6e75636c6561722d637275640a65787465726e616c2d6c696e6b73 last"><div class="promo promoHolderOtherSites">
+ <div class="promoOtherSites innerShadow">
+ <h3>Other Sites</h3>
+ <ul>
+   <li><a target="_blank" href="http://www.casl.gov/">Consortium for Advanced Simulation of Light Water Reactors</a></li>
+   
+   
+   
+   
+   
+   
+
+ </ul>
+ </div>
+</div>
+
+
+</div>
+
+
+
+</div>
+            
+          </div>
+          
+          
+          <div id="content" class="content rightCol">         
+
+          <div id="viewlet-above-content">
+    
+
+
+
+</div>
+
+          
+            <div class="">
+
+              
+
+              <span id="contentTopLeft"></span>
+              <span id="contentTopRight"></span>
+
+              
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+
+              
+                  
+
+                  
+
+                    
+                      
+                      
+            <div class="pageHeader">
+                <h1>How crud forms on nuclear fuel</h1>
+                <span class="articleDate">11/27/2012</span>
+                <span>
+                    <img class="michM-Image" alt="" src="http://www.engin.umich.edu/imgMichM.png" />
+                </span>
+                   <div class="authorAttribution">
+                     <p>From: <span>Kate McAlpine</span></p>
+                     <p>Michigan Engineering</p>
+                   </div>
+            </div>
+        
+                      
+
+<div id="social" class="social">
+
+    <!-- AddThis Button BEGIN -->
+
+    <div class="addthis_toolbox addthis_default_style ">
+
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+
+        <a class="addthis_button_tweet" addthis:url="http://www.engin.umich.edu/college/about/news/stories/2012/november/nuclear-crud" addthis:title="How crud forms on nuclear fuel" addthis:description="Chemical deposits on fuel rods hurt the electricity output of nuclear power plants, but Michigan engineers understand the crud better after recreating it in a virtual reactor."></a>
+
+        <a class="addthis_counter addthis_pill_style"></a>
+
+    </div>
+
+    <!-- AddThis Button END -->
+
+</div>
+
+                      
+                      
+    
+
+
+
+
+
+    <div id="contentHolder">
+    
+      
+            <div id="replacement">
+                <div class="contentBlock shadow first">
+                    <div class="innerShadow"><p><img src="http://www.engin.umich.edu/college/about/news/stories/2012/november/images/crudrodsfull112712.jpg" alt="Nuclear fuel bundle" class="fullWidthImg" title="Nuclear fuel bundle" /></p>
+
+<p>An ambitious project to build a complete, 3D computer model of how   nuclear power reactors operate and degrade is only halfway through its   first five years, but already the new software is tackling real-world   problems. By drawing multiple physical and chemical phenomena together   into one computer program, Michigan engineers and collaborators at Los   Alamos National Laboratory (LANL) in New Mexico, accurately modeled how   an unwanted substance deposits on fuel rods, causing costly problems.</p>
+
+<p>“This understanding should provide the insights necessary for nuclear   plant operators to adjust the plant operating strategies to avoid crud   formation and enable plant performance to resume operating at its peak   efficiency,” said Thomas Downar, a professor of nuclear engineering  and  radiological sciences (NERS), who worked on the simulation.</p>
+
+<p>In nuclear engineering, “crud” is a technical term.  It stands for   Chalk River Unidentified Deposit, originally found on the cladding, or   outer coating, of fuel rods in the Canadian reactor for which it was   named. The yellowish substance can be flaky, porous, or hard depending   on its chemical make-up. In most cases, it reduces the power output of   nuclear reactors – the deposits absorb the neutrons that keep the   fission reaction going.</p>
+
+<p>But it can do worse. Annalisa Manera, an associate professor of NERS   who led the effort, said, “Crud deposits promote local corrosion that   with time can create a rupture in the cladding, and so the fission   product can be released into the coolant.”</p>
+
+<p>Damaged fuel is an expensive prospect – it means the plant must be   shut down, explained Dan Walter, a student working with Manera. “Over $1   million per day is lost during shutdown,” he said, for standard   reactors.</p>
+
+<div class="carouselWrap">
+
+<div class="carouselHolder carouselSingle">
+
+<h4>Crud</h4>
+
+<div class="carousel">
+
+<ul>
+
+<!--
+==================== 
+Put the image you want in the img tag to display in the preview of the slider 
+====================
+-->
+<li><a class="c1Image" href="#crud-crud"><img height="109/" src="http://www.engin.umich.edu/college/about/news/stories/2012/november/photo-sets/crud/crud-crud/download/small_image/crud-crud-112712thumb.jpg" width="141" /></a></li>
+
+<li><a class="c1Image" href="#crud-simulation"><img height="109/" src="http://www.engin.umich.edu/college/about/news/stories/2012/november/photo-sets/crud/crud-simulation/download/small_image/crud-simulation-112712thumb.jpg" width="141" /></a></li>
+
+<li><a class="c1Image" href="#crud-rods"><img height="109/" src="http://www.engin.umich.edu/college/about/news/stories/2012/november/photo-sets/crud/crud-rods/download/small_image/crud-rods-112712thumb.jpg" width="141" /></a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="carousel carouselCaption">
+
+<p> </p>
+
+</div>
+
+<div class="carouselLightboxContent">
+
+<div class="innerShadow lbContent" id="crud-crud">
+
+<h2 class="imgHeader">Crud</h2>
+
+<span><a class="closeX lbClose" href="#">Close</a></span>
+
+<div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/yfOYIPWK1F8" frameborder="0" allowfullscreen></iframe></div>
+
+<div class="lbBorderDivider"></div>
+
+<p class="lbDescription">Crud on nuclear fuel rods, courtesy of the Electric Power Research Institute.</p>
+
+<div class="social">
+
+<div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like"></a><a class="addthis_button_tweet"></a><a class="addthis_counter addthis_pill_style"></a></div>
+
+</div>
+
+</div>
+
+<div class="innerShadow lbContent" id="crud-simulation">
+
+<h2 class="imgHeader">Crud simulation</h2>
+
+<span><a class="closeX lbClose" href="#">Close</a></span>
+
+<div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/yfOYIPWK1F8" frameborder="0" allowfullscreen></iframe></div>
+
+<div class="lbBorderDivider"></div>
+
+<p class="lbDescription">Computer simulation of crud build-up on nuclear fuel rods. Thickness scale in micrometers (1/1000 millimeters). Credit: Annalisa Manera, U-M NERS, and colleagues.</p>
+
+<div class="social">
+
+<div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like"></a><a class="addthis_button_tweet"></a><a class="addthis_counter addthis_pill_style"></a></div>
+
+</div>
+
+</div>
+
+<div class="innerShadow lbContent" id="crud-rods">
+
+<h2 class="imgHeader">Fuel bundle</h2>
+
+<span><a class="closeX lbClose" href="#">Close</a></span>
+
+<div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/yfOYIPWK1F8" frameborder="0" allowfullscreen></iframe></div>
+
+<div class="lbBorderDivider"></div>
+
+<p class="lbDescription">Model of nuclear fuel bundle. Credit: Arkhipova Maria, iStockPhoto.</p>
+
+<div class="social">
+
+<div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like"></a><a class="addthis_button_tweet"></a><a class="addthis_counter addthis_pill_style"></a></div>
+
+</div>
+
+</div>
+
+</div>
+
+<p>Nuclear   engineers already knew the basics for how crud appears on the fuel   rods. It is mostly composed of nickel and iron, thought to have leached   out of the coated stainless steel tubes that run through the steam   generator. These chemicals concentrate and combine atop hotspots on the   fuel rods. But when researchers tried to use computers to better   understand how the crud behaves, they couldn’t recreate the striped   pattern that appeared on fuel rods.</p>
+
+<p>“This we could see only with a detailed, high-fidelity, 3D simulation,” said Manera.</p>
+
+<p>The locations of the hotspots depend on where neutrons create fission   and how the heat is removed by the coolant water. To find out how the   deposits evolve, chemistry must be taken into account as well. Computer   models with approximate descriptions of the physics, the standard for   nuclear power utilities, fell far short of simulating these   interconnected phenomena, said Manera.</p>
+
+<p>Independent computer models for the neutrons, the heat transfer and   coolant flow, and the chemistry are complex in their own right, so   Manera assembled a collaboration that could provide each piece. A team   led by Ben Collins, a research scientist in Downar’s group,  developed a   computer code that predicts where and how often neutrons interact with   the fuel and generate power. Manera’s group specializes in modeling  the  heat transfer and fluid dynamics, and Brian Kendrick, a senior  scientist  at LANL, came in on the chemistry side. The team combined  these  computer models into one simulation.</p>
+
+<p>When   the striped pattern showed up in the virtual crud, the team was able  to  trace it back to the spacers that hold the fuel rods in place. These   metal grids also bear so-called mixing vanes that help draw cooler  water  to the fuel rod surfaces. These triangular appendages redirect  the  flow, inducing additional turbulence, explained Victor Petrov, a   research scientist in Manera's group who simulated the behavior of   fluids and helped connect the three simulations. “The mixing vanes   create a flow swirl which affects the location of the hot spots on the   fuel rods surface and also leads to erosion of the CRUD. The combination   of these two effects is of the origin of the stripes observed in crud   formations,” he said.</p>
+
+<p>The simulation’s ability to reproduce the stripes gave the team   confidence in other details of how the crud deposits developed. One of   the most important is how neutron-absorbing boron bonds with lithium to   fill in the pores of the crud, diminishing the power generated by the   fuel rod. Operators add boron to cooling water to reduce the fission   rate throughout the reactor, while lithium controls the acidity of the   water.</p>
+
+<p>“The importance of adding boric acid and lithium to the coolant   should be weighed against the associated effects on boron uptake into   the crud,” said Walter.</p>
+
+<p>So far, the team modeled a bundle of sixteen fuel rods, but real fuel   bundles contain 196 to 289 fuel rods. Manera’s team will run the   simulation on complete fuel rod assemblies next year.</p>
+
+<p>This research is part of the <a href="http://www.casl.gov/">Consortium for Advanced Simulation of Light Water Reactors (CASL)</a>,   which aims to create a full 3D computer model of a nuclear power   reactor. The virtual environment will allow researchers to explore   problems in current reactors and potential solutions, and also test   designs for future reactors.</p>
+
+</div>
+                                                                    
+                                                <div class="topicList">
+                                                        <p>Article topics:
+                                                          <span><a href="/college/about/news#newsTopic=Nuclear+Energy">Nuclear Energy</a>, 
+</span>
+                                                          <span><a href="/college/about/news#newsTopic=Nuclear+Crud">Nuclear Crud</a>
+</span></p>
+
+                    <br />
+
+
+                                                </div>
+                                                </div>
+                </div>
+                <div class="contentBlock shadow">
+                    <div class="innerShadow"><p><strong>About Michigan Engineering:</strong> The University of Michigan College of Engineering is one of the top engineering schools in the country. Nine of its eleven academic departments are ranked in the nation's top 10. At $180 million annually, its engineering research budget is one of largest of any public university. Its faculty and students are making a difference at the frontiers of fields as diverse as nanotechnology, climate science, healthcare, homeland security and robotics, and they are investigators on spacecraft across the solar system. Its entrepreneurial culture encourages faculty and students alike to move their innovations beyond the laboratory and into the real world. Its alumni base of nearly 70,000 spans the globe.</p></div>
+                </div>
+            </div>
+        
+       
+
+
+
+
+    <div class="visualClear"><!-- --></div>
+
+    <div class="documentActions">
+        
+
+        
+
+    </div>
+
+<div id="disqusComments" class="contentBlock last shadow">
+    <div class="innerShadow">
+        <div id="disqus_thread">
+            <script type="text/javascript"> var disqus_title="How crud forms on nuclear fuel";var disqus_developer=1;    var disqus_shortname = "enginnews"; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+               </script>
+            <noscript>Please enable JavaScript to view the
+                <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by
+                <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+</div>
+
+   
+
+
+
+
+
+    
+
+    </div>
+
+                    
+                  
+                
+              
+
+          
+
+          <div id="viewlet-below-content">
+
+
+</div>
+
+          
+
+
+            </div>             
+          
+      </div>     
+      
+      
+      </div>
+    </div>
+
+      
+
+        
+
+    <footer>
+        <div class="hidden" id="hostportinfo">caen-www-plone1.engin.umich.edu:8080</div>
+        <p class="copyright">&copy;
+            <span class="year">2012</span>
+            University of Michigan College of Engineering</p>
+        <nav>
+            <ul>
+                
+                    <li class=""><a href="https://www.engin.umich.edu/form/site_feedback">Site Feedback</a></li>
+                
+                
+                    <li class=""><a href="http://www.engin.umich.edu/safety">Safety</a></li>
+                
+                
+                    <li class="last"><a href="http://www.engin.umich.edu/contact/quick">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+        <a href="http://www.umich.edu" target="_blank" id="umFooterLogo" class="ir">University of Michigan</a>
+    </footer>
+
+
+
+
+      
+
+      
+      
+
+<div id="kss-spinner"><img alt="" src="http://www.engin.umich.edu/spinner.png" /></div>
+</div>
+      
+      
+
+</body>
+</html>
+
