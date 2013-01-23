@@ -1,0 +1,13 @@
+.backgroundsize .youtube-div {
+	background-repeat: no-repeat !important;
+	background-position:center -26px !important;
+	background-size: 140% !important;
+	background-color: black !important;
+}
+
+.youtube-title {
+    top: 158px !important;
+    height: 33px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius:  0px !important;
+}
