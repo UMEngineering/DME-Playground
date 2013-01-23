@@ -1,0 +1,100 @@
+#one {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .5;
+    -webkit-transition: all .2s ease-out;
+}
+
+#two {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .5;
+    -webkit-transition: all .5s ease-out;
+}
+#three {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .5;
+    -webkit-transition: all 1s ease-out;
+}
+
+#canvas1 {
+    display: block;
+    position: fixed;
+    top: 0;
+}
+
+svg {
+    width: 2000px;
+    height: 3000px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -1200px;
+}
+
+#main {
+    display: block;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 19px;
+    font-family: sans-serif;
+    position: relative;
+    z-index: 1000;
+    width: 840px;
+    color: #eee;
+    font-size: 76px;
+}
+
+#head {
+    width: 1040px;
+    display: block;
+    position: relative;
+    z-index: 100;
+    padding: 71px 0 70px;
+    margin: 0 auto;
+    background: black;
+}
+
+h2 {
+    font-size: 30px;
+    color: #222;
+}
+
+#content {
+    z-index: 100;
+    background: white;
+    margin: -24px 0 0;
+    display: block;
+    position: relative;
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 0 40px rgba(255,255,255,.3);
+}
+
+#content p {
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 3px 0!important;
+}
+
