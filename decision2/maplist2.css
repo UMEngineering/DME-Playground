@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body p:nth-child(1) {
+    margin: 12px;
+    
+}
+
+#videos {
+    /*display: none;*/
+}
+
+#loading {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(img/ajax-loader.gif) no-repeat top left;
+    margin: 20px auto;
+}
+
+.video-item {
+    position: relative;
+    width: 280px;
+    margin: 0 15px 20px;
+    float: left;
+    height: 100px;
+}
+
+.video-content {
+    padding: 0;
+    width: 280px;
+    height: 23px;
+    margin: 0;
+    position: relative;
+    font-size: 11px !important;
+    margin: -23px 0 20px 0px;
+    background: rgba(255, 255, 255, .8);
+    z-index: 10;
+}
+
+.video-content p {
+    display: block;
+    position: absolute;
+    margin: 0 !important;
+    font-size: 10px !important;
+}
+
+.video-content p:nth-child(1) {
+    left: 3px;
+    bottom: 4px;
+}
+
+.video-content p:nth-child(2) {
+    right: 5px;
+    bottom: 4px;
+    width: auto;
+    max-width: 138px;
+}
+
+.video-content p a {
+    width: auto;
+    background: url(http://engin.umich.edu/congrats/img/pages/map-pics/pin.png) no-repeat right top scroll;
+    max-width: 138px;
+    padding: 18px 24px 0 0;
+    text-decoration:none;
+}
+
+iframe {
+    display: block;
+    margin: 0;
+
+    
+    width: 280px;
+    z-index: -2;
+}
+
+.overlay {
+    width: 280px;
+    height: 100px;
+    position: absolute;
+
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+	
+	display: none;
+}
+
+.overlay img {
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    margin: 0 0 0 -192px;
+    width: 335px;
+    z-index: -110;
+}
+
+.overlay .play {
+    background: url("http://engin.umich.edu/congrats/img/pages/map-pics/map-play-arrow.png") no-repeat center center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none !important;
+    width: 32px;
+    height: 24px;
+    margin: -14px 0 0 -20px;
+}
+
+/* Lazy load Youtube START*/
+a.youtube-lazy-link {
+  vertical-align:top;
+  background:#555;
+  width:280px; 
+  height:100px;
+  /*background-size:cover;*/
+  
+  text-decoration:none;
+  color:#DDD;
+  text-align:left;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  display:inline-block;
+}
+a.youtube-lazy-link:hover {
+  text-decoration:none;
+  color:#FFF;
+}
+.youtube-lazy-link-div {
+  width:280px; 
+  height:100px;
+  background: url(http://lh4.googleusercontent.com/-QCeB6REIFlE/TuGUlY3N46I/AAAAAAAAAaI/9-urEUtpKcI/s800/youtube-play-button.png) center no-repeat;
+  position:absolute;
+}
+.youtube-lazy-link-div:hover {
+  background: url(http://lh5.googleusercontent.com/-oBFjswrosz4/TuHqainRc3I/AAAAAAAAAbE/t3rMQuSJdLA/s800/youtube-play-button-hover.png) center center no-repeat;
+}
+
+
+@media only screen and (min-width: 600px) {
+	a.youtube-lazy-link, .youtube-lazy-link-div {
+		width: 560px;
+		height: 315px;
+	}
+	
+    .video-content {
+    width: 560px;
+
+    height: 35px;
+    margin-top: -35px;
+}
+
+    .video-item {
+        display:block;
+
+    
+        height: 315px;
+        width: 560px;
+}
+
+    .overlay {
+        display: none !important;    
+    }
+    iframe {
+    width: 560px;
+    height: 315px;
+    }
+    .video-content p:nth-child(1) {
+    font-size: 14px !important;
+        
+    }
+}
