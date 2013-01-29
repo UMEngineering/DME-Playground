@@ -31,10 +31,46 @@ body {
     -webkit-transition: all 1s ease-out;
 }
 
+#four {
+    display: block;
+    position: absolute;
+    top:1000px;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .7;
+    -webkit-transition: all .2s ease-out;
+}
+
+#five {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .7;
+    -webkit-transition: all .5s ease-out;
+}
+#six {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .7;
+    -webkit-transition: all 1s ease-out;
+}
+
 #canvas1 {
     display: block;
     position: fixed;
     top: 0;
+}
+
+img {
+    border: none !important;
+    background: none;
+    display: none;
 }
 
 svg {
@@ -51,26 +87,28 @@ svg {
     position: relative;
     width: 1000px;
     margin: 0 auto;
+    border: none;
 }
 
 h1 {
     display: block;
     margin: 0 0 0 0;
     padding: 0 0 0 19px;
-    font-family: sans-serif;
     position: relative;
     z-index: 1000;
-    width: 840px;
+    width: 870px;
     color: #eee;
-    font-size: 76px;
+    font-size: 124px;
+    font-family: "league-gothic";
+    font-weight: 200;
 }
 
 #head {
-    width: 1040px;
+    width: 995px;
     display: block;
     position: relative;
     z-index: 100;
-    padding: 71px 0 70px;
+    padding: 65px 0 24px;
     margin: 0 auto;
     background: black;
 }
@@ -80,10 +118,10 @@ h2 {
     color: #222;
 }
 
-#content {
+.content {
     z-index: 100;
     background: white;
-    margin: -24px 0 0;
+    margin: 40px 20px;
     display: block;
     position: relative;
     width: 600px;
@@ -91,8 +129,11 @@ h2 {
     box-shadow: 0 0 40px rgba(255,255,255,.3);
 }
 
-#content p {
+.content p {
     margin: 20px 0;
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 1.5em;
 }
 
 .subtitle {
@@ -108,8 +149,9 @@ h2 {
     display: block;
     height: 51px;
     
-	position: relative;
-    top: 0px;
+	position: absolute;
+    
+	top: 199px;
 	left: 0;	
     width: 100%;
     
@@ -161,6 +203,11 @@ h2 {
 	float: none;	
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
 /* CSS Document */
 .promoHolderYoutube, .youtubeColorbox, .youtube-div {
 	width: 200px;
@@ -190,4 +237,10 @@ div.youtube-title {
 
 div.youtube-title p {
 	margin: 2px 0;
+}
+
+li.dmegallery {
+    position: absolute;
+    right: 0;
+    top: 11px;
 }

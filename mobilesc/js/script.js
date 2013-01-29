@@ -12,6 +12,14 @@ function parallax(object){
 		scroll_ok = true;
 	}, 33);//33ms is 30fps, you can try changing this to something larger for better performance
 	$(window).bind('scroll', function () {
+		console.log($window.scrollTop());
+		if ($window.scrollTop() > 198) {
+			$(".sticky").addClass("fixed");
+		}
+		if ($window.scrollTop() < 198) {
+			$(".sticky").removeClass("fixed");
+		}
+
 		first++;
 		if (scroll_ok === true) {
 			scroll_ok = false;

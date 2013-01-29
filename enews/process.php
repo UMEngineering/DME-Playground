@@ -72,7 +72,7 @@ if ($_POST["create"]) {
 	
 	$result = mysql_query($query);
 	if (!$result){
-		die("<br />Cannot update".mysql_error());
+		die("<br />Cannot update $query. ".mysql_error());
 	}
 	Header("Location:edit.php?year={$year}&month={$month}&err=0");
 	
@@ -90,7 +90,7 @@ if ($_POST["create"]) {
 	
 	$result = mysql_query($query);
 	if (!$result){
-		die("<br />Cannot update".mysql_error());
+		die("<br />Cannot update 1 $query. ".mysql_error());
 	}
 	Header("Location:edit.php?year={$year}&month={$month}&err=0");
 } else if ($_POST["delete"]){
@@ -113,7 +113,7 @@ if ($_POST["create"]) {
 	
 	$result = mysql_query($query);
 	if (!$result){
-		die("<br />Cannot update".mysql_error());
+		die("<br />Cannot update 2 $query. ".mysql_error());
 	}
 	Header("Location:edit.php?year={$year}&month={$month}&err=0");
 } else if ($_POST["editinfull"]){
@@ -143,7 +143,7 @@ if ($_POST["create"]) {
 	
 	$result = mysql_query($query);
 	if (!$result){
-		die("<br />Cannot update".mysql_error());
+		die("<br />Cannot update 3 $query. ".mysql_error());
 	}
 	Header("Location:editfull.php?year={$year}&month={$month}&err=0");
 	
@@ -152,9 +152,9 @@ if ($_POST["create"]) {
 function checkString($str){
 	$str = mysql_real_escape_string($str);
 	$str = stripslashes($str);
-	str_replace("&", "&amp;", $str);
+	$str = htmlentities($str, ENT_QUOTES);
 	$str = strip_tags($str);
-	return str_replace("'", "\'", $str);
+	return $str;
 }
 
 function uploadFile($year, $month) {
