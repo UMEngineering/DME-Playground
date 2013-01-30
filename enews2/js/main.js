@@ -10,6 +10,8 @@ function addOne(type){
 	
 	if (type == 2 || type == 3) {
 		appendString += '<p><label>Upload image: </label><input type="file" name="file" /></p>';
+	} else {
+		appendString += '<p><label>Upload image: </label><input type="file" name="file[]" /></p>';
 	}
 	
 	appendString += '<p><label>Description: </label><textarea rows="10" cols="50" name="desc-small'+totalSmallEntries+'" id="desc-small'+totalSmallEntries+'"></textarea></p><p><label>Link: </label><input type="text" name="href-small'+totalSmallEntries+'" id="href-small'+totalSmallEntries+'" size="80" /></p></div>';
