@@ -1,0 +1,177 @@
+/* CSS Document */
+
+#main {
+	background: white;
+	overflow: auto;
+}
+	
+#main p, #checklist div p {
+	color: #222;
+	font-weight: normal;
+}
+
+.page_detail {
+	display: block;
+	position: relative;
+}
+
+span.steps, span.checked {
+	font-weight: bold;
+	color: #00285C;
+	display: inline-block;
+	margin-top: 3px;
+}
+
+span.checked {
+	color: #E79500;
+}
+
+.styled {
+	position: absolute;
+	width: 99px;
+	height: 128px;
+	background: url(../img/unchecked.png) no-repeat;
+	display: block;
+}
+
+#bottom-title, #img-nav-div {
+	background: #2A4872;
+}
+
+#bottom-title {
+	color: white;
+	width: 90%;
+	margin: auto;
+	padding-left: 1em;
+	font-size: 10pt;
+	font-weight: 100;
+	padding: 4px 7px 0;
+}
+
+img.contact {
+	width: 100px;
+	float: left;
+	margin: 0 10px 5px 0;
+	clear: both;
+}
+
+p.contact {
+	float: left;
+	clear:both;
+}
+
+.twitter-timeline {
+    margin: 0 auto;
+    width: 100%;
+}
+
+iframe.fb {
+    height: 580px;
+    width: 100%;	
+}
+
+iframe.fb img {
+	height: auto;
+	width: auto;
+}
+
+@media only screen and (max-width: 767px) {
+	#container, #main {
+		height: 100%;
+	}
+
+	iframe.maplist {
+ 	   height: 760px !important;
+	}
+
+	.bottom ul.imgs-nav {
+    height: 67px;
+
+	}
+
+	.bottom ul.imgs-nav li {
+	    height: 78px;
+	    width: 70px;
+	}
+
+	.bottom ul.imgs-nav li img {
+  		width: 70px;
+	}
+
+	.bottom ul.imgs-nav .transparent {
+    	font-size: 10px;
+		
+	}
+
+	iframe.fb {
+	    height: 580px;
+	    width: 300px;	
+	    margin: 0 auto;
+	    display: block;
+	    position: relative;
+	}
+	
+	.bottom {
+		width: 100%;
+		background: white;
+		position: fixed;
+		bottom: 0%;
+		white-space: nowrap;
+	}
+	
+	div#img-nav-div{
+		white-space: nowrap;
+	}
+	
+	#bottom-scrollbackground {
+		background: #212A55;
+	}
+	
+	#top-content-mobile {
+		display: block;
+	}
+	
+	.display-when-desktop {
+		display: none;
+	}
+
+	.page_detail iframe.youtube {
+	    width: 280px;
+	    height: 162px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#main {
+		margin-bottom: 0;
+	
+		min-height: 300px;
+		overflow: auto;
+	}
+	
+	iframe.maplist {
+ 	   height: 790px !important;
+	}
+
+	.bottom {
+		background: white;
+		margin: 0 5px 0 5px;
+	}
+	
+	#bottom-title, .flex-control-nav {
+		background: #657E9D;
+	}
+	
+	#top-content-mobile {
+		display: none;
+	}
+	
+	.display-when-desktop {
+		display: block;
+	}
+
+	.page_detail iframe.youtube {
+		width: 560px;
+		height: 320px;
+	}
+}

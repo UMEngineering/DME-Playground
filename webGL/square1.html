@@ -129,14 +129,14 @@ div#canvas-frame{
 	function loop() {
 		t++;
 		renderer.clear();
-		/*cube[0].rotation.set( t/100, t/100, t/100 );
+		cube[0].rotation.set( t/100, t/100, t/100 );
 		cube[1].rotation.set( 0, t/100, 0 );
 		cube[2].rotation.set( 0, 0, t/100 );
 		cube[3].rotation.set( t/100, 0, 0 );
 		cube[4].rotation.set( 0, t/100, 0 );
 		cube[5].rotation.set( 0, 0, t/100 );
 		cube[6].rotation.set( t/100, 0, 0 );
-		cube[7].rotation.set( 0, t/100, 0 );*/
+		cube[7].rotation.set( 0, t/100, 0 );
 		camera.lookAt( {x:0, y:0, z:0 } );
 		renderer.render(scene, camera);
 		window.requestAnimationFrame(loop);

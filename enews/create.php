@@ -34,6 +34,7 @@ require_once("../../db.php");
                 <h3>Lead story (with  image)</h3>
                 <p>There will be only one top entry</p>
                 <p><label>Title: </label><input type="text" name="title-big" id="title-big" size="80"/></p>
+                <p><label>Image: </label><input type="text" name="image-big" id="image-big" size="80"/></p>
                 <p><label>Description: </label><textarea rows="10" cols="50" name="desc-big" id="desc-big"></textarea></p>
                 <p><label>Link: </label><input type="text" name="href-big" id="href-big" size="80" /></p>
             </div>
@@ -44,6 +45,7 @@ require_once("../../db.php");
                 <div class="small-entry" id="e1">
                 	<h3>eNews #1</h3>
                     <p><label>Title: </label><input type="text" name="title-small1" id="title-small1" size="80"/></p>
+                    <p><label>Image: </label><input type="text" name="image-small1" id="image-small1" size="80" /></p>
                     <p><label>Description: </label><textarea rows="10" cols="50" name="desc-small1" id="desc-small1"></textarea></p>
                     <p><label>Link: </label><input type="text" name="href-small1" id="href-small1" size="80" /></p>
                 </div>

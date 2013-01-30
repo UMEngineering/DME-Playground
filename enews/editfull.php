@@ -15,6 +15,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
 	if ($row[2] != "0") {
 		die ("error processing data: data type not correct.");
 	}
+	$counter = 1;
 ?>
 
 <h1></h1><blockquote>&nbsp;</blockquote>
@@ -62,8 +63,8 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                         <p id="submit<?= $row[6] ?>"></p>
                         <a style="text-decoration: none;font-size: 10px; letter-spacing: 1pt; color:#9DACCE; font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif; line-height: 20px; display: block; margin-top: 8px;" href="<?= $row[4] ?>">VIEW THIS DIGITAL MULTIMEDIA EXPERIENCE</a>
                         <p id="responsetext" style="color: red;"></p>
-                        <input type="hidden" value="<?= $year ?>" name="year" />
-                        <input type="hidden" value="<?= $month ?>" name="month" />
+                        <input type="hidden" value="<?= $year ?>" name="year" id="year" />
+                        <input type="hidden" value="<?= $month ?>" name="month" id="month"/>
                         <p><a href="javascript: void(0);" style="color: red; font-size: 10pt;" onclick="editInFull(<?= $row[6] ?>, 0);" id="a<?= $row[6] ?>">Edit the top story</a></p>
                         </div>
                     	</form>
@@ -74,6 +75,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                             <ul id="sortable" style="list-style: none; margin: 0; padding: 0;">
                             <?php
                             while($row = mysql_fetch_row($result)){
+								$counter++;
                             ?>
                             <li class="ui-state-default" id="<?= $row[6] ?>-<?= $row[5] ?>">
                                 <div>
@@ -106,6 +108,8 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                             <?php
                             }
                             ?>
+                            <p><a href="javascript:void(0);" onclick="addOne(3);" style="color: red;">New small entry</a></p>
+                            <div class="small-entries"></div>
                             </ul>  
                         </td>
                     </tr>
@@ -188,3 +192,6 @@ $(function() {
 	$( "#sortable" ).disableSelection();
 });
 </script>
+<script>totalSmallEntries = <?php
+		echo $counter-1;
+	?>;</script>
