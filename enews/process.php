@@ -11,7 +11,7 @@ if ($_POST["create"]) {
 	$counter = 1;
 	while (true){
 		if ($_POST["title-small".$counter] && $_POST["desc-small".$counter] && $_POST["href-small".$counter]){
-			array_push($small_entry, checkString($_POST["title-small".$counter]), checkString($_POST["desc-small".$counter]), checkString($_POST["href-small".$counter]));
+			array_push($small_entry, checkString($_POST["title-small".$counter]), checkString($_POST["image-small".$counter]), checkString($_POST["desc-small".$counter]), checkString($_POST["href-small".$counter]));
 		} else {
 			break;
 		}
@@ -20,28 +20,28 @@ if ($_POST["create"]) {
 	
 	// Check if there are any existing eNews for this month and year
 	$check = mysql_query("SELECT id FROM enews WHERE year={$year} AND month={$month};");
-	if (!$check){
-		print("Cannot load result");
-	}
-	
-	if ($row = mysql_fetch_row($check)) {
+	if (!$check || $month == '' || $year == ''){
 		Header("Location:create.php?err=1");
 	} else {
-		// Add the content into the database
-		$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$big_entry[0]}', '', '0', '{$big_entry[2]}', '{$big_entry[3]}', '{$year}', '{$month}', '0')";
-		$count = 1;
-		for ($i=0; $i<count($small_entry); $i++){
-			$query = $query.", ('{$small_entry[$i]}', '', '1', '{$small_entry[$i+2]}', '{$small_entry[$i+3]}', '{$year}', '{$month}', '{$count}')";
-			$i = $i+3;
-			$count++;
+		if ($row = mysql_fetch_row($check)) {
+			Header("Location:create.php?err=1");
+		} else {
+			// Add the content into the database
+			$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$big_entry[0]}', '{$big_entry[1]}', '0', '{$big_entry[2]}', '{$big_entry[3]}', '{$year}', '{$month}', '0')";
+			$count = 1;
+			for ($i=0; $i<count($small_entry); $i++){
+				$query = $query.", ('{$small_entry[$i]}', '{$small_entry[$i+1]}', '1', '{$small_entry[$i+2]}', '{$small_entry[$i+3]}', '{$year}', '{$month}', '{$count}')";
+				$i = $i+3;
+				$count++;
+			}
+			$query = $query.";";
+			
+			$result = mysql_query($query);
+			if (!$result){
+				die("<br />Cannot insert: ".mysql_error());
+			}
+			Header("Location:index.php");
 		}
-		$query = $query.";";
-		
-		$result = mysql_query($query);
-		if (!$result){
-			die("<br />Cannot insert: ".mysql_error());
-		}
-		Header("Location:index.php");
 	}
 	
 } else if ($_POST["update"]){
@@ -59,6 +59,9 @@ if ($_POST["create"]) {
 	$fuploaded = uploadFile($year, $month);
 	if ($fuploaded == "" && $row = mysql_fetch_row($check)) {
 		$fuploaded = $row[0];
+		if ($fuploaded != checkString($_POST['image-'.$type])){
+			$fuploaded = checkString($_POST['image-'.$type]);
+		}
 	} else {
 		if ($row != "") {
 			unlink("{$row[0]}");
@@ -84,6 +87,9 @@ if ($_POST["create"]) {
 	
 	// Upload the photo
 	$fuploaded = uploadFile($year, $month);
+	if ($fuploaded == '' && checkString($_POST['image-small'.$order]) != ""){
+		$fuploaded = checkString($_POST['image-small'.$order]);
+	}
 	
 	// Edit the content in the database
 	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$vars[0]}', '{$fuploaded}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}');";
@@ -92,7 +98,12 @@ if ($_POST["create"]) {
 	if (!$result){
 		die("<br />Cannot update".mysql_error());
 	}
-	Header("Location:edit.php?year={$year}&month={$month}&err=0");
+	
+	if ($_POST["editinfull"] == 'true') {
+		Header("Location:editfull.php?year={$year}&month={$month}&err=0");
+	} else {
+		Header("Location:edit.php?year={$year}&month={$month}&err=0");
+	}
 } else if ($_POST["delete"]){
 	$month = $_POST["month"];
 	$year = $_POST["year"];
@@ -128,7 +139,7 @@ if ($_POST["create"]) {
 	}
 	
 	$fuploaded = uploadFile($year, $month);
-	if ($row = mysql_fetch_row($check) && $fuploaded == "") {
+	if ($fuploaded == "" && $row = mysql_fetch_row($check)) {
 		$fuploaded = $row[0];
 	} else {
 		if ($row != "") {
