@@ -53,7 +53,7 @@ if ($_POST["create"]) {
 			if (!$result){
 				die("<br />Cannot insert: ".mysql_error());
 			}
-			//Header("Location:index.php");
+			Header("Location:index.php");
 		}
 	}
 	
