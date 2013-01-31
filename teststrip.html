@@ -1,0 +1,917 @@
+
+
+
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+
+	<!--<![endif]-->
+
+  
+    
+    
+    
+    
+
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+
+    
+    
+		<!-- Mobile viewport optimized: j.mp/bplateviewport 
+    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+
+    
+        
+        
+
+        
+<title>Bub TV | Michigan Engineering</title>
+
+<link rel="alternate" data-kss-base-url="kss-base-url" href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/" />
+
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/member-cachekey-dcb100668a30b011b4efecc8f0f387e4.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/base-cachekey-e864bcde5c26c530951a8b039dca4f28.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csspublic-cachekey-1fc6789a41bff032bd70469e8173af4f.css" />
+    <link rel="stylesheet" type="text/css" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/columns-cachekey-eee201b49f9bbcdb604fa6b7468bfef1.css" />
+    <style type="text/css" media="screen">@import url(https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete-cachekey-740d1fb59894707d1d4bb7d801048583.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.app.dexterity.overlays-cachekey-71cecfebcee8438c1439fc6f6cd29c48.css" />
+    <style type="text/css">@import url(https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourcequickupload_staticuploadify-cachekey-7374c35a7bb36bdbb9f671a9b46da33b.css);</style>
+    <link rel="stylesheet" type="text/css" media="all" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/ploneCustom-cachekey-e7526373ac10b3c868af3f480e4adf91.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/overrides-cachekey-63c11e4c798f85ed77c38c99ab915515.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssjquerytools.dateinput-cachekey-8f294f80be14b7b324975ad3be42098f.css" />
+    <link rel="stylesheet" type="text/css" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssstyle-cachekey-a0246dfa202e367d94106dbad5a5db07.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csspromos-cachekey-e969c70d18f7a4d3af5fcc15399a0fe4.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csscontentPage-cachekey-4d4a6d9b3c533193fd2bc415521219f0.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssflexslider-cachekey-66228ca55a451ee874fb8ae7bd683494.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="https://caen-cms-dev.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssprint-cachekey-5d1e37a490b0a90aa40a5691eac08569.css" />
+
+  
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://caen-cms-dev.engin.umich.edu/portal_kss/Engineering%20Theme%202012/resourcetinymce.ksstinymce-cachekey-ff15c720d922b2802033be1df7d2c9c2.kss" />
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="https://caen-cms-dev.engin.umich.edu/portal_kss/Engineering%20Theme%202012/at-cachekey-b98f5e0a67c752badbe7414037445f8b.kss" />
+  
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery-1.6.4-cachekey-291d3b1d7f6738ea458980bf7c42ffb4.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-integration-cachekey-766c0f801be95b107b7a8be6ab041fad.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsform_tabbing-cachekey-54448457dd813fb0ec871d399279c136.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/popupforms-cachekey-d54f111e5ddb911050276e4526e63817.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/sarissa-cachekey-0ac76a59427dd9c9bbe7c2652acc3710.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/dropdown-cachekey-2319c79abc3293312fd98041e9344456.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete.min-cachekey-d5e4e78efb890f4f57ba86a1f424fa90.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourcequickupload_staticswfobject-cachekey-6e4989a4a85d7b0a78e558928c3abf92.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompleteformwidget-autocomplete-cachekey-3a08e872cb7eeb6fe2f91d1821e7cd35.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsmodernizr-2.5.3.min-cachekey-fee531efdd5b5f7c1d8298bc67fa3484.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jstableColors-cachekey-7ecd98d7d5832a8452411e2270326e3a.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsplugins-cachekey-83f6d5fdcae9514f6a7b04c4b5e3f2e3.js"></script>
+    <script src="teststrip.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsfirstlast-cachekey-4b4b25729a0e640b1045612233c30438.js"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery.colorbox.min-cachekey-1c5608fa7bef8b763583dd497068d39a.js"></script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec44a58724ed4d0"></script>
+    <script type="text/javascript" src="https://caen-cms-dev.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/table_sorter-cachekey-d2d3a5a41777b2fe1c2083d10e620db6.js"></script>
+
+
+        
+          
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2932296-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+    <link rel="author" href="https://caen-cms-dev.engin.umich.edu/author/jscroggi" title="Author information" />
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://caen-cms-dev.engin.umich.edu++resource++umich_images/favicon.ico" />
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+        
+        <!-- Disable IE6 image toolbar -->
+        <meta http-equiv="imagetoolbar" content="no" />
+
+        
+        
+            <script> var slideShowData=[{title:"BUB! YOUVE GOT YOGURT ON YOUR HEAD",caption: "Bubgurt"},{title:"BUB SOUNDS",caption: "SQUONK!"},{title:"LIL BUB MOVES",caption: "BUB"},{title:"BUB PLAYS",caption: "BUB"},];</script>
+        
+
+        
+        
+
+        
+        
+
+    
+
+  </head>
+
+  <body class="template-view portaltype-uom-news-videostrip site-engin section-training icons-on hasBreadcrumbs editPage contentNormal" dir="ltr">
+<div id="wrapper" class="lightBg">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+    <div id="portal-personaltools-wrapper">
+    <header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+        <div id="skip">
+            <a href="#content">Skip to Main Content</a>
+        </div>
+        <nav id="utility">
+            <ul>
+                <div>
+                    <h5 class="hiddenStructure">Personal tools</h5>
+                    <dl class="actionMenu deactivated" id="portal-personaltools">
+                        
+                            <dt class="actionMenuHeader">
+                                <a id="user-name" href="https://caen-cms-dev.engin.umich.edu/useractions">Ben Collins</a>
+                            </dt>
+                            <dd class="actionMenuContent">
+                                <ul>
+                                    <li id="personaltools-dashboard">
+                                        <a href="https://caen-cms-dev.engin.umich.edu/dashboard">Dashboard</a>
+                                    </li>
+                                    <li id="personaltools-preferences">
+                                        <a href="https://caen-cms-dev.engin.umich.edu/@@personal-preferences">Preferences</a>
+                                    </li>
+                                    <li id="personaltools-logout">
+                                        <a href="https://caen-cms-dev.engin.umich.edu/cosign-logout">Log out</a>
+                                    </li>
+                                </ul>
+                            </dd>
+                        
+                    </dl>
+                    
+                </div>
+                <li class="contact"><a href="https://caen-cms-dev.engin.umich.edu/contact/quick.html">Contact</a></li>
+                <!--<li class="role">
+                    <span></span>
+                    <a href="#" class="roleChange">Select Role</a>
+                    <div>
+                        <ul>
+                            <li tal:repeat="item view/getRoles"><a tal:attributes="href item/url; title item/title | nothing" tal:content="item/name">Name Item</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+                <li class="search">
+                    <form name="searchform" method="get" id="searchGadget_form" action="http://www-search.engin.umich.edu/search">
+                        <fieldset>
+                            <label for="q">Search</label>
+                            <input type="hidden" name="site" value="CoE" />
+                            <input type="hidden" name="client" value="coe_frontend" />
+                            <input type="hidden" name="proxystylesheet" value="coe_frontend" />
+                            <input type="hidden" name="output" id="output" value="xml_no_dtd" />
+                            <input name="q" id="q" type="text" />
+                        </fieldset>
+                    </form></li>
+                </ul>
+            </nav>
+            <nav id="mainBar">
+                <ul>
+                    
+                        
+                            <li class="about "><a href="https://caen-cms-dev.engin.umich.edu/about">About</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/college/about/news">News</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/cal">Calendar</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/events">Special Events</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/caen ">Computing (CAEN)</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/facilities">Facilities</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/safety">Safety</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/admin/dean ">Message from the Dean</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/about/facts.html">Facts and Figures</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/about/people.html">People</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/about/campus.html">Ann Arbor &amp; Campus</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/admin">College Administration</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/contact/quick.html">Contact Us</a></li>
+                                    </ul>
+                                    <ul class="last">
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/diversity">Diversity and Outreach</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="research "><a href="https://caen-cms-dev.engin.umich.edu/research">Research</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/research/undergrad.html">Undergraduate Research Opportunities</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/admin/adrge/research-support">Getting Research Funding</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/departments/research.html">Sponsored Research</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/research/innovation.html">Instant Innovation</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/corporate">Corporate Relationships</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/teaching/crltengin">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="academics "><a href="https://caen-cms-dev.engin.umich.edu/academics" title="Education related links">Academics</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/academics/undergrad/">Undergraduate Programs/Degrees</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/academics/gradprograms">Graduate Programs/Degrees</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/bulletin">College Bulletin</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/bulletin/courses.html">Courses</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/academics/calendar.html">Academic Calendar</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/students/graduation">Graduation</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="admissions "><a href="https://caen-cms-dev.engin.umich.edu/admissions" title="Admissions related links">Admissions</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/ugadmissions">Undergraduate Admissions</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/gradadmissions">Graduate Admissions</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/ugadmissions/international">International Student</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/students/finaid.html">Scholarships, Financial Aid &amp; Funding</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/ugadmissions/visit">Visit Us</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="departments "><a href="https://caen-cms-dev.engin.umich.edu/departments" title="Links to departmental websites">Departments</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://aerospace.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aerospace.engin.umich.edu/')">Aerospace Engineering</a></li>
+                                        <li><a href="http://aoss.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aoss.engin.umich.edu/')">Atmospheric, Oceanic and Space Sciences</a></li>
+                                        <li><a href="http://www.bme.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.bme.umich.edu/')">Biomedical Engineering</a></li>
+                                        <li><a href="http://che.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://che.engin.umich.edu/')">Chemical Engineering</a></li>
+                                        <li><a href="http://cee.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://cee.engin.umich.edu/')">Civil and Environmental Engineering</a></li>
+                                        <li><a href="http://eecs.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://eecs.umich.edu/')">Electrical Engineering and Computer Science</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://ioe.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://ioe.engin.umich.edu/')">Industrial and Operations Engineering</a></li>
+                                        <li><a href="http://isd.engin.umich.edu" onclick="javascript: pageTracker._trackPageview('/outgoing/http://isd.engin.umich.edu')">Integrative Systems + Design</a></li>
+                                        <li><a href="http://www.mse.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.mse.engin.umich.edu/')">Materials Science and Engineering</a></li>
+                                        <li><a href="http://me.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://me.engin.umich.edu/')">Mechanical Engineering</a></li>
+                                        <li><a href="http://name.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://name.engin.umich.edu/')">Naval Architecture and Marine Engineering</a></li>
+                                        <li><a href="http://ners.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www-ners.engin.umich.edu/')">Nuclear Engineering and Radiological Sciences</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="giving "><a href="https://caen-cms-dev.engin.umich.edu/giving" title="Supporting the college links">Giving</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/giving/wheretogive">Where to Give</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/giving/whyigive">Why I Give</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/giving/howtogive">How to Give</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="last infoForYou "><a href="https://caen-cms-dev.engin.umich.edu/info" title="Info for You">Info for You</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/students/prospective">Prospective Students</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/students">Current Students</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/alumni">Alumni</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/faculty">Faculty</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/staff">Staff</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/corporate">Corporate Partners</a></li>
+                                        <li><a href="https://caen-cms-dev.engin.umich.edu/newscenter/expert.html">Media</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            <nav id="breadcrumbs">
+                <ul>
+                    <li>
+                        /
+                        <a href="https://caen-cms-dev.engin.umich.edu">College</a></li>
+                    
+                        
+                            <li>
+                                /<a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi">jscroggi</a></li>
+                            
+                        
+                    
+                    
+                        
+                            
+                            <li class="last">/
+                                <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv">Bub TV</a></li>
+                        
+                    
+                </ul></nav>
+            </header>
+        </div>
+
+<span id="headerPrintOnly"><img class="printOnly" alt="print Logo" src="/engin/++resource++umich_images/MichiganCollegeEngineeringPrintOnlyLogo.jpg" /></span>
+
+
+
+
+
+</div>
+
+      </div>
+
+      
+      
+
+      <div role="main" id="contentWrap" class="thinCol">
+      
+      
+
+        
+        
+          
+          
+          <div class="leftCol" id="col1">
+            
+              <div class="promoCol">
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e670a726f6f742d6e6176" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e670a726f6f742d6e6176 first"><div class="navPortlet">
+
+<nav id="sideNav" class="sideNav">
+<ul>
+    <li class="academics hasCurrent first"><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi">jscroggi</a>
+        
+        <ul>
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/copy3_of_contact-portlet-test-1-jasprit-singh">Contact Portlet Test 1 </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/copy_of_contact-portlet-test-1-jasprit-singh">Contact Portlet Test 2 </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/copy2_of_contact-portlet-test-1-jasprit-singh">Contact Portlet Test 3 </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/contact-portlet-test-1-jasprit-singh">Contact Portlet Test 4 </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/event-testing">Event Testing </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/video-strip-player-portlet-photo-strip">Video Strip, Player, Portlet &amp; Photo-Strip </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/catnip-egress-to-oblivion">CATNIP: EGRESS TO OBLIVION? </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/copy_of_video-strip-player-portlet-photo-strip">Single Image Video Strip &amp; Photo-Strip </a>
+             
+           </li>
+        
+        </ul>
+        
+    </li>
+</ul>
+</nav>
+
+
+</div>
+</div>
+
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a636f6e74616374" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a636f6e74616374 last">
+<div class="contactPortlet">
+  
+
+<style scoped="scoped">#contactBox {background: #ffffff url("https://caen-cms-dev.engin.umich.edu/training/jscroggi/contact-persons/cindy-finelli/@@display-file/contact_image/Cindy Finelli-1.jpg") bottom right no-repeat;}</style>
+
+      <div id="contactBox" class="vcard">
+        <div class="info">
+          <h3>Contact</h3>
+    	          <p class="name fn">Cindy Finelli</p>
+    		  <p class="email"><a href="mailto:uniqname@umich.edu">uniqname@umich.edu</a></p>
+    		  <p class="tel">(734) 555-5555</p>
+    		  <p class="address adr"><span class="extended-address">1234 North Campus</span></p>
+        </div>
+      </div>
+   
+
+</div>
+
+</div>
+
+
+<div class="managePortletsLink">
+  <a title="View portlet management screen" href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/@@manage-portlets">Manage portlets</a>
+</div>
+</div>
+            
+          </div>
+          
+          
+          <div id="content" class="content rightCol">         
+
+          <div id="viewlet-above-content">
+    
+
+
+
+<div id="plone-lock-status">
+    
+</div></div>
+
+          
+            <div class="documentEditable">
+
+              <div id="edit-bar">
+
+    
+
+        <h5 class="hiddenStructure">Views</h5>
+
+        <ul class="contentViews" id="content-views">
+
+            
+              <li id="contentview-folderContents" class="plain">
+                <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/folder_contents">Contents</a>
+              </li>
+            
+            
+              <li id="contentview-view" class="selected">
+                <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv">View</a>
+              </li>
+            
+            
+              <li id="contentview-edit" class="plain">
+                <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/edit">Edit</a>
+              </li>
+            
+
+        </ul>
+
+    
+
+
+<div class="contentActions">
+
+    
+
+        
+
+        
+
+        <ul id="contentActionMenus">
+
+    <li>
+
+        <dl class="actionMenu deactivated" id="plone-contentmenu-workflow">
+          <dt class="actionMenuHeader label-state-published">
+            
+               <span class="noMenuAction">
+                  <span>State:</span>
+                  <span class="state-published">Published</span>
+                  
+               </span>
+            
+          </dt>
+          
+        </dl>
+
+    </li>
+    <li>
+
+        <dl class="actionMenu deactivated" id="plone-contentmenu-factories">
+          <dt class="actionMenuHeader label-">
+            <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/folder_factories" title="Add new items inside this item">
+               
+                  <span>Add new…</span>
+                  
+                  <span class="arrowDownAlternative">&#9660;</span>
+               
+            </a>
+          </dt>
+          <dd class="actionMenuContent">
+            <ul>
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/++add++uom.news.videoset" class="contenttype-uom-news-videoset" id="uom-news-videoset" title="">
+                        <img width="16" height="16" alt="" src="https://caen-cms-dev.engin.umich.edu/++resource++umich_images/icons/uom.news.videoset.png" title="" />
+                        <span class="subMenuTitle">Video Set</span>
+                    </a>
+                    
+                  </li>
+                
+            </ul>
+          </dd>
+        </dl>
+
+    </li>
+    <li>
+
+        <dl class="actionMenu deactivated" id="plone-contentmenu-display">
+          <dt class="actionMenuHeader label-">
+            <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/select_default_view" title="Select the view mode for this folder, or set a content item as its default view.">
+               
+                  <span>Display</span>
+                  
+                  <span class="arrowDownAlternative">&#9660;</span>
+               
+            </a>
+          </dt>
+          <dd class="actionMenuContent">
+            <ul>
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/selectViewTemplate?templateId=view" class="actionMenuSelected" id="view" title="">
+                        
+                        <span class="subMenuTitle">view</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li class="actionSeparator">
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/select_default_page" class="" id="contextSetDefaultPage" title="Select an item to be used as default view in this folder...">
+                        
+                        <span class="subMenuTitle">Select a content item
+as default view...</span>
+                    </a>
+                    
+                  </li>
+                
+            </ul>
+          </dd>
+        </dl>
+
+    </li>
+    <li>
+
+        <dl class="actionMenu deactivated" id="plone-contentmenu-actions">
+          <dt class="actionMenuHeader label-">
+            <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/folder_contents" title="Actions for the current content item">
+               
+                  <span>Actions</span>
+                  
+                  <span class="arrowDownAlternative">&#9660;</span>
+               
+            </a>
+          </dt>
+          <dd class="actionMenuContent">
+            <ul>
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/object_cut" class="actionicon-object_buttons-cut" id="cut" title="">
+                        
+                        <span class="subMenuTitle">Cut</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/object_copy" class="actionicon-object_buttons-copy" id="copy" title="">
+                        
+                        <span class="subMenuTitle">Copy</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/delete_confirmation" class="actionicon-object_buttons-delete" id="delete" title="">
+                        
+                        <span class="subMenuTitle">Delete</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/object_rename" class="actionicon-object_buttons-rename" id="rename" title="">
+                        
+                        <span class="subMenuTitle">Rename</span>
+                    </a>
+                    
+                  </li>
+                
+                
+                  <li>
+                    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/@@sharing" class="actionicon-object_buttons-local_roles" id="local_roles" title="">
+                        
+                        <span class="subMenuTitle">Sharing</span>
+                    </a>
+                    
+                  </li>
+                
+            </ul>
+          </dd>
+        </dl>
+
+    </li>
+
+</ul>
+
+
+    
+
+</div>
+</div>
+
+              <span id="contentTopLeft"></span>
+              <span id="contentTopRight"></span>
+
+              
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+
+              
+                  
+
+                  
+
+                    
+                      
+                      
+            <h1>Bub TV</h1>
+        
+                      <div class="documentByLine" id="plone-document-byline">
+  
+
+  
+  
+    <span class="documentAuthor">
+      
+      by
+      <a href="https://caen-cms-dev.engin.umich.edu/author/jscroggi">Jennifer Scroggins</a>
+      
+         —
+    </span>
+  
+  
+
+  <span class="documentModified">
+    <span>
+      last modified
+    </span>
+    Jan 30, 2013 02:10 PM
+  </span>
+
+  
+
+  <span class="contentHistory" id="content-history">
+    —
+    <a href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/@@historyview">History</a>
+  </span>
+
+  
+
+  
+
+</div>
+
+
+
+                      Copy and paste this code into the CMS where you would like the strip to be.
+                      
+    
+
+
+
+
+
+    <div id="contentHolder">
+    
+      
+     
+       <div class="contentBlock shadow first">
+
+
+                        
+            <h4>Example of what you are creating </h4>
+            <h3>Paste this into the Editor in the HTML code window</h3>
+            <div class="video_strip carouselWrap"><div class="carouselHolder carouselFull"><div class="carousel carousel1"><ul><li><a href="#bub-youve-got-yogurt-on-your-head" class="c1Image"><img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/bub-youve-got-yogurt-on-your-head/download/small_image/bub1-thumb.jpg" alt="" width=141 height=109 /></a></li><li><a href="#bub-sounds" class="c1Image"><img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/bub-sounds/download/small_image/bub3-thumb.jpg" alt="" width=141 height=109 /></a></li><li><a href="#lil-bub-moves" class="c1Image"><img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/lil-bub-moves/download/small_image/bub2-thumb.jpg" alt="" width=141 height=109 /></a></li><li><a href="#bub-plays" class="c1Image"><img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/bub-plays/download/small_image/bub4-thumb.jpg" alt="" width=141 height=109 /></a></li></ul></div></div><div class="videoLightboxContent"><div id="bub-youve-got-yogurt-on-your-head" class="innerShadow lbContent vidContent"><h2 class="videoHeader">BUB! YOUVE GOT YOGURT ON YOUR HEAD</h2><span><a href="#" class="closeX lbClose">Close</a></span><div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/3nYvJY2C9B4?rel=0" frameborder="0" allowfullscreen></iframe></div><div class="lbBorderDivider"></div><p class="lbDescription"></p><div class="social"><div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="BUB! YOUVE GOT YOGURT ON YOUR HEAD" addthis:description=""></a><a class="addthis_counter addthis_pill_style"></a></div></div></div><div id="bub-sounds" class="innerShadow lbContent vidContent"><h2 class="videoHeader">BUB SOUNDS</h2><span><a href="#" class="closeX lbClose">Close</a></span><div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/2YKP6FiiJro?rel=0" frameborder="0" allowfullscreen></iframe></div><div class="lbBorderDivider"></div><p class="lbDescription">People have been asking to hear the amazing sounds that BUB can make. So here we have a very rare performance of Lil BUB vocalizing. She is full on squonking and squirggeling. Mind you, these aren't the only sounds she makes, she also purrs and has her own version of a "meow". But this is something else entirely.</p><div class="social"><div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="BUB SOUNDS" addthis:description="People have been asking to hear the amazing sounds that BUB can make. So here we have a very rare performance of Lil BUB vocalizing. She is full on squonking and squirggeling. Mind you, these aren't the only sounds she makes, she also purrs and has her own version of a  meow . But this is something else entirely."></a><a class="addthis_counter addthis_pill_style"></a></div></div></div><div id="lil-bub-moves" class="innerShadow lbContent vidContent"><h2 class="videoHeader">LIL BUB MOVES</h2><span><a href="#" class="closeX lbClose">Close</a></span><div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/ywIfx4pQEeQ?rel=0" frameborder="0" allowfullscreen></iframe></div><div class="lbBorderDivider"></div><p class="lbDescription">Hey look, it's BUB, moving and playing. As you can see, as an unconventional cat, with an unconventional yet amazing body, she moves around unconventionally, and it's amazing.</p><div class="social"><div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="LIL BUB MOVES" addthis:description="Hey look, it's BUB, moving and playing. As you can see, as an unconventional cat, with an unconventional yet amazing body, she moves around unconventionally, and it's amazing."></a><a class="addthis_counter addthis_pill_style"></a></div></div></div><div id="bub-plays" class="innerShadow lbContent vidContent"><h2 class="videoHeader">BUB PLAYS</h2><span><a href="#" class="closeX lbClose">Close</a></span><div class="imgHolder"><iframe width="560" height="315" src="http://www.youtube.com/embed/92G4RANUPV8?rel=0" frameborder="0" allowfullscreen></iframe></div><div class="lbBorderDivider"></div><p class="lbDescription">Hey look it's BUB, playing. Good job, BUB.</p><div class="social"><div class="addthis_toolbox addthis_default_style "><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="BUB PLAYS" addthis:description="Hey look it's BUB, playing. Good job, BUB."></a><a class="addthis_counter addthis_pill_style"></a></div></div></div></div></div>
+            <div>&lt;div class="video_strip carouselWrap"&gt;&lt;div class="carouselHolder carouselFull"&gt;&lt;div class="carousel carousel1"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#bub-youve-got-yogurt-on-your-head" class="c1Image"&gt;&lt;img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/bub-youve-got-yogurt-on-your-head/download/small_image/bub1-thumb.jpg" alt="" width=141 height=109 /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#bub-sounds" class="c1Image"&gt;&lt;img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/bub-sounds/download/small_image/bub3-thumb.jpg" alt="" width=141 height=109 /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#lil-bub-moves" class="c1Image"&gt;&lt;img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/lil-bub-moves/download/small_image/bub2-thumb.jpg" alt="" width=141 height=109 /&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#bub-plays" class="c1Image"&gt;&lt;img src="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/bub-plays/download/small_image/bub4-thumb.jpg" alt="" width=141 height=109 /&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="videoLightboxContent"&gt;&lt;div id="bub-youve-got-yogurt-on-your-head" class="innerShadow lbContent vidContent"&gt;&lt;h2 class="videoHeader"&gt;BUB! YOUVE GOT YOGURT ON YOUR HEAD&lt;/h2&gt;&lt;span&gt;&lt;a href="#" class="closeX lbClose"&gt;Close&lt;/a&gt;&lt;/span&gt;&lt;div class="imgHolder"&gt;&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/3nYvJY2C9B4?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="lbBorderDivider"&gt;&lt;/div&gt;&lt;p class="lbDescription"&gt;&lt;/p&gt;&lt;div class="social"&gt;&lt;div class="addthis_toolbox addthis_default_style "&gt;&lt;a class="addthis_button_facebook_like" fb:like:layout="button_count"&gt;&lt;/a&gt;&lt;a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="BUB! YOUVE GOT YOGURT ON YOUR HEAD" addthis:description=""&gt;&lt;/a&gt;&lt;a class="addthis_counter addthis_pill_style"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="bub-sounds" class="innerShadow lbContent vidContent"&gt;&lt;h2 class="videoHeader"&gt;BUB SOUNDS&lt;/h2&gt;&lt;span&gt;&lt;a href="#" class="closeX lbClose"&gt;Close&lt;/a&gt;&lt;/span&gt;&lt;div class="imgHolder"&gt;&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/2YKP6FiiJro?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="lbBorderDivider"&gt;&lt;/div&gt;&lt;p class="lbDescription"&gt;People have been asking to hear the amazing sounds that BUB can make. So here we have a very rare performance of Lil BUB vocalizing. She is full on squonking and squirggeling. Mind you, these aren't the only sounds she makes, she also purrs and has her own version of a "meow". But this is something else entirely.&lt;/p&gt;&lt;div class="social"&gt;&lt;div class="addthis_toolbox addthis_default_style "&gt;&lt;a class="addthis_button_facebook_like" fb:like:layout="button_count"&gt;&lt;/a&gt;&lt;a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="BUB SOUNDS" addthis:description="People have been asking to hear the amazing sounds that BUB can make. So here we have a very rare performance of Lil BUB vocalizing. She is full on squonking and squirggeling. Mind you, these aren't the only sounds she makes, she also purrs and has her own version of a  meow . But this is something else entirely."&gt;&lt;/a&gt;&lt;a class="addthis_counter addthis_pill_style"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="lil-bub-moves" class="innerShadow lbContent vidContent"&gt;&lt;h2 class="videoHeader"&gt;LIL BUB MOVES&lt;/h2&gt;&lt;span&gt;&lt;a href="#" class="closeX lbClose"&gt;Close&lt;/a&gt;&lt;/span&gt;&lt;div class="imgHolder"&gt;&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/ywIfx4pQEeQ?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="lbBorderDivider"&gt;&lt;/div&gt;&lt;p class="lbDescription"&gt;Hey look, it's BUB, moving and playing. As you can see, as an unconventional cat, with an unconventional yet amazing body, she moves around unconventionally, and it's amazing.&lt;/p&gt;&lt;div class="social"&gt;&lt;div class="addthis_toolbox addthis_default_style "&gt;&lt;a class="addthis_button_facebook_like" fb:like:layout="button_count"&gt;&lt;/a&gt;&lt;a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="LIL BUB MOVES" addthis:description="Hey look, it's BUB, moving and playing. As you can see, as an unconventional cat, with an unconventional yet amazing body, she moves around unconventionally, and it's amazing."&gt;&lt;/a&gt;&lt;a class="addthis_counter addthis_pill_style"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id="bub-plays" class="innerShadow lbContent vidContent"&gt;&lt;h2 class="videoHeader"&gt;BUB PLAYS&lt;/h2&gt;&lt;span&gt;&lt;a href="#" class="closeX lbClose"&gt;Close&lt;/a&gt;&lt;/span&gt;&lt;div class="imgHolder"&gt;&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/92G4RANUPV8?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;div class="lbBorderDivider"&gt;&lt;/div&gt;&lt;p class="lbDescription"&gt;Hey look it's BUB, playing. Good job, BUB.&lt;/p&gt;&lt;div class="social"&gt;&lt;div class="addthis_toolbox addthis_default_style "&gt;&lt;a class="addthis_button_facebook_like" fb:like:layout="button_count"&gt;&lt;/a&gt;&lt;a class="addthis_button_tweet" addthis:url="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv" addthis:title="BUB PLAYS" addthis:description="Hey look it's BUB, playing. Good job, BUB."&gt;&lt;/a&gt;&lt;a class="addthis_counter addthis_pill_style"&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</div>
+            <br />
+            <br />
+            <br />
+            <div>
+                <h3>Paste this into the Settings tab in the head section</h3>
+                <div>&lt;script&gt; var slideShowData=[{title:"BUB! YOUVE GOT YOGURT ON YOUR HEAD",caption: "Bubgurt"},{title:"BUB SOUNDS",caption: "SQUONK!"},{title:"LIL BUB MOVES",caption: "BUB"},{title:"BUB PLAYS",caption: "BUB"},];&lt;/script&gt;</div>
+            </div>
+        
+       </div>
+       
+       
+
+
+
+
+
+    <div class="visualClear"><!-- --></div>
+
+    <div class="documentActions">
+        
+
+        
+
+    </div>
+
+
+
+
+   
+
+
+
+
+
+    
+
+    </div>
+
+                    
+                  
+                
+              
+
+          
+
+          <div id="viewlet-below-content">
+
+
+
+</div>
+
+          <div class="promoCol" id="rightPortlets">
+           <span class="portletEditable">
+            
+              
+<div id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e670a74657374" class="portletWrapper kssattr-portlethash-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e670a74657374 first"><div class="promo promoHolderHTML">
+ <div class="promoHolderHTMLWhite">
+ <h3>Test</h3>
+   <p>test</p>
+ </div>
+</div>
+
+</div>
+
+<div id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a63616c656e646172" class="portletWrapper kssattr-portlethash-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a63616c656e646172"><div class="promo promoHolderEvents">
+ <a class="promoEvents" href="/about-us/cal#host=Michigan+Engineering&amp;audience=All">
+ <h3>Events</h3>
+ <h4>Jan</h4>
+          <div class="pDateItem">
+            <p class="pDate">25th</p>
+            <p class="pDate_Info">Rockwell Automation Resume Critiquing, hosted by ECRC (ongoing event)</p>
+         </div>
+          <div class="pDateItem">
+            <p class="pDate">25th</p>
+            <p class="pDate_Info">Rockwell Automation Resume Critiquing, hosted by ECRC (ongoing event)</p>
+         </div>
+         <span class="linkCtA">see all</span></a>
+</div>
+
+</div>
+
+<div id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a6e65772d68746d6c2d706f72746c6574" class="portletWrapper kssattr-portlethash-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a6e65772d68746d6c2d706f72746c6574 last"><div class="promo promoHolderHTML">
+ <div class="promoBlue">
+ <h3>New HTML Portlet</h3>
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum. Vivamus sit amet libero turpis, non venenatis urna. In blandit, odio convallis suscipit venenatis, ante ipsum cursus augue.
+
+ </div>
+</div>
+
+</div>
+
+
+<div class="managePortletsLink">
+  <a title="View portlet management screen" href="https://caen-cms-dev.engin.umich.edu/training/jscroggi/bub-tv/@@manage-portlets">Manage portlets</a>
+</div>
+
+            
+           </span>
+      </div>
+
+
+            </div>             
+          
+      </div>     
+      
+      
+      </div>
+    </div>
+
+      
+
+        
+
+    <footer>
+        <div class="hidden" id="hostportinfo">caen-cms-dev.engin.umich.edu:8083</div>
+        <p class="copyright">&copy;
+            <span class="year">2013</span>
+            University of Michigan College of Engineering</p>
+        <nav>
+            <ul>
+                
+                    <li class=""><a href="https://www.engin.umich.edu/form/site_feedback">Site Feedback</a></li>
+                
+                
+                    <li class=""><a href="https://caen-cms-dev.engin.umich.edu/safety">Safety</a></li>
+                
+                
+                    <li class="last"><a href="https://caen-cms-dev.engin.umich.edu/contact/quick.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+        <a href="http://www.umich.edu" target="_blank" id="umFooterLogo" class="ir">University of Michigan</a>
+    </footer>
+
+
+
+
+      
+
+      
+      
+
+<div id="kss-spinner"><img src="++resource++umich_images/spinner.png" alt="" /></div>
+</div>
+      
+      
+
+</body>
+</html>
+
