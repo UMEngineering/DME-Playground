@@ -158,6 +158,7 @@ $(document).ready(function(){
 	$(window).trigger("scroll");
 	first++;
 	
+	$(".images").colorbox({rel:'slides'});
 	$(".youtubeColorbox").each(function(index, element) {
 		var temp = $(this).children("div").detach();
 		$(this).attr("href", "http://www.youtube.com/embed/"+$(this).attr("id"));
@@ -176,5 +177,13 @@ $(document).ready(function(){
 		$("p.youtube-description").text($("p.youtube-description").text().substr(0, spaceAt)+" ...");
     });
 	$(".play-button").css({"width" : "200px", "height" : "200px", "background" : "url(img/map-play-arrow.png) center no-repeat"});
-	$(".youtubeColorbox").colorbox({iframe: true, innerWidth: 600, innerHeight: 300});
+	$(".youtubeColorbox").colorbox({iframe: true, innerWidth: 600, innerHeight: 300, arrowKey: true});
+	
+	var meny = Meny.create({
+		menuElement: document.querySelector( '.meny' ),
+		contentsElement: document.querySelector( '.contents' ),
+		position: 'left',
+		height: 200,
+		width: 260
+	});
 });  
