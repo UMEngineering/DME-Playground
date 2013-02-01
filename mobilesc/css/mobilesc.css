@@ -61,6 +61,36 @@ body {
     -webkit-transition: all 1s ease-out;
 }
 
+#seven {
+    display: block;
+    position: absolute;
+    top:1000px;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .7;
+    -webkit-transition: all .2s ease-out;
+}
+
+#eight {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .7;
+    -webkit-transition: all .5s ease-out;
+}
+#nine {
+    display: block;
+    position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 1000px;
+    opacity: .7;
+    -webkit-transition: all 1s ease-out;
+}
+
 #canvas1 {
     display: block;
     position: fixed;
