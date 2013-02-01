@@ -69,9 +69,20 @@ function parallax(object){
 				//console.log("First:" , ($window.scrollTop() + $window.height()) > (topOffset));
 				//console.log("Sec:" , ( (topOffset + (self.height() - negAdjust))));
 				}
-				//if ( (($window.scrollTop() + $window.height()) > (topOffset) && ( ((topOffset + (self.height() - negAdjust))*self.data("speed")) > $window.scrollTop() ) ) || (self.attr("id") == "ground") || (first==1) ) {
-					self.css(newstyle);
-				//}
+				self.css(newstyle);
+				//self.css("-webkit-transition", "none");
+				if ( (($window.scrollTop() + $window.height() + (self.height() - negAdjust)*self.data("speed")) > (topOffset) && ( ((topOffset + (self.height() - negAdjust))*self.data("speed")) > $window.scrollTop() ) ) || (self.attr("id") == "ground") || (first==1) ) {
+				//if ($window.scrollTop() + $window.height() - 10 > topOffset && $window.scrollTop() < topOffset/self.data("speed")) {
+					var second = '.2';
+					if (self.data('speed') == 2){
+						second = '.5';
+					} else if (self.data('speed') == 1) {
+						second = '1';
+					}
+					self.css("-webkit-transition", "all "+second+"s ease-out");
+				} else {
+					self.css("-webkit-transition", "none");
+				}
 			}  	
 		}
 	});
