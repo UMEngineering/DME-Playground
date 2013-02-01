@@ -69,9 +69,9 @@ function parallax(object){
 				//console.log("First:" , ($window.scrollTop() + $window.height()) > (topOffset));
 				//console.log("Sec:" , ( (topOffset + (self.height() - negAdjust))));
 				}
-				if ( (($window.scrollTop() + $window.height()) > (topOffset) && ( ((topOffset + (self.height() - negAdjust))*self.data("speed")) > $window.scrollTop() ) ) || (self.attr("id") == "ground") || (first==1) ) {
+				//if ( (($window.scrollTop() + $window.height()) > (topOffset) && ( ((topOffset + (self.height() - negAdjust))*self.data("speed")) > $window.scrollTop() ) ) || (self.attr("id") == "ground") || (first==1) ) {
 					self.css(newstyle);
-				}
+				//}
 			}  	
 		}
 	});
@@ -79,10 +79,10 @@ function parallax(object){
 }
 
 
-function change(id, x, y){
+/*function change(id, x, y){
 	document.getElementById(id).setAttribute("x", parseInt(document.getElementById(id).getAttribute("x"))+x);
 	document.getElementById(id).setAttribute("y", parseInt(document.getElementById(id).getAttribute("y"))+y);
-}
+}*/
 
 $(document).ready(function(){
 	/*
