@@ -1,0 +1,59 @@
+/* PROFILES PORTLET */
+
+.promoHolderProfiles {
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.promoHolderProfiles a {
+    text-decoration: none;
+}
+.promoHolderProfiles img {
+    display: block;
+}
+.promoProfiles {
+    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
+    background-image: -moz-linear-gradient(45deg, transparent, rgba(103, 104, 105, .75));
+    background-image: -o-linear-gradient(45deg, transparent, rgba(103, 104, 105, .75));
+    background-image: -ms-linear-gradient(45deg, transparent, rgba(103, 104, 105, .75));
+    background-image: linear-gradient(45deg, transparent, rgba(103, 104, 105, .75));
+    position: absolute;
+    padding: 5px 10px 5px 5px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #252D60;
+    text-align: right;
+}
+.no-cssgradients .promoProfiles {
+    background: url(images/profiles-gradient.png) 0 0 repeat-y; /* make sure image path is correct */
+}
+.promoProfiles .profilesName {
+    font-weight: bold;
+}
+.promoProfiles .profilesProgram {
+    display: block;
+    font-style: italic;
+}
+.promoHolderProfiles .profilesMichEng {
+    position: absolute;
+    padding: 5px 10px;
+    top: 75px;
+    left: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 1px 1px #333;
+    opacity: 0.75;
+}
+.lt-ie9 .promoHolderProfiles .profilesMichEng { /* ie8/7 fix */
+    background: #004785;
+    padding: 80px 10px 0;
+	top: 0;
+    right: 0;
+    bottom: 0;
+}
+.no-js.lt-ie9 .promoHolderProfiles .profilesMichEng { /* ie8/7 fix */
+    background: none;
+}

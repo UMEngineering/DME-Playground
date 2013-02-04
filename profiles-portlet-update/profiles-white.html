@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Profiles Portlet</title>
+<!--
+###############
+
+PROFILES PORTLET STARTS AT LINE 280
+
+###############
+-->
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/style.css" rel="stylesheet">
+<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/navigation.css" rel="stylesheet">
+<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/promos.css" rel="stylesheet">
+<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/faqs.css" rel="stylesheet">
+<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/print.css" rel="stylesheet">
+<link href="overrides.css" rel="stylesheet">
+<link href="profiles-white.css" rel="stylesheet">
+
+<script src="http://www.engin.umich.edu/redesign/05-30-2012/js/libs/modernizr-2.0.6.min.js"></script>
+<style>
+.promoCol .promo {
+    box-shadow: 0 0 4px #000;
+    float: left;
+    margin: 0 0 8px 20px;
+}
+</style>
+</head>
+<body class="hasBreadcrumbs contentNormal faqs">
+<div id="wrapper" class="lightBg"> 
+	<!-- hasBreadcrumbs class tells the Main nav whether it needs to stretch over a breadcrumb bar or not -->
+	<header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+		<div id="skip"> <a href="#content">Skip to Main Content</a> </div>
+		<nav id="utility">
+			<ul>
+				<li class="contact"><a href="#">Contact</a></li>
+				<li class="role"> <span></span> <a href="#" class="roleChange">Select Role</a>
+					<div>
+						<ul>
+							<li><a href="#">Prospective Student</a></li>
+							<li><a href="#">Current Students</a></li>
+							<li><a href="#">Alumni</a></li>
+							<li><a href="#">Faculty</a></li>
+							<li><a href="#">Staff</a></li>
+							<li><a href="#">Family / Parents</a></li>
+							<li><a href="#">College Supporters</a></li>
+							<li><a href="#">Media</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="search">
+					<label for="search">Search</label>
+					<input id="search" type="text" />
+					<a href="Search.htm" class="ir">Go</a> 
+					<!-- Replace Search.htm with the appropriate URL for the search page that accepts a ?q=QUERY type search query --> 
+				</li>
+			</ul>
+		</nav>
+		<nav id="mainBar">
+			<ul>
+				<li class="about"><a href="#">About</a>
+					<div>
+						<ul>
+							<li><a href="#">News Center</a></li>
+							<li><a href="#">Calendar</a></li>
+							<li><a href="#">Special Events</a></li>
+							<li><a href="#">Computing (CAEN)</a></li>
+							<li><a href="#">Facilities</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Message from the Dean</a></li>
+							<li><a href="#">Facts &amp; Figures</a></li>
+							<li><a href="#">People</a></li>
+							<li><a href="#">Ann Arbor &amp; Campus</a></li>
+							<li><a href="#">College Administration</a></li>
+						</ul>
+						<ul class="last">
+							<li><a href="#">Center for Entrepreneurship</a></li>
+							<li><a href="#">Multidisciplinary Design Program</a></li>
+							<li><a href="#">Center for Diversity and Outreach</a></li>
+							<li><a href="#">International Program in Engineering</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="research"><a href="#">Research</a>
+					<div>
+						<ul>
+							<li><a href="#">Centers &amp; Labs</a></li>
+							<li><a href="#">Undergraduate Research Opportunities*</a></li>
+							<li><a href="#">Getting Research Funding</a></li>
+							<li><a href="#">Sponsored Research</a></li>
+							<li><a href="#">Instant Innovation Program</a></li>
+							<li><a href="#">Corporate Relationships</a></li>
+							<li><a href="#">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="academics current"><a href="#">Academics</a>
+					<div>
+						<ul>
+							<li><a href="#">Undergraduate Programs/Degrees</a></li>
+							<li><a href="#">Graduate Programs/Degrees</a></li>
+							<li><a href="#">Courses</a></li>
+							<li><a href="#">Academic Calendar</a></li>
+							<li><a href="#">Student Resources</a></li>
+							<li><a href="#">Graduation</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="admissions"><a href="#">Admissions</a>
+					<div>
+						<ul>
+							<li><a href="#">Undergraduate Admissions</a></li>
+							<li><a href="#">Graduate Admissions</a></li>
+							<li><a href="#">International Student</a></li>
+							<li><a href="#">Scholarships, Financial Aid &amp; Funding</a></li>
+							<li><a href="#">FAQs</a></li>
+							<li><a href="#">Visit Us</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="departments"><a href="#">Departments</a>
+					<div>
+						<ul>
+							<li><a href="#">Aerospace Engineering (AERO)</a></li>
+							<li><a href="#">Atmospheric, Oceanic &amp; Space Sciences (AOSS)</a></li>
+							<li><a href="#">Biomedical Engineering (BME)</a></li>
+							<li><a href="#">Chemical Engineering (CHE)</a></li>
+							<li><a href="#">Civil and Environmental Engineering (CEE)</a></li>
+							<li><a href="#">Electrical Engineering and Computer Sciences (EECS)</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Industrial and Operation Engineering (IOE)</a></li>
+							<li><a href="#">Interdisciplinary Professional Programs (InterPro)</a></li>
+							<li><a href="#">Material Science and Engineering (MSE)</a></li>
+							<li><a href="#">Mechanical Engineering (ME)</a></li>
+							<li><a href="#">Naval Architecture and Marine Engineering (NAME)</a></li>
+							<li><a href="#">Nuclear Engineering and Radiological Sciences (NERS)</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="investing"><a href="#">Investing</a>
+					<div>
+						<ul>
+							<li><a href="#">Why I Give</a></li>
+							<li><a href="#">Where to Give</a></li>
+							<li><a href="#">How to Give</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="last infoForYou"><a href="#">Info for You</a>
+					<div>
+						<ul>
+							<li><a href="#">Prospective Student</a></li>
+							<li><a href="#">Current Student</a></li>
+							<li><a href="#">Alumni</a></li>
+							<li><a href="#">Faculty</a></li>
+						</ul>
+						<ul>
+							<li><a href="#">Staff</a></li>
+							<li><a href="#">Family / Parents</a></li>
+							<li><a href="#">Supporters of the College</a></li>
+							<li><a href="#">Media</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<nav id="breadcrumbs">
+			<ul>
+				<li>/ <a href="#">Home</a></li>
+				<li>/ <a href="#">Academics</a></li>
+				<li class="last">/ <a href="#">Student Resources</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div role="main" id="contentWrap" class="contentPage thinCol"> <span id="headerPrintOnly"><img class="printOnly" src="http://www.engin.umich.edu/redesign/05-30-2012/img/header/MichiganCollegeEngineeringPrintOnlyLogo.jpg" alt="print Logo" /></span>
+		<div id="col1" class="leftCol promoCol">
+			<nav id="sideNav" class="sideNav">
+				<ul>
+					<li class="academics hasCurrent first"><a href="#">Academics</a>
+						<ul>
+							<li><a href="#">Undergraduate Programs/ Degrees</a>
+								<ul>
+									<li><a href="#">Mission</a></li>
+									<li><a href="#">Degree Options</a></li>
+									<li><a href="#">Minors</a></li>
+									<li><a href="#">Core Requirements</a></li>
+									<li><a href="#">Honors Program</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Graduate Programs/ Degrees</a>
+								<ul>
+									<li><a href="#">Graduate Degrees</a></li>
+									<li><a href="#">Just Ask</a></li>
+									<li><a href="#">Graduate Student Advisory Committee</a></li>
+									<li><a href="#">Student Activities</a></li>
+									<li><a href="#">Fellowships</a></li>
+									<li><a href="#">GSI Training</a></li>
+									<li><a href="#">Graduation</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Courses</a></li>
+							<li><a href="#">Academic Calendar</a></li>
+							<li class="current"><a href="#">Student Resources</a>
+								<ul>
+									<li><a href="#">Mentoring</a></li>
+									<li><a href="#">Advising</a>
+										<ul>
+											<li><a href="#">Advising Center</a></li>
+											<li><a href="#">Advising Appointments</a></li>
+											<li><a href="#">First Year Planning</a></li>
+											<li><a href="#">Advising Audit Reports</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Class Registration</a></li>
+									<li><a href="#">Career Development</a></li>
+									<li><a href="#">Engineering Abroad</a></li>
+									<li><a href="#">Life @ Michigan</a></li>
+									<li><a href="#">Student Undergraduate Research in Engineering</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Graduation</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div id="contactBox">
+				<h3> Contact</h3>
+				<p class="name"> Jane Smith</p>
+				<p class="email"> <a href="mailto:email@engin.umich.edu">email@engin.umich.edu</a></p>
+				<p class="tel"> 734-000-0000</p>
+				<p class="address"> 365 Lurie Building</p>
+			</div>
+		</div>
+		<div id="content" class="content promoCol rightCol">
+			<div class="pageHeader">
+				<h1>Profiles Portlet</h1>
+			</div>
+			<div id="contentHolder"> 
+		
+				<div class="contentBlock shadow first">
+					<div class="innerShadow nonSectionBodyContent">
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab  illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni</p>
+						<p>dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam  corporis</p>
+						<p>suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?  Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse  quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo  voluptas nulla pariatur</p>
+					</div>
+				</div>
+			</div>
+			<div class="promo thinColOnly promoHolderEvents first"> <a href="#" class="promoEvents">
+				<h3> Events</h3>
+				<h4> MAY</h4>
+				<div class="pDateItem">
+					<p class="pDate"> 28<span class="subSize_txt">th</span></p>
+					<p class="pDate_Info"> Registration (Full and Spring Half Terms)</p>
+				</div>
+				<div class="pDateItem">
+					<p class="pDate"> 5<span class="subSize_txt">th</span></p>
+					<p class="pDate_Info"> Spring/Summer<br />
+						Term begins)</p>
+				</div>
+				<span class="linkCtA">see all</span> </a> </div>
+			<!-- 
+			/////////////////
+			START PROFILES PORTLET
+			/////////////////
+			/////////////////			
+			-->
+			<div class="promo promoHolderProfiles">
+				<a href="#1">
+					<span class="profilesMichEng">I am<br />
+					&nbsp;Michigan<br />
+					Engineering</span>
+					<div class="promoProfiles">
+						<span class="profilesName">Sam Smith</span>
+						<span class="profilesProgram">Nuclear Engineering</span>
+					</div>
+					<img src="images/profiles-portrait1.jpg" alt="" />
+				</a>
+			</div>
+			<!--
+			/////////////////
+			END PROFILES PORTLET
+			/////////////////
+			/////////////////
+			-->
+			<div class="promo promoHolderProfiles"><a href="#two"> <span class="profilesMichEng">I am<br />
+				&nbsp;Michigan<br />
+				Engineering</span>
+				<div class="promoProfiles"> <span class="profilesName">Susan Smith</span> <span class="profilesProgram">Chemical Engineering</span> </div>
+				<img src="images/profiles-portrait3.jpg" alt="" /></a> </div>
+			<div class="promo promoHolderProfiles"><a href="#3"> <span class="profilesMichEng">I am<br />
+				&nbsp;Michigan<br />
+				Engineering</span>
+				<div class="promoProfiles"> <span class="profilesName">Samantha Smith</span> <span class="profilesProgram">Biomedical Engineering</span> </div>
+				<img src="images/profiles-portrait2.jpg" alt="" /></a> </div>
+			<div class="promo thinColOnly promoHolderOtherSites last">
+				<div class="promoOtherSites innerShadow">
+					<h3> Other Sites</h3>
+					<ul>
+						<li><a href="#">Urna tincidunt congue</a></li>
+						<li><a href="#">Arcu sedAliquam </a></li>
+						<li><a href="#">Vel neque sit amet nunc</a></li>
+						<li><a href="#">Morbi euismod magna </a></li>
+						<li><a href="#">Donec viverraAenean faci</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- JavaScript at the bottom for fast page loading --> 
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+
+<!-- scripts concatenated and minified via build script --> 
+<script src="profiles-script.js"></script> 
+<!-- end scripts -->
+</body>
+</html>

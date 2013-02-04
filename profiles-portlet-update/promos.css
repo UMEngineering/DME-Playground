@@ -1,0 +1,1298 @@
+/* All styles for promos are in this CSS file */
+
+/* Individual Promos */
+
+/*--------------PromoEvents -------------------------------------*/
+.promoHolderEvents
+{
+    text-decoration: none;
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+}
+
+.promoEvents
+{
+    text-decoration: none;
+    position: relative;
+    width: 180px;
+    padding: 10px;
+    display: block;
+    color: #fff;
+    background-color: #5e3f71;
+    -webkit-opacity: 0.90;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.promoEvents h3
+{
+    margin: 0;
+    width: 100%;
+    font-size: 21px;
+    font-weight: normal;
+    padding: 2px 0 0 2px;
+    color: #fff;
+    letter-spacing: -0.2px;
+}
+
+.promoEvents h4
+{
+    margin: 0;
+    width: 100%;
+    font-size: 39px;
+    font-weight: normal;
+    padding: 0 0 0 2px;
+    margin: 0;
+    color: #eac7ff;
+    letter-spacing: -1px;
+}
+.pDateItem
+{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 9px;
+}
+.pDate
+{
+    margin: 0 5px 0 0;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 0 2px;
+    padding: 0 10px 0 2px;
+    color: #fff;
+    float: left;
+    clear: left;
+    width: 58px;
+    text-align: right;
+}
+.subSize_txt
+{
+    font-size: 24px;
+}
+
+.pDate_Info
+{
+    width: 110px;
+    margin: 0 0 6px;
+    font-size: 12px;
+    letter-spacing: -0.2px;
+    line-height: 1.3em;
+    padding: 0;
+    float: left;
+    color: #fff;
+}
+
+.promoEvents .linkCtA
+{
+    background: url("../img/promos/pxlarrow.gif") center right no-repeat;
+    margin: 10px 10px 0 0;
+    padding: 0 8px 0 0;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    float: right;
+    clear: both;
+}
+
+.promoEvents:hover .linkCtA
+{
+    text-decoration: underline;
+}
+
+/*--------------PromoSolar------------------*/
+
+.promoHolderSolar
+{
+    text-decoration: none;
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+    height: 200px;
+}
+.promoHolderSolar img
+{
+    position: absolute;
+    top: -24px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    behavior: url(/pie.htc);
+}
+.promoSolar
+{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoSolar h3
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 18px;
+    padding-top: 115px;
+    padding-left: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000000;
+    letter-spacing: -0.2px;
+    line-height: 1em;
+}
+
+.promoSolar .linkCtA
+{
+    display: block;
+    background: url("../img/promos/pxlarrow.gif") no-repeat;
+    background-position: 182px 176px;
+    position: absolute;
+    margin: 0px;
+    padding: 170px 10px 0px 138px;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000000;
+}
+.promoSolar:hover .linkCtA
+{
+    text-decoration: underline;
+}
+
+/*----------------Campus---------------------*/
+
+.promoHolderCampus
+{
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+    height: 200px;
+}
+.promoHolderCampus img
+{
+    position: absolute;
+    left: -23px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    behavior: url(/pie.htc);
+}
+.promoCampus
+{
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    position: absolute;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoCampus h3
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 18px;
+    padding-top: 9px;
+    padding-left: 16px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    letter-spacing: -0.2px;
+    line-height: 1em;
+}
+.promoCampus .linkCtA
+{
+    display: block;
+    background: url("../img/promos/pxlarrow.gif") no-repeat;
+    background-position: 184px 76px;
+    position: absolute;
+    margin: 0px;
+    padding: 70px 20px 0px 139px;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+}
+.promoCampus:hover .linkCtA
+{
+    text-decoration: underline;
+}
+
+/*-------------------STUDENT TEAM ----------------------- */
+
+.promoHolderTeam
+{
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+    height: 200px;
+}
+.promoTeam
+{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    background-color: #E76B35;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    filter: alpha(opacity=90);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoTeam h3
+{
+    margin: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 13px;
+    padding-left: 15px;
+    color: #ffb319;
+    letter-spacing: -0.1px;
+    line-height: 1em;
+}
+.promoTeam p
+{
+    margin: 0px;
+    width: 170px;
+    font-size: 18px;
+    padding-top: 4px;
+    padding-left: 16px;
+    color: #fff;
+    letter-spacing: 0.1px;
+    line-height: 1.05em;
+}
+.promoTeam .linkCtA
+{
+    margin: 0px;
+    padding: 4px 0px 0px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffb319;
+}
+.promoTeam:hover .linkCtA
+{
+    text-decoration: underline;
+}
+
+/*------------------Tower with Button -----------------*/
+
+.promoHolderTower
+{
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+    height: 200px;
+}
+.promoHolderTower img
+{
+    position: absolute;
+    left: 0px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoTower
+{
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    position: absolute;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoTower h3
+{
+    margin: 0px;
+    font-size: 18px;
+    padding: 15px 10px 0px 15px;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    letter-spacing: -0.2px;
+    line-height: 1em;
+}
+.promoTower .linkCtA
+{
+    display: block;
+    margin: 85px 0 0 15px;
+    padding: 0 20px;
+}
+
+/*----------------End Tower with Button---------------*/
+
+/*-------------------promoBlueA -----------------------*/
+
+.promoHolderBlueA
+{
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+}
+.promoBlueA
+{
+    display: block;
+    width: 200px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    background-color: #004785;
+    -webkit-opacity: 0.90;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoBlueA h3
+{
+    margin: 0px;
+    font-size: 21px;
+    font-weight: bold;
+    padding-top: 13px;
+    padding-left: 15px;
+    color: #fff;
+    letter-spacing: -0.1px;
+    line-height: 1em;
+}
+.promoBlueA ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promoBlueA li
+{
+    background: url("../img/promos/pxlarrow.gif") no-repeat;
+    background-position: 8px 8px;
+    margin: 0px;
+    padding: 4px 16px 4px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #bedcff;
+}
+.promoBlueA li a
+{
+    color: #bedcff;
+}
+.promoBlueA li a:hover
+{
+    color: #fff;
+}
+
+/*------------------ Trending (text) Promo -----------------*/
+
+.promoHolderTrending
+{
+    position: relative;
+    text-align: left;
+    width: 200px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoHolderTrending .innerShadow
+{
+    box-shadow: inset 0 0 20px #727D2D;
+}
+.promoTrending
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 25px 20px 20px 13px;
+    background: #a2ad4d;
+}
+.promoTrending h3
+{
+    margin-left: 7px;
+    font: 18px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+}
+.promoTrending ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promoTrending li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 15px 0 7px;
+}
+.promoTrending li a
+{
+    color: #343a16;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoTrending li a:hover
+{
+    color: #fff;
+}
+
+
+/*------------------ OtherSites (text) Promo -----------------*/
+
+.promoHolderOtherSites
+{
+    position: relative;
+    text-align: left;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    width: 200px;
+}
+.promoHolderOtherSites .innerShadow
+{
+    box-shadow: inset 0 0 20px #727D2D;
+}
+.promoOtherSites
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 25px 20px 20px 13px;
+    background: #a2ad4d;
+}
+.promoOtherSites h3
+{
+    text-transform: uppercase;
+    padding-top: 2px;
+    margin-left: 7px;
+    font: 18px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 25px;
+    background: url(../img/promos/boxWithCornerIcon.png) right top no-repeat;
+}
+.lt-ie8 .promoOtherSites h3
+{
+    display: inline;
+}
+.promoOtherSites ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promoOtherSites li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 15px 0 7px;
+}
+.promoOtherSites li a
+{
+    color: #343a16;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoOtherSites li a:hover
+{
+    color: #fff;
+}
+
+/*------------------ RelatedLinksGr (text) Promo -----------------*/
+
+.promoHolderRelatedLinksGr
+{
+    position: relative;
+    text-align: left;
+    width: 200px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoHolderRelatedLinksGr .innerShadow
+{
+    box-shadow: inset 0 0 20px #727D2D;
+}
+.promoRelatedLinksGr
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 25px 20px 20px 13px;
+    background: #a2ad4d;
+}
+.promoRelatedLinksGr h3
+{
+    text-transform: uppercase;
+    margin-left: 7px;
+    font: 18px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+}
+.promoRelatedLinksGr ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promoRelatedLinksGr li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 15px 0 7px;
+}
+.promoRelatedLinksGr li a
+{
+    color: #343a16;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoRelatedLinksGr li a:hover
+{
+    color: #fff;
+}
+/*------------------ RelatedLinksBlue (text) Promo -----------------*/
+
+.promoHolderRelatedLinksBl
+{
+    position: relative;
+    text-align: left;
+    width: 200px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoHolderRelatedLinksBl .innerShadow
+{
+    box-shadow: inset 0 0 20px #002755;
+}
+.promoRelatedLinksBl
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 25px 20px 20px 13px;
+    background: #004785;
+}
+.promoRelatedLinksBl h3
+{
+    text-transform: uppercase;
+    margin-left: 7px;
+    font: 18px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+.promoRelatedLinksBl ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promoRelatedLinksBl li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 15px 0 7px;
+}
+.promoRelatedLinksBl li a
+{
+    color: #bedcff;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoRelatedLinksBl li a:hover
+{
+    color: #fff;
+}
+
+/*------------------ CAEN (text) Promo -----------------*/
+
+.promoHolderCaen
+{
+    position: relative;
+    text-align: left;
+    width: 200px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoHolderCaen .innerShadow
+{
+    box-shadow: inset 0 0 20px #727D2D;
+}
+.promoCaen
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 25px 20px 20px 13px;
+    background: #a2ad4d;
+}
+.promoCaen h3
+{
+    margin: 0px;
+    font: 18pxFontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+    color: #343a16;
+}
+.promoCaen p
+{
+    margin: 0px;
+    width: 160px;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    color: #343a16;
+    font-weight: bold;
+    line-height: 1.6em;
+}
+.promoCaen .linkCtA
+{
+    display: block;
+    margin: 0px;
+    padding: 10px 10px 10px 0px;
+    text-align: right;
+    font-size: 14px;
+    color: #343a16;
+    background: url("../img/promos/pxlarrow.gif") center right no-repeat;
+}
+.promoCaen:hover .linkCtA
+{
+    text-decoration: underline;
+}
+
+/*------------------Invest with Button -----------------*/
+
+.promoHolderInvest
+{
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    background-color: #5e3f71;
+    width: 200px;
+    height: 200px;
+}
+
+.promoHolderInvest img
+{
+    position: absolute;
+    top: 64px;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoInvest
+{
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-decoration: none;
+    position: absolute;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoInvest h3
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 18px;
+    padding: 15px 10px 0px 15px;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    letter-spacing: -0.2px;
+    line-height: 1em;
+}
+.promoInvest p
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 12px;
+    padding: 56px 10px 0px 15px;
+    color: #fff;
+}
+.promoInvest .linkCtA
+{
+    display: block;
+    background: url("../img/promos/investBtn.png") 0 0 no-repeat;
+    position: absolute;
+    margin: 0px;
+    top: 150px;
+    left: 60px;
+    height: 33px;
+    width: 95px;
+    line-height: 33px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+}
+.promoInvest:hover .linkCtA
+{
+    text-decoration: underline;
+}
+
+
+
+/*------------------Advise with Button ----------------- */
+
+.promoHolderAdvise
+{
+    position: relative;
+    text-align: left;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    background-color: #004785;
+    width: 200px;
+    height: 265px;
+}
+
+.promoHolderAdvise img
+{
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+
+.promoAdvise
+{
+    display: block;
+    width: 200px;
+    height: 215px;
+    text-decoration: none;
+    position: absolute;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+
+
+.promoAdvise h3
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 18px;
+    padding: 15px 10px 0px 15px;
+    color: #fff;
+    text-shadow: 1px 1px 0px #000000;
+    letter-spacing: -0.2px;
+    line-height: 1em;
+}
+
+.promoAdvise h4
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 40px 10px 0px 15px;
+    color: #fff;
+}
+
+.promoAdvise p
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 12px;
+    padding: 56px 10px 0px 15px;
+    color: #fff;
+}
+
+.promoAdvise .linkCtA
+{
+    position: absolute;
+    margin: 0px;
+    font-size: 12px;
+    padding: 188px 6px 0px 15px;
+    color: #fff;
+    background: url("../img/promos/pxlarrow.gif") right 194px no-repeat;
+}
+
+.promoAdvise:hover .linkCtA
+{
+    text-decoration: underline;
+}
+.promoHolderAdvise .btnAdvise
+{
+    display: block;
+    background: url("../img/promos/advisingBtn.png") 0 12px no-repeat;
+    position: absolute;
+    margin: 0px;
+    top: 198px;
+    left: 15px;
+    height: 70px;
+    width: 160px;
+    line-height: 16px;
+    padding: 20px 0 0 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
+}
+.btnAdvise:hover
+{
+    text-decoration: underline;
+}
+
+/*------------------ Quotes (text) Promo -----------------*/
+
+.promoHolderQuotes
+{
+    position: relative;
+    text-align: left;
+    width: 200px;
+    height: auto;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoQuotes
+{
+    display: block;
+    width: 200px;
+    height: auto;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    background-color: #5e3f71;
+}
+.promoHolderQuotes .innerShadow
+{
+    box-shadow: inset 0 0 20px #3e2f51;
+}
+.promoQuotes p
+{
+    text-indent: -1em;
+    font-size: 14px;
+    padding: 20px 0px 0px 25px;
+    color: #eac7ff;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.promoQuotes p span, .promoQuotes p strong
+{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.promoQuotes .authorAttribution
+{
+    margin: 0px;
+    padding: 0px 15px 15px 0px;
+    text-align: right;
+    font-size: 10px;
+    color: #fff;
+}
+
+.promoQuotes .authorAttribution span
+{
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.promoQuotes:hover .authorQuotes
+{
+    text-decoration: underline;
+}
+
+
+/*------------------ RelatedSearch (text) Promo -----------------*/
+
+.promoHolderRelatedSearch
+{
+    position: relative;
+    text-align: left;
+    width: 244px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoRelatedSearch
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 15px 0px 15px 25px;
+    background: #212a55;
+}
+.promoHolderRelatedSearch .innerShadow
+{
+    box-shadow: inset 0 0 20px #212a35;
+}
+.promoRelatedSearch h3
+{
+    font: 14px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+.promoRelatedSearch ul
+{
+    list-style: none;
+    margin: 1em 0;
+    padding: 0;
+}
+.promoRelatedSearch li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 4px 0px 0px 0px;
+}
+.promoRelatedSearch li a
+{
+    color: #bedcff;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoRelatedSearch li a:hover
+{
+    color: #fff;
+}
+
+/*------------------ SearchHistory (text) Promo -----------------*/
+
+.promoHolderSearchHistory
+{
+    position: relative;
+    text-align: left;
+    width: 244px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoSearchHistory
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 15px 0px 15px 25px;
+    background: #0b5595;
+}
+.promoHolderSearchHistory .innerShadow
+{
+    box-shadow: inset 0 0 20px #0b3575;
+}
+.promoSearchHistory h3
+{
+    font: 14px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+.promoSearchHistory ul
+{
+    list-style: none;
+    margin: 1em 0;
+    padding: 0;
+}
+.promoSearchHistory li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 4px 0px 0px 0px;
+}
+.promoSearchHistory li a
+{
+    color: #bedcff;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoSearchHistory li a:hover
+{
+    color: #fff;
+}
+
+
+/*------------------ SearchOptions (text) Promo -----------------*/
+
+.promoHolderSearchOptions
+{
+    position: relative;
+    text-align: left;
+    width: 244px;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+}
+.promoSearchOptions
+{
+    display: block;
+    text-decoration: none;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    padding: 15px 0px 20px 15px;
+    background: #0b5595;
+}
+.promoHolderSearchOptions .innerShadow
+{
+    box-shadow: inset 0 0 20px #0b3575;
+}
+.promoSearchOptions h3
+{
+    font: 14px FontSiteSansRoman,arial,sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+.promoSearchOptions ul
+{
+    list-style: none;
+    margin: 1em 0;
+    padding: 0;
+}
+.promoSearchOptions li
+{
+    padding-left: 7px;
+    background: url(../img/promos/promoLinkArrow.png) left center no-repeat;
+    margin: 4px 0px 0px 0px;
+}
+.promoSearchOptions li a
+{
+    color: #bedcff;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.promoSearchOptions li a:hover
+{
+    color: #fff;
+}
+
+
+
+/* Promo Button */
+.promoBtn
+{
+    /*height:28px;*/
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: none;
+    float: left;
+    position: relative;
+    font: bold 15px/26px arial, sans-serif;
+    background: #004480;
+    background-image: -webkit-gradient(linear, 0% 94%, 0% 6%, color-stop(0, #003364), color-stop(1, #0097e1));
+    background-image: -moz-linear-gradient(bottom, #003364, #0097e1);
+    background-image: linear-gradient(#0097e1, #003364);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 4px #666;
+    -webkit-box-shadow: 0 0px 4px #666;
+    box-shadow: 0 0 4px #666;
+    cursor: pointer;
+    border-top: 1px solid #15416b;
+    border-left: 1px solid #15416b;
+    border-right: 1px solid #115d9e;
+    border-bottom: 1px solid #115d9e;
+}
+.promoBtn span
+{
+    display: block;
+    background: url(../img/global/transLinkArrow.png) 0 0 no-repeat;
+    width: 9px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    margin-top: -5.5px;
+    right: 5px;
+}
+.promoBtn:hover, a:hover .promoBtn
+{
+    background-image: -webkit-gradient(linear, 0% 94%, 0% 6%, color-stop(0, #0097e1), color-stop(1, #003364));
+    background-image: -moz-linear-gradient(bottom, #0097e1, #003364);
+    background-image: linear-gradient(#003364, #0097e1);
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+    border-top: 1px solid #115d9e;
+    border-left: 1px solid #115d9e;
+    border-right: 1px solid #15416b;
+    border-bottom: 1px solid #15416b;
+}
+.lt-ie9 .promoBtn
+{
+    -pie-background: linear-gradient(#1469b6, #004480);
+    behavior: url(/pie.htc);
+}
+.lt-ie9 .promoBtn:hover, .lt-ie9 a:hover .promoBtn
+{
+    -pie-background: linear-gradient(#004480, #1469b6);
+    behavior: url(/pie.htc);
+}
+.ie9 .promoBtn
+{
+    background-image: url(../img/global/blueGradient.svg);
+}
+.ie9 .promoBtn:hover, .ie9 a:hover .promoBtn
+{
+    background-image: url(../img/global/blueGradientHvr.svg);
+}
+
+
+/* The follow styles are for the promo.htm table for organizing the promos */
+.promoTable #wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+}
+.promoTable table
+{
+    background: #fff;
+    width: 690px;
+    margin: 0 auto;
+}
+.promoTable table th, .promoTable table td
+{
+    width: 230px;
+    padding: 10px;
+    font: 12px arial,sans-serif;
+}
+.promoTable table th h1
+{
+    font: 28px FontSiteSansLight,arial,sans-serif;
+    color: #212a55;
+}
+.promoTable table th
+{
+    font: 18px FontSiteSansBold,arial,sans-serif;
+    color: #212a55;
+}
+.promoTable table td
+{
+    height: 230px;
+    border: 1px solid #0b5595;
+    text-align: center;
+    color: #0e4270;
+    position: relative;
+}
+
+/* Make sure promos in the right col all stack */
+.promoCol.rightCol .promo {
+	float: right;
+	clear: right;
+}

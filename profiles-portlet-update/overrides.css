@@ -1,0 +1,177 @@
+/* - overrides.css - 
+	# IGNORE FILE CONTENTS
+    # FOR PROFILES PORTLET TESTING PURPOSES ONLY
+
+*/
+@media screen {
+/* https://caen-cms-stage.engin.umich.edu/portal_css/overrides.css?original=1 */
+/* */
+/* */
+/* */
+
+#content-core form { background-color: #ffffff; font-size: 12pt; }
+/* */
+footer nav li a { color: #fff !important; }
+/* */
+dt.actionMenuHeader a, dd.actionMenuContent a { text-decoration: none; }
+#contentActionMenus { padding: 0 !important; margin-right: 0; margin-top: 1px !important; }
+#contentActionMenus li { float: right; margin-bottom: 0 !important; list-style: none; }
+#contentActionMenus a { border: none !important; font-weight: normal; }
+#contentActionMenus a:hover { color: #fff !important; }
+dd.actionMenuContent li { float: none !important; }
+dd.actionMenuContent ul { padding: 0 !important; }
+#contentActionMenus dl.actionMenu.activated dd a:hover { color: #666 !important; }
+dd.actionMenuContent ul li a { padding: 5px; }
+.contentViews li { list-style: none; float: left; margin: 0 !important; }
+.contentViews li a { border: none !important; }
+#edit-bar .plain a { color: #fff !important; }
+#edit-bar .plain a:hover, #edit-bar .selected a:hover { color: #000 !important; }
+#edit-bar { border-radius: 0; font-size:1em; padding: 3px 5px 0 0; min-height: 2.em;
+}
+.contentViews { padding: 0 !important; }
+dd.actionMenuContent { margin-right: 1px !important; position: relative; z-index: 50; }
+dl.actionMenu.activated, dl.actionMenu.deactivated { margin-bottom: 0 !important; }
+dd.actionMenuContent ul { padding: 0px !important; }
+dd.actionMenuContent ul li a { padding: 0 .25em !important; line-height: 2em; }
+.contentViews a { margin-left: 3px !important; }
+#content a.link-overlay { border: none !important; }
+/* */
+.promoEvents h4 { text-transform:uppercase; }
+/* */
+div.managePortletsLink, a.managePortletsFallback { width: 180px; float:left; text-align: center; font-size: 80%; background: #ddd; border-radius: 0.5em; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; }
+#promoCol div.managePortletsLink, #promoCol a.managePortletsFallback { width: 200px; }
+li.private a { color: Red !important; }
+/* */
+#listing-table, #listing-table td { width: auto; }
+#listing-table { margin: 10px 0; }
+#folderlisting-main-table input.context { height: 1.6em; /* */ }
+/* */
+ul.formTabs { padding: 0; }
+form.enableFormTabbing { border-radius: .5em .5em 0 0; }
+fieldset.formPanel { padding: 10px; font-size: .8em; }
+.formControls { height: 2em; }
+.formControls input { height: 1.6em; font-size: .8em; }
+/* */
+.portletAssignments { font-size: 1em !important; }
+.portletAssignments .formControls input { font-size: 1em !important; }
+#portletmanager-plone-leftcolumn { padding-left: 8px; }
+/* */
+#skip, .skip { display:none; }
+ul.contentViews { margin: 0; }
+.content { /* */
+/* */
+}
+#wrapper { overflow: visible; }
+footer { z-index: -2; }
+.template-folder_contents .content { display: table; overflow: visible; }
+.template-manage-portlets #rightPortlets { float:right; }
+/* */
+.contentBlock dl { padding: 20px; }
+.contentBlock form { padding:20px; }
+.contentBlock a.link-parent { padding:20px; }
+/* */
+.promoBlueA h2, .promoBlueA h3, .promoBlueA h4, .promoBlueA h5 { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 21px; font-weight: bold; padding-top: 13px; padding-left: 15px; color: #ffffff; letter-spacing: -0.1px; line-height: 1em; }
+.promoBlueA h2 { font-size: 22px; }
+.promoBlueA h3 { font-size: 18px; text-transform: uppercase; padding-top: 25px; }
+.promoBlueA h4 { font-size: 20px; }
+.promoBlueA h5 { font-size: 19px; }
+.contentBlock h2, .contentBlock h3, .contentBlock h4, .contentBlock h5 { margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 18px; font-weight: bold; padding-top: 20px; padding-left: 20px; padding-bottom: 5px; color: #212a55; letter-spacing: -0.2px; }
+.contentBlock h2 { font-size: 19px; }
+.contentBlock h3 { font-size: 18px; }
+.contentBlock h4 { font-size: 17px; }
+.contentBlock h5 { font-size: 16px; }
+/* */
+.editPage .content { min-height: 1257px; }
+.primaryLanding #contentWrap { padding-bottom: 20px; position: absolute; width: 100%; z-index: 10; }
+.content a.mapButton { background: url(https://caen-cms-stage.engin.umich.edu/mapPinImg.png) no-repeat scroll left top transparent; }
+.content .mapButton .mapButtonArrow { background: url(https://caen-cms-stage.engin.umich.edu/ltbluePxlArrow.png) no-repeat scroll right center transparent; }
+#contentWrap { z-index: 1; }
+.promoBlueA { color: #fff; padding: 0 0 10px 10px; width: 190px; }
+.promoBlueA a { text-decoration: none; }
+#contentActionMenus dl.actionMenu { line-height: 2em; margin-top: 0; }
+.sideNav ul li a { padding: 9px 25px 9px 20px; }
+#rightPortlets .first *, .leftCol .first * { border-radius: 5px 5px 0 0; }
+#rightPortlets .last *, .leftCol .last * { border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+#rightPortlets td, #rightPortlets th, #rightPortlets img, .leftCol th, .leftCol td, .leftCol img { border-radius: 0 0 0 0 !important; }
+.sideNav ul li.first * { border-radius: 0 5px 0 0; }
+.sideNav ul li ul * { border-radius: 0 0 0 0 !important; }
+.content .first { border-top-left-radius: 8px; border-top-right-radius: 8px; }
+#contactBox { background: none repeat scroll 0 0 white; }
+.promoRelatedLinksBl { color:  #fff; background: #41609A; padding: 30px 25px 10px; box-shadow: none !important; }
+.promoRelatedLinksBl h3 { margin-left: 0; }
+a.calloutCTA { color: #fff; font-weight: bold; text-decoration: none; display: block; text-align: right; background: url(https://caen-cms-stage.engin.umich.edu/faqLinkArrow.png) no-repeat right center; padding-right: 7px; margin: 5px -15px 0 0; }
+a.calloutCTA:hover { text-decoration: underline; }
+/* */
+.template-manage-portlets #content-core { float: left; width: 450px; }
+/* */
+.promoHolderTeam { height: auto; min-height: 200px; }
+.promoTeam { height: auto; min-height: 200px; position: relative; padding-bottom: 15px; }
+.promoTeam h3 { text-transform: uppercase; }
+.promoTeam li { list-style: none; background: url(https://caen-cms-stage.engin.umich.edu/pxlarrow.gif) no-repeat left center; padding: 4px 7px; }
+.promoTeam ul { padding-left: 16px; }
+.promoTeam a, .promoTeam li { color: #FBB62E; font-weight: bold; text-decoration: none; }
+.promoTeam a:hover { color: #fff; }
+/* */
+.calendarPage .content div.documentByLine { margin-left:120px; }
+/* */
+.sideNav ul li .current > a, .sideNav ul li li a:hover, .sideNav ul li li a:focus { padding: 9px 15px 9px 20px; }
+/* */
+.contentBlock h1 { color: #212A55; padding: 20px 0 5px 20px; font-size: 18px; }
+.contentBlock p { margin: 0 20px 0 0; padding: 10px 10px 0 20px; }
+.contentBlock ul { padding-right: 10px !important; }
+.thinCol .contentBlock .fullWidthImg { width: 500px; margin: 10px -20px; }
+.wideCol .contentBlock .fullWidthImg { width: 720px; margin: 10px -20px; }
+.contentBlock ol { color: #0E4270; padding: 14px 10px 6px 48px; line-height: 1.5em; }
+blockquote .quotes b { font-size: 24px; }
+h4.bodySubHead { font-weight: normal; font-size: 14px; color: #0B5595; padding: 20px 0 0 20px; }
+.contentBlock .videoHolder h2 { padding: 0 !important; font-size: 18px !important; }
+/* */
+#category span.tags { background: #205C90; padding: .26em .5em .24em .5em; border-radius: .5em; color: #fff; position: relative; margin-right: 1px; top: 1px; }
+/* */
+.promoBlueA ol { padding-left: 25px; }
+.promoBlueA ol li { background: none; padding-left: 0px; }
+/* */
+.promoTeam ol { padding-left: 32px; }
+.promoTeam ol li { background: none; list-style-type: inherit; padding-left: 0; }
+.promoTeam h2, .promoTeam h4, .promoTeam h5, .promoTeam h6 { color: #ffbb30; padding: .5em 15px; }
+.promoTeam ul, .promoTeam ol { color: #fff; }
+/* */
+.editPage #contentWrap { min-height: 1257px; }
+/* */
+.formControls input { font-size: 1em; height: 2.5em; }
+#rightPortlets { float: right; }
+/* */
+h1.subsiteHeader { font-size: 14px; color: #212a55; font-weight: normal; padding-top: 0pt; padding-right: 0pt; padding-bottom: 10px; padding-left: 22px; }
+h1.subsiteHeader span { font-size: 18px; display: block; text-transform: uppercase; }
+.formControls input { font-size: 1em; height: 95%; }
+/* */
+#zc.page.browser_form fieldset { width: 720px; }
+.promoTower .linkCtA { margin: 0; }
+.promoTower .promoBtn { position: absolute; bottom: 15px; left: 15px; max-width: 127px; line-height: 1.4em; padding-top: 3px; padding-bottom: 3px; }
+.contentBlock blockquote { color: #0E4270; }
+/* */
+.promoTeam pre { background: #222; color: #fff; font-size: 90%; line-height: 1.25em; overflow-x: auto; padding: 1em; }
+.promoTeam .pullquote { color: #444; float: right; font-size: 1.6em; font-weight: bold; letter-spacing: -.08em; margin: 0 1em .5em .5em; }
+.promoTeam .callout { background: #eee; color: #666; border-left: 1em solid #ccc; clear: both; padding: 1em; }
+.promoTeam { overflow: hidden; }
+.promoTeam .discreet { color: #666; font-size: 85%; }
+.promoTeam .visualHighlight { background: #ffffbb; color: #666; }
+.callout, .visualHighlight, .discreet, pre { border-radius: 0 !important; }
+/* */
+.thinCol .faqBlock, .thinCol .contentBlock { width: 500px; }
+.faqs #contentHolder { float: left; }
+.nonSectionBodyContent { color: #0e4270; line-height: 1.6em; padding: 0 10px 15px; }
+.theaterBg { left: 50% !important; z-index: 4 !important; }
+/* */
+/* */
+.socialBubble .image.youTube { max-height: 65px; max-width: 110px; }
+.fbPreviewImage { max-height: 60px; max-width: 50px; }
+.comboHolder { top: -149px !important; }
+.scheduledOutageIcon, .serviceChangeOutageIcon, .serviceProviderOutageIcon { background-position: left top; }
+.tableFilters { margin: 0 20px !important; padding: 0 !important; }
+.softwareListing th { background: #4e83b2 !important; border: 1px solid #fff !important; color: #fff !important; padding: 5px 0 5px 10px !important; }
+.softwareListing td { background: #bfd3eb !important; border: 1px solid #fff !important; }
+.softwareListing .even td { background: none !important; }
+/* */
+
+}
