@@ -560,6 +560,8 @@ footer {
 	clear: both;
 	color: #aaa;
 	background: url(../img/foot.png) #333 bottom right repeat-x;	
+	box-shadow: 0 0 10px black;
+	-webkit-box-shadow: 0 0 10px black;
 }
 
 div#footercontainer {
