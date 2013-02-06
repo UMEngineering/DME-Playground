@@ -13,12 +13,46 @@ function parallax(object){
 	}, 33);//33ms is 30fps, you can try changing this to something larger for better performance
 	$(window).bind('scroll', function () {
 		console.log($window.scrollTop());
-		if ($window.scrollTop() > 198) {
-			$(".sticky").addClass("fixed");
-		}
-		if ($window.scrollTop() < 198) {
-			$(".sticky").removeClass("fixed");
-		}
+		
+
+		$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase()); 
+
+			if ($window.scrollTop() > 198) {
+				$(".sticky").addClass("fixed");
+			}
+			else {
+				$(".sticky").removeClass("fixed");
+			}
+
+			if ($window.scrollTop() > 430) {
+				$("blockquote.first").addClass("opaque");
+			}
+			else {
+				$("blockquote.first").removeClass("opaque");
+			}
+
+			if ($window.scrollTop() > 900) {
+				$("blockquote.second").addClass("opaque");
+			}
+			else {
+				$("blockquote.second").removeClass("opaque");
+			}
+
+			if ($window.scrollTop() > 1880) {
+				$("blockquote.third").addClass("opaque");
+			}
+			else {
+				$("blockquote.third").removeClass("opaque");
+			}
+
+			if ($window.scrollTop() > 3190) {
+				$("blockquote.fourth").addClass("opaque");
+			}
+			else {
+				$("blockquote.fourth").removeClass("opaque");
+			}
+
+		
 
 		first++;
 		if (scroll_ok === true) {
@@ -79,9 +113,9 @@ function parallax(object){
 					} else if (self.data('speed') == 1) {
 						second = '1';
 					}
-					self.css("-webkit-transition", "all "+second+"s ease-out");
+					//self.css("-webkit-transition", "all "+second+"s ease-out");
 				} else {
-					self.css("-webkit-transition", "none");
+					//self.css("-webkit-transition", "none");
 				}
 			}  	
 		}
@@ -180,12 +214,12 @@ $(document).ready(function(){
 		
 		// Cut the string
 		var spaceAt = -1;
-		for (var i=0; i<$("p.youtube-description").text().length && i <= 60; i++){
+		for (var i=0; i<$("p.youtube-description").text().length && i <= 150; i++){
 			if ($("p.youtube-description").text().charAt(i) == " ") {
 				spaceAt = i;
 			}
 		}
-		$("p.youtube-description").text($("p.youtube-description").text().substr(0, spaceAt)+" ...");
+		// $("p.youtube-description").text($("p.youtube-description").text().substr(0, spaceAt)+"...");
     });
 	$(".play-button").css({"width" : "200px", "height" : "200px", "background" : "url(img/map-play-arrow.png) center no-repeat"});
 	$(".youtubeColorbox").colorbox({iframe: true, innerWidth: 600, innerHeight: 300, arrowKey: true});

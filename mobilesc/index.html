@@ -13,7 +13,7 @@
 		 Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>A Pocketful of Miracles</title>
+		<title>Mighty Mobile</title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<meta property="og:title" content="A Pocketful of Miracles" />
@@ -51,11 +51,12 @@
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/zh_CN/all.js#xfbml=1";
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=562007713813256";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-		<div class="meny">
-			<div>
+
+		<!-- <div class="meny"> 
+			<div class="more">
 				<p>More Digital Multimedia Experience</p>
 				<ul>
 					<li><a href="http://www.engin.umich.edu/newscenter/dme/makingadifference">Making a Difference: Image Gallery</a></li>
@@ -69,7 +70,8 @@
 					<li><a href="http://solarcontrols.engin.umich.edu/">Dread Down Under</a></li>
 				</ul>
 			</div>
-		</div>
+		 </div> -->
+		
 		<div class="meny-arrow"></div>
 		<div id="container" class="contents">
 		<div class="sticky" id="nav">
@@ -78,18 +80,21 @@
 				<li class="dmegallery"><a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience Gallery</a><a id="circle" href="http://www.engin.umich.edu/newscenter/dme"></a></li>
 			</ul>
 		</div>
-		<div id="head"><h1>A Pocketful of Miracles</h1></div>
+		<div id="head"><h1>Mighty Mobile</h1><h2 class="byline">By Bill Clayton</h2></div>
 		<div id="main" role="main">
 
-			<img id="one" src="img/one.png" data-type="cloud" data-speed="8" />
-			<img id="two" src="img/two.png" data-type="cloud" data-speed="2" />
+			<img id="one" src="img/one.png" data-offsetY="500" data-fromTop="500" data-type="cloud" data-speed="15" />
+			<img id="two" src="img/two.png" data-type="cloud" data-speed="8" />
 			<img id="three" src="img/three.png" data-type="cloud" data-speed="1" />
-			<img id="four" data-offsetY="3000" data-fromTop="3000" src="img/one.png" data-type="cloud" data-speed="8" />
-			<img id="five" data-offsetY="3000" data-fromTop="3000" src="img/two.png" data-type="cloud" data-speed="2" />
+			<img id="four" data-offsetY="3000" data-fromTop="3000" src="img/one.png" data-type="cloud" data-speed="15" />
+			<img id="five" data-offsetY="3000" data-fromTop="3000" src="img/two.png" data-type="cloud" data-speed="8" />
 			<img id="six" data-offsetY="3000" data-fromTop="3000" src="img/three.png" data-type="cloud" data-speed="1" />
-			<img id="eight" data-offsetY="6000" data-fromTop="6000" src="img/two.png" data-type="cloud" data-speed="2" />
+			<img id="seven" src="img/three.png" data-fromTop="6000" data-offsetY="6000" data-type="cloud" data-speed="1" />
+			<img id="eight" src="img/three.png" data-fromTop="9000" data-offsetY="9000" data-type="cloud" data-speed="1" />
+
+<!-- 			<img id="eight" data-offsetY="6000" data-fromTop="6000" src="img/two.png" data-type="cloud" data-speed="8" />
 			<img id="nine" data-offsetY="6000" data-fromTop="6000" src="img/three.png" data-type="cloud" data-speed="1" />
-			<!--<div id="one" style="opacity: 1;"></div>-->
+ -->			<!--<div id="one" style="opacity: 1;"></div>-->
 
 			<div class="content">
 				<h2>There’s a Supercomputer in Your Pocket</h2>
@@ -102,22 +107,33 @@
 					<span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
 					<div class="fb-like" data-send="false" data-width="450" data-show-faces="true"></div>
 				</p>
-				<p>“Siri, where is the Sea of Tranquility?” People listening to transmissions from Apollo 11 in 1969 might have heard those words if there had been an iPhone aboard the spacecraft as it approached the Moon.</p>
-				<p>But iPhones didn’t exist back then. The United States sent Apollo 11 astronauts to the Moon with a guidance computer that was two feet wide, weighed 70 pounds, had a processor speed of 2 MHz, 4 KB of memory (about 2,048 words), power consumption of 55 watts and a cost of $150,000 ($938,000 in 2012 dollars). Today’s Apple iPhone 5 is a little more than two inches wide, weighs 3.9 ounces, has a processor with a speed of 1.29 GHz (actual performance might be as much as 1,000 times larger), 1 GB of RAM, and power consumption of about 1 watt, all at a cost of about $200 ($32 in 1969 dollars).</p>
-				<p>Computers have come a long way in 40 years, and mobile computers have come the farthest in the shortest time – some of them are more powerful than early supercomputers. A tweaked Motorola Droid can hit speeds more than 15-times faster than the Cray-1 supercomputer of 1979. Apple's iPad 2 rivals the Cray 2 supercomputer, the world's fastest computer in 1985. What will smartphones look like in eight years? Jeff Bradley, a developer at AT&T, predicts they’ll have 28 GHz of processing power, embedded storage of 64 terabytes and a 500 Mbps connection to the mobile data network. (Processing power of 28 GHz might be an overly optimistic. The 2012 International Technology Roadmap for Semiconductors predicts that typical frequencies will still be under 6GHz in 2020.)</p>
-				<p>Mobile devices have evolved from being very powerful computers to what we considered, just a few years ago, to be supercomputers, and they continue to hurry toward levels of performance that, just a decade ago, we didn’t imagine would be possible. </p>
+				<p>"Siri, where is the Sea of Tranquility?" People listening to transmissions from Apollo 11 in 1969 might have heard those words if there had been an iPhone aboard the spacecraft as it approached the Moon.</p>
+				<p>But iPhones didn't exist back then. The United States sent Apollo 11 astronauts to the Moon with a guidance computer that was two feet wide, weighed 70 pounds, had a processor speed of 2 MHz, 4 KB of memory (about 2,000 characters), power consumption of 55 watts and a cost of $150,000 ($938,000 in 2012 dollars). Today's Apple iPhone 5 is a little more than two inches wide, weighs 3.9 ounces, has a processor with a speed of 1.29 GHz (actual performance might be as much as 1,000 times faster), 1 GB of RAM, and power consumption of about 1 watt, all at a cost of about $200 ($32 in 1969 dollars).</p>
+				<p>Computers have come a long way in 40 years, and mobile computers have come the farthest in the shortest time &mdash; some of them are more powerful than early supercomputers. A tweaked Motorola Droid can hit speeds more than 15-times faster than the Cray-1 supercomputer of 1979. Apple's iPad 2 rivals the Cray 2 supercomputer, the world's fastest computer in 1985. What will smartphones look like in eight years? Jeff Bradley, a developer at AT&T, predicts they'll have 28 GHz of processing power, embedded storage of 64 terabytes and a 500 Mbps connection to the mobile data network. (Processing power of 28 GHz might be overly optimistic. The 2012 International Technology Roadmap for Semiconductors predicts that typical frequencies will still be under 6 GHz in 2020.)</p>
+				<p>Mobile devices have evolved from being very powerful computers to what we considered, just a few years ago, to be supercomputers, and they continue to hurry toward levels of performance that, just a decade ago, we didn't imagine would be possible. </p>
 			</div>
+
+
+
 			<div class="content">
-				<p>The use of smart phones to text, stream and surf the Web required engineers to develop blazing-fast processors. Power, speed and storage have increased steadily. But the demand for smaller phones and resource-hungry operations such as converting the information from a camera sensor to a JPEG, processing video or unpacking a compressed file are pushing the technology to its physical limits – there are a number of restrictions that prevent processors from working at full capacity. </p>
+				<div class="ytContainer">
+					<div class="promo promoHolderYoutube">
+						<a id="WJZ5-aZeesI" class="youtubeColorbox slides" href="#"> <div class="info"><h3>Designing The Computers Of 2025</h3></div></a>
+					</div>
+					<p class="youtube-description">U-M researchers will be tackling the end of Moore’s Law &mdash; and designing the computers of 2025 &mdash; at a new research center.</p>
+				</div>
+				<p>The use of smart phones to text, stream and surf the Web required engineers to develop blazing-fast processors. Power, speed and storage have increased steadily. But the demand for smaller phones and resource-hungry operations such as converting the information from a camera sensor to a JPEG, processing video or unpacking a compressed file are pushing the technology to its physical limits &mdash; there are a number of restrictions that prevent processors from working at full capacity. </p>
 		
 				<p>Of those restrictions, the prominent two are excessive heat and sufficient power. Of those two, heat seems to be the bigger obstacle.</p>
 		
-				<p>The faster the chip, the more power is required for operation, and battery technology hasn’t kept pace with chip development. However, each increase in processing power requires more transistors on chips. “Moore’s Law,” which has been accurate for 30 years, predicts that the number of transistors that can economically be manufactured on a chip doubles every 18 months. However, as their number grows, the interconnecting wires get thinner, which increases resistance, makes them less energy-efficient and produces excessive heat. </p>
+				<p>The faster the chip, the more power is required for operation, and battery technology hasn't kept pace with chip development. However, each increase in processing power requires more transistors on chips. Moore's Law, which has been accurate for 30 years, predicts that the number of transistors that can economically be manufactured on a chip doubles every 18 months.  However, Moore's is running out of steam. In particular, power efficiency has not kept pace with the doubling. As a result chips are becoming less energy-efficient and produce excessive heat. </p>
 			</div>
+
+			
 
 			<div class="content">
 
-				<p>This presents a problem. Whereas desktops and laptops have space for fans to move air in and out to cool their chips, mobile devices such as smart phones, iPads and readers simply don’t have room for fans. If left uncooled, transistors can overheat, melting themselves and surrounding components – chips hit “the power wall.” To prevent this, some of the transistors have to be powered off at any given time. These inactive transistors are known as “dark silicon.”</p>
+				<p>This presents a problem. Whereas desktops and laptops have space for fans to move air in and out to cool their chips, mobile devices such as smart phones, tablets and e-readers simply don't have room for fans. If left uncooled, transistors can overheat, melting themselves and surrounding components &mdash; chips hit "the power wall." To prevent this, some of the transistors have to be powered off at any given time. These inactive transistors are known as "dark silicon."</p>
 		
 				<p>Tom Wenisch is the Morris Wellman Faculty Development Assistant Professor of Computer Science and Engineering. He and a team of engineers from the University of Michigan and the University of Pennsylvania have proposed a solution. </p>
 			
@@ -125,84 +141,123 @@
 
 			<div class="content">
 
-				<p>“Currently, processors are designed for sustained performance; that is, they turn on and run full tilt and don’t stop. Logic would say that, to decrease the heat, you would need to use fewer transistors on a chip. But, if you think about how you use a phone, you don’t need it to run full tilt forever; you want it to run as fast as possible when you click a button, but then go to sleep.Instead of cutting down transistors, our scheme is to put more transistors on a chip, but use them only when they’re needed to give a short performance boost – while the phone user is waiting. When they complete their tasks, they turn off and cool down until they’re needed again. We call this technique ‘computational sprinting.’”</p>
+				<p>"Currently, processors are designed for sustained performance; that is, they turn on and run full tilt and don't stop. Logic would say that, to decrease the heat, you would need to use fewer transistors on a chip. But, if you think about how you use a phone, you don't need it to run full tilt forever; you want it to run as fast as possible when you click a button, but then go to sleep.  Instead of cutting down transistors, our scheme is to put more transistors on a chip, but use them only when they're needed to give a short performance boost &mdash; while the phone user is waiting. When they complete their tasks, they turn off and cool down until they're needed again. We call this technique 'computational sprinting.'"</p>
 		
-				<p>Most of today’s smartphones don’t have chips with 16 processors. “Existing batteries can’t supply enough power to run 16 cores at once, even if we wanted them all to be active,” Wenisch said. “So, to make chips that can sprint, we augment the battery with a super-capacitor that, like an old fashioned camera flash, charges up to prepare for a sprint.Then, when a performance boost is needed, the processor draws power from both the battery and the super-capacitor. This lets us run all 16 cores, improving the device’s response time ten-fold.”</p>
+				<p>Most of today's smartphones don't have chips with 16 processors. "Existing batteries can't supply enough power to run 16 cores at once, even if we wanted them all to be active," Wenisch said. "So, to make chips that can sprint, we augment the battery with a super-capacitor that, like an old fashioned camera flash, charges up to prepare for a sprint.  Then, when a performance boost is needed, the processor draws power from both the battery and the super-capacitor. This lets us run all 16 cores, improving the device's response time ten-fold."</p>
 		
-				<p>The team is working to deliver as much computing horsepower as possible in 300 milliseconds. “That’s short enough to go unnoticed,” Wenisch said. </p>
+				<p>The team is working to deliver as much computing horsepower as possible in 300 milliseconds. "That's short enough to go unnoticed," Wenisch said. </p>
 			</div>
 
 			<div class="content">
-
-				<p>Wenisch also has been testing a material – something like candle wax – to create a phase-change heatsink. “As the material melts, or changes phase, it absorbs a huge amount of heat and holds the temperature at a constant level, letting the chip sprint longer,” Wenisch said. “As the processor slowly cools off, the material cools, too, to get ready for the next sprint. The materials we are studying now will last for the life of the chip.”</p>
+				<div class="image-container">
+					<a class='images slides' href="img/heatsink.jpg" title="A phase-change heatsink absorbs heat and holds temperature at a constant level, letting the chip sprint longer."><img src="img/heatsink_sm.jpg" alt="" /></a>
+					<div class="image-description">A phase-change heatsink absorbs heat and holds temperature at a constant level, letting the chip sprint longer.</div>
+				</div>
+				<p>Wenisch also has been testing a material &mdash; something like candle wax &mdash; to create a phase-change heatsink. "As the material melts, or changes phase, it absorbs a huge amount of heat and holds the temperature at a constant level, letting the chip sprint longer," Wenisch said. "As the processor slowly cools off, the material cools, too, to get ready for the next sprint. The materials we are studying now will last for the life of the chip."</p>
 		
-				<p>Work on heat dissipation is ongoing elsewhere. IBM researchers have been working on a chip that’s cooled AND powered by fluid. The investigators stack hundreds of silicon wafers on top of each other to create three-dimensional processors, which are dense but have relatively little surface area for cooling. To solve that problem, engineers run a pair of fluidic networks between each layer. One carries in charged fluid to power the chip, the second carries away the same fluid after it has picked up heat from the active transistors — in essence, the system is a microfluidic radiator. Researchers got the idea by studying the human brain, which is 10,000-times denser than any computer processor. The brain’s network of capillaries and blood vessels transports heat and energy, all at the same time, to achieve efficiency.</p>
+				<p>Work on heat dissipation is ongoing elsewhere. IBM researchers have been working on a chip that's cooled AND powered by fluid. The investigators stack hundreds of silicon wafers on top of each other to create three-dimensional processors, which are dense but have relatively little surface area for cooling. To solve that problem, engineers run a pair of fluidic networks between each layer. One carries in charged fluid to power the chip, the second carries away the same fluid after it has picked up heat from the active transistors &mdash; in essence, the system is a microfluidic radiator. Researchers got the idea by studying the human brain, which is 10,000-times denser than any computer processor. The brain's network of capillaries and blood vessels transports heat and energy, all at the same time, to achieve efficiency.</p>
 		
-				<p>Back at Michigan Engineering, lower heat emissions were a serendipitous product of work done to create chips that are smaller, faster and low-cost. Wei Lu, an associate professor in the Department of Electrical Engineering and Computer Science, and his team built a chip composed of nanoscale memristors, computer components that offer both memory and logic functions, and make it possible to achieve their objective: chips that are smaller, faster and low-cost. The team also found that memristors require less energy to operate and, consequently, they produce less heat. Their memory function works even when current is not passing through them, in which case no heat is generated. Furthermore, memristors have the potential to power handheld devices with 10-times the embedded memory possible today. </p>
+				<p>Back at Michigan Engineering, lower heat emissions were a serendipitous product of work done to create chips that are smaller, faster and low-cost. Wei Lu, an associate professor in the Department of Electrical Engineering and Computer Science, and his team built a chip composed of nanoscale memristors, computer components that offer both memory and logic functions, and make it possible to achieve their objective: Chips that are smaller, faster and low-cost. The team also found that memristors require less energy to operate and, consequently, they produce less heat. Their memory function works even when current is not passing through them, in which case no heat is generated. Furthermore, memristors have the potential to power handheld devices with 10-times the embedded memory possible today. </p>
 			</div>
 
 			<div class="content">
-
+				
 				<p>Experimenting with ultra-low-power mobile chip architectures has become a major area of interest not only because chips of this type produce less heat, but also because they make it possible to squeeze more FLOPS (a measure of computer performance) out of their machines. </p>
 		
-				<p>Trevor Mudge is the Bredt Family Professor of Electrical Engineering and Computer Science and the co-founder of Michigan Engineering’s Advanced Computer Architecture Lab (ACAL). He said that developing mobile supercomputers will “require rethinking the way we design computers. Rather than worrying solely about performance, with the occasional nod to power consumption and cost, we need to judge computers by their performance-power-cost. This new way of looking at processors will lead us to new computer architectures and new ways of thinking about computer system design.”</p>
-		
-				<p>He and Electrical Engineering and Computer Science professors David Blaauw and Dennis Sylvester have developed Centip3De (“centipede”), a chip that uses three-dimensional processors to open up an entirely new design paradigm – near-threshold computing (NTC). Its objective is run a processor at low voltage to consume less energy – without giving up performance. Just as computational sprinting activates processors only when a performance boost is needed, a Centip3De chip uses just enough power – but no more – to operate transistors correctly. That is, there’s a voltage tipping point – below it, transistors continue to work correctly but get exponentially slower as voltage drops. The objective of NTC is to hit the “sweet spot,” where voltage is low but transistor speed is still useful. </p>
+				<p>Trevor Mudge is the Bredt Family Professor of Electrical Engineering and Computer Science and the co-founder of Michigan Engineering's Advanced Computer Architecture Lab (ACAL). He said that developing mobile supercomputers will "require rethinking the way we design computers. Rather than worrying solely about performance, with the occasional nod to power consumption and cost, we need to judge computers by their performance-power-cost. This new way of looking at processors will lead us to new computer architectures and new ways of thinking about computer system design."</p>
+				<div class="image-container">
+					<a class='images slides' href="img/3d.png" title="The Centip3De (&quot;centipede&quot;) consists of chips stacked in a three-dimensional structure to save power and space."><img src="img/3d_sm.png" alt="" /></a>
+					<div class="image-description threed">The Centip3De ("centipede") consists of chips stacked in a three-dimensional structure to save power and space.</div>
+				</div>
+				<p>He and Electrical Engineering and Computer Science professors David Blaauw and Dennis Sylvester have developed Centip3De ("centipede"), a chip that consists of chips stacked in a three-dimensional structure to save power and space.  This move to the third dimension opens up an entirely new design paradigm. In addition, they have pioneered near-threshold computing (NTC). The goal is to run a processor at a very low voltage to consume less energy &mdash; without giving up performance. Just as computational sprinting activates processors only when a performance boost is needed, a Centip3De chip uses just enough power &mdash; but no more &mdash; to operate transistors correctly. That is, there's a voltage tipping point &mdash; below it, transistors continue to work correctly but get exponentially slower as voltage drops. The objective of NTC is to hit the "sweet spot," where voltage is low but transistor speed is still useful. </p>
 			</div>
 
 			<div class="content">
 
-				<p>Mudge and his team are also working on smoothing out congestion points – points where data flow hits a bottleneck. “A computer’s performance is constricted by its lowest-performing part. If you have a million processors running in parallel but one element is slow, then everything on highway will slow down.” To understand why this is so, it’s helpful to know a couple of basics about processors.</p>
+				<p>"If you can lower voltage supply by 40 percent, you get an 80 to 90 percent reduction in energy consumption," Mudge said. "However, at low power, transistors work slowly. We want Centip3De to run as fast as it can at low voltage, because key processes must run quickly."</p>
 
-				<p>Generally, processors fall into two configurations: vector and parallel. Think of a vector processor as a single person solving a series of 20 math problems in consecutive order. In a parallel processor, there might be 20 people, each assigned to solve one of the problems in the series. So, with a greater number of people (processors) working even at low power (and, consequently, more slowly), a group can usually complete an operation more quickly – but never faster that its slowest member (lowest performing part).</p>
+				<p>To understand more, it's helpful to know a couple of basics about processors. In a parallel computation, there might be 20 people (processors), each assigned to solve one piece of a problem. If these people can work in parallel, the task can be completed quickly even if the people operate slowly and consume less power. So, with a greater number of people (processors) working even at low power (and, consequently, more slowly), a group can usually complete an operation more quickly while saving power. </p>
 
-				<p>Another one of the Mudge team’s energy-efficiency projects resulted in the Intelligent Energy Manager (IEM) system, a technology that enables mobile phones to automatically self-adjust their battery usage. A novel interconnect methodology allows dozens of microprocessors to talk to one another in an energy-efficient manner on a single ARM chip. (An ARM chip is a parallel processor that requires only a very small fraction of the transistors used on many conventional chips. With fewer transistors there’s less energy demand, which makes it useful in smaller devices.)</p>
+				<p>Problems arise when a computation hits a congestion point and parallel operation is no longer possible. Mudge and his team are also working on smoothing out congestion points &mdash; points where data flow hits a bottleneck. "A computer's performance is constricted by its lowest-performing part. If you have a million processors running in parallel but one element is slow, then everything on the highway will slow down." </p>
 
-				<p>“If you can lower voltage supply by forty percent, you get an eighty to ninety percent reduction in energy consumption,” Mudge said. “However, at low power, transistors work slowly. We want Centip3De to run as fast as it can at low voltage, because key processes must run quickly.”</p>
-			</div>
-			
-			<div class="content">
-
-				<p>Mudge and his team are also working on smoothing out congestion points – points where data flow hits a bottleneck. “A computer’s performance is constricted by its lowest-performing part. If you have a million processors running in parallel but one element is slow, then everything on highway will slow down.” To understand why this is so, it’s helpful to know a couple of basics about processors.</p>
-		
-				<p>Think of one kind of processor as a pipeline in which a single person solving a series of 20 math problems in consecutive order. In a parallel processor, there might be 20 people, each assigned to solve one of the problems in the series. So, with a greater number of people (processors) working even at low power (and, consequently, more slowly), a group can usually complete an operation more quickly – but never faster that its slowest member (lowest performing part). </p>
-		
-				<p>What will happen 10 years from now is anyone’s guess. A good suggestion is to wait out the next five years and then ask Siri.</p>
-		
-				<p>Another one of the Mudge team’s energy-efficiency projects resulted in the Intelligent Energy Manager (IEM) system, a technology that enables mobile phones to automatically self-adjust their battery usage. A novel interconnect methodology allows dozens of microprocessors to talk to one another in an energy-efficient manner on a single chip. This chip, designed by British company ARM Holdings, is a parallel processor that requires only a small fraction of the transistors used on many conventional chips. (With fewer transistors there’s less energy demand, which makes it useful in smaller devices.) </p>
+				<p>Another one of the Mudge team's energy-efficiency projects resulted in the Intelligent Energy Manager (IEM) system. This concept, conceived by British company ARM Holdings and designed into some of their processors, allows mobile phones to automatically self-adjust their battery usage.</p>
 			</div>
 			
 			<div class="content">
+
 				<p>Intel is developing a 48-core processor for smartphones and tablets, an architecture that would allow a device to distribute tasks among the different parts of the chip, making the processor faster and more power-efficient, boosting mobile performance farther into the realm of supercomputers.</p>
-				<p>The entire industry is poised to make an unprecedented leap. Some engineers predict that, in the next five years, next-gen mobile supercomputers – smartphones, iPads, readers – will run people’s homes remotely (even water the plants). They’ll oversee personal fitness programs and send continuous streams of health information to doctors, securely, in real time. They’ll accommodate augmented reality (travelers could, for example, point a phone down a city street anywhere in the world, and an overlay of nearby historic landmarks, restaurants and hotels would appear). Paper-thin flexible screens will fold out from pocket-size devices to become large screens on which to watch movies and play games. Holograms will hover above screens. Voice-recognition systems will interpret diction and syntax rather than just dumbly recognize sound waves. </p>
-				<p>What will happen 10 years from now is anyone’s guess. A good suggestion is to wait out the next five years and then ask Siri. </p>
+		
+				<p>The entire industry is poised to make an unprecedented leap. Some engineers predict that, in the next five years, next-gen mobile supercomputers &mdash; smartphones, tablets, e-readers &mdash; will run people's homes remotely (even water the plants). They'll oversee personal fitness programs and send continuous streams of health information to doctors, securely, in real time. They'll accommodate augmented reality (travelers could, for example, point a phone down a city street anywhere in the world, and an overlay of nearby historic landmarks, restaurants and hotels would appear). Paper-thin flexible screens will fold out from pocket-size devices to become large screens on which to watch movies and play games. Holograms will hover above screens. Voice-recognition systems will interpret diction and syntax rather than just dumbly recognize sound waves. </p>
+		
+				<p>What will happen 10 years from now is anyone's guess. A good suggestion is to wait out the next five years and then ask Siri. </p>
+		
 			</div>
-			
-			<div class="content content-resource" id="slideshow">
-				<div class="promo promoHolderYoutube">
-					<a id="yfOYIPWK1F8" class="youtubeColorbox slides" href="#"> <div class="info"><h3>The Letter M</h3><p class="youtube-description">description here- dummy text dummy text dummy textasdummy text dummy text dummy text dummy text</p></div></a>
-				</div>
-				<div class="promo promoHolderYoutube">
-					<a id="V-pk-A8IqE4" class="youtubeColorbox slides" href="#"> <div class="info"><h3>The Letter M</h3><p class="youtube-description">description here- dummy text dummy text dummy textasdummy text dummy text dummy text dummy text</p></div></a>
-				</div>
-				<div class="promo promoHolderYoutube">
-					<a id="PBXFszvByCc" class="youtubeColorbox slides" href="#"> <div class="info"><h3>The Letter M</h3><p class="youtube-description">description here- dummy text dummy text dummy textasdummy text dummy text dummy text dummy text</p></div></a>
-				</div>
-				<div>
-					<p><a class='pdf' href="Computational Sprinting--Wenisch presentation.pdf" title="Homer Defined">Computational Sprinting - Wenisch Presentation</a></p>
-				</div>
-				<div>
-					<a class='images slides' href="img/candlewaxHeatsink-1500x1500-small.jpg" title="Homer Defined"><img src="img/candlewaxHeatsink-1500x1500-small.jpg" alt="" /></a>
-				</div>
-				<div>
-					<a class='images slides' href="img/computational-sprintinglogo-lead-2012-02-28.png" title="Homer Defined"><img src="img/computational-sprintinglogo-lead-2012-02-28.png" alt="" /></a>
-				</div>
-			</div>
+
+
+			<blockquote class="first">
+				<img src="img/q125.jpg" />
+				<img src="img/q120.jpg" />
+				<img src="img/q115.jpg" />
+				<img src="img/q110.jpg" />
+				<p>There are a number of restrictions that prevent processors from working at full capacity. Of those restrictions, the prominent two are excessive heat and sufficient power. Of those two, heat seems to be the bigger obstacle.</p>
+			</blockquote>
+
+			<blockquote class="second">
+				<img src="img/q220.jpg" />
+				<img src="img/q215.jpg" />
+				<img src="img/q210.jpg" />
+				<img src="img/q205.jpg" />
+				<p>If left uncooled, transistors can overheat, melting themselves and surrounding components &mdash; chips hit "the power wall." To prevent this, some of the transistors have to be powered off at any given time. These inactive transistors are known as "dark silicon."</p>
+			</blockquote>
+
+			<blockquote class="third">
+				<img src="img/q320.jpg" />
+				<img src="img/q315.jpg" />
+				<img src="img/q310.jpg" />
+				<img src="img/q305.jpg" />
+
+				<p>Memristors require less energy to operate and, consequently, they produce less heat. Their memory function works even when current is not passing through them, in which case no heat is generated.</p>
+			</blockquote>
+
+			<blockquote class="fourth">
+				<img src="img/q420.jpg" />
+				<img src="img/q415.jpg" />
+				<img src="img/q410.jpg" />
+				<img src="img/q405.jpg" />
+				<p>A computer's performance is constricted by its lowest-performing part. If you have a million processors running in parallel but one element is slow, then everything on the highway will slow down.</p>
+			</blockquote>
+
+
 		</div>
 		</div>
 		<footer>
+   
+		    <div id="footercontainer">
+		        <div id="breadcrumbs"><a href="http://engin.umich.edu">Michigan Engineering</a> &rsaquo; <a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience</a> &rsaquo; Mighty Mobile</div>
+		        <div id="credits">
+		        	<ul>
+		            	<li>Bill Clayton, Writer</li>
+		                <li>Ben Collins, Web Designer</li>
+		                <li>Haoyi Yang, Web Designer</li>
+		                <li>Mira Lancaster, Senior Graphic Designer</li>
+		                <li>Dan Kim, Executive Director</li>
+		            </ul>
+		            <ul id="photocredits">
+		            	<li>Heatsink image courtesy of Wenisch Lab</li>
+		                <li>Centip3De image courtesy of Mudge Lab</li>
+		            </ul>
 
-		</footer>
+		            <span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_pinterest_large' displayText='Pinterest'></span>
+					<span class='st_digg_large' displayText='Digg'></span>
+					<span class='st_stumbleupon_large' displayText='StumbleUpon'></span><br />
+					<!-- <div class="fb-like" data-send="false" data-width="450" data-show-faces="true"></div> -->
+		        </div>
+		    </div>  
+		  
+		  </footer>
 		</div> <!--! end of #container -->
 
 
