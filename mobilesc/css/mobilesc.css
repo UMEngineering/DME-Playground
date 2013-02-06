@@ -76,6 +76,7 @@ body {
 }
 
 #eight {
+    z-index: -1;
     display: block;
     position: absolute;
     width: 1000px;
@@ -84,6 +85,7 @@ body {
     opacity: .7;
 }
 #nine {
+    z-index: -1;
     display: block;
     position: absolute;
     width: 1000px;
@@ -163,8 +165,6 @@ blockquote {
   	-o-transition: opacity .3s ease;
   	transition: opacity .3s ease;
 	
-	
-	margin-left: 0px;
 }
 
 blockquote p {
@@ -693,8 +693,7 @@ footer #credits {
 	blockquote {
 		position: relative;
 		top: 10px;
-		left: 20px;
-		margin-left: 0px;
+		margin-left: 20px;
 	}
 
 	blockquote.first {
