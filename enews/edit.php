@@ -21,7 +21,7 @@ $month = (int)$_GET['month'];
 			// Fetch the result from database
 			$year = $_GET["year"];
 			$month = $_GET["month"];
-			$query = "SELECT title, img, type, description, href, id, orders FROM enews WHERE year={$year} AND month={$month};";
+			$query = "SELECT title, img, type, description, href, id, orders, alt FROM enews WHERE year={$year} AND month={$month};";
 			$result = mysql_query($query);
 			if (!$result){
 				die("Cannot load questions");
@@ -47,6 +47,7 @@ $month = (int)$_GET['month'];
                     <h3>Lead story (with  image)</h3>
                     <p><label>Title: </label><input type="text" name="title-big" id="title-big" size="80" value="<?=$row[0]?>"/></p>
                     <p><label>Image: </label><input type="text" name="image-big" id="image-big" size="80" value="<?=$row[1]?>"/></p>
+                	<p><label>Alt text for image: </label><input type="text" name="alt-big" id="alt-big" size="65" value="<?=$row[7]?>" /></p>
                     <p><label>Upload image: </label><input type="file" name="file" /></p>
                     <p><img src="<?=$row[1]?>" alt="image" class="previewimage" /></p>
                     <p><label>Description: </label><textarea rows="10" cols="50" name="desc-big" id="desc-big"><?=$row[3]?></textarea></p>
@@ -72,6 +73,7 @@ $month = (int)$_GET['month'];
                         <h3>eNews #<?=$counter?></h3>
                         <p><label>Title: </label><input type="text" name="title-small<?=$counter?>" id="title-small<?=$counter?>" size="80" value="<?=$row[0]?>"/></p>
                         <p><label>Image: </label><input type="text" name="image-small<?=$counter?>" id="image-small<?=$counter?>" size="80" value="<?=$row[1]?>" /></p>
+                	<p><label>Alt text for image: </label><input type="text" name="alt-small<?=$counter?>" id="alt--small<?=$counter?>" size="65" value="<?=$row[7]?>" /></p>
                         <p><label>Upload image: </label><input type="file" name="file" /></p>
                         <p><img src="<?=$row[1]?>" alt="image" class="previewimage" /></p>
                         <p><label>Description: </label><textarea rows="10" cols="50" name="desc-small<?=$counter?>" id="desc-small<?=$counter?>"><?=$row[3]?></textarea></p>

@@ -6,7 +6,7 @@ function addOne(type){
 	if (type == 2 || type == 3) {
 		appendString += '<form method="POST" action="process.php" enctype="multipart/form-data">';
 	}
-	appendString += '<div class="small-entry" id="e'+totalSmallEntries+'"><h3>eNews #'+totalSmallEntries+'</h3><p><label>Title: </label><input type="text" name="title-small'+totalSmallEntries+'" id="title-small'+totalSmallEntries+'" size="80"/></p><p><label>Image: </label><input type="text" name="image-small'+totalSmallEntries+'" id="image-small'+totalSmallEntries+'" size="80" /></p>';
+	appendString += '<div class="small-entry" id="e'+totalSmallEntries+'"><h3>eNews #'+totalSmallEntries+'</h3><p><label>Title: </label><input type="text" name="title-small'+totalSmallEntries+'" id="title-small'+totalSmallEntries+'" size="80"/></p><p><label>Image: </label><input type="text" name="image-small'+totalSmallEntries+'" id="image-small'+totalSmallEntries+'" size="80" /></p><p><label>Alt text for image: </label><input type="text" name="alt-small'+totalSmallEntries+'" id="alt-small'+totalSmallEntries+'" size="65"/></p>';
 	
 	if (type == 2 || type == 3) {
 		appendString += '<p><label>Upload image: </label><input type="file" name="file" /></p>';
@@ -46,7 +46,8 @@ function editInFull(id){
 	var href = $("#title"+id+" a").attr("href");
 	var title = $("#title"+id).text();
 	var description = $("#desc"+id).text();
-	$("#title"+id).html('<input type="hidden" value="'+id+'" name="id" />Title: <input type="text" name="title-'+id+'" id="title-'+id+'" value="'+title+'" size="55"/><br />Link: <input type="text" name="href-'+id+'" id="href-'+id+'" value="'+href+'" size="55"/>');
+	var alt = $("#alt-img"+id).attr("value");
+	$("#title"+id).html('<input type="hidden" value="'+id+'" name="id" />Title: <input type="text" name="title-'+id+'" id="title-'+id+'" value="'+title+'" size="55"/><br />Link: <input type="text" name="href-'+id+'" id="href-'+id+'" value="'+href+'" size="55"/><br />Alt text: <input type="text" name="alt-'+id+'" id="alt-'+id+'" value="'+alt+'" size="54"/>');
 	$("#desc"+id).html('<textarea rows="10" cols="45" name="desc-'+id+'" id="desc-'+id+'">'+description+'</textarea>');
 	$("#upload"+id).html('Upload an image (optional): <input type="file" name="file" />');
 	$("#submit"+id).html('<input type="submit" value="edit" name="editinfull" />');

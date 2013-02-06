@@ -5,7 +5,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
 	$month = $_GET["month"];
 	
 	// Get the info from database
-	$query = "SELECT title, img, type, description, href, orders FROM enews WHERE year='{$year}' AND month='{$month}' ORDER BY orders;";
+	$query = "SELECT title, img, type, description, href, orders, alt FROM enews WHERE year='{$year}' AND month='{$month}' ORDER BY orders;";
 	$result = mysql_query($query);
 	if (!$result){
 		die("Cannot load results");
@@ -47,7 +47,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                 <tbody>
                     <tr>
                         <td width="500" valign="top" colspan="3">
-                        <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="480" border="0" title="<?= $row[0] ?>" src="http://engcomm.engin.umich.edu/enews/<?= $row[1] ?>" alt="<?= $row[0] ?>" /></a></p>
+                        <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="480" border="0" title="<?= $row[0] ?>" src="http://engcomm.engin.umich.edu/enews/<?= $row[1] ?>" alt="<?= $row[6] ?>" /></a></p>
                         </td>
                     </tr>
                     <tr>
@@ -76,7 +76,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                                 </tr>
                                 <tr>
                                     <td width="100" valign="top">
-                                    <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="100" height="100" border="0" src="http://engcomm.engin.umich.edu/enews/<?= $row[1] ?>" title="<?= $row[0] ?>" alt="<?= $row[0] ?>" /></a></p>
+                                    <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="100" height="100" border="0" src="http://engcomm.engin.umich.edu/enews/<?= $row[1] ?>" title="<?= $row[0] ?>" alt="<?= $row[6] ?>" /></a></p>
                                     </td>
                                     <td width="15"><img width="15" title="" src="http://www.engin.umich.edu/newscenter/pubs/enews/images/2spacer.gif" alt="" /></td>
                                     <td width="357" valign="top">

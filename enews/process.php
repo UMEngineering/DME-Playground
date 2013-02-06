@@ -12,7 +12,7 @@ if ($_POST["create"]) {
 		$fuploaded = checkString($_POST['image-big']);
 	}
 	
-	$big_entry = array(checkString($_POST["title-big"]), $fuploaded, checkString($_POST["desc-big"]), checkString($_POST["href-big"]));
+	$big_entry = array(checkString($_POST["title-big"]), $fuploaded, checkString($_POST["desc-big"]), checkString($_POST["href-big"]), checkString($_POST["alt-big"]));
 	$small_entry = array();
 	
 	$counter = 1;
@@ -24,7 +24,7 @@ if ($_POST["create"]) {
 				$fuploadedsmall = checkString($_POST["image-small".$counter]);
 			}
 			
-			array_push($small_entry, checkString($_POST["title-small".$counter]), $fuploadedsmall, checkString($_POST["desc-small".$counter]), checkString($_POST["href-small".$counter]));
+			array_push($small_entry, checkString($_POST["title-small".$counter]), $fuploadedsmall, checkString($_POST["desc-small".$counter]), checkString($_POST["href-small".$counter]), checkString($_POST["alt-small".$counter]));
 		} else {
 			break;
 		}
@@ -40,10 +40,10 @@ if ($_POST["create"]) {
 			Header("Location:create.php?err=1");
 		} else {
 			// Add the content into the database
-			$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$big_entry[0]}', '{$big_entry[1]}', '0', '{$big_entry[2]}', '{$big_entry[3]}', '{$year}', '{$month}', '0')";
+			$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders, alt) VALUES ('{$big_entry[0]}', '{$big_entry[1]}', '0', '{$big_entry[2]}', '{$big_entry[3]}', '{$year}', '{$month}', '0', '{$big_entry[4]}')";
 			$count = 1;
 			for ($i=0; $i<count($small_entry); $i++){
-				$query = $query.", ('{$small_entry[$i]}', '{$small_entry[$i+1]}', '1', '{$small_entry[$i+2]}', '{$small_entry[$i+3]}', '{$year}', '{$month}', '{$count}')";
+				$query = $query.", ('{$small_entry[$i]}', '{$small_entry[$i+1]}', '1', '{$small_entry[$i+2]}', '{$small_entry[$i+3]}', '{$year}', '{$month}', '{$count}', '{$small_entry[$i+2]}')";
 				$i = $i+3;
 				$count++;
 			}
@@ -82,10 +82,10 @@ if ($_POST["create"]) {
 		}
 	}
 	
-	$vars = array(checkString($_POST['title-'.$type]), checkString($_POST['image-'.$type]), checkString($_POST['desc-'.$type]), checkString($_POST['href-'.$type]), checkString($_POST['order-'.$type]));
+	$vars = array(checkString($_POST['title-'.$type]), checkString($_POST['image-'.$type]), checkString($_POST['desc-'.$type]), checkString($_POST['href-'.$type]), checkString($_POST['order-'.$type]), checkString($_POST['alt-'.$type]));
 	
 	// Edit the content in the database
-	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}', orders='{$vars[4]}' WHERE id={$_POST['id']};";
+	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}', orders='{$vars[4]}', alt='{$vars[5]}' WHERE id={$_POST['id']};";
 	
 	$result = mysql_query($query);
 	if (!$result){
@@ -98,7 +98,7 @@ if ($_POST["create"]) {
 	$month = $_POST["month"];
 	$year = $_POST["year"];
 	$order = $_POST["order"];
-	$vars = array(checkString($_POST['title-small'.$order]), checkString($_POST['image-small'.$order]), checkString($_POST['desc-small'.$order]), checkString($_POST['href-small'.$order]));
+	$vars = array(checkString($_POST['title-small'.$order]), checkString($_POST['image-small'.$order]), checkString($_POST['desc-small'.$order]), checkString($_POST['href-small'.$order]), checkString($_POST['alt-small'.$order]));
 	
 	// Upload the photo
 	$fuploaded = uploadFile($year, $month, "file");
@@ -107,7 +107,7 @@ if ($_POST["create"]) {
 	}
 	
 	// Edit the content in the database
-	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders) VALUES ('{$vars[0]}', '{$fuploaded}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}');";
+	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders, alt) VALUES ('{$vars[0]}', '{$fuploaded}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}', '{$vars[3]}');";
 	
 	$result = mysql_query($query);
 	if (!$result){
@@ -166,10 +166,10 @@ if ($_POST["create"]) {
 		}
 	}
 	
-	$vars = array(checkString($_POST['title-'.$this_id]), checkString($_POST['image-'.$this_id]), checkString($_POST['desc-'.$this_id]), checkString($_POST['href-'.$this_id]), checkString($_POST['order-'.$this_id]));
+	$vars = array(checkString($_POST['title-'.$this_id]), checkString($_POST['image-'.$this_id]), checkString($_POST['desc-'.$this_id]), checkString($_POST['href-'.$this_id]), checkString($_POST['order-'.$this_id]), checkString($_POST['alt-'.$this_id]));
 	
 	// Edit the content in the database
-	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}' WHERE id={$this_id};";
+	$query = "UPDATE enews SET title='{$vars[0]}', img='{$fuploaded}', description='{$vars[2]}', href='{$vars[3]}', alt='{$vars[5]}' WHERE id={$this_id};";
 	
 	$result = mysql_query($query);
 	if (!$result){
