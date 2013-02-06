@@ -162,6 +162,9 @@ blockquote {
   	-moz-transition: opacity .3s ease;
   	-o-transition: opacity .3s ease;
   	transition: opacity .3s ease;
+	
+	
+	margin-left: 0px;
 }
 
 blockquote p {
@@ -248,6 +251,13 @@ blockquote img:nth-child(4) {
     padding: 65px 0 24px;
     margin: 0 auto;
     background: #1e1e1e;
+}
+
+#head h1, #head h2, .content {
+	-webkit-transition: all .5s ease;	
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 h2 {
@@ -643,4 +653,74 @@ footer #credits {
 	height: 50px;
 	position: relative;
 	top: -17px;
+}
+
+@media only screen and (max-width : 860px) {
+	#head {
+		padding-top: 40px;
+	}
+	
+	#head h1 {
+		font-size: 70px;
+	}
+	#head h2 {
+		font-size: 20px;
+		margin-left: 20px;
+		position: static;
+	}
+	
+	#umenginlogo {
+		height: 20px;
+	}
+	
+	li.dmegallery {
+		position: static;
+		padding-top: 10px;
+	}
+	
+	.sticky {
+		top: 174px;
+	}
+	
+	.fixed {
+		top: 0;
+	}
+	
+	.content {
+		margin-top: 70px;
+	}
+	
+	blockquote {
+		position: relative;
+		top: 10px;
+		left: 20px;
+		margin-left: 0px;
+	}
+
+	blockquote.first {
+		top: 10px;
+	}
+	
+	blockquote.second {
+		top: 10px;
+	}
+	
+	blockquote.third {
+		top: 10px;
+	}
+	
+	blockquote.fourth {
+		top: 10px;
+	}
+}
+
+@media only screen and (max-width : 650px) {
+	body {
+		overflow: hidden;
+	}
+	
+	.content {
+		margin-top: 70px;
+		width: 250px;
+	}
 }
