@@ -76,7 +76,7 @@ if (strlen($_GET["year"]) == 4 && strlen($_GET["month"]) == 2) {
                                 </tr>
                                 <tr>
                                     <td width="100" valign="top">
-                                    <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="100" height="100" border="0" src="http://engcomm.engin.umich.edu/enews/<?= $row[1] ?>" title="" alt="<?= $row[0] ?>" /></a></p>
+                                    <p><a href="<?= $row[4] ?>" style="color: #003366"><img width="100" height="100" border="0" src="http://engcomm.engin.umich.edu/enews/<?= $row[1] ?>" title="<?= $row[0] ?>" alt="<?= $row[0] ?>" /></a></p>
                                     </td>
                                     <td width="15"><img width="15" title="" src="http://www.engin.umich.edu/newscenter/pubs/enews/images/2spacer.gif" alt="" /></td>
                                     <td width="357" valign="top">
