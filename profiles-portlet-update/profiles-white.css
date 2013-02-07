@@ -11,7 +11,7 @@
 .promoHolderProfiles img {
     display: block;
 }
-.promoProfiles {
+#rightPortlets .promoProfiles {
     background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
     background-image: -moz-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
     background-image: -o-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
@@ -24,6 +24,8 @@
     left: 0;
     color: #212a55;
     text-align: right;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 .no-cssgradients .promoProfiles {
     background: url(images/profiles-gradient.png) 0 0 repeat-y; /* make sure image path is correct */

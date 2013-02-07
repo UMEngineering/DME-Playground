@@ -1,333 +1,628 @@
 
+
+
+
 <!DOCTYPE html>
+
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Profiles Portlet</title>
-<!--
-###############
 
-PROFILES PORTLET STARTS AT LINE 280
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
 
-###############
--->
-<meta name="description" content="">
-<meta name="author" content="">
-<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/style.css" rel="stylesheet">
-<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/navigation.css" rel="stylesheet">
-<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/promos.css" rel="stylesheet">
-<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/faqs.css" rel="stylesheet">
-<link href="http://www.engin.umich.edu/redesign/05-30-2012/css/print.css" rel="stylesheet">
-<link href="overrides.css" rel="stylesheet">
-<link href="profiles-white.css" rel="stylesheet">
+	<!--<![endif]-->
 
-<script src="http://www.engin.umich.edu/redesign/05-30-2012/js/libs/modernizr-2.0.6.min.js"></script>
-<style>
-.promoCol .promo {
-    box-shadow: 0 0 4px #000;
-    float: left;
-    margin: 0 0 8px 20px;
-}
-</style>
-</head>
-<body class="hasBreadcrumbs contentNormal faqs">
-<div id="wrapper" class="lightBg"> 
-	<!-- hasBreadcrumbs class tells the Main nav whether it needs to stretch over a breadcrumb bar or not -->
-	<header><a href="/" id="logo" class="ir">Michigan Engineering</a>
-		<div id="skip"> <a href="#content">Skip to Main Content</a> </div>
-		<nav id="utility">
-			<ul>
-				<li class="contact"><a href="#">Contact</a></li>
-				<li class="role"> <span></span> <a href="#" class="roleChange">Select Role</a>
-					<div>
-						<ul>
-							<li><a href="#">Prospective Student</a></li>
-							<li><a href="#">Current Students</a></li>
-							<li><a href="#">Alumni</a></li>
-							<li><a href="#">Faculty</a></li>
-							<li><a href="#">Staff</a></li>
-							<li><a href="#">Family / Parents</a></li>
-							<li><a href="#">College Supporters</a></li>
-							<li><a href="#">Media</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="search">
-					<label for="search">Search</label>
-					<input id="search" type="text" />
-					<a href="Search.htm" class="ir">Go</a> 
-					<!-- Replace Search.htm with the appropriate URL for the search page that accepts a ?q=QUERY type search query --> 
-				</li>
-			</ul>
-		</nav>
-		<nav id="mainBar">
-			<ul>
-				<li class="about"><a href="#">About</a>
-					<div>
-						<ul>
-							<li><a href="#">News Center</a></li>
-							<li><a href="#">Calendar</a></li>
-							<li><a href="#">Special Events</a></li>
-							<li><a href="#">Computing (CAEN)</a></li>
-							<li><a href="#">Facilities</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Message from the Dean</a></li>
-							<li><a href="#">Facts &amp; Figures</a></li>
-							<li><a href="#">People</a></li>
-							<li><a href="#">Ann Arbor &amp; Campus</a></li>
-							<li><a href="#">College Administration</a></li>
-						</ul>
-						<ul class="last">
-							<li><a href="#">Center for Entrepreneurship</a></li>
-							<li><a href="#">Multidisciplinary Design Program</a></li>
-							<li><a href="#">Center for Diversity and Outreach</a></li>
-							<li><a href="#">International Program in Engineering</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="research"><a href="#">Research</a>
-					<div>
-						<ul>
-							<li><a href="#">Centers &amp; Labs</a></li>
-							<li><a href="#">Undergraduate Research Opportunities*</a></li>
-							<li><a href="#">Getting Research Funding</a></li>
-							<li><a href="#">Sponsored Research</a></li>
-							<li><a href="#">Instant Innovation Program</a></li>
-							<li><a href="#">Corporate Relationships</a></li>
-							<li><a href="#">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="academics current"><a href="#">Academics</a>
-					<div>
-						<ul>
-							<li><a href="#">Undergraduate Programs/Degrees</a></li>
-							<li><a href="#">Graduate Programs/Degrees</a></li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="#">Academic Calendar</a></li>
-							<li><a href="#">Student Resources</a></li>
-							<li><a href="#">Graduation</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="admissions"><a href="#">Admissions</a>
-					<div>
-						<ul>
-							<li><a href="#">Undergraduate Admissions</a></li>
-							<li><a href="#">Graduate Admissions</a></li>
-							<li><a href="#">International Student</a></li>
-							<li><a href="#">Scholarships, Financial Aid &amp; Funding</a></li>
-							<li><a href="#">FAQs</a></li>
-							<li><a href="#">Visit Us</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="departments"><a href="#">Departments</a>
-					<div>
-						<ul>
-							<li><a href="#">Aerospace Engineering (AERO)</a></li>
-							<li><a href="#">Atmospheric, Oceanic &amp; Space Sciences (AOSS)</a></li>
-							<li><a href="#">Biomedical Engineering (BME)</a></li>
-							<li><a href="#">Chemical Engineering (CHE)</a></li>
-							<li><a href="#">Civil and Environmental Engineering (CEE)</a></li>
-							<li><a href="#">Electrical Engineering and Computer Sciences (EECS)</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Industrial and Operation Engineering (IOE)</a></li>
-							<li><a href="#">Interdisciplinary Professional Programs (InterPro)</a></li>
-							<li><a href="#">Material Science and Engineering (MSE)</a></li>
-							<li><a href="#">Mechanical Engineering (ME)</a></li>
-							<li><a href="#">Naval Architecture and Marine Engineering (NAME)</a></li>
-							<li><a href="#">Nuclear Engineering and Radiological Sciences (NERS)</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="investing"><a href="#">Investing</a>
-					<div>
-						<ul>
-							<li><a href="#">Why I Give</a></li>
-							<li><a href="#">Where to Give</a></li>
-							<li><a href="#">How to Give</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="last infoForYou"><a href="#">Info for You</a>
-					<div>
-						<ul>
-							<li><a href="#">Prospective Student</a></li>
-							<li><a href="#">Current Student</a></li>
-							<li><a href="#">Alumni</a></li>
-							<li><a href="#">Faculty</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Staff</a></li>
-							<li><a href="#">Family / Parents</a></li>
-							<li><a href="#">Supporters of the College</a></li>
-							<li><a href="#">Media</a></li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<nav id="breadcrumbs">
-			<ul>
-				<li>/ <a href="#">Home</a></li>
-				<li>/ <a href="#">Academics</a></li>
-				<li class="last">/ <a href="#">Student Resources</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div role="main" id="contentWrap" class="contentPage thinCol"> <span id="headerPrintOnly"><img class="printOnly" src="http://www.engin.umich.edu/redesign/05-30-2012/img/header/MichiganCollegeEngineeringPrintOnlyLogo.jpg" alt="print Logo" /></span>
-		<div id="col1" class="leftCol promoCol">
-			<nav id="sideNav" class="sideNav">
-				<ul>
-					<li class="academics hasCurrent first"><a href="#">Academics</a>
-						<ul>
-							<li><a href="#">Undergraduate Programs/ Degrees</a>
-								<ul>
-									<li><a href="#">Mission</a></li>
-									<li><a href="#">Degree Options</a></li>
-									<li><a href="#">Minors</a></li>
-									<li><a href="#">Core Requirements</a></li>
-									<li><a href="#">Honors Program</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Graduate Programs/ Degrees</a>
-								<ul>
-									<li><a href="#">Graduate Degrees</a></li>
-									<li><a href="#">Just Ask</a></li>
-									<li><a href="#">Graduate Student Advisory Committee</a></li>
-									<li><a href="#">Student Activities</a></li>
-									<li><a href="#">Fellowships</a></li>
-									<li><a href="#">GSI Training</a></li>
-									<li><a href="#">Graduation</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Courses</a></li>
-							<li><a href="#">Academic Calendar</a></li>
-							<li class="current"><a href="#">Student Resources</a>
-								<ul>
-									<li><a href="#">Mentoring</a></li>
-									<li><a href="#">Advising</a>
-										<ul>
-											<li><a href="#">Advising Center</a></li>
-											<li><a href="#">Advising Appointments</a></li>
-											<li><a href="#">First Year Planning</a></li>
-											<li><a href="#">Advising Audit Reports</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Class Registration</a></li>
-									<li><a href="#">Career Development</a></li>
-									<li><a href="#">Engineering Abroad</a></li>
-									<li><a href="#">Life @ Michigan</a></li>
-									<li><a href="#">Student Undergraduate Research in Engineering</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Graduation</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<div id="contactBox">
-				<h3> Contact</h3>
-				<p class="name"> Jane Smith</p>
-				<p class="email"> <a href="mailto:email@engin.umich.edu">email@engin.umich.edu</a></p>
-				<p class="tel"> 734-000-0000</p>
-				<p class="address"> 365 Lurie Building</p>
-			</div>
-		</div>
-		<div id="content" class="content promoCol rightCol">
-			<div class="pageHeader">
-				<h1>Profiles Portlet</h1>
-			</div>
-			<div id="contentHolder"> 
-		
-				<div class="contentBlock shadow first">
-					<div class="innerShadow nonSectionBodyContent">
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab  illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut  odit aut fugit, sed quia consequuntur magni</p>
-						<p>dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat  voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam  corporis</p>
-						<p>suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?  Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse  quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo  voluptas nulla pariatur</p>
-					</div>
-				</div>
-			</div>
-			<div class="promo thinColOnly promoHolderEvents first"> <a href="#" class="promoEvents">
-				<h3> Events</h3>
-				<h4> MAY</h4>
-				<div class="pDateItem">
-					<p class="pDate"> 28<span class="subSize_txt">th</span></p>
-					<p class="pDate_Info"> Registration (Full and Spring Half Terms)</p>
-				</div>
-				<div class="pDateItem">
-					<p class="pDate"> 5<span class="subSize_txt">th</span></p>
-					<p class="pDate_Info"> Spring/Summer<br />
-						Term begins)</p>
-				</div>
-				<span class="linkCtA">see all</span> </a> </div>
-			<!-- 
-			/////////////////
-			START PROFILES PORTLET
-			/////////////////
-			/////////////////			
-			-->
-			<div class="promo promoHolderProfiles">
-				<a href="#1">
-					<span class="profilesMichEng">I am<br />
-					&nbsp;Michigan<br />
-					Engineering</span>
-					<div class="promoProfiles">
-						<span class="profilesName">Sam Smith</span>
-						<span class="profilesProgram">Nuclear Engineering</span>
-					</div>
-					<img src="images/profiles-portrait1.jpg" alt="" />
-				</a>
-			</div>
-			<!--
-			/////////////////
-			END PROFILES PORTLET
-			/////////////////
-			/////////////////
-			-->
-			<div class="promo promoHolderProfiles"><a href="#two"> <span class="profilesMichEng">I am<br />
-				&nbsp;Michigan<br />
-				Engineering</span>
-				<div class="promoProfiles"> <span class="profilesName">Susan Smith</span> <span class="profilesProgram">Chemical Engineering</span> </div>
-				<img src="images/profiles-portrait3.jpg" alt="" /></a> </div>
-			<div class="promo promoHolderProfiles"><a href="#3"> <span class="profilesMichEng">I am<br />
-				&nbsp;Michigan<br />
-				Engineering</span>
-				<div class="promoProfiles"> <span class="profilesName">Samantha Smith</span> <span class="profilesProgram">Biomedical Engineering</span> </div>
-				<img src="images/profiles-portrait2.jpg" alt="" /></a> </div>
-			<div class="promo thinColOnly promoHolderOtherSites last">
-				<div class="promoOtherSites innerShadow">
-					<h3> Other Sites</h3>
-					<ul>
-						<li><a href="#">Urna tincidunt congue</a></li>
-						<li><a href="#">Arcu sedAliquam </a></li>
-						<li><a href="#">Vel neque sit amet nunc</a></li>
-						<li><a href="#">Morbi euismod magna </a></li>
-						<li><a href="#">Donec viverraAenean faci</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+  
+    
+    
+    
+    
+
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+
+    
+    
+		<!-- Mobile viewport optimized: j.mp/bplateviewport 
+    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+
+    
+        
+        
+
+        
+<title>Web Page Test | Michigan Engineering</title>
+
+<link rel="alternate" data-kss-base-url="kss-base-url" href="http://caen-www-stage.engin.umich.edu/training/jscroggi/web-page-test/" />
+
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/base-cachekey-d94056d320ee12b85eb93737c2de5cc2.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csspublic-cachekey-7f3958786db61a80b9415957a7a347ab.css" />
+    <link rel="stylesheet" type="text/css" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/columns-cachekey-64af52e2d0c1ac29eef1740641b11286.css" />
+    <style type="text/css" media="screen">@import url(http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete-cachekey-f7832a519ad13b9e793c43e1690ef596.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.app.dexterity.overlays-cachekey-673df757ba49884c1ea48dc5345cede6.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/overrides-cachekey-f2b1980137adebe2189dba8531847123.css" />
+    <link rel="stylesheet" type="text/css" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssjquerytools.dateinput-cachekey-0c4c4615de725ba2514e37ac78683782.css" />
+    <link rel="stylesheet" type="text/css" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssstyle-cachekey-450da29c898448e6b972aba68706cf43.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csspromos-cachekey-f913174473dbbd69057714c41aab1eb3.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csscontentPage-cachekey-781be093a4051de95dd12c29f281f860.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssflexslider-cachekey-ff3dcb28642ebf42bebe0cbf22665648.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="http://caen-www-stage.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssprint-cachekey-2ba9027f31cc5e567e119818de3e661f.css" />
+    <link href="profiles-white.css" rel="stylesheet">
+  
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="http://caen-www-stage.engin.umich.edu/portal_kss/Engineering%20Theme%202012/at-cachekey-b086c19afbe79e14d68291ae504149f9.kss" />
+  
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery-1.6.4-cachekey-7a48a508a09317f5fde7de4a750aede2.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery-integration.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.app.jquerytools-cachekey-eb4280ed4990c3868e0fcdc8ecea91ff.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/register_function.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/plone_javascript_variables.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/nodeutilities.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/cookie_functions.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/livesearch.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourcesearch-cachekey-d7c861bacee6eb2530c8822e83a16878.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/select_all.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/dragdropreorder.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/collapsiblesections.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsform_tabbing-cachekey-c6fa5e9e5a1a87cc4c49e97430ddf117.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/popupforms.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/jquery.highlightsearchterms.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/first_input_focus.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/accessibility.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/styleswitcher.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/toc.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/collapsibleformfields.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/++resource++plone.app.discussion.javascripts/comments.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete.min-cachekey-a7bba70c18716c148585d53d2a8ea319.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompleteformwidget-autocomplete-cachekey-3108089b89b8810f7a060dbffbc589aa.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsmodernizr-2.5.3.min-cachekey-d1113aa5f3394b15fc1922b33fa0001c.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jstableColors-cachekey-6de1ccf3424edc33fa3f6d919168bef5.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsplugins-cachekey-d1949403c2ba23acf2d0cb190c57141e.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsscripts-cachekey-ee38b84279c69e2c7f491ca7f8ccc2e6.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsfirstlast-cachekey-094097aefdfd2cec08d1722de31b963b.js"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery.colorbox.min-cachekey-fc528ba1bdf1c60b357adb2c8790832f.js"></script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec44a58724ed4d0"></script>
+    <script type="text/javascript" src="http://caen-www-stage.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/table_sorter.js"></script>
+
+
+        
+          
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2932296-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://caen-www-stage.engin.umich.edu++resource++umich_images/favicon.ico" />
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+        
+        <!-- Disable IE6 image toolbar -->
+        <meta http-equiv="imagetoolbar" content="no" />
+
+        
+        
+
+        
+        
+
+        
+        
+
+    
+
+  </head>
+
+  <body class="contentPage template-view portaltype-uom-subsite-webpage site-engin section-training icons-on hasBreadcrumbs contentNormal" dir="ltr">
+<div id="wrapper" class="lightBg">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+    <div id="portal-personaltools-wrapper">
+    <header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+        <div id="skip">
+            <a href="#content">Skip to Main Content</a>
+        </div>
+        <nav id="utility">
+            <ul>
+                
+                <li class="contact"><a href="http://caen-www-stage.engin.umich.edu/contact/quick.html">Contact</a></li>
+                <!--<li class="role">
+                    <span></span>
+                    <a href="#" class="roleChange">Select Role</a>
+                    <div>
+                        <ul>
+                            <li tal:repeat="item view/getRoles"><a tal:attributes="href item/url; title item/title | nothing" tal:content="item/name">Name Item</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+                <li class="search">
+                    <form name="searchform" method="get" id="searchGadget_form" action="http://www-search.engin.umich.edu/search">
+                        <fieldset>
+                            <label for="q">Search</label>
+                            <input type="hidden" name="site" value="CoE" />
+                            <input type="hidden" name="client" value="coe_frontend" />
+                            <input type="hidden" name="proxystylesheet" value="coe_frontend" />
+                            <input type="hidden" name="output" id="output" value="xml_no_dtd" />
+                            <input name="q" id="q" type="text" />
+                        </fieldset>
+                    </form></li>
+                </ul>
+            </nav>
+            <nav id="mainBar">
+                <ul>
+                    
+                        
+                            <li class="about "><a href="http://caen-www-stage.engin.umich.edu/about">About</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/college/about/news">News</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/cal">Calendar</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/events">Special Events</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/caen ">Computing (CAEN)</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/facilities">Facilities</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/safety">Safety</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/admin/dean ">Message from the Dean</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/about/facts.html">Facts and Figures</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/about/people.html">People</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/about/campus.html">Ann Arbor &amp; Campus</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/admin">College Administration</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/contact/quick.html">Contact Us</a></li>
+                                    </ul>
+                                    <ul class="last">
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/diversity">Diversity and Outreach</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="research "><a href="http://caen-www-stage.engin.umich.edu/research">Research</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/research/undergrad.html">Undergraduate Research Opportunities</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/admin/adrge/research-support">Getting Research Funding</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/departments/research.html">Sponsored Research</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/research/innovation.html">Instant Innovation</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/corporate">Corporate Relationships</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/teaching/crltengin">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="academics "><a href="http://caen-www-stage.engin.umich.edu/academics" title="Education related links">Academics</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/academics/undergrad/">Undergraduate Programs/Degrees</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/academics/gradprograms">Graduate Programs/Degrees</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/bulletin">College Bulletin</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/bulletin/courses.html">Courses</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/academics/calendar.html">Academic Calendar</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/students/graduation">Graduation</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="admissions "><a href="http://caen-www-stage.engin.umich.edu/admissions" title="Admissions related links">Admissions</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/ugadmissions">Undergraduate Admissions</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/gradadmissions">Graduate Admissions</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/ugadmissions/international">International Student</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/students/finaid.html">Scholarships, Financial Aid &amp; Funding</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/ugadmissions/visit">Visit Us</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="departments "><a href="http://caen-www-stage.engin.umich.edu/departments" title="Links to departmental websites">Departments</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://aerospace.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aerospace.engin.umich.edu/')">Aerospace Engineering</a></li>
+                                        <li><a href="http://aoss.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aoss.engin.umich.edu/')">Atmospheric, Oceanic and Space Sciences</a></li>
+                                        <li><a href="http://www.bme.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.bme.umich.edu/')">Biomedical Engineering</a></li>
+                                        <li><a href="http://che.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://che.engin.umich.edu/')">Chemical Engineering</a></li>
+                                        <li><a href="http://cee.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://cee.engin.umich.edu/')">Civil and Environmental Engineering</a></li>
+                                        <li><a href="http://eecs.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://eecs.umich.edu/')">Electrical Engineering and Computer Science</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://ioe.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://ioe.engin.umich.edu/')">Industrial and Operations Engineering</a></li>
+                                        <li><a href="http://isd.engin.umich.edu" onclick="javascript: pageTracker._trackPageview('/outgoing/http://isd.engin.umich.edu')">Integrative Systems + Design</a></li>
+                                        <li><a href="http://www.mse.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.mse.engin.umich.edu/')">Materials Science and Engineering</a></li>
+                                        <li><a href="http://me.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://me.engin.umich.edu/')">Mechanical Engineering</a></li>
+                                        <li><a href="http://name.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://name.engin.umich.edu/')">Naval Architecture and Marine Engineering</a></li>
+                                        <li><a href="http://ners.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www-ners.engin.umich.edu/')">Nuclear Engineering and Radiological Sciences</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="giving "><a href="http://caen-www-stage.engin.umich.edu/giving" title="Supporting the college links">Giving</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/giving/wheretogive">Where to Give</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/giving/whyigive">Why I Give</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/giving/howtogive">How to Give</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="last infoForYou "><a href="http://caen-www-stage.engin.umich.edu/info" title="Info for You">Info for You</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/students/prospective">Prospective Students</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/students">Current Students</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/alumni">Alumni</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/faculty">Faculty</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/staff">Staff</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/corporate">Corporate Partners</a></li>
+                                        <li><a href="http://caen-www-stage.engin.umich.edu/newscenter/expert.html">Media</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            <nav id="breadcrumbs">
+                <ul>
+                    <li>
+                        /
+                        <a href="http://caen-www-stage.engin.umich.edu">College</a></li>
+                    
+                        
+                            <li>
+                                /<a href="http://caen-www-stage.engin.umich.edu/training/jscroggi">jscroggi</a></li>
+                            
+                        
+                    
+                    
+                        
+                            
+                            <li class="last">/
+                                <a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/web-page-test">Web Page Test</a></li>
+                        
+                    
+                </ul></nav>
+            </header>
+        </div>
+
+<span id="headerPrintOnly"><img class="printOnly" alt="print Logo" src="/engin/++resource++umich_images/MichiganCollegeEngineeringPrintOnlyLogo.jpg" /></span>
+
+
+
+
+
 </div>
 
-<!-- JavaScript at the bottom for fast page loading --> 
-<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --> 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+      </div>
 
-<!-- scripts concatenated and minified via build script --> 
+      
+      
+
+      <div role="main" id="contentWrap" class="thinCol">
+      
+      
+
+        
+        
+          
+          
+          <div class="leftCol" id="col1">
+            
+              <div class="promoCol">
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e670a726f6f742d6e6176" class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e670a726f6f742d6e6176 last first"><div class="navPortlet">
+
+<nav id="sideNav" class="sideNav">
+<ul>
+    <li class="academics hasCurrent first"><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi">jscroggi</a>
+        
+        <ul>
+        
+           <li class=""><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/primary-landing-page-test">Primary Landing Page Test </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/event-testing">Event Testing </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/random-content-testing">Random Content Testing </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/outage-center">Outage Center </a>
+             
+           </li>
+        
+        
+           <li class=""><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/faq-view">FAQ View </a>
+             
+           </li>
+        
+        
+           <li class="current"><a href="http://caen-www-stage.engin.umich.edu/training/jscroggi/web-page-test">Web Page Test </a>
+             
+           </li>
+        
+        </ul>
+        
+    </li>
+</ul>
+</nav>
+
+
+</div>
+</div>
+
+
+
+</div>
+            
+          </div>
+          
+          
+          <div id="content" class="content rightCol">         
+
+          <div id="viewlet-above-content">
+    
+
+
+
+</div>
+
+          
+            <div class="">
+
+              
+
+              <span id="contentTopLeft"></span>
+              <span id="contentTopRight"></span>
+
+              
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+
+              
+                  
+
+                  
+
+                    
+                      
+                      
+            <div class="pageHeader">
+                <h1>Web Page Test</h1>
+            </div>
+        
+                      
+
+
+
+                      
+                      
+    
+
+
+
+
+
+    <div id="contentHolder">
+    
+      
+            <div id="replacement">
+                <div class="contentBlock shadow first">
+                    <div class="innerShadow"><p> </p>
+<div id="_mcePaste" style="width: 1px; height: 1px; overflow: hidden;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum. Vivamus sit amet libero turpis, non venenatis urna. In blandit, odio convallis suscipit venenatis, ante ipsum cursus augue.</div>
+<div id="_mcePaste" style="width: 1px; height: 1px; overflow: hidden;"></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum. Vivamus sit amet libero turpis, non venenatis urna. In blandit, odio convallis suscipit venenatis, ante ipsum cursus augue.<br /></p>
+<p> </p></div>
+                </div>
+            </div>
+        
+       
+
+
+
+
+
+    <div class="visualClear"><!-- --></div>
+
+    <div class="documentActions">
+        
+
+        
+
+    </div>
+
+
+
+
+   
+
+
+
+
+
+    
+
+    </div>
+
+                    
+                  
+                
+              
+
+          
+
+          <div id="viewlet-below-content">
+
+
+</div>
+
+          <div class="promoCol" id="rightPortlets">
+           <span class="">
+            
+              
+<div id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a6e65772d68746d6c2d706f72746c6574" class="portletWrapper kssattr-portlethash-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a6e65772d68746d6c2d706f72746c6574 first"><div class="promo promoHolderHTML">
+ 
+
+
+ <div class="promoHTMLBlue">
+ <h3>New HTML Portlet</h3>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis lectus metus, at posuere neque. Sed pharetra nibh eget orci convallis at posuere leo convallis. Sed blandit augue vitae augue scelerisque bibendum. Vivamus sit amet libero turpis, non venenatis urna. In blandit, odio convallis suscipit venenatis, ante ipsum cursus augue.</p>
+ </div>
+</div>
+</div>
+
+
+<div id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a6e65772d68746d6c2d706f72746c6574" class="portletWrapper kssattr-portlethash-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f656e67696e2f747261696e696e672f6a7363726f6767690a6e65772d68746d6c2d706f72746c6574 last">
+<!--  /////////////////
+            START PROFILES PORTLET
+            /////////////////
+            /////////////////           
+            --> 
+            <div class="promo promoHolderProfiles">
+                <a href="#1">
+                    <span class="profilesMichEng">I am<br />
+                    &nbsp;Michigan<br />
+                    Engineering</span>
+                    <div class="promoProfiles">
+                        <span class="profilesName">Sam Smith</span>
+                        <span class="profilesProgram">Nuclear Engineering</span>
+                    </div>
+                    <img src="images/profiles-portrait1.jpg" alt="" />
+                </a>
+            </div>
+            <!--
+            /////////////////
+            END PROFILES PORTLET
+            /////////////////
+            /////////////////
+            -->
+</div>
+
+
+            
+           </span>
+      </div>
+
+
+            </div>             
+          
+      </div>     
+      
+      
+      </div>
+    </div>
+
+      
+
+        
+
+    <footer>
+        <div class="hidden" id="hostportinfo">caen-www-stage.engin.umich.edu:8081</div>
+        <p class="copyright">&copy;
+            <span class="year">2013</span>
+            University of Michigan College of Engineering</p>
+        <nav>
+            <ul>
+                
+                    <li class=""><a href="https://www.engin.umich.edu/form/site_feedback">Site Feedback</a></li>
+                
+                
+                    <li class=""><a href="http://caen-www-stage.engin.umich.edu/safety">Safety</a></li>
+                
+                
+                    <li class="last"><a href="http://caen-www-stage.engin.umich.edu/contact/quick.html">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+        <a href="http://www.umich.edu" target="_blank" id="umFooterLogo" class="ir">University of Michigan</a>
+    </footer>
+
+
+
+
+      
+
+      
+      
+
+<div id="kss-spinner"><img src="++resource++umich_images/spinner.png" alt="" /></div>
+</div>
+      
 <script src="profiles-script.js"></script> 
-<!-- end scripts -->
+
 </body>
 </html>
