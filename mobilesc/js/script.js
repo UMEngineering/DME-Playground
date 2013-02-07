@@ -1,4 +1,5 @@
 var first=0;
+var isMobile;
 
 function parallax(object){
 		
@@ -17,7 +18,7 @@ function parallax(object){
 
 		$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase()); 
 
-			if ($window.scrollTop() > 198) {
+			if ($window.scrollTop() > 198 && ! isMobile.any()) {
 				$(".sticky").addClass("fixed");
 			}
 			else {
@@ -55,7 +56,7 @@ function parallax(object){
 		
 
 		first++;
-		if (scroll_ok === true) {
+		if (scroll_ok === true && ! isMobile.any()) {
 			scroll_ok = false;
 			if ($window.scrollTop() > 601) {
 				$("#navContainer").addClass("fixed");	
@@ -129,7 +130,27 @@ function parallax(object){
 	document.getElementById(id).setAttribute("y", parseInt(document.getElementById(id).getAttribute("y"))+y);
 }*/
 
-$(document).ready(function(){
+$(document).ready(function(){ 
+	isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
 	/*
 	var container = document.getElementById("one");
 	var mySvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -199,6 +220,7 @@ $(document).ready(function(){
 		
 	});*/
 	console.log("Pararray:", parallax_array);
+	
 	parallax(parallax_array);
 	$(window).trigger("scroll");
 	first++;
@@ -232,4 +254,5 @@ $(document).ready(function(){
 		width: 260
 	});*/
 	$("body").queryLoader2();
+	
 });  
