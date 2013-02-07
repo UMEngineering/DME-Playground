@@ -656,6 +656,10 @@ footer #credits {
 }
 
 @media only screen and (max-width : 860px) {
+	body {
+		overflow: hidden;
+	}
+	
 	#head {
 		padding-top: 40px;
 	}
@@ -693,23 +697,37 @@ footer #credits {
 	blockquote {
 		position: relative;
 		top: 10px;
-		margin-left: 20px;
+		overflow: hidden;
+	}
+	
+	blockquote p {
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	blockquote.first {
 		top: 10px;
+		height: 323px;
 	}
 	
 	blockquote.second {
 		top: 10px;
+		height: 377px;
 	}
 	
 	blockquote.third {
 		top: 10px;
+		height: 296px;
 	}
 	
 	blockquote.fourth {
 		top: 10px;
+		height: 296px;
+	}
+	
+	div#footercontainer {
+		padding-left: 20px;
 	}
 }
 
@@ -721,5 +739,13 @@ footer #credits {
 	.content {
 		margin-top: 70px;
 		width: 250px;
+	}
+	
+	div.image-container, div.image-container img {
+		width: 250px;
+	}
+	
+	div#breadcrumbs {
+		width: 300px;
 	}
 }
