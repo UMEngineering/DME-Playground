@@ -1,0 +1,155 @@
+/* CSS Document */
+section, #footer {
+	width: 580px;
+	padding: 20px 10px 40px 10px;
+	border-top: 50px solid black;
+	color: white;
+}
+
+#twisters {
+	text-align: center;
+}
+
+.sticky {
+	background: black;
+	width: 580px;
+	padding: 10px;
+}
+
+.sticky #nav {
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.sticky #nav li {
+	padding-top: 10px;
+}
+
+.sticky #nav li a {
+	font-size: 14px;
+	color: #CCC;
+}
+
+a#nav-button {
+	padding: 5px;
+	background: rgba(0, 0, 0, .5);
+}
+
+p.bottom-nav {
+	padding-top: 10px;
+}
+
+p.bottom-nav a {
+	margin: 0 20px 0 0;
+	font-size: 18px;
+	font-style: bold;
+}
+
+#two img , #three img, #six img{
+	width: 580px;
+}
+
+#six .graphcaption {
+	font-size: 10pt;
+	font-style: italic;
+	margin: 0;
+	text-align: center;
+}
+
+
+#one {
+	background: url(../img/one.jpg);
+	/*background-position: center;*/
+	border-top: 0;
+}
+
+#two {
+	background:url(../img/two.jpg);
+	/*background-position: center;*/
+}
+
+#three {
+	background:url(../img/three.jpg);
+	/*background-position: center;*/
+}
+
+#three .subtitle {
+	background: rgba(0, 0, 0, .5);
+	padding: 5px;
+}
+
+#four {
+	background:url(../img/four.jpg);
+	/*background-position: center;*/
+}
+
+#five {
+	background:url(../img/five.jpg);
+	/*background-position: center;*/
+}
+
+#six {
+	background:url(../img/six.jpg);
+	/*background-position: center;*/
+}
+
+#six #whitebackground {
+	background: rgba(204, 204, 204, .4);
+	margin-bottom: 10px;
+}
+
+
+#seven {
+	background:url(../img/seven.jpg);
+	background-size: 220%;
+	/*background-position: bottom;*/
+}
+
+#eight {
+	background:url(../img/eight.jpg);
+	background-size: 400%;
+	/*background-position: center;*/
+}
+
+div#brown {
+	background: url("../img/brownblock.png") repeat scroll 0 0 transparent;
+	padding: 1px 10px 0 10px;
+}
+
+#nine {
+	background:url(../img/nine.jpg);
+	background-size: 200%;
+	/*background-position: center;*/
+}
+
+#ten {
+	background:url(../img/ten.jpg);
+	background-size: 300%;
+	color: black;
+	/*background-position: right;*/
+}
+
+#eleven {
+	background:url(../img/eleven.jpg);
+	background-size: 400%;
+	/*background-position: center;*/
+}
+
+#footer {
+	background: url("../img/footer.png") no-repeat scroll transparent;
+	background-size: 200%;
+	/*background-position: center;*/
+	padding: 10px;
+}
+
+#footer #credits {
+    color: #999999;
+    font-size: 12px;
+}
+
+#credits .most_important {
+	font-size: 13px;
+	color: #CCC;
+}
