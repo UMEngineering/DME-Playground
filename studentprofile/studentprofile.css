@@ -5,7 +5,7 @@
 }
 
 .facultyProfileTop {
-	width: 224px;
+	width: 225px;
 	float: left;
 	margin: 0 15px 10px 0;
 }
@@ -25,13 +25,14 @@
 	float: left;
 }
 
-#firstHeaderDivP {
+.contentBlock #firstHeaderDivP {
 	padding-top: 0;
-	margin-top: 0 !important;
+	margin-top: 0;
 	font-size: 14px;
-	color: #0B5595;
-	line-height: 1.25 !important;
+	line-height: 1.25;
 }
+
+
 
 #tabs {
 	padding: 0;
@@ -48,8 +49,8 @@
 }
 
 h3.tab-header {
-	font-size: 10pt;
-	color: #212A55;
+	font-size: 14px;
+	color: #0E4270;
 	padding: 0;
 }
 
@@ -117,8 +118,10 @@ table td {
 #firstHeaderDiv p {
     display: block;
     position: relative;
+    float: left;
     margin: 10px 0 0 0;
     padding: 0;
+    clear: left;
 }
 
 #firstHeaderDiv.wide p {
@@ -131,6 +134,17 @@ table td {
     margin-bottom: 0px;
 }
 
-.spanbold {
-	font-weight: bold;
+#tabs .ui-tabs-nav a {
+	color: #0E4270;
+	font-weight: normal;
+}
+
+#tabs .ui-tabs-nav a:hover {
+	font-weight: normal;
+	text-decoration: underline;
+	color: #0E4270;
+}
+
+.contentBlock #tabs p {
+	color: #0E4270;
 }

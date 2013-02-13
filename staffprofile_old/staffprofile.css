@@ -5,7 +5,7 @@
 }
 
 .facultyProfileTop {
-	width: 225px;
+	width: 224px;
 	float: left;
 	margin: 0 15px 10px 0;
 }
@@ -137,12 +137,6 @@ table td {
 #tabs .ui-tabs-nav a {
 	color: #0E4270;
 	font-weight: normal;
-}
-
-#tabs .ui-tabs-nav a:hover {
-	font-weight: normal;
-	text-decoration: underline;
-	color: #0E4270;
 }
 
 .contentBlock #tabs p {

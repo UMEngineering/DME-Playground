@@ -1,0 +1,5 @@
+.calendarPage #calendarContainer td a.moreLink span {
+	
+	background: url(blueDownArrow-2.png) no-repeat scroll 4px 2px transparent;
+	height: 9px;
+}
