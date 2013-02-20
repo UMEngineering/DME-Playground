@@ -1,0 +1,13 @@
+#contactBox .info p.name {
+	color: #FEBD32;
+}
+
+#contactBox .info p.name span.fn {
+	color: white;
+	font-weight: 100;
+}
+
+#contactBox .email a:hover {
+	color: #FEBD32;
+	text-decoration: underline;
+}
