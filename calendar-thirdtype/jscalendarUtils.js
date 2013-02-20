@@ -73,9 +73,9 @@ var calendarUtils = {
         }
 		
 		/*===================Loading Start====================*/
-		setTimeout(function(){
-			$("div.loading").remove()
-		}, 1000);
+		//setTimeout(function(){
+		$("div.loading").remove()
+		//}, 1000);
     },
     initParseLinks: function () {
         $("a.dayLink").each(function () {
