@@ -82,24 +82,68 @@ function parallax(object){
 
 
 $(document).ready(function(){
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
 	
-	
-	var parallax_array = Array();
-	$('[data-type]').each(function() {	
-		$(this).data('offsetY', parseInt($(this).attr('data-offsetY')));
-		$(this).data('Xposition', $(this).attr('data-Xposition'));
-		$(this).data('speed', $(this).attr('data-speed'));
-		$(this).data('type', $(this).attr('data-type'));
-		$(this).data('fromTop', $(this).attr('data-fromTop'));
+	if (!isMobile.any()){
+		var width = $(window).width() - 20;
+		$("body").toggleClass("mobile-browsing");
+		$(".mobile-browsing footer").css({"position":"static"});
+		$("body").css({"width": (width+20) + "px", "overflow-x":"hidden"});
+		$(".bldng").toggleClass("bldng");
+		$("#main-content").css({"width":(width) + "px", "margin":"0"});
+		$("header").css({"width":(width) + "px", "margin":"0"});
+		$("header h1").css({"width":width + "px", "height":(width / 10 - 2) + "px", "background-size":"100%", "margin-left":"10px"});
+		$("header h2").css({"font-size":"20px", "text-align": "left", "padding-left":"20px"});
+		$("header img").css({"width":(width) + "px"});
 		
-		parallax_array.push($(this));
+		$("p.intro").css({"width":(width) + "px", "padding-left": "10px"});
+		$("div.box").css({"width":(width) + "px", "margin-left":"10px", "float":"none"});
+		$("div.vidcontainer .vidfeature").css({"width":(width) + "px"});
+		$("div.vidcontainer .vidfeature h2").css({"background-size":"100%"});
+		$("#video1").css({"margin":"0", "padding":"150px 0"});
+		$("#video1 iframe").attr({"width":width, "height":(315*width/560)});
+		$("#video1 ").css({});
+		$("#video1").css({});
+		$("#video1").css({});
+		$("#video1").css({});
+		$("#video1").css({});
+	} else {
+		var parallax_array = Array();
+		$('[data-type]').each(function() {	
+			$(this).data('offsetY', parseInt($(this).attr('data-offsetY')));
+			$(this).data('Xposition', $(this).attr('data-Xposition'));
+			$(this).data('speed', $(this).attr('data-speed'));
+			$(this).data('type', $(this).attr('data-type'));
+			$(this).data('fromTop', $(this).attr('data-fromTop'));
+			
+			parallax_array.push($(this));
+			
+		});
 		
-	});
-	
-	console.log("Pararray:", parallax_array);
-	
-	parallax(parallax_array);
-	
-	$(window).trigger("scroll");
-	first++;
+		console.log("Pararray:", parallax_array);
+		
+		parallax(parallax_array);
+		
+		$(window).trigger("scroll");
+		first++;
+	}
 });
