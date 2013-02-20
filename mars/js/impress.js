@@ -692,8 +692,7 @@
             goto: goto,
             next: next,
             prev: prev,
-			currentStep: currentStep,
-			stepsData: stepsData
+			currentStep: currentStep
         });
 
     };

@@ -1,4 +1,36 @@
 $(document).ready(function(){
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+	
+	if (isMobile.any()){
+		$("body").toggleClass("mobile-browsing");
+		$("#canvas").css("background", "black");
+		$(".fallback-message").css("display", "none");
+		$("#impress").css("background", "black");
+		/*$(".mobile-browsing #eight h2").css("display", "none");
+		$(".mobile-browsing #nine h2").css("display", "none");
+		$(".mobile-browsing .step#thirteen p").css("top", "297px");
+		$(".mobile-browsing #fifteen p").css("padding", "10px");
+		$(".mobile-browsing #impress").css("overflow-x", "hidden");*/
+	}
 	
 	$("#container").click(function(e){
 		console.log("Click:", e);
