@@ -221,6 +221,42 @@
 
   <script>
   	$(document).ready(function(){
+		var isMobile = {
+			Android: function() {
+				return navigator.userAgent.match(/Android/i);
+			},
+			BlackBerry: function() {
+				return navigator.userAgent.match(/BlackBerry/i);
+			},
+			iOS: function() {
+				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+			},
+			Opera: function() {
+				return navigator.userAgent.match(/Opera Mini/i);
+			},
+			Windows: function() {
+				return navigator.userAgent.match(/IEMobile/i);
+			},
+			any: function() {
+				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+			}
+		};
+		
+		if (isMobile.any()){
+			var width = $(window).width() - 20;
+			$("#border").css("padding-left", "10px");
+			$("header").css({"padding-left":"10px", "height":"350px"});
+			$("header h1").css({"width":width, "margin":"0", "font-size":"1.4em"});
+			$(".byline").css({"width":(width-20)+"px", "top":"10px", "margin":"10px"});
+			$(".tuberculosis").css({"font-size":"50px"});
+			$("#footercontainer").css("padding-left", "10px");
+			$("#border img").css({"width":width + "px"});
+			$(".pullquote").css({"font-size":"1em", "line-height":"inherit", "width":(width-40)+"px", "margin":"0"});
+			$(".primates").css({"margin":"10px"});
+			$("#border iframe").attr({"width":width, "height":(325*width/570)});
+			$("#footercontainer").css({"width":(width-20), "padding-left":"10px", "margin":"0"});
+		}
+		
 		$("div.clicktoreveal a").click(function(e){
 			e.preventDefault();
 			console.log(this.innerHTML);

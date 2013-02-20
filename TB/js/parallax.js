@@ -128,6 +128,26 @@ function parallax(object){
 
 
 $(document).ready(function(){
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
 	
 	
 	var parallax_array = Array();
@@ -142,7 +162,7 @@ $(document).ready(function(){
 	
 	console.log("Pararray:", parallax_array);
 	
-	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+	if(isMobile.any()/*(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))*/) {
 		 //Using an iPhone
 		 var iphonestuff = $("#right, header");
 		 $(iphonestuff).css({'background-attachment': 'scroll', 'position': 'relative'});
