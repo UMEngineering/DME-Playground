@@ -28,12 +28,14 @@ if (isset($_POST["submit-answer"]) && !empty($_POST["count"])) {
 	}*/
 	
 	for ($i=0; $i<$_POST["count"]; $i++){
-		$sql = "INSERT INTO ethic_answers (q_id, set_id, user_answer) VALUES (";
-		$sql .= $_POST["q_id-{$i}"] . ", " . $_POST["set_id"] . ", " . $_POST["answer_{$i}"] . ");";
-		//echo $sql . "<br />";
-		$result = mysql_query($sql);
-		if (!$result) {
-			die ("Cannot insert result to the database, please contact web administrator!");
+		if (isset($_POST["answer_{$i}"])) {
+			$sql = "INSERT INTO ethic_answers (q_id, set_id, user_answer) VALUES (";
+			$sql .= $_POST["q_id-{$i}"] . ", " . $_POST["set_id"] . ", " . $_POST["answer_{$i}"] . ");";
+			//echo $sql . "<br />";
+			$result = mysql_query($sql);
+			if (!$result) {
+				die ("Cannot insert result to the database, please contact web administrator!");
+			}
 		}
 	}
 	array_push($answered, $_POST["set_id"]);
