@@ -5,9 +5,12 @@ require_once("functions.php");
 // Randomly choose one number set
 $set_questions = array();
 $not_include = array();
+if (isset($_COOKIE["answered"])) {
+	$not_include = unserialize($_COOKIE["answered"]);
+}
 
 // Decide the client ip address, and skip the questions that already answered.
-$user_id = get_userid();
+/*$user_id = get_userid();
 if ($user_id){
 	$sql = "SELECT DISTINCT set_id FROM ethic_answers WHERE user_id={$user_id}";
 	$result = mysql_query($sql);
@@ -25,6 +28,11 @@ if ($user_id){
 	}
 } else {
 	$set_questions = array(1, 2, 3, 4, 5, 6);
+}*/
+for ($i=1; $i<=6; $i++){
+	if (!in_array($i, $not_include)){
+		array_push($set_questions, $i);
+	}
 }
 
 // Randomly choose one set of question not answered yet
