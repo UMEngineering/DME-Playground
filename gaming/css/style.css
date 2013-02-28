@@ -63,7 +63,7 @@ input, select { vertical-align: middle; }
  * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
  */
 
-body { font:13px/1.231 sans-serif; *font-size:small; overflow: auto;} /* Hack retained to preserve specificity */
+body { font:13px/1.231 sans-serif; *font-size:small; overflow: auto; background: #212121;} /* Hack retained to preserve specificity */
 select, input, textarea, button { font:99% sans-serif; }
 
 /* Normalize monospace sizing:
