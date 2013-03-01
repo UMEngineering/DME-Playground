@@ -1,0 +1,76 @@
+#container {
+    margin: 65px 0;
+    
+    border-top: thin solid #ececec;
+    box-shadow: 0 0 30px rgba(0,0,0,.07);
+    padding: 40px;
+}
+
+#questions {
+	display: block;
+	
+    position: relative;
+    width: 800px;
+    margin: auto;
+}
+
+input[type="radio"] {
+    margin: 0 10px 0 4px;
+}
+
+li.question {
+	display: none;
+}
+
+input[name="submit-answer"] {
+	display: none;
+}
+
+div#results {
+    width: 490px;
+    margin: 60px auto;
+    font-size: 13px;
+    display: none;
+}
+
+#results #chart {
+    position: relative;
+    border: thin solid #ececec;
+    width: 490px;
+    height: 290px;
+    margin: 20px auto;
+}
+
+#results #chart #bar1 {
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    border: thin solid #488DB3;
+    width: 80px;
+    background: #488DB3;
+    height: 0px;
+}
+
+#results #chart #bar2 {
+	position: absolute;
+    bottom: 0;
+    right: 100px;
+    border: thin solid #488DB3;
+    width: 80px;
+    background: #488DB3;
+    
+	height: 0px;
+}
+
+#results #chart div span {
+    font-size: .8em;
+	
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}

@@ -1,7 +1,7 @@
 <?php
 require_once("../../db.php");
 require_once("functions.php");
-
+echo "test";
 // Randomly choose one number set
 $set_questions = array();
 $not_include = array();
@@ -47,7 +47,7 @@ if (count($set_questions) == 0) {
 	print("<br />{$set}");*/
 	
 	$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions WHERE set_id={$set};";
-	$result = mysql_query($sql);
+	$result = mysql_query($sql) or die;
 	if (!$result) {
 		die("ERROR cannot load questions, please contact web administrator.");
 	}

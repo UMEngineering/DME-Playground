@@ -44,9 +44,9 @@ if (count($set_questions) == 0) {
 	$set = $set_questions[$set];
 	
 	
-	print_r($not_include);
-	print_r($set_questions);
-	print("<br />{$set}");
+	//print_r($not_include);
+	//print_r($set_questions);
+	//print("<br />{$set}");
 	
 	$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions WHERE set_id={$set};";
 	$result = mysql_query($sql);
@@ -71,7 +71,9 @@ if (count($set_questions) == 0) {
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/ethics.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/g.raphael-min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -83,20 +85,20 @@ if (count($set_questions) == 0) {
 			// If there are some questions unanswered, then display the questions
 			if ($left) {
 			?>
-            <div id="questions">
+            <ul id="questions">
 				<form method="POST", action="post_result.php">
 				<?php
 				$count = 0;
 				while ($row = mysql_fetch_row($result)) {
 				?>
-					<div class="question">
+					<li class="question">
 						<input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
-						<p>q_id: <?= $row[0] ?></p>
+						<!--p>q_id: <?= $row[0] ?></p>
                         <p>How many people have answered this question: <?php echo get_count($row[0]); ?></p>
-						<p>set_id: <?= $row[1] ?></p>
-						<p>qestion: <?= $row[2] ?></p>
+						<p>set_id: <?= $row[1] ?></p-->
+						<p><b>Question:</b> <?= $row[2] ?></p>
 						<p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
-					</div>
+					</li>
 				<?php
 					$count++;
 				}
@@ -105,6 +107,17 @@ if (count($set_questions) == 0) {
 					<input type="hidden" name="count" value="<?= $count ?>" />
 					<input type="submit" name="submit-answer" value="Submit your answer" />
 				</form>
+			</ul>
+
+			<div id="results">
+
+				<a href="#" id="one">Result one</a>
+				<a href="#" id="two">Result two</a>
+				<div id="chart">
+					<div id="bar1"><span>30 people</span></div>
+					<div id="bar2"><span>23 people</span></div>
+				</div>
+
 			</div>
             <?php
 			}
@@ -113,6 +126,8 @@ if (count($set_questions) == 0) {
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script type="text/javascript">
