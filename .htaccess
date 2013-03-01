@@ -1,0 +1,7 @@
+# Need to do some fixups
+RewriteEngine   On
+
+# Use the Canonical Hostname
+RewriteCond %{HTTP_HOST}   !^engcomm\.engin\.umich\.edu [NC]
+RewriteCond %{HTTP_HOST}   !^$
+RewriteRule (.*)         http://engcomm.engin.umich.edu/$1 [L,R=301]
