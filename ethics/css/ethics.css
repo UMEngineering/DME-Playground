@@ -54,7 +54,18 @@ div#results {
 #results #chart #bar2 {
 	position: absolute;
     bottom: 0;
-    right: 100px;
+    left: 310px;
+    border: thin solid #488DB3;
+    width: 80px;
+    background: #488DB3;
+    
+	height: 0px;
+}
+
+#results #chart #bar3 {
+	position: absolute;
+    bottom: 0;
+    left: 280px;
     border: thin solid #488DB3;
     width: 80px;
     background: #488DB3;

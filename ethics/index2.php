@@ -46,7 +46,7 @@ if (count($set_questions) == 0) {
 } else {
 	$set = rand(0, count($set_questions)-1);
 	$set = $set_questions[$set];
-	$set = 5;
+	$set = 1;
 	
 	//print_r($not_include);
 	//print_r($set_questions);
@@ -90,7 +90,7 @@ if (count($set_questions) == 0) {
 			if ($left) {
 			?>
             <ul id="questions">
-				<form method="POST" id="question-form" action="post_result.php">
+				<form method="POST", action="post_result.php">
 				<?php
 				$count = 0;
 				while ($row = mysql_fetch_row($result)) {
@@ -98,13 +98,13 @@ if (count($set_questions) == 0) {
 					<li class="question">
 						<input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
 						<!--p>q_id: <?= $row[0] ?></p>
-                        <p>How many people have answered this question: <?php //echo get_count($row[0]); ?></p>
+                        <p>How many people have answered this question: <?php echo get_count($row[0]); ?></p>
 						<p>set_id: <?= $row[1] ?></p-->
 						<p><b>Question:</b> <?= $row[2] ?></p>
 						<p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
 					</li>
 				<?php
-					//array_push($count_result, get_count($row[0]));
+					array_push($count_result, get_count($row[0]));
 					$count++;
 				}
 				?>
@@ -117,11 +117,30 @@ if (count($set_questions) == 0) {
 
 			<div id="results">
             	<div id="result-choice">
-                	<a href="#" id="one">Result one</a>
-                	<a href="#" id="two">Result two</a>
+                	<?php
+					for ($i=0; $i<$count; $i++){
+					?>
+                    	<a href="#" id="<?= $numbers_str[$i] ?>">Result <?= $numbers_str[$i] ?></a>
+                    <?php
+					}
+					?>
                 </div>
 				<div id="chart">
-                	
+                	<?php
+					for ($i=0; $i<$count; $i++){
+					?>
+						<div id="bar<?php echo $i+1; ?>"
+                        <?php
+                        	if ($count == 3) {
+								// If there are three questions, then display three bars and adjust the position
+								$left_position = 60 * ($i+1) + 80 * $i;
+								echo "style=\"left: {$left_position}px;\"";
+							}
+                        ?>
+                        ><span><?= $count_result[$i] ?> people</span></div>
+                    <?php
+					}
+					?>
 				</div>
 
 			</div>

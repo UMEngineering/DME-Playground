@@ -14,8 +14,8 @@ function get_userid(){
 	}
 }
 
-function get_count($q_id){
-	$sql = "SELECT count(q_id) FROM ethic_answers WHERE q_id={$q_id};";
+function get_count($q_id, $choice=0){
+	$sql = "SELECT count(q_id) FROM ethic_answers WHERE q_id={$q_id} AND user_answer={$choice};";
 	$result = mysql_query($sql);
 	if (!$result) {
 		die ("FAILED to load question count");

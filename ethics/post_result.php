@@ -42,6 +42,6 @@ if (isset($_POST["submit-answer"]) && !empty($_POST["count"])) {
 	setcookie("answered", serialize($answered), time()+3600*24*180);
 	
 	header("Location: index.php");
-	return;
+	return "haha";
 }
 ?>
