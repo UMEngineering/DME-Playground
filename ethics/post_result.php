@@ -5,7 +5,7 @@ require_once("functions.php");
 if (isset($_POST["submit-answer"]) && !empty($_POST["count"])) {
 	//$answers = array();
 	// Get the user_id
-	$user_id = get_userid();
+	//$user_id = get_userid();
 	$answered = array();
 	if (isset($_COOKIE["answered"])) {
 		$answered = unserialize($_COOKIE["answered"]);

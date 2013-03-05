@@ -46,7 +46,7 @@ if (count($set_questions) == 0) {
 } else {
 	$set = rand(0, count($set_questions)-1);
 	$set = $set_questions[$set];
-	$set = 5;
+	$set = 1;
 	
 	//print_r($not_include);
 	//print_r($set_questions);

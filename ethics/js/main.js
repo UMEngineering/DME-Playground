@@ -35,10 +35,10 @@ $(document).ready(function(){
 		var jsonStr = '{';
 		for (var i=0; i<count_total; i++){
 			jsonStr += '"q_id-' + i + '" : "' + $form.find('input[name="q_id-' + i + '"]').val() + '", ';
-			jsonStr += '"answer_' + i + '" : "' + $form.find('input[name="answer_' + i + '"]').val() + '", ';
+			jsonStr += '"answer_' + i + '" : "' + $form.find('input[name="answer_' + i + '"]:checked').val() + '", ';
 		}
 		jsonStr += '"set_id" : "' + $form.find('input[name="set_id"]').val() + '", "count" : "' + $form.find('input[name="count"]').val() + '", "submit-answer" : "Submit your answer"}';
-		alert(jsonStr);
+		//alert(jsonStr);
 		
 		$.post("post_result.php", eval("(" + jsonStr + ")"), function(data){
 			display_result(count_total, 0);
