@@ -12,6 +12,7 @@ $not_include = array();
 if (isset($_COOKIE["answered"])) {
 	$not_include = unserialize($_COOKIE["answered"]);
 }
+print_r($not_include);
 
 // Decide the client ip address, and skip the questions that already answered.
 /*$user_id = get_userid();
@@ -41,23 +42,24 @@ for ($i=1; $i<=6; $i++){
 
 // Randomly choose one set of question not answered yet
 $left = true;
-if (count($set_questions) == 0) {
+/*if (count($set_questions) == 0) {
 	$left = false;
-} else {
+} else {*/
 	$set = rand(0, count($set_questions)-1);
 	$set = $set_questions[$set];
-	$set = 1;
+	$set = 5;
 	
 	//print_r($not_include);
 	//print_r($set_questions);
 	//print("<br />{$set}");
 	
-	$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions WHERE set_id={$set};";
+	//$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions WHERE set_id={$set};";
+	$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions;";
 	$result = mysql_query($sql);
 	if (!$result) {
 		die("ERROR cannot load questions, please contact web administrator.");
 	}
-}
+//}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -87,38 +89,55 @@ if (count($set_questions) == 0) {
 		<div id="container">
 			<?php
 			// If there are some questions unanswered, then display the questions
-			if ($left) {
+			//if ($left) {
 			?>
             <ul id="questions">
-				<form method="POST" id="question-form" action="post_result.php">
 				<?php
 				$count = 0;
+				
+				// Display the next question or not
+				$display_next = false;
+				
 				while ($row = mysql_fetch_row($result)) {
 				?>
-					<li class="question">
-						<input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
-						<!--p>q_id: <?= $row[0] ?></p>
-                        <p>How many people have answered this question: <?php //echo get_count($row[0]); ?></p>
-						<p>set_id: <?= $row[1] ?></p-->
-						<p><b>Question:</b> <?= $row[2] ?></p>
-						<p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
-					</li>
+                        <li class="question" id="question-li-<?= $count ?>"
+                        <?php
+						if ($display_next){
+							echo 'style="display: block;"';
+						}
+						?>
+                        >
+                            <p><b>Question:</b> <?= $row[2] ?></p>
+                            <?php
+							if (!in_array($row[0], $not_include)){
+							?>
+							<form method="POST" id="question-form-<?= $count ?>" action="post_result.php">
+                                <input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
+                                <p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
+                                <input type="hidden" name="set_id" value="<?= $row[1] ?>" />
+                                <input type="hidden" name="count" value="<?= $count ?>" />
+                                <input type="submit" name="submit-answer-<?= $count ?>" value="Submit your answer" onclick="submit_answer(<?= $count ?>); return false;" />
+                            </form>
+                            <?php
+								$display_next = false;
+							} else {
+								$display_next = true;
+							}
+							?>
+                        </li>
 				<?php
 					//array_push($count_result, get_count($row[0]));
 					$count++;
 				}
 				?>
-					<input type="hidden" name="set_id" value="<?= $set ?>" />
-					<input type="hidden" name="count" value="<?= $count ?>" />
-					<input type="submit" name="submit-answer" value="Submit your answer" />
-				</form>
 			</ul>
             <script>var count_total = <?= $count ?>;</script>
 
 			<div id="results">
             	<div id="result-choice">
-                	<a href="#" id="one">Result one</a>
-                	<a href="#" id="two">Result two</a>
+                	<a href="#" id="one">Question 1</a>
+                	<a href="#" id="two">Question 2</a>
+                    <a href="#" id="three">Question 3</a>
                 </div>
 				<div id="chart">
                 	
@@ -126,7 +145,7 @@ if (count($set_questions) == 0) {
 
 			</div>
             <?php
-			}
+			//}
 			?>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

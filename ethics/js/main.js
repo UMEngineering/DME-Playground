@@ -1,79 +1,79 @@
+var currentSet = 0;
+var questions = new Array(new Array(0, 1, 2), new Array(3, 4, 5), new Array(6, 7, 8), new Array(9, 10), new Array(11, 12), new Array(13, 14));
 $(document).ready(function(){
-	/*var request = $.getJSON("get_questions.php", function(result){
-		var appendstr = "<form method=\"POST\" action=\"post_result.php\">";
-		$.each(result, function(i, field){
-			appendstr += "<div class=\"question\"><p>q_id: " + field["q_id"] + "</p>""<p>set_id: " + field["set_id"] + "</p>""<p>question: " + field["question"] + "</p><p>" + field["answer1"] + "<input type=\"radio\" name=\"a_" + field["q_id"] + "\" value=\"0\" \> " + field["answer2"] + "<input type=\"radio\" name=\"a_" + field["q_id"] + "\" value=\"1\" \></p></div>";
-			
-		})
-		appendstr += "<input type=\"submit\" name=\"answer\" value=\"Submit your answers\" /></form>";
-		alert(appendstr);
-		$("#questions").append(appendstr);
-	});*/
-	
 	// $.easing.def = "easeInOutBounce";
 	$("li.question").first().fadeIn(500);
 
-	$('li.question input[type="radio"]').click(function(){
-		var next = $(this).parent().parent().next();
-		next.fadeIn(500);
-		if (next[0].nodeName != "LI") {
-			console.log("Show input");
-			$('input[name="submit-answer"]').fadeIn(600);
-		}
-	});
-
-	$('input[name="submit-answer"]').click(function(e){
-		e.preventDefault();
-		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
-		console.log("Show graph");
-		
-		// Send the form data via POST request
-		var $form = $("#question-form"),
-			url = $form.attr("action");
-		
-		// Prepare the data to post
-		var jsonStr = '{';
-		for (var i=0; i<count_total; i++){
-			jsonStr += '"q_id-' + i + '" : "' + $form.find('input[name="q_id-' + i + '"]').val() + '", ';
-			jsonStr += '"answer_' + i + '" : "' + $form.find('input[name="answer_' + i + '"]:checked').val() + '", ';
-		}
-		jsonStr += '"set_id" : "' + $form.find('input[name="set_id"]').val() + '", "count" : "' + $form.find('input[name="count"]').val() + '", "submit-answer" : "Submit your answer"}';
-		//alert(jsonStr);
-		
-		$.post("post_result.php", eval("(" + jsonStr + ")"), function(data){
-			display_result(count_total, 0);
-		});
-		
-	});
-
 	$("#results a#one").click(function(e){
 		e.preventDefault();
-		display_result(count_total, 0);
-		/*$("#results #bar1").animate({height:"200px"}, 500, "easeOutBounce");
-		$("#results #bar2").animate({height:"140px"}, 500, "easeOutBounce");
-
-		$("#results #bar1 span").html("40 people");
-		$("#results #bar2 span").html("23 people");*/
+		display_result(0);
 	});
 
 	$("#results a#two").click(function(e){
 		e.preventDefault();
-		display_result(count_total, 1);
-		/*$("#results #bar1").animate({height:"100px"}, 500, "easeOutBounce");
-		$("#results #bar2").animate({height:"280px"}, 500, "easeOutBounce");
+		display_result(1);
+	});
 
-		$("#results #bar1 span").html("20 people");
-		$("#results #bar2 span").html("53 people");*/
+	$("#results a#three").click(function(e){
+		e.preventDefault();
+		display_result(2);
 	});
 });
 
-function display_result(count_total, answer){
-	// Get the result via Ajax
-	var url = "get_result.php?answer=" + answer + "&count=" + count_total + "";
-	for (var i=0; i<count_total; i++){
-		var value = $("input[name='q_id-" + i + "']").attr("value");
-		url += "&q_id-" + i + "=" + value;
+// Submit an answer
+function submit_answer(i){
+	$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+	console.log("Show graph");
+	
+	// Send the form data via POST request
+	var $form = $("#question-form-" + i),
+		url = $form.attr("action");
+	
+	// Prepare the data to post
+	var jsonStr = '{';
+	jsonStr += '"q_id" : "' + $form.find('input[name="q_id-' + i + '"]').val() + '", ';
+	jsonStr += '"answer" : "' + $form.find('input[name="answer_' + i + '"]:checked').val() + '", ';
+	jsonStr += '"set_id" : "' + $form.find('input[name="set_id"]').val() + '", "count" : "' + $form.find('input[name="count"]').val() + '", "submit-answer" : "Submit your answer"}';
+	//alert(jsonStr);
+	
+	// Insert the link
+	if (currentSet != $form.find('input[name="set_id"]').val()-1){
+		$("#results a#one").unbind();
+		$("#results a#two").unbind();
+		$("#results a#three").unbind();
+		$("#results a#one").click(function(e){
+			e.preventDefault();
+			display_result(questions[currentSet][0]);
+		});
+		$("#results a#two").click(function(e){
+			e.preventDefault();
+			display_result(questions[currentSet][1]);
+		});
+		$("#results a#three").click(function(e){
+			e.preventDefault();
+			if (questions[currentSet].length == 3)
+				display_result(questions[currentSet][2]);
+		});
 	}
+	if (i/3 < 3) {
+		$("#three").fadeIn(500);
+	} else {
+		$("#three").fadeOut(500);
+	}
+	
+	currentSet = $form.find('input[name="set_id"]').val()-1;
+	
+	$.post("post_result.php", eval("(" + jsonStr + ")"), function(data){
+		$("#question-form-" + i).css("display", "none");
+		$("#question-li-" + (i+1)).fadeIn(500);
+		display_result(i);
+	});
+}
+
+// Display the result chart for a specific question
+function display_result(qid){
+	// Get the result via Ajax
+	var url = "get_result.php?q_id=" + $('input[name="q_id-' + qid + '"]').attr("value");
 	var request = $.getJSON(url, function(result){
 		var numbers = new Array("one", "two", "three");
 		var counter = 0;
@@ -81,19 +81,11 @@ function display_result(count_total, answer){
 		$.each(result, function(i, field){
 			//$("#result-choice").append('<a href="#" id="' + numbers[counter] + '">Result ' + numbers[counter] + '</a>');
 			counter++;
-			
-			// If the total questions are three, then adjust the position of three bars
-			var style = "";
-			if (count_total == 3) {
-				var new_pos = 60 * counter + 80 * (counter-1);
-				style = 'style="left: ' + new_pos + 'px"';
-			}
-			
 			if ($("#bar"+counter).length > 0){
 				$("#bar"+counter).attr("class", field["count"]);
 				$("#bar"+counter+" span").html(field["count"] + " people");
 			} else {
-				$("#chart").append('<div id="bar' + counter + '" ' + style + ' class="' + field["count"] + '"><span>' + field["count"] + ' people</span></div>');
+				$("#chart").append('<div id="bar' + counter + '" class="' + field["count"] + '"><span>' + field["count"] + ' people' + field["q_id"] + '</span></div>');
 			}
 			sum += field["count"];
 		});

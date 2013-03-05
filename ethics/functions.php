@@ -14,17 +14,18 @@ function get_userid(){
 	}
 }
 
-function get_count($q_id, $choice=0){
-	$sql = "SELECT count(q_id) FROM ethic_answers WHERE q_id={$q_id} AND user_answer={$choice};";
+function get_count($q_id){
+	$sql = "SELECT user_answer, count(q_id) FROM ethic_answers WHERE q_id={$q_id} GROUP BY user_answer;";
 	$result = mysql_query($sql);
 	if (!$result) {
 		die ("FAILED to load question count");
 	}
 	
-	if ($row = mysql_fetch_row($result)){
-		return $row[0];
-	} else {
-		return 0;
+	$return = array(0, 0);
+	while ($row = mysql_fetch_row($result)){
+		$return[$row[0] + 0] = $row[1] + 0;
 	}
+	
+	return $return;
 }
 ?>

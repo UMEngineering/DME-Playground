@@ -2,7 +2,7 @@
 require_once("../../db.php");
 require_once("functions.php");
 
-if (isset($_POST["submit-answer"]) && !empty($_POST["count"])) {
+if (isset($_POST["submit-answer"])) {
 	//$answers = array();
 	// Get the user_id
 	//$user_id = get_userid();
@@ -27,21 +27,19 @@ if (isset($_POST["submit-answer"]) && !empty($_POST["count"])) {
 		}
 	}*/
 	
-	for ($i=0; $i<$_POST["count"]; $i++){
-		if (isset($_POST["answer_{$i}"])) {
+	//for ($i=0; $i<=$_POST["count"]; $i++){
+		//if (isset($_POST["q_id"]) && isset($_POST["answer"]) && isset($_POST["set_id"])) {
 			$sql = "INSERT INTO ethic_answers (q_id, set_id, user_answer) VALUES (";
-			$sql .= $_POST["q_id-{$i}"] . ", " . $_POST["set_id"] . ", " . $_POST["answer_{$i}"] . ");";
-			//echo $sql . "<br />";
+			$sql .= $_POST["q_id"] . ", " . $_POST["set_id"] . ", " . $_POST["answer"] . ");";
+			//return $sql;
 			$result = mysql_query($sql);
 			if (!$result) {
-				die ("Cannot insert result to the database, please contact web administrator!");
+				die ("Cannot insert result to the database, please contact web administrator!" . $sql);
 			}
-		}
-	}
-	array_push($answered, $_POST["set_id"]);
+		//}
+	//}
+	if (!in_array($_POST["q_id"], $answered))
+		array_push($answered, $_POST["q_id"]);
 	setcookie("answered", serialize($answered), time()+3600*24*180);
-	
-	header("Location: index.php");
-	return "haha";
 }
 ?>

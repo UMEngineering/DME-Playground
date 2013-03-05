@@ -10,8 +10,8 @@
 	display: block;
 	
     position: relative;
-    width: 800px;
-    margin: auto;
+    width: 600px;
+    /*margin: auto;*/
 }
 
 input[type="radio"] {
@@ -27,16 +27,19 @@ input[name="submit-answer"] {
 }
 
 div#results {
-    width: 490px;
+    width: 260px;
     margin: 60px auto;
     font-size: 13px;
     display: none;
+	position: fixed;
+	top: 20px;
+	right: 10px;
 }
 
 #results #chart {
     position: relative;
     border: thin solid #ececec;
-    width: 490px;
+    width: 260px;
     height: 290px;
     margin: 20px auto;
 }
@@ -44,7 +47,7 @@ div#results {
 #results #chart #bar1 {
     position: absolute;
     bottom: 0;
-    left: 100px;
+    left: 33px;
     border: thin solid #488DB3;
     width: 80px;
     background: #488DB3;
@@ -54,7 +57,7 @@ div#results {
 #results #chart #bar2 {
 	position: absolute;
     bottom: 0;
-    left: 310px;
+    left: 144px;
     border: thin solid #488DB3;
     width: 80px;
     background: #488DB3;
@@ -84,4 +87,8 @@ div#results {
 
 body {
     margin: 0;
+}
+
+#three {
+	display: none;
 }
