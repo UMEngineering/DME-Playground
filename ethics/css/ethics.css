@@ -1,10 +1,276 @@
+body {
+    margin: 0;
+}
+
 #container {
-    margin: 65px 0;
+    /*margin: 65px 0;
     
     border-top: thin solid #ececec;
     box-shadow: 0 0 30px rgba(0,0,0,.07);
-    padding: 40px;
+    padding: 40px;*/
+	max-width: 1198px;
+	margin: auto;
 }
+
+.sticky {
+	background: none repeat scroll 0 0 #222222;
+    box-shadow: 0 2px 4px #333333;
+    display: block;
+    height: 51px;
+    
+	position: relative;
+    top: 0px;
+	left: 0;	
+    width: 100%;
+    
+	overflow: hidden;
+	padding: 8px 0 0;
+	z-index: 1000;
+}
+
+.ie7 .sticky {
+}
+
+a#circle {
+	display: block;
+	position: absolute;
+	right: -60px;
+	height: 48px;
+	width: 48px;
+	top: -10px;	
+}
+
+#holder {
+    height: 260px;
+	
+}
+
+.sticky ul {
+	position: relative;
+	display: block;
+	width: 960px;
+	margin: 0px auto;
+	padding: 0px 0 0;
+	position: relative;
+	overflow: visible;
+	height: 45px;
+	background: url(../img/dmebadge.jpg) scroll no-repeat top left;
+}
+
+.sticky ul li {
+	list-style: none;
+	display: inline;
+	float: right;
+	margin: 4px 0 0;
+}
+
+.sticky ul li.simplify a {
+	text-align: right;
+	right: 0;
+	position: absolute;
+	width: 270px;	
+}
+
+li.dmegallery {
+	right: 57px;
+	display: block;
+	position: absolute;
+	top: 9px;
+}
+
+.sticky ul li a, .sticky ul li a:visited {
+	color: white;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 100;
+}
+
+.sticky ul li.home {
+	position: absolute;
+	left: 0; top: 8px;
+	margin: 0;
+}
+
+.sticky ul li.counts {
+	float: none;	
+}
+
+div#top-header {
+	height: 396px;
+	background: url(../img/top-img2.jpg) #DFE0DA 50% scroll no-repeat;;
+}
+
+div#top-header div#top-header-content {
+	width: 960px;
+	margin: auto;
+}
+
+div#top-header-content div#top-header-logo {
+	background: url(../img/top2.png) no-repeat;
+	width: 336px;
+	height: 61px;
+	
+	position: relative;
+	top: 75px;
+}
+
+div#top-header-content div#top-header-subtitle {
+	background: url(../img/top1.png) no-repeat;
+	width: 600px;
+	height: 100px;
+	
+	position: relative;
+	top: 110px;
+	left: -35px;
+}
+
+div#top-header-content div#top-header-nav {
+	width: 600px;
+	
+	position: relative;
+	top: 200px;
+}
+
+div#top-header-nav {
+	opacity: .5;
+	
+	/* For IE7 8 9 */
+	filter: Alpha(Opacity=50) \9;
+}
+
+div#top-header-nav span {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+div#top-header-nav img {
+	margin: 0 3px 3px 3px;
+}
+
+div#top-header-nav .color-red {
+	color: #ea4c37;
+}
+
+#top-title {
+	color: #CCC;
+	font-weight: 100;
+	font-size: 20pt;
+}
+
+div.story-container {
+	width: 960px;
+	margin: auto;
+	padding-bottom: 80px;
+}
+
+div.story {
+	width: 550px;
+}
+
+div.story p {
+	color: #797979;
+}
+
+div.question {
+	height: 458px;
+	margin: auto;
+}
+
+div.question-container {
+	width: 960px;
+	margin: auto;
+	height: 100%;
+}
+
+div.question-content {
+	background: white;
+	height:100%;
+	width: 400px;
+	float: left;
+}
+
+div.question-content p.what-do-you-think {
+	text-align: center;
+}
+
+div.question-div {
+	display: none;
+	margin: 10px 30px 10px 30px;
+}
+
+div#q1 {
+	background: url(../img/q1.jpg) no-repeat center;
+}
+
+div.results {
+    width: 270px;
+    font-size: 13px;
+    /*display: none;*/
+	float: left;
+	background: white;
+	margin: 20px;
+}
+
+.results #chart {
+    position: relative;
+    border: thin solid #ececec;
+    width: 260px;
+    height: 290px;
+    margin: 20px auto;
+}
+
+.results #chart #bar1 {
+    position: absolute;
+    bottom: 0;
+    left: 33px;
+    border: thin solid #488DB3;
+    width: 80px;
+    background: #488DB3;
+    height: 0px;
+}
+
+.results #chart #bar2 {
+	position: absolute;
+    bottom: 0;
+    left: 144px;
+    border: thin solid #488DB3;
+    width: 80px;
+    background: #488DB3;
+    
+	height: 0px;
+}
+
+.results #chart #bar3 {
+	position: absolute;
+    bottom: 0;
+    left: 280px;
+    border: thin solid #488DB3;
+    width: 80px;
+    background: #488DB3;
+    
+	height: 0px;
+}
+
+.results #chart div span {
+    font-size: .8em;
+	
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    text-align: center;
+}
+
+.results .result-choice {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 #questions {
 	display: block;
@@ -31,7 +297,7 @@ div#results {
     margin: 60px auto;
     font-size: 13px;
     display: none;
-	position: fixed;
+	position: relative;
 	top: 20px;
 	right: 10px;
 }
@@ -87,8 +353,4 @@ div#results {
     margin: 0 auto;
     width: auto;
     text-align: center;
-}
-
-body {
-    margin: 0;
 }

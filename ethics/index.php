@@ -49,8 +49,97 @@ if (!$result) {
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        
+        <div class="sticky" id="nav">
+            <ul>
+                <li class="home"><a href="http://engin.umich.edu"><img src="img/mighigan_engineering_25.png" alt="Michigan Engineering" /></a></li>
+                <li class="dmegallery"><a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience Gallery</a><a id="circle" href="http://www.engin.umich.edu/newscenter/dme"></a></li>
+            </ul>
+        </div>  
 
+        <div id="top-header">
+            <div id="top-header-content">
+            	<div id="top-header-logo"></div>
+            	<div id="top-header-subtitle"></div>
+            	<div id="top-header-nav"><span class="color-red">COLLEGE</span> <img src="img/arrow.png" /> <span class="color-red">ABOUT</span> <img src="img/arrow.png" /> <span class="color-red">NEWS</span> <img src="img/arrow.png" /> <span>DIGITAL MULTIMEDIA EXPERIENCE</span></div>
+            </div>
+        </div>
 		<div id="container">
+        	<div class="story-container">
+                <div class="story">
+                    <h1 id="top-title">By Bill Clayton</h1>
+                    <p>On Day One of Engineering 101 on the Princeton campus, not so many years ago, a professor strode into class, threw down his jacket and said to his students, “I just heard about a fantastic new invention. Virtually everyone in the world will want it. It’ll create millions of jobs and improve people’s quality of life. The inventor’s looking for investors. Who wants in?” </p>
+                    <p>Hands shot up. Yes! Yes! Of course we would! The collective look in their eyes said, “Engineering’s gonna make me rich, and I haven’t even pulled my first all-nighter.”</p>
+                    <p>“But,” the professor said, wagging a finger, “this invention will kill a quarter of a million people each year.”</p>
+                </div>
+            </div>
+            <?php
+			$count = 0;
+			?>
+            <div class="question" id="q1">
+            	<div class="question-container">
+                    <div class="question-content">
+                        <p class="what-do-you-think"><img src="img/whatdoyouthink.png" alt="what do you think?" /></p>
+						<?php
+                        // Display the next question or not
+                        $display_next = true;
+                        
+                        // Read first set of question
+                        for ($i=0; $i<3; $i++){
+                            $row = mysql_fetch_row($result);
+                            ?>
+                            <div class="question-div" id="question-div-<?= $count ?>"
+                            <?php
+							if ($display_next){
+								echo 'style="display: block;"';
+							}
+							?>
+                            >
+                                <p class="question-p"><?= $row[2] ?></p>
+                                <p class="question-form">
+                                    <?php
+                                    if (!in_array($row[0], $not_include)){
+                                    ?>
+                                    <form method="POST" id="question-form-<?= $count ?>" action="post_result.php">
+                                        <input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
+                                        <p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
+                                        <input type="hidden" name="set_id" value="<?= $row[1] ?>" />
+                                        <input type="hidden" name="count" value="<?= $count ?>" />
+                                        <input type="submit" name="submit-answer-<?= $count ?>" value="Submit your answer" onclick="submit_answer(<?= $count ?>); return false;" />
+                                    </form>
+                                    <?php
+                                    } else {
+                                        echo '<span>You have answered this question before, <a href="#" onclick="set_result(' . $count . '); return false;">view result</a><br /><br />';
+										if ($count != 0){
+											echo '<a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev question</a> ';
+										}
+										if ($count != 2){
+											echo ' <a href="#" onclick="show_question(' . $count . ', 1); return false;">Next question</a>';
+										}
+										echo "</span>";
+                                    }
+                                    ?>
+                                </p>
+                            </div>
+                            <?php
+							$display_next = false;
+							$count++;
+                        }
+						?>
+                    </div>
+                    
+                    <div class="results" id="result-1" style="display: block;">
+                        <div class="result-choice">
+                            <a href="#" class="one" id="a-0">Question 1</a>
+                            <a href="#" class="two" id="a-1">Question 2</a>
+                            <a href="#" class="three" id="a-2">Question 3</a>
+                        </div>
+                        <div id="chart">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
 			<?php
 			// If there are some questions unanswered, then display the questions
 			//if ($left) {
@@ -98,7 +187,7 @@ if (!$result) {
 			</ul>
             <script>var count_total = <?= $count ?>;</script>
 
-			<div id="results" style="display: block;">
+			<!--<div id="results" style="display: block;">
             	<div id="result-choice">
                 	<a href="#" id="one">Question 1</a>
                 	<a href="#" id="two">Question 2</a>
@@ -107,8 +196,7 @@ if (!$result) {
 				<div id="chart">
                 	
 				</div>
-
-			</div>
+			</div>-->
             <?php
 			//}
 			?>

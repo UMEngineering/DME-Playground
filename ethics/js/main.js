@@ -5,17 +5,17 @@ $(document).ready(function(){
 	$("li.question").first().fadeIn(500);
 
 	display_result(0);
-	$("#results a#one").click(function(e){
+	$(".results a#a-0").click(function(e){
 		e.preventDefault();
 		display_result(0);
 	});
 
-	$("#results a#two").click(function(e){
+	$(".results a#a-1").click(function(e){
 		e.preventDefault();
 		display_result(1);
 	});
 
-	$("#results a#three").click(function(e){
+	$(".results a#a-2").click(function(e){
 		e.preventDefault();
 		display_result(2);
 	});
@@ -32,18 +32,18 @@ function set_result(q_id){
 	console.log(q_id);
 	display_result(q_id);
 	
-	$("#results a#one").unbind();
-	$("#results a#two").unbind();
-	$("#results a#three").unbind();
-	$("#results a#one").click(function(e){
+	$(".results a#a-1").unbind();
+	$(".results a#a-2").unbind();
+	$(".results a#a-3").unbind();
+	$(".results a#a-" + questions[currentSet][0] + "").click(function(e){
 		e.preventDefault();
 		display_result(questions[currentSet][0]);
 	});
-	$("#results a#two").click(function(e){
+	$(".results a#a-" + questions[currentSet][0] + "").click(function(e){
 		e.preventDefault();
 		display_result(questions[currentSet][1]);
 	});
-	$("#results a#three").click(function(e){
+	$(".results a#a-" + questions[currentSet][0] + "").click(function(e){
 		e.preventDefault();
 		if (questions[currentSet].length == 3)
 			display_result(questions[currentSet][2]);
@@ -134,7 +134,22 @@ function display_result(qid){
 		$("#results").show();
 		var sum_per_unit = 280 / sum;
 		if (sum == 0) sum_per_unit = 0;
-		$("#results #bar1").animate({height: sum_per_unit * parseInt($("#results #bar1").attr("class")) + "px"}, 500, "easeOutBounce");
-		$("#results #bar2").animate({height: sum_per_unit * parseInt($("#results #bar2").attr("class")) + "px"}, 500, "easeOutBounce");
+		$(".results #bar1").animate({height: sum_per_unit * parseInt($(".results #bar1").attr("class")) + "px"}, 500, "easeOutBounce");
+		$(".results #bar2").animate({height: sum_per_unit * parseInt($(".results #bar2").attr("class")) + "px"}, 500, "easeOutBounce");
 	});
+}
+
+// Show the next question
+function show_question(this_id, type){
+	if (type == 1) {
+		// Next question
+		$("#question-div-" + this_id).fadeOut(300, function(){
+			$("#question-div-" + (this_id + 1)).fadeIn(300);
+		});
+	} else if (type == 0) {
+		// Previous question
+		$("#question-div-" + this_id).fadeOut(300, function(){
+			$("#question-div-" + (this_id - 1)).fadeIn(300);
+		});
+	}
 }
