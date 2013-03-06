@@ -36,6 +36,10 @@ div#results {
 	right: 10px;
 }
 
+#result-choice a {
+	font-size: 9pt;
+}
+
 #results #chart {
     position: relative;
     border: thin solid #ececec;
@@ -87,8 +91,4 @@ div#results {
 
 body {
     margin: 0;
-}
-
-#three {
-	display: none;
 }

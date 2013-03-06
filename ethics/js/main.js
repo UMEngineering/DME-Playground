@@ -4,6 +4,7 @@ $(document).ready(function(){
 	// $.easing.def = "easeInOutBounce";
 	$("li.question").first().fadeIn(500);
 
+	display_result(0);
 	$("#results a#one").click(function(e){
 		e.preventDefault();
 		display_result(0);
@@ -19,6 +20,45 @@ $(document).ready(function(){
 		display_result(2);
 	});
 });
+
+// Set the result chart to current set of questions
+function set_result(q_id){
+	while (!search_q_id(q_id)) {
+		currentSet++;
+		if (currentSet >= questions.length)
+			currentSet = 0;
+	}
+	console.log(currentSet);
+	console.log(q_id);
+	display_result(q_id);
+	
+	$("#results a#one").unbind();
+	$("#results a#two").unbind();
+	$("#results a#three").unbind();
+	$("#results a#one").click(function(e){
+		e.preventDefault();
+		display_result(questions[currentSet][0]);
+	});
+	$("#results a#two").click(function(e){
+		e.preventDefault();
+		display_result(questions[currentSet][1]);
+	});
+	$("#results a#three").click(function(e){
+		e.preventDefault();
+		if (questions[currentSet].length == 3)
+			display_result(questions[currentSet][2]);
+	});
+}
+
+// Search if the given q_id is in the current set
+function search_q_id(q_id){
+	for (var i=0; i<questions[currentSet].length; i++){
+		if (questions[currentSet][i] == q_id)
+			return true;
+	}
+	
+	return false;
+}
 
 // Submit an answer
 function submit_answer(i){
@@ -73,28 +113,28 @@ function submit_answer(i){
 // Display the result chart for a specific question
 function display_result(qid){
 	// Get the result via Ajax
-	var url = "get_result.php?q_id=" + $('input[name="q_id-' + qid + '"]').attr("value");
+	var url = "get_result.php?q_id=" + (qid+1);
+	//console.log(url);
 	var request = $.getJSON(url, function(result){
 		var numbers = new Array("one", "two", "three");
 		var counter = 0;
 		var sum = 0;
 		$.each(result, function(i, field){
-			//$("#result-choice").append('<a href="#" id="' + numbers[counter] + '">Result ' + numbers[counter] + '</a>');
 			counter++;
 			if ($("#bar"+counter).length > 0){
 				$("#bar"+counter).attr("class", field["count"]);
 				$("#bar"+counter+" span").html(field["count"] + " people");
 			} else {
-				$("#chart").append('<div id="bar' + counter + '" class="' + field["count"] + '"><span>' + field["count"] + ' people' + field["q_id"] + '</span></div>');
+				$("#chart").append('<div id="bar' + counter + '" class="' + field["count"] + '"><span>' + field["count"] + ' people</span></div>');
 			}
 			sum += field["count"];
 		});
 		
 		// Show the result bars
 		$("#results").show();
-		var sum_per_unit = 290 / sum;
+		var sum_per_unit = 280 / sum;
+		if (sum == 0) sum_per_unit = 0;
 		$("#results #bar1").animate({height: sum_per_unit * parseInt($("#results #bar1").attr("class")) + "px"}, 500, "easeOutBounce");
 		$("#results #bar2").animate({height: sum_per_unit * parseInt($("#results #bar2").attr("class")) + "px"}, 500, "easeOutBounce");
-		$("#results #bar3").animate({height: sum_per_unit * parseInt($("#results #bar3").attr("class")) + "px"}, 500, "easeOutBounce");
 	});
 }

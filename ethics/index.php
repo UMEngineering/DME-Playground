@@ -6,60 +6,24 @@ require_once("functions.php");
 $count_result = array();
 $numbers_str = array("one", "two", "three");
 
-// Randomly choose one number set
+// Put questions into array for future use
 $set_questions = array();
 $not_include = array();
 if (isset($_COOKIE["answered"])) {
 	$not_include = unserialize($_COOKIE["answered"]);
 }
-print_r($not_include);
 
-// Decide the client ip address, and skip the questions that already answered.
-/*$user_id = get_userid();
-if ($user_id){
-	$sql = "SELECT DISTINCT set_id FROM ethic_answers WHERE user_id={$user_id}";
-	$result = mysql_query($sql);
-	if (!$result) {
-		die ("Cannot load answer history.");
-	}
-	while($row = mysql_fetch_row($result)){
-		array_push($not_include, $row[0] + 0);
-	}
-	
-	for ($i=1; $i<=6; $i++){
-		if (!in_array($i, $not_include)){
-			array_push($set_questions, $i);
-		}
-	}
-} else {
-	$set_questions = array(1, 2, 3, 4, 5, 6);
-}*/
 for ($i=1; $i<=6; $i++){
 	if (!in_array($i, $not_include)){
 		array_push($set_questions, $i);
 	}
 }
 
-// Randomly choose one set of question not answered yet
-$left = true;
-/*if (count($set_questions) == 0) {
-	$left = false;
-} else {*/
-	$set = rand(0, count($set_questions)-1);
-	$set = $set_questions[$set];
-	$set = 5;
-	
-	//print_r($not_include);
-	//print_r($set_questions);
-	//print("<br />{$set}");
-	
-	//$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions WHERE set_id={$set};";
-	$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions;";
-	$result = mysql_query($sql);
-	if (!$result) {
-		die("ERROR cannot load questions, please contact web administrator.");
-	}
-//}
+$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions;";
+$result = mysql_query($sql);
+if (!$result) {
+	die("ERROR cannot load questions, please contact web administrator.");
+}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -103,7 +67,7 @@ $left = true;
                         <li class="question" id="question-li-<?= $count ?>"
                         <?php
 						if ($display_next){
-							echo 'style="display: block;"';
+							echo 'style="display: list-item;"';
 						}
 						?>
                         >
@@ -121,6 +85,7 @@ $left = true;
                             <?php
 								$display_next = false;
 							} else {
+								echo '<p>You have answered this question before, <a href="#" onclick="set_result(' . $count . '); return false;">view result</a></p>';
 								$display_next = true;
 							}
 							?>
@@ -133,7 +98,7 @@ $left = true;
 			</ul>
             <script>var count_total = <?= $count ?>;</script>
 
-			<div id="results">
+			<div id="results" style="display: block;">
             	<div id="result-choice">
                 	<a href="#" id="one">Question 1</a>
                 	<a href="#" id="two">Question 2</a>
