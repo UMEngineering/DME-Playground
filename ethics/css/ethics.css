@@ -188,6 +188,7 @@ div.question-container {
 	width: 960px;
 	margin: auto;
 	height: 100%;
+	position: relative;
 }
 
 div.question-content {
@@ -195,6 +196,7 @@ div.question-content {
 	height:100%;
 	width: 450px;
 	float: left;
+	overflow: auto;
 }
 
 
@@ -205,7 +207,28 @@ div.question-content p.what-do-you-think img {
 
 div.question-div {
 	display: none;
-	margin: 10px 30px 10px 30px;
+	margin: 10px 30px 30px 30px;
+	color: #ccc;
+	font-weight: 100;
+	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+div.question-div p.question-p {
+	cursor: pointer;
+}
+
+div.question-div.active p.question-p {
+	cursor: default;
+}
+
+div.question-div:hover {
+	color:black;
+}
+
+div.question-div.active {
+    color: black;
+	
 }
 
 div#s1 {
@@ -245,10 +268,14 @@ div.results {
     width: 270px;
     font-size: 13px;
     display: none;
-	float: left;
+	
 	background: white;
-	position: relative;
-	top: 0;
+	
+    position: absolute;
+	
+    bottom: 0;
+    left: 450px;
+    padding: 31px 30px 0;
 }
 
 .results .charts {
@@ -256,7 +283,7 @@ div.results {
     border-bottom: thin solid #ececec;
     width: 260px;
     height: 290px;
-    margin: 20px auto;
+    margin: 0px auto;
 }
 
 .results .bar1 {

@@ -139,13 +139,17 @@ function display_result(qid, chart){
 function show_question(this_id, type){
 	if (type == 1) {
 		// Next question
-		$(".flex-active-slide #question-div-" + this_id).fadeOut(300, function(){
+		//$(".flex-active-slide #question-div-" + this_id).fadeOut(300, function(){
 			$(".flex-active-slide #question-div-" + (this_id + 1)).fadeIn(300);
-		});
+			$(".flex-active-slide #question-div-" + (this_id)).removeClass("active");
+			$(".flex-active-slide #question-div-" + (this_id + 1)).addClass("active");
+
+
+	//	});
 	} else if (type == 0) {
 		// Previous question
-		$(".flex-active-slide #question-div-" + this_id).fadeOut(300, function(){
+	//	$(".flex-active-slide #question-div-" + this_id).fadeOut(300, function(){
 			$(".flex-active-slide #question-div-" + (this_id - 1)).fadeIn(300);
-		});
+	//	});
 	}
 }

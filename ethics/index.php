@@ -100,7 +100,7 @@ if (!$result) {
                                 for ($i=0; $i<3; $i++){
                                     $row = mysql_fetch_row($result);
                                     ?>
-                                    <div class="question-div" id="question-div-<?= $count ?>"
+                                    <div class="question-div active" id="question-div-<?= $count ?>"
                                     <?php
                                     if ($display_next){
                                         echo 'style="display: block;"';
@@ -133,6 +133,7 @@ if (!$result) {
                                             //}
                                             ?>
                                         </p>
+                                        <span class="next"><a href="#">Next question</a></span>
                                     </div>
                                     <?php
                                     $display_next = false;
