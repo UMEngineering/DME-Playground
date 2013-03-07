@@ -10,8 +10,9 @@
 }
 .promoHolderProfiles img {
     display: block;
+    max-height: 200px;
 }
-#rightPortlets .promoProfiles {
+.promoProfiles {
     background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
     background-image: -moz-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
     background-image: -o-linear-gradient(45deg,rgba(255, 255, 255, .65), white);
