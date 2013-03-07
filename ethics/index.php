@@ -63,7 +63,7 @@ if (!$result) {
             <div id="top-header-content">
             	<div id="top-header-logo"></div>
             	<div id="top-header-subtitle"></div>
-            	<div id="top-header-nav"><span class="color-red">COLLEGE</span> <img src="img/arrow.png" /> <span class="color-red">ABOUT</span> <img src="img/arrow.png" /> <span class="color-red">NEWS</span> <img src="img/arrow.png" /> <span>DIGITAL MULTIMEDIA EXPERIENCE</span></div>
+            	<div id="top-header-nav"><a href="http://www.engin.umich.edu/" target=_blank><span class="color-red">COLLEGE</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/about" target=_blank><span class="color-red">ABOUT</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news" target=_blank><span class="color-red">NEWS</span></a> <img src="img/arrow.png" /> <span>DIGITAL MULTIMEDIA EXPERIENCE</span></div>
             </div>
         </div>
 		<div id="container">
@@ -110,7 +110,7 @@ if (!$result) {
                                         <p class="question-p"><?= $i+1 ?>. <?= $row[2] ?></p>
                                         <p class="question-form">
                                             <?php
-                                            if (!in_array($row[0], $not_include)){
+                                            //if (!in_array($row[0], $not_include)){
                                             ?>
                                             <form method="POST" id="question-form-<?= $count ?>" action="post_result.php">
                                                 <input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
@@ -120,16 +120,17 @@ if (!$result) {
                                                 <input type="submit" name="submit-answer-<?= $count ?>" value="Submit your answer" onclick="submit_answer(<?= $count ?>); return false;" />
                                             </form>
                                             <?php
-                                            } else {
-                                                echo '<span>You have answered this question before, <a href="#" onclick="set_result(' . $count . '); return false;">view result</a><br /><br />';
-                                                if ($count%3 != 0){
+                                            //} else {
+                                                //echo '<span>You have answered this question before, ';
+                                                echo '<a href="#" onclick="set_result(' . $count . '); return false;">view result</a><br /><br />';
+												if ($count%3 != 0){
                                                     echo '<a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev question</a> ';
                                                 }
                                                 if ($count%3 != 2){
                                                     echo ' <a href="#" onclick="show_question(' . $count . ', 1); return false;">Next question</a>';
                                                 }
                                                 echo "</span>";
-                                            }
+                                            //}
                                             ?>
                                         </p>
                                     </div>
@@ -199,7 +200,7 @@ if (!$result) {
                                         <p class="question-p"><?= $i+1 ?>. <?= $row[2] ?></p>
                                         <p class="question-form">
                                             <?php
-                                            if (!in_array($row[0], $not_include)){
+                                            //if (!in_array($row[0], $not_include)){
                                             ?>
                                             <form method="POST" id="question-form-<?= $count ?>" action="post_result.php">
                                                 <input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
@@ -209,16 +210,17 @@ if (!$result) {
                                                 <input type="submit" name="submit-answer-<?= $count ?>" value="Submit your answer" onclick="submit_answer(<?= $count ?>); return false;" />
                                             </form>
                                             <?php
-                                            } else {
-                                                echo '<span>You have answered this question before, <a href="#" onclick="set_result(' . $count . '); return false;">view result</a><br /><br />';
-                                                if ($count%2 != 0){
+                                            //} else {
+                                                //echo '<span>You have answered this question before, ';
+                                                echo '<a href="#" onclick="set_result(' . $count . '); return false;">view result</a><br /><br />';
+                                                if ($count%2 != 1){
                                                     echo '<a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev question</a> ';
                                                 }
-                                                if ($count%2 != 1){
+                                                if ($count%2 != 0){
                                                     echo ' <a href="#" onclick="show_question(' . $count . ', 1); return false;">Next question</a>';
                                                 }
                                                 echo "</span>";
-                                            }
+                                            //}
                                             ?>
                                         </p>
                                     </div>

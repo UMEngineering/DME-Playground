@@ -126,7 +126,8 @@ function display_result(qid, chart){
 		});
 		
 		// Show the result bars
-		$(".results").show();
+		//$(".results").show();
+		$("#result-" + chart).show();
 		var sum_per_unit = 280 / sum;
 		if (sum == 0) sum_per_unit = 0;
 		$(".flex-active-slide #result-" + chart + " .bar1").animate({height: sum_per_unit * parseInt($(".flex-active-slide #result-" + chart + " .bar1").attr("id")) + "px"}, 500, "easeOutBounce");

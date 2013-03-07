@@ -10,6 +10,7 @@ body {
     padding: 40px;
 	max-width: 1198px;*/
 	margin: auto;
+	overflow-x: hidden;
 }
 
 .flex-control-nav {
@@ -47,6 +48,10 @@ a#circle {
 #holder {
     height: 260px;
 	
+}
+
+#top-header-nav a {
+	text-decoration: none;
 }
 
 .sticky ul {
