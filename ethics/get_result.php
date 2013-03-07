@@ -1,7 +1,9 @@
 <?php
 require_once("../../db.php");
 require_once("functions.php");
-
+if (!extension_loaded('json')) {
+	dl('json.so');
+}
 $result = array();
 $one_result = array();
 $one_result["q_id"] = $_GET["q_id"] + 0;
@@ -14,5 +16,5 @@ $one_result["q_id"] = $_GET["q_id"] + 0;
 $one_result["count"] = $count[1];
 array_push($result, $one_result);
 
-echo json_encode($result);
+print (json_encode($result));
 ?>

@@ -7,9 +7,13 @@ body {
     
     border-top: thin solid #ececec;
     box-shadow: 0 0 30px rgba(0,0,0,.07);
-    padding: 40px;*/
-	max-width: 1198px;
+    padding: 40px;
+	max-width: 1198px;*/
 	margin: auto;
+}
+
+.flex-control-nav {
+	display: none;
 }
 
 .sticky {
@@ -171,7 +175,7 @@ div.story p {
 }
 
 div.question {
-	height: 458px;
+	height: 600px;
 	margin: auto;
 }
 
@@ -184,12 +188,14 @@ div.question-container {
 div.question-content {
 	background: white;
 	height:100%;
-	width: 400px;
+	width: 450px;
 	float: left;
 }
 
-div.question-content p.what-do-you-think {
-	text-align: center;
+
+div.question-content p.what-do-you-think img {
+	width: 281px;
+	margin: auto;
 }
 
 div.question-div {
@@ -197,28 +203,58 @@ div.question-div {
 	margin: 10px 30px 10px 30px;
 }
 
-div#q1 {
-	background: url(../img/q1.jpg) no-repeat center;
+div#s1 {
+	background: url(../img/q_img/s1.jpg) no-repeat center;
+	background-size: 100%;
+}
+
+div#s2 {
+	background: url(../img/q_img/s2.jpg) no-repeat center;
+	background-size: 100%;
+}
+
+div#s3 {
+	background: url(../img/q_img/s3.jpg) no-repeat center;
+	background-size: 100%;
+}
+
+div#s4 {
+	background: url(../img/q_img/s4.jpg) no-repeat center;
+	height: 680px;
+	background-size: 100%;
+}
+
+div#s5 {
+	background: url(../img/q_img/s5.jpg) no-repeat center;
+	height: 680px;
+	background-size: 100%;
+}
+
+div#s6 {
+	background: url(../img/q_img/s6.jpg) no-repeat center;
+	height: 680px;
+	background-size: 100%;
 }
 
 div.results {
     width: 270px;
     font-size: 13px;
-    /*display: none;*/
+    display: none;
 	float: left;
 	background: white;
-	margin: 20px;
+	position: relative;
+	top: 0;
 }
 
-.results #chart {
+.results .charts {
     position: relative;
-    border: thin solid #ececec;
+    border-bottom: thin solid #ececec;
     width: 260px;
     height: 290px;
     margin: 20px auto;
 }
 
-.results #chart #bar1 {
+.results .bar1 {
     position: absolute;
     bottom: 0;
     left: 33px;
@@ -228,21 +264,10 @@ div.results {
     height: 0px;
 }
 
-.results #chart #bar2 {
+.results .bar2 {
 	position: absolute;
     bottom: 0;
     left: 144px;
-    border: thin solid #488DB3;
-    width: 80px;
-    background: #488DB3;
-    
-	height: 0px;
-}
-
-.results #chart #bar3 {
-	position: absolute;
-    bottom: 0;
-    left: 280px;
     border: thin solid #488DB3;
     width: 80px;
     background: #488DB3;
