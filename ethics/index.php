@@ -27,7 +27,7 @@ for ($i=1; $i<=6; $i++){
 	}
 }
 
-$sql = "SELECT q_id, set_id, question, answer1, answer2 FROM ethic_questions;";
+$sql = "SELECT q_id, set_id, question, answer1, answer2, shortanswer1, shortanswer2 FROM ethic_questions;";
 $result = mysql_query($sql);
 if (!$result) {
 	die("ERROR cannot load questions, please contact web administrator.");
@@ -164,7 +164,7 @@ if (!$result) {
                                     ?>
                                 </div>
                                 <div id="chart-<?= $x ?>" class="charts">
-                                    
+                                	
                                 </div>
                             </div>
                         </div>
