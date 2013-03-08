@@ -18,7 +18,7 @@ $(document).ready(function(){
 		
 		display_result($this.data()["q"], $this.data()["x"]);
 	});
-
+	console.log(short_ans);
 });
 
 // Set the result chart to current set of questions
@@ -73,7 +73,7 @@ function submit_answer(i){
 		});
 		//$(".flex-active-slide #question-li-" + (i+1)).fadeIn(500);
 		display_result(i, currentSet);
-		console.log(currentSet + " " + i + " " + questions[currentSet][questions[currentSet].length-1]);
+		//console.log(currentSet + " " + i + " " + questions[currentSet][questions[currentSet].length-1]);
 		if (questions[currentSet][questions[currentSet].length-1] > i) {
 			//show_question(i, 1);
 		}
@@ -103,7 +103,7 @@ function display_result(qid, chart){
 		$("#result-" + chart).fadeIn(500);
 
 		$("#result-" + chart + " .q").removeClass("active");
-		console.log("#result-" + chart + " .smallq"+qid);
+		//console.log("#result-" + chart + " .smallq"+qid);
 		$("#result-" + chart + " #aspan-"+qid).addClass("active");
 
 		// Active and deactive the question content
@@ -112,7 +112,20 @@ function display_result(qid, chart){
 			$("div#s" + (chart+1) + " .question-div").removeClass("active");
 			$this.addClass("active");
 		}
-
+		
+		// Change the short answer text if necessary
+		console.log(short_ans[qid][0] + " " + short_ans[qid][1]);
+		if (short_ans[qid][0] != "") {
+			$("#result-" + chart + " .answer-text1").text(short_ans[qid][0]);
+		} else {
+			$("#result-" + chart + " .answer-text1").text("Yes");
+		}
+		if (short_ans[qid][1] != "") {
+			$("#result-" + chart + " .answer-text2").text(short_ans[qid][1]);
+		} else {
+			$("#result-" + chart + " .answer-text2").text("No");
+		}
+		
 		var sum_per_unit = 280 / sum;
 		if (sum == 0) sum_per_unit = 0;
 		$(".flex-active-slide #result-" + chart + " .bar1").animate({height: sum_per_unit * parseInt($(".flex-active-slide #result-" + chart + " .bar1").attr("id")) + "px"}, 500, "easeOutBounce");

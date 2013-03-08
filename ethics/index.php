@@ -32,6 +32,9 @@ $result = mysql_query($sql);
 if (!$result) {
 	die("ERROR cannot load questions, please contact web administrator.");
 }
+
+// Save for short answers
+$short_ans = array();
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -56,6 +59,9 @@ if (!$result) {
         <script src="js/g.raphael-min.js"></script>
         <script type="text/javascript" src="//use.typekit.net/xyr4htp.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script>
+		var short_ans = new Array();
+		</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -111,7 +117,13 @@ if (!$result) {
                                 // Read first set of question
                                 for ($i=0; $i<3; $i++){
                                     $row = mysql_fetch_row($result);
+									
+									// Save the short answers
+									array_push($short_ans, array($row[5], $row[6]));
                                     ?>
+                                    <script>
+                                    short_ans.push(new Array("<?= $row[5] ?>", "<?= $row[6] ?>"));
+                                    </script>
                                     <div class="question-div active" id="question-div-<?= $count ?>"
                                     <?php
                                     if ($display_next){
@@ -166,6 +178,8 @@ if (!$result) {
                                 <div id="chart-<?= $x ?>" class="charts">
                                 	
                                 </div>
+                                <div class="answer-text answer-text1">Yes</div>
+                                <div class="answer-text answer-text2">No</div>
                             </div>
                         </div>
                     </div>
@@ -257,6 +271,8 @@ if (!$result) {
                                 <div id="chart-<?= $x ?>" class="charts">
                                     
                                 </div>
+                                <div class="answer-text answer-text1">Yes</div>
+                                <div class="answer-text answer-text2">No</div>
                             </div>
                         </div>
                     </div>
