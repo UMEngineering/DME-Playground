@@ -79,7 +79,7 @@ $short_ans = array();
             <div id="top-header-content">
             	<div id="top-header-logo"></div>
             	<div id="top-header-subtitle"></div>
-            	<div id="top-header-nav"><a href="http://www.engin.umich.edu/" target=_blank><span class="color-red">COLLEGE</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/about" target=_blank><span class="color-red">ABOUT</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news" target=_blank><span class="color-red">NEWS</span></a> <img src="img/arrow.png" /> <span>DIGITAL MULTIMEDIA EXPERIENCE</span></div>
+            	<div id="top-header-nav"><a href="http://www.engin.umich.edu/" target=_blank><span class="color-red">COLLEGE</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/about" target=_blank><span class="color-red">ABOUT</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news" target=_blank><span class="color-red">NEWS</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/newscenter/dme"><span class="color-red">DME</span></a><img src="img/arrow.png" /><span>ETHICAL TECH</span></div>
             </div>
         </div>
 		<div id="container">
@@ -149,10 +149,10 @@ $short_ans = array();
                                                 //echo '<span>You have answered this question before, ';
                                                 echo '<a class="viewresult" href="#" onclick="set_result(' . $count . '); return false;">view result</a>';
 												if ($count%3 != 0){
-                                                    echo '<!--a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev question</a--> ';
+                                                    echo '<!--a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev </a--> ';
                                                 }
                                                 if ($count%3 != 2){
-                                                    echo '<span class="next"><a href="#" onclick="show_question(' . $count . ', 1); return false;">Next question</a></span>';
+                                                    echo '<span class="next"><a href="#" onclick="show_question(' . $count . ', 1); return false;">Next part</a></span>';
                                                 }
                                                 echo "</span>";
                                             //}
@@ -245,7 +245,7 @@ $short_ans = array();
                                                     echo '<!--a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev question</a--> ';
                                                 }
                                                 if ($count%2 != 0){
-                                                    echo '<span class="next"><a href="#" onclick="show_question(' . $count . ', 1); return false;">Next question</a></span>';
+                                                    echo '<span class="next"><a href="#" onclick="show_question(' . $count . ', 1); return false;">Next part</a></span>';
                                                 }
                                                 echo "</span>";
                                             //}

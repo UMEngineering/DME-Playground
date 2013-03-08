@@ -116,8 +116,13 @@ li.dmegallery {
 }
 
 div#top-header {
+<<<<<<< HEAD
 	height: 396px;
 	background: url(../img/top-img.jpg) #9F9F9F 50% 9px fixed repeat-x;;
+=======
+	height: 388px;
+	background: url(../img/top-img.jpg) #9F9F9F 50% 0px fixed repeat-x;;
+>>>>>>> 4:08
 }
 
 div#top-header div#top-header-content {
@@ -148,7 +153,7 @@ div#top-header-content div#top-header-nav {
 	width: 600px;
 	
 	position: relative;
-	top: 196px;
+	top: 193px;
 }
 
 div#top-header-nav {
@@ -360,6 +365,17 @@ div#s6 {
 	background: url(../img/q_img/s6.jpg) no-repeat center;
 	height: 680px;
 	background-size: cover;
+<<<<<<< HEAD
+=======
+}
+
+div.bar1 span, div.bar2 span {
+    width: 100%;
+    color: white;
+	
+    text-align: center;
+    display: inline-block;
+>>>>>>> 4:08
 }
 
 div.results {
