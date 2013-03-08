@@ -111,7 +111,7 @@ if (!$result) {
                                     }
                                     ?>
                                     >
-                                        <p class="question-p" data-i="<?= $i?>" data-x="<?= $x?>"><?= $i+1 ?>. <?= $row[2] ?></p>
+                                        <p class="question-p" data-q="<?= $count ?>" data-i="<?= $i?>" data-x="<?= $x?>"><?= $i+1 ?>. <?= $row[2] ?></p>
                                         <p class="question-form">
                                             <?php
                                             //if (!in_array($row[0], $not_include)){
@@ -202,7 +202,7 @@ if (!$result) {
                                     }
                                     ?>
                                     >
-                                        <p class="question-p" data-i="<?= $i?>" data-x="<?= $x?>"><?= $i+1 ?>. <?= $row[2] ?></p>
+                                        <p class="question-p" data-q="<?= $count ?>" data-i="<?= $i?>" data-x="<?= $x?>"><?= $i+1 ?>. <?= $row[2] ?></p>
                                         <p class="question-form">
                                             <?php
                                             //if (!in_array($row[0], $not_include)){
@@ -218,11 +218,11 @@ if (!$result) {
                                             <?php
                                             //} else {
                                                 //echo '<span>You have answered this question before, ';
-                                                echo '<a class="viewresult" href="#" onclick="set_result(' . $count . '); return false;">view result</a><br /><br />';
-                                                if ($count%3 != 0){
+                                                echo '<a class="viewresult" href="#" onclick="set_result(' . $count . '); return false;">view result</a>';
+                                                if ($count%2 != 1){
                                                     echo '<!--a href="#" onclick="show_question(' . $count . ', 0); return false;">Prev question</a--> ';
                                                 }
-                                                if ($count%3 != 2){
+                                                if ($count%2 != 0){
                                                     echo '<span class="next"><a href="#" onclick="show_question(' . $count . ', 1); return false;">Next question</a></span>';
                                                 }
                                                 echo "</span>";
@@ -241,7 +241,7 @@ if (!$result) {
                                     <?php
                                     for ($i=0; $i<2; $i++) {
                                     ?>
-                                    <span class="q" id="aspan-<?= $i+($count-3) ?>" onclick="display_result(<?= $i+($count-3) ?>, <?= $x ?>); return false;">Q<?= $i+1 ?></span>
+                                    <span class="q smallq<?= $i?>" id="aspan-<?= $i+($count-2) ?>" onclick="display_result(<?= $i+($count-2) ?>, <?= $x ?>); return false;">Q<?= $i+1 ?></span>
                                     <?php
                                     }
                                     ?>

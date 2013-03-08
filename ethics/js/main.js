@@ -16,7 +16,7 @@ $(document).ready(function(){
 			$this.parent().addClass("active");
 		}*/
 		
-		display_result($this.data()["i"], $this.data()["x"]);
+		display_result($this.data()["q"], $this.data()["x"]);
 	});
 
 });
