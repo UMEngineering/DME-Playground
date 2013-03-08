@@ -289,6 +289,34 @@ $short_ans = array();
                     <p>It takes years to build a reputation – and five minutes to ruin it. One choice can be a life-and-death decision for engineers. That’s something they can learn on day one of Engineering 101; it’s something they must remember every day after.</p>
                 </div>
             </div>
+		<footer>
+   
+		    <div id="footercontainer">
+		        <div id="breadcrumbs"><a href="http://engin.umich.edu">Michigan Engineering</a> &rsaquo; <a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience</a> &rsaquo; Mighty Mobile</div>
+		        <div id="credits">
+		        	<ul>
+		            	<li>Bill Clayton, Writer</li>
+		                <li>Ben Collins, Web Designer</li>
+		                <li>Haoyi Yang, Web Designer</li>
+		                <li>Mira Lancaster, Senior Graphic Designer</li>
+		                <li>Dan Kim, Executive Director</li>
+		            </ul>
+		            <ul id="photocredits">
+		            	<li>Heatsink image courtesy of Wenisch Lab</li>
+		                <li>Centip3De image courtesy of Mudge Lab</li>
+		            </ul>
+
+		            <span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_pinterest_large' displayText='Pinterest'></span>
+					<span class='st_digg_large' displayText='Digg'></span>
+					<span class='st_stumbleupon_large' displayText='StumbleUpon'></span><br />
+					<!-- <div class="fb-like" data-send="false" data-width="450" data-show-faces="true"></div> -->
+		        </div>
+		    </div>  
+		  
+		  </footer>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>

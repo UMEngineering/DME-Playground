@@ -539,3 +539,65 @@ div.answer-text {
 	text-align: center;
 	float: left;
 }
+
+footer {
+	display: block;
+	margin: 0px 0 0 0;
+	width: 100%;
+	height: 440px;
+	position: relative;
+	clear: both;
+	color: #aaa;
+	background: url(../img/foot.png) #333 bottom right repeat-x;	
+	box-shadow: 0 0 10px black;
+	-webkit-box-shadow: 0 0 10px black;
+}
+
+div#footercontainer {
+	background: url("../img/footer_img.jpg") repeat-x scroll right bottom #333;
+    display: block;
+    
+	height: 440px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 960px;
+	font-size: 14px;
+}
+
+footer a, footer a:visited {
+	color: white;	
+	text-decoration: none;
+}
+
+#breadcrumbs {
+	display: block;
+    margin-top: 0;
+    
+	padding: 40px 0 0;
+    position: relative;	
+}
+
+footer #credits {
+	display: block;	
+	margin: 0;
+}
+
+#credits ul {
+	display: block;	
+	padding: 0;
+	font-size: .85em;
+	font-weight: 100;
+	margin: 1em 0;
+}
+
+#credits ul li {
+    list-style: none;
+		
+    margin: 0;
+    padding: 0;
+}
+
+#credits ul#photocredits {
+	display: block;
+}	
