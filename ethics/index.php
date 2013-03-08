@@ -10,6 +10,12 @@ if (!extension_loaded('gd'))
   }
 }
 
+$numlet = array(
+    1 => 'a',
+    2 => 'b',
+    3 => 'c',
+);
+
 // Some global variables
 $count_result = array();
 $numbers_str = array("one", "two", "three");
@@ -60,8 +66,10 @@ $short_ans = array();
         <script type="text/javascript" src="//use.typekit.net/xyr4htp.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script>
-		var short_ans = new Array();
+		  var short_ans = new Array();
 		</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "39723eac-eec9-4aea-a4c7-aa9cb890e47a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -86,6 +94,14 @@ $short_ans = array();
         	<div class="story-container">
                 <div class="story">
                     <h1 id="top-title">By Bill Clayton</h1>
+                    <div id="share">
+                        <span class='st_googleplus_large' displayText='Google +'></span>
+                        <span class='st_facebook_large' displayText='Facebook'></span>
+                        <span class='st_twitter_large' displayText='Tweet'></span>
+                        <span class='st_pinterest_large' displayText='Pinterest'></span>
+                        <span class='st_reddit_large' displayText='Reddit'></span>
+                        <span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+                    </div>
                     <p>On Day One of Engineering 101 on the Princeton campus, not so many years ago, a professor strode into class, threw down his jacket and said to his students, “I just heard about a fantastic new invention. Virtually everyone in the world will want it. It’ll create millions of jobs and improve people’s quality of life. The inventor’s looking for investors. Who wants in?” </p>
                     <p class="pullquote">Engineers do things of consequence, sometime positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible.</p>
 
@@ -131,7 +147,7 @@ $short_ans = array();
                                     }
                                     ?>
                                     >
-                                        <p class="question-p" data-q="<?= $count ?>" data-i="<?= $i?>" data-x="<?= $x?>"><?= $i+1 ?>. <?= $row[2] ?></p>
+                                        <p class="question-p" data-q="<?= $count ?>" data-i="<?= $i?>" data-x="<?= $x?>"><strong class="color-red"><?= $numlet[$i+1] ?></strong>. <?= $row[2] ?></p>
                                         <p class="question-form">
                                             <?php
                                             //if (!in_array($row[0], $not_include)){
@@ -170,7 +186,7 @@ $short_ans = array();
                                     <?php
                                     for ($i=0; $i<3; $i++) {
                                     ?>
-                                    <span class="q smallq<?= $i?>" id="aspan-<?= $i+($count-3) ?>" onclick="display_result(<?= $i+($count-3) ?>, <?= $x ?>); return false;">Q<?= $i+1 ?></span>
+                                    <span class="q smallq<?= $i?>" id="aspan-<?= $i+($count-3) ?>" onclick="display_result(<?= $i+($count-3) ?>, <?= $x ?>); return false;"><?= $numlet[$i+1] ?></span>
                                     <?php
                                     }
                                     ?>
@@ -224,7 +240,7 @@ $short_ans = array();
                                     }
                                     ?>
                                     >
-                                        <p class="question-p" data-q="<?= $count ?>" data-i="<?= $i?>" data-x="<?= $x?>"><?= $i+1 ?>. <?= $row[2] ?></p>
+                                        <p class="question-p" data-q="<?= $count ?>" data-i="<?= $i?>" data-x="<?= $x?>"><strong class="color-red"><?= $numlet[$i+1] ?></strong>. <?= $row[2] ?></p>
                                         <p class="question-form">
                                             <?php
                                             //if (!in_array($row[0], $not_include)){
@@ -263,7 +279,7 @@ $short_ans = array();
                                     <?php
                                     for ($i=0; $i<2; $i++) {
                                     ?>
-                                    <span class="q smallq<?= $i?>" id="aspan-<?= $i+($count-2) ?>" onclick="display_result(<?= $i+($count-2) ?>, <?= $x ?>); return false;">Q<?= $i+1 ?></span>
+                                    <span class="q smallq<?= $i?>" id="aspan-<?= $i+($count-2) ?>" onclick="display_result(<?= $i+($count-2) ?>, <?= $x ?>); return false;"><?= $numlet[$i+1] ?></span>
                                     <?php
                                     }
                                     ?>

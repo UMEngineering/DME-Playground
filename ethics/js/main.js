@@ -89,12 +89,14 @@ function display_result(qid, chart){
 		var counter = 0;
 		var sum = 0;
 		$.each(result, function(i, field){
+			var ppl = (field["count"] == 1) ? " person" : " people";
 			counter++;
 			if ($(".flex-active-slide #result-" + chart + " .bar"+counter).length > 0){
 				$(".flex-active-slide #result-" + chart + " .bar"+counter).attr("id", field["count"]);
-				$(".flex-active-slide #result-" + chart + " .bar"+counter+" span").html(field["count"] + " people");
+				console.log("Field count", field["count"])
+				if (field["count"] != 0) { $(".flex-active-slide #result-" + chart + " .bar"+counter+" span").html(field["count"] + ppl); }
 			} else {
-				$(".flex-active-slide #chart-" + chart).append('<div class="bar' + counter + '" id="' + field["count"] + '"><span>' + field["count"] + ' people</span></div>');
+				if (field["count"] != 0) {$(".flex-active-slide #chart-" + chart).append('<div class="bar' + counter + '" id="' + field["count"] + '"><span>' + field["count"] + ppl + '</span></div>'); }
 			}
 			sum += field["count"];
 		});

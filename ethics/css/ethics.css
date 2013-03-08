@@ -118,10 +118,11 @@ li.dmegallery {
 div#top-header {
 <<<<<<< HEAD
 	height: 396px;
-	background: url(../img/top-img.jpg) #9F9F9F 50% 9px fixed repeat-x;;
+	;
 =======
 	height: 388px;
-	background: url(../img/top-img.jpg) #9F9F9F 50% 0px fixed repeat-x;;
+	
+background: url(../img/top-img.jpg) #E7E7E7 50% 0px fixed repeat-x;;
 >>>>>>> 4:08
 ;
 height: 387px;
@@ -171,7 +172,7 @@ div#top-header-nav img {
 	margin: 0 3px 3px 3px;
 }
 
-div#top-header-nav .color-red {
+.color-red, div#top-header-nav span.color-red {
 	color: #ea4c37;
 }
 
@@ -286,12 +287,17 @@ div.question-div.active {
 }
 
 .result-choice .q {
-    -webkit-transition: all 1s ease;
-    color: #EB4C37;	
+    -webkit-transition: all .25s ease;
+    color: white;	
     font-weight: bold;
     display: block;
     float: left;
     margin: 0 10px;
+    border: thin solid #BC3D2C;
+    background: #EB4C37;
+    height: 9px;
+    padding: 6px;
+    line-height: 10px;
     opacity: .4;
 }
 
@@ -436,10 +442,11 @@ div.results {
 
 .results .result-choice {
 	text-align: center;
-	overflow: auto;
+	overflow: visible;
 	width: 132px;
 	margin: 0 auto 16px;
 	font-size: 17px;
+	height: 23px;
 }
 
 
@@ -540,6 +547,9 @@ div.answer-text {
 	float: left;
 }
 
+.typekit-badge {
+    display: none !important;
+}
 footer {
 	display: block;
 	margin: 0px 0 0 0;
