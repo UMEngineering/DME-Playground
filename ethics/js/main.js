@@ -96,6 +96,11 @@ function display_result(qid, chart){
 		
 		// Show the result bars
 		$("#result-" + chart).show();
+
+		$(".result-choice .q").removeClass("active");
+		$(".result-choice .smallq"+qid).addClass("active");
+
+
 		var sum_per_unit = 280 / sum;
 		if (sum == 0) sum_per_unit = 0;
 		$(".flex-active-slide #result-" + chart + " .bar1").animate({height: sum_per_unit * parseInt($(".flex-active-slide #result-" + chart + " .bar1").attr("id")) + "px"}, 500, "easeOutBounce");

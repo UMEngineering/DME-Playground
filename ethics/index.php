@@ -91,7 +91,7 @@ if (!$result) {
                     <div class="question" id="s<?= $x+1 ?>">
                         <div class="question-container">
                             <div class="question-content">
-                                <p class="what-do-you-think"><img src="img/enginex.png" alt="what do you think?" /></p>
+                                <p class="what-do-you-think"><img class="q" src="img/q<?= $x?>.png" alt="q<?= $x?>" /><img class="wdyt" src="img/ethicsex.png" alt="what do you think?" /></p>
                                 <?php
                                 // Display the next question or not
                                 $display_next = true;
@@ -114,11 +114,11 @@ if (!$result) {
                                             ?>
                                             <form method="POST" id="question-form-<?= $count ?>" action="post_result.php">
                                                 <input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
-                                                <p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
+                                                <p class="yesno"><input type="radio" name="answer_<?= $count ?>" value="0" /><?= $row[3] ?><br /><input type="radio" name="answer_<?= $count ?>" value="1" /><?= $row[4] ?></p>
                                                 <input type="hidden" name="set_id" value="<?= $row[1] ?>" />
                                                 <input type="hidden" name="count" value="<?= $count ?>" />
                                                 <!--input type="submit" name="submit-answer-<?= $count ?>" value="Submit your answer" onclick="submit_answer(<?= $count ?>); return false;" /-->
-                                                <a href="#" onclick="submit_answer(<?= $count ?>); return false;">Submit answer</a>
+                                                <a href="#" onclick="submit_answer(<?= $count ?>); return false;" class="submitanswer" >Submit answer</a>
                                             </form>
                                             <?php
                                             //} else {
@@ -142,15 +142,15 @@ if (!$result) {
                                 ?>
                             </div>
                             <div class="results" id="result-<?= $x ?>">
-                                <!--div class="result-choice">
+                                <div class="result-choice">
                                     <?php
                                     for ($i=0; $i<3; $i++) {
                                     ?>
-                                    <a href="#" id="a-<?= $i+($count-3) ?>" onclick="display_result(<?= $i+($count-3) ?>, <?= $x ?>); return false;">Question <?= $i+1 ?></a>
+                                    <span class="q smallq<?= $i?>">Q<?= $i+1 ?></span>
                                     <?php
                                     }
                                     ?>
-                                </div-->
+                                </div>
                                 <div id="chart-<?= $x ?>" class="charts">
                                     
                                 </div>
@@ -182,7 +182,7 @@ if (!$result) {
                     <div class="question" id="s<?= $x+1 ?>">
                         <div class="question-container">
                             <div class="question-content">
-                                <p class="what-do-you-think"><img src="img/whatdoyouthink.png" alt="what do you think?" /></p>
+                                <p class="what-do-you-think"><img class="q" src="img/q<?= $x?>.png" alt="q<?= $x?>" /><img class="wdyt" src="img/ethicsex.png" alt="what do you think?" /></p>
                                 <?php
                                 // Display the next question or not
                                 $display_next = true;
@@ -205,11 +205,11 @@ if (!$result) {
                                             ?>
                                             <form method="POST" id="question-form-<?= $count ?>" action="post_result.php">
                                                 <input type="hidden" name="q_id-<?= $count ?>" value="<?= $row[0] ?>" />
-                                                <p><?= $row[3] ?><input type="radio" name="answer_<?= $count ?>" value="0" /> <?= $row[4] ?><input type="radio" name="answer_<?= $count ?>" value="1" /></p>
+                                                <p class="yesno"><input type="radio" name="answer_<?= $count ?>" value="0" /><?= $row[3] ?><br /><input type="radio" name="answer_<?= $count ?>" value="1" /><?= $row[4] ?></p>
                                                 <input type="hidden" name="set_id" value="<?= $row[1] ?>" />
                                                 <input type="hidden" name="count" value="<?= $count ?>" />
                                                 <!--input type="submit" name="submit-answer-<?= $count ?>" value="Submit your answer" onclick="submit_answer(<?= $count ?>); return false;" /-->
-                                                <a href="#" onclick="submit_answer(<?= $count ?>); return false;">Submit answer</a>
+                                                <a href="#" onclick="submit_answer(<?= $count ?>); return false;" class="submitanswer">Submit answer</a>
                                             </form>
                                             <?php
                                             //} else {
@@ -233,15 +233,15 @@ if (!$result) {
                                 ?>
                             </div>
                             <div class="results" id="result-<?= $x ?>">
-                                <!--div class="result-choice">
+                                <div class="result-choice">
                                     <?php
                                     for ($i=0; $i<2; $i++) {
                                     ?>
-                                    <a href="#" id="a-<?= $i+($count-2) ?>" onclick="display_result(<?= $i+($count-2) ?>, <?= $x ?>); return false;">Question <?= $i+1 ?></a>
+                                    <span class="q">Q<?= $i+1 ?></span>
                                     <?php
                                     }
                                     ?>
-                                </div-->
+                                </div>
                                 <div id="chart-<?= $x ?>" class="charts">
                                     
                                 </div>

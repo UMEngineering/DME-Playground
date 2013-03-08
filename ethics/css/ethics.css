@@ -192,6 +192,7 @@ div.question-container {
 }
 
 div.question-content {
+	position: relative;
 	background: white;
 	height:100%;
 	width: 450px;
@@ -199,13 +200,24 @@ div.question-content {
 	overflow: scroll;
 }
 
+p.what-do-you-think {
+}
 
-div.question-content p.what-do-you-think img {
-	width: 281px;
-	margin: auto;
+div.question-content p.what-do-you-think img.wdyt {
+	width: 206px;
+	margin: 60px auto;
+}
+
+div.question-content p.what-do-you-think img.q {
+	width: auto;
+	left: 50%;
+	margin-left: -71px;
+	top: 15px;
+	position: absolute;
 }
 
 div.question-div {
+	position: relative;
 	display: none;
 	margin: 10px 30px 30px 30px;
 	color: #ccc;
@@ -231,8 +243,47 @@ div.question-div.active {
     color: black;	
 }
 
+.result-choice .q {
+    -webkit-transition: all 1s ease;
+    color: #EB4C37;	
+    font-weight: bold;
+    display: block;
+    float: left;
+    margin: 0 10px;
+    opacity: .4;
+}
+
+.result-choice .q.active {
+    opacity: 1;
+	
+}
+
+form {
+	position: relative;
+	min-height: 100px;
+}
+
 span.next {
-	display:none;
+	position: absolute;
+	width: 84px;
+	display: none;
+}
+
+span.next a {
+	font-size: .8em;
+	position: absolute;
+}
+
+a.submitanswer {
+    font-size: .8em;
+    position: absolute;	
+    top: 50px;
+    z-index: 100;
+}
+
+p.yesno {
+    margin: 0 0 5px;
+    position: absolute;
 }
 
 a.viewresult {
@@ -326,6 +377,10 @@ div.results {
 
 .results .result-choice {
 	text-align: center;
+	overflow: auto;
+	width: 132px;
+	margin: 0 auto 16px;
+	font-size: 17px;
 }
 
 
