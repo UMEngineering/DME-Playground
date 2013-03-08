@@ -9,9 +9,13 @@ $(document).ready(function(){
 
 	$(".question-p").click(function(e){
 		e.preventDefault();
-		var $this = $(this)
+		var $this = $(this);
 		//if ($this.parent().hasClass("active")) return false;
-
+		/*if (!$this.parent().hasClass("active")) {
+			$("div#s" + ($this.data()["x"]+1) + " .question-div").removeClass("active");
+			$this.parent().addClass("active");
+		}*/
+		
 		display_result($this.data()["i"], $this.data()["x"]);
 	});
 
@@ -43,9 +47,6 @@ function search_q_id(q_id){
 function submit_answer(i){
 	//$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	console.log();
-	
-	//Fade in "Next Question"
-	$("#question-div-"+i+" span.next").fadeIn(500);
 
 	// Send the form data via POST request
 	var $form = $(".flex-active-slide #question-form-" + i),
@@ -63,9 +64,13 @@ function submit_answer(i){
 	}
 	
 	currentSet = $form.find('input[name="set_id"]').val()-1;
+	console.log(currentSet);
 	
 	$.post("post_result.php", eval("(" + jsonStr + ")"), function(data){
-		$(".flex-active-slide #question-form-" + i).fadeOut(500);
+		$(".flex-active-slide #question-form-" + i).fadeOut(500, function(){
+			//Fade in "Next Question"
+			$("#question-div-"+i+" span.next").fadeIn(500);
+		});
 		//$(".flex-active-slide #question-li-" + (i+1)).fadeIn(500);
 		display_result(i, currentSet);
 		console.log(currentSet + " " + i + " " + questions[currentSet][questions[currentSet].length-1]);
@@ -95,11 +100,18 @@ function display_result(qid, chart){
 		});
 		
 		// Show the result bars
-		$("#result-" + chart).show();
+		$("#result-" + chart).fadeIn(500);
 
-		$(".result-choice .q").removeClass("active");
-		$(".result-choice .smallq"+qid).addClass("active");
+		$("#result-" + chart + " .q").removeClass("active");
+		console.log("#result-" + chart + " .smallq"+qid);
+		$("#result-" + chart + " #aspan-"+qid).addClass("active");
 
+		// Active and deactive the question content
+		$this = $("#question-div-" + qid);
+		if (!$this.hasClass("active")) {
+			$("div#s" + (chart+1) + " .question-div").removeClass("active");
+			$this.addClass("active");
+		}
 
 		var sum_per_unit = 280 / sum;
 		if (sum == 0) sum_per_unit = 0;

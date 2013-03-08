@@ -286,6 +286,10 @@ div.question-div.active {
     opacity: .4;
 }
 
+.result-choice .q {
+	cursor: pointer;
+}
+
 .result-choice .q.active {
     opacity: 1;
 	

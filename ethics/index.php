@@ -150,7 +150,7 @@ if (!$result) {
                                     <?php
                                     for ($i=0; $i<3; $i++) {
                                     ?>
-                                    <span class="q smallq<?= $i?>">Q<?= $i+1 ?></span>
+                                    <span class="q smallq<?= $i?>" id="aspan-<?= $i+($count-3) ?>" onclick="display_result(<?= $i+($count-3) ?>, <?= $x ?>); return false;">Q<?= $i+1 ?></span>
                                     <?php
                                     }
                                     ?>
@@ -241,7 +241,7 @@ if (!$result) {
                                     <?php
                                     for ($i=0; $i<2; $i++) {
                                     ?>
-                                    <span class="q">Q<?= $i+1 ?></span>
+                                    <span class="q" id="aspan-<?= $i+($count-3) ?>" onclick="display_result(<?= $i+($count-3) ?>, <?= $x ?>); return false;">Q<?= $i+1 ?></span>
                                     <?php
                                     }
                                     ?>
