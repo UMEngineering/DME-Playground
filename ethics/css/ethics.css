@@ -196,7 +196,7 @@ div.question-content {
 	height:100%;
 	width: 450px;
 	float: left;
-	overflow: auto;
+	overflow: scroll;
 }
 
 
@@ -220,6 +220,7 @@ div.question-div p.question-p {
 
 div.question-div.active p.question-p {
 	cursor: default;
+	-webkit-transition: all 1s ease;
 }
 
 div.question-div:hover {
@@ -227,8 +228,15 @@ div.question-div:hover {
 }
 
 div.question-div.active {
-    color: black;
-	
+    color: black;	
+}
+
+span.next {
+	display:none;
+}
+
+a.viewresult {
+	display:none;
 }
 
 div#s1 {

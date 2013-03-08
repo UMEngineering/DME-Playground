@@ -1,30 +1,20 @@
 var currentSet = 0;
 var questions = new Array(new Array(0, 1, 2), new Array(3, 4, 5), new Array(6, 7, 8), new Array(9, 10), new Array(11, 12), new Array(13, 14));
 $(document).ready(function(){
-	// $.easing.def = "easeInOutBounce";
-	//$("li.question").first().fadeIn(500);
-
-	// Set all result charts properly
-	//display_result(0, 0);
-	/*$(".results a#a-0").click(function(e){
-		e.preventDefault();
-		display_result(0);
-	});
-	$(".results a#a-1").click(function(e){
-		e.preventDefault();
-		display_result(1);
-	});
-	$(".results a#a-2").click(function(e){
-		e.preventDefault();
-		display_result(2);
-	});*/
-	
-	
 	$('.flexslider').flexslider({
 		animation: "slide",
 		slideshow: false,
 		animationLoop: false
 	});
+
+	$(".question-p").click(function(e){
+		e.preventDefault();
+		var $this = $(this)
+		//if ($this.parent().hasClass("active")) return false;
+
+		display_result($this.data()["i"], $this.data()["x"]);
+	});
+
 });
 
 // Set the result chart to current set of questions
@@ -34,31 +24,9 @@ function set_result(q_id){
 		if (currentSet >= questions.length)
 			currentSet = 0;
 	}
-	//console.log(currentSet);
-	//console.log(q_id);
+	
 	display_result(q_id, currentSet);
 	
-	// Set the result clicking behavior
-	/*$(".results a#a-" + questions[currentSet][0]).unbind();
-	$(".results a#a-" + questions[currentSet][0]).click(function(e){
-		e.preventDefault();
-		display_result(questions[currentSet][0]);
-	});
-	
-	$(".results a#a-" + questions[currentSet][1]).unbind();
-	$(".results a#a-" + questions[currentSet][1]).click(function(e){
-		e.preventDefault();
-		display_result(questions[currentSet][1]);
-	});
-	
-	
-	if (questions[currentSet].length == 3) {
-		$(".results a#a-" + questions[currentSet][2]).unbind();
-		$(".results a#a-" + questions[currentSet][2]).click(function(e){
-			e.preventDefault();
-			display_result(questions[currentSet][2]);
-		});
-	}*/
 }
 
 // Search if the given q_id is in the current set
@@ -74,8 +42,11 @@ function search_q_id(q_id){
 // Submit an answer
 function submit_answer(i){
 	//$("html, body").animate({ scrollTop: $(document).height() }, 1000);
-	console.log("Show graph");
+	console.log();
 	
+	//Fade in "Next Question"
+	$("#question-div-"+i+" span.next").fadeIn(500);
+
 	// Send the form data via POST request
 	var $form = $(".flex-active-slide #question-form-" + i),
 		url = $form.attr("action");
@@ -85,7 +56,6 @@ function submit_answer(i){
 	jsonStr += '"q_id" : "' + $form.find('input[name="q_id-' + i + '"]').val() + '", ';
 	jsonStr += '"answer" : "' + $form.find('input[name="answer_' + i + '"]:checked').val() + '", ';
 	jsonStr += '"set_id" : "' + $form.find('input[name="set_id"]').val() + '", "count" : "' + $form.find('input[name="count"]').val() + '", "submit-answer" : "Submit your answer"}';
-	//alert(jsonStr);
 	
 	// Insert the link
 	if (currentSet != $form.find('input[name="set_id"]').val()-1){
@@ -95,12 +65,12 @@ function submit_answer(i){
 	currentSet = $form.find('input[name="set_id"]').val()-1;
 	
 	$.post("post_result.php", eval("(" + jsonStr + ")"), function(data){
-		$(".flex-active-slide #question-form-" + i).css("display", "none");
-		$(".flex-active-slide #question-li-" + (i+1)).fadeIn(500);
+		$(".flex-active-slide #question-form-" + i).fadeOut(500);
+		//$(".flex-active-slide #question-li-" + (i+1)).fadeIn(500);
 		display_result(i, currentSet);
 		console.log(currentSet + " " + i + " " + questions[currentSet][questions[currentSet].length-1]);
 		if (questions[currentSet][questions[currentSet].length-1] > i) {
-			show_question(i, 1);
+			//show_question(i, 1);
 		}
 	});
 }
@@ -109,7 +79,6 @@ function submit_answer(i){
 function display_result(qid, chart){
 	// Get the result via Ajax
 	var url = "get_result.php?q_id=" + (qid+1);
-	//console.log(url);
 	var request = $.getJSON(url, function(result){
 		var numbers = new Array("one", "two", "three");
 		var counter = 0;
@@ -126,7 +95,6 @@ function display_result(qid, chart){
 		});
 		
 		// Show the result bars
-		//$(".results").show();
 		$("#result-" + chart).show();
 		var sum_per_unit = 280 / sum;
 		if (sum == 0) sum_per_unit = 0;
@@ -139,17 +107,21 @@ function display_result(qid, chart){
 function show_question(this_id, type){
 	if (type == 1) {
 		// Next question
-		//$(".flex-active-slide #question-div-" + this_id).fadeOut(300, function(){
-			$(".flex-active-slide #question-div-" + (this_id + 1)).fadeIn(300);
-			$(".flex-active-slide #question-div-" + (this_id)).removeClass("active");
-			$(".flex-active-slide #question-div-" + (this_id + 1)).addClass("active");
+		var next_id = this_id + 1;
+		$(".flex-active-slide #question-div-" + (next_id)).fadeIn(300);
+		$("#question-div-" + (this_id) + " span.next").fadeOut(700);
+		$(".flex-active-slide #question-div-" + (this_id)).removeClass("active");
+		$(".flex-active-slide #question-div-" + (next_id)).addClass("active");
 
-
-	//	});
+		scrollTo($("#question-div-"+next_id), $("#question-div-"+next_id).parent());
 	} else if (type == 0) {
 		// Previous question
-	//	$(".flex-active-slide #question-div-" + this_id).fadeOut(300, function(){
-			$(".flex-active-slide #question-div-" + (this_id - 1)).fadeIn(300);
-	//	});
+		$(".flex-active-slide #question-div-" + (this_id - 1)).fadeIn(300);
 	}
+}
+
+function scrollTo(object, parent) {
+	parent.animate({
+		scrollTop: object.offset().top
+	}, 2000);
 }
