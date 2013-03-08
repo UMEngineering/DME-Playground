@@ -46,6 +46,8 @@ if (!$result) {
         <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/g.raphael-min.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/xyr4htp.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -71,12 +73,14 @@ if (!$result) {
                 <div class="story">
                     <h1 id="top-title">By Bill Clayton</h1>
                     <p>On Day One of Engineering 101 on the Princeton campus, not so many years ago, a professor strode into class, threw down his jacket and said to his students, “I just heard about a fantastic new invention. Virtually everyone in the world will want it. It’ll create millions of jobs and improve people’s quality of life. The inventor’s looking for investors. Who wants in?” </p>
+                    <p class="pullquote">Engineers do things of consequence, sometime positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible.</p>
+
                     <p>Hands shot up. Yes! Yes! Of course we would! The collective look in their eyes said, “Engineering’s gonna make me rich, and I haven’t even pulled my first all-nighter.”</p>
                     <p>“But,” the professor said, wagging a finger, “this invention will kill a quarter of a million people each year.”</p>
                     <p>The hands went down slowly, as if the hands themselves had learned the lesson of the day: Engineers do things of consequence, sometime positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible. (By the way, the “new invention” in the professor’s scenario was the automobile.)</p>
 					<p>He continued, telling his class that engineering does indeed deal with equations, physical laws and problem-solving, but it’s not that simple. Engineers often work at the intersection or technology and ethics.</p>
                     <p>Cynthia Finelli (BSE EE ’88, MSE ’89, PhD ’93) is the director of the Center for Research on Learning and Teaching in Engineering and a research associate professor. She’s also part of E3 (Exploring Ethical Decision-Making in Engineering), a multi-institutional team of engineering educators that studies engineering ethics. She notes that “using engineering to improve people’s lives requires more than an ability to build bridges and unravel the mysteries of DNA. Engineers need a moral center.” </p>
-					<p>The need for this moral center has raised its head over and over, often in unforgettable ways.</p>
+					
                 </div>
             </div>
             <?php
@@ -165,12 +169,12 @@ if (!$result) {
             </div>
         	<div class="story-container">
                 <div class="story">
+                    <p>The need for this moral center has raised its head over and over, often in unforgettable ways.</p>
+                    <p class="pullquote">Using engineering to improve people’s lives requires more than an ability to build bridges and unravel the mysteries of DNA. Engineers need a moral center.</p>
                     <p>The designers of the Titanic equipped the ship with 1,178 lifeboat positions, knowing that the vessel carried 2,224 passengers and crew. When disaster struck, 1,515 people lost their lives, at least in part because of this single decision about lifeboats. The owners wanted to bill the ship as “unsinkable.” No one knows what the engineers were thinking, but even if they had just an inkling that the ship was in fact sinkable, was there any justification for providing lifeboat positions for only half the ship’s occupants? Was this a case of an ethical lapse or bad design - or both? </p>
 					<p>Seven astronauts aboard the Challenger shuttle died tragically in an explosion during launch on January 28, 1986. Investigation showed that the failure of an "O-ring" seal in one of Challenger’s solid-fuel boosters led to the explosion. The investigation faulted NASA officials for allowing the shuttle to launch despite clear warnings by engineers from the Morton-Thiokol company, manufacturers of the booster rockets: launching the vehicle during cold weather could cause problems. Because each O-ring had a backup in place, NASA decided it was unlikely that both the primary and the backup would fail. This case raises a number of fundamental questions, such as issues was NASA’s judgment justified? Should engineers have pressed the issue more strongly, perhaps to officials other than those at NASA? (The Challenger accident is frequently used as a case study in subjects such as engineering safety, the ethics of whistle-blowing, communications, group decision-making and the dangers of groupthink).</p>
                     <p>These and other examples present issues that engineers face frequently and can be used to influence that moral center Finelli spoke of. E3 research shows that it’s possible to develop an engineer’s ability to make good decisions. “Students who cheat in college are more likely to become professionals predisposed to make unethical decisions,” she said. “Forty years of ational research shows that levels of cheating are higher in undergraduate engineering than in almost all other disciplines, and educators have the ability and the opportunity to have an impact on students’ decision-making processes.</p>
-					<p>“We’ve made a lot of progress in identifying factors that influence the ethical decision-making of engineering undergraduates and, ultimately, this work will affect the engineering profession by producing engineers of the highest integrity. We’re helping to raise Michigan Engineering’s awareness of ethics and encouraging its students, faculty, staff and graduates, as well as engineers in general, to embrace ethical behavior.”</p>
-                    <p>As technology grows more complex, choices become more difficult. For engineers, making an ethical choice is important on a global scale because technology now reaches people around the world. On a personal level, doing the right thing speaks volumes about a person’s character – people are ultimately the product of their choices.</p>
-					<p>It takes years to build a reputation – and five minutes to ruin it. One choice can be a life-and-death decision for engineers. That’s something they can learn on day one of Engineering 101; it’s something they must remember every day after.</p>
+					
                 </div>
             </div>
             <div class="flexslider">
@@ -191,7 +195,7 @@ if (!$result) {
                                 for ($i=0; $i<2; $i++){
                                     $row = mysql_fetch_row($result);
                                     ?>
-                                    <div class="question-div" id="question-div-<?= $count ?>"
+                                    <div class="question-div active" id="question-div-<?= $count ?>"
                                     <?php
                                     if ($display_next){
                                         echo 'style="display: block;"';
@@ -253,6 +257,13 @@ if (!$result) {
                     }
                 ?>
                 </ul>
+            </div>
+            <div class="story-container">
+                <div class="story">
+                    <p>“We’ve made a lot of progress in identifying factors that influence the ethical decision-making of engineering undergraduates and, ultimately, this work will affect the engineering profession by producing engineers of the highest integrity. We’re helping to raise Michigan Engineering’s awareness of ethics and encouraging its students, faculty, staff and graduates, as well as engineers in general, to embrace ethical behavior.”</p>
+                    <p>As technology grows more complex, choices become more difficult. For engineers, making an ethical choice is important on a global scale because technology now reaches people around the world. On a personal level, doing the right thing speaks volumes about a person’s character – people are ultimately the product of their choices.</p>
+                    <p>It takes years to build a reputation – and five minutes to ruin it. One choice can be a life-and-death decision for engineers. That’s something they can learn on day one of Engineering 101; it’s something they must remember every day after.</p>
+                </div>
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
