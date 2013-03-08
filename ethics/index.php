@@ -2,6 +2,14 @@
 require_once("../../db.php");
 require_once("functions.php");
 
+if (!extension_loaded('gd')) 
+{
+  if (!dl('gd.so')) 
+  {
+    echo "GD not loaded.";
+  }
+}
+
 // Some global variables
 $count_result = array();
 $numbers_str = array("one", "two", "three");
@@ -169,7 +177,7 @@ if (!$result) {
             </div>
         	<div class="story-container">
                 <div class="story">
-                    <p>The need for this moral center has raised its head over and over, often in unforgettable ways.</p>
+                    <p>The need for the moral center that Finelli mentioned has raised its head over and over, often in unforgettable ways.</p>
                     <p class="pullquote">Using engineering to improve people’s lives requires more than an ability to build bridges and unravel the mysteries of DNA. Engineers need a moral center.</p>
                     <p>The designers of the Titanic equipped the ship with 1,178 lifeboat positions, knowing that the vessel carried 2,224 passengers and crew. When disaster struck, 1,515 people lost their lives, at least in part because of this single decision about lifeboats. The owners wanted to bill the ship as “unsinkable.” No one knows what the engineers were thinking, but even if they had just an inkling that the ship was in fact sinkable, was there any justification for providing lifeboat positions for only half the ship’s occupants? Was this a case of an ethical lapse or bad design - or both? </p>
 					<p>Seven astronauts aboard the Challenger shuttle died tragically in an explosion during launch on January 28, 1986. Investigation showed that the failure of an "O-ring" seal in one of Challenger’s solid-fuel boosters led to the explosion. The investigation faulted NASA officials for allowing the shuttle to launch despite clear warnings by engineers from the Morton-Thiokol company, manufacturers of the booster rockets: launching the vehicle during cold weather could cause problems. Because each O-ring had a backup in place, NASA decided it was unlikely that both the primary and the backup would fail. This case raises a number of fundamental questions, such as issues was NASA’s judgment justified? Should engineers have pressed the issue more strongly, perhaps to officials other than those at NASA? (The Challenger accident is frequently used as a case study in subjects such as engineering safety, the ethics of whistle-blowing, communications, group decision-making and the dangers of groupthink).</p>

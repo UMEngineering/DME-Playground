@@ -16,6 +16,8 @@ a {
 	max-width: 1198px;*/
 	margin: auto;
 	overflow-x: hidden;
+    
+	border-top: 5px solid black;
 }
 
 .flex-control-nav {
@@ -115,7 +117,7 @@ li.dmegallery {
 
 div#top-header {
 	height: 396px;
-	background: url(../img/top-img.jpg) #9F9F9F 50% scroll repeat-x;;
+	background: url(../img/top-img.jpg) #9F9F9F 50% 9px fixed repeat-x;;
 }
 
 div#top-header div#top-header-content {
@@ -329,35 +331,35 @@ a.viewresult {
 
 div#s1 {
 	background: url(../img/q_img/s1.jpg) no-repeat center;
-	background-size: 100%;
+	background-size: cover;
 }
 
 div#s2 {
 	background: url(../img/q_img/s2.jpg) no-repeat center;
-	background-size: 100%;
+	background-size: cover;
 }
 
 div#s3 {
 	background: url(../img/q_img/s3.jpg) no-repeat center;
-	background-size: 100%;
+	background-size: cover;
 }
 
 div#s4 {
 	background: url(../img/q_img/s4.jpg) no-repeat center;
 	height: 680px;
-	background-size: 100%;
+	background-size: cover;
 }
 
 div#s5 {
 	background: url(../img/q_img/s5.jpg) no-repeat center;
 	height: 680px;
-	background-size: 100%;
+	background-size: cover;
 }
 
 div#s6 {
 	background: url(../img/q_img/s6.jpg) no-repeat center;
 	height: 680px;
-	background-size: 100%;
+	background-size: cover;
 }
 
 div.results {

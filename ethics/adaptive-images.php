@@ -19,14 +19,6 @@ $sharpen       = TRUE; // Shrinking images can blur details, perform a sharpen o
 $watch_cache   = TRUE; // check that the adapted image isn't stale (ensures updated source images are re-cached)
 $browser_cache = 60*60*24*7; // How long the BROWSER cache should last (seconds, minutes, hours, days. 7days by default)
 
-if (!extension_loaded('gd')) 
-{
-   echo "GD not loaded<br>";
-  if (!dl('gd.so')) 
-  {
-        exit;
-  }
-}
 /* END CONFIG ----------------------------------------------------------------------------------------------------------
 ------------------------ Don't edit anything after this line unless you know what you're doing -------------------------
 --------------------------------------------------------------------------------------------------------------------- */
