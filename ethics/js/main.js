@@ -73,6 +73,13 @@ function submit_answer(i){
 		});
 		//$(".flex-active-slide #question-li-" + (i+1)).fadeIn(500);
 		display_result(i, currentSet);
+		if ($(window).width() < 800) {
+			if (i == 3 || i == 6) {
+				$("div#s" + (currentSet+1)).css({"height" : ($("div#s" + (currentSet+1)).height()+50) + "px"});
+			} else if (i == 9){
+				$("div#s" + (currentSet+1)).css({"height" : ($("div#s" + (currentSet+1)).height()+80) + "px"});
+			}
+		}
 		//console.log(currentSet + " " + i + " " + questions[currentSet][questions[currentSet].length-1]);
 		if (questions[currentSet][questions[currentSet].length-1] > i) {
 			//show_question(i, 1);
@@ -140,6 +147,13 @@ function show_question(this_id, type){
 	if (type == 1) {
 		// Next question
 		var next_id = this_id + 1;
+		if ($(window).width() < 800) {
+			if (this_id == 5 || this_id == 11) {
+				$("div#s" + (currentSet+1)).css({"height" : ($("div#s" + (currentSet+1)).height()+350) + "px"});
+			} else {
+				$("div#s" + (currentSet+1)).css({"height" : ($("div#s" + (currentSet+1)).height()+240) + "px"});
+			}
+		}
 		$(".flex-active-slide #question-div-" + (next_id)).fadeIn(300);
 		$("#question-div-" + (this_id) + " span.next").fadeOut(700);
 		$(".flex-active-slide #question-div-" + (this_id)).removeClass("active");

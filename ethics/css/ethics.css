@@ -193,6 +193,7 @@ div.story-container {
 
 div.story {
 	width: 960px;
+	padding: 0 10px 0 10px;
 }
 
 div.story p {
@@ -443,7 +444,7 @@ div.results {
 .results .result-choice {
 	text-align: center;
 	overflow: visible;
-	width: 132px;
+	width: 150px;
 	margin: 0 auto 16px;
 	font-size: 17px;
 	height: 23px;
@@ -611,3 +612,95 @@ footer #credits {
 #credits ul#photocredits {
 	display: block;
 }	
+
+@media only screen and (max-width: 800px) {
+	body, #top-header {
+		overflow-x: hidden;
+	}
+	
+	div.story, div.story-container {
+		width: 100%;
+	}
+	
+	div.story p {
+		width: 90%;
+	}
+	
+	div.story p.pullquote {
+		float: none;
+		margin: auto;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	
+	footer {
+		width: 100%;
+	}
+	
+	div#footercontainer {
+		width: 90%;
+	}
+	
+	div.question-container, div.question-content {
+		width: auto;
+	}
+	
+	div.results {
+		left: 0;
+	}
+	
+	div.question {
+		height: 1000px;
+	}
+	
+	div#s1 {
+		height: 800px;
+	}
+	
+	div#s2 {
+		height: 900px;
+	}
+	
+	div#s3 {
+		height: 800px;
+	}
+	
+	div#s4 {
+		height: 1000px;
+	}
+	
+	div#s5 {
+		height: 900px;
+	}
+	
+	div#s6 {
+		height: 900px;
+	}
+	
+	div#top-header-content div#top-header-subtitle, 
+	div#top-header div#top-header-content, 
+	div#top-header-content div#top-header-nav, 
+	.sticky ul {
+		width: 100%;
+	}
+	
+	.sticky ul li {
+		right: -40px;
+	}
+	
+	div#top-header-content div#top-header-subtitle {
+		background-size: 100%;
+		left: 5px;
+	}
+}
+
+@media only screen and (max-width: 336px) {
+	div#top-header-content div#top-header-logo {
+		width: 100%;
+		background-size: 100%;
+	}
+	
+	div#top-header-content div#top-header-nav {
+		top: 163px;
+	}
+}
