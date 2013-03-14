@@ -18,7 +18,7 @@ $(document).ready(function(){
 		
 		display_result($this.data()["q"], $this.data()["x"]);
 	});
-	console.log(short_ans);
+	//console.log(short_ans);
 });
 
 // Set the result chart to current set of questions
@@ -46,7 +46,7 @@ function search_q_id(q_id){
 // Submit an answer
 function submit_answer(i){
 	//$("html, body").animate({ scrollTop: $(document).height() }, 1000);
-	console.log();
+	//console.log();
 
 	// Send the form data via POST request
 	var $form = $(".flex-active-slide #question-form-" + i),
@@ -64,7 +64,7 @@ function submit_answer(i){
 	}
 	
 	currentSet = $form.find('input[name="set_id"]').val()-1;
-	console.log(currentSet);
+	//console.log(currentSet);
 	
 	$.post("post_result.php", eval("(" + jsonStr + ")"), function(data){
 		$(".flex-active-slide #question-form-" + i).fadeOut(500, function(){
@@ -100,14 +100,14 @@ function display_result(qid, chart){
 			counter++;
 			if ($(".flex-active-slide #result-" + chart + " .bar"+counter).length > 0){
 				$(".flex-active-slide #result-" + chart + " .bar"+counter).attr("id", field["count"]);
-				console.log("Field count", field["count"])
+				//console.log("Field count", field["count"])
 				if (field["count"] != 0) { $(".flex-active-slide #result-" + chart + " .bar"+counter+" span").html(field["count"] + ppl); }
 			} else {
 				if (field["count"] != 0) {$(".flex-active-slide #chart-" + chart).append('<div class="bar' + counter + '" id="' + field["count"] + '"><span>' + field["count"] + ppl + '</span></div>'); }
 			}
 			sum += field["count"];
 		});
-		
+		console.log(result);
 		// Show the result bars
 		$("#result-" + chart).fadeIn(500);
 
@@ -123,7 +123,7 @@ function display_result(qid, chart){
 		}
 		
 		// Change the short answer text if necessary
-		console.log(short_ans[qid][0] + " " + short_ans[qid][1]);
+		//console.log(short_ans[qid][0] + " " + short_ans[qid][1]);
 		if (short_ans[qid][0] != "") {
 			$("#result-" + chart + " .answer-text1").text(short_ans[qid][0]);
 		} else {

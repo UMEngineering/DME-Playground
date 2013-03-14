@@ -1,5 +1,10 @@
+html, body {
+	min-width: 100%;
+}
+
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -27,16 +32,15 @@ a {
 .sticky {
 	background: none repeat scroll 0 0 #222222;
     box-shadow: 0 2px 4px #333333;
+    -webkit-box-shadow: 0 2px 4px #333333;
     display: block;
     height: 51px;
-    
 	position: relative;
     top: 0px;
 	left: 0;	
     width: 100%;
-    
 	overflow: hidden;
-	padding: 8px 0 0;
+	padding: 3px 0 0;
 	z-index: 1000;
 }
 
@@ -137,7 +141,7 @@ div#top-header-content div#top-header-logo {
 	background: url(../img/top2.png) no-repeat;
 	width: 336px;
 	height: 61px;
-	
+	text-indent: -9999px;
 	position: relative;
 	top: 75px;
 }
@@ -146,7 +150,7 @@ div#top-header-content div#top-header-subtitle {
 	background: url(../img/top1.png) no-repeat;
 	width: 600px;
 	height: 100px;
-	
+	text-indent: -9999px;
 	position: relative;
 	top: 110px;
 	left: -35px;
@@ -193,7 +197,6 @@ div.story-container {
 
 div.story {
 	width: 960px;
-	padding: 0 10px 0 10px;
 }
 
 div.story p {
@@ -224,6 +227,7 @@ div.story p:first-child {
 div.question {
 	height: 600px;
 	margin: auto;
+	-webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
 	box-shadow: inset 0 0 50px rgba(0,0,0,0.7);
 }
 
@@ -240,6 +244,7 @@ div.question-content {
 	height:100%;
 	width: 450px;
 	float: left;
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,.7);
 	box-shadow: 0 0 40px rgba(0,0,0,.7);
 	overflow: scroll;
 }
@@ -277,6 +282,7 @@ div.question-div p.question-p {
 div.question-div.active p.question-p {
 	cursor: default;
 	-webkit-transition: all 1s ease;
+	transition: all 1s ease;
 }
 
 div.question-div:hover {
@@ -289,6 +295,7 @@ div.question-div.active {
 
 .result-choice .q {
     -webkit-transition: all .25s ease;
+    transition: all .25s ease;
     color: white;	
     font-weight: bold;
     display: block;
@@ -300,6 +307,7 @@ div.question-div.active {
     padding: 6px;
     line-height: 10px;
     opacity: .4;
+    filter: Alpha(Opacity=40) \9;
 }
 
 .result-choice .q {
@@ -308,7 +316,7 @@ div.question-div.active {
 
 .result-choice .q.active {
     opacity: 1;
-	
+	filter: Alpha(Opacity=100) \9;
 }
 
 form {
@@ -329,7 +337,7 @@ span.next a {
 
 a.submitanswer {
     font-size: .8em;
-    position: absolute;	
+    position: relative;	
     top: 50px;
     z-index: 100;
 }
@@ -444,7 +452,7 @@ div.results {
 .results .result-choice {
 	text-align: center;
 	overflow: visible;
-	width: 150px;
+	width: 132px;
 	margin: 0 auto 16px;
 	font-size: 17px;
 	height: 23px;
@@ -555,20 +563,19 @@ footer {
 	display: block;
 	margin: 0px 0 0 0;
 	width: 100%;
-	height: 440px;
+	height: 350px;
 	position: relative;
 	clear: both;
 	color: #aaa;
-	background: url(../img/foot.png) #333 bottom right repeat-x;	
+	background: url(../img/foot.jpg) #333 bottom center repeat-x;	
 	box-shadow: 0 0 10px black;
 	-webkit-box-shadow: 0 0 10px black;
 }
 
 div#footercontainer {
-	background: url("../img/footer_img.jpg") repeat-x scroll right bottom #333;
     display: block;
     
-	height: 440px;
+	height: 350px;
     margin: 0 auto;
     padding: 0;
     position: relative;
@@ -613,6 +620,19 @@ footer #credits {
 	display: block;
 }	
 
+@media screen and (max-device-width: 480px){
+    body, html {
+    	position:relative;
+        width: 100%;
+    }
+
+    #container, #top-header, .sticky {
+    	width: 100%;
+    	min-width: 960px;
+    }
+
+}
+
 @media only screen and (max-width: 800px) {
 	body, #top-header {
 		overflow-x: hidden;
@@ -620,6 +640,7 @@ footer #credits {
 	
 	div.story, div.story-container {
 		width: 100%;
+		padding: 5px;
 	}
 	
 	div.story p {
