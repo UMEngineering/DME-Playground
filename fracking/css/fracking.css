@@ -1,7 +1,7 @@
 .sticky {
 	background: none repeat scroll 0 0 #222222;
-    box-shadow: 0 2px 4px #333333;
-    -webkit-box-shadow: 0 2px 4px #333333;
+    /*box-shadow: 0 2px 4px #333333;
+    -webkit-box-shadow: 0 2px 4px #333333;*/
     display: block;
     height: 51px;
 	position: fixed;
@@ -43,11 +43,11 @@ a#circle {
 	display: block;
 	width: 960px;
 	margin: 0px auto;
-	padding: 0px 0 0;
+	padding: 0px 0 3px 0;
 	position: relative;
 	overflow: visible;
 	height: 45px;
-	background: url(../img/dmebadge.jpg) scroll no-repeat top left;
+	/*background: url(../img/dmebadge.jpg) scroll no-repeat top left;*/
 }
 
 .sticky ul li {
@@ -55,6 +55,7 @@ a#circle {
 	display: inline;
 	float: right;
 	margin: 4px 0 0;
+	color: white;
 }
 
 .sticky ul li.simplify a {
@@ -71,7 +72,7 @@ li.dmegallery {
 	top: 9px;
 }
 
-.sticky ul li a, .sticky ul li a:visited {
+.sticky ul li a {
 	color: white;
 	text-decoration: none;
 	font-size: 13px;
@@ -88,6 +89,50 @@ li.dmegallery {
 	float: none;	
 }
 
+/* Progress bar */
+.sticky div#progress {
+	height: 3px;
+}
+
+.sticky div#progress div#progressBar {
+	background: orange;
+	width: 0%;
+	height: 100%;
+}
+
+.sticky ul li.sticky-title {
+	position: absolute;
+	left: 300px;
+	top: 8px;
+}
+
+.sticky .sticky-sections {
+	height: 50px;
+}
+
+.sticky .sticky-sections span, .sticky .sticky-sections a {
+	color: #b2b2b2;
+	font-size: 11pt;
+	font-weight: 100;
+	padding: 25px 10px 25px 10px;
+}
+
+.sticky .sticky-sections a {
+	color: #b2b2b2;
+	transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+}
+
+.sticky .sticky-sections a:hover {
+	color: white;
+	transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+}
+
 section div.content {
     position: relative;
     display: block;
@@ -98,13 +143,8 @@ section div.content {
 
 section.one {
     display: block;
-    position: fixed;
-    top: 0;
-    padding: 0;
-    height: 700px;
+    height: 2000px;
     width: 100%;
-    background: url(../img/Fracking13.jpg) 50%;
-    background-size: cover;
 }
 
 section div.container {
@@ -120,7 +160,7 @@ section.two {
     display: block;
     position: relative;
     padding: 70px 0;
-    margin: 646px 0 0;
+    margin: 100px 0 0;
     background: white;
 }
 
@@ -195,3 +235,31 @@ footer #credits {
 #credits ul#photocredits {
 	display: block;
 }	
+
+/* Main content start */
+div#container {
+	height: 10000px;
+}
+
+/* Fake height for now */
+.section {
+	height: 20%;
+}
+
+#section-1 {
+	margin-top: 54px;
+}
+
+div.video-cover {
+	width: 100%;
+	position: absolute;
+	top: 54px;
+	left: 0;
+	overflow-y: hidden;
+}
+
+div.video-cover img {
+	width: 100%;
+	/*position: relative;
+	top: -60px;*/
+}
