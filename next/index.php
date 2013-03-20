@@ -34,6 +34,15 @@
             <ul>
                 <li class="home"><a href="http://engin.umich.edu"><img src="img/mighigan_engineering_25.png" alt="Michigan Engineering" /></a></li>
                 <!--<li class="dmegallery"><a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience Gallery</a><a id="circle" href="http://www.engin.umich.edu/newscenter/dme"></a></li>-->
+                <li class="sticky-title"></li>
+                <li class="sticky-sections">
+                	<span id="stage">SECTION: </span>
+                    <a href="#section-1" class="stage-a stage-1">1</a>
+                    <a href="#section-2" class="stage-a stage-2">2</a>
+                    <a href="#section-3" class="stage-a stage-3">3</a>
+                    <a href="#section-4" class="stage-a stage-4">4</a>
+                    <a href="#section-5" class="stage-a stage-5">5</a>
+                </li>
             </ul>
             <div id="progress">
             	<div id="progressBar"></div>
@@ -41,12 +50,86 @@
         </div>  
 
 		<div id="container">
-        	
+        	<div class="section" id="section-1">
+            	<div class="video" id="top-video">
+                	<div class="video-cover">
+                    	<img src="img/placeholder.jpg" alt="title" />
+                    </div>
+                    <div id="player0"></div>
+                	<!--<iframe class="youtubeVideo" width="560" height="315" src="http://www.youtube.com/embed/c2W_Zlt8J2Y" frameborder="0" allowfullscreen></iframe>-->
+                </div>
+            </div>
+        	<div class="section" id="section-2">
+            	<h1>2</h1>
+            </div>
+        	<div class="section" id="section-3">
+            	<h1>3</h1>
+            </div>
+        	<div class="section" id="section-4">
+            	<h1>4</h1>
+            </div>
+        	<div class="section" id="section-5">
+            	<h1>5</h1>
+            </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
-
+		<script>
+        var tag = document.createElement('script');
+	tag.src = "//www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	var player0;
+	
+	  function onYouTubeIframeAPIReady() {
+		  player0 = new YT.Player('player0', {
+			videoId: 'c2W_Zlt8J2Y',
+			events: {
+			  'onReady': function(event){ 
+					//console.log("Loaded");
+					 // Find all YouTube videos
+						var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+							// The element that is fluid width
+							$fluidEl = $("body");
+						// Figure out and save aspect ratio for each video
+						$allVideos.each(function() {
+							$(this)
+								.data('aspectRatio', this.height / this.width)
+								
+								// and remove the hard coded width/height
+								.removeAttr('height')
+								.removeAttr('width');
+						});
+						// When the window is resized
+						// (You'll probably want to debounce this)
+						$(window).resize(function() {
+							var newWidth = $fluidEl.width();
+							// Resize all videos according to their own aspect ratio
+							$allVideos.each(function() {
+								var $el = $(this);
+								var newHeight = newWidth * $el.data('aspectRatio');
+								$el
+									.width(newWidth)
+									.height(newWidth * $el.data('aspectRatio'));
+								$("#top-video .video-cover").css({"height" : newHeight + "px"});
+							});
+						// Kick off one resize to fix all videos on page load
+						}).resize();
+			  },
+			  'onStateChange': function(event){ var parent = $(event.target.a).parent()[0]; var overlay = $(parent).find(".video-cover")[0];var play = $(parent).find(".play")[0];if (event.data == 2) { $(overlay).fadeIn(500);$(play).fadeIn(1000);}}
+			}
+		  });
+		}
+	$(".video-cover").click(function(e){
+		e.preventDefault();
+		var overlay = $(this)/*, playbutton = $(".overlay .play");*/
+		//console.log(overlay);
+		$(overlay).fadeOut(500);
+		//$(playbutton).fadeOut(200)
+		player0.playVideo();
+	  });
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script type="text/javascript">
