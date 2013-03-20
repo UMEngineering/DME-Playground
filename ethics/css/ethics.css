@@ -120,15 +120,10 @@ li.dmegallery {
 }
 
 div#top-header {
-<<<<<<< HEAD
-	height: 396px;
-	;
-=======
+/*	height: 396px;
 	height: 388px;
-	
+*/
 background: url(../img/top-img.jpg) #E7E7E7 50% 0px fixed repeat-x;;
->>>>>>> 4:08
-;
 height: 387px;
 }
 
