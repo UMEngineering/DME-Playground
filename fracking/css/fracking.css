@@ -243,11 +243,12 @@ div#container {
 
 /* Fake height for now */
 .section {
-	height: 20%;
+	padding-top: 52px;
 }
 
 #section-1 {
 	margin-top: 54px;
+	padding-top: 0;
 }
 
 div.video-cover {
