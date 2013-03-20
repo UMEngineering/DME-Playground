@@ -50,8 +50,16 @@ $short_ans = array();
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>Ethical Tech</title>
+        <meta property="og:title" content="Ethical Tech"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://www.engin.umich.edu/college/about/news/dme/ethics/"/>
+        <meta property="og:image" content="http://www.engin.umich.edu/college/about/news/dme/ethics/img/eth1500.png"/>
+        <meta property="og:site_name" content="Ethical Tech"/>
+        <meta property="fb:admins" content="2206222" />
+        <meta property="og:description"
+          content="Gray areas are expanding as the world grows more complex."/>
+        <meta name="description" content="Ethical Tech">
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -85,8 +93,8 @@ $short_ans = array();
 
         <div id="top-header">
             <div id="top-header-content">
-            	<div id="top-header-logo"></div>
-            	<div id="top-header-subtitle"></div>
+            	<div id="top-header-logo">Ethical Tech</div>
+            	<div id="top-header-subtitle">Gray areas are expanding as the world grows more complex.</div>
             	<div id="top-header-nav"><a href="http://www.engin.umich.edu/" target=_blank><span class="color-red">COLLEGE</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/about" target=_blank><span class="color-red">ABOUT</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news" target=_blank><span class="color-red">NEWS</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/newscenter/dme"><span class="color-red">DME</span></a><img src="img/arrow.png" /><span>ETHICAL TECH</span></div>
             </div>
         </div>
@@ -308,7 +316,7 @@ $short_ans = array();
 		<footer>
    
 		    <div id="footercontainer">
-		        <div id="breadcrumbs"><a href="http://engin.umich.edu">Michigan Engineering</a> &rsaquo; <a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience</a> &rsaquo; Mighty Mobile</div>
+		        <div id="breadcrumbs"><a href="http://engin.umich.edu">Michigan Engineering</a> &rsaquo;&nbsp;<a href="http://engin.umich.edu/college/about">About</a> &rsaquo;&nbsp;<a href="http://engin.umich.edu/college/about/news">News</a> &rsaquo;&nbsp;<a href="http://www.engin.umich.edu/newscenter/dme">DME</a> &rsaquo;&nbsp;Ethics</div>
 		        <div id="credits">
 		        	<ul>
 		            	<li>Bill Clayton, Writer</li>
@@ -317,10 +325,7 @@ $short_ans = array();
 		                <li>Mira Lancaster, Senior Graphic Designer</li>
 		                <li>Dan Kim, Executive Director</li>
 		            </ul>
-		            <ul id="photocredits">
-		            	<li>Heatsink image courtesy of Wenisch Lab</li>
-		                <li>Centip3De image courtesy of Mudge Lab</li>
-		            </ul>
+		           
 
 		            <span class='st_googleplus_large' displayText='Google +'></span>
 					<span class='st_facebook_large' displayText='Facebook'></span>
@@ -343,18 +348,16 @@ $short_ans = array();
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script type="text/javascript">
-         var _gaq = _gaq || [];
-         _gaq.push(['_setAccount', 'UA-36986878-1']);
-         _gaq.push(['_trackPageview']);
 
-         (function() {
-           var ga = document.createElement('script'); ga.type =
-        'text/javascript'; ga.async = true;
-           ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
-        'http://www') + '.google-analytics.com/ga.js';
-           var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-         })();
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-39191895-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
 
         </script>
     </body>
