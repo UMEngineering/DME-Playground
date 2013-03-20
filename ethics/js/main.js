@@ -91,7 +91,9 @@ function submit_answer(i){
 function display_result(qid, chart){
 	// Get the result via Ajax
 	var url = "get_result.php?q_id=" + (qid+1);
+	$.ajaxSetup({cache : false});
 	var request = $.getJSON(url, function(result){
+		$.ajaxSetup({cache : true});
 		var numbers = new Array("one", "two", "three");
 		var counter = 0;
 		var sum = 0;
@@ -107,7 +109,7 @@ function display_result(qid, chart){
 			}
 			sum += field["count"];
 		});
-		console.log(result);
+		//console.log(result);
 		// Show the result bars
 		$("#result-" + chart).fadeIn(500);
 
