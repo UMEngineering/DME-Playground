@@ -12,7 +12,7 @@ $(document).ready(function(e) {
     $(document).scroll(function(e) {
 		// Calculate and change the current progress (max 100.0, min 0.00, for percentage in #progressBar)
 		curr_y = $(document).scrollTop();
-        var progress = 100.0 * curr_y / (height - $(window).height());
+        var progress = 100.0 * curr_y / (height);
 		$("div#progressBar").css({"width" : progress + "%"});
 		
 		// Check which section is viewable
