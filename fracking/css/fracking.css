@@ -9,7 +9,7 @@
 	left: 0;	
     width: 100%;
 	overflow: hidden;
-	padding: 3px 0 0;
+	padding: 0;
 	z-index: 1000;
 }
 
@@ -39,22 +39,20 @@ a#circle {
 }
 
 .sticky ul {
-	position: relative;
 	display: block;
-	width: 960px;
 	margin: 0px auto;
-	padding: 0px 0 3px 0;
-	position: relative;
 	overflow: visible;
 	height: 45px;
 	/*background: url(../img/dmebadge.jpg) scroll no-repeat top left;*/
+;
 }
 
 .sticky ul li {
 	list-style: none;
-	display: inline;
+	padding: 0;
+	display: inline-block;
 	float: right;
-	margin: 4px 0 0;
+	margin: 0 8px 0 0;
 	color: white;
 }
 
@@ -81,6 +79,8 @@ li.dmegallery {
 
 .sticky ul li.home {
 	position: absolute;
+	width: 43px;
+	overflow: hidden;
 	left: 0; top: 8px;
 	margin: 0;
 }
@@ -92,6 +92,7 @@ li.dmegallery {
 /* Progress bar */
 .sticky div#progress {
 	height: 3px;
+	display: none;
 }
 
 .sticky div#progress div#progressBar {
@@ -102,8 +103,8 @@ li.dmegallery {
 
 .sticky ul li.sticky-title {
 	position: absolute;
-	left: 300px;
-	top: 8px;
+	left: 49px;
+	top: 16px;
 }
 
 .sticky .sticky-sections {
@@ -112,9 +113,12 @@ li.dmegallery {
 
 .sticky .sticky-sections span, .sticky .sticky-sections a {
 	color: #b2b2b2;
-	font-size: 11pt;
+	display: inline-block;
+	margin: 0;
+	height: 30px;
+	font-size: 10pt;
 	font-weight: 100;
-	padding: 25px 10px 25px 10px;
+	padding: 17px 10px 15px 10px;
 }
 
 .sticky .sticky-sections a {
@@ -143,8 +147,10 @@ section div.content {
 
 section.one {
     display: block;
-    height: 2000px;
+    position: fixed;
     width: 100%;
+    z-index: 10;
+    top: 50px;
 }
 
 section div.container {
@@ -159,9 +165,10 @@ section.one div {
 section.two {
     display: block;
     position: relative;
-    padding: 70px 0;
-    margin: 100px 0 0;
+    padding: 20px 0;
+    margin: 834px 0 0;
     background: white;
+    z-index: 10;
 }
 
 section.two div {}
@@ -174,6 +181,49 @@ section.three {
 section.three img {
     margin: 300px;
 }
+
+.yt {}
+
+.video-cover h1 {
+    margin: 0;
+    text-transform: uppercase;
+    z-index: 100;
+    color: white;
+    display: block;
+    position: absolute;
+    font-family: "jaf-bernina-sans-comp";
+    font-size: 140px;
+    left: 50%;
+    top: 30px;
+    text-shadow: 0 0 30px rgba(0,0,0,.4);
+    -webkit-transition: all 1s ease;
+}
+
+.video-cover h1.active {
+    text-shadow: 0 0 40px rgba(0,0,0,.8);
+}
+
+.video-cover .vid-play {
+    position: absolute;
+    -webkit-transition: all 1s ease;
+    z-index: 100;
+    bottom: 30px;
+    left: 50px;
+    background: url(../img/triangle.png) rgba(255,255,255,.3) no-repeat 50% scroll;
+    text-indent: -9999px;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 181px;
+    height: 120px;
+    background-size: 60px;
+    opacity: .8;
+}
+
+.video-cover .vid-play.active {
+    opacity: 1;
+    box-shadow: 0 0 40px black;
+}
+
 
 footer {
 	display: block;
@@ -246,16 +296,15 @@ div#container {
 	padding-top: 52px;
 }
 
-#section-1 {
-	margin-top: 54px;
+section.one {
 	padding-top: 0;
 }
 
 div.video-cover {
 	width: 100%;
 	position: absolute;
-	top: 54px;
 	left: 0;
+	cursor: pointer;
 	overflow-y: hidden;
 }
 
@@ -263,4 +312,7 @@ div.video-cover img {
 	width: 100%;
 	/*position: relative;
 	top: -60px;*/
+;
+	position: absolute;
+	bottom: 0;
 }

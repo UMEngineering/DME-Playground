@@ -1,13 +1,28 @@
 var viewable = 1;
 var prev_viewable = 0;
+
+var num=new Array("zero","one","two","three","four","five");
+
 $(document).ready(function(e) {
 	var curr_y = $(document).scrollTop();
 	var height = $(document).height();
 	var $sticky_title = $(".sticky li.sticky-title");
+	var $window = $(window);
+	var firstelemheight;
 	$sticky_title.text($("div#section-" + viewable + " h1").text());
 	$(".stage-a").css({"background" : "none", "color" : "#b2b2b2"});
 	$(".stage-" + viewable).css({"background" : "rgba(80,80,80,0.62)", "color" : "white"});
 	
+	$(".video-cover").mouseenter(function(){
+		$this = $(this);
+		$this.children("h1, .vid-play").addClass("active");
+	});
+
+	$(".video-cover").mouseleave(function(){
+		$this = $(this);
+		$this.children("h1, .vid-play").removeClass("active");
+	});
+
 	// Scroll listener
     $(document).scroll(function(e) {
 		// Calculate and change the current progress (max 100.0, min 0.00, for percentage in #progressBar)
@@ -17,7 +32,7 @@ $(document).ready(function(e) {
 		
 		// Check which section is viewable
 		for (var i=1; i<=5; i++){
-			if (checkView("section#section-" + i)) {
+			if (checkView("section." + num[i])) {
 				prev_viewable = viewable;
 				viewable = i;
 				break;
@@ -31,6 +46,26 @@ $(document).ready(function(e) {
 			$(".stage-" + viewable).css({"background" : "rgba(80,80,80,0.62)", "color" : "white"});
 			window.location.hash = "#section-" + viewable;
 		}
+
+		scrollTop = $window.scrollTop();
+		if (scrollTop < 700) {
+
+		    elementOffset = $('section.two').offset().top;
+		    distance      = (elementOffset - scrollTop);
+		    firstelemheight = $("section.one").height() + $(".sticky").height() + 70;
+		    console.log("First: ", firstelemheight);
+
+		    opacityOne = distance / firstelemheight;
+
+			console.log(distance + " / " + firstelemheight);
+			console.log("Opacity: ", opacityOne);
+
+			$("section.one").css("opacity", opacityOne);
+		}
+		else {
+			$("section.one").css("opacity","0");
+		}
+
     });
 	
 	// Resize the youtube video
