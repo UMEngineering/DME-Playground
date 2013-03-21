@@ -1,92 +1,15 @@
-.sticky {
-	background: none repeat scroll 0 0 #222222;
-    /*box-shadow: 0 2px 4px #333333;
-    -webkit-box-shadow: 0 2px 4px #333333;*/
-    display: block;
-    height: 51px;
-	position: fixed;
-    top: 0px;
-	left: 0;	
-    width: 100%;
-	overflow: hidden;
-	padding: 0;
-	z-index: 1000;
+.container li {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 0 0 0 30px;
 }
 
-.ie7 .sticky {
+.typekit-badge {
+    display:none !important;
 }
 
-a#circle {
-	display: block;
-	position: absolute;
-	right: -60px;
-	height: 48px;
-	width: 48px;
-	top: -10px;	
-}
-
-#holder {
-    height: 260px;
-	
-}
-
-#top-header-nav a {
-	text-decoration: none;
-	display: inline-block;
-	border: thin solid black;
-	padding: 1px 6px;
-	background: black;
-}
-
-.sticky ul {
-	display: block;
-	margin: 0px auto;
-	overflow: visible;
-	height: 45px;
-	/*background: url(../img/dmebadge.jpg) scroll no-repeat top left;*/
-;
-}
-
-.sticky ul li {
-	list-style: none;
-	padding: 0;
-	display: inline-block;
-	float: right;
-	margin: 0 8px 0 0;
-	color: white;
-}
-
-.sticky ul li.simplify a {
-	text-align: right;
-	right: 0;
-	position: absolute;
-	width: 270px;	
-}
-
-li.dmegallery {
-	right: 57px;
-	display: block;
-	position: absolute;
-	top: 9px;
-}
-
-.sticky ul li a {
-	color: white;
-	text-decoration: none;
-	font-size: 13px;
-	font-weight: 100;
-}
-
-.sticky ul li.home {
-	position: absolute;
-	width: 43px;
-	overflow: hidden;
-	left: 0; top: 8px;
-	margin: 0;
-}
-
-.sticky ul li.counts {
-	float: none;	
+h1 {
+    font-weight:500;    
 }
 
 /* Progress bar */
@@ -137,12 +60,12 @@ li.dmegallery {
 	-o-transition: all .2s ease;
 }
 
-section div.content {
+section p.content {
     position: relative;
     display: block;
     width: 600px;
-	
     margin: 20px 0;
+    line-height: 1.6em;
 }
 
 section.one {
@@ -165,7 +88,6 @@ section.one div {
 section.two {
     display: block;
     position: relative;
-    padding: 20px 0;
     margin: 834px 0 0;
     background: white;
     z-index: 10;
@@ -174,15 +96,19 @@ section.two {
 section.two div {}
 
 section.three {
-    width: 960px;
     margin: 0 auto;
+    position: relative;
 }
 
 section.three img {
-    margin: 300px;
 }
 
 .yt {}
+
+img.large {
+    width: 100%;
+    margin: 90px 0;
+}
 
 .video-cover h1 {
     margin: 0;
@@ -191,7 +117,7 @@ section.three img {
     color: white;
     display: block;
     position: absolute;
-    font-family: "jaf-bernina-sans-comp";
+    font-family: "league-gothic";
     font-size: 140px;
     left: 50%;
     top: 30px;
@@ -225,70 +151,22 @@ section.three img {
 }
 
 
-footer {
-	display: block;
-	margin: 0px 0 0 0;
-	width: 100%;
-	height: 350px;
-	position: relative;
-	clear: both;
-	color: #aaa;
-	background: url(../img/foot.jpg) #333 bottom center repeat-x;	
-	box-shadow: 0 0 10px black;
-	-webkit-box-shadow: 0 0 10px black;
-}
-
-div#footercontainer {
-    display: block;
-    
-	height: 350px;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    width: 960px;
-	font-size: 14px;
-}
-
-footer a, footer a:visited {
-	color: white;	
-	text-decoration: none;
-}
-
-#breadcrumbs {
-	display: block;
-    margin-top: 0;
-    
-	padding: 40px 0 0;
-    position: relative;	
-}
-
-footer #credits {
-	display: block;	
-	margin: 0;
-}
-
-#credits ul {
-	display: block;	
-	padding: 0;
-	font-size: .85em;
-	font-weight: 100;
-	margin: 1em 0;
-}
-
-#credits ul li {
-    list-style: none;
-		
-    margin: 0;
-    padding: 0;
-}
-
-#credits ul#photocredits {
-	display: block;
-}	
-
 /* Main content start */
 div#container {
 	height: 10000px;
+}
+
+span.dropcap {
+    display: block;
+    font-weight: bold;
+    position: relative;
+    float: left;
+    font-size: 33px;
+    width: 28px;
+    height: 25px;
+    text-align: left;
+    line-height: 23px;
+    clear: none;
 }
 
 /* Fake height for now */
@@ -312,7 +190,33 @@ div.video-cover img {
 	width: 100%;
 	/*position: relative;
 	top: -60px;*/
-;
 	position: absolute;
 	bottom: 0;
+}
+
+section.two h1 {
+    position: absolute;
+    top: 769px;
+    left: 50%;
+    color: white;
+    margin-left: -479px;
+    font-size: 110px;
+    line-height: 76px;
+    text-shadow: 0 0 40px rgba(0,0,0,1);
+}
+
+section.three h1 {
+    position: absolute;
+
+    font-weight: 500;
+    top: 520px;
+    z-index: 100;
+    color: white;
+    left: 50%;
+    font-size: 134px;
+    text-align: right;
+    margin-left: 0px;
+    width: 633px;
+    line-height: 89px;
+    text-shadow: 0 0 40px rgba(0,0,0,1);
 }

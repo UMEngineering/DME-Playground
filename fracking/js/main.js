@@ -4,6 +4,15 @@ var prev_viewable = 0;
 var num=new Array("zero","one","two","three","four","five");
 
 $(document).ready(function(e) {
+
+	//First letter style
+
+	$("div.container p:eq(0)").each(function() {
+        var text = $(this).html();
+        var first = $('<span>'+text.charAt(0)+'</span>').addClass('dropcap');
+        $(this).html(text.substring(1)).prepend(first);
+    });
+
 	var curr_y = $(document).scrollTop();
 	var height = $(document).height();
 	var $sticky_title = $(".sticky li.sticky-title");
@@ -77,7 +86,7 @@ $(document).ready(function(e) {
 			$("section.one").css("opacity", opacityOne);
 		}
 		else {
-			$("section.one").css("opacity","0");
+			$("section.one").css({"opacity":"0","z-index":"-1"});
 		}
 
     });
