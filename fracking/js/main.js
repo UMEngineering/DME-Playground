@@ -9,12 +9,13 @@ $(document).ready(function(e) {
 
 	$("section").each(function() {
 		var target = $(this).children("div.container:first").children("p:first");
-		target.each(function(i,e) {
-			var text = $(e).html();
-			var first = $('<span>'+text.charAt(0)+'</span>').addClass('dropcap');
-			$(e).html(text.substring(1)).prepend(first);
-
-		});
+		if (!$(target[0]).hasClass("nodrop")){
+			target.each(function(i,e) {
+				var text = $(e).html();
+				var first = $('<span>'+text.charAt(0)+'</span>').addClass('dropcap');
+				$(e).html(text.substring(1)).prepend(first);
+			});
+		}
     });
 
 	var curr_y = $(document).scrollTop();

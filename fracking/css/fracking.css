@@ -277,6 +277,10 @@ section.three h1 {
     bottom: 10px;
 }
 
+section.five .largecontainer {
+    margin-bottom: 40px;
+}
+
 section.five .largecontainer h1 {
     position: absolute;
     top: 70px;
@@ -299,11 +303,38 @@ section.five .largecontainer h2 {
     line-height: 43px;
 }
 
-section.five h1 {
+section.five .container h1 {
+    font-size: 60px;
     color: #333;
+    margin: 0 0 0px;
+    line-height: 30px;
 }
 
+section.five .container h2 {
+    color: #333;
+    font-family: "league-gothic";
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+}
+
+section.five .container h2 span.at {
+    font-size: .7em;
+}
+
+section.five .container h3 {
+    display: block;
+}
+
+section.five .container ul {
+}
+
+section.five .container ul li {}
+
 section.five h2 {}
+
+
 
 /* mobile text disabled */
 div.mobile {
