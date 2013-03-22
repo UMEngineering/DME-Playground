@@ -8,7 +8,7 @@
     top: 0px;
 	left: 0;	
     width: 100%;
-	overflow: hidden;
+	overflow: visible;
 	padding: 0;
 	z-index: 1000;
 }
@@ -79,7 +79,7 @@ li.dmegallery {
 	position: absolute;
 	width: 43px;
 	overflow: hidden;
-	left: 0; top: 8px;
+	left: 7px; top: 8px;
 	margin: 0;
 }
 

@@ -1,7 +1,7 @@
 .container li {
     font-weight: bold;
-    font-size: 1.3em;
-    margin: 0 0 0 30px;
+    font-size: 29px;
+    margin: 0 0 5px 40px;
 }
 
 .typekit-badge {
@@ -28,20 +28,39 @@ h1 {
 	position: absolute;
 	left: 49px;
 	top: 16px;
+	display: none;
 }
 
 .sticky .sticky-sections {
 	height: 50px;
 }
 
+.sticky-sections a:after{
+    content: url('../img/down.png');
+    -webkit-transition: all 10s ease;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    z-index: 1000000;
+    left: 50%;
+    bottom: -23px;
+    margin-left: -10px;
+}
+
+.sticky-sections a.active:after{
+    opacity:1;
+}
+
+
 .sticky .sticky-sections span, .sticky .sticky-sections a {
 	color: #b2b2b2;
 	display: inline-block;
 	margin: 0;
-	height: 30px;
+	height: 19px;
 	font-size: 10pt;
 	font-weight: 100;
 	padding: 17px 10px 15px 10px;
+	position: relative;
 }
 
 .sticky .sticky-sections a {
@@ -64,8 +83,12 @@ section p.content {
     position: relative;
     display: block;
     width: 600px;
-    margin: 20px 0;
-    line-height: 1.6em;
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #333;
+    font-family: Georgia;
+    overflow: visible;
 }
 
 section.one {
@@ -91,9 +114,14 @@ section.two {
     margin: 834px 0 0;
     background: white;
     z-index: 10;
+    padding: 80px 0 0;
 }
 
-section.two div {}
+section.two div {
+    height: auto;
+    overflow: auto;
+    position: relative;
+}
 
 section.three {
     margin: 0 auto;
@@ -103,11 +131,20 @@ section.three {
 section.three img {
 }
 
-.yt {}
+.yt {
+    max-height: 620px;
+    z-index: 1;
+}
+
+section .largecontainer {
+    position: relative;
+    margin: 90px 0;
+    width: 100%;
+}
 
 img.large {
     width: 100%;
-    margin: 90px 0;
+    margin: 0;
 }
 
 .video-cover h1 {
@@ -119,10 +156,10 @@ img.large {
     position: absolute;
     font-family: "league-gothic";
     font-size: 140px;
-    left: 50%;
-    top: 30px;
+    left: 37px;
+    top: 0px;
     text-shadow: 0 0 30px rgba(0,0,0,.4);
-    -webkit-transition: all 1s ease;
+    -webkit-transition: all .5s ease;
 }
 
 .video-cover h1.active {
@@ -131,9 +168,9 @@ img.large {
 
 .video-cover .vid-play {
     position: absolute;
-    -webkit-transition: all 1s ease;
+    -webkit-transition: all .5s ease;
     z-index: 100;
-    bottom: 30px;
+    bottom: 70px;
     left: 50px;
     background: url(../img/triangle.png) rgba(255,255,255,.3) no-repeat 50% scroll;
     text-indent: -9999px;
@@ -142,12 +179,28 @@ img.large {
     width: 181px;
     height: 120px;
     background-size: 60px;
-    opacity: .8;
+    opacity: .5;
 }
 
 .video-cover .vid-play.active {
     opacity: 1;
     box-shadow: 0 0 40px black;
+}
+
+.calltoaction {
+    z-index: 1000;
+    position: absolute;
+    -webkit-transition: all .5s ease;
+    bottom: 8px;
+    color: white;
+    left: 50px;
+    font-size: 39px;
+    font-family: "league-gothic";
+    text-shadow: 0 0 10px black;
+}
+
+.calltoaction.active {
+    text-shadow: 0 0 20px black;
 }
 
 
@@ -158,19 +211,23 @@ div#container {
 
 span.dropcap {
     display: block;
-    font-weight: bold;
+    font-weight: 100;
     position: relative;
     float: left;
-    font-size: 33px;
-    width: 28px;
-    height: 25px;
+    font-size: 53px;
+    width: 41px;
+    height: 46px;
     text-align: left;
-    line-height: 23px;
+    line-height: 54px;
     clear: none;
+    color: #FF7F66;
+    font-family: Helvetica, arial, sans-serif;
+    overflow: visible;
 }
 
 /* Fake height for now */
 .section {
+	position: relative;
 	padding-top: 52px;
 }
 
@@ -184,6 +241,8 @@ div.video-cover {
 	left: 0;
 	cursor: pointer;
 	overflow-y: hidden;
+	max-height: 620px;
+	z-index: 1000;
 }
 
 div.video-cover img {
@@ -196,10 +255,9 @@ div.video-cover img {
 
 section.two h1 {
     position: absolute;
-    top: 769px;
-    left: 50%;
+    bottom: 10px;
+    left: 20px;
     color: white;
-    margin-left: -479px;
     font-size: 110px;
     line-height: 76px;
     text-shadow: 0 0 40px rgba(0,0,0,1);
@@ -207,16 +265,42 @@ section.two h1 {
 
 section.three h1 {
     position: absolute;
-
     font-weight: 500;
-    top: 520px;
     z-index: 100;
     color: white;
-    left: 50%;
-    font-size: 134px;
+    right: 30px;
+    font-size: 111px;
     text-align: right;
-    margin-left: 0px;
     width: 633px;
-    line-height: 89px;
+    line-height: 75px;
+    text-shadow: 0 0 40px black;
+    bottom: 10px;
+}
+
+section.five .largecontainer h1 {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    color: white;
+    font-size: 110px;
+    line-height: 76px;
     text-shadow: 0 0 40px rgba(0,0,0,1);
 }
+
+section.five .largecontainer h2 {
+    position: absolute;
+    color: white;
+    top: 132px;
+    left: 20px;
+    text-shadow: 0 0 20px black;
+    font-family: "league-gothic";
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 43px;
+}
+
+section.five h1 {
+    color: #333;
+}
+
+section.five h2 {}

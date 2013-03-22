@@ -7,10 +7,14 @@ $(document).ready(function(e) {
 
 	//First letter style
 
-	$("div.container p:eq(0)").each(function() {
-        var text = $(this).html();
-        var first = $('<span>'+text.charAt(0)+'</span>').addClass('dropcap');
-        $(this).html(text.substring(1)).prepend(first);
+	$("section").each(function() {
+		var target = $(this).children("div.container:first").children("p:first");
+		target.each(function(i,e) {
+			var text = $(e).html();
+			var first = $('<span>'+text.charAt(0)+'</span>').addClass('dropcap');
+			$(e).html(text.substring(1)).prepend(first);
+
+		});
     });
 
 	var curr_y = $(document).scrollTop();
@@ -24,12 +28,12 @@ $(document).ready(function(e) {
 	
 	$(".video-cover").mouseenter(function(){
 		$this = $(this);
-		$this.children("h1, .vid-play").addClass("active");
+		$this.children("h1, .vid-play, .calltoaction").addClass("active");
 	});
 
 	$(".video-cover").mouseleave(function(){
 		$this = $(this);
-		$this.children("h1, .vid-play").removeClass("active");
+		$this.children("h1, .vid-play, .calltoaction").removeClass("active");
 	});
 	
 	// Bound the click behavior for stage-1 top nav, so click on that will go to the top of the page
@@ -67,11 +71,16 @@ $(document).ready(function(e) {
 			$sticky_title.text($("section." + num[viewable] + " h1").text());
 			$(".stage-a").css({"background" : "none", "color" : "#b2b2b2"});
 			$(".stage-" + viewable).css({"background" : "rgba(80,80,80,0.62)", "color" : "white"});
+			$(".stage-" + prev_viewable).removeClass("active");
+			$(".stage-" + viewable).addClass("active");
 			window.location.hash = "#" + $("section." + num[viewable]).attr("id");
 		}
 
 		scrollTop = $window.scrollTop();
-		if (scrollTop < 700) {
+		if (scrollTop < 1) {
+			$("section.one").css({"opacity": "1","display":"block","z-index":"5"});
+		}
+		else if (scrollTop < 700) {
 
 		    elementOffset = $('section.two').offset().top;
 		    distance      = (elementOffset - scrollTop);
@@ -83,10 +92,10 @@ $(document).ready(function(e) {
 			console.log(distance + " / " + firstelemheight);
 			console.log("Opacity: ", opacityOne);
 
-			$("section.one").css("opacity", opacityOne);
+			$("section.one").css({"opacity": opacityOne,"display":"block","z-index":"5"});
 		}
 		else {
-			$("section.one").css({"opacity":"0","z-index":"-1"});
+			$("section.one").css({"display":"none","z-index":"-1"});
 		}
 
     });
