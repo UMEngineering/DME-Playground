@@ -79,6 +79,10 @@ h1 {
 	-o-transition: all .2s ease;
 }
 
+.sharethis {
+	margin-bottom: 20px;
+}
+
 section p.content {
     position: relative;
     display: block;
