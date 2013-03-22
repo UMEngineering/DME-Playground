@@ -138,9 +138,23 @@ section.two div {
 section.three {
     margin: 0 auto;
     position: relative;
+    z-index: 10;
 }
 
+
 section.three img {
+}
+
+section.four {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+section.five {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .yt {
