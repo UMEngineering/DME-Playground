@@ -47,6 +47,8 @@ $(document).ready(function(e) {
     });
 
 	// Scroll listener
+    
+	
     $(document).scroll(function(e) {
 		// Calculate and change the current progress (max 100.0, min 0.00, for percentage in #progressBar)
 		curr_y = $(document).scrollTop();
@@ -79,24 +81,30 @@ $(document).ready(function(e) {
 
 		scrollTop = $window.scrollTop();
 		if (scrollTop < 1) {
-			$("section.one").css({"opacity": "1","display":"block","z-index":"5"});
+			if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) {
+				$("section.one").css({"opacity": "1","display":"block","z-index":"5"});
+			}
 		}
 		else if (scrollTop < 700) {
+			if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) {
 
-		    elementOffset = $('section.two').offset().top;
-		    distance      = (elementOffset - scrollTop);
-		    firstelemheight = $("section.one").height() + $(".sticky").height() + 70;
-		    console.log("First: ", firstelemheight);
+			    elementOffset = $('section.two').offset().top;
+			    distance      = (elementOffset - scrollTop);
+			    firstelemheight = $("section.one").height() + $(".sticky").height() + 70;
+			    console.log("First: ", firstelemheight);
 
-		    opacityOne = distance / firstelemheight;
+			    opacityOne = distance / firstelemheight;
 
-			console.log(distance + " / " + firstelemheight);
-			console.log("Opacity: ", opacityOne);
+				console.log(distance + " / " + firstelemheight);
+				console.log("Opacity: ", opacityOne);
 
-			$("section.one").css({"opacity": opacityOne,"display":"block","z-index":"5"});
+				$("section.one").css({"opacity": opacityOne,"display":"block","z-index":"5"});
+			}
 		}
 		else {
-			$("section.one").css({"display":"none","z-index":"-1"});
+			if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ) {
+				$("section.one").css({"display":"none","z-index":"-1"});
+			}
 		}
 
     });

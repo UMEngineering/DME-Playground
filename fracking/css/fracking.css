@@ -1,7 +1,12 @@
+body, html {
+    position:relative;
+    width: 100%;
+}
+
 .container li {
     font-weight: bold;
     font-size: 29px;
-    margin: 0 0 5px 40px;
+    margin: 0 0 -2px 55px;
 }
 
 .typekit-badge {
@@ -10,6 +15,7 @@
 
 h1 {
     font-weight:500;    
+    padding: 0 0 0 15px;
 }
 
 /* Progress bar */
@@ -88,6 +94,7 @@ section p.content {
     display: block;
     width: 600px;
     margin: 0 0 25px;
+    padding: 0 0 0 15px;
     font-size: 18px;
     line-height: 28px;
     color: #333;
@@ -164,6 +171,7 @@ img.large {
     top: 0px;
     text-shadow: 0 0 30px rgba(0,0,0,.4);
     -webkit-transition: all .5s ease;
+    padding: 0;
 }
 
 .video-cover h1.active {
@@ -265,6 +273,7 @@ section.two h1 {
     font-size: 110px;
     line-height: 76px;
     text-shadow: 0 0 40px rgba(0,0,0,1);
+    padding: 0;
 }
 
 section.three h1 {
@@ -282,7 +291,7 @@ section.three h1 {
 }
 
 section.five .largecontainer {
-    margin-bottom: 40px;
+    margin-bottom: 110px;
 }
 
 section.five .largecontainer h1 {
@@ -293,6 +302,7 @@ section.five .largecontainer h1 {
     font-size: 110px;
     line-height: 76px;
     text-shadow: 0 0 40px rgba(0,0,0,1);
+    padding: 0;
 }
 
 section.five .largecontainer h2 {
@@ -321,6 +331,7 @@ section.five .container h2 {
     font-size: 50px;
     font-weight: 500;
     margin: 0;
+    padding: 0 0 0 15px;
 }
 
 section.five .container h2 span.at {
@@ -331,13 +342,74 @@ section.five .container h3 {
     display: block;
 }
 
-section.five .container ul {
+section.five .container ul.images {
+    margin: 45px 0 56px 17px;
 }
 
-section.five .container ul li {}
+section.five .container ul.images li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0 25px 0 0px;
+    color: #333;
+}
+
+section.five .container ul.images li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+section.five .container ul.images li.eng {
+    background: url(../img/eng.jpg) top left no-repeat scroll;
+    width: 265px;
+    height: 53px;
+}
+
+section.five .container ul.images li.mradio {
+    background: url(../img/mradio.jpg) top left no-repeat scroll;
+    width: 264px;
+    height: 72px;
+}
+
+section.five .container ul.images li.mconnex {
+    background: url(../img/mconnex.png) top left no-repeat scroll;
+    width: 280px;
+    height: 66px;
+}
+
+section.five .container ul {
+    font-family: Georgia, serif;
+    margin: -20px 0 60px 0;
+    padding: 0;
+}
+
+section.five .container ul li {
+    font-weight: 100;
+    font-size: 18px;
+    color: #333;
+}
 
 section.five h2 {}
 
+section p.right {
+    float: right;
+    width: 310px;
+}
+
+a.blau {
+    display: block;
+    text-align: right;
+    border: thin solid #d7d7d7;
+    background: url(../img/map.png) #fafafa no-repeat 6px 6px;
+    font-size: 14px;
+    height: 100px;
+    width: 190px;
+    padding: 6px 6px 6px 106px;
+    text-decoration: none;
+    font-family: Helvetica,arial, sans-serif;
+}
 
 
 /* mobile text disabled */

@@ -105,7 +105,7 @@ div#footercontainer {
     
 	height: 350px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 0 15px;
     position: relative;
     width: 960px;
 	font-size: 14px;
