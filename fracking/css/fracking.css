@@ -304,3 +304,24 @@ section.five h1 {
 }
 
 section.five h2 {}
+
+/* mobile text disabled */
+div.mobile {
+	display: none;
+}
+
+/* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
+@media only screen and (max-width: 874px) {
+	div.desktop {
+		display: none;
+	}
+	
+	div.mobile {
+		display: block;
+	}
+	
+	.sticky ul li.sticky-title {
+		display: block;
+		font-size: 10pt;
+	}
+}

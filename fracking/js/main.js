@@ -107,9 +107,9 @@ function checkView(elem) {
 	var bottom = top + $(window).height();
 	var elemTop = $(elem).offset().top;
 	var elemBottom = elemTop + $(elem).height();
-	/*console.log(top);
-	console.log(elemTop);
-	console.log(bottom);
-	console.log(elemBottom);*/
+	/*console.log("top: " + top);
+	console.log("elemTop: " + elemTop);
+	console.log("bottom: " + bottom);
+	console.log("elemBottom: " + elemBottom);*/
 	return ((top >= elemTop) && (bottom <= elemBottom));
 }
