@@ -19,6 +19,10 @@ h1 {
     padding: 0 0 0 15px;
 }
 
+div.video iframe {
+	/*display: none;*/
+}
+
 /* Progress bar */
 .sticky div#progress {
 	height: 3px;
