@@ -86,7 +86,7 @@ $(document).ready(function(e) {
 			$(".stage-" + viewable).css({"background" : "rgba(80,80,80,0.62)", "color" : "white"});
 			$(".stage-" + prev_viewable).removeClass("active");
 			$(".stage-" + viewable).addClass("active");
-			window.location.hash = "#" + $("section." + num[viewable]).attr("id");
+			window.location.hash = "#-" + $("section." + num[viewable]).attr("id");
 		}
 
 		/*scrollTop = $window.scrollTop();
