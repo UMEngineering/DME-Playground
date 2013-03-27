@@ -7,7 +7,7 @@ body, html {
 .container li {
     font-weight: bold;
     font-size: 29px;
-    margin: 0 0 -2px 55px;
+    margin: 35px 0 2px 55px;
 }
 
 .typekit-badge {
@@ -90,6 +90,59 @@ h1 {
 	margin: 0 0 12px 15px;
 }
 
+.pullquote {
+    display: block;
+    position: relative;
+    width: 285px;
+    float: right;
+    font-family: "league-gothic", sans-serif;
+    font-size: 39px;
+    margin: 0 0 60px 10px;
+    padding: 0 12px;
+    text-align: center;
+    background: url(../img/quot1.png) top left no-repeat scroll, url(../img/quot2.png) bottom right no-repeat scroll;
+}
+
+.pullquote .credit {
+    display: block;
+    position: absolute;
+    border-left: thin solid #ccc;
+    font-family: Helvetica,sans-serif, arial;
+    font-size: 12px;
+    right: 50%;
+    width: 260px;
+    margin-right: -130px;
+    text-align: left;
+    padding: 0 0 0 10px;
+    color: #999;
+    font-weight: 100;
+    font-style: italic;
+    bottom: -40px;
+}
+
+.pullquote.one .credit {
+    bottom: -58px;
+}
+
+.pullquote.five .credit {
+    bottom: -60px;
+}
+
+.assets {
+    float: right;
+    margin: 10px 0 10px 12px;
+}
+
+.assets img {
+    width: 300px;
+}
+
+div.map {
+    float: right;
+    margin: 10px 0 0 12px;
+    text-align: center;
+}
+
 section p.content {
     position: relative;
     display: block;
@@ -105,10 +158,11 @@ section p.content {
 
 section.one {
     display: block;
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 10;
     top: 50px;
+    max-height: 588px;
 }
 
 section div.container {
@@ -123,7 +177,7 @@ section.one div {
 section.two {
     display: block;
     position: relative;
-    margin: 834px 0 0;
+    margin: 44px 0 0;
     background: white;
     z-index: 10;
     padding: 80px 0 0;
@@ -164,7 +218,7 @@ section.five {
 
 section .largecontainer {
     position: relative;
-    margin: 90px 0;
+    margin: 70px 0;
     width: 100%;
 }
 
@@ -184,13 +238,13 @@ img.large {
     font-size: 140px;
     left: 37px;
     top: 0px;
-    text-shadow: 0 0 30px rgba(0,0,0,.4);
     -webkit-transition: all .5s ease;
     padding: 0;
+    text-shadow: 0 0 20px rgba(0,0,0,.4);
 }
 
 .video-cover h1.active {
-    text-shadow: 0 0 40px rgba(0,0,0,.8);
+    text-shadow: 0 0 40px rgba(0,0,0,1);
 }
 
 .video-cover .vid-play {
@@ -220,7 +274,8 @@ img.large {
     -webkit-transition: all .5s ease;
     bottom: 8px;
     color: white;
-    left: 50px;
+    left: 260px;
+    bottom: 60px;
     font-size: 39px;
     font-family: "league-gothic";
     text-shadow: 0 0 10px black;
@@ -270,6 +325,8 @@ div.video-cover {
 	overflow-y: hidden;
 	max-height: 620px;
 	z-index: 1000;
+	background: url(../img/large/one.jpg) 50% no-repeat;
+	background-size: cover;
 }
 
 div.video-cover img {
@@ -278,6 +335,7 @@ div.video-cover img {
 	top: -60px;*/
 	position: absolute;
 	bottom: 0;
+	display: none;
 }
 
 section.two h1 {
@@ -305,6 +363,20 @@ section.three h1 {
     bottom: 10px;
 }
 
+section.four h1 {
+    position: absolute;
+    font-weight: 500;
+    z-index: 100;
+    color: white;
+    left: 0px;
+    font-size: 111px;
+    text-align: left;
+    max-width: 633px;
+    line-height: 75px;
+    text-shadow: 0 0 40px black;
+    top: 10px;
+}
+
 section.five .largecontainer {
     margin-bottom: 110px;
 }
@@ -322,6 +394,7 @@ section.five .largecontainer h1 {
 
 section.five .largecontainer h2 {
     position: absolute;
+    margin: 64px 0;
     color: white;
     top: 132px;
     left: 20px;
@@ -330,6 +403,7 @@ section.five .largecontainer h2 {
     font-size: 60px;
     text-transform: uppercase;
     line-height: 43px;
+    font-weight: 500;
 }
 
 section.five .container h1 {
@@ -448,6 +522,6 @@ div.mobile {
 	}
 	
 	section.five .container ul.images li {
-		margin: 10px 25px 10px 0px;
+		margin: 10px 20px 10px 0px;
 	}
 }
