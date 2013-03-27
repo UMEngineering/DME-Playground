@@ -516,6 +516,16 @@ div.mobile {
 }
 
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
+@media only screen and (max-width: 1000px) {
+    section.one .calltoaction {
+    bottom: 8px;
+}
+    section.one .vid-play {
+    bottom: 8px;
+}
+    
+}
+
 @media only screen and (max-width: 874px) {
 	div.desktop {
 		display: none;
@@ -543,6 +553,8 @@ div.mobile {
 	.assets, .pullquote, .map {
 		margin-right: 40px !important;
 	}
+
+    
 }
 
 @media only screen and (max-width: 500px) {
