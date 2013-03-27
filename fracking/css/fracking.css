@@ -52,6 +52,7 @@ h1 {
     left: 50%;
     bottom: -23px;
     margin-left: -10px;
+    background: transparent;
 }
 
 .sticky-sections a.active:after{
