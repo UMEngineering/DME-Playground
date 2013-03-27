@@ -46,19 +46,6 @@ $(document).ready(function(e) {
 	
     $(document).scroll(function(e) {
 		// Adjust the h1 and h2 font size
-		var width = $(window).width();
-		if (width < 851 && width / 6.25 < 110 && width / 10 < 60) {
-			$("section.section div.largecontainer h1").css({"font-size" : (width / 6.25) + "px", "line-height" : (width / 6.25) + "px"});
-			$("section.section div.largecontainer h2").css({"font-size" : (width / 15) + "px", "line-height" : (width / 15) + "px"});
-			$("section.section div.container h1").css({"line-height" : "60px"});
-		}
-		if (width < 851 && width / 4 < 140) {
-			$("section.section div.video-cover h1").css({"font-size" : (width / 4) + "px"});
-		}
-		if (width < 861) {
-			$("section.five .largecontainer h1").css({"top" : "-5px"});
-			$("section.five .largecontainer h2").css({"top" : "45px"});
-		}
 		
 		// Calculate and change the current progress (max 100.0, min 0.00, for percentage in #progressBar)
 		curr_y = $(document).scrollTop();

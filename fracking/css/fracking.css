@@ -506,6 +506,10 @@ div.mobile {
 	display: none;
 }
 
+.sticky ul li.sticky-title {
+	display: none;
+}
+
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
 @media only screen and (max-width: 874px) {
 	div.desktop {
@@ -519,9 +523,38 @@ div.mobile {
 	.sticky ul li.sticky-title {
 		display: block;
 		font-size: 10pt;
+		height: 20px;
+		overflow-y: scroll;
 	}
+	
+	/*.sticky ul li.sticky-title span {
+		width: 202px !important;
+	}*/
 	
 	section.five .container ul.images li {
 		margin: 10px 20px 10px 0px;
+	}
+	
+	.assets, .pullquote, .map {
+		margin-right: 40px !important;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.assets {
+		max-width: 300px;
+	}
+	.assets, .pullquote, .map, section p.right {
+		float: none !important;
+		margin: auto !important;
+	}
+	
+	section p.right, .assets {
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+	
+	.pullquote {
+		margin-bottom: 80px !important;
 	}
 }

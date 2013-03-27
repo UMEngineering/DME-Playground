@@ -107,7 +107,7 @@ div#footercontainer {
     margin: 0 auto;
     padding: 0 0 0 15px;
     position: relative;
-    width: 960px;
+    max-width: 960px;
 	font-size: 14px;
 }
 
