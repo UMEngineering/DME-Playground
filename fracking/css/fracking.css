@@ -21,6 +21,7 @@ h1 {
 
 div.video iframe {
 	display: none;
+	display: inline \9;
 }
 
 /* Progress bar */
