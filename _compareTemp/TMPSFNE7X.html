@@ -23,8 +23,7 @@
         <script type="text/javascript" src="//use.typekit.net/vcr5ljd.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">stLight.options({publisher: "f4363d19-5e45-4068-a0a0-b196485060ab", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-		<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+<script type="text/javascript">stLight.options({publisher: "f4363d19-5e45-4068-a0a0-b196485060ab", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -56,7 +55,7 @@
                     <h1>Fracktopia</h1>
                     <div class="vid-play">Play video</div>
                     <div class="calltoaction">Click to start Fracktopia</div>
-                    <img src="img/large/one.jpg" alt="title" id="top-image" />
+                    <img src="img/large/one.jpg" alt="title" />
                 </div>
                 <div id="player0"></div>
                 <!--<iframe class="youtubeVideo" width="560" height="315" src="http://www.youtube.com/embed/c2W_Zlt8J2Y" frameborder="0" allowfullscreen></iframe>-->
@@ -305,31 +304,7 @@ environmental engineering</li>
         <script src="js/jquery.colorbox-min.js"></script>
 		<script src="js/jquery.slides.min.js"></script>
         <script>
-		var isMobile = {
-			Android: function() {
-				return navigator.userAgent.match(/Android/i);
-			},
-			BlackBerry: function() {
-				return navigator.userAgent.match(/BlackBerry/i);
-			},
-			iOS: function() {
-				return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-			},
-			Opera: function() {
-				return navigator.userAgent.match(/Opera Mini/i);
-			},
-			Windows: function() {
-				return navigator.userAgent.match(/IEMobile/i);
-			},
-			any: function() {
-				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-			}
-		};
-		
-		if (!isMobile.any()) {
-			$(".group1").colorbox({rel:'group1'});
-		}
-		
+		$(".group1").colorbox({rel:'group1'});
 		$(function(){
 			$("#slides-bottom").slidesjs({
 				width: 940,
@@ -347,8 +322,6 @@ environmental engineering</li>
     	var player0;
 	
 	  function onYouTubeIframeAPIReady() {
-		  //$("img#top-image").load(function(e) {
-          
 		  player0 = new YT.Player('player0', {
 			videoId: 'c2W_Zlt8J2Y',
             wmode: 'transparent',
@@ -426,23 +399,13 @@ environmental engineering</li>
 								$("section.five .largecontainer h2").css({"top" : "45px"});
 							}
 						}).resize();
-						
-						// Before image load, the youtube is set as display: none
-						// Set the video display as inline after image load
-						$("img#top-image").ready(function(e) {
-							alert("12312r1");
-                            $("div.video iframe").css("display", "inline");
-                        });
 			  },
 			  'onStateChange': function(event){ var parent = $(event.target.a).parent()[0]; var overlay = $(parent).find(".video-cover")[0];var play = $(parent).find(".play")[0];if (event.data == 2) { $(overlay).fadeIn(500);$(play).fadeIn(1000);}}
 			}
 		  });
-		  //$("div.video iframe").css("display", "inline");
-       // });
 		}
 	$(".video-cover").click(function(e){
 		e.preventDefault();
-		
 		var overlay = $(this)/*, playbutton = $(".overlay .play");*/
 		//console.log(overlay);
 		$(overlay).fadeOut(500);

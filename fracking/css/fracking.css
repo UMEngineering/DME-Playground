@@ -20,7 +20,7 @@ h1 {
 }
 
 div.video iframe {
-	/*display: none;*/
+	display: none;
 }
 
 /* Progress bar */
