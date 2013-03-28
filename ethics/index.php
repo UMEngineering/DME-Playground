@@ -87,7 +87,7 @@ $short_ans = array();
         <div class="sticky" id="nav">
             <ul>
                 <li class="home"><a href="http://engin.umich.edu"><img src="img/mighigan_engineering_25.png" alt="Michigan Engineering" /></a></li>
-                <li class="dmegallery"><a href="http://www.engin.umich.edu/newscenter/dme">Digital Multimedia Experience Gallery</a><a id="circle" href="http://www.engin.umich.edu/newscenter/dme"></a></li>
+                <li class="dmegallery"><a href="http://www.engin.umich.edu/college/about/news/?Digital-Multimedia=true">Digital Multimedia Experience Gallery</a><a id="circle" href="http://www.engin.umich.edu/college/about/news/?Digital-Multimedia=true"></a></li>
             </ul>
         </div>  
 
@@ -95,7 +95,7 @@ $short_ans = array();
             <div id="top-header-content">
             	<div id="top-header-logo">Ethical Tech</div>
             	<div id="top-header-subtitle">Gray areas are expanding as the world grows more complex.</div>
-            	<div id="top-header-nav"><a href="http://www.engin.umich.edu/" target=_blank><span class="color-red">COLLEGE</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/about" target=_blank><span class="color-red">ABOUT</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news" target=_blank><span class="color-red">NEWS</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/newscenter/dme"><span class="color-red">DME</span></a><img src="img/arrow.png" /><span>ETHICAL TECH</span></div>
+            	<div id="top-header-nav"><a href="http://www.engin.umich.edu/" target=_blank><span class="color-red">COLLEGE</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/about" target=_blank><span class="color-red">ABOUT</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news" target=_blank><span class="color-red">NEWS</span></a> <img src="img/arrow.png" /> <a href="http://www.engin.umich.edu/college/about/news/?Digital-Multimedia=true"><span class="color-red">DME</span></a><img src="img/arrow.png" /><span>ETHICAL TECH</span></div>
             </div>
         </div>
 		<div id="container">
@@ -111,11 +111,11 @@ $short_ans = array();
                         <span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
                     </div>
                     <p>On Day One of Engineering 101 on the Princeton campus, not so many years ago, a professor strode into class, threw down his jacket and said to his students, “I just heard about a fantastic new invention. Virtually everyone in the world will want it. It’ll create millions of jobs and improve people’s quality of life. The inventor’s looking for investors. Who wants in?” </p>
-                    <p class="pullquote">Engineers do things of consequence, sometime positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible.</p>
+                    <p class="pullquote">Engineers do things of consequence, sometimes positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible.</p>
 
                     <p>Hands shot up. Yes! Yes! Of course we would! The collective look in their eyes said, “Engineering’s gonna make me rich, and I haven’t even pulled my first all-nighter.”</p>
                     <p>“But,” the professor said, wagging a finger, “this invention will kill a quarter of a million people each year.”</p>
-                    <p>The hands went down slowly, as if the hands themselves had learned the lesson of the day: Engineers do things of consequence, sometime positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible. (By the way, the “new invention” in the professor’s scenario was the automobile.)</p>
+                    <p>The hands went down slowly, as if the hands themselves had learned the lesson of the day: Engineers do things of consequence, sometimes positive, sometimes negative, sometimes accidental, often widespread, occasionally irreversible. (By the way, the “new invention” in the professor’s scenario was the automobile.)</p>
 					<p>He continued, telling his class that engineering does indeed deal with equations, physical laws and problem-solving, but it’s not that simple. Engineers often work at the intersection or technology and ethics.</p>
                     <p>Cynthia Finelli (BSE EE ’88, MSE ’89, PhD ’93) is the director of the Center for Research on Learning and Teaching in Engineering and a research associate professor. She’s also part of E3 (Exploring Ethical Decision-Making in Engineering), a multi-institutional team of engineering educators that studies engineering ethics. She notes that “using engineering to improve people’s lives requires more than an ability to build bridges and unravel the mysteries of DNA. Engineers need a moral center.” </p>
 					

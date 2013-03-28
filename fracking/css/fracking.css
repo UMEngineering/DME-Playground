@@ -182,7 +182,7 @@ section.one div {
 section.two {
     display: block;
     position: relative;
-    margin: 44px 0 0;
+    margin: 82px 0 0;
     background: white;
     z-index: 10;
     padding: 80px 0 0;
@@ -322,6 +322,12 @@ section.one {
 	padding-top: 0;
 }
 
+div.video {
+    display: block;
+    position: relative;
+    height: 700px;
+}
+
 div.video-cover {
 	width: 100%;
 	position: absolute;
@@ -332,6 +338,8 @@ div.video-cover {
 	z-index: 1000;
 	background: url(../img/large/one.jpg) 50% no-repeat;
 	background-size: cover;
+    top: 0;
+    bottom: 0;
 }
 
 div.video-cover img {

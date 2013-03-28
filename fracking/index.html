@@ -336,14 +336,15 @@ Environmental Engineering</li>
 		</script>
 
         
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.queryloader2.js"></script>
 		<script src="js/jquery.slides.min.js"></script>
         <script>
 		
+
+
 		$(document).ready(function () {
 			
-			$("body").queryLoader2();
+
+
 			
 		
 			$(function(){
@@ -389,6 +390,7 @@ Environmental Engineering</li>
 						// (You'll probably want to debounce this)
 						$h1 = $("section.section div.largecontainer h1");
 						$h2 = $("section.section div.largecontainer h2");
+                        $vidcover = ("section.section div.video-cover");
 						$vh1 = $("section.section div.video-cover h1");
 						$play = $(".vid-play");
 						$calltoaction = $(".calltoaction");
@@ -399,12 +401,12 @@ Environmental Engineering</li>
 							$allVideos.each(function() {
 								var $el = $(this);
 								var newHeight = newWidth * $el.data('aspectRatio');
-                                var newMargin = newHeight + 50;
+                                var newMargin = newHeight + 75;
 								$el
 									.width(newWidth)
 									.height(newWidth * $el.data('aspectRatio'));
                                 //console.log("New margin: ", newMargin);
-								$("#top-video .video-cover").css({"height" : newHeight + "px"});
+								$("#top-video .video-cover, #top-video").css({"height" : newHeight + "px"});
                                 /*if (newMargin < 680) $("section.two").css("margin-top", newMargin + "px");
                                 else { $("section.two").css("margin-top", "670px"); }*/
 							});
@@ -447,10 +449,18 @@ Environmental Engineering</li>
 						// Set the video display as inline after image load
 						$("img#top-image").ready(function(e) {
 
-                            $("div.video iframe").css("display", "inline");
+                            // $("div.video iframe").css("display", "inline");
                         });
 			  },
-			  'onStateChange': function(event){ var parent = $(event.target.a).parent()[0]; var overlay = $(parent).find(".video-cover")[0];var play = $(parent).find(".play")[0];if (event.data == 2) { $(overlay).fadeIn(500);$(play).fadeIn(1000);}}
+			  'onStateChange': function(event){ 
+                var parent = $(event.target.a).parent()[0]; 
+                var overlay = $(parent).find(".video-cover")[0];
+                var play = $(parent).find(".play")[0];
+                if (event.data == 2) { 
+                    $(overlay).fadeIn(500);$(play).fadeIn(1000);
+                    $("#top-video iframe").hide();
+                }
+            }
 			}
 		  });
 		  //$("div.video iframe").css("display", "inline");
@@ -463,6 +473,7 @@ Environmental Engineering</li>
     		//console.log(overlay);
     		$(overlay).fadeOut(500);
     		//$(playbutton).fadeOut(200)
+            $("#top-video iframe").show();
     		player0.playVideo();
     	  });
 
