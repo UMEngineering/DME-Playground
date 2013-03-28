@@ -33,7 +33,7 @@ $(document).ready(function(e) {
 	
 	// Bound the click behavior for stage-1 top nav, so click on that will go to the top of the page
 	$("a.stage-1").click(function(e) {
-        window.scrollTo(0, 0);
+        $("body").scrollTop();
 		$sticky_title.text($("section.one h1").text());
 		$(".stage-a").css({"background" : "none", "color" : "#b2b2b2"});
 		$(".stage-1").css({"background" : "rgba(80,80,80,0.62)", "color" : "white"});

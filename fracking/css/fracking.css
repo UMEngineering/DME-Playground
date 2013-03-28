@@ -49,7 +49,6 @@ div.video iframe {
 
 .sticky-sections a:after{
     content: url('../img/down.png');
-    -webkit-transition: all 10s ease;
     opacity: 0;
     display: block;
     position: absolute;
@@ -224,7 +223,7 @@ section.five {
 
 section .largecontainer {
     position: relative;
-    margin: 70px 0;
+    margin: -1px 0 70px;
     width: 100%;
 }
 
@@ -514,6 +513,10 @@ div.mobile {
 
 .sticky ul li.sticky-title {
 	display: none;
+}
+
+div#slides-bottom {
+    display:none !important;
 }
 
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
