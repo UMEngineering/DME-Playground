@@ -41,7 +41,7 @@
                 <li class="sticky-sections">
 <!--                 	<span id="stage">SECTION: </span>
  --> 
-                    <a href="#" class="stage-a stage-1"><div class="desktop">Video: Fracktopia</div><div class="mobile">1</div></a>
+                    <a href="#" class="stage-a stage-1"><div class="desktop">Fracktopia home</div><div class="mobile">1</div></a>
                     <a href="#how-to-frack-a-shale-gas-well" class="stage-a stage-2"><div class="desktop">How to frack a shale gas well</div><div class="mobile">2</div></a>
                     <a href="#shale-under-the-microscope" class="stage-a stage-3"><div class="desktop">Shale under the microscope</div><div class="mobile">3</div></a>
                     <a href="#the-outlook-for-michigan" class="stage-a stage-4"><div class="desktop">The outlook for Michigan</div><div class="mobile">4</div></a>
@@ -68,6 +68,7 @@
         
         <section class="two section" id="how-to-frack-a-shale-gas-well">
             <div class="container">
+                <div class="byline">By Nicole Casal Moore</div>
             	<div class="sharethis"><span class='st_googleplus_large' displayText='Google +'></span>
 <span class='st_facebook_large' displayText='Facebook'></span>
 <span class='st_twitter_large' displayText='Tweet'></span>
@@ -262,20 +263,22 @@ meeting on the future of fracking in Michigan. This live event will feature a sc
                     <li>Assistant Prof. Brian Ellis, Michigan Engineering Department of Civil and
 Environmental Engineering</li>
                     <li>Erik Bauss, Michigan field director, Energy in Depth</li>
-                    <li>Prof. XXXZZZXXXX, Ross school of business</li>
                     <li>Representative from the Michigan Department of Environmental Quality</li>
                 </ul>
             </div>
         </section>
-        <div id="slides-bottom">
-            <img src="img/940x528.gif">
-            <img src="img/940x528.gif">
-            <img src="img/940x528.gif">
-            <img src="img/940x528.gif">
-            <img src="img/940x528.gif">
-            <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
-            <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
-		</div>
+
+        <div id="slidecontainer">
+            <div id="slides-bottom">
+                <img src="img/940x528.gif">
+                <img src="img/940x528.gif">
+                <img src="img/940x528.gif">
+                <img src="img/940x528.gif">
+                <img src="img/940x528.gif">
+                <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+                <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+    		</div>
+        </div>
         <footer>
    
             <div id="footercontainer">
@@ -368,7 +371,10 @@ Environmental Engineering</li>
           
 		  player0 = new YT.Player('player0', {
 			videoId: 'c2W_Zlt8J2Y',
-            wmode: 'transparent',
+            playerVars: {
+                modestbranding: 1,
+                wmode: "opaque"
+            },
 			events: {
 			  'onReady': function(event){ 
 					//console.log("Loaded");
@@ -469,12 +475,12 @@ Environmental Engineering</li>
     	$(".video-cover").click(function(e){
     		e.preventDefault();
     		
-    		var overlay = $(this)/*, playbutton = $(".overlay .play");*/
+    		// var overlay = $(this)/*, playbutton = $(".overlay .play");*/
     		//console.log(overlay);
-    		$(overlay).fadeOut(500);
+    		// $(overlay).fadeOut(500);
     		//$(playbutton).fadeOut(200)
-            $("#top-video iframe").show();
-    		player0.playVideo();
+            // $("#top-video iframe").show();
+    		// player0.playVideo();
     	  });
 
       

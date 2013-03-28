@@ -24,6 +24,27 @@ div.video iframe {
 	display: inline \9;
 }
 
+.byline {
+    font-family: "Georgia", serif;
+    margin: 0 20px 20px;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #bbb;
+}
+
+section.two .tempLine {
+    display: block;
+    position: relative;
+    color: #333;
+    text-shadow: 0 0 10px rgba(0,0,0,.3);
+    left: auto;
+    margin: 0px 20px 13px;
+    top: auto;
+    bottom: auto;
+    line-height: 101px;
+}
+
 /* Progress bar */
 .sticky div#progress {
 	height: 3px;
@@ -243,17 +264,19 @@ img.large {
     font-size: 140px;
     left: 37px;
     top: 0px;
+    transition: all .5s ease;
     -webkit-transition: all .5s ease;
     padding: 0;
     text-shadow: 0 0 20px rgba(0,0,0,.4);
 }
 
 .video-cover h1.active {
-    text-shadow: 0 0 40px rgba(0,0,0,1);
+    /*text-shadow: 0 0 40px rgba(0,0,0,1);*/
 }
 
 .video-cover .vid-play {
     position: absolute;
+    display: none !important;
     -webkit-transition: all .5s ease;
     z-index: 100;
     bottom: 70px;
@@ -275,6 +298,7 @@ img.large {
 
 .calltoaction {
     z-index: 1000;
+    display: none;
     position: absolute;
     -webkit-transition: all .5s ease;
     bottom: 8px;
@@ -320,6 +344,8 @@ span.dropcap {
 
 section.one {
 	padding-top: 0;
+    
+	display: block;
 }
 
 div.video {
@@ -332,7 +358,7 @@ div.video-cover {
 	width: 100%;
 	position: absolute;
 	left: 0;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	overflow-y: hidden;
 	max-height: 620px;
 	z-index: 1000;
@@ -523,8 +549,17 @@ div.mobile {
 	display: none;
 }
 
+div#slidecontainer {
+    padding: 0 20px;
+}
+
 div#slides-bottom {
-    display:none !important;
+    /*display:none !important;*/
+}
+
+div#slides-bottom {
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
