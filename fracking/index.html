@@ -19,12 +19,15 @@
         <link rel="stylesheet" href="css/colorbox.css">
 		<link rel="stylesheet" href="css/slideshow.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
+        
+        
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript" src="//use.typekit.net/vcr5ljd.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">stLight.options({publisher: "f4363d19-5e45-4068-a0a0-b196485060ab", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 		<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
+        
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -263,11 +266,11 @@ environmental engineering</li>
             </div>
         </section>
         <div id="slides-bottom">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
-            <img src="http://placehold.it/940x528">
+            <img src="img/940x528.gif">
+            <img src="img/940x528.gif">
+            <img src="img/940x528.gif">
+            <img src="img/940x528.gif">
+            <img src="img/940x528.gif">
             <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
             <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
 		</div>
@@ -303,7 +306,6 @@ environmental engineering</li>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/jquery.colorbox-min.js"></script>
-		<script src="js/jquery.slides.min.js"></script>
         <script>
 		var isMobile = {
 			Android: function() {
@@ -329,16 +331,28 @@ environmental engineering</li>
 		if (!isMobile.any()) {
 			$(".group1").colorbox({rel:'group1'});
 		}
+		</script>
+
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.queryloader2.js"></script>
+		<script src="js/jquery.slides.min.js"></script>
+        <script>
 		
-		$(function(){
-			$("#slides-bottom").slidesjs({
-				width: 940,
-				height: 528,
-				navigation: false
+		$(document).ready(function () {
+			
+			$("body").queryLoader2();
+			
+		
+			$(function(){
+				$("#slides-bottom").slidesjs({
+					width: 940,
+					height: 528,
+					navigation: false
+				});
 			});
 		});
 		</script>
-
 		<script>
         var tag = document.createElement('script');
     	tag.src = "//www.youtube.com/iframe_api";
@@ -430,7 +444,6 @@ environmental engineering</li>
 						// Before image load, the youtube is set as display: none
 						// Set the video display as inline after image load
 						$("img#top-image").ready(function(e) {
-							alert("12312r1");
                             $("div.video iframe").css("display", "inline");
                         });
 			  },

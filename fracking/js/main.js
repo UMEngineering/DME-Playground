@@ -4,7 +4,6 @@ var prev_viewable = 0;
 var num=new Array("zero","one","two","three","four","five");
 
 $(document).ready(function(e) {
-
 	//First letter style
 
 	$(".drop").each(function() {

@@ -96,7 +96,8 @@ footer {
 	position: relative;
 	clear: both;
 	color: #aaa;
-	background: url(../img/foot.jpg) #333 bottom center repeat-x;	
+	/*background: url(../img/foot.jpg) #333 bottom center repeat-x;	*/
+	background: #333;
 	box-shadow: 0 0 10px black;
 	-webkit-box-shadow: 0 0 10px black;
 }
