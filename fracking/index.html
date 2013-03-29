@@ -86,7 +86,7 @@
             <div class="largecontainer"><h1>How to frack<br />a shale gas well</h1><img class="large" src="img/large/two.jpg" /></div>
 
             <div class="container">
-                <p class="assets"><iframe width="300" height="169" src="http://www.youtube.com/embed/8IHUdwC_-jQ" frameborder="0" allowfullscreen></iframe></p>
+                <p class="assets video"><iframe width="500" height="281" src="http://www.youtube.com/embed/8IHUdwC_-jQ" frameborder="0" allowfullscreen></iframe></p>
                 <p class="content">The combination and advancement of two relatively old techniques – horizontal drilling and hydraulic fracturing, or fracking – have made this possible. They're enabling industry to tap trillions of cubic feet of gas from places previously deemed too expensive or difficult to get to. Now they're being used to go after oil as well.</p>
                 <p class="content">"There's a lot that has to come together to make something like this happen," said Johannes Schwank, a chemical engineering professor at the University of Michigan who is researching fracking technology as part of a university-wide study on the practice.</p>
                 <p class="content">"It's a remarkable feat of engineering when you think about it."</p>
@@ -415,7 +415,6 @@ Environmental Engineering</li>
                             loadCaption(number);
                         },
                         complete: function(number) {
-                            console.log(number);
                             loadCaption(number);
                         }
                     }
@@ -434,7 +433,7 @@ Environmental Engineering</li>
 		  //$("img#top-image").load(function(e) {
           
 		  player0 = new YT.Player('player0', {
-			videoId: 'c2W_Zlt8J2Y',
+			videoId: 'vmKUP2mcwuM',
             playerVars: {
                 modestbranding: 1,
                 wmode: "opaque"
@@ -443,7 +442,7 @@ Environmental Engineering</li>
 			  'onReady': function(event){ 
 					//console.log("Loaded");
 					 // Find all YouTube videos
-						var $allVideos = $("iframe[src^='http://www.youtube.com/embed/c2W_Zlt8J2Y']"),
+						var $allVideos = $("iframe[src^='http://www.youtube.com/embed/vmKUP2mcwuM']"),
 							// The element that is fluid width
 							$fluidEl = $("body");
 						// Figure out and save aspect ratio for each video
@@ -470,7 +469,7 @@ Environmental Engineering</li>
 							var newWidth = $fluidEl.width();
                             var slidewidth = $slides.width(), slidemargin = -1*($slides.width()/2);
                             $slidecaptions.css({"width":slidewidth+"px","margin-left":slidemargin+"px"});
-                            console.log(newWidth);
+                            // console.log(newWidth);
 							// Resize all videos according to their own aspect ratio
 							$allVideos.each(function() {
 								var $el = $(this);
@@ -543,12 +542,12 @@ Environmental Engineering</li>
     	$(".video-cover").click(function(e){
     		e.preventDefault();
     		
-    		// var overlay = $(this)/*, playbutton = $(".overlay .play");*/
+    		var overlay = $(this), playbutton = $(".overlay .play");
     		//console.log(overlay);
-    		// $(overlay).fadeOut(500);
+    		$(overlay).fadeOut(500);
     		//$(playbutton).fadeOut(200)
-            // $("#top-video iframe").show();
-    		// player0.playVideo();
+            $("#top-video iframe").show();
+    		player0.playVideo();
     	  });
 
       

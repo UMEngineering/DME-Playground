@@ -234,6 +234,10 @@ section.two .tempLine {
     margin: 10px 0 10px 12px;
 }
 
+.assets.video {
+    margin: 10px 0 10px 30px;
+}
+
 .border {
     padding: 2px;
     border: thin solid #ccc;
@@ -357,10 +361,10 @@ img.large {
 
 .video-cover .vid-play {
     position: absolute;
-    display: none !important;
+    display: block;
     -webkit-transition: all .5s ease;
     z-index: 100;
-    bottom: 70px;
+    bottom: 30px;
     left: 50px;
     background: url(../img/triangle.png) rgba(255,255,255,.3) no-repeat 50% scroll;
     text-indent: -9999px;
@@ -379,13 +383,13 @@ img.large {
 
 .calltoaction {
     z-index: 1000;
-    display: none;
+    display: block;
     position: absolute;
     -webkit-transition: all .5s ease;
     bottom: 8px;
     color: white;
     left: 260px;
-    bottom: 60px;
+    bottom: 20px;
     font-size: 39px;
     font-family: "league-gothic";
     text-shadow: 0 0 10px black;
@@ -439,7 +443,7 @@ div.video-cover {
 	width: 100%;
 	position: absolute;
 	left: 0;
-	/*cursor: pointer;*/
+	cursor: pointer;
 	overflow-y: hidden;
 	max-height: 620px;
 	z-index: 1000;
@@ -455,7 +459,7 @@ div.video-cover img {
 	top: -60px;*/
 	position: absolute;
 	bottom: 0;
-	display: none;
+	display: block;
 }
 
 section.two h1 {
