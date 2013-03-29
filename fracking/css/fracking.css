@@ -376,6 +376,37 @@ img.large {
     opacity: .5;
 }
 
+.vid-play2 {
+	position: relative;
+	top: 200px;
+	left: 10px;
+    display: block;
+    -webkit-transition: all .5s ease;
+    z-index: 100;
+    background: url(../img/triangle.png) rgba(255,255,255,.3) no-repeat 50% scroll;
+    text-indent: -9999px;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 90px;
+    height: 60px !important;
+    background-size: 30px;
+    opacity: .5;
+}
+
+.vid-play2:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
+.hover-video {
+	color: grey;
+}
+
+.hover-video:hover {
+	cursor: pointer;
+	color: green;
+}
+
 .video-cover .vid-play.active {
     opacity: 1;
     box-shadow: 0 0 40px black;
@@ -683,6 +714,21 @@ div#slides-bottom {
     margin: 20px auto;
     padding: 20px;
     border: thin solid #ddd;
+}
+
+div#assets-over1 {
+	width: 500px;
+	height: 281px;
+	background: url(../img/placeholder2.jpg) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div#assets-over1p {
+	width: 500px;
+	height: 281px;
 }
 
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
