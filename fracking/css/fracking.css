@@ -25,12 +25,34 @@ div.video iframe {
 }
 
 .byline {
-    font-family: "Georgia", serif;
-    margin: 0 20px 20px;
-    font-size: 26px;
-    font-style: italic;
-    font-weight: lighter;
-    color: #bbb;
+    display: block;
+    position: absolute !important;
+    font-family: "futura-pt-condensed",serif;
+    line-height: 28px;
+    margin: -57px 55px 10px 20px;
+    font-size: 23px;
+    font-weight: 100;
+    color: #333;
+    text-align: left;
+    width: 247px;
+    overflow: visible !important;
+}
+
+.byline.one {
+    left: 0;
+
+}
+
+.byline.two {
+    left: 50%;
+    width: 213px;
+    margin-left: -124px;
+}
+
+.byline.three {
+    right: 0;
+    width: 231px;
+    margin-right: 33px;
 }
 
 section.two .tempLine {
@@ -121,6 +143,7 @@ section.two .tempLine {
     position: relative;
     width: 285px;
     float: right;
+    clear: right;
     font-family: "league-gothic", sans-serif;
     font-size: 39px;
     margin: 0 0 60px 10px;
@@ -129,7 +152,7 @@ section.two .tempLine {
     background: url(../img/quot1.png) top left no-repeat scroll, url(../img/quot2.png) bottom right no-repeat scroll;
 }
 
-.pullquote .credit {
+.credit {
     display: block;
     position: absolute;
     border-left: thin solid #ccc;
@@ -146,17 +169,74 @@ section.two .tempLine {
     bottom: -40px;
 }
 
+.caption {
+    display: block;
+    position: relative;
+    float: right;
+    clear: right;
+    border-left: thin solid #ccc;
+    font-family: Helvetica,sans-serif, arial;
+    font-size: 12px;
+    width: 260px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    color: #999;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.pullquote.one {
+    background-position: 7px 0, 235px 111px;
+}
+
+.pullquote.two {
+    background-position: 30px 0, 204px 221px;
+}
+
+.pullquote.three {
+    background-position: 0px 0, 233px 274px;
+    padding-left: 19px;
+}
+
+.pullquote.four {
+    background-position: 50px 0, 245px 220px;
+}
+
+.pullquote.five {
+    background-position: 7px 0, 257px 219px;
+}
+
+.pullquote.six {
+    background-position: 15px 0, 280px 274px;
+}
+
+.pullquote.seven {
+    background-position: 0px 0, 270px 57px;
+    padding: 0 0 0 20px;
+}
+
+.pullquote.eight {
+    background-position: 3px 0, 247px 164px;
+    margin-top: 60px;
+}
+
 .pullquote.one .credit {
     bottom: -58px;
 }
 
-.pullquote.five .credit {
+.pullquote.three .credit {
     bottom: -60px;
 }
 
 .assets {
     float: right;
     margin: 10px 0 10px 12px;
+}
+
+.border {
+    padding: 2px;
+    border: thin solid #ccc;
 }
 
 .assets img {
@@ -194,6 +274,7 @@ section.one {
 section div.container {
     max-width: 960px;
     margin: 0 auto;
+    overflow: visible !important;
 }
 
 section.one div {
@@ -550,7 +631,43 @@ div.mobile {
 }
 
 div#slidecontainer {
+    position: relative;
     padding: 0 20px;
+}
+
+div#slidecontainer #slidecaptions {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 53px;
+    height: 130px;
+    left: 50%;
+    background-color: rgba(255,255,255,.9);
+    z-index: 1000;
+    display: none;
+}
+
+div#slidecontainer #slidecaptions p {
+    font-size: 13px;
+    margin: 14px 14px;
+}
+
+div#showcap {
+    display: block;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    margin-left: -409px;
+    font-size: 13px;
+}
+
+span.slidecredit {
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    font-size: 12px;
+    color: #aaa;
 }
 
 div#slides-bottom {
@@ -558,8 +675,10 @@ div#slides-bottom {
 }
 
 div#slides-bottom {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 20px auto;
+    padding: 20px;
+    border: thin solid #ddd;
 }
 
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
@@ -571,6 +690,35 @@ div#slides-bottom {
     bottom: 8px;
 }
     
+}
+
+@media only screen and (max-width: 800px) {
+    .byline {
+        font-size: 20px;
+        left: auto;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .byline {
+        font-size: 20px;
+        display:block;
+        position:relative !important;
+        right: auto !important;
+        left: auto !important;
+        margin: 0 0 6px 20px !important;
+        width: 100% !important;
+    }
+
+    .byline.three {
+    margin-bottom: 23px !important;
+}
+    section.two {
+        padding: 0;
+        margin-top: 71px;
+    }
+
 }
 
 @media only screen and (max-width: 874px) {

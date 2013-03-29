@@ -6,7 +6,7 @@ div#slides-bottom {
 }
 
 div#slides-bottom .slidesjs-navigation {
-  margin-top:3px;
+  margin-top: 10px;
   text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ div#slides-bottom .slidesjs-next {
 }
 
 .slidesjs-pagination {
-  margin: 6px 0 0;
+  margin: 10px 0 0;
   float: right;
   list-style: none;
 }
