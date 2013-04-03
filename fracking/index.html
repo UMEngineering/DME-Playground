@@ -86,8 +86,14 @@
             <div class="largecontainer"><h1>How to frack<br />a shale gas well</h1><img class="large" src="img/large/two.jpg" /></div>
 
             <div class="container">
-                <div class="assets video" id="assets-over1p"><div id="assets-over1"><div class="vid-play2">Play video</div></div><iframe id="assetsyoutube" width="500" height="281" src="http://www.youtube.com/embed/8IHUdwC_-jQ" frameborder="0" allowfullscreen></iframe></div>
-                <p class="content"><span class="hover-video">The combination and advancement of two relatively old techniques</span> – horizontal drilling and hydraulic fracturing, or fracking – have made this possible. They're enabling industry to tap trillions of cubic feet of gas from places previously deemed too expensive or difficult to get to. Now they're being used to go after oil as well.</p>
+                <div class="assets video" id="assets-over1p">
+                	<div id="assets-over1">
+                    	<div class="vid-play2">Play video</div>
+                    </div>
+                    <!--<iframe id="assetsyoutube" width="500" height="281" src="http://www.youtube.com/embed/8IHUdwC_-jQ" frameborder="0" allowfullscreen></iframe>-->
+                    <div id="player1"></div>
+                </div>
+                <p class="content"><span id="hover-video-player1">The combination and advancement of two relatively old techniques</span> – horizontal drilling and hydraulic fracturing, or fracking – have made this possible. They're enabling industry to tap trillions of cubic feet of gas from places previously deemed too expensive or difficult to get to. Now they're being used to go after oil as well.</p>
                 <p class="content">"There's a lot that has to come together to make something like this happen," said Johannes Schwank, a chemical engineering professor at the University of Michigan who is researching fracking technology as part of a university-wide study on the practice.</p>
                 <p class="content">"It's a remarkable feat of engineering when you think about it."</p>
                 <p class="content">Shale is the source rock where the natural gas was made. These formations – known to exist in 32 countries – trace their roots to the days before the dinosaurs, when sand and silt settled with dead animals and plants on the bottoms of shallow seas.</p>
@@ -428,6 +434,7 @@ Environmental Engineering</li>
     	var firstScriptTag = document.getElementsByTagName('script')[0];
     	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     	var player0;
+		var player1;
 	
 	  function onYouTubeIframeAPIReady() {
 		  //$("img#top-image").load(function(e) {
@@ -536,9 +543,67 @@ Environmental Engineering</li>
             }
 			}
 		  });
+		  
+		  
+		  player1 = new YT.Player('player1', {
+			videoId: '8IHUdwC_-jQ',
+            playerVars: {
+                modestbranding: 1,
+                wmode: "opaque"
+            },
+			events: {
+			  'onReady': function(event){ 
+					//console.log("Loaded");
+					 // Find all YouTube videos
+						var $allVideos = $("iframe[src^='http://www.youtube.com/embed/8IHUdwC_-jQ']"),
+							// The element that is fluid width
+							$fluidEl = $("body");
+						// Figure out and save aspect ratio for each video
+						$allVideos.each(function() {
+							$(this).width(300);
+							$(this).height(169);
+							$(this).show();
+						});
+						
+			  },
+			  'onStateChange': function(event){ 
+			    console.log(event.data);
+                var parent = $(event.target.a).parent()[0]; 
+                var overlay = $(parent).find("#assets-over1")[0];
+                var play = $(parent).find(".play")[0];
+                if (event.data == 2) { 
+                    $(overlay).fadeIn(500);
+					$(play).fadeIn(1000);
+                    $("#assets-over1p iframe").hide();
+                }
+            }
+			}
+		  });
 		  //$("div.video iframe").css("display", "inline");
        // });
 		}
+    	$("#assets-over1").click(function(e){
+    		e.preventDefault();
+    		
+    		var overlay = $(this), playbutton = $(".overlay .play");
+    		//console.log(overlay);
+    		$(overlay).fadeOut(500);
+    		//$(playbutton).fadeOut(200)
+            $("#assets-over1p iframe").show();
+    		player1.playVideo();
+    	});
+		$("#hover-video-player1").click(function(e) {
+    		e.preventDefault();
+    		$("#assets-over1").click();
+    		/*var overlay = $("#assets-over1");
+    		//console.log(overlay);
+    		$(overlay).fadeOut(500);
+    		//$(playbutton).fadeOut(200)
+            $("#assets-over1p iframe").show();
+			console.log(player1);
+    		player1.playVideo();*/
+        });
+		  
     	$(".video-cover").click(function(e){
     		e.preventDefault();
     		
@@ -548,7 +613,7 @@ Environmental Engineering</li>
     		//$(playbutton).fadeOut(200)
             $("#top-video iframe").show();
     		player0.playVideo();
-    	  });
+    	});
 
       
 

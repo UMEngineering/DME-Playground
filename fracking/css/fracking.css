@@ -378,7 +378,7 @@ img.large {
 
 .vid-play2 {
 	position: relative;
-	top: 200px;
+	top: 100px;
 	left: 10px;
     display: block;
     -webkit-transition: all .5s ease;
@@ -387,9 +387,9 @@ img.large {
     text-indent: -9999px;
     border: 2px solid white;
     border-radius: 15px;
-    width: 90px;
-    height: 60px !important;
-    background-size: 30px;
+    width: 60px;
+    height: 40px !important;
+    background-size: 20px;
     opacity: .5;
 }
 
@@ -398,11 +398,15 @@ img.large {
 	opacity: .8;
 }
 
-.hover-video {
+#assets-over1:hover {
+	cursor: pointer;
+}
+
+#hover-video-player1 {
 	color: grey;
 }
 
-.hover-video:hover {
+#hover-video-player1:hover {
 	cursor: pointer;
 	color: green;
 }
@@ -717,8 +721,8 @@ div#slides-bottom {
 }
 
 div#assets-over1 {
-	width: 500px;
-	height: 281px;
+	width: 300px;
+	height: 169px;
 	background: url(../img/placeholder2.jpg) no-repeat;
 	background-size: cover;
 	position: absolute;
@@ -726,9 +730,13 @@ div#assets-over1 {
 	left: 0;
 }
 
+div#assets-over1:hover .vid-play2 {
+	opacity: .8;
+}
+
 div#assets-over1p {
-	width: 500px;
-	height: 281px;
+	width: 300px;
+	height: 169px;
 }
 
 /* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */

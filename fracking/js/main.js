@@ -4,10 +4,10 @@ var prev_viewable = 0;
 var num=new Array("zero","one","two","three","four","five");
 
 $(document).ready(function(e) {
-	$("span.hover-video").mouseover(function(){
+	$("span#hover-video-player1").mouseover(function(){
 		$(".vid-play2").css({"opacity" : ".8"});
 	});
-	$("span.hover-video").mouseout(function(){
+	$("span#hover-video-player1").mouseout(function(){
 		$(".vid-play2").css({"opacity" : ".5"});
 	});
 	
