@@ -7,7 +7,7 @@ body, html {
 .container li {
     font-weight: bold;
     font-size: 29px;
-    margin: 35px 0 2px 55px;
+    margin: 2px 0 0px 55px;
 }
 
 .typekit-badge {
@@ -442,6 +442,7 @@ div#container {
 
 span.dropcap {
     display: block;
+    margin: 0 5px 5px 0;
     font-weight: 100;
     position: relative;
     float: left;
@@ -452,7 +453,7 @@ span.dropcap {
     line-height: 54px;
     clear: none;
     color: #FF7F66;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: Georgia, serif;
     overflow: visible;
 }
 
@@ -698,6 +699,10 @@ div#showcap {
     left: 50%;
     margin-left: -409px;
     font-size: 13px;
+}
+
+div#showcap a {
+    text-decoration: none;
 }
 
 span.slidecredit {
