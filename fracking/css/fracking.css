@@ -247,6 +247,34 @@ section.two .tempLine {
     width: 300px;
 }
 
+.info {
+    border: thin solid rgb(230,230,240);
+    background: rgb(251,252,253);
+    width: 300px;
+    padding: 34px 0;
+}
+
+.info {
+}
+
+.info h2 {
+    margin: 0 20px 15px;
+    font-family: "league-gothic";
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.info li {
+    font-size: 16px;
+    margin: 0 40px 8px;
+}
+
+.info li a {
+    font-weight: 100;
+    color: #FD7F6A;
+    text-decoration: none;
+}
+
 div.map {
     float: right;
     margin: 10px 0 0 12px;
