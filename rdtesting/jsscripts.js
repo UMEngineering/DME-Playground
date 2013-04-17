@@ -81,11 +81,11 @@ var umcoe = {
         });
 
         // Apply specific colorbox params
-        /*$ytColorbox.colorbox({
+        $ytColorbox.colorbox({
             inline: true,
             innerWidth: 748,
             innerHeight: 661
-        });*/
+        });
     },
    
     setupVideoStrip: function () {
@@ -160,7 +160,6 @@ var umcoe = {
             return false;
         });
         if ($.fn.colorbox) {
-			//alert("11");
             $(".cbxVideo").colorbox({ inline: true, width: "748" });
         }
     },
@@ -468,13 +467,13 @@ var umcoe = {
             e.preventDefault();
 
             // open colorbox
-            /*$("." + $this.attr("class")).colorbox({
+            $("." + $this.attr("class")).colorbox({
                rel: $this.attr("class"),
                inline: true,
                width: "748",
                loop: false,
                current: "Item {current} of {total}" // Capitalize the word 'image' - ticket #1303.
-            });*/
+            });
 
             if ($this.hasClass("current")) { returnFocus: false; }
             $this.parent("li").siblings().children("a").removeClass("current");

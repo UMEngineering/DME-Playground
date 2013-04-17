@@ -1,0 +1,982 @@
+
+
+
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js">
+
+	<!--<![endif]-->
+
+  
+    
+    
+    
+    
+
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport 
+    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+
+    
+        
+        
+
+        
+<title>Event Calendar | Michigan Engineering</title>
+
+<link rel="alternate" data-kss-base-url="kss-base-url" href="http://www.engin.umich.edu/college/about/cal/event-calendar/" />
+
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/base-cachekey-50aecbdb1dc7709b6ded6ac588d66d02.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csspublic-cachekey-ddfbe530f5f858aaff4cfe6a234a26c1.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/columns-cachekey-796104cf8bb5a73ee6ba2b84dbafe56e.css" />
+    <style type="text/css" media="screen">@import url(http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete-cachekey-2536a0a3001e1fe50cf0aa834b880b13.css);</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceplone.app.dexterity.overlays-cachekey-4ba4de5bda5b8ba136fb0adf0506eba3.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssjquerytools.dateinput-cachekey-4784c7ca9494b1c885ba6dfbdac4dbf8.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssstyle-cachekey-5dec0b83b1dfd4fe35d7dd98fecc692b.css" />
+    <link rel="stylesheet" type="text/css" media="screen,print" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csscalendarMonth-cachekey-c0c4322c3592aaeae9a9cf25a74336b0.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_csspromos-cachekey-daccfb5378a70859217e2dae8e75dd5f.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssflexslider-cachekey-3d1fc8b36bf9ca666f216d0769e96302.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/ploneCustom-cachekey-67ea64d63ac9981f8921161d62bb520b.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssoverrides-cachekey-61ff7ee50f5b085651e264a3e43c6664.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="http://www.engin.umich.edu/portal_css/Engineering%20Theme%202012/resourceumich_cssprint-cachekey-e55f78e63d714814d212764d8fa53325.css" />
+
+  
+    <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss" href="http://www.engin.umich.edu/portal_kss/Engineering%20Theme%202012/at-cachekey-dcd52a4e87313bf698003f3d0009e515.kss" />
+  
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery-1.6.4-cachekey-c9887a283f8c41b4400ccc1842a95edf.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.app.jquerytools-cachekey-281e8f2ee38aca303ba55b92acb9e4fc.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsform_tabbing-cachekey-e43d3d99cf402004e92d09898bbfe486.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/register_function-cachekey-e223970945396635532ef011f2df461b.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceplone.formwidget.autocompletejquery.autocomplete.min-cachekey-64a551a1bb2808b7d8e36eb448c99b2a.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsmodernizr-2.5.3.min-cachekey-99097c43e6f6cf90197d1e5efbf36ddd.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsplugins-cachekey-16d81c79cf44cfa49d1ae2bd6946d1ef.js"></script>
+    <script type="text/javascript" src="jsscripts.js"></script>
+    <script type="text/javascript" src="calendarUtils.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjquery.colorbox.min-cachekey-8e433ac6b0ba4b6cd35f3205ad35486b.js"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/resourceumich_jsjsrender-cachekey-ce5106b53ce1e80ed81807c910d34884.js"></script>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ec44a58724ed4d0"></script>
+    <script type="text/javascript" src="http://www.engin.umich.edu/portal_javascripts/Engineering%20Theme%202012/table_sorter-cachekey-2def28993589b1d3c2fa2851c03fdc3b.js"></script>
+
+
+        
+          
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2932296-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.engin.umich.edu++resource++umich_images/favicon.ico" />
+
+
+
+   
+   
+
+
+
+
+
+
+
+
+
+        
+        <!-- Disable IE6 image toolbar -->
+        <meta http-equiv="imagetoolbar" content="no" />
+
+        
+        
+
+        
+        
+
+        
+        
+
+    
+
+  </head>
+
+  <body class="calendarMonth calendarPage template-view portaltype-uom-events-eventcalendar site-engin section-college icons-on hasBreadcrumbs contentNormal" dir="ltr">
+<div id="wrapper" class="lightBg">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+    <div id="portal-personaltools-wrapper">
+    <header><a href="/" id="logo" class="ir">Michigan Engineering</a>
+        <div id="skip">
+            <a href="#content">Skip to Main Content</a>
+        </div>
+        <nav id="utility">
+            <ul>
+                
+                <li class="contact"><a href="http://www.engin.umich.edu/contact/quick.html">Contact</a></li>
+                <!--<li class="role">
+                    <span></span>
+                    <a href="#" class="roleChange">Select Role</a>
+                    <div>
+                        <ul>
+                            <li tal:repeat="item view/getRoles"><a tal:attributes="href item/url; title item/title | nothing" tal:content="item/name">Name Item</a></li>
+                        </ul>
+                    </div>
+                </li> -->
+                <li class="search">
+                    <form name="searchform" method="get" id="searchGadget_form" action="http://www-search.engin.umich.edu/search">
+                        <fieldset>
+                            <label for="q">Search</label>
+                            <input type="hidden" name="site" value="CoE" />
+                            <input type="hidden" name="client" value="coe_frontend" />
+                            <input type="hidden" name="proxystylesheet" value="coe_frontend" />
+                            <input type="hidden" name="output" id="output" value="xml_no_dtd" />
+                            <input name="q" id="q" type="text" />
+                        </fieldset>
+                    </form></li>
+                </ul>
+            </nav>
+            <nav id="mainBar">
+                <ul>
+                    
+                        
+                            <li class="about current"><a href="http://www.engin.umich.edu/about">About</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/about/news">News</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/about/cal">Calendar</a></li>
+                                        <li><a href="http://www.engin.umich.edu/events">Special Events</a></li>
+                                        <li><a href="http://www.engin.umich.edu/caen ">Computing (CAEN)</a></li>
+                                        <li><a href="http://www.engin.umich.edu/facilities">Facilities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/safety">Safety</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/admin/dean ">Message from the Dean</a></li>
+                                        <li><a href="http://www.engin.umich.edu/about/facts.html">Facts and Figures</a></li>
+                                        <li><a href="http://www.engin.umich.edu/about/people.html">People</a></li>
+                                        <li><a href="http://www.engin.umich.edu/about/campus.html">Ann Arbor &amp; Campus</a></li>
+                                        <li><a href="http://www.engin.umich.edu/admin">College Administration</a></li>
+                                        <li><a href="http://www.engin.umich.edu/contact/quick.html">Contact Us</a></li>
+                                    </ul>
+                                    <ul class="last">
+                                        <li><a href="http://www.engin.umich.edu/diversity">Diversity and Outreach</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="research "><a href="http://www.engin.umich.edu/research">Research</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/research/undergrad.html">Undergraduate Research Opportunities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/admin/adrge/research-support">Getting Research Funding</a></li>
+                                        <li><a href="http://www.engin.umich.edu/departments/research.html">Sponsored Research</a></li>
+                                        <li><a href="http://www.engin.umich.edu/research/innovation.html">Instant Innovation</a></li>
+                                        <li><a href="http://www.engin.umich.edu/corporate">Corporate Relationships</a></li>
+                                        <li><a href="http://www.engin.umich.edu/teaching/crltengin">Center for Research on Learning &amp; Teaching in Engineering (CRLT-Engin)</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="academics "><a href="http://www.engin.umich.edu/academics" title="Education related links">Academics</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/academics/undergrad/">Undergraduate Programs/Degrees</a></li>
+                                        <li><a href="http://www.engin.umich.edu/academics/gradprograms">Graduate Programs/Degrees</a></li>
+                                        <li><a href="http://www.engin.umich.edu/bulletin">College Bulletin</a></li>
+                                        <li><a href="http://www.engin.umich.edu/bulletin/courses.html">Courses</a></li>
+                                        <li><a href="http://www.engin.umich.edu/academics/calendar.html">Academic Calendar</a></li>
+                                        <li><a href="http://www.engin.umich.edu/students/graduation">Graduation</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="admissions "><a href="http://www.engin.umich.edu/admissions" title="Admissions related links">Admissions</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/ugadmissions">Undergraduate Admissions</a></li>
+                                        <li><a href="http://www.engin.umich.edu/gradadmissions">Graduate Admissions</a></li>
+                                        <li><a href="http://www.engin.umich.edu/ugadmissions/international">International Student</a></li>
+                                        <li><a href="http://www.engin.umich.edu/students/finaid.html">Scholarships, Financial Aid &amp; Funding</a></li>
+                                        <li><a href="http://www.engin.umich.edu/ugadmissions/visit">Visit Us</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="departments "><a href="http://www.engin.umich.edu/departments" title="Links to departmental websites">Departments</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://aerospace.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aerospace.engin.umich.edu/')">Aerospace Engineering</a></li>
+                                        <li><a href="http://aoss.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://aoss.engin.umich.edu/')">Atmospheric, Oceanic and Space Sciences</a></li>
+                                        <li><a href="http://www.bme.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.bme.umich.edu/')">Biomedical Engineering</a></li>
+                                        <li><a href="http://che.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://che.engin.umich.edu/')">Chemical Engineering</a></li>
+                                        <li><a href="http://cee.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://cee.engin.umich.edu/')">Civil and Environmental Engineering</a></li>
+                                        <li><a href="http://eecs.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://eecs.umich.edu/')">Electrical Engineering and Computer Science</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://ioe.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://ioe.engin.umich.edu/')">Industrial and Operations Engineering</a></li>
+                                        <li><a href="http://isd.engin.umich.edu" onclick="javascript: pageTracker._trackPageview('/outgoing/http://isd.engin.umich.edu')">Integrative Systems + Design</a></li>
+                                        <li><a href="http://www.mse.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www.mse.engin.umich.edu/')">Materials Science and Engineering</a></li>
+                                        <li><a href="http://me.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://me.engin.umich.edu/')">Mechanical Engineering</a></li>
+                                        <li><a href="http://name.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://name.engin.umich.edu/')">Naval Architecture and Marine Engineering</a></li>
+                                        <li><a href="http://ners.engin.umich.edu/" onclick="javascript: pageTracker._trackPageview('/outgoing/http://www-ners.engin.umich.edu/')">Nuclear Engineering and Radiological Sciences</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="giving "><a href="http://www.engin.umich.edu/college/giving/" title="Supporting the college links">Giving</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/why">Why to Give</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/opportunities">Giving Opportunities</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/ways">Ways to Give</a></li>
+                                        <li><a href="http://www.engin.umich.edu/college/giving/alumni-relations">Alumni Relations</a></li>
+                                    </ul>
+                                    
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="last infoForYou "><a href="http://www.engin.umich.edu/info" title="Info for You">Info for You</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/students/prospective">Prospective Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/students">Current Students</a></li>
+                                        <li><a href="http://www.engin.umich.edu/alumni">Alumni</a></li>
+                                        <li><a href="http://www.engin.umich.edu/faculty">Faculty</a></li>
+                                        <li><a href="http://www.engin.umich.edu/staff">Staff</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="http://www.engin.umich.edu/corporate">Corporate Partners</a></li>
+                                        <li><a href="http://www.engin.umich.edu/newscenter/expert.html">Media</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        
+                    
+                </ul>
+            </nav>
+            <nav id="breadcrumbs">
+                <ul>
+                    <li>
+                        /
+                        <a href="http://www.engin.umich.edu">College</a></li>
+                    
+                        
+                            <li>
+                                /<a href="http://www.engin.umich.edu/college/about">About</a></li>
+                            
+                        
+                    
+                    
+                        
+                            
+                            <li class="last">/
+                                <a href="http://www.engin.umich.edu/college/about/cal">Calendar</a></li>
+                        
+                    
+                </ul></nav>
+            </header>
+        </div>
+
+<span id="headerPrintOnly"><img class="printOnly" alt="print Logo" src="/engin/++resource++umich_images/MichiganCollegeEngineeringPrintOnlyLogo.jpg" /></span>
+
+
+
+
+
+</div>
+
+      </div>
+
+      
+      
+
+      <div role="main" id="contentWrap" class="wideCol">
+      
+      
+
+        
+        
+          
+          
+          
+          <div id="content" class="content">         
+
+          <div id="viewlet-above-content">
+    
+
+
+
+</div>
+
+          
+            <div class="">
+
+              
+
+              <span id="contentTopLeft"></span>
+              <span id="contentTopRight"></span>
+
+              
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+
+
+              
+                  
+
+                  
+
+                    
+                      
+                      
+            
+                <div class="pageHeader">
+                    <h1>Event Calendar</h1>
+                    <ul id="calendarNav" class="calendarNav">
+                      <li><a id="prevMonth" class="prevMonth prev" href="#"><span></span></a></li>
+                      <li><span id="currentMonth" class="currentMonth currentDate"></span></li>
+                      <li><a id="nextMonth" class="nextMonth next" href="#"><span></span></a></li>
+                    </ul>
+
+                    <ul id="calendarView">
+                        <li>
+                            <a id="monthView" class="button active" href="http://www.engin.umich.edu/college/about/cal/event-calendar/view">
+                                Month View
+                                <span class="rightArrow"></span>
+                            </a>
+                        </li>
+                        <li><a id="weekView" class="button" href="http://www.engin.umich.edu/college/about/cal/event-calendar/week">Week View
+                                <span class="rightArrow"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="listView" class="button" href="http://www.engin.umich.edu/college/about/cal/event-calendar/list">
+                                <span class="icon"></span>
+                                List View
+                                <span class="rightArrow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="calendarFilter">
+                        <div id="filterEvents">
+                            <label>
+                                Show events for:
+                            </label>
+                            <select id="selectEvent">
+                                
+                                    <option>All</option>
+                                
+                                
+                                    <option>Prospective Students</option>
+                                
+                                
+                                    <option>Current Students</option>
+                                
+                                
+                                    <option>Alumni</option>
+                                
+                                
+                                    <option>Faculty</option>
+                                
+                                
+                                    <option>Staff</option>
+                                
+                                
+                                    <option>Family/Parents</option>
+                                
+                                
+                                    <option>College Supporters</option>
+                                
+                                
+                                    <option>Media</option>
+                                
+                            </select>
+                        </div>
+                        <div id="filterDepartments">
+                            <label>
+                                Filter by Department/Organization:
+                            </label>
+                            <select id="selectDepartment">
+                                
+                                    <option>All</option>
+                                
+                                
+                                    <option>Michigan Engineering</option>
+                                
+                                
+                                    <option>Admissions and Recruiting</option>
+                                
+                                
+                                    <option>Aerospace Engineering</option>
+                                
+                                
+                                    <option>Atmospheric, Oceanic and Space Sciences</option>
+                                
+                                
+                                    <option>Biomedical Engineering</option>
+                                
+                                
+                                    <option>Center for Entrepreneurship</option>
+                                
+                                
+                                    <option>Chemical Engineering</option>
+                                
+                                
+                                    <option>Civil and Environmental Engineering</option>
+                                
+                                
+                                    <option>CRLT-Engin</option>
+                                
+                                
+                                    <option>Diversity and Outreach</option>
+                                
+                                
+                                    <option>Electrical Engineering and Computer Science</option>
+                                
+                                
+                                    <option>Engineering Advising Center</option>
+                                
+                                
+                                    <option>Engineering Career Resource Center</option>
+                                
+                                
+                                    <option>Graduate Programs</option>
+                                
+                                
+                                    <option>Honors Programs</option>
+                                
+                                
+                                    <option>Human Resources</option>
+                                
+                                
+                                    <option>Industrial and Operations Engineering</option>
+                                
+                                
+                                    <option>International Programs</option>
+                                
+                                
+                                    <option>Integrated Systems and Design</option>
+                                
+                                
+                                    <option>Macromolecular Science and Engineering</option>
+                                
+                                
+                                    <option>Materials Science and Engineering</option>
+                                
+                                
+                                    <option>MconneX</option>
+                                
+                                
+                                    <option>Mechanical Engineering</option>
+                                
+                                
+                                    <option>Multidisciplinary Design Program</option>
+                                
+                                
+                                    <option>Naval Architecture and Marine Engineering</option>
+                                
+                                
+                                    <option>Nuclear Engineering and Radiological Sciences</option>
+                                
+                                
+                                    <option>Student Affairs</option>
+                                
+                                
+                                    <option>Technical Communications</option>
+                                
+                            </select>
+                        </div>
+                        <div id="filterTypes">
+                            <label>
+                                Filter by Type:
+                            </label>
+                            <select id="eventType">
+                                
+                                    <option>All</option>
+                                
+                                
+                                    <option>Academic Calendar</option>
+                                
+                                
+                                    <option>Brunch</option>
+                                
+                                
+                                    <option>Company Day</option>
+                                
+                                
+                                    <option>Competition</option>
+                                
+                                
+                                    <option>College Initiatives</option>
+                                
+                                
+                                    <option>Deadline</option>
+                                
+                                
+                                    <option>Dinner</option>
+                                
+                                
+                                    <option>Holiday</option>
+                                
+                                
+                                    <option>Information Session</option>
+                                
+                                
+                                    <option>Lecture</option>
+                                
+                                
+                                    <option>Luncheon</option>
+                                
+                                
+                                    <option>Meeting</option>
+                                
+                                
+                                    <option>Networking Event</option>
+                                
+                                
+                                    <option>Orientation</option>
+                                
+                                
+                                    <option>Picnic</option>
+                                
+                                
+                                    <option>Seminar</option>
+                                
+                                
+                                    <option>Social Event</option>
+                                
+                                
+                                    <option>Symposium</option>
+                                
+                                
+                                    <option>Training</option>
+                                
+                                
+                                    <option>Webcast</option>
+                                
+                                
+                                    <option>Workshop</option>
+                                
+                            </select>
+                       </div>
+                    </div>
+                    <br />
+                </div>
+            
+        
+                      
+
+
+
+                      
+                      
+    
+
+
+
+
+
+    <div id="contentHolder">
+    
+            <div id="calendarContainer">
+                <table class="calendar">
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                    <tr id="week1">
+                        <td id="cell1">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell2">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell3">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell4">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell5">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell6">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell7" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week2">
+                        <td id="cell8">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell9">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell10">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell11">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell12">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell13">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell14" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week3">
+                        <td id="cell15">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell16">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell17">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell18">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell19">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell20">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell21" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week4">
+                        <td id="cell22">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell23">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell24">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell25">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell26">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell27">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell28" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week5">
+                        <td id="cell29">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell30">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell31">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell32">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell33">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell34">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell35" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="week6">
+                        <td id="cell36">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell37">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell38">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell39">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell40">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell41">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                        <td id="cell42" class="last">
+                            <div class="tdInner">
+                                <div class="day"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+        <script>
+         var webserviceUrl ="monthjson", 
+             weekUrl= document.getElementById("weekView").href;
+        </script><script id="eventTemplate" type="text/x-jquery-tmpl">
+ 
+ 
+            <div class="eventBlock {{=am_pm_start}}" tabindex="0">
+             
+            <div class="details fullDetails">
+             
+                
+                    <p>{{#if hideTime == "false"}}{{=startTime}} {{=am_pm_start}}{{#if deadline =="false"}} - {{=endTime}} {{=am_pm_end}}{{/if}}: {{/if}}<span class="eventDate">{{=month}}/{{=day}}</span></p>
+                           
+                <a class="closeDetails" href="#">X</a>
+             
+                <p><b class="notTrimmed">{{=title}}</b></p>
+             
+                <p class="description notTrimmed">{{=details}}</p>
+             
+                <p><b class="notTrimmed">{{=location}}</b></p>
+             
+                {{#if host}}<p class="host notTrimmed">By: {{=host}}</p>{{/if}}
+             
+                <a class="detailsLink" href="{{=url}}">Details<span class="arrow"></span></a>
+             
+            </div>
+             
+            <div class="details minDetails">
+             
+                {{#if hideTime == "false"}}
+                    <p>{{=startTime}} {{=am_pm_start}} {{#if deadline =="false"}}- {{=endTime}} {{=am_pm}}{{/if}}:</p>
+                {{/if}}
+             
+                <p>
+                    <b>{{=title}}</b>
+                </p>
+             
+            </div>   
+             
+            </div> 
+    </script>
+    <script id="moreLinkTemplate" type="text/x-jquery-tmpl">    
+
+                <a href="{|weekUrl|}?date={{=year}}/{{=month}}/{{=day}}&week={|week|}" class="moreLink">More<span></span></a>
+
+    </script>
+
+
+                <ul class="calendarNav calendarNavFoot clearfix">
+                    <li><a class="prevMonth prev" href="#"><span></span></a></li>
+                    <li><span class="currentMonth currentDate"></span></li>
+                    <li><a class="nextMonth next" href="#"><span></span></a></li>
+                </ul>           
+            </div>                
+            
+
+    </div>
+
+                    
+                  
+                
+              
+
+          
+
+          <div id="viewlet-below-content">
+
+
+</div>
+
+          
+
+
+            </div>             
+          
+      </div>     
+      
+      
+      </div>
+    </div>
+
+      
+
+        
+
+
+    <footer>
+        <div class="hidden" id="hostportinfo">caen-www-plone0.engin.umich.edu:8082</div>
+        <p class="copyright">&copy;
+            <span class="year">2013</span>
+             Regents of the University of Michigan</p>
+        <a href="http://www.umich.edu" target="_blank" id="umFooterLogo" class="ir">University of Michigan</a>
+    </footer>
+
+
+
+
+      
+
+      
+      
+
+<div id="kss-spinner"><img alt="" src="http://www.engin.umich.edu/++resource++umich_images/spinner.png" /></div>
+</div>
+      
+      
+
+</body>
+</html>
