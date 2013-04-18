@@ -613,7 +613,7 @@ footer #credits {
 }	
 
 @media screen and (max-device-width: 480px){
-    body, html {
+    /*body, html {
     	position:relative;
         width: 100%;
     }
@@ -621,13 +621,17 @@ footer #credits {
     #container, #top-header, .sticky {
     	width: 100%;
     	min-width: 960px;
-    }
+    }*/
 
 }
 
 @media only screen and (max-width: 800px) {
 	body, #top-header {
 		overflow-x: hidden;
+	}
+	
+	#top-header {
+		background-size: auto 440px;
 	}
 	
 	div.story, div.story-container {
