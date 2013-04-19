@@ -86,7 +86,7 @@ $short_ans = array();
         
         <div class="sticky" id="nav">
             <ul>
-                <li class="home"><a href="http://engin.umich.edu"><img src="img/mighigan_engineering_25.png" alt="Michigan Engineering" /></a></li>
+                <li class="home"><a href="http://engin.umich.edu"><img src="img/mighigan_engineering_25.png" alt="Michigan Engineering" class="big-m" /><img src="img/small-m.png" alt="Michigan Engineering" class="small-m" /></a></li>
                 <li class="dmegallery"><a href="http://www.engin.umich.edu/college/about/news/?Digital-Multimedia=true">Digital Multimedia Experience Gallery</a><a id="circle" href="http://www.engin.umich.edu/college/about/news/?Digital-Multimedia=true"></a></li>
             </ul>
         </div>  

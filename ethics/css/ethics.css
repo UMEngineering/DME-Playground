@@ -612,6 +612,14 @@ footer #credits {
 	display: block;
 }	
 
+.big-m {
+	display: block;
+}
+
+.small-m {
+	display: none;
+}
+
 @media screen and (max-device-width: 480px){
     /*body, html {
     	position:relative;
@@ -708,6 +716,14 @@ footer #credits {
 	div#top-header-content div#top-header-subtitle {
 		background-size: 100%;
 		left: 5px;
+	}
+	
+	.big-m {
+		display: none;
+	}
+	
+	.small-m {
+		display: block;
 	}
 }
 
