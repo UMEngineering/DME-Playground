@@ -77,7 +77,7 @@ var umcoe = {
                     .find(".youtube-title")
                         .html($temp);
             // Trim length of title in video portlet.
-            umcoe.trimString("#div-" + $id + " h3", 40);
+            umcoe.trimString("#div-" + $id + " h3", 60);
         });
 
         // Apply specific colorbox params
@@ -152,7 +152,7 @@ var umcoe = {
                 }
             }
         });
-        $("#mainBar .current > a, #sideNav .current > a, #breadcrumbs .last > a").click(function (e) {
+        $("#sideNav .current > a, #breadcrumbs .last > a").click(function (e) {
             e.preventDefault();
         });
         $(".lbClose").click(function () {

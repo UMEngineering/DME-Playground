@@ -1,0 +1,898 @@
+body, html {
+    position:relative;
+    width: 100%;
+	overflow-x: hidden;
+}
+
+.container li {
+    font-weight: bold;
+    font-size: 29px;
+    margin: 2px 0 0px 55px;
+}
+
+.typekit-badge {
+    display:none !important;
+}
+
+h1 {
+    font-weight:500;    
+    padding: 0 0 0 15px;
+}
+
+h1 a {
+    text-decoration:none;
+}
+
+div.video iframe {
+	display: none;
+	display: inline \9;
+}
+
+.byline {
+    display: block;
+    position: absolute !important;
+    font-family: "futura-pt-condensed",serif;
+    line-height: 28px;
+    margin: -57px 55px 10px 20px;
+    font-size: 23px;
+    font-weight: 100;
+    color: #333;
+    text-align: left;
+    width: 247px;
+    overflow: visible !important;
+}
+
+.byline.one {
+    left: 0;
+
+}
+
+.byline.two {
+    left: 50%;
+    width: 213px;
+    margin-left: -124px;
+}
+
+.byline.three {
+    right: 0;
+    width: 231px;
+    margin-right: 33px;
+}
+
+section.two .tempLine {
+    display: block;
+    position: relative;
+    color: #333;
+    text-shadow: 0 0 10px rgba(0,0,0,.3);
+    left: auto;
+    margin: 0px 20px 13px;
+    top: auto;
+    bottom: auto;
+    line-height: 101px;
+}
+
+/* Progress bar */
+.sticky div#progress {
+	height: 3px;
+	display: none;
+}
+
+.sticky div#progress div#progressBar {
+	background: orange;
+	width: 0%;
+	height: 100%;
+}
+
+.sticky ul li.sticky-title {
+	position: absolute;
+	left: 49px;
+	top: 16px;
+	display: none;
+}
+
+.sticky .sticky-sections {
+	height: 50px;
+}
+
+.sticky-sections a:after{
+    content: url('../img/down.png');
+    opacity: 0;
+    display: block;
+    position: absolute;
+    z-index: 1000000;
+    left: 50%;
+    bottom: -23px;
+    margin-left: -10px;
+    background: transparent;
+}
+
+.sticky-sections a.active:after{
+    opacity:1;
+}
+
+
+.sticky .sticky-sections span, .sticky .sticky-sections a {
+	color: #b2b2b2;
+	display: inline-block;
+	margin: 0;
+	height: 19px;
+	font-size: 10pt;
+	font-weight: 100;
+	padding: 17px 10px 15px 10px;
+	position: relative;
+}
+
+.sticky .sticky-sections a {
+	color: #b2b2b2;
+	transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+}
+
+.sticky .sticky-sections a:hover {
+	color: white;
+	transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	-o-transition: all .2s ease;
+}
+
+.sharethis {
+	margin: 0 0 12px 15px;
+}
+
+.pullquote {
+    display: block;
+    position: relative;
+    width: 285px;
+    float: right;
+    clear: right;
+    font-family: "league-gothic", sans-serif;
+    font-size: 39px;
+    margin: 0 0 60px 10px;
+    padding: 0 12px;
+    text-align: center;
+    background: url(../img/quot1.png) top left no-repeat scroll, url(../img/quot2.png) bottom right no-repeat scroll;
+}
+
+.credit {
+    display: block;
+    position: absolute;
+    border-left: thin solid #ccc;
+    font-family: Helvetica,sans-serif, arial;
+    font-size: 12px;
+    right: 50%;
+    width: 260px;
+    margin-right: -130px;
+    text-align: left;
+    padding: 0 0 0 10px;
+    color: #999;
+    font-weight: 100;
+    font-style: italic;
+    bottom: -40px;
+}
+
+.caption {
+    display: block;
+    position: relative;
+    float: right;
+    clear: right;
+    border-left: thin solid #ccc;
+    font-family: Helvetica,sans-serif, arial;
+    font-size: 12px;
+    width: 260px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    color: #999;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.pullquote.one {
+    background-position: 3px 0, 260px 166px;
+}
+
+.pullquote.two {
+    background-position: 7px 0, 235px 270px;
+}
+
+.pullquote.three {
+    background-position: 13px 0, 200px 274px;
+    padding-left: 19px;
+}
+
+.pullquote.four {
+	margin-top: 50px;
+    background-position: 31px 0, 190px 430px;
+}
+
+.pullquote.five {
+    background-position: 2px 0, 225px 328px;
+}
+
+.pullquote.six {
+    background-position: 15px 0, 280px 274px;
+}
+
+.pullquote.seven {
+    background-position: 0px 0, 270px 57px;
+    padding: 0 0 0 20px;
+}
+
+.pullquote.eight {
+    background-position: 3px 0, 247px 164px;
+    margin-top: 60px;
+}
+
+.pullquote.one .credit {
+    bottom: -58px;
+}
+
+.pullquote.two .credit {
+    bottom: -58px;
+}
+
+.pullquote.three .credit {
+    bottom: -60px;
+}
+
+.pullquote.four .credit {
+    bottom: -60px;
+}
+
+.pullquote.five .credit {
+    bottom: -60px;
+}
+
+.assets {
+    float: right;
+    margin: 10px 0 10px 12px;
+}
+
+.assets.video {
+    margin: 10px 0 10px 30px;
+}
+
+.border {
+    padding: 2px;
+    border: thin solid #ccc;
+}
+
+.assets img {
+    width: 300px;
+}
+
+.info {
+    border: thin solid rgb(230,230,240);
+    background: rgb(251,252,253);
+    width: 300px;
+    padding: 34px 0;
+}
+
+.info {
+}
+
+.info h2 {
+    margin: 0 20px 15px;
+    font-family: "league-gothic";
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.info li {
+    font-size: 16px;
+    margin: 0 40px 8px;
+}
+
+.info li a {
+    font-weight: 100;
+    color: #FD7F6A;
+    text-decoration: none;
+}
+
+div.map {
+    float: right;
+    margin: 10px 0 0 12px;
+    text-align: center;
+}
+
+section p.content {
+    position: relative;
+    display: block;
+    max-width: 600px;
+    margin: 0 0 25px;
+    padding: 0 15px 0 15px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #333;
+    font-family: Georgia;
+    overflow: visible;
+}
+
+section.one {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    top: 50px;
+    max-height: 588px;
+}
+
+section div.container {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: visible !important;
+}
+
+section.one div {
+
+}
+
+section.two {
+    display: block;
+    position: relative;
+    margin: 82px 0 0;
+    background: white;
+    z-index: 10;
+    padding: 80px 0 0;
+}
+
+section.two div {
+    height: auto;
+    overflow: auto;
+    position: relative;
+}
+
+section.three {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+
+section.three img {
+}
+
+section.four {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+section.five {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.yt {
+    max-height: 620px;
+    z-index: 1;
+}
+
+section .largecontainer {
+    position: relative;
+    margin: -1px 0 70px;
+    width: 100%;
+}
+
+img.large {
+    width: 100%;
+    margin: 0;
+}
+
+.video-cover h1 {
+    margin: 0;
+    text-transform: uppercase;
+    z-index: 100;
+    color: white;
+    display: block;
+    position: absolute;
+    font-family: "league-gothic";
+    font-size: 140px;
+    left: 37px;
+    top: 0px;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    padding: 0;
+    text-shadow: 0 0 20px rgba(0,0,0,.4);
+}
+
+.video-cover h1.active {
+    /*text-shadow: 0 0 40px rgba(0,0,0,1);*/
+}
+
+.video-cover .vid-play {
+    position: absolute;
+    display: block;
+    -webkit-transition: all .5s ease;
+    z-index: 100;
+    bottom: 30px;
+    left: 50px;
+    background: url(../img/triangle.png) rgba(255,255,255,.3) no-repeat 50% scroll;
+    text-indent: -9999px;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 181px;
+    height: 120px;
+    background-size: 60px;
+    opacity: .5;
+}
+
+.vid-play2 {
+	position: relative;
+	top: 100px;
+	left: 10px;
+    display: block;
+    -webkit-transition: all .5s ease;
+    z-index: 100;
+    background: url(../img/triangle.png) rgba(255,255,255,.3) no-repeat 50% scroll;
+    text-indent: -9999px;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 60px;
+    height: 40px !important;
+    background-size: 20px;
+    opacity: .5;
+}
+
+.vid-play2:hover {
+	cursor: pointer;
+	opacity: .8;
+}
+
+#assets-over1:hover {
+	cursor: pointer;
+}
+
+#hover-video-player1 {
+	color: grey;
+}
+
+#hover-video-player1:hover {
+	cursor: pointer;
+	color: green;
+}
+
+.video-cover .vid-play.active {
+    opacity: 1;
+    box-shadow: 0 0 40px black;
+}
+
+.calltoaction {
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    -webkit-transition: all .5s ease;
+    bottom: 8px;
+    color: white;
+    left: 260px;
+    bottom: 20px;
+    font-size: 39px;
+    font-family: "league-gothic";
+    text-shadow: 0 0 10px black;
+}
+
+.calltoaction.active {
+    text-shadow: 0 0 20px black;
+}
+
+
+/* Main content start */
+div#container {
+	height: 10000px;
+}
+
+span.dropcap {
+    display: block;
+    margin: 0 5px 5px 0;
+    font-weight: 100;
+    position: relative;
+    float: left;
+    font-size: 53px;
+    width: 41px;
+    height: 46px;
+    text-align: left;
+    line-height: 54px;
+    clear: none;
+    color: #FF7F66;
+    font-family: Georgia, serif;
+    overflow: visible;
+}
+
+/* Fake height for now */
+.section {
+	position: relative;
+	padding-top: 52px;
+}
+
+section.one {
+	padding-top: 0;
+    
+	display: block;
+}
+
+div.video {
+    display: block;
+    position: relative;
+    max-height: 700px;
+}
+
+div.video-cover {
+	width: 100%;
+	overflow-y: hidden;
+	height: auto;
+	z-index: 1000;
+}
+
+div.video-cover img {
+	width: 100%;
+	/*position: relative;
+	top: -60px;*/
+	display: block;
+}
+
+section.two h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    font-size: 110px;
+    line-height: 76px;
+    text-shadow: 0 0 40px rgba(0,0,0,1);
+    padding: 0;
+}
+
+section.three h1 {
+    position: absolute;
+    font-weight: 500;
+    z-index: 100;
+    color: white;
+    right: 30px;
+    font-size: 111px;
+    text-align: right;
+    max-width: 633px;
+    line-height: 75px;
+    text-shadow: 0 0 40px black;
+    bottom: 10px;
+}
+
+section.four h1 {
+    position: absolute;
+    font-weight: 500;
+    z-index: 100;
+    color: white;
+    left: 0px;
+    font-size: 111px;
+    text-align: left;
+    max-width: 633px;
+    line-height: 75px;
+    text-shadow: 0 0 40px black;
+    top: 10px;
+}
+
+section.five .largecontainer {
+    margin-bottom: 110px;
+}
+
+section.five .largecontainer h1 {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    color: white;
+    font-size: 110px;
+    line-height: 76px;
+    text-shadow: 0 0 40px rgba(0,0,0,1);
+    padding: 0;
+}
+
+section.five .largecontainer h2 {
+    position: absolute;
+    margin: 64px 0;
+    color: white;
+    top: 132px;
+    left: 20px;
+    text-shadow: 0 0 20px black;
+    font-family: "league-gothic";
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 43px;
+    font-weight: 500;
+}
+
+section.five .container h1 {
+    font-size: 60px;
+    color: #333;
+    margin: 0 0 0px;
+    line-height: 30px;
+}
+
+section.five .container h2 {
+    color: #333;
+    font-family: "league-gothic";
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+section.five .container span.at {
+    font-size: .7em;
+}
+
+section.five .container h3 {
+    display: block;
+}
+
+section.five .container ul.images {
+    margin: 45px 0 56px 17px;
+}
+
+section.five .container ul.images li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0 25px 0 0px;
+    color: #333;
+}
+
+section.five .container ul.images li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+section.five .container ul.images li.eng {
+    background: url(../img/eng.jpg) top left no-repeat scroll;
+    width: 265px;
+    height: 53px;
+}
+
+section.five .container ul.images li.mradio {
+    background: url(../img/mradio.jpg) top left no-repeat scroll;
+    width: 264px;
+    height: 72px;
+}
+
+section.five .container ul.images li.mconnex {
+    background: url(../img/mconnex.png) top left no-repeat scroll;
+    width: 280px;
+    height: 66px;
+}
+
+section.five .container ul {
+    font-family: Georgia, serif;
+    margin: -20px 0 20px 0;
+    padding: 0;
+}
+
+section.five .container ul li {
+    font-weight: 100;
+    font-size: 18px;
+    color: #333;
+}
+
+section.five h2 {}
+
+section p.right {
+    float: right;
+    width: 310px;
+}
+
+a.blau {
+    display: block;
+    text-align: right;
+    border: thin solid #d7d7d7;
+    background: url(../img/map.png) #fafafa no-repeat 6px 6px;
+    font-size: 14px;
+    height: 100px;
+    width: 190px;
+    padding: 6px 6px 6px 106px;
+    text-decoration: none;
+    font-family: Helvetica,arial, sans-serif;
+}
+
+
+/* mobile text disabled */
+div.mobile {
+	display: none;
+}
+
+.sticky ul li.sticky-title {
+	display: none;
+}
+
+div#slidecontainer {
+    position: relative;
+    padding: 0 20px;
+}
+
+div#slidecontainer #slidecaptions {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 46px;
+    height: 130px;
+    left: 50%;
+    background-color: rgba(255,255,255,.9);
+    z-index: 1000;
+    display: none;
+}
+
+div#slidecontainer #slidecaptions p {
+    font-size: 13px;
+    margin: 14px 14px;
+}
+
+div#showcap {
+    display: block;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    margin-left: -409px;
+    font-size: 13px;
+}
+
+div#showcap a {
+    text-decoration: none;
+}
+
+span.slidecredit {
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+div#slides-bottom {
+    /*display:none !important;*/
+}
+
+div#slides-bottom {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: thin solid #ddd;
+}
+
+div#assets-over1 {
+	width: 300px;
+	height: 169px;
+	background: url(../img/placeholder2.jpg) no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div#assets-over1:hover .vid-play2 {
+	opacity: .8;
+}
+
+div#assets-over1p {
+	width: 300px;
+	height: 169px;
+}
+
+a#watch {
+    display: block;
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1em;
+    border: thin solid rgb(100,100,170);
+    width: 230px;
+    height: 20px;
+    margin: 0 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+a#watch:hover {
+    text-decoration: underline;
+}
+
+/* When the width cannot hold all five choices at top, then change to 1,2,3,4,5 */
+@media only screen and (max-width: 1000px) {
+    section.one .calltoaction {
+    bottom: 8px;
+}
+    section.one .vid-play {
+    bottom: 8px;
+}
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .byline {
+        font-size: 20px;
+        left: auto;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .byline {
+        font-size: 20px;
+        display:block;
+        position:relative !important;
+        right: auto !important;
+        left: auto !important;
+        margin: 0 0 6px 20px !important;
+        width: 100% !important;
+    }
+
+    .byline.three {
+    margin-bottom: 23px !important;
+}
+    section.two {
+        padding: 0;
+        margin-top: 71px;
+    }
+
+}
+
+@media only screen and (max-width: 874px) {
+	div.desktop {
+		display: none;
+	}
+	
+	div.mobile {
+		display: block;
+	}
+	
+	.sticky ul li.sticky-title {
+		display: block;
+		font-size: 10pt;
+		height: 20px;
+		overflow-y: scroll;
+	}
+	
+	/*.sticky ul li.sticky-title span {
+		width: 202px !important;
+	}*/
+	
+	section.five .container ul.images li {
+		margin: 10px 20px 10px 0px;
+	}
+	
+	.assets, .pullquote, .map {
+		margin-right: 40px !important;
+	}
+
+    
+}
+
+@media only screen and (max-width: 500px) {
+	.assets {
+		max-width: 300px;
+	}
+	.assets, .pullquote, .map, section p.right {
+		float: none !important;
+		margin: auto !important;
+	}
+	
+	section p.right, .assets {
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+	
+	.pullquote {
+		margin-bottom: 80px !important;
+	}
+}
