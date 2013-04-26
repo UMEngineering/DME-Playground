@@ -4,12 +4,12 @@ var prev_viewable = 0;
 var num=new Array("zero","one","two","three","four","five");
 
 $(document).ready(function(e) {
-	$("span#hover-video-player1").mouseover(function(){
+	/*$("span#hover-video-player1").mouseover(function(){
 		$(".vid-play2").css({"opacity" : ".8"});
 	});
 	$("span#hover-video-player1").mouseout(function(){
 		$(".vid-play2").css({"opacity" : ".5"});
-	});
+	});*/
 	
 	//First letter style
 
@@ -19,7 +19,7 @@ $(document).ready(function(e) {
 		$(this).html(text.substring(1)).prepend(first);
 	});
 
-	var curr_y = $(document).scrollTop();
+	/*var curr_y = $(document).scrollTop();
 	var height = $(document).height();
 	var $sticky_title = $(".sticky li.sticky-title");
 	var $window = $(window);
@@ -109,9 +109,9 @@ $(document).ready(function(e) {
 		}
 		else {
 				$("section.one").css({"display":"none","z-index":"-1"});
-		}*/
+		}
 
-    });
+    });*/
 });
 
 // Check if the element is fully visible
