@@ -344,6 +344,7 @@ section.two {
     background: white;
     z-index: 10;
     padding: 80px 0 0;
+    border-top: 5px solid #0080FF;
 }
 
 section.two div {
@@ -516,7 +517,7 @@ span.dropcap {
     text-align: left;
     line-height: 54px;
     clear: none;
-    color: #4E92D9;
+    color: #0080FF;
     font-family: Georgia, serif;
     overflow: visible;
 }
