@@ -64,11 +64,11 @@ div.scroll-right {
 
 ul.imgs-nav {
 	display: inline-block;
-	/*height: 100px;
-	overflow-y: hidden;
-	white-space: nowrap;*/
+	height: 100px;
+	white-space: nowrap;
 	margin: 0;
 	padding: 13px 11px;
+	overflow-y: hidden;
 }
 
 ul.imgs-nav li {

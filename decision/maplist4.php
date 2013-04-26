@@ -206,6 +206,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
 <script type="text/javascript">
 
 	// 2. This code loads the IFrame Player API code asynchronously.
@@ -216,40 +217,25 @@
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
-	function loadVideo(youid,which) {
+	function loadVid(youid,which) {
 		console.log("Hey");
-
-		var oldHtml = $(which).html();
-
-		var player;
-		var elem = which;
-          player = new YT.Player(elem, {
-            height: '100',
-            width: '280',
-            videoId: youid,
-            events: {
-              'onReady': function(event){ 
-                   player.playVideo();
-              },
-              'onStateChange': function(event){ }
-            }
-          });
 	}
 
 	function loadVids() {
 	  $("a.youtube-lazy-link").each(function(index) {
 		var embedparms = $(this).attr("href").split("/embed/")[1];
 		if(!embedparms) embedparms = $(this).attr("href").split("?v=")[1].replace(/\&/,'?');
-		var youid = embedparms.split("?")[0].split("#")[0], thisId = $(this).parent().attr("id");
+		var youid = embedparms.split("?")[0].split("#")[0];
 
 		$(this).prepend('<div class="youtube-lazy-link-div"></div>&nbsp;')
 		$(this).css("background", "#000 url(http://i2.ytimg.com/vi/"+youid+"/0.jpg) center no-repeat");
 		$(this).css("background-size", "100%");
+		$(this).attr("id", youid);
 		$(this).attr("href", "http://www.youtube.com/watch?v="+youid);
 		var emu = 'http://www.youtube.com/embed/'+embedparms;
 		emu += ((emu.indexOf("?")==-1) ? "?" : "&") + "autoplay=1";
 		var videoFrame = '<iframe width="'+parseInt($(this).css("width"))+'" height="'+parseInt($(this).css("height"))+'" style="vertical-align:top;" src="'+emu+'" frameborder="0" allowfullscreen></iframe>';
-		$(this).attr("onclick", "loadVideo('"+youid+"',"+thisId+");return false;");
+		$(this).attr("onclick", "loadVideo('"+youid+"',1);return false;");
 	  });
 	}
 
