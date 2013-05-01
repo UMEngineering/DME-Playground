@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+<!--   Copy below js code   -->
+<script src="js/countdown.js"></script>
+<script>
+//var project_name = "rox%20beverage";
+var project_name = "The%20Eephus%20League";
+$(document).ready(function(e) {
+	$.getJSON('http://www.kickstarter.com/projects/search.json?callback=?&search=&term=' + project_name, function(data) {
+		var items = [];
+		$("#data-buffer").append(data.projects[0].card_html);
+		
+		// Get pledged
+		var goal = $("#data-buffer .funded strong").text().replace("%", "").replace(",", "");
+		var pledged = $("#data-buffer .pledged strong").text();
+		var num = parseInt(pledged.replace("$", "").replace(",", "")) / parseInt(goal) * 100;
+		var appendStr = "<ul>";
+		appendStr += "<li class=\"pledged\"><strong>" + pledged + "</strong><br />pledged of $" + Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</li>";
+		
+		// Get date
+		var endtime = $(".ksr_page_timer").attr("data-end_time");
+		var ts = countdown(null, new Date($(".ksr_page_timer").attr("data-end_time")), countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS, 1);
+		var date_str = "<li><strong>" + ts.toHTML() + "</strong><br />to go</li>";
+		if (new Date() > new Date($(".ksr_page_timer").attr("data-end_time"))) {
+			date_str = "<li><strong>0 seconds</strong><br />to go</li>"
+		}
+		appendStr += date_str;
+		
+		appendStr += "</ul>";
+		$("#data-widget").append(appendStr);
+	});
+});
+</script>
+<!--   End Copy   -->
+</head>
+
+<body>
+	<!--    Copy below HTML code, the data-widget will be the one display things    -->
+	<div id="data-buffer" style="display: none;"></div>
+    <div id="data-widget"></div>
+	<!--    End Copy    -->
+</body>
+</html>
