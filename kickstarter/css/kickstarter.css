@@ -72,6 +72,10 @@ section.two .tempLine {
 }
 
 /* Progress bar */
+.sticky ul li a:hover {
+    color: #0086FF;
+}
+
 .sticky div#progress {
 	height: 3px;
 	display: none;
@@ -162,13 +166,11 @@ section.two .tempLine {
     display: block;
     line-height: 15px;
     position: absolute;
-    border-left: thin solid #ccc;
-    font-family: Helvetica,sans-serif, arial;
     font-size: 12px;
     right: 50%;
     width: 255px;
     margin-right: -130px;
-    text-align: left;
+    text-align: center;
     padding: 0 0 0 10px;
     color: #999;
     font-weight: 100;
@@ -181,11 +183,10 @@ section.two .tempLine {
     position: relative;
     float: right;
     clear: right;
-    border-left: thin solid #ccc;
     font-family: Helvetica,sans-serif, arial;
     font-size: 12px;
     width: 260px;
-    text-align: left;
+    text-align: center;
     padding: 10px;
     margin: 10px;
     color: #999;
@@ -245,7 +246,7 @@ section.two .tempLine {
 }
 
 .pullquote.four .credit {
-    bottom: -69px;
+    bottom: -54px;
 }
 
 .pullquote.five .credit {
@@ -324,7 +325,7 @@ section.one {
     width: 100%;
     z-index: 10;
     top: 50px;
-    max-height: 533px;
+    max-height: 465px;
 }
 
 section div.container {
@@ -340,8 +341,8 @@ section.one div {
 section.two {
     display: block;
     position: relative;
-    margin: 0px 0 0;
-    background: white;
+    margin: 0;
+    background: #ededed;
     z-index: 10;
     padding: 80px 0 0;
     border-top: 5px solid #0080FF;
@@ -364,7 +365,7 @@ section.three img {
 }
 
 section.four {
-    margin: 0 auto;
+    margin: 0 auto 120px;
     position: relative;
     z-index: 10;
 }
@@ -409,9 +410,8 @@ h1 {
     letter-spacing: -5px;
     line-height: 79px;
     left: 50%;
-    top: 87px;
+    top: 71px;
     transition: all .5s ease;
-    -webkit-transition: all .5s ease;
     padding: 0;
     text-shadow: 0 0 20px rgba(0,0,0,.4);
 }
@@ -551,6 +551,7 @@ div.video-cover img {
 	width: 100%;
 	/*position: relative;
 	top: -60px;*/
+	position: relative;
 	display: block;
 }
 
@@ -861,8 +862,8 @@ a#watch:hover {
     margin-bottom: 23px !important;
 }
     section.two {
-        padding: 0;
-        margin-top: 71px;
+        padding: 30px 0;
+        margin-top: 50px;
     }
 
 }

@@ -83,7 +83,7 @@
                 <span class='st_stumbleupon_large' displayText='StumbleUpon'></span></div>
 
                 <p class="pullquote one">Space exploration has always been very expensive, very large and very difficult to do.<span class="credit">James Cutler, an Assistant Professor of Aerospace Engineering at the University of Michigan</span></p>
-                <p class="content drop">ANN ARBOR, Mich.---Two Michigan Engineering professors are forging new ground, turning to the Kickstarter online community to help fund an interplanetary satellite mission. The pair are teaming up to create two new technologies in a matter of months, with the goal of using a plasma thruster to push a CubeSat out into deep space – something which has never been done before.</p>
+                <p class="content drop">ANN ARBOR, Mich.&mdash;Two Michigan Engineering professors are forging new ground, turning to the Kickstarter online community to help fund an interplanetary satellite mission. The pair are teaming up to create two new technologies in a matter of months, with the goal of using a plasma thruster to push a CubeSat out into deep space – something which has never been done before.</p>
                 <p class="content">“We’re using Kickstarter to develop a new miniature thruster technology to mount on CubeSats, a small spacecraft that is about the size of a loaf of bread. We’ll use this new thruster to escape earth’s orbit and send them into interplanetary space,” said Benjamin Longmier, assistant professor of aerospace engineering and a propulsion specialist in the Plasmadynamics and Electric Propulsion Lab (PEPL) at the University of Michigan.</p>
                 <p class="assets border"><a class="group1" href="img/slideshow/large-k/kickstarter_1_800.jpg" title="RAX/CubeSat testing"><img src="img/kickstarter_1.jpg" /></a></p><span class="caption">RAX/CubeSat testing</span>
                 <p class="content">The thruster, which would use superheated plasma directed through a magnetic field to propel the CubeSat, would be the first of its kind. With this technology, exploring deep space – including other planets – would become faster and cheaper than ever before. </p>
@@ -134,7 +134,7 @@
             <div class="largecontainer"><!-- <h1>The Outlook for Michigan</h1> --><img class="large" src="img/large-k/four.jpg" /></div>
             <div class="container">
                 <!--p class="pullquote">It's very truly<br />exploration at this point. We know there's a resource there, but the question is: Can we extract it in a way that's economical?<span class="credit">Doug Hock, director of community and public relations at Encana</span-->
-                <p class="assets border"><a class="group1" href="img/slideshow/large-k/kickstarter_3_800.jpg" title="NASA - Jupiter's Moons"><img src="img/kickstarter_3.jpg" /></a></p><span class="caption">NASA - Jupiter's Moons</span>
+                <p class="assets border"><a class="group1" href="img/large-k/patriot.jpg" title="Patriot"><img src="img/patriot.jpg" /></a></p><span class="caption">Patriot</span>
                 <p class="pullquote four">Imagine going to destinations like near-earth asteroids, Mars, the moons of Mars, and even farther to some of the moons of Jupiter and Saturn with oceans that have more water than Earth.<span class="credit">Ben Longmier, an Assistant Professor of Aerospace Engineering at the University of Michigan</span></p>
                 <p class="content">“Imagine going to destinations like near-earth asteroids, Mars, the moons of Mars, and even farther to some of the moons of Jupiter and Saturn with oceans that have more water than Earth,” said Longmier. “Long-term, I would like to participate in the discovery of life off-planet. This is a big ‘what if.’ We don’t know, but every indication on Earth seems to indicate that life can develop pretty easily in deep sea vents and subterranean lakes. If it also exists off-planet, we would like to help participate in that discovery.”</p>
                 <p class="content">Longmier and Cutler are turning to the Kickstarter fundraising community to get their interplanetary CubeSats into space fast.</p>
@@ -147,15 +147,15 @@
             </div>
         </section>
 
-		<section class="five section" id="fracking-town-hall">
+		<!-- <section class="five section" id="fracking-town-hall">
             <div class="largecontainer">
-<!--                 <h1>Fracktopia: </h1> <h2>A Town Hall Meeting<br />on the Future of Fracking</h2>
- -->                <img class="large" src="img/large/blaublur.jpg" />
+                <h1>Fracktopia: </h1> <h2>A Town Hall Meeting<br />on the Future of Fracking</h2>
+                <img class="large" src="img/large/blaublur.jpg" />
             </div>
 
             <div class="container">
             </div>
-        </section>
+        </section> -->
 
         <div id="slidecontainer">
             <div id="slides-bottom">
@@ -284,36 +284,49 @@
 			$calltoaction = $(".calltoaction");
 			$slides = $(".slidesjs-container");
 			$slidecaptions = $("#slidecaptions");
+            $topimg = $("#top-image-cover");
 			$(window).resize(function() {
 				// Resize the fonts to fit the size of page
 				var width = $(window).width();
-				$h1.css({"font-size" : "111px", "line-height" : "75px"});
-				$vh1.css({"fot-size" : "70px"});
-				$h2.css({"font-size" : "60px", "line-height" : "43px", "margin" : "64px 0"});
-				$play.css({"width" : "181px", "height" : "120px"});
-				$calltoaction.css({"font-size" : "39px"});
-				if (width < 851) {
+                console.log(width);
+                // console.log($h1.css(width));
+				$h1.css({"font-size" : "70px", "line-height" : "79px"});
+                $vh1.css({"font-size" : "70px", "line-height" : "79px","width":"560px","letter-spacing":"-5px","top":"71px"});
+                $topimg.css({"top":"0px"});
+				// $vh1.css({"fot-size" : "70px"});
+				// $h2.css({"font-size" : "60px", "line-height" : "43px", "margin" : "64px 0"});
+				// $play.css({"width" : "181px", "height" : "120px"});
+				// $calltoaction.css({"font-size" : "39px"});
+				if (width < 1000) {
 					// Adjust font size
-					$h1.css({"font-size" : (width / 7.67) + "px"});
-					$h2.css({"font-size" : (width / 14.18) + "px", "line-height" : (width / 19.8) + "px", "margin" : (width / 13.3) + "px 0"});
-					$vh1.css({"font-size" : (width / 12) + "px"});
-					$calltoaction.css({"font-size" : (width / 20) + "px"});
+					// $h1.css({"font-size" : (width / 7.67) + "px"});
+					// $h2.css({"font-size" : (width / 8.18) + "px", "line-height" : (width / 19.8) + "px", "margin" : (width / 13.3) + "px 0"});
+					$vh1.css({"font-size" : (width / 15) + "px"});
+                    $vh1.css({"line-height" : (width / 15) + "px"});
+                    $vh1.css({"width" : (width / 3) + "px"});
+                    $vh1.css({"top" : (width / 13) + "px"});
+                    $vh1.css({"letter-spacing" : "-3px"});
+                    // $topimg.css({"top": (width/50) + "px"});
+                    // console.log(width/255);
+
+					// $calltoaction.css({"font-size" : (width / 20) + "px"});
 					
 					// Adjust line height
-					$h1.css({"line-height" : (width / 8.44) + "px"});
+					// $vh1.css({"line-height" : (width / 8.44) + "px"});
 					
 					// Adjust play button
-					$play.css({"width" : (width / 4.7) + "px", "height" : (width / 7.1) + "px", "background-size" : "50%"});
-					$(".sticky ul li.sticky-title").css({"width" : (width - 210) + "px"});
+					// $play.css({"width" : (width / 4.7) + "px", "height" : (width / 7.1) + "px", "background-size" : "50%"});
+					// $(".sticky ul li.sticky-title").css({"width" : (width - 210) + "px"});
 					
 					//$("section.section div.largecontainer h2").css({"font-size" : (width / 15) + "px", "line-height" : (width / 15) + "px"});
-					$("section.section div.container h1").css({"line-height" : "60px"});
+					// $("section.section div.container h1").css({"line-height" : "60px"});
 					//$("section.section div.container h1").css({"line-height" : (width / 8.44) + "px"});
 				}
 					
-				if (width < 861) {
-					$("section.five .largecontainer h1").css({"top" : "-5px"});
-					$("section.five .largecontainer h2").css({"top" : "45px"});
+				if (width < 700) {
+                    $vh1.css({"letter-spacing" : "-1px"});
+					// $("section.five .largecontainer h1").css({"top" : "-5px"});
+					// $("section.five .largecontainer h2").css({"top" : "45px"});
 				}
 			}).resize();
 			$(function(){
