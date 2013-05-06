@@ -24,7 +24,7 @@ $(document).ready(function(e) {
 			//item_id_img = item_id
 			
 			// Clear all content in all items
-			$("#" + item_id + " .img-cover").css({"display" : "none"});
+			$("#" + item_id + " .img-cover").hide();
 			$("#" + item_id + " .item-content").html('<img class="content-image" style="height: ' + height + 'px;" src="img/big/' + item_id_img + '_big.jpg" alt="item image" />');
 			$("#go-back").show();
 
@@ -41,16 +41,21 @@ $(document).ready(function(e) {
 	
 	// Go back to slider show
 	$("#go-back").click(function(e) {
-		if (current != "") {
+		/*if (current != "") {
 			console.log(current + " " + $("#" + current).width());
 			var added = $("#" + current).width() + 200;
 			// console.log(added);
 			$("#" + current).css({"width" : added + "px"});
+<<<<<<< HEAD
 			// console.log($("#" + current).width());
 		}
+=======
+			console.log($("#" + current).width());
+		}*/
+>>>>>>> Some dummy things
 		
 		/*$(".content-image").css({"position" : "absolute", "top" : "0", "left" : "0"});*/
-		$("#" + current).css({"white-space" : "nowrap"});
+		//$("#" + current).css({"white-space" : "nowrap"});
 		
 		$(".one-item").each(function(index, element) {
 			$(this).css({"width" : "180px"});
@@ -58,10 +63,10 @@ $(document).ready(function(e) {
 		});
 		
 		setTimeout(function(){
-			//$(".img-cover").css({"display" : "block"});
-			$(".item-content").html("");
-			$("#go-back").hide();
-			//$(".img-cover").fadeIn(500);
+			$("#" + current + " .img-cover").fadeIn(500, function(){
+				$(".item-content").html("");
+				$("#go-back").hide();
+			});
 		}, 500);
     });
 });

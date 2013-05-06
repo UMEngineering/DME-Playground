@@ -1,0 +1,420 @@
+
+/* - ++resource++umich_css/landingPage.css - */
+@media screen {
+/* https://caen-cms-dev.engin.umich.edu/portal_css/++resource++umich_css/landingPage.css?original=1 */
+/* */
+.subsite .content {
+margin: 450px auto 0;
+}
+.subsite #col1 {
+position: relative;
+padding-top: 10px;
+}
+.subsite h1 {
+font-size: 14px;
+color: #212a55;
+font-weight: normal;
+padding: 0 0 10px 22px;
+}
+.subsite h1 span {
+font-size: 18px;
+display: block;
+text-transform: uppercase;
+}
+.theaterBg {
+position: absolute;
+left: 50%;
+top: 0;
+margin-left: -564px;
+z-index: 4;
+}
+.subsiteTheater {
+width: 1128px;
+height: 428px;
+position: absolute;
+left: 50%;
+margin-left: -450px;
+}
+#subsiteTheaterHolder {
+width: 1128px;
+height: 428px;
+}
+.slides img {
+z-index: 3;
+position: absolute;
+left: 124px;
+}
+.subsite ul.slides {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+}
+.subsite ul.slides li {
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+list-style-type: none;
+z-index: 3;
+color: #0f2856;
+}
+.subsite ul.slides li a {
+display: block;
+position: relative;
+width: 100%;
+height: 100%;
+}
+.subsite ul.slides li h1 {
+font-size: 18px;
+font-weight: bold;
+}
+.subsite ul.slides li p {
+display: block;
+width: 630px;
+}
+.theaterInfo {
+position: absolute;
+top: 366px;
+left: 268px;
+}
+.slides img.smallTheater {
+top: 33px;
+left: 265px;
+}
+/* */
+.no-js #theaterControls {
+display: none;
+}
+.subsiteTheaterNavigation {
+position: absolute;
+left: 772px;
+top: 361px;
+overflow: visible;
+display: inline;
+z-index: 10;
+}
+.subsiteTheaterNavigation .flex-direction-nav li .prev {
+display: block;
+float: left;
+background: url(++resource++umich_images/tcPrevArrow.png) center center no-repeat;
+width: 10px;
+height: 24px; /**/
+behavior: url(++resource++redesign_fonts/pie.htc);
+top: 0;
+margin: 0;
+left: -12px;
+}
+.lt-ie9 .subsiteTheaterNavigation .flex-direction-nav li .prev {
+filter: alpha(opacity=60);
+}
+.subsiteTheaterNavigation .flex-direction-nav li .next {
+display: block;
+float: left;
+background: url(++resource++umich_images/tcNextArrow.png) center center no-repeat;
+width: 10px;
+height: 24px; /**/
+behavior: url(++resource++redesign_fonts/pie.htc);
+top: 0;
+margin: 0;
+right: -12px;
+}
+.lt-ie9 .subsiteTheaterNavigation .flex-direction-nav li .next {
+filter: alpha(opacity=60);
+}
+.subsiteTheaterNavigation .flex-control-nav {
+float: left;
+margin: 0 15px;
+padding: 3px 6px 3px 4px;
+background: #105b8f;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+box-shadow: 1px 1px 3px 0 #333;
+list-style: none;
+position: relative;
+}
+.lt-ie9 .subsiteTheaterNavigation .flex-control-nav {
+display: inline;
+min-width: 50px;
+behavior: url(++resource++redesign_fonts/pie.htc);
+}
+.subsiteTheaterNavigation .flex-control-nav li {
+float: left;
+margin: 3px 0;
+border-right: 1px solid #fff;
+}
+.subsiteTheaterNavigation .flex-control-nav li a {
+display: block;
+height: 10px;
+width: 8px;
+padding: 1px 4px 2px;
+float: left;
+font-size: 10px;
+color: #fff;
+line-height: 10px;
+text-decoration: none;
+cursor: pointer;
+margin-top: auto;
+background-color: inherit;
+-webkit-border-radius: inherit;
+-moz-border-radius: inherit;
+border-radius: inherit;
+}
+.subsiteTheaterNavigation .flex-control-nav li a:hover, .subsiteTheaterNavigation .flex-control-nav li a.active {
+border: 1px solid #fff;
+margin: -1px;
+}
+.subsiteTheaterNavigation .flex-control-nav li:last-child, .subsiteTheaterNavigation .flex-control-nav li.last {
+border-width: 0;
+}
+/* */
+.subsitePromos {
+width: 730px;
+margin: 0 auto 0;
+overflow: hidden;
+padding: 20px 5px 5px;
+}
+.promoHolderSubsiteMain {
+position: relative;
+width: 705px;
+-webkit-border-radius: 8px 8px 0px 0px;
+-moz-border-radius: 8px 8px 0px 0px;
+-o-border-radius: 8px 8px 0px 0px;
+border-radius: 8px 8px 0px 0px;
+behavior: url(++resource++redesign_fonts/pie.htc);
+color: #3375ae;
+margin: 0 11px 21px; /* */
+float: left;
+behavior: url(++resource++redesign_fonts/pie.htc);
+overflow: visible;
+}
+.promoSubsiteMain {
+width: 686px;
+display: block;
+text-decoration: none;
+-moz-opacity: 0.90;
+opacity: 0.90;
+-ms-filter: "progid:DXImageTransform.Mirosoft.Alpha(Opacity=90)";
+-webkit-border-radius: 8px 8px 0px 0px;
+-moz-border-radius: 8px 8px 0px 0px;
+-o-border-radius: 8px 8px 0px 0px;
+border-radius: 8px 8px 0px 0px;
+padding: 14px 10px 3px 10px;
+background: #fff;
+behavior: url(++resource++redesign_fonts/pie.htc);
+float: left;
+overflow: visible;
+}
+.promoSubsiteImage.shadow {
+display: block;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+-o-border-radius: 0;
+border-radius: 0;
+behavior: url(++resource++redesign_fonts/pie.htc);
+width: 209px;
+height: 156px;
+top: -6px;
+position: relative;
+overflow: visible;
+float: left;
+}
+.promoSubsiteImage img {
+position: absolute;
+bottom: 0;
+}
+.subsitePromoSubHolder {
+float: left;
+position: relative;
+width: 471px;
+}
+.promoSubsiteMain h3 {
+font: 18px FontSiteSansRoman, arial, sans-serif;
+font-weight: bold;
+color: #212a55;
+position: relative;
+float: left;
+padding-left: 22px;
+width: 453px;
+}
+.promoSubsiteMain p.promoSubtitle {
+position: relative;
+margin: 0;
+color: #0e4270;
+padding-bottom: 6px;
+float: left;
+padding-left: 22px;
+width: 453px;
+}
+.promoSubsiteMain h4 {
+font: 39px FontSiteSansRoman, arial, sans-serif;
+text-transform: uppercase;
+padding-left: 20px; /* */
+position: relative;
+letter-spacing: -2px;
+float: left;
+}
+.promoSubgsiteMain a.mainPromoLink:hover {
+text-decoration: underline;
+}
+.promoSubsiteMain .pDate_Info {
+width: 95px;
+display: inline;
+color: #0e4270;
+margin: 0 0 6px 0;
+letter-spacing: -.2px;
+line-height: normal;
+float: left;
+font-size: 12px;
+padding: 0;
+}
+.promoSubsiteMain .pDate {
+width: 54px;
+padding: 0 8px 2px 0;
+color: #3375ae;
+font-size: 28px;
+margin: 0 0 2px 0;
+letter-spacing: -1px;
+line-height: 26px;
+float: left;
+clear: left;
+text-align: right;
+}
+.promoSubsiteMain .subSize_txt {
+font-size: 22px;
+}
+.promoSubsiteMain .pDateItem {
+position: relative;
+width: auto;
+float: left;
+padding-left: 0px;
+margin-top: 0px;
+overflow: hidden;
+}
+.subsite a.mainPromoLink { /* */
+display: block;
+float: right;
+margin: 0 7px 0 0;
+padding-right: 7px;
+background: url("++resource++umich_images/blueArrow.png") no-repeat center right;
+color: #0E4270;
+font-size: 12px;
+font-weight: bold;
+text-decoration: none;
+}
+/* */
+.block {
+float: left;
+margin: 0 11px 21px;
+padding: 10px;
+height: 200px;
+color: #0E4270;
+background: #fff;
+-webkit-box-shadow: 0 0 20px #d2d4da inset, 0 0 6px #102a58;
+box-shadow: 0 0 20px #d2d4da inset, 0 0 6px #102a58;
+}
+.oneCol {
+padding: 20px 20px 0;
+width: 180px;
+}
+.twoCol {
+width: 443px;
+}
+.threeCol {
+width: 685px;
+}
+.twoRow {
+height: 441px;
+}
+.block p {
+margin: 0 0 1em;
+}
+.block a {
+color: #7D4D0E;
+font-weight: bold;
+text-decoration: none;
+}
+.block a:hover {
+text-decoration: underline;
+}
+#contentHolder .block ul {
+padding: 0; /* */
+list-style: none;
+}
+.block h2, .block h3, .block h4 { /* */
+padding: 0 0 5px;
+font: bold 18px/1 FontSiteSansRoman, Arial, sans-serif;
+}
+.block br {
+display: none; /* */
+}
+/* */
+.oneCol h2, .oneCol h3, .oneCol h4 {
+text-transform: uppercase;
+}
+.oneCol li {
+margin: 0 0 7px;
+padding: 0 7px;
+background: url("++resource++umich_images/promoLinkArrow.png") 0 7px no-repeat;
+}
+/* */
+.promo img {
+display: block;
+margin: 0 0 5px -20px;
+width: 220px; /* */
+height: auto; /* */
+}
+.videoBlock {
+padding: 10px;
+height: 200px;
+width: 200px;
+}
+.videoBlock h3 { text-transform: none; font-size: 12px; }
+.videoBlock a:hover { text-decoration: none; }
+/* */
+.otherSites {
+color: #393D11;
+background: #A2AD4D;
+opacity: 0.9;
+-webkit-box-shadow: 0 0 20px #727D2D inset, 0 0 6px #102a58t;
+box-shadow: 0 0 20px #727D2D inset, 0 0 6px #102a58;
+}
+.otherSites a {
+color: #23270E;
+}
+.otherSites a:hover, .relatedLinks a:hover {
+color: white;
+}
+/* */
+.relatedLinks {
+color: #fff;
+background: #004785;
+opacity: 0.9;
+-webkit-box-shadow: 0 0 20px #002755 inset, 0 0 6px #102a58;
+box-shadow: 0 0 20px #002755 inset, 0 0 6px #102a58;
+}
+.relatedLinks a {
+color: #CBE4FD;
+}
+/* */
+.story img {
+-webkit-box-shadow: 0 0 6px #102A58;
+box-shadow: 0 0 6px #102A58;
+}
+.story .image-left, .story .image-right {
+border: none;
+}
+.story .image-left {
+margin: 0 15px 0 0;
+}
+.story .image-right {
+margin: 0 0 0 15px;
+}
+#contentHolder .story ul {
+padding: 0 0 0 40px;
+}
+.story h2, .story h3 { padding: 10px 0; }
+
+}
