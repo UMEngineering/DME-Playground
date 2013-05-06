@@ -44,9 +44,9 @@ $(document).ready(function(e) {
 		if (current != "") {
 			console.log(current + " " + $("#" + current).width());
 			var added = $("#" + current).width() + 200;
-			console.log(added);
+			// console.log(added);
 			$("#" + current).css({"width" : added + "px"});
-			console.log($("#" + current).width());
+			// console.log($("#" + current).width());
 		}
 		
 		/*$(".content-image").css({"position" : "absolute", "top" : "0", "left" : "0"});*/
@@ -54,6 +54,7 @@ $(document).ready(function(e) {
 		
 		$(".one-item").each(function(index, element) {
 			$(this).css({"width" : "180px"});
+			$(element).find(".img-cover").show();
 		});
 		
 		setTimeout(function(){
