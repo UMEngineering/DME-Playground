@@ -6,6 +6,8 @@
 
 // Check if the browser is Internet Explorer and store the version.
 
+console.log("Test");
+
 var ie = (function(){
 	var undef,
 		v = 3,
@@ -365,7 +367,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 
 //  < Campus map function >
 
-	function campusMap (id, lat, lng, name, subtitle, description, lnk, flickr_photoset, num_thumbs, address, department) {
+	function campusMap (id, lat, lng, name, subtitle, description, lnk, flickr_photoset, num_thumbs, address, department, pin) {
 		
 		// Create a unique ID for this particular pin.
 		
@@ -375,77 +377,92 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		
 		// Parse the flickr stuff
 		
-		$.ajax({ // ..for flickr photoset
-			  url: 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=0a4c13223c53dc01af68bbecd1127ad2&photoset_id='+flickr_photoset+'&format=json&nojsoncallback=1', 
-			  type: 'GET',
-				dataType: 'json',
-				success: function(data){
-					console.log('Photoset data for http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=0a4c13223c53dc01af68bbecd1127ad2&photoset_id='+flickr_photoset+'&format=json&nojsoncallback=1', data);
-					primary = data.photoset.primary;			
-					
-					$.ajax({ // ..for primary photo
-						url: 'http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0a4c13223c53dc01af68bbecd1127ad2&photo_id='+primary+'&format=json&nojsoncallback=1',
-						type: 'GET',
-						dataType: 'json',
-						success: function(primaryData){
-							console.log("Primary photo data", primaryData.photo);
-							primary_url = 'http://farm'+primaryData.photo.farm+'.staticflickr.com/'+primaryData.photo.server+'/'+primary+'_'+primaryData.photo.secret+'_n.jpg';
+		console.log("Pin: ", pin);
 
-							// < Set contentString>
-							
-							contentString = '<div id="'+id+'" data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: auto; max-height:360px; overflow: auto;">';
-							if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
-							if (department != null) { contentString += '<div class="department">'+department+'</div>'; }
-							if (address != null) { contentString += '<div class="address">'+address+'</div>'; }
-							else contentString += '<div class="spacer"></div>';
-							contentString += '<div class="story"><div id="imageholder">';
-							
-							$(data.photoset.photo).each(function(k, v){
-								// If this is the first iteration, display the primary image first.
-								if (k == 0) contentString += '<img src="'+primary_url+'" class="primary switchable current" id="img'+v.id+'" />';
-								if (v.id != primary) {
-									var this_url = 'http://farm'+v.farm+'.staticflickr.com/'+v.server+'/'+v.id+'_'+v.secret+'_n.jpg';
-									var checkSize = new Image();
-									checkSize.src = this_url;
-									var aspRat = checkSize.width / checkSize.height;
-									console.log("Aspect ratio of image " + v.id, checkSize.width+" by "+checkSize.height);
-									contentString += '<img src="'+this_url+'" class="switchable" id="img'+v.id+'" />';
-								}
-							});
-							
-							contentString += '<ul class="thumbs">';
-							
-							$(data.photoset.photo).each(function(k, v){
-								if (k >= num_thumbs) return false;
+		if (pin == "img/carpin.png") {
+			contentString = '<div id="'+id+'" data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: auto; max-height:360px; overflow: auto;">';
+			if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
+			if (department != null) { contentString += '<div class="department">'+department+'</div>'; }
+			if (address != null) { contentString += '<div class="address">'+address+'</div>'; }
+			else contentString += '<div class="spacer"></div>';
+			contentString += '<div class="description">'+description+'</div>';
+
+
+			contentString += '</div>';
+		}
+		else {
+			$.ajax({ // ..for flickr photoset
+				  url: 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=0a4c13223c53dc01af68bbecd1127ad2&photoset_id='+flickr_photoset+'&format=json&nojsoncallback=1', 
+				  type: 'GET',
+					dataType: 'json',
+					success: function(data){
+						// console.log('Photoset data for http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=0a4c13223c53dc01af68bbecd1127ad2&photoset_id='+flickr_photoset+'&format=json&nojsoncallback=1', data);
+						primary = data.photoset.primary;			
+						
+						$.ajax({ // ..for primary photo
+							url: 'http://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0a4c13223c53dc01af68bbecd1127ad2&photo_id='+primary+'&format=json&nojsoncallback=1',
+							type: 'GET',
+							dataType: 'json',
+							success: function(primaryData){
+								// console.log("Primary photo data", primaryData.photo);
+								primary_url = 'http://farm'+primaryData.photo.farm+'.staticflickr.com/'+primaryData.photo.server+'/'+primary+'_'+primaryData.photo.secret+'_n.jpg';
+
+								// < Set contentString>
 								
-								// If this is the first iteration, display the primary image thumbnail first.
-								if (k == 0) contentString += '<li><a href="#" class="thumbnail" data-id="'+primary+'"><img src="http://farm'+primaryData.photo.farm+'.staticflickr.com/'+primaryData.photo.server+'/'+primary+'_'+primaryData.photo.secret+'_s.jpg" /></a></li>';
+								contentString = '<div id="'+id+'" data-innerid="'+id+'" class="googleInfo" style="width: 420px; z-index: 100; height: auto; max-height:360px; overflow: auto;">';
+								if (name != "none") { contentString += '<div class="author">'+name+'</div>'; }
+								if (department != null) { contentString += '<div class="department">'+department+'</div>'; }
+								if (address != null) { contentString += '<div class="address">'+address+'</div>'; }
+								else contentString += '<div class="spacer"></div>';
+								contentString += '<div class="story"><div id="imageholder">';
 								
-								// Don't repeat the primary image.
-								if (v.id != primary) { 
-									console.log("In each, this is v: ",v);
-									contentString += '<li><a href="#" class="thumbnail" data-id="'+v.id+'"><img src="http://farm'+v.farm+'.staticflickr.com/'+v.server+'/'+v.id+'_'+v.secret+'_s.jpg" alt="thumbnail" /></a></li>';
-								}
-							});//End each
-							
-							
-							//contentString += '</ul><a href="#" class="showlb" data-id="'+data.photoset.id+'">View all images</a></div>';
-							contentString += '</ul></div>';
-							contentString += '<div class="description">'+description+'</div><div class="viewOnFlickr">View more images on <a href="http://www.flickr.com/photos/michigan-engineering/sets/'+data.photoset.id+'">flickr</a>!</div></div>';
-							contentString += '</div>';
-							
-							// < /Set contentString>	
-						},
-						error: function() {
-							console.log("Error reading primary photo data.");
-						}
-					});
-				
-			  },//End success condition
-			error: function(xhr, statusText, errorThrown){
-				console.log('Server error: '+xhr.statusText+", "+xhr.errorThrown+", "+ xhr.responseText+", "+xhr.status);
-			}
-		});
+								$(data.photoset.photo).each(function(k, v){
+									// If this is the first iteration, display the primary image first.
+									if (k == 0) contentString += '<img src="'+primary_url+'" class="primary switchable current" id="img'+v.id+'" />';
+									if (v.id != primary) {
+										var this_url = 'http://farm'+v.farm+'.staticflickr.com/'+v.server+'/'+v.id+'_'+v.secret+'_n.jpg';
+										var checkSize = new Image();
+										checkSize.src = this_url;
+										var aspRat = checkSize.width / checkSize.height;
+										// console.log("Aspect ratio of image " + v.id, checkSize.width+" by "+checkSize.height);
+										contentString += '<img src="'+this_url+'" class="switchable" id="img'+v.id+'" />';
+									}
+								});
+								
+								contentString += '<ul class="thumbs">';
+								
+								$(data.photoset.photo).each(function(k, v){
+									if (k >= num_thumbs) return false;
+									
+									// If this is the first iteration, display the primary image thumbnail first.
+									if (k == 0) contentString += '<li><a href="#" class="thumbnail" data-id="'+primary+'"><img src="http://farm'+primaryData.photo.farm+'.staticflickr.com/'+primaryData.photo.server+'/'+primary+'_'+primaryData.photo.secret+'_s.jpg" /></a></li>';
+									
+									// Don't repeat the primary image.
+									if (v.id != primary) { 
+										// console.log("In each, this is v: ",v);
+										contentString += '<li><a href="#" class="thumbnail" data-id="'+v.id+'"><img src="http://farm'+v.farm+'.staticflickr.com/'+v.server+'/'+v.id+'_'+v.secret+'_s.jpg" alt="thumbnail" /></a></li>';
+									}
+								});//End each
+								
+								
+								//contentString += '</ul><a href="#" class="showlb" data-id="'+data.photoset.id+'">View all images</a></div>';
+								contentString += '</ul></div>';
+								contentString += '<div class="description">'+description+'</div><div class="viewOnFlickr">View more images on <a href="http://www.flickr.com/photos/michigan-engineering/sets/'+data.photoset.id+'">flickr</a>!</div></div>';
+								contentString += '</div>';
+								
+								// < /Set contentString>	
+							},
+							error: function() {
+								console.log("Error reading primary photo data.");
+							}
+						});
+					
+				  },//End success condition
+				error: function(xhr, statusText, errorThrown){
+					console.log('Server error: '+xhr.statusText+", "+xhr.errorThrown+", "+ xhr.responseText+", "+xhr.status);
+				}
+			});
+		}
 	
 		// Create the infoWindow
 		
@@ -456,10 +473,11 @@ $("div#googlemap").bind("loadmap", function initialize() {
 		
 		// Create marker 
 		
+		var ico = (pin != "null") ? pin : "";
 		var LL = new google.maps.LatLng(lat, lng);
 		var marker = new google.maps.Marker({
 			  position: LL,
-			  //icon: "img/mpin.png",
+			  icon: ico,
 			  zIndexProcess: function() { return 1; }	
 		});
 		marker.setZIndex(0);
@@ -635,7 +653,7 @@ $("div#googlemap").bind("loadmap", function initialize() {
 	//*****************THIS IS WHERE WE MAP AN ELEMENT.***********//
 	// campusMap (id, lat, lng, name, subtitle, description, lnk, flickr_photoset, num_thumbs)
 	
-						campusMap(v.id, v.lat, v.lon, v.building_name, v.subtitle, v.description, v.link, v.flickr_photoset, v.num_thumbs, v.address, v.department);
+						campusMap(v.id, v.lat, v.lon, v.building_name, v.subtitle, v.description, v.link, v.flickr_photoset, v.num_thumbs, v.address, v.department, v.pin);
 						
 				});//End each
 			  },//End success condition

@@ -296,12 +296,12 @@ function lights() {
 }
 // Document is ready, finally.
 $(document).ready(function(){	
-	$('#search input').live("keydown", function(e){
+	$('#search input').on("keydown", function(e){
 		if (e.keyCode == 13 ) e.preventDefault();
 	});
 	
 	var initialSearchVal = $('#search input').val();
-	$('#search input').live("focus", function(e){
+	$('#search input').on("focus", function(e){
 		eraser();
 		var option = {
 		  x:      1, 
@@ -315,7 +315,7 @@ $(document).ready(function(){
 		$("label#search").css({"text-shadow":"rgba(255, 0, 0, .5) 1px 1px 5px"});
 	});
 	
-	$('#search input').live("blur", function(e){
+	$('#search input').on("blur", function(e){
 		$('#search input').val(initialSearchVal);
 		$('#search input').css({"color":"#cccccc"});
 		try { $("label#search").removeShadow(); }
@@ -323,10 +323,10 @@ $(document).ready(function(){
 		$("label#search").css({"text-shadow":"none"});
 	});
 // Using the liveSearch plugin.
-	var lsrch = $('#search input[name="q"]').liveSearch({url: '/happyholidays/ajax/search.php?q='});
+	var lsrch = $('#search input[name="q"]').onSearch({url: '/happyholidays/ajax/search.php?q='});
 	
 // When the user clicks on a person's name, re-center the map and do some other stuff.
-	$("a.searchForMe").live("click", function(e){
+	$("a.searchForMe").on("click", function(e){
 		e.preventDefault();
 		eraser();
 		var ref = $(this).attr('href').replace("#","");
@@ -341,7 +341,7 @@ $(document).ready(function(){
 	});
 
 // When they click on the department, re-highlight all the department members in blue.	
-	$("a.searchForDepartment").live("click", function(e){
+	$("a.searchForDepartment").on("click", function(e){
 		e.preventDefault();
 		var ref = $(this).attr('href').replace("#","");
 		deleter(highlighter2);
@@ -355,7 +355,7 @@ $(document).ready(function(){
 	});
 
 // When they click on the group, re-highlight all the group members in blue.		
-	$("a.searchForGroup").live("click", function(e){
+	$("a.searchForGroup").on("click", function(e){
 		e.preventDefault();
 		var ref = $(this).attr('href').replace("#","");
 		deleter(highlighter3);

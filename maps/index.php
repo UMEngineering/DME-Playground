@@ -120,14 +120,14 @@ document.createElement('hgroup');
   
   <script type="text/javascript">
   	$(document).ready(function(){
-		$("li a.thumbnail").live("click", function(e) {
+		$("li a.thumbnail").on("click", function(e) {
 			e.preventDefault();
 			console.log($(this).attr("data-id"));	
 			$("img.current").hide();
 			$("img#img"+$(this).attr("data-id")).addClass("current").show();
 		});
 		
-		$(".showlb").live("click", function(e){
+		$(".showlb").on("click", function(e){
 			e.preventDefault();
 			console.log("Passing in ",$(this).data("id"));
 			var ph = $(this).data("id").toString();

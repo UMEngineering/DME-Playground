@@ -1,0 +1,139 @@
+/* CSS Document */
+#main {
+	background: #254874;
+	padding: 1px 0 0 0;
+	margin: 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#main p {
+	margin-top: 0;
+}
+
+#main p a {
+	color: #2026B9;
+}
+
+ul#nav, ul.inside-nav {
+	overflow: auto;
+	margin: 0;
+	padding-left: 10px;
+}
+
+ul#nav li, ul.inside-nav li {
+	list-style: none;
+	color: white;
+	float: left;
+	background: #657E9D;
+	margin: 0 4px 0 0;
+	font-size: 9pt;
+	padding: 5px 10px 5px 10px;
+	box-shadow: 0 0 24px rgba(0, 0, 0, .3);
+}
+
+ul#nav li.current {
+	background: #254874;
+}
+
+ul.inside-nav {
+	padding: 12px 0 0 14px;
+	z-index: 10000 !important;
+}
+
+div.scroll-background {
+	background: #657E9D;
+	box-shadow: 0 30px 60px rgba(0,0,0,.25);
+}
+
+div.scroll-right {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	background: #657E9D;
+	
+	/*white-space: nowrap;
+	background: #657E9D;
+	height: 150px;*/
+}
+
+ul.imgs-nav {
+	display: inline-block;
+	height: 130px;
+	white-space: nowrap;
+	margin: 0;
+	padding: 13px 11px;
+	overflow-y: hidden;
+}
+
+ul.imgs-nav li {
+	height: 119px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+img.scroll-img {
+	display: block;
+}
+
+ul.imgs-nav li {
+	position: relative;
+	width: 90px;
+	border: 1px solid white;
+	margin: 0 1px;
+	padding: 0;
+	box-shadow: 0 0 21px rgba(0,0,0,.5);
+}
+
+ul.imgs-nav li a{
+	color: black;
+}
+
+div.transparent {
+    position: absolute;
+	padding: 0px;
+	
+    width: 90px;
+    bottom: 0;
+    height: 48px;
+    background: rgba(255, 255, 255, .7);
+    color: #2A4872;
+	
+	
+    font-size: 11px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+div.transparent .title {
+    padding: 2px;
+
+	
+    display: block;
+    position: relative;
+}
+
+div {
+	white-space: normal;
+}
+
+/* To layout horizontal LIs */
+.scrollview-right {
+    white-space: nowrap;
+	/*overflow-x: scroll;*/
+;
+    box-shadow: 0px 8px 5px rgba(0,0,0,.1);
+}
+
+.scrollview-right li {
+    display: inline-block;
+}
+
+/* For IE 6/7 - needs inline block hack (and the background color mentioned above) */
+.scrollview-right li {
+    *display: inline;
+    *zoom: 1;
+}
