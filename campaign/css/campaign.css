@@ -1,6 +1,8 @@
 .items {
+	position: relative;
 	overflow: hidden;
 	width: auto;
+	min-width: 1080px;
 }
 
 .one-item {
@@ -11,10 +13,12 @@
 	-moz-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;
+	height: 100%;
 }
 
 .one-item .img-cover img {
 	width: 180px;
+	min-height: 800px;
 }
 
 .img-cover:hover, #go-back:hover {
@@ -27,8 +31,17 @@
 	top: 0;
 	right: 0;
 	display: none;
+	z-index: 1;
 }
 
 .img-src {
 	display: none;
+}
+
+.item-content {
+    width: 100%;
+    height: 100%;
+}
+
+.item-content img {
 }

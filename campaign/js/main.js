@@ -12,6 +12,12 @@ $(document).ready(function(e) {
 			$(".one-item .img-cover img").css({"width" : "auto"});
 			$(".one-item .img-cover img").css({"height" : height + "px"});
 		}
+		else {
+			$(".one-item .img-cover img").css({"width" : "auto"});
+		}
+		//Resize large image
+		$("content-image");
+
     });
 	
 	// Bind click event for each image
@@ -67,4 +73,6 @@ $(document).ready(function(e) {
 			});
 		}, 500);
     });
+	$(window).resize();
+
 });
