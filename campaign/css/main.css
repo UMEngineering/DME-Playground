@@ -19,8 +19,12 @@ textarea {
 }
 
 body {
+    display: block;
+    position: relative;
     font-size: 1em;
     line-height: 1.4;
+    background: #000;
+    overflow: hidden;
 }
 
 /*

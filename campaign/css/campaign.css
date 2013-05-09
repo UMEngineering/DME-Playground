@@ -1,24 +1,84 @@
+.left {
+    display: block;
+    position: absolute;
+    top: 51px;
+    height: 100%;
+    width: 270px;
+    overflow: auto;
+    background: #FFC72C;
+    min-height: 810px;
+}
+
 .items {
-	position: relative;
-	overflow: hidden;
-	width: auto;
-	min-width: 1080px;
+	position: absolute;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: 1080px;
+	left: 270px;
+	top: 51px;
+	height: 800px;
+}
+
+.itemcontainer {
+    width: 1087px;
 }
 
 .one-item {
 	float: left;
+	display: inline-block;
 	width: 180px;
 	overflow: hidden;
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;
+	transition: width 500ms ease;
 	height: 100%;
+	background: #fff;
+	box-shadow: 0 0 20px #333;
 }
+
+.one-item:hover {
+}
+
+.one-item .info {
+    position: absolute;
+    top: 109px;
+    width: 156px;
+    height: 180px;
+    background: rgba(33,33,33,.8);
+    font-size: 14px;
+    color: white;
+    padding: 0 12px 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: border .3s ease;
+}
+
+.one-item:hover .info {
+    border-top: 2px solid white;
+	
+    border-bottom: 2px solid white;
+}
+
+.one-item .info h2 {
+    font-family: "league-gothic",sans-serif;
+    text-transform: uppercase;
+    margin: 10px 0;
+    font-size: 33px;
+}
+
+.one-item .info div {}
 
 .one-item .img-cover img {
 	width: 180px;
 	min-height: 800px;
+	-webkit-transition: opacity .2s ease;
+}
+
+.one-item .img-cover img:hover {
+	width: 180px;
+	min-height: 800px;
+	opacity: 1;
 }
 
 .img-cover:hover, #go-back:hover {
@@ -31,7 +91,7 @@
 	top: 0;
 	right: 0;
 	display: none;
-	z-index: 1;
+	z-index: 1000;
 }
 
 .img-src {
@@ -44,4 +104,95 @@
 }
 
 .item-content img {
+    width: 100%;
+}
+
+.sticky {
+	background: none repeat scroll 0 0 #171100;
+    /*box-shadow: 0 2px 4px #333333;
+    -webkit-box-shadow: 0 2px 4px #333333;*/
+    display: block;
+    height: 51px;
+	position: fixed !important;
+    top: 0px;
+	left: 0;	
+    width: 100%;
+	overflow: visible;
+	padding: 0;
+	z-index: 1000;
+}
+
+.ie7 .sticky {
+}
+
+a#circle {
+	display: block;
+	position: absolute;
+	right: -60px;
+	height: 48px;
+	width: 48px;
+	top: -12px;	
+}
+
+#holder {
+    height: 260px;
+}
+
+#top-header-nav a {
+	text-decoration: none;
+	display: inline-block;
+	border: thin solid black;
+	padding: 1px 6px;
+	background: black;
+}
+
+.sticky ul {
+	display: block;
+	margin: 0px auto;
+	overflow: visible;
+	height: 50px;
+	background: url(../img/dmebadge.jpg) scroll no-repeat right 3px;
+}
+
+.sticky ul li {
+	list-style: none;
+	padding: 0;
+	display: inline-block;
+	float: right;
+	margin: 4px 8px 0 0;
+	color: white;
+}
+
+.sticky ul li.simplify a {
+	text-align: right;
+	right: 0;
+	position: absolute;
+	width: 270px;	
+}
+
+li.dmegallery {
+	right: 57px;
+	display: block;
+	position: absolute;
+	top: 9px;
+}
+
+.sticky ul li a {
+	color: #ddd;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 100;
+	-webkit-transition: all 1s ease;
+}
+
+.sticky ul li.home {
+	position: absolute;
+	/*width: 43px;*/
+	overflow: hidden;
+	left: 7px; top: 8px;
+	margin: 0;
+}
+
+.sticky ul li.counts {
+	float: none;	
 }

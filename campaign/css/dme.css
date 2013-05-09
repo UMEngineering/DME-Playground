@@ -11,7 +11,6 @@
 	overflow: visible;
 	padding: 0;
 	z-index: 1000;
-	box-shadow: 0 0 13px black;
 }
 
 .ie7 .sticky {
