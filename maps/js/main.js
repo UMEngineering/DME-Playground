@@ -634,6 +634,8 @@ $("div#googlemap").bind("loadmap", function initialize() {
 // </ Holiday Call>
 
 // < Campus Call >	
+
+	if (LAYER == undefined) LAYER = "campus";
 	
 	if (LAYER == "campus") {	
 		$.ajax({
