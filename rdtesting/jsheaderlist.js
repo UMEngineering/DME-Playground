@@ -8,26 +8,17 @@
 
 $(document).ready(setTimeout(main, 500));
 
-function main()
-{
+function main() {
+  var $headers = $("#contentHolder").find("h1,h2,h3");
+  var $contentHeader = $("#content").find(".pageHeader").first();
 
-	var $headers = $("#contentHolder").find("h1,h2,h3");
-	var $contentHeader = $("#content").find(".pageHeader").first();
-	
-	$("<ul class='pageSubHeading'/>").appendTo($contentHeader);
-	$headers.each(
-		function () 
-		{
-			if (!$(this).hasClass("videoHeader")){
-				var lower = $(this).html().replace(/\s+/g, '').toLowerCase();
-				$("<li><a class='linkArrow' href='#" + lower + "'>" + $(this).html() + "</a></li>").appendTo($contentHeader.children(".pageSubHeading").first());
-				$(this).attr({'id': lower});
-	
-			}
-		}
-	);
-	
-
+  $("<ul class='pageSubHeading'/>").appendTo($contentHeader);
+  $headers.each(function () {
+    if (!$(this).hasClass("videoHeader")) {
+      // Ticket #1578: only include the header from non-video player headers
+      var lower = $(this).html().replace(/\s+/g, '').toLowerCase();
+      $("<li><a class='linkArrow' href='" + document.URL.substr(0, document.URL.search("#")) + "#" + lower + "'>" + $(this).html() + "</a></li>").appendTo($contentHeader.children(".pageSubHeading").first());
+      $(this).attr({'id': lower});
+    }
+  });
 }
-
-
