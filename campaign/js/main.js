@@ -1,4 +1,5 @@
 var current = "";
+var contentView = false;
 $(document).ready(function(e) {
 	var width = $(window).width();
 	var height = $(window).height();
@@ -17,7 +18,22 @@ $(document).ready(function(e) {
 		$("content-image");
 		$(".left").css("height",itemsHeight);
 		$(".collapsed .items").css({"width":itemsWidth, "height":itemsHeight});
+		
+		if (contentView) {
+			$("#" + current).css({"width":width + "px"});
+			$(".items").css({"height" : height + "px"});
+		}
 
+    });
+	
+	$(".items").scroll(function(e) {
+        if (contentView) {
+			//console.log(1 - 1.0 * $(".items").scrollTop() / $(window).height());
+			var opac = 1 - 1.0 * $(".items").scrollTop() / $(window).height();
+			if (opac >= 0 && opac <= 1) {
+				$("#" + current + " img.content-image").css({"opacity" : opac});
+			}
+		}
     });
 	
     $(".img-cover").each(function(index, element) {
@@ -26,23 +42,31 @@ $(document).ready(function(e) {
 		// When you open the big image	
 		/* Click event: when click on an image, load the image and append it into the HTML */
 		$(this).click(function(e) {
+			contentView = true;
 
 			console.log("Title:", $(this).children(".meta#title").html());
 
 			var title = $(this).children(".meta#title").html(), body = $(this).children(".meta#body").html();
 
 			current = item_id;
+			console.log(current);
 	        $("body").removeClass("collapsed");
 			$(".left, .info").hide();
 
-			$(".items").css({"left":"0px","width":"100%"});
+			$(".items").css({"left":"0px","width":"100%", "overflow-x" : "hidden", "overflow-y" : "auto"});
 
 			// temp
 			item_id_img = $("#" + current + " a.img-src").attr("href");
 			
 			// Clear all content in all items
 			$("#" + item_id + " .img-cover").hide();
-			$("#" + item_id + " .item-content").html('<img class="content-image" src="img/big/' + item_id_img + '" alt="item image" /><div class="content-info"><h2>'+title+'</h2><div class="body">'+body+'</div>');
+			$("#" + item_id + " .item-content").html('<div class="content-image-div"><img class="content-image" src="img/big/' + item_id_img + '" alt="item image" /></div><div class="content-info"><h2>'+title+'</h2><div class="body">'+body+'</div>');
+			
+			setTimeout(function(){
+				//$("#" + item_id + " .content-image").css({"position" : "fixed"});
+				//$("#" + item_id + " .content-image-div").css({"height" : $("#" + item_id + " .content-image").height() + "px"});
+				}, 500);
+			
 			// console.log("Height of div:" ,$(".content-info").height());
 			var margintop = $(".content-info .body").height()/-3;
 			console.log("height:",$(".content-info .body").height());
@@ -51,13 +75,17 @@ $(document).ready(function(e) {
 			var itemwidth = $(window).width() - ($(window).width()/3), marginleft = String(itemwidth/-2)+"px";
 			console.log(itemwidth);
 
-			$(".content-info").css({"margin-top" : margintop,"margin-left":marginleft,"width":itemwidth});
+			//$(".content-info").css({"margin-top" : margintop,"margin-left":marginleft,"width":itemwidth});
 			$("#go-back").show();
 
 			// Expand the selected item to full screen, and make all other cover images with as 0 so they will disappear
 			$(".one-item").each(function(index, element) {
                 if ($(this).attr("id") != item_id) {
 					$(this).css({"width" : "0px"});
+					var thisitem = $(this);
+					setTimeout(function(){
+						thisitem.css({"height" : "0px"});
+					}, 500);
 				} else {
 					$(this).css({"width" : width+"px"});
 
@@ -68,6 +96,9 @@ $(document).ready(function(e) {
 	
 	// When you close the big image
 	$("#go-back").click(function(e) {
+		//$(".content-image").css({"position" : "relative"});
+		contentView = false;
+		$(".items").scrollTop(0);
 		$("body").addClass("collapsed");
 
 		$(".content-info, .content-image").hide();
@@ -87,11 +118,11 @@ $(document).ready(function(e) {
 
 		$(".left, .info").show();
 
-		$(".items").css({"left":"270px"});
+		$(".items").css({"left":"270px", "overflow-x" : "scroll", "overflow-y" : "hidden"});
 
 		
 		$(".one-item").each(function(index, element) {
-			$(this).css({"width" : "180px"});
+			$(this).css({"width" : "180px", "height" : "100%"});
 		});
 		
 		setTimeout(function(){

@@ -82,7 +82,7 @@ $(document).ready(function(e) {
 			window.location.hash = "#-" + $("section." + num[viewable]).attr("id");
 		}
 
-		/*scrollTop = $window.scrollTop();
+		scrollTop = $window.scrollTop();
 		if (scrollTop < 1) {
 
 			$("section.one").css({"display":"block","z-index":"5"});
@@ -109,7 +109,7 @@ $(document).ready(function(e) {
 		}
 		else {
 				$("section.one").css({"display":"none","z-index":"-1"});
-		}*/
+		}
 
     });
 });
