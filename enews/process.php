@@ -107,7 +107,7 @@ if ($_POST["create"]) {
 	}
 	
 	// Edit the content in the database
-	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders, alt) VALUES ('{$vars[0]}', '{$fuploaded}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}', '{$vars[4]}');";
+	$query = "INSERT INTO enews (title, img, type, description, href, year, month, orders, alt) VALUES ('{$vars[0]}', '{$fuploaded}', '1', '{$vars[2]}', '{$vars[3]}', '{$year}', '{$month}', '{$order}', '{$vars[3]}');";
 	
 	$result = mysql_query($query);
 	if (!$result){

@@ -1,14 +1,10 @@
 var current = "";
-
 $(document).ready(function(e) {
 	var width = $(window).width();
 	var height = $(window).height();
-	
-
 	$(".one-item img").css({"height" : height + "px"});
-	
 	$(window).resize(function(e) {
-		height = $(window).height(), width = $(window).width();
+		height = $(window).height(), width = $(window).	width();
 		var itemsWidth = width - 270, itemsHeight = height-51;
 		if (height > 800) {
 			$(".one-item .img-cover img").css({"width" : "auto"});
@@ -30,6 +26,11 @@ $(document).ready(function(e) {
 		// When you open the big image	
 		/* Click event: when click on an image, load the image and append it into the HTML */
 		$(this).click(function(e) {
+
+			console.log("Title:", $(this).children(".meta#title").html());
+
+			var title = $(this).children(".meta#title").html(), body = $(this).children(".meta#body").html();
+
 			current = item_id;
 	        $("body").removeClass("collapsed");
 			$(".left, .info").hide();
@@ -41,7 +42,16 @@ $(document).ready(function(e) {
 			
 			// Clear all content in all items
 			$("#" + item_id + " .img-cover").hide();
-			$("#" + item_id + " .item-content").html('<img class="content-image" src="img/big/' + item_id_img + '" alt="item image" />');
+			$("#" + item_id + " .item-content").html('<img class="content-image" src="img/big/' + item_id_img + '" alt="item image" /><div class="content-info"><h2>'+title+'</h2><div class="body">'+body+'</div>');
+			// console.log("Height of div:" ,$(".content-info").height());
+			var margintop = $(".content-info .body").height()/-3;
+			console.log("height:",$(".content-info .body").height());
+			margintop = String(margintop) + "px";
+
+			var itemwidth = $(window).width() - ($(window).width()/3), marginleft = String(itemwidth/-2)+"px";
+			console.log(itemwidth);
+
+			$(".content-info").css({"margin-top" : margintop,"margin-left":marginleft,"width":itemwidth});
 			$("#go-back").show();
 
 			// Expand the selected item to full screen, and make all other cover images with as 0 so they will disappear
@@ -59,6 +69,9 @@ $(document).ready(function(e) {
 	// When you close the big image
 	$("#go-back").click(function(e) {
 		$("body").addClass("collapsed");
+
+		$(".content-info, .content-image").hide();
+
 		/*if (current != "") {
 			console.log(current + " " + $("#" + current).width());
 			var added = $("#" + current).width() + 200;
