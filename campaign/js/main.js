@@ -43,6 +43,7 @@ $(document).ready(function(e) {
 		/* Click event: when click on an image, load the image and append it into the HTML */
 		$(this).click(function(e) {
 			contentView = true;
+			window.location.hash = item_id;
 
 			console.log("Title:", $(this).children(".meta#title").html());
 
@@ -98,6 +99,8 @@ $(document).ready(function(e) {
 	$("#go-back").click(function(e) {
 		//$(".content-image").css({"position" : "relative"});
 		contentView = false;
+		window.location.hash = "";
+		
 		$(".items").scrollTop(0);
 		$("body").addClass("collapsed");
 
@@ -133,5 +136,9 @@ $(document).ready(function(e) {
 		}, 500);
     });
 	$(window).resize();
-
+	
+	// Open the corresponding page if there is a hash in url
+	if (window.location.hash) {
+		$(window.location.hash + " .img-cover").click();
+	}
 });
