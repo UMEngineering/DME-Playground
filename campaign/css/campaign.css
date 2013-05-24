@@ -180,7 +180,7 @@
     opacity: 1;
     top: 0;
     z-index: 0;
-    position: absolute;
+    position: fixed;
     background: transparent;
 }
 
