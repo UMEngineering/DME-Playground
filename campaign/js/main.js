@@ -36,10 +36,10 @@ $(document).ready(function(e) {
 		}
     });
 	
+	// When you open the big image	
     $(".img-cover").each(function(index, element) {
         var item_id = $(this).parent().attr("id");
 
-		// When you open the big image	
 		/* Click event: when click on an image, load the image and append it into the HTML */
 		$(this).click(function(e) {
 			contentView = true;
@@ -70,11 +70,12 @@ $(document).ready(function(e) {
 			
 			// console.log("Height of div:" ,$(".content-info").height());
 			var margintop = $(".content-info .body").height()/-3;
-			console.log("height:",$(".content-info .body").height());
+			// console.log("height:",$(".content-info .body").height());
 			margintop = String(margintop) + "px";
 
-			var itemwidth = $(window).width() - ($(window).width()/3), marginleft = String(itemwidth/-2)+"px";
-			console.log(itemwidth);
+			var itemwidth = $(window).width() - ($(window).width()/3);
+			var marginleft = String(itemwidth/-2)+"px";
+			
 
 			//$(".content-info").css({"margin-top" : margintop,"margin-left":marginleft,"width":itemwidth});
 			$("#go-back").show();
@@ -88,8 +89,26 @@ $(document).ready(function(e) {
 						thisitem.css({"height" : "0px"});
 					}, 500);
 				} else {
-					$(this).css({"width" : width+"px"});
+					var src = $(element).find(".content-image").attr("src");
 
+					var buffer = new Image();
+					buffer.src = src;
+
+					// var apr = buffer.naturalWidth() / buffer.naturalHeight();
+					buffer.onload = function() {
+						var apr = buffer.naturalWidth / buffer.naturalHeight;
+						var bodymargin = String((width/apr))+"px";
+						$(".content-info").css({"margin-top":bodymargin});
+					}
+					
+
+					// var apr = $img.width();
+
+					// console.log("img: ",$img);
+
+					$(this).css({"width" : width+"px"});
+					var itemheight = $(".content-image").height();
+					// console.log("Height: ",itemheight);
 				}
             });
         });
