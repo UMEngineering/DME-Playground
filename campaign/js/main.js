@@ -94,6 +94,7 @@ $(document).ready(function(e) {
 					var buffer = new Image();
 					buffer.src = src;
 
+					// ***** Calculate the amount to apply to the top margin on the text *****
 					// var apr = buffer.naturalWidth() / buffer.naturalHeight();
 					buffer.onload = function() {
 						var apr = buffer.naturalWidth / buffer.naturalHeight;
