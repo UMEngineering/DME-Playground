@@ -66,6 +66,10 @@
     width: 1260px;
 }
 
+ul.slider {
+	list-style: none;
+}
+
 .one-item {
 	float: left;
 	display: inline-block;
@@ -179,7 +183,7 @@
     display: block;
     opacity: 1;
     top: 0;
-    z-index: 0;
+    z-index: -1;
     position: fixed;
     background: transparent;
 }
@@ -198,7 +202,7 @@
     margin: 0 auto;
     padding: 20px 20px 30px;
     box-shadow: 0 0 60px black;
-    z-index: 1000 !important;
+    /*z-index: 1000 !important;*/
 }
 
 .content-info h2 {
@@ -301,4 +305,26 @@ li.dmegallery {
 
 .sticky ul li.counts {
 	float: none;	
+}
+
+@media only screen and (max-width: 400px) {
+	ul.slider {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.mobile-left {
+		display: none;
+		position: relative;
+		top: 0;
+		height: 100%;
+		width: 270px;
+		overflow: auto;
+		background: #FEC33A;
+		min-height: 810px;
+		box-shadow: 0 0 10px black;
+	}
+	
+	.items, .itemcontainer {
+	}
 }
