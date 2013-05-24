@@ -98,7 +98,7 @@ $(document).ready(function(e) {
 					// var apr = buffer.naturalWidth() / buffer.naturalHeight();
 					buffer.onload = function() {
 						var apr = buffer.naturalWidth / buffer.naturalHeight;
-						var bodymargin = String((width/apr))+"px";
+						var bodymargin = String((width/apr)-51)+"px";
 						$(".content-info").css({"margin-top":bodymargin});
 					}
 					
